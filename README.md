@@ -7,6 +7,12 @@ Czysta wersja HTML strony Datapolis bez zależności od CMS.
 ```
 datapolis_com/
 ├── index.html              # Strona główna
+├── solutions.html          # Strona rozwiązań
+├── it-sector-solutions.html # IT Sector Solutions
+├── includes/               # ⭐ NOWE: Współdzielone komponenty
+│   ├── header.html         # Menu górne (navbar)
+│   ├── footer.html         # Stopka
+│   └── loader.js           # Skrypt ładujący header i footer
 ├── assets/
 │   ├── css/
 │   │   ├── main.min.css    # Główne style
@@ -24,6 +30,54 @@ datapolis_com/
     └── files/
         └── klienci/        # Loga klientów
 ```
+
+## ⭐ System Includes - Wspólne komponenty
+
+Strona wykorzystuje **system dynamicznego ładowania** header i footer, co znacznie ułatwia zarządzanie menu i stopką.
+
+### Jak to działa?
+
+1. **Header i Footer w osobnych plikach:**
+   - `includes/header.html` - zawiera całe menu nawigacyjne
+   - `includes/footer.html` - zawiera stopkę ze wszystkimi linkami
+
+2. **Automatyczne ładowanie:**
+   - Skrypt `includes/loader.js` automatycznie ładuje header i footer do każdej strony
+   - Każda strona HTML zawiera tylko placeholdery:
+     ```html
+     <div id="header-placeholder"></div>
+     <div id="footer-placeholder"></div>
+     ```
+
+3. **Zalety:**
+   - ✅ **Edytuj raz** - zmiana w `header.html` automatycznie aktualizuje wszystkie strony
+   - ✅ **Łatwe zarządzanie** - nie trzeba edytować menu w każdym pliku osobno
+   - ✅ **Spójność** - wszystkie strony mają identyczne menu i stopkę
+   - ✅ **Szybkie dodawanie nowych stron** - wystarczy skopiować szablon
+
+### Dodawanie nowej strony
+
+Aby dodać nową stronę do projektu:
+
+1. Skopiuj `index.html` jako szablon
+2. Zmień tylko zawartość między placeholderami:
+   ```html
+   <div id="header-placeholder"></div>
+   
+   <main class="main">
+       <!-- Twoja zawartość tutaj -->
+   </main>
+   
+   <div id="footer-placeholder"></div>
+   ```
+3. Header i footer załadują się automatycznie!
+
+### Edycja menu
+
+Aby zmienić menu nawigacyjne we wszystkich stronach:
+1. Otwórz `includes/header.html`
+2. Edytuj strukturę menu
+3. Zapisz - zmiany pojawią się na wszystkich stronach!
 
 ## Zmiany w porównaniu do wersji CMS
 
@@ -105,12 +159,30 @@ Aby dodać inne wersje językowe, stwórz:
 
 I zaktualizuj linki w dropdownie języków.
 
-### Dodatkowe strony
+### Istniejące strony
+Projekt zawiera następujące strony:
+- ✅ `index.html` - strona główna
+- ✅ `solutions.html` - strona rozwiązań
+- ✅ `it-sector-solutions.html` - IT Sector Solutions
+
+### Dodatkowe strony do stworzenia
 Możesz stworzyć osobne pliki HTML dla:
-- `solutions.html` - strona rozwiązań
 - `products.html` - strona produktów
+- `customers.html` - strona klientów
+- `company.html` - o firmie
+- `support.html` - wsparcie techniczne
+- `licensing.html` - licencjonowanie
 - `contact.html` - strona kontaktowa
-- etc.
+- `blog.html` - blog
+- `electronic-document-workflow.html` - Electronic Document Workflow
+- `human-resources.html` - Human Resources (HR)
+- `customer-service.html` - Customer Service
+- `finance.html` - Finance
+- `purchasing-logistics.html` - Purchasing and Logistics
+- `operations-production.html` - Operations and Production
+- `audit-compliance.html` - Audit & Compliance
+
+**Pamiętaj:** Każda nowa strona automatycznie odziedziczy menu i stopkę dzięki systemowi includes!
 
 ## Kontakt
 
