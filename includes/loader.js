@@ -71,6 +71,24 @@
             }
         });
         
+        // Initialize language switcher buttons
+        var langButtons = document.querySelectorAll('.dropdown-links__item button');
+        langButtons.forEach(function(btn) {
+            if (!btn.hasAttribute('data-lang-initialized')) {
+                btn.setAttribute('data-lang-initialized', 'true');
+                btn.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    e.preventDefault();
+                    var btnText = btn.textContent.trim();
+                    if (btnText === 'PL') {
+                        window.location.href = '/PL/index.html';
+                    } else if (btnText === 'EN') {
+                        window.location.href = '/index.html';
+                    }
+                });
+            }
+        });
+        
         // Initialize menu items with submenus
         var menuItems = document.querySelectorAll('.js-menu-item');
         menuItems.forEach(function(item) {
