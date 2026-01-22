@@ -3,16 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <title>Customers - Datapolis</title>
-    <meta name="description" content="Datapolis customers include global leaders in banking, energy, and industry. See who runs on our platform.">
+    <meta name="description" content="Hundreds of organizations worldwide trust Datapolis to run their business processes. From global enterprises to government agencies.">
+    <meta name="robots" content="index,follow">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#020617">
 
     <link rel="stylesheet" href="assets/css/main.min.css?v=10022025">
     <link rel="stylesheet" href="assets/css/async.min.css?v=10022025" media="print" onload="this.media='all'; this.onload=null;">
     <link rel="stylesheet" href="assets/css/dark-theme.css?v=3">
-    <link rel="stylesheet" href="assets/css/new-homepage.css?v=2">
+    <link rel="stylesheet" href="assets/css/new-homepage.css?v=7">
+    <link rel="stylesheet" href="assets/css/customers.css?v=2">
 
     <script src="includes/loader.js"></script>
+
     <link rel="icon" type="image/png" href="assets/img/favicon/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="assets/img/favicon/favicon.svg" />
     <link rel="shortcut icon" href="assets/img/favicon/favicon.ico" />
@@ -22,101 +25,261 @@
 <body class="dark-theme">
     <div id="header-placeholder"></div>
 
-    <main>
-        <section class="dp-section dp-hero" style="padding-top: 120px; min-height: auto; padding-bottom: 60px;">
-            <div class="dp-container">
-                <div class="dp-section__header">
-                    <span class="dp-label">Trust</span>
-                    <h1 class="dp-title">Customers</h1>
-                    <p class="dp-text" style="max-width: 600px; margin: 20px auto 0;">
-                        We power mission-critical processes for enterprises worldwide.
+    <main class="customers-page">
+        <!-- ========================================
+             HERO (2-column: text + globe graphic)
+             ======================================== -->
+        <section class="customers-hero">
+            <div class="customers-hero__grid"></div>
+            <div class="customers-hero__glow"></div>
+            
+            <div class="customers-container customers-hero__inner">
+                <div class="customers-hero__content">
+                    <span class="customers-label">Customers</span>
+                    <h1 class="customers-hero__title">
+                        Trusted by <span class="accent">hundreds of organizations</span> worldwide.
+                    </h1>
+                    <p class="customers-hero__intro">
+                        From global enterprises to government agencies, from banks to energy companies — organizations across industries rely on Datapolis to run their critical business processes.
                     </p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Logo Wall -->
-        <section id="references" class="dp-section">
-            <div class="dp-container">
-                <div class="dp-logos" style="opacity: 1; filter: none;">
-                    <img src="storage/files/klienci/logo-airbus.png" alt="Airbus" style="max-height: 50px; opacity: 0.8; filter: grayscale(100%) brightness(200%);">
-                    <img src="storage/files/klienci/logo-pgnig.png" alt="PGNiG" style="max-height: 50px; opacity: 0.8; filter: grayscale(100%) brightness(200%);">
-                    <img src="storage/files/klienci/logo-thyssenkrup.png" alt="ThyssenKrupp" style="max-height: 50px; opacity: 0.8; filter: grayscale(100%) brightness(200%);">
-                    <img src="storage/files/klienci/logo-polskie-radio.png" alt="Polskie Radio" style="max-height: 50px; opacity: 0.8; filter: grayscale(100%) brightness(200%);">
-                    <img src="storage/files/klienci/logo-nexia.png" alt="Nexia" style="max-height: 50px; opacity: 0.8; filter: grayscale(100%) brightness(200%);">
-                    <img src="storage/files/klienci/logo-nestle.png" alt="Nestle" style="max-height: 50px; opacity: 0.8; filter: grayscale(100%) brightness(200%);">
-                </div>
-            </div>
-        </section>
-
-        <!-- Case Studies -->
-        <section id="case-studies" class="dp-section dp-section--dark">
-            <div class="dp-container">
-                <div class="dp-section__header">
-                    <h2 class="dp-subtitle" style="color: white; margin-bottom: 40px;">Selected Case Studies</h2>
+                    <div class="customers-hero__actions">
+                        <a href="contact.html" class="dp-btn">Talk to us</a>
+                        <a href="https://2to2.ai" target="_blank" class="dp-btn dp-btn-outline">See the platform</a>
+                    </div>
                 </div>
                 
-                <div class="dp-grid-2" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px;">
-                    <div class="dp-feature" style="align-items: flex-start; text-align: left;">
-                        <span class="dp-label" style="margin-bottom: 10px;">Manufacturing</span>
-                        <h3 class="dp-feature__title">Global Aerospace Leader</h3>
-                        <p class="dp-feature__desc">Implemented a centralized quality control workflow across 15 production sites. Reduced compliance reporting time by 60%.</p>
+                <div class="customers-hero__visual">
+                    <!-- Globe diagram with connection points -->
+                    <svg class="globe-diagram" viewBox="0 0 320 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <filter id="glowGlobe" x="-50%" y="-50%" width="200%" height="200%">
+                                <feGaussianBlur stdDeviation="8" result="blur"/>
+                                <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+                            </filter>
+                            <linearGradient id="globeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#14b8a6" stop-opacity="0.2"/>
+                                <stop offset="100%" stop-color="#0d9488" stop-opacity="0.05"/>
+                            </linearGradient>
+                        </defs>
+                        
+                        <!-- Globe circle -->
+                        <circle cx="160" cy="160" r="110" fill="url(#globeGrad)" stroke="#334155" stroke-width="2"/>
+                        
+                        <!-- Globe meridians -->
+                        <ellipse cx="160" cy="160" rx="110" ry="40" stroke="#334155" stroke-width="1.5" fill="none"/>
+                        <ellipse cx="160" cy="160" rx="70" ry="110" stroke="#334155" stroke-width="1.5" fill="none"/>
+                        <ellipse cx="160" cy="160" rx="30" ry="110" stroke="#334155" stroke-width="1" fill="none" opacity="0.5"/>
+                        <line x1="50" y1="160" x2="270" y2="160" stroke="#334155" stroke-width="1"/>
+                        
+                        <!-- Connection points (customers around the world) -->
+                        <!-- Europe -->
+                        <g filter="url(#glowGlobe)">
+                            <circle cx="175" cy="120" r="8" fill="#14b8a6"/>
+                            <circle cx="175" cy="120" r="4" fill="#0f172a"/>
+                        </g>
+                        <!-- North America -->
+                        <g filter="url(#glowGlobe)">
+                            <circle cx="95" cy="135" r="8" fill="#14b8a6"/>
+                            <circle cx="95" cy="135" r="4" fill="#0f172a"/>
+                        </g>
+                        <!-- Asia -->
+                        <g filter="url(#glowGlobe)">
+                            <circle cx="220" cy="145" r="8" fill="#14b8a6"/>
+                            <circle cx="220" cy="145" r="4" fill="#0f172a"/>
+                        </g>
+                        <!-- South America -->
+                        <g filter="url(#glowGlobe)">
+                            <circle cx="120" cy="195" r="6" fill="#14b8a6"/>
+                            <circle cx="120" cy="195" r="3" fill="#0f172a"/>
+                        </g>
+                        <!-- Africa -->
+                        <g filter="url(#glowGlobe)">
+                            <circle cx="170" cy="175" r="6" fill="#14b8a6"/>
+                            <circle cx="170" cy="175" r="3" fill="#0f172a"/>
+                        </g>
+                        <!-- Australia -->
+                        <g filter="url(#glowGlobe)">
+                            <circle cx="235" cy="200" r="6" fill="#14b8a6"/>
+                            <circle cx="235" cy="200" r="3" fill="#0f172a"/>
+                        </g>
+                        <!-- Middle East -->
+                        <g filter="url(#glowGlobe)">
+                            <circle cx="195" cy="150" r="5" fill="#14b8a6"/>
+                            <circle cx="195" cy="150" r="2.5" fill="#0f172a"/>
+                        </g>
+                        
+                        <!-- Connection lines between points -->
+                        <path d="M175 120 Q160 100 95 135" stroke="#14b8a6" stroke-width="1" fill="none" opacity="0.4" stroke-dasharray="4 3"/>
+                        <path d="M175 120 L220 145" stroke="#14b8a6" stroke-width="1" fill="none" opacity="0.4" stroke-dasharray="4 3"/>
+                        <path d="M175 120 L170 175" stroke="#14b8a6" stroke-width="1" fill="none" opacity="0.3" stroke-dasharray="4 3"/>
+                        <path d="M220 145 L235 200" stroke="#14b8a6" stroke-width="1" fill="none" opacity="0.3" stroke-dasharray="4 3"/>
+                        <path d="M95 135 L120 195" stroke="#14b8a6" stroke-width="1" fill="none" opacity="0.3" stroke-dasharray="4 3"/>
+                        
+                        <!-- Orbit ring -->
+                        <ellipse cx="160" cy="160" rx="140" ry="50" stroke="#14b8a6" stroke-width="1" fill="none" opacity="0.2" transform="rotate(-20 160 160)"/>
+                        
+                        <!-- Small satellite dots on orbit -->
+                        <circle cx="45" cy="130" r="3" fill="#14b8a6" opacity="0.6"/>
+                        <circle cx="275" cy="190" r="3" fill="#14b8a6" opacity="0.6"/>
+                        
+                        <!-- Caption -->
+                        <text x="160" y="300" text-anchor="middle" fill="#64748b" font-size="10" font-family="system-ui, sans-serif" letter-spacing="0.1em">40+ COUNTRIES · 500+ ORGANIZATIONS</text>
+                    </svg>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================
+             STATS BAR
+             ======================================== -->
+        <section class="customers-stats">
+            <div class="customers-container">
+                <div class="customers-stats__grid">
+                    <div class="customers-stats__item">
+                        <span class="customers-stats__number">20+</span>
+                        <span class="customers-stats__label">Years in production</span>
                     </div>
-                    <div class="dp-feature" style="align-items: flex-start; text-align: left;">
-                        <span class="dp-label" style="margin-bottom: 10px;">Energy</span>
-                        <h3 class="dp-feature__title">National Energy Provider</h3>
-                        <p class="dp-feature__desc">Digitized procurement and maintenance requests for critical infrastructure. Zero downtime during migration.</p>
+                    <div class="customers-stats__item">
+                        <span class="customers-stats__number">500+</span>
+                        <span class="customers-stats__label">Organizations served</span>
                     </div>
-                    <div class="dp-feature" style="align-items: flex-start; text-align: left;">
-                        <span class="dp-label" style="margin-bottom: 10px;">Finance</span>
-                        <h3 class="dp-feature__title">International Audit Firm</h3>
-                        <p class="dp-feature__desc">Automated document collection and client verification processes, ensuring strict regulatory compliance.</p>
+                    <div class="customers-stats__item">
+                        <span class="customers-stats__number">40+</span>
+                        <span class="customers-stats__label">Countries</span>
+                    </div>
+                    <div class="customers-stats__item">
+                        <span class="customers-stats__number">1000s</span>
+                        <span class="customers-stats__label">Workflows running daily</span>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Industries -->
-        <section id="industries" class="dp-section">
-            <div class="dp-container">
-                <div class="dp-grid-2" style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;">
-                    <div>
-                        <h2 class="dp-subtitle" style="color: white; margin-bottom: 20px;">Industries Served</h2>
-                        <p class="dp-text">
-                            Our platform is built for complexity. We thrive where standard tools fail—in regulated, high-stakes environments.
-                        </p>
-                    </div>
-                    <ul class="dp-list" style="color: #94a3b8; font-size: 1.1rem; line-height: 2;">
-                        <li>Banking & Financial Services</li>
-                        <li>Energy & Utilities</li>
-                        <li>Manufacturing & Automotive</li>
-                        <li>Government & Public Sector</li>
-                        <li>Pharma & Healthcare</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <!-- Testimonials -->
-        <section id="testimonials" class="dp-section dp-section--dark">
-            <div class="dp-container">
-                <div class="dp-section__header">
-                    <h2 class="dp-subtitle" style="color: white; margin-bottom: 40px;">What our customers say</h2>
-                </div>
+        <!-- ========================================
+             LOGO WALL
+             ======================================== -->
+        <section class="customers-logos">
+            <div class="customers-container">
+                <h2 class="customers-section__title">Companies that trust Datapolis</h2>
                 
-                <div style="max-width: 800px; margin: 0 auto; text-align: center;">
-                    <blockquote style="font-size: 1.5rem; color: white; font-style: italic; margin-bottom: 30px;">
-                        "Datapolis gave us the control we needed. We finally have a clear view of our processes and can optimize them in real-time."
-                    </blockquote>
-                    <cite style="color: #14b8a6; font-style: normal; font-weight: 600;">— CIO, Leading Energy Company</cite>
+                <div class="customers-logo-grid">
+                    <!-- Row 1 - Enterprise -->
+                    <div class="customers-logo-item">
+                        <img src="storage/files/klienci/logo-thyssenkrup.png" alt="ThyssenKrupp">
+                    </div>
+                    <div class="customers-logo-item">
+                        <img src="storage/files/klienci/logo-airbus.png" alt="Airbus">
+                    </div>
+                    <div class="customers-logo-item">
+                        <img src="storage/files/klienci/logo-nestle.png" alt="Nestlé">
+                    </div>
+                    <div class="customers-logo-item">
+                        <img src="storage/files/klienci/logo-pgnig.png" alt="PGNiG">
+                    </div>
+                    <div class="customers-logo-item">
+                        <img src="storage/files/klienci/logo-polskie-radio.png" alt="Polskie Radio">
+                    </div>
+                    <div class="customers-logo-item">
+                        <img src="storage/files/klienci/logo-nexia.png" alt="Nexia">
+                    </div>
+                    <div class="customers-logo-item">
+                        <img src="storage/files/klienci/logo-mon.png" alt="Ministry of National Defence">
+                    </div>
+                    <!-- Placeholder items for additional logos -->
+                    <div class="customers-logo-item customers-logo-item--placeholder">
+                        <span>+ many more</span>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section class="dp-section" style="padding: 60px 0;">
-            <div class="dp-container" style="text-align: center;">
-                <div class="dp-hero__actions" style="justify-content: center;">
-                    <a href="contact.html" class="dp-btn dp-btn--primary">Talk to an expert</a>
+        <!-- ========================================
+             INDUSTRIES
+             ======================================== -->
+        <section class="customers-industries">
+            <div class="customers-container">
+                <h2 class="customers-section__title">Industries we serve</h2>
+                
+                <div class="customers-industries__grid">
+                    <div class="customers-industry">
+                        <div class="customers-industry__icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M3 21h18M3 7v14M21 7v14M6 7V3h12v4M9 21v-4h6v4M9 10h1M14 10h1M9 14h1M14 14h1"/>
+                            </svg>
+                        </div>
+                        <h3 class="customers-industry__title">Banking & Finance</h3>
+                        <p class="customers-industry__desc">Compliance workflows, approvals, audit trails</p>
+                    </div>
+                    
+                    <div class="customers-industry">
+                        <div class="customers-industry__icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+                            </svg>
+                        </div>
+                        <h3 class="customers-industry__title">Energy & Utilities</h3>
+                        <p class="customers-industry__desc">Critical infrastructure, zero-downtime ops</p>
+                    </div>
+                    
+                    <div class="customers-industry">
+                        <div class="customers-industry__icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                            </svg>
+                        </div>
+                        <h3 class="customers-industry__title">Government & Defense</h3>
+                        <p class="customers-industry__desc">Regulated environments, security-first</p>
+                    </div>
+                    
+                    <div class="customers-industry">
+                        <div class="customers-industry__icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <rect x="2" y="7" width="20" height="14" rx="2"/>
+                                <path d="M16 7V5a4 4 0 00-8 0v2"/>
+                            </svg>
+                        </div>
+                        <h3 class="customers-industry__title">Manufacturing</h3>
+                        <p class="customers-industry__desc">Quality control, production workflows</p>
+                    </div>
+                    
+                    <div class="customers-industry">
+                        <div class="customers-industry__icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+                            </svg>
+                        </div>
+                        <h3 class="customers-industry__title">Healthcare & Pharma</h3>
+                        <p class="customers-industry__desc">Compliance, patient processes</p>
+                    </div>
+                    
+                    <div class="customers-industry">
+                        <div class="customers-industry__icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <circle cx="12" cy="12" r="10"/>
+                                <path d="M2 12h20M12 2a15 15 0 014 10 15 15 0 01-4 10 15 15 0 01-4-10 15 15 0 014-10z"/>
+                            </svg>
+                        </div>
+                        <h3 class="customers-industry__title">Global Enterprises</h3>
+                        <p class="customers-industry__desc">Cross-border operations, scale</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================
+             CTA
+             ======================================== -->
+        <section class="customers-cta">
+            <div class="customers-cta__glow"></div>
+            <div class="customers-container">
+                <h2 class="customers-cta__title">Join hundreds of organizations running on Datapolis</h2>
+                <div class="customers-cta__buttons">
+                    <a href="https://2to2.ai" target="_blank" class="dp-btn dp-btn--primary dp-btn--large">
+                        See the platform
+                    </a>
+                    <a href="contact.html" class="dp-btn dp-btn-outline dp-btn--large">
+                        Contact us
+                    </a>
                 </div>
             </div>
         </section>

@@ -1,0 +1,498 @@
+/* ============================================
+   ABOUT PAGE - Company-focused, Editorial
+   Teal accents, visual elements, dark premium
+   ============================================ */
+
+/* ===== Page base ===== */
+.about-page {
+    background: #020617;
+}
+
+/* ===== Accent text (teal gradient) ===== */
+.accent {
+    color: #14b8a6;
+    font-weight: inherit;
+}
+
+/* ===== Container - wider for 2-column layouts ===== */
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* ===== Label pill (refined) ===== */
+.about-label {
+    display: inline-block;
+    padding: 10px 24px;
+    background: linear-gradient(135deg, rgba(20, 184, 166, 0.1) 0%, rgba(20, 184, 166, 0.05) 100%);
+    border: 1px solid rgba(20, 184, 166, 0.25);
+    border-radius: 100px;
+    color: #14b8a6;
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 24px;
+    box-shadow: 0 0 20px rgba(20, 184, 166, 0.1);
+}
+
+/* ============================================
+   HERO - 2 columns
+   ============================================ */
+.about-hero {
+    padding: 120px 0 80px;
+    position: relative;
+    overflow: hidden;
+}
+
+.about-hero__grid {
+    position: absolute;
+    inset: 0;
+    background-image: 
+        linear-gradient(rgba(148, 163, 184, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(148, 163, 184, 0.03) 1px, transparent 1px);
+    background-size: 60px 60px;
+}
+
+.about-hero__glow {
+    position: absolute;
+    top: 20%;
+    left: 30%;
+    width: 600px;
+    height: 400px;
+    background: radial-gradient(ellipse, rgba(20, 184, 166, 0.08) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.about-hero__inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.about-hero__content {
+    max-width: 560px;
+}
+
+.about-hero__title {
+    font-size: clamp(2.25rem, 4vw, 3rem);
+    font-weight: 700;
+    line-height: 1.2;
+    color: #f8fafc;
+    margin-bottom: 24px;
+    letter-spacing: -0.02em;
+}
+
+.about-hero__intro {
+    font-size: 1.125rem;
+    line-height: 1.75;
+    color: #94a3b8;
+    margin-bottom: 32px;
+    max-width: 520px;
+}
+
+.about-hero__actions {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+/* ===== Hero Workflow Diagram ===== */
+.about-hero__visual {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.workflow-diagram {
+    width: 100%;
+    max-width: 440px;
+    height: auto;
+}
+
+/* ============================================
+   AT A GLANCE - 4 metric cards
+   ============================================ */
+.about-section--glance {
+    padding: 60px 0;
+    border-top: 1px solid rgba(148, 163, 184, 0.08);
+    border-bottom: 1px solid rgba(148, 163, 184, 0.08);
+    background: linear-gradient(180deg, rgba(15, 23, 42, 0.3) 0%, transparent 100%);
+}
+
+.about-glance {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.about-glance__card {
+    background: rgba(15, 23, 42, 0.5);
+    border: 1px solid rgba(148, 163, 184, 0.1);
+    border-radius: 12px;
+    padding: 24px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.about-glance__card:hover {
+    border-color: rgba(20, 184, 166, 0.3);
+    background: rgba(15, 23, 42, 0.7);
+}
+
+.about-glance__number {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #14b8a6;
+    margin-bottom: 8px;
+}
+
+.about-glance__icon {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 12px;
+    color: #14b8a6;
+}
+
+.about-glance__text {
+    font-size: 0.9375rem;
+    color: #94a3b8;
+    line-height: 1.5;
+}
+
+/* ============================================
+   SECTIONS - Base styles
+   ============================================ */
+.about-section {
+    padding: 80px 0;
+}
+
+.about-section__title {
+    font-size: clamp(1.5rem, 2.5vw, 2rem);
+    font-weight: 700;
+    color: #f8fafc;
+    margin-bottom: 24px;
+    letter-spacing: -0.01em;
+    position: relative;
+    padding-left: 20px;
+}
+
+.about-section__title::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 4px;
+    width: 4px;
+    height: 28px;
+    background: linear-gradient(180deg, #14b8a6 0%, #0d9488 100%);
+    border-radius: 2px;
+}
+
+.about-section__lead {
+    font-size: 1.25rem;
+    line-height: 1.7;
+    color: #cbd5e1;
+    max-width: 700px;
+    margin-bottom: 32px;
+}
+
+/* ===== Bullet list ===== */
+.about-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-width: 600px;
+}
+
+.about-list li {
+    position: relative;
+    padding-left: 28px;
+    font-size: 1.0625rem;
+    color: #94a3b8;
+    line-height: 1.7;
+    margin-bottom: 16px;
+}
+
+.about-list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 10px;
+    width: 8px;
+    height: 8px;
+    background: #14b8a6;
+    border-radius: 50%;
+    box-shadow: 0 0 8px rgba(20, 184, 166, 0.4);
+}
+
+/* ============================================
+   EVOLUTION - 3 step cards
+   ============================================ */
+.about-section--evolution {
+    background: linear-gradient(180deg, rgba(15, 23, 42, 0.4) 0%, transparent 100%);
+    border-top: 1px solid rgba(148, 163, 184, 0.08);
+}
+
+.about-evolution {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.about-evolution__card {
+    flex: 1;
+    min-width: 220px;
+    max-width: 280px;
+    background: rgba(15, 23, 42, 0.6);
+    border: 1px solid rgba(148, 163, 184, 0.12);
+    border-radius: 16px;
+    padding: 28px 24px;
+    transition: all 0.3s ease;
+}
+
+.about-evolution__card:hover {
+    border-color: rgba(20, 184, 166, 0.3);
+    transform: translateY(-4px);
+}
+
+.about-evolution__card--active {
+    border-color: rgba(20, 184, 166, 0.4);
+    background: rgba(20, 184, 166, 0.08);
+    box-shadow: 0 0 30px rgba(20, 184, 166, 0.15);
+}
+
+.about-evolution__phase {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #14b8a6;
+    margin-bottom: 12px;
+}
+
+.about-evolution__title {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: #f8fafc;
+    margin-bottom: 8px;
+}
+
+.about-evolution__desc {
+    font-size: 0.9375rem;
+    color: #94a3b8;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.about-evolution__arrow {
+    display: flex;
+    align-items: center;
+    color: #334155;
+}
+
+/* ============================================
+   HOW WE WORK - 3 value cards
+   ============================================ */
+.about-values {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+}
+
+.about-value {
+    background: rgba(15, 23, 42, 0.5);
+    border: 1px solid rgba(148, 163, 184, 0.1);
+    border-left: 3px solid #14b8a6;
+    border-radius: 12px;
+    padding: 28px 24px;
+    transition: all 0.3s ease;
+}
+
+.about-value:hover {
+    border-color: rgba(20, 184, 166, 0.3);
+    border-left-color: #14b8a6;
+    background: rgba(15, 23, 42, 0.7);
+}
+
+.about-value__title {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: #f8fafc;
+    margin-bottom: 12px;
+}
+
+.about-value__desc {
+    font-size: 0.9375rem;
+    color: #94a3b8;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* ============================================
+   CLOSING CTA
+   ============================================ */
+.about-cta {
+    padding: 100px 0 120px;
+    text-align: center;
+    position: relative;
+    border-top: 1px solid rgba(148, 163, 184, 0.08);
+}
+
+.about-cta__glow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 700px;
+    height: 400px;
+    background: radial-gradient(ellipse, rgba(20, 184, 166, 0.12) 0%, transparent 60%);
+    pointer-events: none;
+}
+
+.about-cta__title {
+    font-size: clamp(2rem, 4vw, 2.75rem);
+    font-weight: 700;
+    color: #f8fafc;
+    margin-bottom: 16px;
+    letter-spacing: -0.02em;
+    position: relative;
+}
+
+.about-cta__subtext {
+    font-size: 1.125rem;
+    color: #94a3b8;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.about-cta__buttons {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.about-cta .dp-btn--large {
+    padding: 16px 32px;
+    font-size: 1rem;
+}
+
+.about-cta .dp-btn-outline {
+    background: transparent;
+    border: 1px solid rgba(148, 163, 184, 0.25);
+    color: #f8fafc;
+}
+
+.about-cta .dp-btn-outline:hover {
+    border-color: #14b8a6;
+    color: #14b8a6;
+    background: rgba(20, 184, 166, 0.08);
+    box-shadow: none;
+    transform: none;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 1024px) {
+    .about-hero__inner {
+        grid-template-columns: 1fr;
+        gap: 48px;
+        text-align: center;
+    }
+    
+    .about-hero__content {
+        max-width: 100%;
+    }
+    
+    .about-hero__intro {
+        max-width: 100%;
+    }
+    
+    .about-hero__actions {
+        justify-content: center;
+    }
+    
+    .about-glance {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .about-values {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-hero {
+        padding: 100px 0 60px;
+    }
+    
+    .about-section {
+        padding: 60px 0;
+    }
+    
+    .about-glance {
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+    }
+    
+    .about-evolution {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .about-evolution__card {
+        max-width: 100%;
+    }
+    
+    .about-evolution__arrow {
+        transform: rotate(90deg);
+    }
+    
+    .workflow-diagram {
+        max-width: 100%;
+    }
+    
+    .about-cta {
+        padding: 80px 0 100px;
+    }
+    
+    .about-cta__buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .about-cta__buttons .dp-btn--large {
+        width: 100%;
+        max-width: 280px;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-container {
+        padding: 0 20px;
+    }
+    
+    .about-hero__title {
+        font-size: 1.875rem;
+    }
+    
+    .about-glance {
+        grid-template-columns: 1fr;
+    }
+    
+    .about-section__title {
+        font-size: 1.375rem;
+    }
+}
