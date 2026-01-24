@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Contact - Datapolis</title>
-    <meta name="description" content="Get in touch with Datapolis. Book a call or send us a message.">
+    <meta name="description" content="Get in touch with Datapolis. Book a call or send us a message about process automation and AI governance.">
+    <meta name="robots" content="index,follow">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#020617">
 
@@ -11,8 +12,10 @@
     <link rel="stylesheet" href="assets/css/async.min.css?v=10022025" media="print" onload="this.media='all'; this.onload=null;">
     <link rel="stylesheet" href="assets/css/dark-theme.css?v=3">
     <link rel="stylesheet" href="assets/css/new-homepage.css?v=7">
+    <link rel="stylesheet" href="assets/css/contact.css?v=1">
 
     <script src="includes/loader.js"></script>
+
     <link rel="icon" type="image/png" href="assets/img/favicon/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="assets/img/favicon/favicon.svg" />
     <link rel="shortcut icon" href="assets/img/favicon/favicon.ico" />
@@ -22,64 +25,326 @@
 <body class="dark-theme">
     <div id="header-placeholder"></div>
 
-    <main>
-        <section class="dp-section dp-hero" style="padding-top: 120px; min-height: auto; padding-bottom: 60px;">
-            <div class="dp-container">
-                <div class="dp-section__header">
-                    <span class="dp-label">Get in Touch</span>
-                    <h1 class="dp-title">Contact Us</h1>
-                    <p class="dp-text" style="max-width: 600px; margin: 20px auto 0;">
-                        Have a question or want to see a demo? We'd love to hear from you.
+    <main class="contact-page">
+        <!-- ========================================
+             HERO - Two column: text + graphic
+             ======================================== -->
+        <section class="contact-hero">
+            <div class="contact-hero__grid"></div>
+            <div class="contact-hero__glow"></div>
+            <div class="contact-hero__glow contact-hero__glow--right"></div>
+            
+            <div class="contact-container contact-hero__inner">
+                <!-- Left: Content -->
+                <div class="contact-hero__content">
+                    <span class="contact-label">Get in Touch</span>
+                    <h1 class="contact-hero__title">
+                        Talk to the team behind <span class="accent">governed work</span>.
+                    </h1>
+                    <p class="contact-hero__intro">
+                        Tell us what you're trying to run — we'll show you the clean path from request to tracked, auditable outcome.
                     </p>
+                    <div class="contact-hero__actions">
+                        <a href="#form" class="dp-btn">Book a call</a>
+                        <a href="mailto:office@datapolis.com" class="dp-btn dp-btn-outline">Email us</a>
+                    </div>
+                </div>
+                
+                <!-- Right: Visual - Robot Pigeon (Digital Worker) with Letter -->
+                <div class="contact-hero__visual">
+                    <svg class="contact-diagram" viewBox="0 0 420 380" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <filter id="glowTeal" x="-50%" y="-50%" width="200%" height="200%">
+                                <feGaussianBlur stdDeviation="6" result="blur"/>
+                                <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+                            </filter>
+                            <filter id="glowSoft" x="-50%" y="-50%" width="200%" height="200%">
+                                <feGaussianBlur stdDeviation="3" result="blur"/>
+                                <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+                            </filter>
+                            <linearGradient id="metalGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#475569"/>
+                                <stop offset="50%" stop-color="#334155"/>
+                                <stop offset="100%" stop-color="#1e293b"/>
+                            </linearGradient>
+                            <linearGradient id="metalLight" x1="0%" y1="0%" x2="0%" y2="100%">
+                                <stop offset="0%" stop-color="#64748b"/>
+                                <stop offset="100%" stop-color="#475569"/>
+                            </linearGradient>
+                            <linearGradient id="wingGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#14b8a6"/>
+                                <stop offset="100%" stop-color="#0d9488"/>
+                            </linearGradient>
+                            <linearGradient id="letterGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#f8fafc"/>
+                                <stop offset="100%" stop-color="#e2e8f0"/>
+                            </linearGradient>
+                        </defs>
+                        
+                        <!-- Soft glow behind -->
+                        <ellipse cx="210" cy="180" rx="130" ry="110" fill="rgba(20, 184, 166, 0.04)"/>
+                        
+                        <!-- === ROBOT PIGEON === -->
+                        <g class="float-slow" transform="translate(80, 60)">
+                            
+                            <!-- TAIL FEATHERS - mechanical/segmented -->
+                            <g>
+                                <path d="M45 200 L10 240 L20 235 L50 200" fill="#334155" stroke="#475569" stroke-width="1"/>
+                                <path d="M50 205 L20 250 L30 243 L55 208" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+                                <path d="M55 210 L30 260 L40 252 L60 215" fill="#334155" stroke="#475569" stroke-width="1"/>
+                                <path d="M60 212 L40 265 L48 258 L65 218" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+                                <!-- Mechanical joints on tail -->
+                                <circle cx="50" cy="205" r="3" fill="#0f172a" stroke="#14b8a6" stroke-width="1"/>
+                                <circle cx="58" cy="212" r="2.5" fill="#0f172a" stroke="#14b8a6" stroke-width="1"/>
+                            </g>
+                            
+                            <!-- BODY - metallic robot body -->
+                            <ellipse cx="120" cy="175" rx="70" ry="45" fill="url(#metalGrad)" stroke="#64748b" stroke-width="1.5"/>
+                            
+                            <!-- Body panel lines -->
+                            <path d="M60 165 Q90 155 120 155 Q150 155 180 165" stroke="#64748b" stroke-width="1" fill="none" opacity="0.6"/>
+                            <path d="M65 185 Q90 195 120 195 Q150 195 175 185" stroke="#64748b" stroke-width="1" fill="none" opacity="0.6"/>
+                            
+                            <!-- Chest plate / access panel -->
+                            <rect x="95" y="160" width="50" height="30" rx="4" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+                            <rect x="100" y="165" width="15" height="8" rx="2" fill="#0f172a" stroke="#14b8a6" stroke-width="0.5" opacity="0.8"/>
+                            <rect x="120" y="165" width="20" height="8" rx="2" fill="#0f172a"/>
+                            <!-- Status lights -->
+                            <circle cx="107" cy="180" r="2" fill="#14b8a6" class="node-pulse"/>
+                            <circle cx="115" cy="180" r="2" fill="#14b8a6" class="node-pulse node-pulse--delay" opacity="0.7"/>
+                            <circle cx="123" cy="180" r="2" fill="#0d9488" class="node-pulse node-pulse--delay2" opacity="0.5"/>
+                            
+                            <!-- Circuit lines on body -->
+                            <g opacity="0.5">
+                                <path d="M70 170 L85 170 L90 175" stroke="#14b8a6" stroke-width="1" fill="none"/>
+                                <circle cx="70" cy="170" r="2" fill="#14b8a6"/>
+                                <path d="M150 170 L165 170 L170 165" stroke="#14b8a6" stroke-width="1" fill="none"/>
+                                <circle cx="170" cy="165" r="2" fill="#14b8a6"/>
+                            </g>
+                            
+                            <!-- WING (spread upward) - mechanical feathers -->
+                            <g filter="url(#glowSoft)" class="wing-flap-front">
+                                <!-- Wing base/arm -->
+                                <path d="M90 150 L70 100 L60 80 L80 60 L110 50 L140 55 L155 75 L130 120 L105 145" 
+                                      fill="url(#metalLight)" stroke="#64748b" stroke-width="1.5"/>
+                                
+                                <!-- Mechanical feather segments -->
+                                <g fill="url(#wingGrad)" filter="url(#glowTeal)">
+                                    <path d="M80 60 L60 25 L75 30 L90 55"/>
+                                    <path d="M95 52 L85 15 L100 22 L105 50"/>
+                                    <path d="M110 50 L110 10 L125 20 L120 52"/>
+                                    <path d="M125 52 L135 15 L148 28 L138 58"/>
+                                    <path d="M140 60 L160 30 L168 45 L152 72"/>
+                                </g>
+                                
+                                <!-- Wing joints -->
+                                <circle cx="90" cy="55" r="4" fill="#1e293b" stroke="#14b8a6" stroke-width="1.5"/>
+                                <circle cx="110" cy="50" r="4" fill="#1e293b" stroke="#14b8a6" stroke-width="1.5"/>
+                                <circle cx="130" cy="55" r="4" fill="#1e293b" stroke="#14b8a6" stroke-width="1.5"/>
+                                
+                                <!-- Wing struts -->
+                                <path d="M75 65 L75 35" stroke="#475569" stroke-width="2"/>
+                                <path d="M100 55 L100 25" stroke="#475569" stroke-width="2"/>
+                                <path d="M125 55 L125 30" stroke="#475569" stroke-width="2"/>
+                                <path d="M145 65 L155 40" stroke="#475569" stroke-width="2"/>
+                            </g>
+                            
+                            <!-- NECK - mechanical joint -->
+                            <path d="M175 160 Q190 150 195 135" stroke="#64748b" stroke-width="8" fill="none" stroke-linecap="round"/>
+                            <path d="M175 160 Q190 150 195 135" stroke="#475569" stroke-width="5" fill="none" stroke-linecap="round"/>
+                            <!-- Neck segments -->
+                            <circle cx="182" cy="152" r="3" fill="#1e293b" stroke="#64748b" stroke-width="1"/>
+                            <circle cx="190" cy="142" r="3" fill="#1e293b" stroke="#64748b" stroke-width="1"/>
+                            
+                            <!-- HEAD - robot head -->
+                            <ellipse cx="210" cy="120" rx="28" ry="24" fill="url(#metalGrad)" stroke="#64748b" stroke-width="1.5"/>
+                            
+                            <!-- Head panel -->
+                            <path d="M195 108 Q210 100 225 108" stroke="#475569" stroke-width="1" fill="none"/>
+                            
+                            <!-- Antenna -->
+                            <g>
+                                <line x1="205" y1="98" x2="200" y2="80" stroke="#64748b" stroke-width="2"/>
+                                <circle cx="200" cy="78" r="4" fill="#14b8a6" filter="url(#glowTeal)" class="node-pulse"/>
+                            </g>
+                            
+                            <!-- EYE - glowing robotic eye -->
+                            <g filter="url(#glowSoft)">
+                                <circle cx="222" cy="115" r="10" fill="#0f172a" stroke="#14b8a6" stroke-width="2"/>
+                                <circle cx="224" cy="113" r="5" fill="#14b8a6"/>
+                                <circle cx="226" cy="111" r="2" fill="#fff" opacity="0.9"/>
+                                <!-- Scanner line -->
+                                <path d="M214 115 L230 115" stroke="#14b8a6" stroke-width="0.5" opacity="0.5"/>
+                            </g>
+                            
+                            <!-- BEAK - metallic beak -->
+                            <g>
+                                <path d="M235 118 L265 115 L240 125 Z" fill="url(#metalLight)" stroke="#64748b" stroke-width="1"/>
+                                <path d="M235 125 L260 128 L240 125 Z" fill="#475569" stroke="#64748b" stroke-width="1"/>
+                            </g>
+                            
+                            <!-- LETTER in beak -->
+                            <g transform="translate(255, 108) rotate(5)">
+                                <rect x="0" y="0" width="35" height="25" rx="2" fill="url(#letterGrad)" stroke="#94a3b8" stroke-width="1"/>
+                                <path d="M0 3 L17.5 15 L35 3" stroke="#64748b" stroke-width="1.5" fill="none"/>
+                                <!-- Digital seal -->
+                                <circle cx="28" cy="18" r="5" fill="#14b8a6" filter="url(#glowSoft)"/>
+                                <path d="M25.5 18 L27 19.5 L30.5 15.5" stroke="#fff" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+                            </g>
+                            
+                            <!-- LEGS - mechanical -->
+                            <g>
+                                <!-- Left leg -->
+                                <path d="M100 215 L95 245 L85 260" stroke="#64748b" stroke-width="3" fill="none" stroke-linecap="round"/>
+                                <circle cx="95" cy="245" r="3" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+                                <!-- Claw -->
+                                <path d="M85 260 L75 268 M85 260 L85 272 M85 260 L95 268" stroke="#64748b" stroke-width="2" stroke-linecap="round"/>
+                                
+                                <!-- Right leg -->
+                                <path d="M140 215 L145 245 L155 260" stroke="#64748b" stroke-width="3" fill="none" stroke-linecap="round"/>
+                                <circle cx="145" cy="245" r="3" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+                                <!-- Claw -->
+                                <path d="M155 260 L145 268 M155 260 L155 272 M155 260 L165 268" stroke="#64748b" stroke-width="2" stroke-linecap="round"/>
+                            </g>
+                        </g>
+                        
+                        <!-- Floating particles -->
+                        <g class="node-pulse">
+                            <circle cx="50" cy="150" r="3" fill="#14b8a6" opacity="0.5"/>
+                        </g>
+                        <g class="node-pulse node-pulse--delay">
+                            <circle cx="380" cy="120" r="3" fill="#14b8a6" opacity="0.4"/>
+                            <circle cx="380" cy="120" r="7" stroke="#14b8a6" stroke-width="1" fill="none" opacity="0.2"/>
+                        </g>
+                        <g class="node-pulse node-pulse--delay2">
+                            <circle cx="370" cy="250" r="2.5" fill="#14b8a6" opacity="0.5"/>
+                        </g>
+                        <g class="node-pulse">
+                            <circle cx="40" cy="280" r="2" fill="#14b8a6" opacity="0.4"/>
+                        </g>
+                        
+                        <!-- Decorative elements -->
+                        <circle cx="390" cy="180" r="1.5" fill="#64748b" opacity="0.3"/>
+                        <circle cx="30" cy="200" r="1.5" fill="#64748b" opacity="0.25"/>
+                        
+                        <!-- Sparkles -->
+                        <g opacity="0.4" class="node-pulse node-pulse--delay">
+                            <path d="M395 140 L395 148 M391 144 L399 144" stroke="#14b8a6" stroke-width="1.5" stroke-linecap="round"/>
+                        </g>
+                        <g opacity="0.3" class="node-pulse">
+                            <path d="M25 120 L25 126 M22 123 L28 123" stroke="#64748b" stroke-width="1" stroke-linecap="round"/>
+                        </g>
+                    </svg>
                 </div>
             </div>
         </section>
 
-        <section class="dp-section">
-            <div class="dp-container">
-                <div class="dp-grid-2" style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: flex-start;">
+        <!-- ========================================
+             CONTENT - Info Cards + Form
+             ======================================== -->
+        <section class="contact-content" id="form">
+            <div class="contact-container contact-content__inner">
+                <!-- Left: Info Cards -->
+                <div class="contact-info">
+                    <!-- Email Card -->
+                    <div class="contact-card">
+                        <div class="contact-card__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="4" width="20" height="16" rx="2"/>
+                                <path d="M22 6L12 13 2 6"/>
+                            </svg>
+                        </div>
+                        <h3 class="contact-card__title">Email</h3>
+                        <p class="contact-card__value">
+                            <a href="mailto:office@datapolis.com">office@datapolis.com</a>
+                        </p>
+                    </div>
                     
-                    <!-- Contact Info -->
-                    <div>
-                        <h2 class="dp-subtitle" style="color: white; margin-bottom: 30px;">Reach Out</h2>
+                    <!-- Book a Call Card -->
+                    <div class="contact-card">
+                        <div class="contact-card__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="3" y="4" width="18" height="18" rx="2"/>
+                                <line x1="16" y1="2" x2="16" y2="6"/>
+                                <line x1="8" y1="2" x2="8" y2="6"/>
+                                <line x1="3" y1="10" x2="21" y2="10"/>
+                            </svg>
+                        </div>
+                        <h3 class="contact-card__title">Book a Call</h3>
+                        <p class="contact-card__desc">
+                            Schedule a 30-minute call to discuss your process and AI governance needs.
+                        </p>
+                        <a href="https://calendly.com/datapolis" target="_blank" class="dp-btn" style="margin-top: 16px;">Schedule now</a>
+                    </div>
+                    
+                    <!-- Office Hours Card -->
+                    <div class="contact-card">
+                        <div class="contact-card__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"/>
+                                <path d="M12 6v6l4 2"/>
+                            </svg>
+                        </div>
+                        <h3 class="contact-card__title">Office Hours</h3>
+                        <p class="contact-card__value">Monday – Friday</p>
+                        <p class="contact-card__desc">9:00 – 17:00 CET</p>
+                    </div>
+                    
+                    <!-- Social Links -->
+                    <div class="contact-socials">
+                        <a href="https://www.linkedin.com/company/datapolis-com" class="contact-social" target="_blank" rel="nofollow" aria-label="LinkedIn">
+                            <svg viewBox="0 0 32 32">
+                                <path d="M12 12h5.535v2.837h0.079c0.77-1.381 2.655-2.837 5.464-2.837 5.842 0 6.922 3.637 6.922 8.367v9.633h-5.769v-8.54c0-2.037-0.042-4.657-3.001-4.657-3.005 0-3.463 2.218-3.463 4.509v8.688h-5.767v-18z"/>
+                                <path d="M2 12h6v18h-6v-18z"/>
+                                <path d="M8 7c0 1.657-1.343 3-3 3s-3-1.343-3-3c0-1.657 1.343-3 3-3s3 1.343 3 3z"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.youtube.com/@datapolisworkbox" class="contact-social" target="_blank" rel="nofollow" aria-label="YouTube">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Right: Contact Form -->
+                <div class="contact-form-wrapper">
+                    <div class="contact-form__header">
+                        <h2 class="contact-form__title">Send us a message</h2>
+                        <p class="contact-form__helper">We reply within 1–2 business days.</p>
+                    </div>
+                    
+                    <form class="contact-form" action="https://formspree.io/f/your-form-id" method="POST">
+                        <div class="contact-form__row">
+                            <div class="contact-form__group">
+                                <label class="contact-form__label" for="name">Name <span class="required">*</span></label>
+                                <input type="text" id="name" name="name" class="contact-form__input" placeholder="Your name" required>
+                            </div>
+                            <div class="contact-form__group">
+                                <label class="contact-form__label" for="email">Email <span class="required">*</span></label>
+                                <input type="email" id="email" name="email" class="contact-form__input" placeholder="you@company.com" required>
+                            </div>
+                        </div>
                         
-                        <div style="margin-bottom: 30px;">
-                            <h4 style="color: #94a3b8; margin-bottom: 10px; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.1em;">Email</h4>
-                            <a href="mailto:office@datapolis.com" style="color: white; font-size: 1.25rem; text-decoration: none;">office@datapolis.com</a>
+                        <div class="contact-form__group">
+                            <label class="contact-form__label" for="company">Company <span class="required">*</span></label>
+                            <input type="text" id="company" name="company" class="contact-form__input" placeholder="Your company name" required>
                         </div>
-
-                        <div style="margin-bottom: 40px;">
-                            <h4 style="color: #94a3b8; margin-bottom: 10px; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.1em;">Book a Call</h4>
-                            <p class="dp-text" style="margin-bottom: 15px;">
-                                Schedule a 30-minute call with our team to discuss your process challenges.
-                            </p>
-                            <a href="https://calendly.com/datapolis" target="_blank" class="dp-btn dp-btn--primary">Book a call</a>
+                        
+                        <div class="contact-form__group">
+                            <label class="contact-form__label" for="message">Message <span class="required">*</span></label>
+                            <textarea id="message" name="message" class="contact-form__textarea" placeholder="Tell us about your process challenges or what you'd like to achieve..." required></textarea>
                         </div>
-
-                        <div style="margin-bottom: 40px;">
-                            <h4 style="color: #94a3b8; margin-bottom: 10px; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.1em;">Office Hours</h4>
-                            <p class="dp-text">Monday - Friday: 9:00 AM - 5:00 PM CET</p>
-                        </div>
-
-                        <div class="footer__socials socials-list" style="display: flex; gap: 15px;">
-                            <a href="https://www.linkedin.com/company/datapolis-com" class="social-item social-item--linkedin" target="_blank" rel="nofollow" aria-label="LinkedIn" style="display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; background: #1e293b; border-radius: 8px;">
-                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 32 32" fill="#94a3b8">
-                                    <path d="M12 12h5.535v2.837h0.079c0.77-1.381 2.655-2.837 5.464-2.837 5.842 0 6.922 3.637 6.922 8.367v9.633h-5.769v-8.54c0-2.037-0.042-4.657-3.001-4.657-3.005 0-3.463 2.218-3.463 4.509v8.688h-5.767v-18z"></path>
-                                    <path d="M2 12h6v18h-6v-18z"></path>
-                                    <path d="M8 7c0 1.657-1.343 3-3 3s-3-1.343-3-3c0-1.657 1.343-3 3-3s3 1.343 3 3z"></path>
+                        
+                        <div class="contact-form__submit">
+                            <button type="submit" class="contact-form__btn">
+                                Send message
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/>
                                 </svg>
-                            </a>
-                            <a href="https://www.youtube.com/@datapolisworkbox" class="social-item social-item--youtube" target="_blank" rel="nofollow" aria-label="YouTube" style="display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; background: #1e293b; border-radius: 8px;">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="14" viewBox="0 0 15 10.502" fill="#94a3b8"><g transform="translate(-0.492 -2.607)"><path d="M15.183,4.251a1.879,1.879,0,0,0-1.322-1.322,43.905,43.905,0,0,0-5.869-.321,45.616,45.616,0,0,0-5.869.309A1.917,1.917,0,0,0,.8,4.251,19.8,19.8,0,0,0,.492,7.859,19.728,19.728,0,0,0,.8,11.466a1.879,1.879,0,0,0,1.322,1.322,43.98,43.98,0,0,0,5.869.321,45.615,45.615,0,0,0,5.869-.309,1.879,1.879,0,0,0,1.322-1.322,19.808,19.808,0,0,0,.309-3.608A18.792,18.792,0,0,0,15.183,4.251ZM6.5,10.107V5.61l3.9,2.249Z"/></g></svg>
-                            </a>
+                            </button>
                         </div>
-                    </div>
-
-                    <!-- Contact Form -->
-                    <div style="background: #0f172a; padding: 40px; border-radius: 16px; border: 1px solid #1e293b;">
-                        <h3 style="color: white; margin-bottom: 30px;">Send us a message</h3>
-                        <script type="text/javascript" src="https://form.jotform.com/jsform/60205104276343"></script>
-                    </div>
+                    </form>
                 </div>
             </div>
         </section>
@@ -103,6 +368,17 @@
                 document.body.appendChild(script);
             }
             loadScript(0);
+        });
+        
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
         });
     </script>
 </body>

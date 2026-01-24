@@ -1,0 +1,798 @@
+/* ============================================
+   AI INSIDE WORKFLOWS PAGE
+   Dark theme, teal accents, governed AI
+   ============================================ */
+
+/* ===== Page base ===== */
+.aiw-page {
+    background: #020617;
+}
+
+/* ===== Container ===== */
+.aiw-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* ===== Accent text ===== */
+.aiw-page .accent {
+    color: #14b8a6;
+}
+
+/* ===== Label pill ===== */
+.aiw-label {
+    display: inline-block;
+    padding: 10px 24px;
+    background: linear-gradient(135deg, rgba(20, 184, 166, 0.12) 0%, rgba(20, 184, 166, 0.05) 100%);
+    border: 1px solid rgba(20, 184, 166, 0.3);
+    border-radius: 100px;
+    color: #14b8a6;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    margin-bottom: 20px;
+    box-shadow: 0 0 20px rgba(20, 184, 166, 0.1);
+}
+
+/* ============================================
+   HERO SECTION - Two Column Layout
+   ============================================ */
+.aiw-hero {
+    padding: 120px 0 80px;
+    position: relative;
+    overflow: hidden;
+}
+
+.aiw-hero__grid {
+    position: absolute;
+    inset: 0;
+    background-image: 
+        linear-gradient(rgba(148, 163, 184, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(148, 163, 184, 0.03) 1px, transparent 1px);
+    background-size: 60px 60px;
+}
+
+.aiw-hero__glow {
+    position: absolute;
+    top: 15%;
+    left: 20%;
+    width: 700px;
+    height: 500px;
+    background: radial-gradient(ellipse, rgba(20, 184, 166, 0.1) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.aiw-hero::after {
+    content: '';
+    position: absolute;
+    top: 40%;
+    right: 0;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(20, 184, 166, 0.06) 0%, transparent 60%);
+    pointer-events: none;
+}
+
+.aiw-hero__inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.aiw-hero__content {
+    max-width: 560px;
+}
+
+.aiw-hero__title {
+    font-size: clamp(2.25rem, 4.5vw, 3.25rem);
+    font-weight: 700;
+    line-height: 1.15;
+    color: #f8fafc;
+    margin-bottom: 24px;
+    letter-spacing: -0.02em;
+}
+
+.aiw-hero__intro {
+    font-size: 1.0625rem;
+    line-height: 1.7;
+    color: #94a3b8;
+    margin-bottom: 28px;
+    max-width: 520px;
+}
+
+/* Hero bullets */
+.aiw-hero__bullets {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 32px;
+    list-style: none;
+    padding: 0;
+}
+
+.aiw-hero__bullet {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    font-size: 0.9375rem;
+    color: #cbd5e1;
+    font-weight: 500;
+}
+
+.aiw-hero__bullet::before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    background: #14b8a6;
+    border-radius: 50%;
+    flex-shrink: 0;
+    box-shadow: 0 0 10px rgba(20, 184, 166, 0.5);
+}
+
+.aiw-hero__actions {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+/* ============================================
+   HERO VISUAL - Workflow Diagram SVG
+   ============================================ */
+.aiw-hero__visual {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.aiw-hero__visual::before {
+    content: '';
+    position: absolute;
+    top: -30px;
+    right: 5%;
+    width: 6px;
+    height: 6px;
+    background: #14b8a6;
+    border-radius: 50%;
+    opacity: 0.5;
+    box-shadow: 
+        20px 50px 0 rgba(20, 184, 166, 0.3),
+        -30px 100px 0 rgba(20, 184, 166, 0.2),
+        50px 150px 0 rgba(20, 184, 166, 0.25);
+}
+
+.aiw-workflow-diagram {
+    width: 100%;
+    max-width: 520px;
+    height: auto;
+}
+
+/* SVG Animations */
+@keyframes aiwPulse {
+    0%, 100% { opacity: 0.4; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.15); }
+}
+
+@keyframes aiwFlow {
+    from { stroke-dashoffset: 12; }
+    to { stroke-dashoffset: 0; }
+}
+
+@keyframes aiwGlow {
+    0%, 100% { filter: drop-shadow(0 0 3px rgba(20, 184, 166, 0.3)); }
+    50% { filter: drop-shadow(0 0 10px rgba(20, 184, 166, 0.6)); }
+}
+
+.aiw-pulse {
+    animation: aiwPulse 2.5s ease-in-out infinite;
+    transform-origin: center;
+}
+
+.aiw-flow-line {
+    animation: aiwFlow 1.5s linear infinite;
+}
+
+.aiw-glow-node {
+    animation: aiwGlow 2.5s ease-in-out infinite;
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    .aiw-pulse,
+    .aiw-flow-line,
+    .aiw-glow-node {
+        animation: none;
+    }
+}
+
+/* ============================================
+   BUTTONS
+   ============================================ */
+.aiw-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 28px;
+    background: linear-gradient(135deg, #14b8a6 0%, #0d9488 100%);
+    color: #020617;
+    font-weight: 600;
+    font-size: 0.9375rem;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.aiw-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 40px rgba(20, 184, 166, 0.35);
+}
+
+.aiw-btn--outline {
+    background: transparent;
+    border: 1px solid rgba(148, 163, 184, 0.25);
+    color: #f8fafc;
+}
+
+.aiw-btn--outline:hover {
+    border-color: #14b8a6;
+    color: #14b8a6;
+    background: rgba(20, 184, 166, 0.08);
+    box-shadow: none;
+}
+
+.aiw-btn--large {
+    padding: 18px 36px;
+    font-size: 1.0625rem;
+}
+
+/* ============================================
+   SECTIONS BASE
+   ============================================ */
+.aiw-section {
+    padding: 100px 0;
+    position: relative;
+}
+
+.aiw-section--alt {
+    background: #0f172a;
+}
+
+/* Subtle top separator */
+.aiw-section--alt::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    max-width: 600px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(20, 184, 166, 0.2), transparent);
+}
+
+/* Contrast section (for "This is not a copilot") */
+.aiw-section--contrast {
+    background: linear-gradient(180deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+    padding: 80px 0;
+}
+
+.aiw-section__header {
+    text-align: center;
+    margin-bottom: 56px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.aiw-section__title {
+    font-size: clamp(1.75rem, 3.5vw, 2.25rem);
+    font-weight: 700;
+    color: #f8fafc;
+    margin-bottom: 16px;
+    line-height: 1.25;
+}
+
+.aiw-section__subtitle {
+    font-size: 1.0625rem;
+    color: #94a3b8;
+    max-width: 620px;
+    margin: 0 auto;
+    line-height: 1.65;
+}
+
+/* ============================================
+   CARDS - System of Record Section
+   ============================================ */
+.aiw-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.aiw-card {
+    background: rgba(15, 23, 42, 0.7);
+    border: 1px solid rgba(148, 163, 184, 0.12);
+    border-radius: 20px;
+    padding: 36px 28px;
+    text-align: center;
+    transition: all 0.35s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.aiw-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, rgba(20, 184, 166, 0), transparent);
+    transition: background 0.35s ease;
+}
+
+.aiw-card:hover {
+    border-color: rgba(20, 184, 166, 0.35);
+    transform: translateY(-6px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3), 0 0 40px rgba(20, 184, 166, 0.08);
+}
+
+.aiw-card:hover::before {
+    background: linear-gradient(90deg, transparent, rgba(20, 184, 166, 0.6), transparent);
+}
+
+/* Card with emphasized border (for "Process governs" card) */
+.aiw-card--primary {
+    border-color: rgba(20, 184, 166, 0.25);
+}
+
+.aiw-card--primary .aiw-card__icon {
+    background: rgba(20, 184, 166, 0.15);
+    box-shadow: 0 0 20px rgba(20, 184, 166, 0.15);
+}
+
+.aiw-card__icon {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 20px;
+    background: rgba(20, 184, 166, 0.1);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #14b8a6;
+    transition: all 0.3s ease;
+}
+
+.aiw-card:hover .aiw-card__icon {
+    background: rgba(20, 184, 166, 0.2);
+    box-shadow: 0 0 20px rgba(20, 184, 166, 0.3);
+}
+
+.aiw-card__icon svg {
+    width: 28px;
+    height: 28px;
+}
+
+.aiw-card__title {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: #f8fafc;
+    margin-bottom: 12px;
+}
+
+.aiw-card__desc {
+    font-size: 0.9375rem;
+    color: #94a3b8;
+    line-height: 1.55;
+    margin: 0;
+}
+
+/* ============================================
+   HOW IT WORKS - 4-step Flow
+   ============================================ */
+.aiw-steps {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* Connecting line behind steps */
+.aiw-steps::before {
+    content: '';
+    position: absolute;
+    top: 28px;
+    left: 15%;
+    right: 15%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, rgba(20, 184, 166, 0.3), rgba(20, 184, 166, 0.3), transparent);
+    z-index: 0;
+}
+
+.aiw-step {
+    flex: 1;
+    max-width: 240px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.aiw-step__number {
+    width: 56px;
+    height: 56px;
+    margin: 0 auto 20px;
+    background: linear-gradient(135deg, #14b8a6 0%, #0d9488 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #020617;
+    box-shadow: 0 0 30px rgba(20, 184, 166, 0.3);
+    transition: all 0.3s ease;
+}
+
+.aiw-step:hover .aiw-step__number {
+    transform: scale(1.1);
+    box-shadow: 0 0 40px rgba(20, 184, 166, 0.5);
+}
+
+.aiw-step__title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #f8fafc;
+    margin-bottom: 10px;
+}
+
+.aiw-step__desc {
+    font-size: 0.875rem;
+    color: #94a3b8;
+    line-height: 1.55;
+}
+
+/* ============================================
+   BENEFITS GRID - What AI enables
+   ============================================ */
+.aiw-benefits {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.aiw-benefit {
+    background: rgba(15, 23, 42, 0.5);
+    border: 1px solid rgba(148, 163, 184, 0.1);
+    border-left: 3px solid #14b8a6;
+    border-radius: 12px;
+    padding: 28px 24px;
+    transition: all 0.3s ease;
+}
+
+.aiw-benefit:hover {
+    border-color: rgba(20, 184, 166, 0.3);
+    border-left-color: #14b8a6;
+    background: rgba(15, 23, 42, 0.7);
+    transform: translateY(-3px);
+}
+
+.aiw-benefit__icon {
+    width: 40px;
+    height: 40px;
+    background: rgba(20, 184, 166, 0.1);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #14b8a6;
+    margin-bottom: 16px;
+    transition: all 0.3s ease;
+}
+
+.aiw-benefit:hover .aiw-benefit__icon {
+    background: rgba(20, 184, 166, 0.2);
+    box-shadow: 0 0 15px rgba(20, 184, 166, 0.25);
+}
+
+.aiw-benefit__icon svg {
+    width: 20px;
+    height: 20px;
+}
+
+.aiw-benefit__title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #f8fafc;
+    margin-bottom: 8px;
+}
+
+.aiw-benefit__desc {
+    font-size: 0.875rem;
+    color: #94a3b8;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Closing statement */
+.aiw-closing {
+    text-align: center;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #14b8a6;
+    margin-top: 48px;
+    text-shadow: 0 0 30px rgba(20, 184, 166, 0.3);
+}
+
+/* ============================================
+   CONTRAST SECTION - "This is not a copilot"
+   ============================================ */
+.aiw-contrast {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.aiw-contrast__title {
+    font-size: clamp(1.75rem, 3.5vw, 2.25rem);
+    font-weight: 700;
+    color: #f8fafc;
+    margin-bottom: 20px;
+    line-height: 1.25;
+}
+
+.aiw-contrast__text {
+    font-size: 1.125rem;
+    color: #94a3b8;
+    line-height: 1.7;
+    margin-bottom: 28px;
+}
+
+.aiw-contrast__link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #14b8a6;
+    font-weight: 600;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.aiw-contrast__link:hover {
+    gap: 12px;
+}
+
+.aiw-contrast__link svg {
+    width: 18px;
+    height: 18px;
+    transition: transform 0.3s ease;
+}
+
+.aiw-contrast__link:hover svg {
+    transform: translateX(4px);
+}
+
+/* ============================================
+   FINAL CTA
+   ============================================ */
+.aiw-final {
+    padding: 120px 0;
+    text-align: center;
+    position: relative;
+    background: linear-gradient(180deg, #020617 0%, #0f172a 50%, #020617 100%);
+    border-top: 1px solid rgba(20, 184, 166, 0.15);
+}
+
+.aiw-final::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #14b8a6, transparent);
+    opacity: 0.6;
+}
+
+.aiw-final__glow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 700px;
+    height: 400px;
+    background: radial-gradient(ellipse, rgba(20, 184, 166, 0.1) 0%, transparent 60%);
+    pointer-events: none;
+}
+
+.aiw-final__content {
+    position: relative;
+    z-index: 1;
+}
+
+.aiw-final__title {
+    font-size: clamp(1.875rem, 3.5vw, 2.5rem);
+    font-weight: 700;
+    color: #f8fafc;
+    margin-bottom: 14px;
+    line-height: 1.2;
+}
+
+.aiw-final__subtitle {
+    font-size: 1.0625rem;
+    color: #94a3b8;
+    margin-bottom: 36px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.aiw-final__actions {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 1024px) {
+    .aiw-hero__inner {
+        grid-template-columns: 1fr;
+        gap: 48px;
+        text-align: center;
+    }
+    
+    .aiw-hero__content {
+        max-width: 100%;
+    }
+    
+    .aiw-hero__intro {
+        max-width: 100%;
+    }
+    
+    .aiw-hero__bullets {
+        align-items: center;
+    }
+    
+    .aiw-hero__actions {
+        justify-content: center;
+    }
+    
+    .aiw-hero__visual {
+        order: -1;
+    }
+    
+    .aiw-hero__visual::before {
+        display: none;
+    }
+    
+    .aiw-workflow-diagram {
+        max-width: 460px;
+    }
+    
+    .aiw-cards {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+    }
+    
+    .aiw-steps {
+        flex-direction: column;
+        align-items: center;
+        gap: 32px;
+    }
+    
+    .aiw-steps::before {
+        top: 28px;
+        left: 50%;
+        right: auto;
+        width: 2px;
+        height: calc(100% - 56px);
+        background: linear-gradient(180deg, transparent, rgba(20, 184, 166, 0.3), rgba(20, 184, 166, 0.3), transparent);
+    }
+    
+    .aiw-step {
+        max-width: 100%;
+    }
+    
+    .aiw-benefits {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .aiw-hero {
+        padding: 100px 0 60px;
+    }
+    
+    .aiw-workflow-diagram {
+        max-width: 380px;
+    }
+    
+    .aiw-hero__actions {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .aiw-btn {
+        width: 100%;
+        max-width: 280px;
+        justify-content: center;
+    }
+    
+    .aiw-section {
+        padding: 80px 0;
+    }
+    
+    .aiw-section--contrast {
+        padding: 60px 0;
+    }
+    
+    .aiw-benefits {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    
+    .aiw-final {
+        padding: 90px 0;
+    }
+    
+    .aiw-final__actions {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .aiw-container {
+        padding: 0 20px;
+    }
+    
+    .aiw-hero__title {
+        font-size: 1.875rem;
+    }
+    
+    .aiw-hero__intro {
+        font-size: 1rem;
+    }
+    
+    .aiw-section__title {
+        font-size: 1.5rem;
+    }
+    
+    .aiw-workflow-diagram {
+        max-width: 320px;
+    }
+    
+    .aiw-step__number {
+        width: 48px;
+        height: 48px;
+        font-size: 1.125rem;
+    }
+    
+    .aiw-contrast__title {
+        font-size: 1.5rem;
+    }
+    
+    .aiw-contrast__text {
+        font-size: 1rem;
+    }
+}

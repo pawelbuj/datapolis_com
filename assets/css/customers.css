@@ -164,6 +164,84 @@
     letter-spacing: -0.01em;
 }
 
+/* ===== NEW: SVG Logo Wall with currentColor ===== */
+:root {
+    --logo-muted: rgba(226, 232, 240, 0.78);
+    --accent-teal: #14b8a6;
+}
+
+.dp-logos--customers {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px;
+    align-items: center;
+}
+
+.dp-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 16px;
+    border-radius: 12px;
+    color: var(--logo-muted);
+    transition: color 0.18s ease, transform 0.18s ease, background 0.18s ease;
+    text-decoration: none;
+}
+
+.dp-logo svg {
+    height: 34px;
+    width: 100%;
+    max-width: 180px;
+    display: block;
+}
+
+.dp-logo:hover {
+    color: var(--accent-teal);
+    transform: translateY(-1px);
+}
+
+.dp-logo:focus-visible {
+    outline: 2px solid rgba(20, 184, 166, 0.55);
+    outline-offset: 4px;
+}
+
+/* Optical normalization - adjust specific logos if needed */
+.dp-logo--wide svg {
+    max-width: 200px;
+    height: 30px;
+}
+
+.dp-logo--tall svg {
+    height: 42px;
+    max-width: 150px;
+}
+
+.dp-logo--compact svg {
+    height: 28px;
+    max-width: 140px;
+}
+
+.dp-logo--large svg {
+    height: 44px;
+    max-width: 220px;
+}
+
+/* PNG logo support */
+.dp-logo--png img {
+    height: 50px;
+    width: auto;
+    max-width: 180px;
+    filter: grayscale(100%) brightness(1.5);
+    opacity: 0.8;
+    transition: filter 0.18s ease, opacity 0.18s ease;
+}
+
+.dp-logo--png:hover img {
+    filter: grayscale(0%) brightness(1) sepia(100%) hue-rotate(130deg) saturate(200%);
+    opacity: 1;
+}
+
+/* Legacy grid support (for fallback) */
 .customers-logo-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -363,6 +441,13 @@
     }
 }
 
+/* SVG Logo Wall responsive */
+@media (max-width: 900px) {
+    .dp-logos--customers {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
 @media (max-width: 768px) {
     .customers-hero {
         padding: 100px 0 60px;
@@ -402,6 +487,22 @@
     }
 }
 
+@media (max-width: 640px) {
+    .dp-logos--customers {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px;
+    }
+    
+    .dp-logo {
+        padding: 16px 12px;
+    }
+    
+    .dp-logo svg {
+        height: 28px;
+        max-width: 140px;
+    }
+}
+
 @media (max-width: 480px) {
     .customers-container {
         padding: 0 20px;
@@ -427,5 +528,10 @@
     .customers-logo-item img {
         max-height: 40px;
         max-width: 100px;
+    }
+    
+    .dp-logo svg {
+        height: 24px;
+        max-width: 120px;
     }
 }

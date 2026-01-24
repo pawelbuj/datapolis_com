@@ -1,0 +1,816 @@
+/* ============================================
+   2TO2 PLATFORM PAGE - Dedicated Styles
+   Enterprise-grade refinements
+   ============================================ */
+
+/* ===== Accent text ===== */
+.p2t2-page .accent {
+    color: #14b8a6;
+}
+
+/* ===== Accent emphasis (stronger) ===== */
+.p2t2-page .accent-strong {
+    color: #14b8a6;
+    font-weight: 700;
+}
+
+/* ============================================
+   HERO SECTION - Two Column Layout
+   ============================================ */
+.p2t2-hero {
+    padding: 120px 0 60px;
+    position: relative;
+    overflow: hidden;
+}
+
+.p2t2-hero__grid {
+    position: absolute;
+    inset: 0;
+    background-image: 
+        linear-gradient(rgba(148, 163, 184, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(148, 163, 184, 0.03) 1px, transparent 1px);
+    background-size: 60px 60px;
+}
+
+/* Primary glow */
+.p2t2-hero__glow {
+    position: absolute;
+    top: 15%;
+    left: 25%;
+    width: 700px;
+    height: 500px;
+    background: radial-gradient(ellipse, rgba(20, 184, 166, 0.1) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+/* Secondary subtle glow (right side) */
+.p2t2-hero::after {
+    content: '';
+    position: absolute;
+    top: 40%;
+    right: 5%;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(20, 184, 166, 0.06) 0%, transparent 60%);
+    pointer-events: none;
+}
+
+.p2t2-hero__inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.p2t2-hero__content {
+    max-width: 580px;
+}
+
+.p2t2-hero__label {
+    display: inline-block;
+    padding: 10px 24px;
+    background: linear-gradient(135deg, rgba(20, 184, 166, 0.12) 0%, rgba(20, 184, 166, 0.05) 100%);
+    border: 1px solid rgba(20, 184, 166, 0.3);
+    border-radius: 100px;
+    color: #14b8a6;
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 24px;
+    /* Subtle glow on label */
+    box-shadow: 0 0 20px rgba(20, 184, 166, 0.1);
+}
+
+.p2t2-hero__title {
+    font-size: clamp(2.25rem, 4vw, 3rem);
+    font-weight: 700;
+    color: #f8fafc;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    letter-spacing: -0.02em;
+}
+
+.p2t2-hero__intro {
+    font-size: 1.0625rem;
+    color: #94a3b8;
+    line-height: 1.7;
+    margin-bottom: 24px;
+    max-width: 520px;
+}
+
+/* ===== Hero Promise Badges (No shadow AI, etc.) ===== */
+.p2t2-hero__promises {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 28px;
+}
+
+.p2t2-hero__promise {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 14px;
+    background: rgba(15, 23, 42, 0.6);
+    border: 1px solid rgba(148, 163, 184, 0.15);
+    border-radius: 6px;
+    font-size: 0.8125rem;
+    font-weight: 500;
+    color: #cbd5e1;
+    transition: all 0.2s ease;
+}
+
+.p2t2-hero__promise::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    background: #14b8a6;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.p2t2-hero__promise:hover {
+    border-color: rgba(20, 184, 166, 0.3);
+    background: rgba(20, 184, 166, 0.05);
+}
+
+.p2t2-hero__bullets {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 28px;
+}
+
+.p2t2-hero__bullet {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #cbd5e1;
+    font-size: 0.9375rem;
+    font-weight: 500;
+}
+
+.p2t2-hero__bullet::before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    background: #14b8a6;
+    border-radius: 50%;
+    flex-shrink: 0;
+    /* Subtle dot glow */
+    box-shadow: 0 0 8px rgba(20, 184, 166, 0.4);
+}
+
+.p2t2-hero__actions {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+/* ============================================
+   HERO VISUAL - Platform Diagram
+   ============================================ */
+.p2t2-hero__visual {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+/* Decorative dots around diagram */
+.p2t2-hero__visual::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    right: 10%;
+    width: 6px;
+    height: 6px;
+    background: #14b8a6;
+    border-radius: 50%;
+    opacity: 0.5;
+    box-shadow: 
+        30px 40px 0 rgba(20, 184, 166, 0.3),
+        -40px 80px 0 rgba(20, 184, 166, 0.2),
+        60px 120px 0 rgba(20, 184, 166, 0.25);
+}
+
+.p2t2-platform-diagram {
+    width: 100%;
+    max-width: 420px;
+    height: auto;
+}
+
+/* ============================================
+   SECTIONS BASE
+   Improved vertical rhythm and spacing
+   ============================================ */
+.p2t2-section {
+    padding: 110px 0;
+    position: relative;
+}
+
+.p2t2-section--alt {
+    background: #0f172a;
+}
+
+.p2t2-section--gradient {
+    background: linear-gradient(180deg, #020617 0%, #0f172a 50%, #020617 100%);
+}
+
+/* Section separator line (subtle) */
+.p2t2-section--alt::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    max-width: 600px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(20, 184, 166, 0.2), transparent);
+}
+
+.p2t2-section__header {
+    text-align: center;
+    margin-bottom: 64px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.p2t2-section__title {
+    font-size: clamp(1.75rem, 3.5vw, 2.25rem);
+    font-weight: 700;
+    color: #f8fafc;
+    margin-bottom: 18px;
+    line-height: 1.25;
+}
+
+.p2t2-section__subtitle {
+    font-size: 1.0625rem;
+    color: #94a3b8;
+    max-width: 620px;
+    margin: 0 auto;
+    line-height: 1.65;
+}
+
+/* Credibility anchor text */
+.p2t2-credibility {
+    text-align: center;
+    font-size: 0.875rem;
+    color: #64748b;
+    margin-top: 48px;
+    font-style: italic;
+    letter-spacing: 0.01em;
+}
+
+.p2t2-credibility::before {
+    content: '—';
+    margin-right: 8px;
+    color: #14b8a6;
+    opacity: 0.6;
+}
+
+.p2t2-credibility::after {
+    content: '—';
+    margin-left: 8px;
+    color: #14b8a6;
+    opacity: 0.6;
+}
+
+/* ============================================
+   CARDS - System of Record Section
+   ============================================ */
+.p2t2-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.p2t2-card {
+    background: rgba(15, 23, 42, 0.7);
+    border: 1px solid rgba(148, 163, 184, 0.12);
+    border-radius: 20px;
+    padding: 36px 28px;
+    text-align: center;
+    transition: all 0.35s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.p2t2-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, rgba(20, 184, 166, 0), transparent);
+    transition: background 0.35s ease;
+}
+
+.p2t2-card:hover {
+    border-color: rgba(20, 184, 166, 0.35);
+    transform: translateY(-6px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3), 0 0 40px rgba(20, 184, 166, 0.08);
+}
+
+.p2t2-card:hover::before {
+    background: linear-gradient(90deg, transparent, rgba(20, 184, 166, 0.6), transparent);
+}
+
+.p2t2-card__icon {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 20px;
+    background: rgba(20, 184, 166, 0.1);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #14b8a6;
+}
+
+.p2t2-card__icon svg {
+    width: 28px;
+    height: 28px;
+}
+
+.p2t2-card__title {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: #f8fafc;
+    margin-bottom: 12px;
+}
+
+/* Green accent for key card titles */
+.p2t2-card__title .accent {
+    color: #14b8a6;
+}
+
+.p2t2-card__desc {
+    font-size: 0.9375rem;
+    color: #94a3b8;
+    line-height: 1.55;
+}
+
+/* Card with emphasized border (for "Process governs" card) */
+.p2t2-card--primary {
+    border-color: rgba(20, 184, 166, 0.25);
+}
+
+.p2t2-card--primary .p2t2-card__icon {
+    background: rgba(20, 184, 166, 0.15);
+    box-shadow: 0 0 20px rgba(20, 184, 166, 0.15);
+}
+
+/* ============================================
+   ICON LIST - Process Apps Section
+   ============================================ */
+.p2t2-icon-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 800px;
+    margin: 0 auto 40px;
+}
+
+.p2t2-icon-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(15, 23, 42, 0.6);
+    border: 1px solid rgba(148, 163, 184, 0.1);
+    border-radius: 12px;
+    padding: 14px 20px;
+    transition: all 0.25s ease;
+}
+
+.p2t2-icon-item:hover {
+    border-color: rgba(20, 184, 166, 0.3);
+    background: rgba(20, 184, 166, 0.05);
+}
+
+.p2t2-icon-item__icon {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #14b8a6;
+}
+
+.p2t2-icon-item__icon svg {
+    width: 20px;
+    height: 20px;
+}
+
+.p2t2-icon-item__label {
+    font-size: 0.9375rem;
+    font-weight: 600;
+    color: #e2e8f0;
+}
+
+.p2t2-closing {
+    text-align: center;
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #14b8a6;
+    margin-top: 32px;
+    /* Subtle glow effect */
+    text-shadow: 0 0 30px rgba(20, 184, 166, 0.3);
+}
+
+/* ============================================
+   TWO COLUMNS - Portal vs Embed Section
+   ============================================ */
+.p2t2-columns {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.p2t2-column {
+    background: rgba(15, 23, 42, 0.7);
+    border: 1px solid rgba(148, 163, 184, 0.12);
+    border-radius: 20px;
+    padding: 40px 32px;
+    transition: all 0.3s ease;
+}
+
+.p2t2-column:hover {
+    border-color: rgba(20, 184, 166, 0.3);
+}
+
+.p2t2-column__header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 24px;
+}
+
+.p2t2-column__icon {
+    width: 48px;
+    height: 48px;
+    background: rgba(20, 184, 166, 0.1);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #14b8a6;
+}
+
+.p2t2-column__icon svg {
+    width: 24px;
+    height: 24px;
+}
+
+.p2t2-column__title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #f8fafc;
+}
+
+.p2t2-column__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.p2t2-column__list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 0.9375rem;
+    color: #94a3b8;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(148, 163, 184, 0.08);
+}
+
+.p2t2-column__list li:last-child {
+    border-bottom: none;
+}
+
+.p2t2-column__list li::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    background: #14b8a6;
+    border-radius: 50%;
+    margin-top: 7px;
+    flex-shrink: 0;
+}
+
+.p2t2-caption {
+    text-align: center;
+    font-size: 1rem;
+    color: #64748b;
+    margin-top: 40px;
+    font-style: italic;
+}
+
+/* ============================================
+   CHECKLIST - Why Teams Choose Section
+   ============================================ */
+.p2t2-checklist {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px 40px;
+    max-width: 600px;
+    margin: 0 auto 40px;
+}
+
+.p2t2-checklist__item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    font-size: 1rem;
+    color: #e2e8f0;
+    font-weight: 500;
+}
+
+.p2t2-checklist__icon {
+    width: 28px;
+    height: 28px;
+    background: rgba(20, 184, 166, 0.15);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #14b8a6;
+    flex-shrink: 0;
+}
+
+.p2t2-checklist__icon svg {
+    width: 14px;
+    height: 14px;
+}
+
+.p2t2-closing-statement {
+    text-align: center;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #e2e8f0;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.p2t2-closing-statement .accent {
+    color: #14b8a6;
+}
+
+/* ============================================
+   FINAL CTA
+   ============================================ */
+.p2t2-final {
+    padding: 120px 0;
+    text-align: center;
+    position: relative;
+    background: linear-gradient(180deg, #020617 0%, #0f172a 50%, #020617 100%);
+    border-top: 1px solid rgba(20, 184, 166, 0.15);
+}
+
+/* Top separator with glow */
+.p2t2-final::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #14b8a6, transparent);
+    opacity: 0.6;
+}
+
+.p2t2-final__glow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 700px;
+    height: 400px;
+    background: radial-gradient(ellipse, rgba(20, 184, 166, 0.1) 0%, transparent 60%);
+    pointer-events: none;
+}
+
+.p2t2-final__content {
+    position: relative;
+    z-index: 1;
+}
+
+.p2t2-final__title {
+    font-size: clamp(1.875rem, 3.5vw, 2.5rem);
+    font-weight: 700;
+    color: #f8fafc;
+    margin-bottom: 14px;
+    line-height: 1.2;
+}
+
+.p2t2-final__title .accent {
+    color: #14b8a6;
+}
+
+.p2t2-final__subtitle {
+    font-size: 1.0625rem;
+    color: #94a3b8;
+    margin-bottom: 36px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.p2t2-final__actions {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+/* Credibility line at bottom */
+.p2t2-final__credibility {
+    margin-top: 48px;
+    font-size: 0.8125rem;
+    color: #64748b;
+    letter-spacing: 0.02em;
+}
+
+/* ============================================
+   BUTTONS
+   ============================================ */
+.p2t2-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 28px;
+    background: linear-gradient(135deg, #14b8a6 0%, #0d9488 100%);
+    color: #020617;
+    font-weight: 600;
+    font-size: 0.9375rem;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.p2t2-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 40px rgba(20, 184, 166, 0.35);
+}
+
+.p2t2-btn--outline {
+    background: transparent;
+    border: 1px solid rgba(148, 163, 184, 0.25);
+    color: #f8fafc;
+}
+
+.p2t2-btn--outline:hover {
+    border-color: #14b8a6;
+    color: #14b8a6;
+    background: rgba(20, 184, 166, 0.08);
+    box-shadow: none;
+}
+
+.p2t2-btn--large {
+    padding: 18px 36px;
+    font-size: 1.0625rem;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 1024px) {
+    .p2t2-hero__inner {
+        grid-template-columns: 1fr;
+        gap: 48px;
+        text-align: center;
+    }
+    
+    .p2t2-hero__content {
+        max-width: 100%;
+    }
+    
+    .p2t2-hero__intro {
+        max-width: 100%;
+    }
+    
+    .p2t2-hero__bullets {
+        align-items: center;
+    }
+    
+    .p2t2-hero__promises {
+        justify-content: center;
+    }
+    
+    .p2t2-hero__actions {
+        justify-content: center;
+    }
+    
+    .p2t2-hero__visual {
+        order: -1;
+    }
+    
+    .p2t2-hero__visual::before {
+        display: none;
+    }
+    
+    .p2t2-platform-diagram {
+        max-width: 340px;
+    }
+    
+    .p2t2-cards {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+    }
+    
+    .p2t2-section {
+        padding: 90px 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .p2t2-hero {
+        padding: 100px 0 50px;
+    }
+    
+    .p2t2-platform-diagram {
+        max-width: 300px;
+    }
+
+    .p2t2-hero__actions {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .p2t2-btn {
+        width: 100%;
+        max-width: 280px;
+        justify-content: center;
+    }
+
+    .p2t2-columns {
+        grid-template-columns: 1fr;
+    }
+
+    .p2t2-checklist {
+        grid-template-columns: 1fr;
+    }
+
+    .p2t2-section {
+        padding: 70px 0;
+    }
+    
+    .p2t2-section__header {
+        margin-bottom: 48px;
+    }
+
+    .p2t2-icon-grid {
+        gap: 12px;
+    }
+
+    .p2t2-icon-item {
+        padding: 12px 16px;
+    }
+    
+    .p2t2-hero__promises {
+        gap: 8px;
+    }
+    
+    .p2t2-hero__promise {
+        font-size: 0.75rem;
+        padding: 5px 12px;
+    }
+    
+    .p2t2-final {
+        padding: 90px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .p2t2-hero__title {
+        font-size: 1.875rem;
+    }
+
+    .p2t2-hero__intro {
+        font-size: 1rem;
+    }
+
+    .p2t2-section__title {
+        font-size: 1.5rem;
+    }
+    
+    .p2t2-hero__promises {
+        flex-direction: column;
+        align-items: center;
+    }
+}
