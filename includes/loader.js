@@ -45,6 +45,65 @@
         var body = document.body;
         var hoverTimeout = null;
 
+        // --- Language link rewrites (keep page context) ---
+        function normalizeLangFromPath(pathname) {
+            var p = (pathname || '').toLowerCase();
+            if (p.indexOf('/pl/') === 0) return 'pl';
+            if (p.indexOf('/de/') === 0) return 'de';
+            if (p.indexOf('/es/') === 0) return 'es';
+            return 'en';
+        }
+
+        function currentPageFromPath(pathname, lang) {
+            var p = pathname || '/';
+            // If directory root ("/" or "/pl/"), assume index.html
+            if (p === '/' || p === '/pl/' || p === '/de/' || p === '/es/') return 'index.html';
+
+            var segments = p.split('/').filter(Boolean);
+            if (!segments.length) return 'index.html';
+
+            // If the first segment is a language folder, drop it
+            if (lang !== 'en' && segments[0].toLowerCase() === lang) segments.shift();
+
+            var last = segments[segments.length - 1] || 'index.html';
+            return last || 'index.html';
+        }
+
+        function setActiveLang(lang) {
+            var current = header.querySelector('.dp-lang__current');
+            if (current) current.textContent = (lang || 'en').toUpperCase();
+
+            // Desktop dropdown
+            header.querySelectorAll('.dp-lang__option').forEach(function(a) {
+                var aLang = (a.getAttribute('data-lang') || a.textContent || '').toLowerCase();
+                a.classList.toggle('dp-lang__option--active', aLang === lang);
+            });
+            // Mobile footer
+            header.querySelectorAll('.dp-mobile-menu__lang-opt').forEach(function(a) {
+                var aLang = (a.getAttribute('data-lang') || a.textContent || '').toLowerCase();
+                a.classList.toggle('dp-mobile-menu__lang-opt--active', aLang === lang);
+            });
+        }
+
+        function updateLangLinks() {
+            var lang = normalizeLangFromPath(window.location.pathname);
+            var page = currentPageFromPath(window.location.pathname, lang);
+
+            var targets = {
+                en: '/' + page,
+                pl: '/pl/' + page,
+                de: '/de/' + page,
+                es: '/es/' + page
+            };
+
+            header.querySelectorAll('.dp-lang__option, .dp-mobile-menu__lang-opt').forEach(function(a) {
+                var aLang = (a.getAttribute('data-lang') || a.textContent || '').toLowerCase();
+                if (targets[aLang]) a.setAttribute('href', targets[aLang]);
+            });
+
+            setActiveLang(lang);
+        }
+
         // --- Scroll effect ---
         function onScroll() {
             header.classList.toggle('is-scrolled', window.scrollY > 40);
@@ -164,6 +223,9 @@
             }
         }
 
+        // Update language links after header is injected
+        updateLangLinks();
+
         // --- Mobile menu ---
         var hamburger = header.querySelector('.dp-hamburger');
         var mobileMenu = header.querySelector('.dp-mobile-menu');
@@ -172,7 +234,16 @@
             if (!hamburger || !mobileMenu) return;
             hamburger.classList.add('is-active');
             hamburger.setAttribute('aria-expanded', 'true');
-            hamburger.setAttribute('aria-label', 'Close menu');
+            (function() {
+                var lang = normalizeLangFromPath(window.location.pathname);
+                var labels = {
+                    en: 'Close menu',
+                    pl: 'Zamknij menu',
+                    de: 'Menü schließen',
+                    es: 'Cerrar menú'
+                };
+                hamburger.setAttribute('aria-label', labels[lang] || labels.en);
+            })();
             mobileMenu.classList.add('is-open');
             mobileMenu.setAttribute('aria-hidden', 'false');
             body.style.overflow = 'hidden';
@@ -182,7 +253,16 @@
             if (!hamburger || !mobileMenu) return;
             hamburger.classList.remove('is-active');
             hamburger.setAttribute('aria-expanded', 'false');
-            hamburger.setAttribute('aria-label', 'Open menu');
+            (function() {
+                var lang = normalizeLangFromPath(window.location.pathname);
+                var labels = {
+                    en: 'Open menu',
+                    pl: 'Otwórz menu',
+                    de: 'Menü öffnen',
+                    es: 'Abrir menú'
+                };
+                hamburger.setAttribute('aria-label', labels[lang] || labels.en);
+            })();
             mobileMenu.classList.remove('is-open');
             mobileMenu.setAttribute('aria-hidden', 'true');
             body.style.overflow = '';

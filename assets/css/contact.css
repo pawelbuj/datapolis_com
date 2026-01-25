@@ -114,11 +114,12 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
 }
 
 .contact-diagram {
     width: 100%;
-    max-width: 380px;
+    max-width: 420px;
     height: auto;
 }
 
@@ -158,8 +159,8 @@
 }
 
 @keyframes floatSlow {
-    0%, 100% { transform: translate(80px, 60px) translateY(0); }
-    50% { transform: translate(80px, 60px) translateY(-6px); }
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
 }
 
 @keyframes wingFlap {
@@ -458,7 +459,7 @@
     }
     
     .contact-diagram {
-        max-width: 300px;
+        max-width: 320px;
     }
     
     .contact-form-wrapper {

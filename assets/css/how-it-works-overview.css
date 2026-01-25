@@ -1,0 +1,531 @@
+/* ============================================
+   HOW IT WORKS OVERVIEW PAGE
+   Mental model for understanding Datapolis
+   ============================================ */
+
+/* ===== Page base ===== */
+.hiw-page {
+    background: #020617;
+}
+
+/* ===== Container ===== */
+.hiw-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* ===== Accent text ===== */
+.hiw-page .accent {
+    color: #14b8a6;
+}
+
+/* ===== Label pill ===== */
+.hiw-label {
+    display: inline-block;
+    padding: 10px 24px;
+    background: linear-gradient(135deg, rgba(20, 184, 166, 0.12) 0%, rgba(20, 184, 166, 0.05) 100%);
+    border: 1px solid rgba(20, 184, 166, 0.3);
+    border-radius: 100px;
+    color: #14b8a6;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    margin-bottom: 20px;
+    box-shadow: 0 0 20px rgba(20, 184, 166, 0.1);
+}
+
+/* ============================================
+   HERO SECTION
+   ============================================ */
+.hiw-hero {
+    padding: 120px 0 100px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hiw-hero__grid {
+    position: absolute;
+    inset: 0;
+    background-image: 
+        linear-gradient(rgba(148, 163, 184, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(148, 163, 184, 0.03) 1px, transparent 1px);
+    background-size: 60px 60px;
+}
+
+.hiw-hero__glow {
+    position: absolute;
+    top: 15%;
+    left: 30%;
+    width: 700px;
+    height: 500px;
+    background: radial-gradient(ellipse, rgba(20, 184, 166, 0.1) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.hiw-hero::after {
+    content: '';
+    position: absolute;
+    top: 40%;
+    right: 0;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(20, 184, 166, 0.06) 0%, transparent 60%);
+    pointer-events: none;
+}
+
+.hiw-hero__inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.hiw-hero__content {
+    max-width: 560px;
+}
+
+.hiw-hero__title {
+    font-size: clamp(2.25rem, 4.5vw, 3.25rem);
+    font-weight: 700;
+    line-height: 1.15;
+    color: #f8fafc;
+    margin-bottom: 24px;
+    letter-spacing: -0.02em;
+}
+
+.hiw-hero__subtitle {
+    font-size: 1.125rem;
+    line-height: 1.7;
+    color: #94a3b8;
+    margin-bottom: 32px;
+    max-width: 520px;
+}
+
+.hiw-hero__actions {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+/* ============================================
+   HERO VISUAL - Layered Architecture Diagram
+   ============================================ */
+.hiw-hero__visual {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.hiw-architecture-diagram {
+    width: 100%;
+    max-width: 460px;
+    height: auto;
+}
+
+/* ============================================
+   BUTTONS
+   ============================================ */
+.hiw-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 28px;
+    background: linear-gradient(135deg, #14b8a6 0%, #0d9488 100%);
+    color: #020617;
+    font-weight: 600;
+    font-size: 0.9375rem;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.hiw-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 40px rgba(20, 184, 166, 0.35);
+}
+
+.hiw-btn--outline {
+    background: transparent;
+    border: 1px solid rgba(148, 163, 184, 0.25);
+    color: #f8fafc;
+}
+
+.hiw-btn--outline:hover {
+    border-color: #14b8a6;
+    color: #14b8a6;
+    background: rgba(20, 184, 166, 0.08);
+    box-shadow: none;
+}
+
+.hiw-btn--large {
+    padding: 18px 36px;
+    font-size: 1.0625rem;
+}
+
+/* ============================================
+   SECTIONS BASE
+   ============================================ */
+.hiw-section {
+    padding: 100px 0;
+    position: relative;
+}
+
+.hiw-section--alt {
+    background: #0f172a;
+}
+
+/* Subtle top separator */
+.hiw-section--alt::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    max-width: 600px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(20, 184, 166, 0.2), transparent);
+}
+
+.hiw-section__inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.hiw-section__inner--reverse {
+    direction: rtl;
+}
+
+.hiw-section__inner--reverse > * {
+    direction: ltr;
+}
+
+.hiw-section__content {
+    max-width: 500px;
+}
+
+.hiw-section__title {
+    font-size: clamp(1.75rem, 3vw, 2.25rem);
+    font-weight: 700;
+    color: #f8fafc;
+    margin-bottom: 20px;
+    line-height: 1.25;
+}
+
+.hiw-section__text {
+    font-size: 1.0625rem;
+    color: #94a3b8;
+    line-height: 1.75;
+    margin-bottom: 0;
+}
+
+.hiw-section__text p {
+    margin-bottom: 16px;
+}
+
+.hiw-section__text p:last-child {
+    margin-bottom: 0;
+}
+
+.hiw-section__text strong {
+    color: #cbd5e1;
+    font-weight: 600;
+}
+
+/* Section visual container */
+.hiw-section__visual {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hiw-section__diagram {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+}
+
+/* ============================================
+   WORKSPACE SECTION - Container Visual
+   ============================================ */
+.hiw-workspace-diagram {
+    width: 100%;
+    max-width: 380px;
+}
+
+/* ============================================
+   PEOPLE SECTION - Three Figures
+   ============================================ */
+.hiw-people-diagram {
+    width: 100%;
+    max-width: 400px;
+}
+
+/* ============================================
+   PROCESS TO APP SECTION - Flow Visual
+   ============================================ */
+.hiw-process-flow-diagram {
+    width: 100%;
+    max-width: 420px;
+}
+
+/* ============================================
+   ACCESS POINTS SECTION - Portal + External
+   ============================================ */
+.hiw-access-diagram {
+    width: 100%;
+    max-width: 400px;
+}
+
+/* ============================================
+   AUDIT SECTION - Timeline Visual
+   ============================================ */
+.hiw-audit-diagram {
+    width: 100%;
+    max-width: 400px;
+}
+
+/* ============================================
+   FINAL CTA SECTION
+   ============================================ */
+.hiw-cta {
+    padding: 140px 0;
+    text-align: center;
+    position: relative;
+    background: linear-gradient(180deg, #020617 0%, #0f172a 50%, #020617 100%);
+    border-top: 1px solid rgba(20, 184, 166, 0.15);
+}
+
+.hiw-cta::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #14b8a6, transparent);
+    opacity: 0.6;
+}
+
+.hiw-cta__glow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 700px;
+    height: 400px;
+    background: radial-gradient(ellipse, rgba(20, 184, 166, 0.12) 0%, transparent 60%);
+    pointer-events: none;
+}
+
+.hiw-cta__content {
+    position: relative;
+    z-index: 1;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.hiw-cta__title {
+    font-size: clamp(2rem, 4vw, 2.75rem);
+    font-weight: 700;
+    color: #f8fafc;
+    margin-bottom: 16px;
+    line-height: 1.2;
+}
+
+.hiw-cta__subtitle {
+    font-size: 1.125rem;
+    color: #94a3b8;
+    margin-bottom: 40px;
+    max-width: 550px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.65;
+}
+
+.hiw-cta__actions {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+/* ============================================
+   SVG ANIMATIONS
+   ============================================ */
+@keyframes hiwPulse {
+    0%, 100% { opacity: 0.4; transform: scale(1); }
+    50% { opacity: 0.8; transform: scale(1.05); }
+}
+
+@keyframes hiwFloat {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+}
+
+@keyframes hiwFlow {
+    from { stroke-dashoffset: 12; }
+    to { stroke-dashoffset: 0; }
+}
+
+@keyframes hiwGlow {
+    0%, 100% { filter: drop-shadow(0 0 3px rgba(20, 184, 166, 0.3)); }
+    50% { filter: drop-shadow(0 0 10px rgba(20, 184, 166, 0.5)); }
+}
+
+.hiw-pulse {
+    animation: hiwPulse 2.5s ease-in-out infinite;
+}
+
+.hiw-float {
+    animation: hiwFloat 3s ease-in-out infinite;
+}
+
+.hiw-flow-line {
+    animation: hiwFlow 1.5s linear infinite;
+}
+
+.hiw-glow {
+    animation: hiwGlow 2.5s ease-in-out infinite;
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    .hiw-pulse,
+    .hiw-float,
+    .hiw-flow-line,
+    .hiw-glow {
+        animation: none;
+    }
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 1024px) {
+    .hiw-hero__inner,
+    .hiw-section__inner {
+        grid-template-columns: 1fr;
+        gap: 48px;
+        text-align: center;
+    }
+    
+    .hiw-hero__content,
+    .hiw-section__content {
+        max-width: 100%;
+    }
+    
+    .hiw-hero__subtitle,
+    .hiw-section__text {
+        max-width: 100%;
+    }
+    
+    .hiw-hero__actions {
+        justify-content: center;
+    }
+    
+    .hiw-hero__visual {
+        order: -1;
+    }
+    
+    .hiw-section__inner--reverse {
+        direction: ltr;
+    }
+    
+    .hiw-section__visual {
+        order: -1;
+    }
+    
+    .hiw-architecture-diagram,
+    .hiw-workspace-diagram,
+    .hiw-people-diagram,
+    .hiw-process-flow-diagram,
+    .hiw-access-diagram,
+    .hiw-audit-diagram,
+    .hiw-section__diagram {
+        max-width: 360px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hiw-hero {
+        padding: 100px 0 70px;
+    }
+    
+    .hiw-hero__actions {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .hiw-btn {
+        width: 100%;
+        max-width: 280px;
+        justify-content: center;
+    }
+    
+    .hiw-section {
+        padding: 80px 0;
+    }
+    
+    .hiw-architecture-diagram,
+    .hiw-workspace-diagram,
+    .hiw-people-diagram,
+    .hiw-process-flow-diagram,
+    .hiw-access-diagram,
+    .hiw-audit-diagram,
+    .hiw-section__diagram {
+        max-width: 320px;
+    }
+    
+    .hiw-cta {
+        padding: 100px 0;
+    }
+    
+    .hiw-cta__actions {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .hiw-container {
+        padding: 0 20px;
+    }
+    
+    .hiw-hero__title {
+        font-size: 1.875rem;
+    }
+    
+    .hiw-hero__subtitle {
+        font-size: 1rem;
+    }
+    
+    .hiw-section__title {
+        font-size: 1.5rem;
+    }
+    
+    .hiw-section__text {
+        font-size: 1rem;
+    }
+    
+    .hiw-architecture-diagram,
+    .hiw-workspace-diagram,
+    .hiw-people-diagram,
+    .hiw-process-flow-diagram,
+    .hiw-access-diagram,
+    .hiw-audit-diagram,
+    .hiw-section__diagram {
+        max-width: 280px;
+    }
+}

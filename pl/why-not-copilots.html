@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Dlaczego nie Copiloty - AI wewnątrz przepływów pracy, nie w oknach czatu | Datapolis</title>
+    <meta name="description" content="Copiloty wspierają pojedyncze osoby. Ale realna praca dzieje się między zespołami, systemami, zatwierdzeniami i odpowiedzialnościami. Zobacz dlaczego procesy — nie prompty — są tym, jak AI powinno działać.">
+    <meta name="robots" content="index,follow">
+    <meta property="og:title" content="Dlaczego nie Copiloty - Procesy prowadzą organizacje">
+    <meta property="og:description" content="Copiloty AI są pomocne, ale nie operacyjne. Gdy AI działa przez prompty, kontrola znika. Datapolis umieszcza AI wewnątrz nadzorowanych przepływów pracy.">
+    <meta property="og:type" content="website">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#020617">
+
+    <link rel="stylesheet" href="../assets/css/main.min.css?v=10022025">
+    <link rel="stylesheet" href="../assets/css/async.min.css?v=10022025" media="print" onload="this.media='all'; this.onload=null;">
+    <link rel="stylesheet" href="../assets/css/dark-theme.css?v=3">
+    <link rel="stylesheet" href="../assets/css/new-homepage.css?v=7">
+    <link rel="stylesheet" href="../assets/css/why-not-copilots.css?v=1">
+
+    <script src="../includes/loader.js"></script>
+
+    <link rel="icon" type="image/png" href="../assets/img/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="../assets/img/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="../assets/img/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="../assets/img/favicon/site.webmanifest" />
+</head>
+<body class="dark-theme wnc-page">
+    <!-- Placeholder nagłówka -->
+    <div id="header-placeholder"></div>
+
+    <main>
+        <!-- ========================================
+             SEKCJA HERO - układ dwukolumnowy
+             ======================================== -->
+        <section class="wnc-hero">
+            <div class="wnc-hero__grid"></div>
+            <div class="wnc-hero__glow"></div>
+            
+            <div class="wnc-container wnc-hero__inner">
+                <!-- Left: Content -->
+                <div class="wnc-hero__content">
+                    <span class="wnc-label">Dlaczego nie Copiloty</span>
+                    
+                    <h1 class="wnc-hero__title">
+                        Copiloty są pomocne.<br><span class="accent">To nie jest sposób, w jaki działa praca.</span>
+                    </h1>
+                    
+                    <p class="wnc-hero__intro">
+                        Copiloty AI wspierają pojedyncze osoby.<br>
+                        Ale realna praca dzieje się między zespołami, systemami, zatwierdzeniami i odpowiedzialnościami.
+                    </p>
+                    
+                    <p class="wnc-hero__warning">
+                        Gdy AI działa przez prompty i okna czatu, kontrola znika.
+                    </p>
+                    
+                    <ul class="wnc-hero__bullets">
+                        <li class="wnc-hero__bullet wnc-hero__bullet--warning">Brak właścicielstwa</li>
+                        <li class="wnc-hero__bullet wnc-hero__bullet--warning">Brak rozliczalności</li>
+                        <li class="wnc-hero__bullet wnc-hero__bullet--warning">Brak ścieżki audytu</li>
+                        <li class="wnc-hero__bullet wnc-hero__bullet--warning">Brak wymuszanych reguł</li>
+                    </ul>
+                    
+                    <div class="wnc-hero__actions">
+                        <a href="platform-2to2.html" class="wnc-btn wnc-btn--large">Zobacz lepsze podejście</a>
+                        <a href="ai-inside-workflows.html" class="wnc-btn wnc-btn--outline wnc-btn--large">AI wewnątrz przepływów pracy</a>
+                    </div>
+                </div>
+                
+                <!-- Right: Split Visual Comparison -->
+                <div class="wnc-hero__visual">
+                    <svg class="wnc-comparison-diagram" viewBox="0 0 520 380" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <filter id="glowWnc" x="-50%" y="-50%" width="200%" height="200%">
+                                <feGaussianBlur stdDeviation="6" result="blur"/>
+                                <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+                            </filter>
+                            <filter id="blurWnc" x="-20%" y="-20%" width="140%" height="140%">
+                                <feGaussianBlur stdDeviation="2" result="blur"/>
+                            </filter>
+                            <linearGradient id="tealGradWnc" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#14b8a6"/>
+                                <stop offset="100%" stop-color="#0d9488"/>
+                            </linearGradient>
+                            <linearGradient id="redGradWnc" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#ef4444"/>
+                                <stop offset="100%" stop-color="#dc2626"/>
+                            </linearGradient>
+                        </defs>
+                        
+                        <!-- Linia podziału -->
+                        <line x1="260" y1="30" x2="260" y2="320" stroke="#334155" stroke-width="2" stroke-dasharray="8 4"/>
+                        
+                        <!-- LEWA STRONA: oparte na promptach (chaotyczne) -->
+                        <g>
+                            <!-- Etykieta -->
+                            <rect x="60" y="20" width="140" height="26" rx="13" fill="rgba(239, 68, 68, 0.15)" stroke="rgba(239, 68, 68, 0.4)" stroke-width="1"/>
+                            <text x="130" y="38" text-anchor="middle" fill="#ef4444" font-size="10" font-weight="700" font-family="system-ui, sans-serif" letter-spacing="0.08em">AI OPARTE NA PROMPTACH</text>
+                            
+                            <!-- Kontener okna czatu -->
+                            <rect x="30" y="60" width="200" height="220" rx="12" fill="#0f172a" stroke="#334155" stroke-width="1.5"/>
+                            
+                            <!-- Nagłówek czatu -->
+                            <rect x="30" y="60" width="200" height="32" rx="12" fill="rgba(51, 65, 85, 0.5)"/>
+                            <rect x="30" y="80" width="200" height="12" fill="#0f172a"/>
+                            <circle cx="48" cy="76" r="5" fill="#ef4444" opacity="0.6"/>
+                            <circle cx="62" cy="76" r="5" fill="#f59e0b" opacity="0.6"/>
+                            <circle cx="76" cy="76" r="5" fill="#22c55e" opacity="0.6"/>
+                            <text x="130" y="80" text-anchor="middle" fill="#64748b" font-size="9" font-family="system-ui, sans-serif">Czat AI</text>
+                            
+                            <!-- Pływające dymki czatu (chaotyczne, rozmyte) -->
+                            <g filter="url(#blurWnc)" opacity="0.7">
+                                <rect x="45" y="105" width="100" height="24" rx="8" fill="#1e293b"/>
+                                <rect x="85" y="138" width="120" height="24" rx="8" fill="#1e293b"/>
+                                <rect x="50" y="171" width="90" height="24" rx="8" fill="#1e293b"/>
+                                <rect x="100" y="204" width="110" height="24" rx="8" fill="#1e293b"/>
+                                <rect x="55" y="237" width="80" height="24" rx="8" fill="#1e293b"/>
+                            </g>
+                            
+                            <!-- Znaki zapytania / wskaźniki niepewności -->
+                            <text x="180" y="122" fill="#ef4444" font-size="14" font-weight="700" opacity="0.5">?</text>
+                            <text x="60" y="158" fill="#ef4444" font-size="14" font-weight="700" opacity="0.5">?</text>
+                            <text x="195" y="220" fill="#ef4444" font-size="14" font-weight="700" opacity="0.5">?</text>
+                            
+                            <!-- Etykieta statusu -->
+                            <rect x="60" y="290" width="100" height="22" rx="4" fill="rgba(239, 68, 68, 0.1)" stroke="rgba(239, 68, 68, 0.3)" stroke-width="1"/>
+                            <text x="110" y="305" text-anchor="middle" fill="#ef4444" font-size="9" font-weight="600" font-family="system-ui, sans-serif">BEZ KONTROLI</text>
+                        </g>
+                        
+                        <!-- PRAWA STRONA: oparte na procesach (ustrukturyzowane) -->
+                        <g>
+                            <!-- Etykieta -->
+                            <rect x="320" y="20" width="140" height="26" rx="13" fill="rgba(20, 184, 166, 0.15)" stroke="rgba(20, 184, 166, 0.4)" stroke-width="1"/>
+                            <text x="390" y="38" text-anchor="middle" fill="#14b8a6" font-size="10" font-weight="700" font-family="system-ui, sans-serif" letter-spacing="0.08em">AI OPARTE NA PROCESACH</text>
+                            
+                            <!-- Kontener przepływu pracy -->
+                            <rect x="290" y="60" width="200" height="220" rx="12" fill="#0f172a" stroke="#14b8a6" stroke-width="1.5" stroke-opacity="0.5"/>
+                            
+                            <!-- Nagłówek przepływu pracy -->
+                            <rect x="290" y="60" width="200" height="32" rx="12" fill="rgba(20, 184, 166, 0.1)"/>
+                            <rect x="290" y="80" width="200" height="12" fill="#0f172a"/>
+                            <text x="390" y="80" text-anchor="middle" fill="#14b8a6" font-size="9" font-weight="600" font-family="system-ui, sans-serif">NADZOROWANY PRZEPŁYW PRACY</text>
+                            
+                            <!-- Krok 1: Przyjęcie -->
+                            <rect x="310" y="105" width="160" height="32" rx="6" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+                            <circle cx="328" cy="121" r="8" fill="rgba(148, 163, 184, 0.2)" stroke="#94a3b8" stroke-width="1"/>
+                            <text x="345" y="125" fill="#94a3b8" font-size="9" font-weight="600" font-family="system-ui, sans-serif">Przyjęcie</text>
+                            <path d="M440 117l4 4-4 4" stroke="#14b8a6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                            
+                            <!-- Punkt zatwierdzeń -->
+                            <circle cx="390" cy="152" r="10" fill="#0f172a" stroke="#14b8a6" stroke-width="1.5"/>
+                            <path d="M385 152l3 3 6-6" stroke="#14b8a6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                            
+                            <!-- Krok 2: Analiza AI -->
+                            <rect x="310" y="167" width="160" height="32" rx="6" fill="rgba(20, 184, 166, 0.1)" stroke="#14b8a6" stroke-width="1.5"/>
+                            <circle cx="328" cy="183" r="8" fill="rgba(20, 184, 166, 0.2)" stroke="#14b8a6" stroke-width="1"/>
+                            <circle cx="328" cy="183" r="3" fill="#14b8a6"/>
+                            <text x="345" y="187" fill="#14b8a6" font-size="9" font-weight="700" font-family="system-ui, sans-serif">Analiza AI</text>
+                            <text x="455" y="187" fill="#14b8a6" font-size="7" font-family="system-ui, sans-serif">LOG</text>
+                            
+                            <!-- Punkt zatwierdzeń -->
+                            <circle cx="390" cy="214" r="10" fill="#0f172a" stroke="#14b8a6" stroke-width="1.5"/>
+                            <path d="M385 214l3 3 6-6" stroke="#14b8a6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                            
+                            <!-- Krok 3: Zakończenie -->
+                            <rect x="310" y="229" width="160" height="32" rx="6" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+                            <circle cx="328" cy="245" r="8" fill="rgba(20, 184, 166, 0.2)" stroke="#14b8a6" stroke-width="1"/>
+                            <path d="M324 245l3 3 5-5" stroke="#14b8a6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                            <text x="345" y="249" fill="#94a3b8" font-size="9" font-weight="600" font-family="system-ui, sans-serif">Zakończone</text>
+                            <text x="455" y="249" fill="#64748b" font-size="7" font-family="system-ui, sans-serif">LOG</text>
+                            
+                            <!-- Etykieta statusu -->
+                            <rect x="350" y="290" width="80" height="22" rx="4" fill="rgba(20, 184, 166, 0.1)" stroke="rgba(20, 184, 166, 0.3)" stroke-width="1"/>
+                            <text x="390" y="305" text-anchor="middle" fill="#14b8a6" font-size="9" font-weight="600" font-family="system-ui, sans-serif">NADZOROWANE</text>
+                        </g>
+                        
+                        <!-- Separator VS -->
+                        <circle cx="260" cy="175" r="18" fill="#0f172a" stroke="#334155" stroke-width="2"/>
+                        <text x="260" y="180" text-anchor="middle" fill="#64748b" font-size="11" font-weight="700" font-family="system-ui, sans-serif">VS</text>
+                        
+                        <!-- Podpis -->
+                        <text x="260" y="360" text-anchor="middle" fill="#64748b" font-size="10" font-family="system-ui, sans-serif" letter-spacing="0.06em">WSPARCIE VS WYKONANIE</text>
+                    </svg>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================
+             SEKCJA: W czym Copiloty są dobre
+             ======================================== -->
+        <section class="wnc-section wnc-section--alt">
+            <div class="wnc-container">
+                <div class="wnc-section__header">
+                    <h2 class="wnc-section__title">W czym Copiloty są dobre</h2>
+                    <p class="wnc-section__subtitle">
+                        Copiloty nie są bezużyteczne. Po prostu rozwiązują inny problem.
+                    </p>
+                </div>
+                
+                <div class="wnc-cards">
+                    <!-- Karta 1: Produktywność osobista -->
+                    <div class="wnc-card wnc-card--neutral">
+                        <div class="wnc-card__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/>
+                                <circle cx="12" cy="7" r="4"/>
+                            </svg>
+                        </div>
+                        <h3 class="wnc-card__title">Produktywność osobista</h3>
+                        <p class="wnc-card__desc">Pisanie tekstów, streszczanie treści, generowanie pomysłów.</p>
+                    </div>
+                    
+                    <!-- Karta 2: Pomoc ad-hoc -->
+                    <div class="wnc-card wnc-card--neutral">
+                        <div class="wnc-card__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"/>
+                                <path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3"/>
+                                <line x1="12" y1="17" x2="12.01" y2="17"/>
+                            </svg>
+                        </div>
+                        <h3 class="wnc-card__title">Pomoc ad-hoc</h3>
+                        <p class="wnc-card__desc">Pomaga pojedynczym osobom myśleć szybciej.</p>
+                    </div>
+                    
+                    <!-- Karta 3: Kontekst pojedynczego użytkownika -->
+                    <div class="wnc-card wnc-card--neutral">
+                        <div class="wnc-card__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                                <line x1="3" y1="9" x2="21" y2="9"/>
+                                <line x1="9" y1="21" x2="9" y2="9"/>
+                            </svg>
+                        </div>
+                        <h3 class="wnc-card__title">Kontekst pojedynczego użytkownika</h3>
+                        <p class="wnc-card__desc">Przydatne, gdy konsekwencje są niewielkie.</p>
+                    </div>
+                </div>
+                
+                <p class="wnc-note">Pomocne — ale nie operacyjne.</p>
+            </div>
+        </section>
+
+        <!-- ========================================
+             SEKCJA: Gdzie Copiloty się załamują
+             ======================================== -->
+        <section class="wnc-section">
+            <div class="wnc-container">
+                <div class="wnc-section__header">
+                    <h2 class="wnc-section__title wnc-section__title--strong">Gdzie Copiloty się załamują</h2>
+                </div>
+                
+                <div class="wnc-warnings">
+                    <!-- Warning 1 -->
+                    <div class="wnc-warning">
+                        <div class="wnc-warning__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"/>
+                                <line x1="12" y1="8" x2="12" y2="12"/>
+                                <line x1="12" y1="16" x2="12.01" y2="16"/>
+                            </svg>
+                        </div>
+                        <h3 class="wnc-warning__title">Brak kontekstu procesu</h3>
+                    </div>
+                    
+                    <!-- Warning 2 -->
+                    <div class="wnc-warning">
+                        <div class="wnc-warning__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"/>
+                                <line x1="12" y1="8" x2="12" y2="12"/>
+                                <line x1="12" y1="16" x2="12.01" y2="16"/>
+                            </svg>
+                        </div>
+                        <h3 class="wnc-warning__title">Brak właścicielstwa rezultatów</h3>
+                    </div>
+                    
+                    <!-- Warning 3 -->
+                    <div class="wnc-warning">
+                        <div class="wnc-warning__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"/>
+                                <line x1="12" y1="8" x2="12" y2="12"/>
+                                <line x1="12" y1="16" x2="12.01" y2="16"/>
+                            </svg>
+                        </div>
+                        <h3 class="wnc-warning__title">Brak przepływu zatwierdzeń</h3>
+                    </div>
+                    
+                    <!-- Warning 4 -->
+                    <div class="wnc-warning">
+                        <div class="wnc-warning__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"/>
+                                <line x1="12" y1="8" x2="12" y2="12"/>
+                                <line x1="12" y1="16" x2="12.01" y2="16"/>
+                            </svg>
+                        </div>
+                        <h3 class="wnc-warning__title">Brak wymuszania reguł</h3>
+                    </div>
+                    
+                    <!-- Warning 5 -->
+                    <div class="wnc-warning">
+                        <div class="wnc-warning__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"/>
+                                <line x1="12" y1="8" x2="12" y2="12"/>
+                                <line x1="12" y1="16" x2="12.01" y2="16"/>
+                            </svg>
+                        </div>
+                        <h3 class="wnc-warning__title">Brak identyfikowalności</h3>
+                    </div>
+                    
+                    <!-- Warning 6 -->
+                    <div class="wnc-warning">
+                        <div class="wnc-warning__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"/>
+                                <line x1="12" y1="8" x2="12" y2="12"/>
+                                <line x1="12" y1="16" x2="12.01" y2="16"/>
+                            </svg>
+                        </div>
+                        <h3 class="wnc-warning__title">Brak rozdzielenia obowiązków</h3>
+                    </div>
+                </div>
+                
+                <p class="wnc-warning-note">Gdy coś idzie źle, nikt nie wie kto o czym zdecydował — ani dlaczego.</p>
+            </div>
+        </section>
+
+        <!-- ========================================
+             SEKCJA KONTRASTU: Copiloty zgadują. Procesy decydują.
+             ======================================== -->
+        <section class="wnc-section wnc-section--contrast">
+            <div class="wnc-container">
+                <div class="wnc-contrast">
+                    <h2 class="wnc-contrast__title">
+                        Copiloty zgadują.<br><span class="accent">Procesy decydują.</span>
+                    </h2>
+                    <div class="wnc-contrast__grid">
+                        <div class="wnc-contrast__item">
+                            <span class="wnc-contrast__left">Copiloty odpowiadają na prompty.</span>
+                            <span class="wnc-contrast__right">Procesy wymuszają reguły.</span>
+                        </div>
+                        <div class="wnc-contrast__item">
+                            <span class="wnc-contrast__left">Copiloty sugerują działania.</span>
+                            <span class="wnc-contrast__right">Procesy mają właścicielstwo rezultatów.</span>
+                        </div>
+                        <div class="wnc-contrast__item">
+                            <span class="wnc-contrast__left">Copiloty wspierają ludzi.</span>
+                            <span class="wnc-contrast__right">Procesy prowadzą biznes.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================
+             SEKCJA: Dlaczego prompty nie skalują się
+             ======================================== -->
+        <section class="wnc-section wnc-section--alt">
+            <div class="wnc-container">
+                <div class="wnc-section__header">
+                    <h2 class="wnc-section__title">Dlaczego prompty nie skalują się</h2>
+                </div>
+                
+                <div class="wnc-columns">
+                    <!-- Column 1 -->
+                    <div class="wnc-column">
+                        <div class="wnc-column__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/>
+                                <circle cx="12" cy="7" r="4"/>
+                                <line x1="12" y1="11" x2="12" y2="17"/>
+                                <line x1="9" y1="14" x2="15" y2="14"/>
+                            </svg>
+                        </div>
+                        <h3 class="wnc-column__title">Prompty żyją w głowach ludzi</h3>
+                        <p class="wnc-column__desc">Wiedza znika, gdy ludzie odchodzą.</p>
+                    </div>
+                    
+                    <!-- Column 2 -->
+                    <div class="wnc-column">
+                        <div class="wnc-column__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                                <line x1="12" y1="8" x2="12" y2="12"/>
+                                <line x1="12" y1="16" x2="12.01" y2="16"/>
+                            </svg>
+                        </div>
+                        <h3 class="wnc-column__title">Prompty omijają nadzór</h3>
+                        <p class="wnc-column__desc">Brak polityk, brak zatwierdzeń, brak granic.</p>
+                    </div>
+                    
+                    <!-- Column 3 -->
+                    <div class="wnc-column">
+                        <div class="wnc-column__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"/>
+                                <line x1="4.93" y1="4.93" x2="19.07" y2="19.07"/>
+                            </svg>
+                        </div>
+                        <h3 class="wnc-column__title">Prompty tworzą ukryte AI</h3>
+                        <p class="wnc-column__desc">Niewidoczne, niezarządzane i ryzykowne.</p>
+                    </div>
+                </div>
+                
+                <p class="wnc-scale-note">Przedsiębiorstwa nie skalują się na rozmowach. Skalują się na systemach.</p>
+            </div>
+        </section>
+
+        <!-- ========================================
+             SEKCJA: Nasze podejście: AI wewnątrz przepływów pracy
+             ======================================== -->
+        <section class="wnc-section">
+            <div class="wnc-container">
+                <div class="wnc-section__header">
+                    <h2 class="wnc-section__title">Nasze podejście: <span class="accent">AI wewnątrz przepływów pracy</span></h2>
+                    <p class="wnc-section__subtitle">
+                        Datapolis nie zastępuje ludzi copilotami.<br>
+                        Umieszczamy AI wewnątrz nadzorowanych procesów.
+                    </p>
+                </div>
+                
+                <div class="wnc-cards">
+                    <!-- Karta 1: AI z rolą -->
+                    <div class="wnc-card">
+                        <div class="wnc-card__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="6"/>
+                                <circle cx="12" cy="12" r="2"/>
+                                <path d="M12 2v4M12 18v4M2 12h4M18 12h4"/>
+                            </svg>
+                        </div>
+                        <h3 class="wnc-card__title">AI z rolą</h3>
+                        <p class="wnc-card__desc">Przypisane odpowiedzialności, uprawnienia i limity.</p>
+                    </div>
+                    
+                    <!-- Karta 2: AI z nadzorem -->
+                    <div class="wnc-card">
+                        <div class="wnc-card__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                                <circle cx="12" cy="12" r="3"/>
+                            </svg>
+                        </div>
+                        <h3 class="wnc-card__title">AI z nadzorem</h3>
+                        <p class="wnc-card__desc">Człowiek w pętli, gdy jest to potrzebne.</p>
+                    </div>
+                    
+                    <!-- Karta 3: AI z rozliczalnością -->
+                    <div class="wnc-card">
+                        <div class="wnc-card__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/>
+                                <polyline points="14 2 14 8 20 8"/>
+                                <line x1="16" y1="13" x2="8" y2="13"/>
+                                <line x1="16" y1="17" x2="8" y2="17"/>
+                            </svg>
+                        </div>
+                        <h3 class="wnc-card__title">AI z rozliczalnością</h3>
+                        <p class="wnc-card__desc">To samo raportowanie, ta sama ścieżka audytu co praca człowieka.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================
+             SEKCJA: Copiloty vs Cyfrowi pracownicy
+             ======================================== -->
+        <section class="wnc-section wnc-section--alt">
+            <div class="wnc-container">
+                <div class="wnc-section__header">
+                    <h2 class="wnc-section__title">Copiloty vs <span class="accent">Cyfrowi pracownicy</span></h2>
+                </div>
+                
+                <div class="wnc-comparison-table">
+                    <div class="wnc-comparison-table__header">
+                        <div class="wnc-comparison-table__col wnc-comparison-table__col--left">Copiloty</div>
+                        <div class="wnc-comparison-table__col wnc-comparison-table__col--right">Cyfrowi pracownicy</div>
+                    </div>
+                    <div class="wnc-comparison-table__row">
+                        <div class="wnc-comparison-table__cell wnc-comparison-table__cell--left">Oparte na promptach</div>
+                        <div class="wnc-comparison-table__cell wnc-comparison-table__cell--right">Oparte na procesach</div>
+                    </div>
+                    <div class="wnc-comparison-table__row">
+                        <div class="wnc-comparison-table__cell wnc-comparison-table__cell--left">Kontekst pojedynczej osoby</div>
+                        <div class="wnc-comparison-table__cell wnc-comparison-table__cell--right">Przepływ pracy end-to-end</div>
+                    </div>
+                    <div class="wnc-comparison-table__row">
+                        <div class="wnc-comparison-table__cell wnc-comparison-table__cell--left">Brak właścicielstwa</div>
+                        <div class="wnc-comparison-table__cell wnc-comparison-table__cell--right">Jasna odpowiedzialność</div>
+                    </div>
+                    <div class="wnc-comparison-table__row">
+                        <div class="wnc-comparison-table__cell wnc-comparison-table__cell--left">Brak ścieżki audytu</div>
+                        <div class="wnc-comparison-table__cell wnc-comparison-table__cell--right">Pełna identyfikowalność</div>
+                    </div>
+                    <div class="wnc-comparison-table__row">
+                        <div class="wnc-comparison-table__cell wnc-comparison-table__cell--left">Trudne do nadzorowania</div>
+                        <div class="wnc-comparison-table__cell wnc-comparison-table__cell--right">Nadzór by design</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================
+             KOŃCOWE CTA
+             ======================================== -->
+        <section class="wnc-final">
+            <div class="wnc-final__glow"></div>
+            <div class="wnc-container">
+                <div class="wnc-final__content">
+                    <h2 class="wnc-final__title">AI jest zbyt potężne, by było niezarządzane.</h2>
+                    <p class="wnc-final__subtitle">Umieść AI tam, gdzie naprawdę dzieje się praca — wewnątrz procesów.</p>
+                    
+                    <div class="wnc-final__actions">
+                        <a href="platform-2to2.html" class="wnc-btn wnc-btn--large">Zobacz platformę</a>
+                        <a href="digital-workers.html" class="wnc-btn wnc-btn--outline wnc-btn--large">Cyfrowi pracownicy</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Placeholder stopki -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Skrypty -->
+    <script>
+        document.addEventListener('includesLoaded', function() {
+            var scripts = [
+                '../assets/js/vendors.min.js',
+                '../assets/js/main.min.js',
+                '../assets/js/functions.min.js',
+                '../assets/js/async.min.js'
+            ];
+            
+            function loadScript(index) {
+                if (index >= scripts.length) return;
+                
+                var script = document.createElement('script');
+                script.src = scripts[index];
+                script.onload = function() {
+                    loadScript(index + 1);
+                };
+                document.body.appendChild(script);
+            }
+            
+            loadScript(0);
+        });
+
+        // Płynne przewijanie dla linków kotwic
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

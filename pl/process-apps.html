@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Aplikacje procesowe - Procesy dostarczane jako realne aplikacje | Datapolis</title>
+    <meta name="description" content="Aplikacje procesowe to sposób, w jaki praca realnie dzieje się w Datapolis. Każdy proces biznesowy staje się użyteczną aplikacją — z formularzami, zadaniami, danymi i regułami — generowaną bezpośrednio z workflow.">
+    <meta name="robots" content="index,follow">
+    <meta property="og:title" content="Aplikacje procesowe - Procesy dostarczane jako realne aplikacje">
+    <meta property="og:description" content="Każdy proces biznesowy staje się użyteczną aplikacją — z formularzami, zadaniami, danymi i regułami — generowaną bezpośrednio z workflow.">
+    <meta property="og:type" content="website">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#020617">
+
+    <link rel="stylesheet" href="../assets/css/main.min.css?v=10022025">
+    <link rel="stylesheet" href="../assets/css/async.min.css?v=10022025" media="print" onload="this.media='all'; this.onload=null;">
+    <link rel="stylesheet" href="../assets/css/dark-theme.css?v=3">
+    <link rel="stylesheet" href="../assets/css/new-homepage.css?v=7">
+    <link rel="stylesheet" href="../assets/css/process-apps.css?v=1">
+
+    <script src="../includes/loader.js"></script>
+
+    <link rel="icon" type="image/png" href="../assets/img/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="../assets/img/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="../assets/img/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="../assets/img/favicon/site.webmanifest" />
+</head>
+<body class="dark-theme pa-page">
+    <!-- Header Placeholder -->
+    <div id="header-placeholder"></div>
+
+    <main>
+        <!-- ========================================
+             SEKCJA HERO - Układ dwukolumnowy
+             ======================================== -->
+        <section class="pa-hero">
+            <div class="pa-hero__grid"></div>
+            <div class="pa-hero__glow"></div>
+            
+            <div class="pa-container pa-hero__inner">
+                <!-- Left: Content -->
+                <div class="pa-hero__content">
+                    <span class="pa-label">Aplikacje procesowe</span>
+                    
+                    <h1 class="pa-hero__title">
+                        Procesy dostarczane jako <span class="accent">realne aplikacje.</span>
+                    </h1>
+                    
+                    <p class="pa-hero__subtitle">
+                        Każdy proces biznesowy staje się użyteczną aplikacją — z formularzami, zadaniami, danymi i regułami — generowaną bezpośrednio z workflow.
+                    </p>
+                    
+                    <p class="pa-hero__intro">
+                        Aplikacje procesowe to sposób, w jaki praca realnie dzieje się w Datapolis.<br>
+                        Zamiast najpierw projektować ekrany, definiujesz proces — a aplikacja wyłania się z niego.<br>
+                        Każde zadanie, formularz, lista i decyzja jest zawsze połączona z logiką procesu stojącą za nim.
+                    </p>
+                    
+                    <ul class="pa-hero__bullets">
+                        <li class="pa-hero__bullet">Generowane bezpośrednio z workflow</li>
+                        <li class="pa-hero__bullet">Zawsze spójne z logiką procesu</li>
+                        <li class="pa-hero__bullet">Bez duplikowania UI ani reguł biznesowych</li>
+                        <li class="pa-hero__bullet">Zbudowane dla ludzi i cyfrowych pracowników</li>
+                    </ul>
+                    
+                    <div class="pa-hero__actions">
+                        <a href="platform-2to2.html" class="pa-btn pa-btn--large">Zobacz platformę</a>
+                        <a href="how-it-works.html" class="pa-btn pa-btn--outline pa-btn--large">Jak to działa</a>
+                    </div>
+                </div>
+                
+                <!-- Right: Visual Diagram -->
+                <div class="pa-hero__visual">
+                    <svg class="pa-process-diagram" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <filter id="glowPa" x="-50%" y="-50%" width="200%" height="200%">
+                                <feGaussianBlur stdDeviation="8" result="blur"/>
+                                <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+                            </filter>
+                            <filter id="glowSmallPa" x="-50%" y="-50%" width="200%" height="200%">
+                                <feGaussianBlur stdDeviation="3" result="blur"/>
+                                <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+                            </filter>
+                            <linearGradient id="processGradPa" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#14b8a6"/>
+                                <stop offset="100%" stop-color="#0d9488"/>
+                            </linearGradient>
+                        </defs>
+                        
+                        <!-- Decorative background dots -->
+                        <circle cx="45" cy="70" r="2" fill="#14b8a6" opacity="0.3"/>
+                        <circle cx="355" cy="85" r="2" fill="#14b8a6" opacity="0.25"/>
+                        <circle cx="35" cy="330" r="2" fill="#14b8a6" opacity="0.2"/>
+                        <circle cx="365" cy="320" r="2" fill="#14b8a6" opacity="0.25"/>
+                        
+                        <!-- Outer ring -->
+                        <circle cx="200" cy="200" r="160" stroke="#334155" stroke-width="1" fill="none" opacity="0.3"/>
+                        
+                        <!-- Inner orbit ring -->
+                        <circle cx="200" cy="200" r="115" stroke="#334155" stroke-width="1" fill="none" stroke-dasharray="4 4"/>
+                        
+                        <!-- Central Process Hub -->
+                        <g filter="url(#glowPa)">
+                            <circle cx="200" cy="200" r="55" fill="url(#processGradPa)"/>
+                            <text x="200" y="196" text-anchor="middle" fill="#020617" font-size="12" font-weight="700" font-family="system-ui, sans-serif" letter-spacing="0.05em">PROCES</text>
+                            <text x="200" y="212" text-anchor="middle" fill="#020617" font-size="8" font-weight="500" font-family="system-ui, sans-serif" opacity="0.8">Źródło prawdy</text>
+                        </g>
+                        
+                        <!-- Forms Node (top) -->
+                        <g>
+                            <circle cx="200" cy="70" r="38" fill="#0f172a" stroke="#14b8a6" stroke-width="1.5" stroke-opacity="0.5"/>
+                            <!-- Form icon -->
+                            <rect x="182" y="52" width="36" height="36" rx="4" stroke="#14b8a6" stroke-width="1.5" fill="none"/>
+                            <line x1="188" y1="62" x2="212" y2="62" stroke="#14b8a6" stroke-width="1.5"/>
+                            <line x1="188" y1="70" x2="206" y2="70" stroke="#14b8a6" stroke-width="1.5"/>
+                            <line x1="188" y1="78" x2="200" y2="78" stroke="#14b8a6" stroke-width="1.5"/>
+                            <text x="200" y="122" text-anchor="middle" fill="#94a3b8" font-size="9" font-weight="600" font-family="system-ui, sans-serif" letter-spacing="0.03em">FORMULARZE</text>
+                        </g>
+                        
+                        <!-- Tasks Node (right) -->
+                        <g>
+                            <circle cx="315" cy="155" r="38" fill="#0f172a" stroke="#14b8a6" stroke-width="1.5" stroke-opacity="0.5"/>
+                            <!-- Checkbox/task icon -->
+                            <rect x="297" y="137" width="36" height="36" rx="4" stroke="#14b8a6" stroke-width="1.5" fill="none"/>
+                            <path d="M305 155l6 6 12-12" stroke="#14b8a6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                            <text x="315" y="207" text-anchor="middle" fill="#94a3b8" font-size="9" font-weight="600" font-family="system-ui, sans-serif" letter-spacing="0.03em">ZADANIA</text>
+                        </g>
+                        
+                        <!-- Lists Node (bottom-right) -->
+                        <g>
+                            <circle cx="285" cy="295" r="38" fill="#0f172a" stroke="#14b8a6" stroke-width="1.5" stroke-opacity="0.5"/>
+                            <!-- List icon -->
+                            <line x1="267" y1="280" x2="273" y2="280" stroke="#14b8a6" stroke-width="2" stroke-linecap="round"/>
+                            <line x1="279" y1="280" x2="303" y2="280" stroke="#14b8a6" stroke-width="1.5"/>
+                            <line x1="267" y1="295" x2="273" y2="295" stroke="#14b8a6" stroke-width="2" stroke-linecap="round"/>
+                            <line x1="279" y1="295" x2="303" y2="295" stroke="#14b8a6" stroke-width="1.5"/>
+                            <line x1="267" y1="310" x2="273" y2="310" stroke="#14b8a6" stroke-width="2" stroke-linecap="round"/>
+                            <line x1="279" y1="310" x2="303" y2="310" stroke="#14b8a6" stroke-width="1.5"/>
+                            <text x="285" y="347" text-anchor="middle" fill="#94a3b8" font-size="9" font-weight="600" font-family="system-ui, sans-serif" letter-spacing="0.03em">LISTY</text>
+                        </g>
+                        
+                        <!-- Dashboards Node (bottom-left) -->
+                        <g>
+                            <circle cx="115" cy="295" r="38" fill="#0f172a" stroke="#14b8a6" stroke-width="1.5" stroke-opacity="0.5"/>
+                            <!-- Dashboard icon -->
+                            <rect x="97" y="277" width="36" height="36" rx="4" stroke="#14b8a6" stroke-width="1.5" fill="none"/>
+                            <line x1="97" y1="290" x2="133" y2="290" stroke="#14b8a6" stroke-width="1.5"/>
+                            <line x1="115" y1="290" x2="115" y2="313" stroke="#14b8a6" stroke-width="1.5"/>
+                            <text x="115" y="347" text-anchor="middle" fill="#94a3b8" font-size="9" font-weight="600" font-family="system-ui, sans-serif" letter-spacing="0.03em">PULPITY</text>
+                        </g>
+                        
+                        <!-- Connection Lines -->
+                        <path d="M200 145 L200 125" stroke="#14b8a6" stroke-width="1.5" stroke-opacity="0.5" stroke-dasharray="4 3">
+                            <animate attributeName="stroke-dashoffset" from="7" to="0" dur="1.2s" repeatCount="indefinite"/>
+                        </path>
+                        <path d="M250 175 L280 160" stroke="#14b8a6" stroke-width="1.5" stroke-opacity="0.5" stroke-dasharray="4 3">
+                            <animate attributeName="stroke-dashoffset" from="7" to="0" dur="1.2s" repeatCount="indefinite"/>
+                        </path>
+                        <path d="M235 240 L260 265" stroke="#14b8a6" stroke-width="1.5" stroke-opacity="0.5" stroke-dasharray="4 3">
+                            <animate attributeName="stroke-dashoffset" from="7" to="0" dur="1.2s" repeatCount="indefinite"/>
+                        </path>
+                        <path d="M165 240 L140 265" stroke="#14b8a6" stroke-width="1.5" stroke-opacity="0.5" stroke-dasharray="4 3">
+                            <animate attributeName="stroke-dashoffset" from="7" to="0" dur="1.2s" repeatCount="indefinite"/>
+                        </path>
+                        
+                        <!-- Glowing connection dots -->
+                        <g filter="url(#glowSmallPa)">
+                            <circle cx="200" cy="135" r="3" fill="#14b8a6" opacity="0.8"/>
+                            <circle cx="265" cy="167" r="3" fill="#14b8a6" opacity="0.8"/>
+                            <circle cx="247" cy="252" r="3" fill="#14b8a6" opacity="0.8"/>
+                            <circle cx="153" cy="252" r="3" fill="#14b8a6" opacity="0.8"/>
+                        </g>
+                        
+                        <!-- Caption -->
+                        <text x="200" y="385" text-anchor="middle" fill="#64748b" font-size="9" font-family="system-ui, sans-serif" letter-spacing="0.08em">POCHODZI Z JEDNEGO PROCESU</text>
+                    </svg>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================
+             SEKCJA: Co tworzy aplikację procesową
+             ======================================== -->
+        <section class="pa-section pa-section--alt">
+            <div class="pa-container">
+                <div class="pa-section__header">
+                    <h2 class="pa-section__title">Co tworzy <span class="accent">aplikację procesową</span></h2>
+                </div>
+                
+                <div class="pa-cards">
+                    <!-- Card 1: Process-driven UI -->
+                    <div class="pa-card">
+                        <div class="pa-card__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="3" width="18" height="18" rx="2"/>
+                                <path d="M3 9h18"/>
+                                <path d="M9 21V9"/>
+                            </svg>
+                        </div>
+                        <h3 class="pa-card__title">Interfejs oparty na procesie</h3>
+                        <p class="pa-card__desc">Ekrany nie są projektowane w izolacji.<br>Proces definiuje, co użytkownicy widzą, kiedy to widzą i jakie działania są dozwolone.</p>
+                    </div>
+                    
+                    <!-- Card 2: Built-in logic and rules -->
+                    <div class="pa-card">
+                        <div class="pa-card__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                                <path d="M9 12l2 2 4-4"/>
+                            </svg>
+                        </div>
+                        <h3 class="pa-card__title">Wbudowana logika i reguły</h3>
+                        <p class="pa-card__desc">Walidacje, routing, uprawnienia i zatwierdzenia wynikają z workflow — a nie z zakodowanej logiki UI.</p>
+                    </div>
+                    
+                    <!-- Card 3: One app, many roles -->
+                    <div class="pa-card">
+                        <div class="pa-card__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                                <circle cx="9" cy="7" r="4"/>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                            </svg>
+                        </div>
+                        <h3 class="pa-card__title">Jedna aplikacja, wiele ról</h3>
+                        <p class="pa-card__desc">Ta sama aplikacja procesowa dostosowuje się do użytkowników, ról i stanów — bez tworzenia oddzielnych wersji.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================
+             SEKCJA: Elementy składowe
+             ======================================== -->
+        <section class="pa-section">
+            <div class="pa-container">
+                <div class="pa-section__header">
+                    <h2 class="pa-section__title">Wszystko, czego zespoły potrzebują, aby <span class="accent">wykonać pracę</span></h2>
+                </div>
+                
+                <div class="pa-icon-grid">
+                    <div class="pa-icon-item">
+                        <div class="pa-icon-item__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="3" width="18" height="18" rx="2"/>
+                                <path d="M9 9h6M9 13h6M9 17h4"/>
+                            </svg>
+                        </div>
+                        <span class="pa-icon-item__label">Formularze</span>
+                    </div>
+                    
+                    <div class="pa-icon-item">
+                        <div class="pa-icon-item__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="8" y1="6" x2="21" y2="6"/>
+                                <line x1="8" y1="12" x2="21" y2="12"/>
+                                <line x1="8" y1="18" x2="21" y2="18"/>
+                                <line x1="3" y1="6" x2="3.01" y2="6"/>
+                                <line x1="3" y1="12" x2="3.01" y2="12"/>
+                                <line x1="3" y1="18" x2="3.01" y2="18"/>
+                            </svg>
+                        </div>
+                        <span class="pa-icon-item__label">Listy</span>
+                    </div>
+                    
+                    <div class="pa-icon-item">
+                        <div class="pa-icon-item__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M9 11l3 3L22 4"/>
+                                <path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/>
+                            </svg>
+                        </div>
+                        <span class="pa-icon-item__label">Zadania</span>
+                    </div>
+                    
+                    <div class="pa-icon-item">
+                        <div class="pa-icon-item__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="3" width="18" height="18" rx="2"/>
+                                <path d="M3 9h18M9 21V9"/>
+                            </svg>
+                        </div>
+                        <span class="pa-icon-item__label">Pulpity</span>
+                    </div>
+                    
+                    <div class="pa-icon-item">
+                        <div class="pa-icon-item__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                                <circle cx="9" cy="7" r="4"/>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                            </svg>
+                        </div>
+                        <span class="pa-icon-item__label">Role</span>
+                    </div>
+                    
+                    <div class="pa-icon-item">
+                        <div class="pa-icon-item__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"/>
+                                <polyline points="12 6 12 12 16 14"/>
+                            </svg>
+                        </div>
+                        <span class="pa-icon-item__label">Stany</span>
+                    </div>
+                    
+                    <div class="pa-icon-item">
+                        <div class="pa-icon-item__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                                <line x1="16" y1="2" x2="16" y2="6"/>
+                                <line x1="8" y1="2" x2="8" y2="6"/>
+                                <line x1="3" y1="10" x2="21" y2="10"/>
+                            </svg>
+                        </div>
+                        <span class="pa-icon-item__label">SLA</span>
+                    </div>
+                </div>
+                
+                <p class="pa-caption">Wszystkie elementy składowe są świadome procesu i nadzorowane przez tę samą warstwę orkiestracji.</p>
+            </div>
+        </section>
+
+        <!-- ========================================
+             SEKCJA: Korzystaj z aplikacji tam, gdzie użytkownicy już są
+             ======================================== -->
+        <section class="pa-section pa-section--alt">
+            <div class="pa-container">
+                <div class="pa-section__header">
+                    <h2 class="pa-section__title">Korzystaj z aplikacji tam, gdzie użytkownicy <span class="accent">już są</span></h2>
+                </div>
+                
+                <div class="pa-columns">
+                    <!-- Left: Platform Portal -->
+                    <div class="pa-column">
+                        <div class="pa-column__header">
+                            <div class="pa-column__icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="3" y="3" width="18" height="18" rx="2"/>
+                                    <path d="M3 9h18M9 21V9"/>
+                                </svg>
+                            </div>
+                            <h3 class="pa-column__title">Portal platformy</h3>
+                        </div>
+                        <ul class="pa-column__list">
+                            <li>Użytkownicy wewnętrzni i zespoły</li>
+                            <li>Pełny workspace ze wszystkimi aplikacjami</li>
+                            <li>Widoczność i dostęp oparte na rolach</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Right: Embedded Modules -->
+                    <div class="pa-column">
+                        <div class="pa-column__header">
+                            <div class="pa-column__icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M16 18L22 12L16 6"/>
+                                    <path d="M8 6L2 12L8 18"/>
+                                </svg>
+                            </div>
+                            <h3 class="pa-column__title">Osadzone moduły</h3>
+                        </div>
+                        <ul class="pa-column__list">
+                            <li>Użytkownicy zewnętrzni i partnerzy</li>
+                            <li>Publiczne lub bezpieczne osadzenia</li>
+                            <li>Brak wymaganego dostępu do platformy</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <p class="pa-footer-line">Jeden proces. Wiele punktów wejścia.</p>
+            </div>
+        </section>
+
+        <!-- ========================================
+             SEKCJA: Dlaczego zespoły wybierają aplikacje procesowe
+             ======================================== -->
+        <section class="pa-section">
+            <div class="pa-container">
+                <div class="pa-section__header">
+                    <h2 class="pa-section__title">Dlaczego zespoły wybierają <span class="accent">aplikacje procesowe</span></h2>
+                </div>
+                
+                <div class="pa-checklist">
+                    <div class="pa-checklist__item">
+                        <div class="pa-checklist__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="20 6 9 17 4 12"/>
+                            </svg>
+                        </div>
+                        <span>Brak zduplikowanej logiki biznesowej</span>
+                    </div>
+                    
+                    <div class="pa-checklist__item">
+                        <div class="pa-checklist__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="20 6 9 17 4 12"/>
+                            </svg>
+                        </div>
+                        <span>Brak odłączonych formularzy lub narzędzi</span>
+                    </div>
+                    
+                    <div class="pa-checklist__item">
+                        <div class="pa-checklist__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="20 6 9 17 4 12"/>
+                            </svg>
+                        </div>
+                        <span>Brak workflow w cieniu</span>
+                    </div>
+                    
+                    <div class="pa-checklist__item">
+                        <div class="pa-checklist__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="20 6 9 17 4 12"/>
+                            </svg>
+                        </div>
+                        <span>Brak zerwanych przekazań</span>
+                    </div>
+                    
+                    <div class="pa-checklist__item">
+                        <div class="pa-checklist__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="20 6 9 17 4 12"/>
+                            </svg>
+                        </div>
+                        <span>Zawsze audytowalne</span>
+                    </div>
+                    
+                    <div class="pa-checklist__item">
+                        <div class="pa-checklist__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="20 6 9 17 4 12"/>
+                            </svg>
+                        </div>
+                        <span>Zawsze aktualne względem procesu</span>
+                    </div>
+                </div>
+                
+                <p class="pa-closing-statement">Gdy proces się zmienia, <span class="accent">aplikacja zmienia się razem z nim.</span></p>
+            </div>
+        </section>
+
+        <!-- ========================================
+             KOŃCOWE CTA
+             ======================================== -->
+        <section class="pa-final">
+            <div class="pa-final__glow"></div>
+            <div class="pa-container">
+                <div class="pa-final__content">
+                    <h2 class="pa-final__title">Buduj aplikacje, definiując procesy — <span class="accent">nie ekrany.</span></h2>
+                    <p class="pa-final__subtitle">Aplikacje procesowe zamieniają ustrukturyzowane workflow w użyteczne aplikacje dla ludzi i cyfrowych pracowników.</p>
+                    
+                    <div class="pa-final__actions">
+                        <a href="platform-2to2.html" class="pa-btn pa-btn--large">Zobacz platformę</a>
+                        <a href="contact.html" class="pa-btn pa-btn--outline pa-btn--large">Skontaktuj się z nami</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Placeholder -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Scripts -->
+    <script>
+        document.addEventListener('includesLoaded', function() {
+            var scripts = [
+                '../assets/js/vendors.min.js',
+                '../assets/js/main.min.js',
+                '../assets/js/functions.min.js',
+                '../assets/js/async.min.js'
+            ];
+            
+            function loadScript(index) {
+                if (index >= scripts.length) return;
+                
+                var script = document.createElement('script');
+                script.src = scripts[index];
+                script.onload = function() {
+                    loadScript(index + 1);
+                };
+                document.body.appendChild(script);
+            }
+            
+            loadScript(0);
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

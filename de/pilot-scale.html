@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Pilot → Skalierung - Klein starten, mit Vertrauen skalieren | Datapolis</title>
+    <meta name="description" content="Reale Prozesse mit realen Nutzern pilotieren — und dann dasselbe Modell über Teams, Abteilungen und das Unternehmen skalieren. Keine Neuschreibung, kein Replatforming.">
+    <meta name="robots" content="index,follow">
+    <meta property="og:title" content="Pilot → Skalierung - Klein starten, mit Vertrauen skalieren">
+    <meta property="og:description" content="In Datapolis ist ein Pilot kein Wegwerf-Experiment. Er ist der erste Schritt eines kontrollierten Rollouts.">
+    <meta property="og:type" content="website">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#020617">
+
+    <link rel="stylesheet" href="../assets/css/main.min.css?v=10022025">
+    <link rel="stylesheet" href="../assets/css/async.min.css?v=10022025" media="print" onload="this.media='all'; this.onload=null;">
+    <link rel="stylesheet" href="../assets/css/dark-theme.css?v=3">
+    <link rel="stylesheet" href="../assets/css/new-homepage.css?v=7">
+    <link rel="stylesheet" href="../assets/css/pilot-scale.css?v=1">
+
+    <script src="../includes/loader.js"></script>
+
+    <link rel="icon" type="image/png" href="../assets/img/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="../assets/img/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="../assets/img/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="../assets/img/favicon/site.webmanifest" />
+</head>
+<body class="dark-theme ps-page">
+    <!-- Header Placeholder -->
+    <div id="header-placeholder"></div>
+
+    <main>
+        <!-- ========================================
+             HERO-SEKTION
+             ======================================== -->
+        <section class="ps-hero">
+            <div class="ps-hero__grid"></div>
+            <div class="ps-hero__glow"></div>
+            
+            <div class="ps-container ps-hero__inner">
+                <!-- Links: Inhalt -->
+                <div class="ps-hero__content">
+                    <span class="ps-label">Pilot → Scale</span>
+                    
+                    <h1 class="ps-hero__title">
+                        Klein starten. <span class="accent">Mit Vertrauen skalieren.</span>
+                    </h1>
+                    
+                    <p class="ps-hero__subtitle">
+                        Reale Prozesse mit realen Nutzern pilotieren — und dann dasselbe Modell über Teams, Abteilungen und das Unternehmen skalieren.
+                    </p>
+                    
+                    <p class="ps-hero__supporting">
+                        In Datapolis ist ein Pilot kein Wegwerf-Experiment.<br>
+                        Er ist der erste Schritt eines kontrollierten Rollouts.
+                    </p>
+                    
+                    <div class="ps-hero__actions">
+                        <a href="platform-2to2.html" class="ps-btn ps-btn--large">Plattform ansehen</a>
+                        <a href="contact.html" class="ps-btn ps-btn--outline ps-btn--large">Sprechen Sie mit uns über einen Pilot</a>
+                    </div>
+                </div>
+                
+                <!-- Rechts: Visualisierung der Skalierung -->
+                <div class="ps-hero__visual">
+                    <svg class="ps-scale-diagram" viewBox="0 0 480 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="psTealGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#14b8a6"/>
+                                <stop offset="100%" stop-color="#0d9488"/>
+                            </linearGradient>
+                            <filter id="psGlow" x="-50%" y="-50%" width="200%" height="200%">
+                                <feGaussianBlur stdDeviation="4" result="blur"/>
+                                <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+                            </filter>
+                        </defs>
+                        
+                        <!-- Hintergrundpunkte -->
+                        <circle cx="30" cy="40" r="2" fill="#14b8a6" opacity="0.2"/>
+                        <circle cx="450" cy="50" r="2" fill="#14b8a6" opacity="0.15"/>
+                        <circle cx="25" cy="280" r="2" fill="#14b8a6" opacity="0.2"/>
+                        <circle cx="455" cy="270" r="2" fill="#14b8a6" opacity="0.15"/>
+                        
+                        <!-- Verbindungslinie -->
+                        <path d="M60 160 L420 160" stroke="#334155" stroke-width="2" stroke-dasharray="8 6"/>
+                        
+                        <!-- Stufe 1: Pilot -->
+                        <g class="ps-stage" style="animation-delay: 0s;">
+                            <circle cx="60" cy="160" r="35" fill="#0f172a" stroke="#14b8a6" stroke-width="2"/>
+                            <circle cx="60" cy="160" r="18" fill="url(#psTealGrad)" filter="url(#psGlow)"/>
+                            <text x="60" y="215" text-anchor="middle" fill="#f8fafc" font-size="12" font-weight="600" font-family="system-ui, sans-serif">Pilot</text>
+                            <text x="60" y="232" text-anchor="middle" fill="#64748b" font-size="9" font-family="system-ui, sans-serif">1 Prozess</text>
+                        </g>
+                        
+                        <!-- Pfeil 1 -->
+                        <path d="M100 160 L140 160" stroke="#14b8a6" stroke-width="2" marker-end="url(#psArrow)">
+                            <animate attributeName="stroke-dasharray" values="0 50;50 0" dur="1.5s" repeatCount="indefinite"/>
+                        </path>
+                        
+                        <!-- Stufe 2: Team -->
+                        <g class="ps-stage" style="animation-delay: 0.2s;">
+                            <circle cx="180" cy="160" r="45" fill="#0f172a" stroke="#14b8a6" stroke-width="2"/>
+                            <circle cx="168" cy="150" r="12" fill="url(#psTealGrad)" opacity="0.9"/>
+                            <circle cx="192" cy="150" r="12" fill="url(#psTealGrad)" opacity="0.9"/>
+                            <circle cx="180" cy="172" r="12" fill="url(#psTealGrad)" opacity="0.9"/>
+                            <text x="180" y="225" text-anchor="middle" fill="#f8fafc" font-size="12" font-weight="600" font-family="system-ui, sans-serif">Team</text>
+                            <text x="180" y="242" text-anchor="middle" fill="#64748b" font-size="9" font-family="system-ui, sans-serif">Gleicher Prozess</text>
+                        </g>
+                        
+                        <!-- Pfeil 2 -->
+                        <path d="M230 160 L270 160" stroke="#14b8a6" stroke-width="2" marker-end="url(#psArrow)">
+                            <animate attributeName="stroke-dasharray" values="0 50;50 0" dur="1.5s" repeatCount="indefinite" begin="0.3s"/>
+                        </path>
+                        
+                        <!-- Stufe 3: Abteilung -->
+                        <g class="ps-stage" style="animation-delay: 0.4s;">
+                            <circle cx="310" cy="160" r="55" fill="#0f172a" stroke="#14b8a6" stroke-width="2"/>
+                            <circle cx="290" cy="145" r="10" fill="url(#psTealGrad)" opacity="0.85"/>
+                            <circle cx="310" cy="145" r="10" fill="url(#psTealGrad)" opacity="0.85"/>
+                            <circle cx="330" cy="145" r="10" fill="url(#psTealGrad)" opacity="0.85"/>
+                            <circle cx="295" cy="165" r="10" fill="url(#psTealGrad)" opacity="0.85"/>
+                            <circle cx="325" cy="165" r="10" fill="url(#psTealGrad)" opacity="0.85"/>
+                            <circle cx="310" cy="185" r="10" fill="url(#psTealGrad)" opacity="0.85"/>
+                            <text x="310" y="235" text-anchor="middle" fill="#f8fafc" font-size="12" font-weight="600" font-family="system-ui, sans-serif">Abteilung</text>
+                            <text x="310" y="252" text-anchor="middle" fill="#64748b" font-size="9" font-family="system-ui, sans-serif">Mehr Nutzer</text>
+                        </g>
+                        
+                        <!-- Pfeil 3 -->
+                        <path d="M370 160 L400 160" stroke="#14b8a6" stroke-width="2" marker-end="url(#psArrow)">
+                            <animate attributeName="stroke-dasharray" values="0 50;50 0" dur="1.5s" repeatCount="indefinite" begin="0.6s"/>
+                        </path>
+                        
+                        <!-- Stufe 4: Organisation -->
+                        <g class="ps-stage" style="animation-delay: 0.6s;">
+                            <circle cx="440" cy="160" r="35" fill="#0f172a" stroke="#14b8a6" stroke-width="2"/>
+                            <rect x="420" y="140" width="40" height="40" rx="6" fill="url(#psTealGrad)" filter="url(#psGlow)"/>
+                            <!-- Building icon -->
+                            <rect x="427" y="148" width="8" height="24" fill="#020617" opacity="0.4"/>
+                            <rect x="438" y="148" width="8" height="24" fill="#020617" opacity="0.4"/>
+                            <rect x="449" y="148" width="4" height="24" fill="#020617" opacity="0.4"/>
+                            <text x="440" y="215" text-anchor="middle" fill="#f8fafc" font-size="11" font-weight="600" font-family="system-ui, sans-serif">Organisation</text>
+                            <text x="440" y="232" text-anchor="middle" fill="#64748b" font-size="9" font-family="system-ui, sans-serif">Volle Skalierung</text>
+                        </g>
+                        
+                        <!-- Zentrales Label -->
+                        <rect x="170" y="70" width="140" height="28" rx="14" fill="rgba(20, 184, 166, 0.1)" stroke="rgba(20, 184, 166, 0.3)" stroke-width="1"/>
+                        <text x="240" y="89" text-anchor="middle" fill="#14b8a6" font-size="10" font-weight="600" font-family="system-ui, sans-serif" letter-spacing="0.05em">GLEICHER PROZESSKERN</text>
+                        
+                        <defs>
+                            <marker id="psArrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+                                <path d="M0,0 L8,4 L0,8 Z" fill="#14b8a6"/>
+                            </marker>
+                        </defs>
+                    </svg>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================
+             ABSCHNITT: WAS EIN PILOT BEDEUTET
+             ======================================== -->
+        <section class="ps-section ps-section--alt">
+            <div class="ps-container">
+                <div class="ps-section__inner">
+                    <div class="ps-section__content">
+                        <h2 class="ps-section__title">Ein Pilot, der sich wie <span class="accent">Produktion</span> verhält.</h2>
+                        <div class="ps-section__text">
+                            <p>
+                                Datapolis-Piloten laufen auf derselben Orchestrierungs-Engine, demselben Governance-Modell und derselben Audit-Schicht wie Deployments in voller Skalierung.
+                            </p>
+                        </div>
+                        
+                        <ul class="ps-bullet-list">
+                            <li><span class="ps-bullet-dot"></span>Gleiche Prozess-Engine</li>
+                            <li><span class="ps-bullet-dot"></span>Gleiche Freigabelogik</li>
+                            <li><span class="ps-bullet-dot"></span>Gleiche Audit-Spur</li>
+                            <li><span class="ps-bullet-dot"></span>Gleiches Ausführungsmodell Mensch + KI</li>
+                        </ul>
+                        
+                        <div class="ps-highlight">
+                            <span class="ps-highlight__text">Wenn es im Pilot funktioniert, funktioniert es in der Skalierung — weil sich nur der Umfang ändert.</span>
+                        </div>
+                    </div>
+                    
+                    <div class="ps-section__visual">
+                        <svg class="ps-production-diagram" viewBox="0 0 360 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="prodGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="rgba(20, 184, 166, 0.15)"/>
+                                    <stop offset="100%" stop-color="rgba(20, 184, 166, 0.05)"/>
+                                </linearGradient>
+                            </defs>
+                            
+                            <!-- Gemeinsames Fundament -->
+                            <rect x="30" y="180" width="300" height="90" rx="16" fill="url(#prodGrad)" stroke="#14b8a6" stroke-width="2"/>
+                            <text x="180" y="235" text-anchor="middle" fill="#14b8a6" font-size="11" font-weight="700" font-family="system-ui, sans-serif" letter-spacing="0.08em">GLEICHES FUNDAMENT</text>
+                            
+                            <!-- Fundament-Bausteine -->
+                            <g>
+                                <rect x="50" y="200" width="70" height="24" rx="4" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+                                <text x="85" y="216" text-anchor="middle" fill="#94a3b8" font-size="8" font-family="system-ui, sans-serif">Motor</text>
+                            </g>
+                            <g>
+                                <rect x="130" y="200" width="70" height="24" rx="4" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+                                <text x="165" y="216" text-anchor="middle" fill="#94a3b8" font-size="8" font-family="system-ui, sans-serif">Governance</text>
+                            </g>
+                            <g>
+                                <rect x="210" y="200" width="70" height="24" rx="4" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+                                <text x="245" y="216" text-anchor="middle" fill="#94a3b8" font-size="8" font-family="system-ui, sans-serif">Audit</text>
+                            </g>
+                            <g>
+                                <rect x="130" y="244" width="100" height="20" rx="4" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+                                <text x="180" y="258" text-anchor="middle" fill="#94a3b8" font-size="8" font-family="system-ui, sans-serif">Mensch + KI Modell</text>
+                            </g>
+                            
+                            <!-- Verbindungslinien -->
+                            <line x1="100" y1="130" x2="100" y2="180" stroke="#334155" stroke-width="2" stroke-dasharray="4 3"/>
+                            <line x1="260" y1="130" x2="260" y2="180" stroke="#334155" stroke-width="2" stroke-dasharray="4 3"/>
+                            
+                            <!-- Pilot-Box -->
+                            <g>
+                                <rect x="50" y="50" width="100" height="80" rx="12" fill="#0f172a" stroke="#64748b" stroke-width="1.5"/>
+                                <circle cx="100" cy="90" r="20" fill="rgba(20, 184, 166, 0.2)" stroke="#14b8a6" stroke-width="1.5"/>
+                                <circle cx="100" cy="90" r="8" fill="#14b8a6"/>
+                                <text x="100" y="60" text-anchor="middle" fill="#94a3b8" font-size="9" font-weight="600" font-family="system-ui, sans-serif" letter-spacing="0.05em">PILOT</text>
+                            </g>
+                            
+                            <!-- Skalierungs-Box -->
+                            <g>
+                                <rect x="210" y="50" width="100" height="80" rx="12" fill="#0f172a" stroke="#64748b" stroke-width="1.5"/>
+                                <circle cx="240" cy="82" r="10" fill="rgba(20, 184, 166, 0.2)" stroke="#14b8a6" stroke-width="1"/>
+                                <circle cx="260" cy="82" r="10" fill="rgba(20, 184, 166, 0.2)" stroke="#14b8a6" stroke-width="1"/>
+                                <circle cx="280" cy="82" r="10" fill="rgba(20, 184, 166, 0.2)" stroke="#14b8a6" stroke-width="1"/>
+                                <circle cx="250" cy="100" r="10" fill="rgba(20, 184, 166, 0.2)" stroke="#14b8a6" stroke-width="1"/>
+                                <circle cx="270" cy="100" r="10" fill="rgba(20, 184, 166, 0.2)" stroke="#14b8a6" stroke-width="1"/>
+                                <text x="260" y="60" text-anchor="middle" fill="#94a3b8" font-size="9" font-weight="600" font-family="system-ui, sans-serif" letter-spacing="0.05em">IN SKALIERUNG</text>
+                            </g>
+                            
+                            <!-- Gleichheitszeichen dazwischen -->
+                            <text x="180" y="95" text-anchor="middle" fill="#14b8a6" font-size="24" font-weight="700" font-family="system-ui, sans-serif">=</text>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================
+             ABSCHNITT: WIE TEAMS STARTEN
+             ======================================== -->
+        <section class="ps-section">
+            <div class="ps-container">
+                <div class="ps-section__header">
+                    <h2 class="ps-section__title">Starten Sie mit einem Prozess. Ein Team. <span class="accent">Ein Ziel.</span></h2>
+                </div>
+                
+                <div class="ps-cards">
+                    <div class="ps-card">
+                        <div class="ps-card__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2"/>
+                                <rect x="9" y="3" width="6" height="4" rx="1"/>
+                                <path d="M9 12h6"/>
+                                <path d="M9 16h6"/>
+                            </svg>
+                        </div>
+                        <h3 class="ps-card__title">Ein echter Geschäftsprozess</h3>
+                        <p class="ps-card__text">Kein Demo-Workflow. Ein echter Prozess mit echten Auswirkungen.</p>
+                    </div>
+                    
+                    <div class="ps-card">
+                        <div class="ps-card__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/>
+                                <circle cx="9" cy="7" r="4"/>
+                                <path d="M23 21v-2a4 4 0 00-3-3.87"/>
+                                <path d="M16 3.13a4 4 0 010 7.75"/>
+                            </svg>
+                        </div>
+                        <h3 class="ps-card__title">Begrenzte Nutzer und Rollen</h3>
+                        <p class="ps-card__text">Ein fokussierter Umfang, der Lernen ohne unternehmensweites Risiko ermöglicht.</p>
+                    </div>
+                    
+                    <div class="ps-card">
+                        <div class="ps-card__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M22 11.08V12a10 10 0 11-5.93-9.14"/>
+                                <polyline points="22 4 12 14.01 9 11.01"/>
+                            </svg>
+                        </div>
+                        <h3 class="ps-card__title">Klare Erfolgskriterien</h3>
+                        <p class="ps-card__text">Messbare Ergebnisse, die die Bereitschaft zum Skalieren bestimmen.</p>
+                    </div>
+                    
+                    <div class="ps-card">
+                        <div class="ps-card__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                                <path d="M9 12l2 2 4-4"/>
+                            </svg>
+                        </div>
+                        <h3 class="ps-card__title">Echte Daten und echte Freigaben</h3>
+                        <p class="ps-card__text">Governance auf Produktionsniveau ab Tag eins.</p>
+                    </div>
+                </div>
+                
+                <p class="ps-section__footer">Keine Mock-Workflows. Keine Fake-Daten. Keine Wegwerf-PoCs.</p>
+            </div>
+        </section>
+
+        <!-- ========================================
+             ABSCHNITT: SKALIEREN OHNE NACHARBEIT
+             ======================================== -->
+        <section class="ps-section ps-section--alt">
+            <div class="ps-container">
+                <div class="ps-section__header">
+                    <h2 class="ps-section__title">Skalieren ohne <span class="accent">Neuaufbau</span>.</h2>
+                </div>
+                
+                <div class="ps-columns">
+                    <div class="ps-column">
+                        <div class="ps-column__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"/>
+                                <circle cx="12" cy="12" r="4"/>
+                                <line x1="4.93" y1="4.93" x2="9.17" y2="9.17"/>
+                                <line x1="14.83" y1="14.83" x2="19.07" y2="19.07"/>
+                                <line x1="14.83" y1="9.17" x2="19.07" y2="4.93"/>
+                                <line x1="4.93" y1="19.07" x2="9.17" y2="14.83"/>
+                            </svg>
+                        </div>
+                        <h3 class="ps-column__title">Gleicher Prozess</h3>
+                        <ul class="ps-column__list">
+                            <li>Keine duplizierte Logik</li>
+                            <li>Keine parallelen Workflows</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="ps-column">
+                        <div class="ps-column__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/>
+                                <circle cx="9" cy="7" r="4"/>
+                                <path d="M23 21v-2a4 4 0 00-3-3.87"/>
+                                <path d="M16 3.13a4 4 0 010 7.75"/>
+                            </svg>
+                        </div>
+                        <h3 class="ps-column__title">Mehr Nutzer</h3>
+                        <ul class="ps-column__list">
+                            <li>Rollen erweitern sich natürlich</li>
+                            <li>Berechtigungen bleiben kontextbezogen</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="ps-column">
+                        <div class="ps-column__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="3" width="18" height="18" rx="2"/>
+                                <circle cx="12" cy="12" r="4"/>
+                                <circle cx="12" cy="12" r="1" fill="currentColor"/>
+                            </svg>
+                        </div>
+                        <h3 class="ps-column__title">Mehr Automatisierung</h3>
+                        <ul class="ps-column__list">
+                            <li>Digitale Worker dort hinzufügen, wo es sinnvoll ist</li>
+                            <li>Menschen dort in Kontrolle behalten, wo es erforderlich ist</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="ps-highlight ps-highlight--center">
+                    <span class="ps-highlight__text">Skalieren in Datapolis ist ein Konfigurationsproblem — kein Engineering-Projekt.</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================
+             ABSCHNITT: GOVERNANCE WÄCHST MIT DER SKALIERUNG
+             ======================================== -->
+        <section class="ps-section">
+            <div class="ps-container">
+                <div class="ps-section__inner ps-section__inner--reverse">
+                    <div class="ps-section__content">
+                        <h2 class="ps-section__title">Mehr Skalierung bedeutet nicht <span class="accent">weniger Kontrolle</span>.</h2>
+                        
+                        <ul class="ps-check-list">
+                            <li>
+                                <div class="ps-check-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="20 6 9 17 4 12"/>
+                                    </svg>
+                                </div>
+                                <span>Freigabe-Gates bleiben erzwungen</span>
+                            </li>
+                            <li>
+                                <div class="ps-check-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="20 6 9 17 4 12"/>
+                                    </svg>
+                                </div>
+                                <span>Audit-Spur bleibt vollständig</span>
+                            </li>
+                            <li>
+                                <div class="ps-check-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="20 6 9 17 4 12"/>
+                                    </svg>
+                                </div>
+                                <span>Richtlinien gelten konsistent</span>
+                            </li>
+                            <li>
+                                <div class="ps-check-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="20 6 9 17 4 12"/>
+                                    </svg>
+                                </div>
+                                <span>Verantwortung bleibt menschlich</span>
+                            </li>
+                        </ul>
+                        
+                        <p class="ps-trust-statement">
+                            Dieselben Regeln, die Sie im Pilot schützen, schützen Sie in der Skalierung.
+                        </p>
+                    </div>
+                    
+                    <div class="ps-section__visual">
+                        <svg class="ps-governance-diagram" viewBox="0 0 360 280" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Schild-Hintergrund -->
+                            <path d="M180 40 L280 80 L280 160 Q280 220 180 260 Q80 220 80 160 L80 80 Z" fill="rgba(20, 184, 166, 0.08)" stroke="#14b8a6" stroke-width="2"/>
+                            
+                            <!-- Innere Inhaltszeilen -->
+                            <g>
+                                <!-- Zeile 1 -->
+                                <rect x="120" y="90" width="120" height="30" rx="6" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+                                <circle cx="140" cy="105" r="6" fill="#14b8a6"/>
+                                <text x="155" y="109" fill="#f8fafc" font-size="10" font-family="system-ui, sans-serif">Freigaben</text>
+                                
+                                <!-- Zeile 2 -->
+                                <rect x="120" y="130" width="120" height="30" rx="6" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+                                <circle cx="140" cy="145" r="6" fill="#14b8a6"/>
+                                <text x="155" y="149" fill="#f8fafc" font-size="10" font-family="system-ui, sans-serif">Audit-Spur</text>
+                                
+                                <!-- Zeile 3 -->
+                                <rect x="120" y="170" width="120" height="30" rx="6" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+                                <circle cx="140" cy="185" r="6" fill="#14b8a6"/>
+                                <text x="155" y="189" fill="#f8fafc" font-size="10" font-family="system-ui, sans-serif">Richtlinien</text>
+                            </g>
+                            
+                            <!-- Skalierungsindikatoren an den Seiten -->
+                            <g opacity="0.6">
+                                <circle cx="95" cy="120" r="4" fill="#14b8a6"/>
+                                <circle cx="95" cy="140" r="4" fill="#14b8a6"/>
+                                <circle cx="95" cy="160" r="4" fill="#14b8a6"/>
+                            </g>
+                            <g opacity="0.6">
+                                <circle cx="265" cy="120" r="4" fill="#14b8a6"/>
+                                <circle cx="265" cy="140" r="4" fill="#14b8a6"/>
+                                <circle cx="265" cy="160" r="4" fill="#14b8a6"/>
+                            </g>
+                            
+                            <!-- Label -->
+                            <text x="180" y="230" text-anchor="middle" fill="#14b8a6" font-size="10" font-weight="600" font-family="system-ui, sans-serif" letter-spacing="0.05em">GOVERNANCE</text>
+                            
+                            <!-- Skalierungspfeile nach außen -->
+                            <path d="M85 120 L70 105" stroke="#334155" stroke-width="1.5" stroke-dasharray="3 2"/>
+                            <path d="M85 160 L70 175" stroke="#334155" stroke-width="1.5" stroke-dasharray="3 2"/>
+                            <path d="M275 120 L290 105" stroke="#334155" stroke-width="1.5" stroke-dasharray="3 2"/>
+                            <path d="M275 160 L290 175" stroke="#334155" stroke-width="1.5" stroke-dasharray="3 2"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================
+             ABSCHNITT: TYPISCHE SKALIERUNGSPFADE
+             ======================================== -->
+        <section class="ps-section ps-section--alt">
+            <div class="ps-container">
+                <div class="ps-section__header">
+                    <h2 class="ps-section__title">Vom Pilot zum Unternehmen — <span class="accent">typische Pfade</span></h2>
+                </div>
+                
+                <div class="ps-paths">
+                    <div class="ps-path">
+                        <span class="ps-path__from">Team</span>
+                        <span class="ps-path__arrow">→</span>
+                        <span class="ps-path__to">Abteilung</span>
+                    </div>
+                    <div class="ps-path">
+                        <span class="ps-path__from">Interne Nutzer</span>
+                        <span class="ps-path__arrow">→</span>
+                        <span class="ps-path__to">Externe Nutzer</span>
+                    </div>
+                    <div class="ps-path">
+                        <span class="ps-path__from">Mensch-zuerst</span>
+                        <span class="ps-path__arrow">→</span>
+                        <span class="ps-path__to">Mensch + KI</span>
+                    </div>
+                    <div class="ps-path">
+                        <span class="ps-path__from">Unterstützt</span>
+                        <span class="ps-path__arrow">→</span>
+                        <span class="ps-path__to">Automatisiert</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================
+             ABSCHNITT: KEINE PILOT-PARALYSE
+             ======================================== -->
+        <section class="ps-section">
+            <div class="ps-container">
+                <div class="ps-section__header">
+                    <h2 class="ps-section__title">Keine <span class="accent">Pilot-Paralyse</span>.</h2>
+                </div>
+                
+                <div class="ps-no-list">
+                    <div class="ps-no-item">
+                        <div class="ps-no-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="18" y1="6" x2="6" y2="18"/>
+                                <line x1="6" y1="6" x2="18" y2="18"/>
+                            </svg>
+                        </div>
+                        <span>Keine separate „Enterprise-Version“</span>
+                    </div>
+                    <div class="ps-no-item">
+                        <div class="ps-no-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="18" y1="6" x2="6" y2="18"/>
+                                <line x1="6" y1="6" x2="18" y2="18"/>
+                            </svg>
+                        </div>
+                        <span>Kein Redesign für Skalierung</span>
+                    </div>
+                    <div class="ps-no-item">
+                        <div class="ps-no-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="18" y1="6" x2="6" y2="18"/>
+                                <line x1="6" y1="6" x2="18" y2="18"/>
+                            </svg>
+                        </div>
+                        <span>Kein Verlust der Auditierbarkeit</span>
+                    </div>
+                    <div class="ps-no-item">
+                        <div class="ps-no-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="18" y1="6" x2="6" y2="18"/>
+                                <line x1="6" y1="6" x2="18" y2="18"/>
+                            </svg>
+                        </div>
+                        <span>Keine versteckte Automatisierung</span>
+                    </div>
+                </div>
+                
+                <p class="ps-section__closing">
+                    Wenn der Pilot gelingt, ist Skalierung der nächste Standardschritt — kein neues Projekt.
+                </p>
+            </div>
+        </section>
+
+        <!-- ========================================
+             ABSCHLUSS-CTA
+             ======================================== -->
+        <section class="ps-final">
+            <div class="ps-final__glow"></div>
+            <div class="ps-container">
+                <div class="ps-final__content">
+                    <h2 class="ps-final__title">Im Kleinen beweisen. <span class="accent">Im Großen laufen lassen.</span></h2>
+                    <p class="ps-final__text">
+                        Datapolis macht aus erfolgreichen Piloten gesteuerte, skalierbare Abläufe — ohne die Regeln zu ändern.
+                    </p>
+                    
+                    <div class="ps-final__actions">
+                        <a href="platform-2to2.html" class="ps-btn ps-btn--large">Plattform ansehen</a>
+                        <a href="contact.html" class="ps-btn ps-btn--outline ps-btn--large">Kontaktieren Sie uns zum Pilot</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Placeholder -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Scripts -->
+    <script>
+        document.addEventListener('includesLoaded', function() {
+            var scripts = [
+                '../assets/js/vendors.min.js',
+                '../assets/js/main.min.js',
+                '../assets/js/functions.min.js',
+                '../assets/js/async.min.js'
+            ];
+            
+            function loadScript(index) {
+                if (index >= scripts.length) return;
+                
+                var script = document.createElement('script');
+                script.src = scripts[index];
+                script.onload = function() {
+                    loadScript(index + 1);
+                };
+                document.body.appendChild(script);
+            }
+            
+            loadScript(0);
+        });
+
+        // Smooth Scroll für Anker-Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

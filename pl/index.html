@@ -2,11 +2,11 @@
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
-    <title>Datapolis — Zarządzana praca dla nowoczesnych firm</title>
-    <meta name="description" content="Datapolis buduje zarządzaną warstwę procesową, w której ludzie i cyfrowi pracownicy AI wykonują realną pracę — z kontrolą, audytem i bezpieczeństwem klasy enterprise.">
+    <title>Datapolis - Uruchamiamy pracę nowoczesnych firm</title>
+    <meta name="description" content="Datapolis buduje platformy, na których ludzie i cyfrowi pracownicy realizują wspólnie procesy biznesowe. Ludzie. Oprogramowanie. AI. Jedna zarządzana warstwa procesowa.">
     <meta name="robots" content="index,follow">
-    <meta property="og:title" content="Datapolis — Zarządzana praca dla nowoczesnych firm">
-    <meta property="og:description" content="Ludzie + AI w jednym procesie. Kontrola, audyt, bezpieczeństwo. To nie chatbot. To operacyjna warstwa pracy.">
+    <meta property="og:title" content="Datapolis - Uruchamiamy pracę nowoczesnych firm">
+    <meta property="og:description" content="Ludzie. Oprogramowanie. AI. Jedna zarządzana warstwa procesowa.">
     <meta property="og:type" content="website">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#020617">
@@ -16,26 +16,7 @@
     <link rel="stylesheet" href="../assets/css/dark-theme.css?v=3">
     <link rel="stylesheet" href="../assets/css/new-homepage.css?v=7">
 
-    <script>
-        // Loader for Polish pages
-        document.addEventListener('DOMContentLoaded', function() {
-            var headerPlaceholder = document.getElementById('header-placeholder');
-            var footerPlaceholder = document.getElementById('footer-placeholder');
-
-            function loadHTML(element, url) {
-                return fetch(url)
-                    .then(function(response) { return response.text(); })
-                    .then(function(html) { element.innerHTML = html; });
-            }
-
-            Promise.all([
-                loadHTML(headerPlaceholder, 'includes/header.html'),
-                loadHTML(footerPlaceholder, 'includes/footer.html')
-            ]).then(function() {
-                document.dispatchEvent(new Event('includesLoaded'));
-            });
-        });
-    </script>
+    <script src="../includes/loader.js"></script>
 
     <link rel="icon" type="image/png" href="../assets/img/favicon/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="../assets/img/favicon/favicon.svg" />
@@ -43,7 +24,6 @@
     <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/favicon/apple-touch-icon.png" />
     <link rel="manifest" href="../assets/img/favicon/site.webmanifest" />
 </head>
-
 <body class="dark-theme">
     <!-- Header Placeholder -->
     <div id="header-placeholder"></div>
@@ -55,37 +35,36 @@
         <section class="dp-hero">
             <div class="dp-hero__grid"></div>
             <div class="dp-hero__glow"></div>
-
+            
             <div class="dp-container">
                 <div class="dp-hero__content">
                     <div>
                         <h1 class="dp-hero__title">
-                            <span>Zarządzamy pracą</span>
+                            <span>Uruchamiamy pracę</span>
                             <span class="accent">nowoczesnych firm.</span>
                         </h1>
-
+                        
                         <p class="dp-hero__tagline">
-                            Ludzie + AI.<br>
+                            Ludzie.  AI.<br>
                             <strong>Jedna zarządzana warstwa procesowa.</strong>
                         </p>
-
+                        
                         <p class="dp-hero__subtitle">
-                            Zamieniamy „pracę w mailach i Excelu” na procesy, które dowożą wynik:
-                            z odpowiedzialnością, ścieżką audytu i kontrolą tego, co robi AI.
+                            Projektujemy i uruchamiamy warstwę procesową, w której ludzie i AI realizują realną pracę.
                         </p>
-
+                        
                         <div class="dp-hero__actions">
-                            <a href="https://2to2.ai" target="_blank" class="dp-btn" rel="noopener">
-                                Wejdź na 2to2
+                            <a href="https://2to2.ai" target="_blank" class="dp-btn">
+                                Zobacz platformę
                             </a>
-                            <a href="kontakt.html" class="dp-btn dp-btn-outline">
-                                Umów rozmowę
+                            <a href="contact.html" class="dp-btn dp-btn-outline">
+                                Porozmawiaj z ekspertem
                             </a>
                         </div>
                     </div>
-
+                    
                     <div class="dp-hero__visual">
-                        <svg viewBox="0 0 400 340" fill="none" xmlns="http://www.w3.org/2000/svg" class="process-diagram" aria-label="Diagram: człowiek i cyfrowy pracownik realizują pracę wewnątrz procesu">
+                        <svg viewBox="0 0 400 340" fill="none" xmlns="http://www.w3.org/2000/svg" class="process-diagram">
                             <defs>
                                 <linearGradient id="processGrad" x1="0%" y1="0%" x2="100%" y2="100%">
                                     <stop offset="0%" stop-color="#14b8a6"/>
@@ -99,7 +78,7 @@
                                     </feMerge>
                                 </filter>
                             </defs>
-
+                            
                             <!-- Connection lines from Process to Workers -->
                             <path d="M200 165 L100 95" stroke="#475569" stroke-width="2" stroke-dasharray="8 5">
                                 <animate attributeName="stroke-dashoffset" from="13" to="0" dur="1.2s" repeatCount="indefinite"/>
@@ -107,7 +86,7 @@
                             <path d="M200 165 L300 95" stroke="#475569" stroke-width="2" stroke-dasharray="8 5">
                                 <animate attributeName="stroke-dashoffset" from="13" to="0" dur="1.2s" repeatCount="indefinite"/>
                             </path>
-
+                            
                             <!-- Human node (left) -->
                             <g transform="translate(55, 20)">
                                 <rect width="90" height="90" rx="16" fill="#0f172a" stroke="#334155" stroke-width="2"/>
@@ -115,29 +94,30 @@
                                 <path d="M24 72 Q45 55 66 72" stroke="#94a3b8" stroke-width="2" fill="none"/>
                                 <text x="45" y="118" text-anchor="middle" fill="#94a3b8" font-size="13" font-weight="500" font-family="system-ui, sans-serif">Człowiek</text>
                             </g>
-
+                            
                             <!-- Digital Worker node (right) - visually equal to Human -->
                             <g transform="translate(255, 20)">
                                 <rect width="90" height="90" rx="16" fill="#0f172a" stroke="#334155" stroke-width="2"/>
+                                <!-- Neutral circuit/node icon -->
                                 <circle cx="45" cy="45" r="18" stroke="#94a3b8" stroke-width="2" fill="none"/>
                                 <circle cx="45" cy="45" r="7" fill="#94a3b8"/>
                                 <path d="M45 27 V19 M45 63 V71 M27 45 H19 M63 45 H71" stroke="#94a3b8" stroke-width="2" stroke-linecap="round"/>
                                 <text x="45" y="118" text-anchor="middle" fill="#94a3b8" font-size="13" font-weight="500" font-family="system-ui, sans-serif">Cyfrowy pracownik</text>
                             </g>
-
-                            <!-- PROCESS node (center, bottom) -->
+                            
+                            <!-- PROCESS node (center, bottom) - The Control Plane / Main Authority -->
                             <g transform="translate(80, 175)" filter="url(#processGlow)">
                                 <rect width="240" height="100" rx="20" fill="url(#processGrad)"/>
+                                <!-- Orchestration symbol: flow with central hub -->
                                 <circle cx="70" cy="50" r="10" fill="white" opacity="0.85"/>
                                 <circle cx="120" cy="50" r="14" fill="white"/>
                                 <circle cx="170" cy="50" r="10" fill="white" opacity="0.85"/>
                                 <path d="M80 50 H106 M134 50 H160" stroke="rgba(2,6,23,0.35)" stroke-width="3" stroke-linecap="round"/>
                                 <text x="120" y="130" text-anchor="middle" fill="#f8fafc" font-size="16" font-weight="600" font-family="system-ui, sans-serif">Proces</text>
                             </g>
-
-                            <text x="200" y="328" text-anchor="middle" fill="#475569" font-size="11" font-family="system-ui, sans-serif">
-                                Połączone z systemami enterprise. Mierzalne wyniki. Pełna kontrola.
-                            </text>
+                            
+                            <!-- Subtle caption -->
+                            <text x="200" y="328" text-anchor="middle" fill="#475569" font-size="11" font-family="system-ui, sans-serif">Połączone z systemami enterprise. Dostarczają realne wyniki biznesowe.</text>
                         </svg>
                     </div>
                 </div>
@@ -145,15 +125,15 @@
         </section>
 
         <!-- ========================================
-             2. PROBLEM
+             2. PROBLEM - Why work is broken
              ======================================== -->
         <section class="dp-section dp-section--dark dp-section--problem">
             <div class="dp-container">
                 <div class="dp-section__header">
                     <span class="dp-label">Rzeczywistość</span>
-                    <h2 class="dp-title">Dlaczego praca się rozjeżdża</h2>
+                    <h2 class="dp-title">Dlaczego praca jest zepsuta</h2>
                 </div>
-
+                
                 <div class="dp-problems">
                     <div class="dp-problem">
                         <div class="dp-problem__icon">
@@ -165,11 +145,9 @@
                                 <path d="M10 7h4M10 17h4" stroke-dasharray="2 2"/>
                             </svg>
                         </div>
-                        <p class="dp-problem__text">
-                            Krytyczne decyzje żyją w mailach, arkuszach i „wiedzy w głowach” — bez jednego źródła prawdy.
-                        </p>
+                        <p class="dp-problem__text">Krytyczne procesy są rozproszone między e-mailami, arkuszami kalkulacyjnymi i głowami ludzi.</p>
                     </div>
-
+                    
                     <div class="dp-problem">
                         <div class="dp-problem__icon">
                             <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
@@ -180,11 +158,9 @@
                                 <path d="M11 10l2 4M13 10l-2 4" stroke-width="1.5"/>
                             </svg>
                         </div>
-                        <p class="dp-problem__text">
-                            Systemy nie „podają sobie pracy” — a to właśnie na styku zespołów i narzędzi powstają opóźnienia i błędy.
-                        </p>
+                        <p class="dp-problem__text">Narzędzia automatyzacji się nie łączą. Praca rwie się między systemami i zespołami.</p>
                     </div>
-
+                    
                     <div class="dp-problem">
                         <div class="dp-problem__icon">
                             <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
@@ -192,11 +168,9 @@
                                 <path d="M12 8v4M12 16h.01"/>
                             </svg>
                         </div>
-                        <p class="dp-problem__text">
-                            AI bez procesu to ryzyko: brak odpowiedzialności, brak audytu, brak powtarzalności.
-                        </p>
+                        <p class="dp-problem__text">Copiloty AI nie mają nadzoru: brak ścieżki audytu, brak odpowiedzialności.</p>
                     </div>
-
+                    
                     <div class="dp-problem">
                         <div class="dp-problem__icon">
                             <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
@@ -207,31 +181,27 @@
                                 <path d="M18 16v2h2"/>
                             </svg>
                         </div>
-                        <p class="dp-problem__text">
-                            Firmy nie mogą pozwolić AI działać „na żywioł” — bezpieczeństwo, zgodność i ryzyko wymagają sterowania.
-                        </p>
+                        <p class="dp-problem__text">Przedsiębiorstwa nie mogą pozwolić AI działać swobodnie — bezpieczeństwo, zgodność i ryzyko wymagają kontroli.</p>
                     </div>
                 </div>
-
+                
                 <div class="dp-thesis">
-                    <p class="dp-thesis__line">Samo AI nie naprawi sposobu, w jaki działa organizacja.</p>
-                    <p class="dp-thesis__line dp-thesis__line--accent">
-                        Najpierw potrzebujesz <span class="accent">zarządzanej warstwy procesowej</span>. Potem dopiero AI robi robotę.
-                    </p>
+                    <p class="dp-thesis__line">AI nie naprawi zepsutej pracy.</p>
+                    <p class="dp-thesis__line dp-thesis__line--accent">Praca potrzebuje <span class="accent">zarządzanej warstwy procesowej</span>.</p>
                 </div>
             </div>
         </section>
 
         <!-- ========================================
-             3. WIARYGODNOŚĆ
+             3. CREDIBILITY - 20+ years
              ======================================== -->
         <section class="dp-section dp-section--credibility">
             <div class="dp-container">
                 <div class="dp-credibility">
                     <h2 class="dp-credibility__title">
-                        Ponad <span class="accent">20 lat</span> uruchamiamy procesy, od których naprawdę zależy biznes.
+                        Spędziliśmy <span class="accent">ponad 20 lat</span> uruchamiając krytyczne procesy biznesowe.
                     </h2>
-
+                    
                     <div class="dp-stats">
                         <div class="dp-stat">
                             <div class="dp-stat__icon">
@@ -241,7 +211,7 @@
                                 </svg>
                             </div>
                             <span class="dp-stat__number">Tysiące</span>
-                            <span class="dp-stat__label">procesów działających w produkcji — codziennie</span>
+                            <span class="dp-stat__label">Workflow krytyczne dla biznesu działające w produkcji</span>
                         </div>
                         <div class="dp-stat">
                             <div class="dp-stat__icon">
@@ -250,8 +220,8 @@
                                     <path d="M9 3v14M15 7v14"/>
                                 </svg>
                             </div>
-                            <span class="dp-stat__number">Banki, Energetyka, Przemysł, Administracja</span>
-                            <span class="dp-stat__label">środowiska o wysokiej regulacji i wysokiej stawce błędu</span>
+                            <span class="dp-stat__number">Banki, energetyka, przemysł, administracja</span>
+                            <span class="dp-stat__label">Najbardziej regulowane środowiska na świecie</span>
                         </div>
                         <div class="dp-stat">
                             <div class="dp-stat__icon">
@@ -260,38 +230,47 @@
                                     <path d="M9 12l2 2 4-4"/>
                                 </svg>
                             </div>
-                            <span class="dp-stat__number">Stabilność</span>
-                            <span class="dp-stat__label">audytowane, kontrolowane i przewidywalne działanie</span>
+                            <span class="dp-stat__number">Operacje bez przestojów</span>
+                            <span class="dp-stat__label">Audytowane. Kontrolowane. Zawsze dostępne.</span>
                         </div>
                     </div>
-
+                    
                     <p class="dp-contrast">
-                        Startupy AI obiecują przyszłość.
-                        <strong>My dowozimy teraźniejszość</strong> — systemy i procesy, które muszą działać niezależnie od trendów.
+                        Startupy AI obiecują przyszłość. 
+                        
+                    </p>
+                    <p class="dp-contrast">
+                       
+                        <strong>Uruchamiamy systemy, od których firmy zależą dziś.</strong>
                     </p>
                 </div>
             </div>
         </section>
 
         <!-- ========================================
-             4. NOWA ERA
+             4. THE NEW ERA - AI Inside Processes (CLIMAX)
              ======================================== -->
         <section class="dp-section dp-section--manifesto">
             <div class="dp-container">
+                <!-- A) Label pill -->
                 <div class="dp-section__header">
                     <span class="dp-label">Nowa era</span>
                 </div>
-
+                
+                <!-- B) Big manifesto headline -->
                 <h2 class="dp-manifesto__headline">
                     <span class="dp-manifesto__line1">AI nie powinno zastępować procesów.</span>
                     <span class="dp-manifesto__line2">Powinno pracować wewnątrz nich.</span>
                 </h2>
-
+                
+                <!-- C) Subheadline -->
                 <p class="dp-manifesto__subheadline">
-                    Cyfrowi pracownicy wykonują zadania. Procesy pilnują zasad. Firma zachowuje kontrolę.
+                    Cyfrowi pracownicy działają. Procesy nadzorują. Firmy zachowują kontrolę.
                 </p>
-
+                
+                <!-- D) Core visual: Orchestration diagram -->
                 <div class="dp-orchestration">
+                    <!-- Human node (left) -->
                     <div class="dp-orchestration__node">
                         <div class="dp-orchestration__card">
                             <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
@@ -301,13 +280,15 @@
                         </div>
                         <span class="dp-orchestration__label">Człowiek</span>
                     </div>
-
+                    
+                    <!-- Connector line -->
                     <div class="dp-orchestration__connector">
                         <svg width="60" height="2" viewBox="0 0 60 2">
                             <line x1="0" y1="1" x2="60" y2="1" stroke="#334155" stroke-width="2" stroke-dasharray="6 4"/>
                         </svg>
                     </div>
-
+                    
+                    <!-- Process node (center) - Control Plane -->
                     <div class="dp-orchestration__node dp-orchestration__node--center">
                         <div class="dp-orchestration__card dp-orchestration__card--process">
                             <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
@@ -320,13 +301,15 @@
                         </div>
                         <span class="dp-orchestration__label dp-orchestration__label--process">Proces</span>
                     </div>
-
+                    
+                    <!-- Connector line -->
                     <div class="dp-orchestration__connector">
                         <svg width="60" height="2" viewBox="0 0 60 2">
                             <line x1="0" y1="1" x2="60" y2="1" stroke="#334155" stroke-width="2" stroke-dasharray="6 4"/>
                         </svg>
                     </div>
-
+                    
+                    <!-- Digital Worker node (right) -->
                     <div class="dp-orchestration__node">
                         <div class="dp-orchestration__card">
                             <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
@@ -341,30 +324,33 @@
                         <span class="dp-orchestration__label">Cyfrowy pracownik</span>
                     </div>
                 </div>
-
-                <p class="dp-orchestration__caption">Nadzorowane. Audytowalne. Zgodne z politykami.</p>
-
+                
+                <!-- Small label under diagram -->
+                <p class="dp-orchestration__caption">Zarządzane. Audytowane. Zatwierdzone.</p>
+                
+                <!-- E) Outcome statements (not features) -->
                 <div class="dp-outcomes">
                     <div class="dp-outcome">
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M5 12h14M12 5l7 7-7 7"/>
                         </svg>
-                        <span>Praca płynie end-to-end — z zatwierdzeniami tylko tam, gdzie są potrzebne.</span>
+                        <span>Praca porusza się automatycznie — z zatwierdzeniami, gdy są potrzebne.</span>
                     </div>
                     <div class="dp-outcome">
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M12 20h9M16.5 3.5a2.12 2.12 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/>
                         </svg>
-                        <span>Każda akcja ma autora, czas i kontekst — łatwo wyjaśnić “kto, co i dlaczego”.</span>
+                        <span>Każda akcja jest logowana i możliwa do prześledzenia.</span>
                     </div>
                     <div class="dp-outcome">
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
                         </svg>
-                        <span>AI działa w granicach uprawnień, ról i polityk — nie „poza systemem”.</span>
+                        <span>AI działa w granicach Twoich polityk i uprawnień.</span>
                     </div>
                 </div>
-
+                
+                <!-- F) Final thesis line -->
                 <p class="dp-manifesto__thesis">
                     Jedna zarządzana warstwa procesowa — dla ludzi i cyfrowych pracowników.
                 </p>
@@ -372,22 +358,25 @@
         </section>
 
         <!-- ========================================
-             5. PLATFORMA: 2to2
+             5. PLATFORM: 2to2
              ======================================== -->
         <section class="dp-section dp-section--platform">
             <div class="dp-container">
                 <div class="dp-section__header">
                     <span class="dp-label">Platforma</span>
                 </div>
-
+                
+                <!-- 1) Section headline - decisive positioning -->
                 <h2 class="dp-platform__headline">
                     <span class="dp-platform__logo">2to2</span> to warstwa operacyjna dla zarządzanej pracy.
                 </h2>
-
+                
+                <!-- 2) Supporting sentence -->
                 <p class="dp-platform__support">
-                    Buduj aplikacje, które realizują pracę. Osadzaj je wszędzie. Kontroluj każdą akcję — człowieka i AI.
+                    Buduj aplikacje, które uruchamiają pracę. Osadzaj je wszędzie. Nadzoruj każdą akcję.
                 </p>
-
+                
+                <!-- 3) Three cards - outcomes + differentiation -->
                 <div class="dp-features">
                     <div class="dp-feature">
                         <div class="dp-feature__icon">
@@ -397,11 +386,9 @@
                             </svg>
                         </div>
                         <h3 class="dp-feature__title">Buduj aplikacje procesowe</h3>
-                        <p class="dp-feature__desc">
-                            Projektuj i wdrażaj aplikacje, które prowadzą pracę przez zespoły, narzędzia i AI — bez chaosu i wyjątków „na mailu”.
-                        </p>
+                        <p class="dp-feature__desc">Projektuj i wdrażaj aplikacje, które orkiestrują realną pracę — między zespołami, narzędziami i AI.</p>
                     </div>
-
+                    
                     <div class="dp-feature">
                         <div class="dp-feature__icon">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
@@ -411,11 +398,9 @@
                             </svg>
                         </div>
                         <h3 class="dp-feature__title">Osadzaj wszędzie</h3>
-                        <p class="dp-feature__desc">
-                            Portale, intranet, Teams, własny produkt — te same moduły pracy, bez przepisywania i bez duplikacji.
-                        </p>
+                        <p class="dp-feature__desc">Umieszczaj aplikacje procesowe w portalach, intranetach, Teams lub własnych produktach — bez przepisywania.</p>
                     </div>
-
+                    
                     <div class="dp-feature">
                         <div class="dp-feature__icon">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
@@ -424,19 +409,18 @@
                             </svg>
                         </div>
                         <h3 class="dp-feature__title">Uruchamiaj z kontrolą</h3>
-                        <p class="dp-feature__desc">
-                            Jedna warstwa zasad: role, uprawnienia, audyt, zatwierdzenia — dzięki temu AI pracuje bezpiecznie, a ludzie widzą „co się dzieje”.
-                        </p>
+                        <p class="dp-feature__desc">Ludzie i cyfrowi pracownicy realizują kroki w jednej zarządzanej warstwie — logowane, zatwierdzane, audytowalne.</p>
                     </div>
                 </div>
-
-                <p class="dp-platform__tagline">Aplikacje, które realizują pracę.</p>
-
+                
+                <!-- 4) Tagline + CTA -->
+                <p class="dp-platform__tagline">Aplikacje, które uruchamiają pracę.</p>
+                
                 <div class="dp-platform__cta">
-                    <a href="https://2to2.ai" target="_blank" class="dp-btn dp-btn--large" rel="noopener">
+                    <a href="https://2to2.ai" target="_blank" class="dp-btn dp-btn--large">
                         Poznaj 2to2 →
                     </a>
-                    <a href="https://2to2.ai/how-it-works" target="_blank" class="dp-link" rel="noopener">
+                    <a href="https://2to2.ai/how-it-works" target="_blank" class="dp-link">
                         Zobacz jak to działa
                     </a>
                 </div>
@@ -444,17 +428,18 @@
         </section>
 
         <!-- ========================================
-             6. DOWÓD ENTERPRISE
+             6. ENTERPRISE PROOF - Where Datapolis Runs Today
              ======================================== -->
         <section class="dp-section dp-section--proof">
             <div class="dp-container">
                 <div class="dp-section__header">
                     <span class="dp-label">Klasa enterprise z założenia</span>
                     <h2 class="dp-proof__title">Gdzie nasze DNA procesowe działa dziś w produkcji</h2>
-                    <p class="dp-proof__context">Ta sama logika zarządzanej pracy — w różnych środowiskach i realnych organizacjach.</p>
+                    <p class="dp-proof__context">Ta sama zarządzana warstwa procesowa — wdrożona w różnych środowiskach.</p>
                 </div>
-
+                
                 <div class="dp-deployments">
+                    <!-- Microsoft 365 deployment -->
                     <div class="dp-deployment">
                         <div class="dp-deployment__icon">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
@@ -463,11 +448,10 @@
                             </svg>
                         </div>
                         <h3 class="dp-deployment__title">Przedsiębiorstwa Microsoft 365</h3>
-                        <p class="dp-deployment__desc">
-                            Procesy Datapolis działające wewnątrz SharePoint i Microsoft 365 — używane przez zespoły, które muszą mieć przewidywalny wynik.
-                        </p>
+                        <p class="dp-deployment__desc">Procesy Datapolis działające wewnątrz SharePoint i Microsoft 365 — napędzające realne zespoły w skali.</p>
                     </div>
-
+                    
+                    <!-- Regulated on-premise deployment -->
                     <div class="dp-deployment">
                         <div class="dp-deployment__icon">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
@@ -476,67 +460,65 @@
                             </svg>
                         </div>
                         <h3 class="dp-deployment__title">Regulowane środowiska SharePoint on-premise</h3>
-                        <p class="dp-deployment__desc">
-                            Datapolis Process System w branżach, gdzie liczy się zgodność, audyt i ciągłość działania — energetyka, administracja, infrastruktura krytyczna.
-                        </p>
+                        <p class="dp-deployment__desc">Datapolis Process System wdrożony w najbardziej regulowanych branżach — energetyka, administracja, infrastruktura krytyczna.</p>
                     </div>
                 </div>
-
-                <p class="dp-dna">To samo DNA procesowe. Różne wdrożenia. Ten sam nacisk: kontrola i wynik.</p>
+                
+                <p class="dp-dna">To samo DNA procesowe. Różne wdrożenia.</p>
             </div>
         </section>
 
         <!-- ========================================
-             7. PRZYPADKI UŻYCIA
+             7. USE CASES - What Actually Runs Here
              ======================================== -->
         <section class="dp-section dp-section--usecases">
             <div class="dp-container">
                 <div class="dp-section__header">
                     <span class="dp-label">Przypadki użycia</span>
-                    <h2 class="dp-title">Co realnie działa na Datapolis</h2>
+                    <h2 class="dp-title">Co działa na Datapolis</h2>
                 </div>
-
+                
                 <div class="dp-usecases">
                     <div class="dp-usecase">
-                        <span class="dp-usecase__title">Faktury i zobowiązania</span>
-                        <p class="dp-usecase__desc">AI czyta, klasyfikuje i wyciąga dane. Proces prowadzi zatwierdzenia i przekazuje do ERP.</p>
-                        <span class="dp-usecase__badge">Powered by 2to2</span>
+                        <span class="dp-usecase__title">Przetwarzanie faktur</span>
+                        <p class="dp-usecase__desc">AI czyta i klasyfikuje faktury. Procesy kierują zatwierdzenia i księgują do ERP.</p>
+                        <span class="dp-usecase__badge">Napędzane przez 2to2</span>
                     </div>
-
+                    
                     <div class="dp-usecase">
-                        <span class="dp-usecase__title">Onboarding klientów</span>
-                        <p class="dp-usecase__desc">Cyfrowi pracownicy zbierają dane. Proces weryfikuje, eskaluje wyjątki i aktywuje klienta.</p>
-                        <span class="dp-usecase__badge">Powered by 2to2</span>
+                        <span class="dp-usecase__title">Onboarding klienta</span>
+                        <p class="dp-usecase__desc">Cyfrowi pracownicy zbierają dane. Procesy weryfikują i aktywują nowych klientów.</p>
+                        <span class="dp-usecase__badge">Napędzane przez 2to2</span>
                     </div>
-
+                    
                     <div class="dp-usecase">
-                        <span class="dp-usecase__title">Service Desk / IT</span>
-                        <p class="dp-usecase__desc">AI triażuje zgłoszenia. Proces przydziela, eskaluje, pilnuje SLA i zamyka ticket.</p>
-                        <span class="dp-usecase__badge">Powered by 2to2</span>
+                        <span class="dp-usecase__title">IT service desk</span>
+                        <p class="dp-usecase__desc">AI klasyfikuje zgłoszenia. Procesy przydzielają, eskalują i zamykają tickety.</p>
+                        <span class="dp-usecase__badge">Napędzane przez 2to2</span>
                     </div>
-
+                    
                     <div class="dp-usecase">
-                        <span class="dp-usecase__title">Umowy i obieg dokumentów</span>
-                        <p class="dp-usecase__desc">AI wyciąga kluczowe warunki. Proces prowadzi recenzje, zatwierdzenia i podpis.</p>
-                        <span class="dp-usecase__badge">Powered by 2to2</span>
+                        <span class="dp-usecase__title">Cykl życia umowy</span>
+                        <p class="dp-usecase__desc">AI wyodrębnia warunki. Procesy kierują przeglądy, zatwierdzenia i podpisy.</p>
+                        <span class="dp-usecase__badge">Napędzane przez 2to2</span>
                     </div>
-
+                    
                     <div class="dp-usecase">
-                        <span class="dp-usecase__title">HR i cykl życia pracownika</span>
-                        <p class="dp-usecase__desc">Formularze, decyzje, dostęp, sprzęt — proces spina całość, a AI odciąża operacyjnie.</p>
-                        <span class="dp-usecase__badge">Powered by 2to2</span>
+                        <span class="dp-usecase__title">Procesy HR</span>
+                        <p class="dp-usecase__desc">Cyfrowi pracownicy obsługują formularze. Procesy wdrażają, zmieniają i wycofują pracowników.</p>
+                        <span class="dp-usecase__badge">Napędzane przez 2to2</span>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- ========================================
-             8. KLIENCI
+             8. CUSTOMERS
              ======================================== -->
         <section class="dp-section dp-section--dark">
             <div class="dp-container">
-                <p class="dp-customers__statement">Procesy, które obsługują realny biznes — nie demo.</p>
-
+                <p class="dp-customers__statement">Uruchamiają realne firmy.</p>
+                
                 <div class="dp-logos">
                     <img src="../storage/files/klienci/logo-airbus.png" alt="Airbus">
                     <img src="../storage/files/klienci/logo-pgnig.png" alt="PGNiG">
@@ -548,23 +530,19 @@
         </section>
 
         <!-- ========================================
-             9. KOŃCOWE CTA
+             9. FINAL CTA - Conversion Moment
              ======================================== -->
         <section class="dp-section dp-final">
             <div class="dp-final__glow"></div>
             <div class="dp-container">
-                <h2 class="dp-final__title">
-                    Zobacz zarządzaną pracę w praktyce na <span class="accent">2to2</span>
-                </h2>
-                <p class="dp-final__subtitle">
-                    Pokażemy realny proces: role, zatwierdzenia, ścieżkę audytu i kontrolę AI — bez „ładnej makiety”.
-                </p>
-
+                <h2 class="dp-final__title">Zobacz, jak zarządzana praca działa na <span class="accent">2to2</span></h2>
+                <p class="dp-final__subtitle">Zobacz ludzi i cyfrowych pracowników realizujących realne procesy — z zatwierdzeniami, ścieżkami audytu i pełną kontrolą.</p>
+                
                 <div class="dp-final__cta">
-                    <a href="kontakt.html" class="dp-btn dp-btn--primary dp-btn--xl">
+                    <a href="contact.html" class="dp-btn dp-btn--primary dp-btn--xl">
                         Umów demo →
                     </a>
-                    <p class="dp-final__trust">Zobacz prawdziwy workflow, nie obietnicę.</p>
+                    <p class="dp-final__trust">Zobacz realny workflow, a nie makietę.</p>
                 </div>
             </div>
         </section>
@@ -582,15 +560,18 @@
                 '../assets/js/functions.min.js',
                 '../assets/js/async.min.js'
             ];
-
+            
             function loadScript(index) {
                 if (index >= scripts.length) return;
+                
                 var script = document.createElement('script');
                 script.src = scripts[index];
-                script.onload = function() { loadScript(index + 1); };
+                script.onload = function() {
+                    loadScript(index + 1);
+                };
                 document.body.appendChild(script);
             }
-
+            
             loadScript(0);
         });
     </script>
