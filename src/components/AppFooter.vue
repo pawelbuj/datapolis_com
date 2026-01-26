@@ -1,0 +1,73 @@
+<script setup>
+import { RouterLink } from 'vue-router'
+</script>
+
+<template>
+  <footer class="footer">
+    <div class="container">
+      <!-- Subtle divider -->
+      <div class="footer__divider"></div>
+
+      <!-- 4-Column Layout -->
+      <div class="footer__columns">
+        <!-- Column 1: Platform -->
+        <div class="footer__column">
+          <div class="footer__label">Platform</div>
+          <nav class="footer__nav">
+            <ul class="footer__list">
+              <li><a href="/platform-2to2.html">2to2 Platform</a></li>
+              <li><a href="/process-apps.html">Process Apps</a></li>
+              <li><a href="/orchestration-engine.html">Orchestration Engine</a></li>
+              <li><a href="/security-governance.html">Security &amp; Governance</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <!-- Column 2: How it works -->
+        <div class="footer__column">
+          <div class="footer__label">How it works</div>
+          <nav class="footer__nav">
+            <ul class="footer__list">
+              <li><a href="/how-it-works-overview.html">Overview</a></li>
+              <li><a href="/humans-agents.html">Humans + Agents</a></li>
+              <li><a href="/pilot-scale.html">Pilot → Scale</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <!-- Column 3: Trust (informational, not navigational) -->
+        <div class="footer__column">
+          <div class="footer__label">Trust</div>
+          <ul class="footer__trust-list">
+            <li class="footer__trust-item">Customers across regulated industries</li>
+            <li class="footer__trust-item">Decades of enterprise workflow experience</li>
+            <li class="footer__trust-item">Governed processes. No black boxes.</li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Company -->
+        <div class="footer__column">
+          <div class="footer__label">Company</div>
+          <nav class="footer__nav">
+            <ul class="footer__list">
+              <li><RouterLink to="/contact">Contact</RouterLink></li>
+              <li><a href="/legal.html">Privacy Policy</a></li>
+              <li><a href="/legal.html">Terms of Service</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="footer__bottom">
+        <div class="footer__bottom-content">
+          <div class="footer__brand">
+            <p class="footer__tagline">Run work. Speed up the flow.</p>
+            <p class="footer__subline">Governed processes for humans and digital workers.</p>
+          </div>
+          <p class="footer__copy">© Datapolis. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+</template>
