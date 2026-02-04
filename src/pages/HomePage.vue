@@ -339,7 +339,7 @@
                     
                     <!-- 1) Section headline - decisive positioning -->
                     <h2 class="dp-platform__headline">
-                        <span class="dp-platform__logo">2to2</span> is the operating layer for governed work.
+                        <span class="dp-platform__logo">2to2</span> is the operating layer for creating, running, and controlling business processes.
                     </h2>
                     
                     <!-- 2) Supporting sentence -->
