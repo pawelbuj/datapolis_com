@@ -165,10 +165,11 @@
             <div class="ha-container">
                 <div class="ha-principle__content">
                     <h2 class="ha-principle__headline">
-                        Ten sam proces. Te same reguły. <span class="accent">Różni wykonawcy.</span>
+                        Ten sam proces. Te same reguły. <br><span class="accent">Różni wykonawcy.</span>
                     </h2>
                     <p class="ha-principle__text">
-                        Niezależnie od tego, czy zadanie wykonuje człowiek, czy agent AI, proces pozostaje systemem rejestru.
+                        Niezależnie od tego, czy zadanie wykonuje człowiek, czy agent AI,
+                        proces pozostaje jedynym systemem odniesienia.
                     </p>
                     
                     <div class="ha-principle__points">
@@ -187,15 +188,11 @@
                     </div>
                     
                     <p class="ha-principle__statement">
-                        AI nie omija nadzoru.<br>
+                        AI jest nadzorowane.<br>
                         Ludzie nie tracą kontroli.
                     </p>
                     
-                    <div class="ha-principle__bullets">
-                        <div class="ha-principle__bullet">Brak specjalnych ścieżek dla AI</div>
-                        <div class="ha-principle__bullet">Brak ukrytych automatyzacji</div>
-                        <div class="ha-principle__bullet">Brak decyzji poza workflow</div>
-                    </div>
+            
                 </div>
             </div>
         </section>
@@ -215,17 +212,17 @@
                             </svg>
                         </div>
                         <h3 class="ha-comparison__title">Zadania ludzi</h3>
-                        <p class="ha-comparison__tagline">Tam, gdzie liczy się osąd</p>
+                        <p class="ha-comparison__tagline">Tam, gdzie liczy się odpowiedzialność</p>
                         
                         <ul class="ha-comparison__list">
-                            <li>Przegląd i zatwierdzanie</li>
-                            <li>Obsługa wyjątków</li>
-                            <li>Podejmowanie ostatecznych decyzji</li>
-                            <li>Własność odpowiedzialności</li>
+                            <li>Przegląd i zatwierdzanie decyzji</li>
+                            <li>Obsługa wyjątków i sytuacji niestandardowych</li>
+                            <li>Podejmowanie decyzji o skutkach biznesowych</li>
+                            <li>Formalna odpowiedzialność za wynik</li>
                         </ul>
                         
                         <p class="ha-comparison__footer">
-                            Ludzie pozostają pod kontrolą tam, gdzie odpowiedzialności nie da się zautomatyzować.
+                            Ludzie decydują tam, gdzie odpowiedzialności nie da się zautomatyzować.
                         </p>
                     </div>
                     
@@ -242,9 +239,9 @@
                         <p class="ha-comparison__tagline">Tam, gdzie liczą się szybkość i spójność</p>
                         
                         <ul class="ha-comparison__list">
-                            <li>Przetwarzanie danych</li>
-                            <li>Klasyfikowanie i walidacja</li>
-                            <li>Przygotowywanie decyzji</li>
+                            <li></li>Przetwarzanie danych i dokumentów</li>
+                            <li>Klasyfikowanie i walidacja danych i dokumentów</li>
+                            <li>Przygotowywanie decyzji na podstawie danych i dokumentów</li>
                             <li>Wykonywanie powtarzalnych kroków</li>
                         </ul>
                         
@@ -256,189 +253,8 @@
             </div>
         </section>
 
-        <!-- ========================================
-             SEKCJA KONTROLOWANYCH PRZEKAZAŃ
-             ======================================== -->
-        <section class="ha-section">
-            <div class="ha-container">
-                <div class="ha-section__header">
-                    <h2 class="ha-section__title">Bez zerwanych przekazań. <span class="accent">Bez zgadywania.</span></h2>
-                    <p class="ha-section__subtitle">
-                        Praca przechodzi między ludźmi a agentami przez jawne stany procesu — nie przez prompty, wiadomości ani ad-hoc instrukcje.
-                    </p>
-                </div>
-                
-                <div class="ha-handoff">
-                    <!-- Oś czasu -->
-                    <div class="ha-handoff__visual">
-                        <svg class="ha-handoff-diagram" viewBox="0 0 800 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <!-- Główna linia przepływu -->
-                            <line x1="80" y1="60" x2="720" y2="60" stroke="#334155" stroke-width="2"/>
-                            
-                            <!-- Stan 1: początkowy -->
-                            <g>
-                                <circle cx="100" cy="60" r="20" fill="#0f172a" stroke="#14b8a6" stroke-width="2"/>
-                                <text x="100" y="64" text-anchor="middle" fill="#14b8a6" font-size="10" font-weight="600" font-family="system-ui, sans-serif">S1</text>
-                                <text x="100" y="100" text-anchor="middle" fill="#64748b" font-size="9" font-family="system-ui, sans-serif">Stan</text>
-                            </g>
-                            
-                            <!-- Arrow 1 -->
-                            <path d="M130 60 L220 60" stroke="#14b8a6" stroke-width="2" stroke-dasharray="6 4" marker-end="url(#arrowHa)"/>
-                            
-                            <!-- Zadanie 1: AI -->
-                            <g>
-                                <rect x="230" y="35" width="100" height="50" rx="8" fill="#0f172a" stroke="#14b8a6" stroke-width="1.5"/>
-                                <rect x="238" y="43" width="20" height="20" rx="4" fill="rgba(20, 184, 166, 0.2)" stroke="#14b8a6" stroke-width="1"/>
-                                <circle cx="248" cy="53" r="4" fill="#14b8a6"/>
-                                <text x="280" y="50" fill="#f8fafc" font-size="9" font-weight="600" font-family="system-ui, sans-serif">Zadanie AI</text>
-                                <text x="280" y="63" fill="#64748b" font-size="8" font-family="system-ui, sans-serif">Przetwórz dane</text>
-                            </g>
-                            
-                            <!-- Arrow 2 -->
-                            <path d="M340 60 L400 60" stroke="#14b8a6" stroke-width="2" stroke-dasharray="6 4"/>
-                            
-                            <!-- Stan 2 -->
-                            <g>
-                                <circle cx="420" cy="60" r="20" fill="#0f172a" stroke="#14b8a6" stroke-width="2"/>
-                                <text x="420" y="64" text-anchor="middle" fill="#14b8a6" font-size="10" font-weight="600" font-family="system-ui, sans-serif">S2</text>
-                                <text x="420" y="100" text-anchor="middle" fill="#64748b" font-size="9" font-family="system-ui, sans-serif">Stan</text>
-                            </g>
-                            
-                            <!-- Arrow 3 -->
-                            <path d="M450 60 L530 60" stroke="#14b8a6" stroke-width="2" stroke-dasharray="6 4"/>
-                            
-                            <!-- Zadanie 2: człowiek -->
-                            <g>
-                                <rect x="540" y="35" width="100" height="50" rx="8" fill="#0f172a" stroke="#14b8a6" stroke-width="1.5"/>
-                                <circle cx="558" cy="53" r="10" stroke="#f8fafc" stroke-width="1.5" fill="none"/>
-                                <path d="M550 68 Q558 62 566 68" stroke="#f8fafc" stroke-width="1.5" fill="none"/>
-                                <text x="592" y="50" fill="#f8fafc" font-size="9" font-weight="600" font-family="system-ui, sans-serif">Człowiek</text>
-                                <text x="592" y="63" fill="#64748b" font-size="8" font-family="system-ui, sans-serif">Zatwierdzenie</text>
-                            </g>
-                            
-                            <!-- Arrow 4 -->
-                            <path d="M650 60 L690 60" stroke="#14b8a6" stroke-width="2" stroke-dasharray="6 4"/>
-                            
-                            <!-- Stan 3: końcowy -->
-                            <g>
-                                <circle cx="710" cy="60" r="20" fill="url(#tealGradHa2)" stroke="#14b8a6" stroke-width="2"/>
-                                <text x="710" y="64" text-anchor="middle" fill="#020617" font-size="10" font-weight="700" font-family="system-ui, sans-serif">S3</text>
-                                <text x="710" y="100" text-anchor="middle" fill="#64748b" font-size="9" font-family="system-ui, sans-serif">Gotowe</text>
-                            </g>
-                            
-                            <defs>
-                                <marker id="arrowHa" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
-                                    <path d="M0,0 L8,4 L0,8 Z" fill="#14b8a6"/>
-                                </marker>
-                                <linearGradient id="tealGradHa2" x1="0%" y1="0%" x2="100%" y2="100%">
-                                    <stop offset="0%" stop-color="#14b8a6"/>
-                                    <stop offset="100%" stop-color="#0d9488"/>
-                                </linearGradient>
-                            </defs>
-                        </svg>
-                    </div>
-                    
-                    <div class="ha-handoff__properties">
-                        <div class="ha-handoff__prop">
-                            <span class="ha-handoff__prop-label">Każde przekazanie jest:</span>
-                        </div>
-                        <div class="ha-handoff__prop-list">
-                            <div class="ha-handoff__prop-item">
-                                <div class="ha-handoff__prop-dot"></div>
-                                <span>Zdefiniowane</span>
-                            </div>
-                            <div class="ha-handoff__prop-item">
-                                <div class="ha-handoff__prop-dot"></div>
-                                <span>Widoczne</span>
-                            </div>
-                            <div class="ha-handoff__prop-item">
-                                <div class="ha-handoff__prop-dot"></div>
-                                <span>Audytowalne</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="ha-handoff__questions">
-                        <p class="ha-handoff__questions-label">Zawsze możliwe do odpowiedzenia:</p>
-                        <div class="ha-handoff__question">Dlaczego to zadanie przeszło do AI?</div>
-                        <div class="ha-handoff__question">Dlaczego wróciło do człowieka?</div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ========================================
-             SEKCJA AI Z OGRANICZENIAMI
-             ======================================== -->
-        <section class="ha-section ha-section--alt">
-            <div class="ha-container">
-                <div class="ha-section__header">
-                    <h2 class="ha-section__title">AI może działać — <span class="accent">ale nigdy nie decyduje samo.</span></h2>
-                    <p class="ha-section__subtitle">
-                        Agenci AI działają w ramach uprawnień, stanów i reguł eskalacji.
-                    </p>
-                </div>
-                
-                <div class="ha-limits">
-                    <!-- Can do -->
-                    <div class="ha-limits__col">
-                        <h4 class="ha-limits__heading ha-limits__heading--can">Mogą:</h4>
-                        <div class="ha-limits__items">
-                            <div class="ha-limits__item ha-limits__item--can">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                                    <polyline points="20 6 9 17 4 12"/>
-                                </svg>
-                                <span>Wykonywać</span>
-                            </div>
-                            <div class="ha-limits__item ha-limits__item--can">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                                    <polyline points="20 6 9 17 4 12"/>
-                                </svg>
-                                <span>Sugerować</span>
-                            </div>
-                            <div class="ha-limits__item ha-limits__item--can">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                                    <polyline points="20 6 9 17 4 12"/>
-                                </svg>
-                                <span>Przygotowywać</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Cannot do -->
-                    <div class="ha-limits__col">
-                        <h4 class="ha-limits__heading ha-limits__heading--cannot">Nie mogą:</h4>
-                        <div class="ha-limits__items">
-                            <div class="ha-limits__item ha-limits__item--cannot">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                                    <line x1="18" y1="6" x2="6" y2="18"/>
-                                    <line x1="6" y1="6" x2="18" y2="18"/>
-                                </svg>
-                                <span>Zatwierdzać ograniczonych działań</span>
-                            </div>
-                            <div class="ha-limits__item ha-limits__item--cannot">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                                    <line x1="18" y1="6" x2="6" y2="18"/>
-                                    <line x1="6" y1="6" x2="18" y2="18"/>
-                                </svg>
-                                <span>Omijać polityk</span>
-                            </div>
-                            <div class="ha-limits__item ha-limits__item--cannot">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                                    <line x1="18" y1="6" x2="6" y2="18"/>
-                                    <line x1="6" y1="6" x2="18" y2="18"/>
-                                </svg>
-                                <span>Redefiniować procesu</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <p class="ha-limits__note">
-                    Eskalacja do ludzi jest automatyczna i wymuszana przez workflow.
-                </p>
-            </div>
-        </section>
+        
+      
 
         <!-- ========================================
              AUDYT I ODPOWIEDZIALNOŚĆ
@@ -446,9 +262,9 @@
         <section class="ha-section">
             <div class="ha-container">
                 <div class="ha-section__header">
-                    <h2 class="ha-section__title">Jedna ścieżka audytu dla <span class="accent">ludzi i AI</span></h2>
+                    <h2 class="ha-section__title">Jedna historia dla <span class="accent">ludzi i AI</span></h2>
                     <p class="ha-section__subtitle">
-                        Każde działanie — człowieka lub AI — jest logowane w tym samym modelu audytu.
+                        Każde działanie — człowieka lub AI — jest logowane w tej samej historii procesu
                     </p>
                 </div>
                 
@@ -506,7 +322,7 @@
                                     <polyline points="20 6 9 17 4 12"/>
                                 </svg>
                             </div>
-                            <span>Ujednolicony dziennik audytu</span>
+                            <span>Ujednolicona historia</span>
                         </div>
                         <div class="ha-audit__check">
                             <div class="ha-audit__check-icon">
@@ -537,11 +353,11 @@
             <div class="ha-container">
                 <div class="ha-summary__content">
                     <h2 class="ha-summary__headline">
-                        Datapolis nie dodaje AI do pracy.<br>
-                        <span class="accent">Integruje AI z tym, jak praca realnie działa.</span>
+                        Datapolis nie dodaje sztucznie AI do procesu.<br>
+                        <span class="accent">Integruje AI z procesem w ramach którego odbywa się praca.</span>
                     </h2>
                     <p class="ha-summary__text">
-                        Ludzie i cyfrowi pracownicy działają w jednym nadzorowanym systemie — zbudowanym dla skali, zaufania i odpowiedzialności.
+                        Ludzie i cyfrowi pracownicy działają wspólnie w systemie. 
                     </p>
                 </div>
             </div>
@@ -557,7 +373,7 @@
                     <h2 class="ha-final__title">Zobacz, jak Ludzie + agenci <span class="accent">współpracują.</span></h2>
                     
                     <div class="ha-final__actions">
-                        <a href="platform-2to2.html" class="ha-btn ha-btn--large">Zobacz platformę</a>
+                        <a href="https://2to2.ai" class="ha-btn ha-btn--large">Zobacz platformę</a>
                         <a href="security-governance.html" class="ha-btn ha-btn--outline ha-btn--large">Poznaj nadzór i kontrolę</a>
                     </div>
                 </div>
