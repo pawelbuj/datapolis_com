@@ -4,6 +4,35 @@
 
     var loadedComponents = { header: false, footer: false };
 
+    // --- Language detection (used early for loading correct includes) ---
+    function normalizeLangFromPath(pathname) {
+        var p = (pathname || '').toLowerCase();
+        // Handle both with and without trailing slash (for cleanUrls support)
+        if (p === '/pl' || p.indexOf('/pl/') === 0) return 'pl';
+        if (p === '/de' || p.indexOf('/de/') === 0) return 'de';
+        if (p === '/es' || p.indexOf('/es/') === 0) return 'es';
+        return 'en';
+    }
+
+    function currentPageFromPath(pathname, lang) {
+        var p = pathname || '/';
+        // If directory root ("/" or "/pl", "/pl/", etc.), assume index.html
+        if (p === '/' || p === '/pl' || p === '/de' || p === '/es' ||
+            p === '/pl/' || p === '/de/' || p === '/es/') return 'index.html';
+
+        var segments = p.split('/').filter(Boolean);
+        if (!segments.length) return 'index.html';
+
+        // If the first segment is a language folder, drop it
+        if (lang !== 'en' && segments[0].toLowerCase() === lang) segments.shift();
+
+        // If no segments left after removing language, it's the index page
+        if (!segments.length) return 'index.html';
+
+        var last = segments[segments.length - 1] || 'index.html';
+        return last || 'index.html';
+    }
+
     // Load HTML content
     function loadHTML(elementId, filePath, componentName) {
         var element = document.getElementById(elementId);
@@ -44,30 +73,6 @@
 
         var body = document.body;
         var hoverTimeout = null;
-
-        // --- Language link rewrites (keep page context) ---
-        function normalizeLangFromPath(pathname) {
-            var p = (pathname || '').toLowerCase();
-            if (p.indexOf('/pl/') === 0) return 'pl';
-            if (p.indexOf('/de/') === 0) return 'de';
-            if (p.indexOf('/es/') === 0) return 'es';
-            return 'en';
-        }
-
-        function currentPageFromPath(pathname, lang) {
-            var p = pathname || '/';
-            // If directory root ("/" or "/pl/"), assume index.html
-            if (p === '/' || p === '/pl/' || p === '/de/' || p === '/es/') return 'index.html';
-
-            var segments = p.split('/').filter(Boolean);
-            if (!segments.length) return 'index.html';
-
-            // If the first segment is a language folder, drop it
-            if (lang !== 'en' && segments[0].toLowerCase() === lang) segments.shift();
-
-            var last = segments[segments.length - 1] || 'index.html';
-            return last || 'index.html';
-        }
 
         function setActiveLang(lang) {
             var current = header.querySelector('.dp-lang__current');
@@ -361,8 +366,14 @@
     // INIT
     // =========================================
     function init() {
-        loadHTML('header-placeholder', 'includes/header.html', 'header');
-        loadHTML('footer-placeholder', 'includes/footer.html', 'footer');
+        // Detect current language to load correct header/footer
+        var lang = normalizeLangFromPath(window.location.pathname);
+        
+        // Use absolute paths to ensure correct loading regardless of URL structure
+        var basePath = (lang === 'en') ? '/includes/' : '/' + lang + '/includes/';
+        
+        loadHTML('header-placeholder', basePath + 'header.html', 'header');
+        loadHTML('footer-placeholder', basePath + 'footer.html', 'footer');
     }
 
     if (document.readyState === 'loading') {
