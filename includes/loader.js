@@ -246,6 +246,8 @@
             })();
             mobileMenu.classList.add('is-open');
             mobileMenu.setAttribute('aria-hidden', 'false');
+            // Inline display override ensures visibility even if cached CSS still hides it.
+            mobileMenu.style.display = 'block';
             body.style.overflow = 'hidden';
         }
 
@@ -265,6 +267,7 @@
             })();
             mobileMenu.classList.remove('is-open');
             mobileMenu.setAttribute('aria-hidden', 'true');
+            mobileMenu.style.display = '';
             body.style.overflow = '';
         }
 
