@@ -16,21 +16,25 @@
 
     function currentPageFromPath(pathname, lang) {
         var p = pathname || '/';
-        // If directory root ("/" or "/pl", "/pl/", etc.), assume index.html
+        // If directory root ("/" or "/pl", "/pl/", etc.), return empty string for index
         if (p === '/' || p === '/pl' || p === '/de' || p === '/es' ||
-            p === '/pl/' || p === '/de/' || p === '/es/') return 'index.html';
+            p === '/pl/' || p === '/de/' || p === '/es/') return '';
 
         var segments = p.split('/').filter(Boolean);
-        if (!segments.length) return 'index.html';
+        if (!segments.length) return '';
 
         // If the first segment is a language folder, drop it
         if (lang !== 'en' && segments[0].toLowerCase() === lang) segments.shift();
 
         // If no segments left after removing language, it's the index page
-        if (!segments.length) return 'index.html';
+        if (!segments.length) return '';
 
-        var last = segments[segments.length - 1] || 'index.html';
-        return last || 'index.html';
+        var last = segments[segments.length - 1] || '';
+        // Remove .html extension if present (for clean URLs)
+        if (last.endsWith('.html')) {
+            last = last.slice(0, -5);
+        }
+        return last;
     }
 
     // Load HTML content
@@ -94,8 +98,9 @@
             var lang = normalizeLangFromPath(window.location.pathname);
             var page = currentPageFromPath(window.location.pathname, lang);
 
+            // Generate clean URLs: "/" for index, "/page" for others
             var targets = {
-                en: '/' + page,
+                en: page ? '/' + page : '/',
                 pl: '/pl/' + page,
                 de: '/de/' + page,
                 es: '/es/' + page
