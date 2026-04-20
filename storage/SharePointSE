@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-en="WF3 End of Support · Workbox by Datapolis" data-pl="Koniec wsparcia WF3 · Workbox od Datapolis">WF3 End of Support · Workbox by Datapolis</title>
+  <meta name="description" content="Microsoft retires WWF3 workflow support in SharePoint Server SE in July 2026. Workbox keeps your SharePoint Designer and Nintex workflows running on-prem, on our own engine.">
+  <meta name="robots" content="index,follow">
+  <meta name="theme-color" content="#020617">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #020617;
+      --bg-2: #0f172a;
+      --bg-3: #1e293b;
+      --border: #334155;
+      --border-2: #475569;
+      --muted: #64748b;
+      --muted-2: #94a3b8;
+      --text: #e2e8f0;
+      --text-strong: #f8fafc;
+      --accent: #14b8a6;
+      --accent-2: #0d9488;
+      --accent-glow: rgba(20, 184, 166, 0.18);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      overflow-x: hidden;
+    }
+
+    /* --------- Top bar --------- */
+    .topbar {
+      position: relative;
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 22px 48px;
+      border-bottom: 1px solid rgba(51, 65, 85, 0.4);
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--text-strong);
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      font-size: 18px;
+      text-decoration: none;
+    }
+    .brand-mark {
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, var(--accent) 0%, var(--accent-2) 100%);
+      display: grid;
+      place-items: center;
+      color: #0f172a;
+      font-weight: 800;
+      font-size: 15px;
+      box-shadow: 0 4px 14px var(--accent-glow);
+    }
+    .lang-toggle {
+      display: inline-flex;
+      padding: 4px;
+      background: rgba(15, 23, 42, 0.7);
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      gap: 2px;
+    }
+    .lang-toggle button {
+      appearance: none;
+      border: 0;
+      background: transparent;
+      color: var(--muted-2);
+      font-family: inherit;
+      font-weight: 600;
+      font-size: 13px;
+      letter-spacing: 0.04em;
+      padding: 6px 16px;
+      border-radius: 999px;
+      cursor: pointer;
+      transition: all 160ms ease;
+    }
+    .lang-toggle button:hover { color: var(--text); }
+    .lang-toggle button.active {
+      background: linear-gradient(135deg, var(--accent) 0%, var(--accent-2) 100%);
+      color: #0f172a;
+      box-shadow: 0 2px 8px var(--accent-glow);
+    }
+
+    /* --------- Hero --------- */
+    .hero {
+      position: relative;
+      padding: 56px 48px 40px;
+      overflow: hidden;
+      min-height: calc(100vh - 76px);
+      display: flex;
+      align-items: center;
+    }
+    .hero__grid {
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(51, 65, 85, 0.18) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(51, 65, 85, 0.18) 1px, transparent 1px);
+      background-size: 60px 60px;
+      mask-image: radial-gradient(ellipse at center, black 40%, transparent 80%);
+      -webkit-mask-image: radial-gradient(ellipse at center, black 40%, transparent 80%);
+      pointer-events: none;
+    }
+    .hero__glow {
+      position: absolute;
+      width: 560px;
+      height: 560px;
+      border-radius: 50%;
+      background: radial-gradient(circle, var(--accent-glow) 0%, transparent 65%);
+      filter: blur(40px);
+      pointer-events: none;
+      top: -180px;
+      left: -140px;
+    }
+    .hero__glow--right {
+      top: auto;
+      left: auto;
+      bottom: -200px;
+      right: -180px;
+      opacity: 0.7;
+    }
+    .hero__inner {
+      position: relative;
+      width: 100%;
+      max-width: 1240px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      gap: 72px;
+      align-items: center;
+    }
+
+    /* --------- Hero content --------- */
+    .label {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 14px;
+      background: rgba(20, 184, 166, 0.08);
+      border: 1px solid rgba(20, 184, 166, 0.3);
+      color: var(--accent);
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+    }
+    .label::before {
+      content: "";
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 8px var(--accent);
+      animation: pulse 2s ease-in-out infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.5; transform: scale(1.2); }
+    }
+
+    h1.hero__title {
+      font-size: clamp(36px, 4.2vw, 56px);
+      line-height: 1.08;
+      letter-spacing: -0.025em;
+      font-weight: 800;
+      color: var(--text-strong);
+      margin-bottom: 22px;
+    }
+    .accent {
+      background: linear-gradient(135deg, var(--accent) 0%, #2dd4bf 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero__intro {
+      font-size: 18px;
+      color: var(--muted-2);
+      line-height: 1.65;
+      max-width: 560px;
+      margin-bottom: 32px;
+    }
+
+    .hero__actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+    }
+
+    .dp-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 26px;
+      border-radius: 10px;
+      font-weight: 600;
+      font-size: 15px;
+      text-decoration: none;
+      letter-spacing: -0.01em;
+      transition: all 180ms ease;
+      cursor: pointer;
+      border: 1px solid transparent;
+    }
+    .dp-btn--primary {
+      background: linear-gradient(135deg, var(--accent) 0%, var(--accent-2) 100%);
+      color: #0b1120;
+      box-shadow: 0 6px 22px var(--accent-glow), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    }
+    .dp-btn--primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 28px var(--accent-glow), inset 0 1px 0 rgba(255, 255, 255, 0.25);
+    }
+    .dp-btn--outline {
+      background: transparent;
+      color: var(--text-strong);
+      border: 1px solid var(--border-2);
+    }
+    .dp-btn--outline:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+      background: rgba(20, 184, 166, 0.06);
+    }
+    .dp-btn svg { width: 16px; height: 16px; }
+
+    /* --------- Trust bar --------- */
+    .trust-bar {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      padding-top: 28px;
+      border-top: 1px solid rgba(51, 65, 85, 0.6);
+    }
+    .trust-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+    }
+    .trust-item__icon {
+      width: 22px;
+      height: 22px;
+      flex-shrink: 0;
+      color: var(--accent);
+      margin-top: 1px;
+    }
+    .trust-item__text {
+      font-size: 13.5px;
+      color: var(--muted-2);
+      line-height: 1.45;
+    }
+    .trust-item__text strong {
+      color: var(--text-strong);
+      font-weight: 600;
+      display: block;
+      margin-bottom: 2px;
+      font-size: 14px;
+    }
+
+    /* --------- Hero visual / SVG --------- */
+    .hero__visual {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .hero__visual svg {
+      width: 100%;
+      max-width: 460px;
+      height: auto;
+    }
+
+    /* SVG animations */
+    .pulse-dot { animation: pulse-opacity 2.2s ease-in-out infinite; }
+    .pulse-dot--2 { animation-delay: 0.4s; }
+    .pulse-dot--3 { animation-delay: 0.8s; }
+    .pulse-dot--4 { animation-delay: 1.2s; }
+    @keyframes pulse-opacity {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.35; }
+    }
+    .orbit-ring { animation: spin 60s linear infinite; transform-origin: 200px 180px; }
+    @keyframes spin {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    /* --------- Footer --------- */
+    .site-footer {
+      position: relative;
+      border-top: 1px solid rgba(51, 65, 85, 0.4);
+      padding: 20px 48px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 13px;
+      color: var(--muted);
+    }
+    .site-footer a {
+      color: var(--muted-2);
+      text-decoration: none;
+      transition: color 160ms ease;
+    }
+    .site-footer a:hover { color: var(--accent); }
+
+    /* --------- Corner accents (decorative, like reference) --------- */
+    .corner-accent {
+      position: absolute;
+      width: 28px;
+      height: 28px;
+      opacity: 0.35;
+      pointer-events: none;
+    }
+    .corner-accent--tl { top: 76px; left: 16px; border-top: 2px solid var(--accent); border-left: 2px solid var(--accent); }
+    .corner-accent--tr { top: 76px; right: 16px; border-top: 2px solid var(--accent); border-right: 2px solid var(--accent); }
+    .corner-accent--bl { bottom: 16px; left: 16px; border-bottom: 2px solid var(--accent); border-left: 2px solid var(--accent); }
+    .corner-accent--br { bottom: 16px; right: 16px; border-bottom: 2px solid var(--accent); border-right: 2px solid var(--accent); }
+
+    /* --------- Responsive --------- */
+    @media (max-width: 960px) {
+      .topbar { padding: 18px 24px; }
+      .hero { padding: 32px 24px 24px; min-height: auto; }
+      .hero__inner { grid-template-columns: 1fr; gap: 48px; }
+      .hero__visual { order: -1; max-width: 340px; margin: 0 auto; }
+      h1.hero__title { font-size: clamp(30px, 7vw, 42px); }
+      .hero__intro { font-size: 16px; }
+      .trust-bar { grid-template-columns: 1fr; gap: 14px; padding-top: 24px; }
+      .corner-accent { display: none; }
+      .site-footer { padding: 16px 24px; flex-direction: column; gap: 8px; text-align: center; }
+    }
+    @media (max-width: 480px) {
+      .hero__actions { flex-direction: column; align-items: stretch; }
+      .dp-btn { justify-content: center; }
+      .lang-toggle button { padding: 6px 12px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="topbar">
+    <a href="https://datapolis.com" class="brand" aria-label="Datapolis">
+      <span class="brand-mark">db</span>
+      <span>Datapolis</span>
+    </a>
+    <nav class="lang-toggle" aria-label="Language">
+      <button data-lang="en" type="button">EN</button>
+      <button data-lang="pl" type="button">PL</button>
+    </nav>
+  </header>
+
+  <main class="hero">
+    <div class="hero__grid" aria-hidden="true"></div>
+    <div class="hero__glow" aria-hidden="true"></div>
+    <div class="hero__glow hero__glow--right" aria-hidden="true"></div>
+
+    <span class="corner-accent corner-accent--tl" aria-hidden="true"></span>
+    <span class="corner-accent corner-accent--tr" aria-hidden="true"></span>
+    <span class="corner-accent corner-accent--bl" aria-hidden="true"></span>
+    <span class="corner-accent corner-accent--br" aria-hidden="true"></span>
+
+    <div class="hero__inner">
+
+      <!-- LEFT: copy -->
+      <div class="hero__content">
+        <span class="label"
+              data-en="WF3 end-of-support · July 2026"
+              data-pl="Koniec wsparcia WF3 · Lipiec 2026">WF3 end-of-support · July 2026</span>
+
+        <h1 class="hero__title"
+            data-en='Your SharePoint workflows <span class="accent">don&#x2019;t have to retire</span> with WWF3.'
+            data-pl='Twoje workflowy SharePoint <span class="accent">nie muszą odej&#x015B;ć</span> razem z WWF3.'>
+            Your SharePoint workflows <span class="accent">don&#x2019;t have to retire</span> with WWF3.
+        </h1>
+
+        <p class="hero__intro"
+           data-en="In July 2026, Microsoft ends WWF3 support in SharePoint Server SE. Workbox keeps your SharePoint Designer and Nintex workflows running — on our own engine, natively on-prem, without moving to the cloud."
+           data-pl="W lipcu 2026 Microsoft kończy wsparcie dla WWF3 w SharePoint Server SE. Workbox utrzymuje w ruchu Twoje workflowy z SharePoint Designer i Nintex — na naszym własnym silniku, natywnie on-prem, bez migracji do chmury."
+        ></p>
+
+        <div class="hero__actions">
+          <!-- REPLACE # with your Teams booking form URL -->
+          <a href="#booking-form" class="dp-btn dp-btn--primary"
+             data-en="Book a 20-min call"
+             data-pl="Umów 20-min rozmowę">
+            <span>Book a 20-min call</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M5 12h14M13 5l7 7-7 7"/>
+            </svg>
+          </a>
+          <a href="mailto:office@datapolis.com" class="dp-btn dp-btn--outline"
+             data-en="Email us"
+             data-pl="Napisz do nas">Email us</a>
+        </div>
+
+        <div class="trust-bar">
+          <div class="trust-item">
+            <svg class="trust-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/>
+            </svg>
+            <div class="trust-item__text">
+              <strong data-en="10+ years of SharePoint workflow expertise"
+                      data-pl="10+ lat doświadczenia z workflow w SharePoint">10+ years of SharePoint workflow expertise</strong>
+              <span data-en="Trusted by hundreds of on-prem deployments."
+                    data-pl="Setki wdrożeń on-prem zaufało nam.">Trusted by hundreds of on-prem deployments.</span>
+            </div>
+          </div>
+          <div class="trust-item">
+            <svg class="trust-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="3"/>
+              <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+            </svg>
+            <div class="trust-item__text">
+              <strong data-en="Own workflow engine — independent of WWF3"
+                      data-pl="Własny silnik workflow — niezależny od WWF3">Own workflow engine — independent of WWF3</strong>
+              <span data-en="Zero impact when Microsoft retires WWF3 this July."
+                    data-pl="Zerowy wpływ gdy Microsoft wycofa WWF3 w lipcu.">Zero impact when Microsoft retires WWF3 this July.</span>
+            </div>
+          </div>
+          <div class="trust-item">
+            <svg class="trust-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            </svg>
+            <div class="trust-item__text">
+              <strong data-en="Full SharePoint Server SE on-prem integration"
+                      data-pl="Pełna integracja z SharePoint Server SE on-prem">Full SharePoint Server SE on-prem integration</strong>
+              <span data-en="Same UI, same permissions, no cloud move required."
+                    data-pl="To samo UI, te same uprawnienia, bez migracji do chmury.">Same UI, same permissions, no cloud move required.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT: illustration -->
+      <div class="hero__visual" aria-hidden="true">
+        <svg viewBox="0 0 400 360" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <filter id="glowSoft" x="-50%" y="-50%" width="200%" height="200%">
+              <feGaussianBlur stdDeviation="3" result="blur"/>
+              <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+            </filter>
+            <filter id="glowStrong" x="-50%" y="-50%" width="200%" height="200%">
+              <feGaussianBlur stdDeviation="6" result="blur"/>
+              <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+            </filter>
+            <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#1e293b"/>
+              <stop offset="100%" stop-color="#0f172a"/>
+            </linearGradient>
+            <linearGradient id="hubGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#134e4a"/>
+              <stop offset="100%" stop-color="#0f172a"/>
+            </linearGradient>
+          </defs>
+
+          <!-- subtle grid -->
+          <g opacity="0.08">
+            <line x1="40"  y1="100" x2="360" y2="100" stroke="#64748b" stroke-width="0.5"/>
+            <line x1="40"  y1="180" x2="360" y2="180" stroke="#64748b" stroke-width="0.5"/>
+            <line x1="40"  y1="260" x2="360" y2="260" stroke="#64748b" stroke-width="0.5"/>
+            <line x1="120" y1="40"  x2="120" y2="320" stroke="#64748b" stroke-width="0.5"/>
+            <line x1="200" y1="40"  x2="200" y2="320" stroke="#64748b" stroke-width="0.5"/>
+            <line x1="280" y1="40"  x2="280" y2="320" stroke="#64748b" stroke-width="0.5"/>
+          </g>
+
+          <!-- Dashed connection lines -->
+          <g stroke="#334155" stroke-width="1.5" stroke-dasharray="4 4">
+            <path d="M200 180 L110 90"/>
+            <path d="M200 180 L290 90"/>
+            <path d="M200 180 L80 200"/>
+            <path d="M200 180 L320 200"/>
+            <path d="M200 180 L130 290"/>
+            <path d="M200 180 L270 290"/>
+          </g>
+
+          <!-- Orbit ring -->
+          <g class="orbit-ring" opacity="0.25">
+            <circle cx="200" cy="180" r="115" fill="none" stroke="#14b8a6" stroke-width="0.5" stroke-dasharray="2 6"/>
+          </g>
+
+          <!-- Central hub (workflow engine) -->
+          <g filter="url(#glowStrong)">
+            <circle cx="200" cy="180" r="54" fill="url(#hubGrad)" stroke="#14b8a6" stroke-width="1.5"/>
+            <circle cx="200" cy="180" r="46" fill="none" stroke="#14b8a6" stroke-width="0.6" opacity="0.35"/>
+            <!-- gear -->
+            <g transform="translate(200 180)">
+              <circle r="16" fill="none" stroke="#2dd4bf" stroke-width="2"/>
+              <circle r="6" fill="#14b8a6"/>
+              <g stroke="#2dd4bf" stroke-width="2.5" stroke-linecap="round">
+                <line x1="0" y1="-22" x2="0" y2="-28"/>
+                <line x1="0" y1="22"  x2="0" y2="28"/>
+                <line x1="-22" y1="0" x2="-28" y2="0"/>
+                <line x1="22"  y1="0" x2="28"  y2="0"/>
+                <line x1="-16" y1="-16" x2="-20" y2="-20"/>
+                <line x1="16"  y1="-16" x2="20"  y2="-20"/>
+                <line x1="-16" y1="16"  x2="-20" y2="20"/>
+                <line x1="16"  y1="16"  x2="20"  y2="20"/>
+              </g>
+            </g>
+            <!-- pulse rings -->
+            <circle cx="200" cy="180" r="60" fill="none" stroke="#14b8a6" stroke-width="1" opacity="0.4" class="pulse-dot"/>
+            <circle cx="200" cy="180" r="72" fill="none" stroke="#14b8a6" stroke-width="0.5" opacity="0.15" class="pulse-dot pulse-dot--2"/>
+          </g>
+
+          <!-- Node: Document (top-left) -->
+          <g>
+            <circle cx="110" cy="90" r="26" fill="url(#cardGrad)" stroke="#475569" stroke-width="1"/>
+            <rect x="100" y="78" width="20" height="24" rx="2" fill="none" stroke="#94a3b8" stroke-width="1.5"/>
+            <line x1="103" y1="86" x2="117" y2="86" stroke="#94a3b8" stroke-width="1"/>
+            <line x1="103" y1="91" x2="117" y2="91" stroke="#94a3b8" stroke-width="1"/>
+            <line x1="103" y1="96" x2="112" y2="96" stroke="#94a3b8" stroke-width="1"/>
+          </g>
+
+          <!-- Node: Approval (top-right) -->
+          <g>
+            <circle cx="290" cy="90" r="26" fill="url(#cardGrad)" stroke="#475569" stroke-width="1"/>
+            <circle cx="290" cy="90" r="12" fill="none" stroke="#14b8a6" stroke-width="1.8"/>
+            <path d="M283 90 L288 95 L297 85" stroke="#14b8a6" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          </g>
+
+          <!-- Node: User (left) -->
+          <g>
+            <circle cx="80" cy="200" r="24" fill="url(#cardGrad)" stroke="#475569" stroke-width="1"/>
+            <circle cx="80" cy="193" r="6" fill="none" stroke="#94a3b8" stroke-width="1.5"/>
+            <path d="M68 212 Q80 203 92 212" stroke="#94a3b8" stroke-width="1.5" fill="none"/>
+          </g>
+
+          <!-- Node: Calendar with JUL (right) - the deadline -->
+          <g>
+            <circle cx="320" cy="200" r="28" fill="url(#cardGrad)" stroke="#14b8a6" stroke-width="1.5"/>
+            <rect x="307" y="188" width="26" height="22" rx="2.5" fill="none" stroke="#14b8a6" stroke-width="1.5"/>
+            <line x1="307" y1="195" x2="333" y2="195" stroke="#14b8a6" stroke-width="1.5"/>
+            <line x1="313" y1="184" x2="313" y2="190" stroke="#14b8a6" stroke-width="1.5"/>
+            <line x1="327" y1="184" x2="327" y2="190" stroke="#14b8a6" stroke-width="1.5"/>
+            <text x="320" y="206" text-anchor="middle" font-family="Inter, sans-serif" font-weight="700" font-size="7" fill="#14b8a6">JUL</text>
+          </g>
+
+          <!-- Node: Chat/comments (bottom-left) -->
+          <g>
+            <circle cx="130" cy="290" r="24" fill="url(#cardGrad)" stroke="#475569" stroke-width="1"/>
+            <path d="M118 282 h24 a3 3 0 0 1 3 3 v10 a3 3 0 0 1 -3 3 h-18 l-6 5 v-5 a3 3 0 0 1 -3 -3 v-10 a3 3 0 0 1 3 -3z"
+                  fill="none" stroke="#94a3b8" stroke-width="1.5"/>
+            <circle cx="124" cy="291" r="1.3" fill="#94a3b8"/>
+            <circle cx="130" cy="291" r="1.3" fill="#94a3b8"/>
+            <circle cx="136" cy="291" r="1.3" fill="#94a3b8"/>
+          </g>
+
+          <!-- Node: Send/flow (bottom-right) -->
+          <g>
+            <circle cx="270" cy="290" r="24" fill="url(#cardGrad)" stroke="#475569" stroke-width="1"/>
+            <path d="M258 290 L282 280 L282 287 L262 290 L282 293 L282 300 Z" fill="#94a3b8"/>
+          </g>
+
+          <!-- Animated data pulses traveling along connections -->
+          <g filter="url(#glowSoft)">
+            <circle r="3" fill="#14b8a6">
+              <animate attributeName="cx" values="200;110;200" dur="2.8s" repeatCount="indefinite"/>
+              <animate attributeName="cy" values="180;90;180" dur="2.8s" repeatCount="indefinite"/>
+              <animate attributeName="opacity" values="0;1;0" dur="2.8s" repeatCount="indefinite"/>
+            </circle>
+            <circle r="3" fill="#14b8a6">
+              <animate attributeName="cx" values="200;290;200" dur="3.1s" begin="0.4s" repeatCount="indefinite"/>
+              <animate attributeName="cy" values="180;90;180" dur="3.1s" begin="0.4s" repeatCount="indefinite"/>
+              <animate attributeName="opacity" values="0;1;0" dur="3.1s" begin="0.4s" repeatCount="indefinite"/>
+            </circle>
+            <circle r="3" fill="#14b8a6">
+              <animate attributeName="cx" values="200;320;200" dur="2.6s" begin="0.8s" repeatCount="indefinite"/>
+              <animate attributeName="cy" values="180;200;180" dur="2.6s" begin="0.8s" repeatCount="indefinite"/>
+              <animate attributeName="opacity" values="0;1;0" dur="2.6s" begin="0.8s" repeatCount="indefinite"/>
+            </circle>
+            <circle r="3" fill="#14b8a6">
+              <animate attributeName="cx" values="200;130;200" dur="3s" begin="1.2s" repeatCount="indefinite"/>
+              <animate attributeName="cy" values="180;290;180" dur="3s" begin="1.2s" repeatCount="indefinite"/>
+              <animate attributeName="opacity" values="0;1;0" dur="3s" begin="1.2s" repeatCount="indefinite"/>
+            </circle>
+          </g>
+
+          <!-- Floating particles -->
+          <circle cx="50" cy="140" r="2" fill="#14b8a6" opacity="0.4" class="pulse-dot"/>
+          <circle cx="360" cy="140" r="2" fill="#14b8a6" opacity="0.35" class="pulse-dot pulse-dot--2"/>
+          <circle cx="55" cy="260" r="1.5" fill="#14b8a6" opacity="0.3" class="pulse-dot pulse-dot--3"/>
+          <circle cx="355" cy="270" r="1.5" fill="#14b8a6" opacity="0.35" class="pulse-dot pulse-dot--4"/>
+        </svg>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <span data-en="Datapolis · Complex Processes Can Be Simple" data-pl="Datapolis · Złożone procesy mogą być proste">Datapolis · Complex Processes Can Be Simple</span>
+    <a href="https://datapolis.com">datapolis.com</a>
+  </footer>
+
+  <script>
+    (function() {
+      // Elements with translations
+      const translatable = document.querySelectorAll('[data-en][data-pl]');
+
+      function setLang(lang) {
+        document.documentElement.lang = lang;
+        translatable.forEach(el => {
+          const val = el.getAttribute('data-' + lang);
+          if (val == null) return;
+          // If the value contains HTML tags (e.g. accent span), use innerHTML; otherwise textContent (safer).
+          if (/<[a-z][\s\S]*>/i.test(val)) {
+            el.innerHTML = val;
+          } else {
+            // Preserve child elements that are not text (e.g. icons) by rewriting only text nodes when possible.
+            // Simpler: for buttons with icon siblings, target a span inside; otherwise just set textContent.
+            const span = el.querySelector(':scope > span:not([class])');
+            if (span) {
+              span.textContent = val;
+            } else {
+              el.textContent = val;
+            }
+          }
+        });
+        document.querySelectorAll('.lang-toggle button').forEach(btn => {
+          btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
+          btn.setAttribute('aria-pressed', btn.getAttribute('data-lang') === lang ? 'true' : 'false');
+        });
+        try { localStorage.setItem('wf3-lang', lang); } catch (e) {}
+      }
+
+      document.querySelectorAll('.lang-toggle button').forEach(btn => {
+        btn.addEventListener('click', () => setLang(btn.getAttribute('data-lang')));
+      });
+
+      // Initial language: saved > browser > default EN
+      let initial = 'en';
+      try {
+        const saved = localStorage.getItem('wf3-lang');
+        if (saved === 'en' || saved === 'pl') initial = saved;
+        else if ((navigator.language || '').toLowerCase().startsWith('pl')) initial = 'pl';
+      } catch (e) {}
+      setLang(initial);
+    })();
+  </script>
+
+</body>
+</html>
