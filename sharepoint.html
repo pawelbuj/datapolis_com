@@ -278,17 +278,72 @@
       font-size: 14px;
     }
 
-    /* --------- Hero visual / SVG --------- */
-    .hero__visual {
+    /* --------- Hero form panel --------- */
+    .hero__form {
       position: relative;
       display: flex;
-      align-items: center;
-      justify-content: center;
+      flex-direction: column;
+      gap: 16px;
     }
-    .hero__visual svg {
+    .hero__form-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+    .hero__form-label::before {
+      content: "";
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 8px var(--accent);
+      animation: pulse 2s ease-in-out infinite;
+    }
+    .hero__form-title {
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--text-strong);
+      letter-spacing: -0.015em;
+      line-height: 1.25;
+    }
+    .hero__form-helper {
+      font-size: 13.5px;
+      color: var(--muted);
+      margin-top: -4px;
+    }
+    .hero__form-frame {
+      position: relative;
+      border-radius: 12px;
+      overflow: hidden;
+      background: var(--bg-2);
+      border: 1px solid var(--border);
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35), 0 0 0 1px rgba(20, 184, 166, 0.05);
+    }
+    .hero__form-frame::before {
+      content: "";
+      position: absolute;
+      inset: -1px;
+      border-radius: 12px;
+      padding: 1px;
+      background: linear-gradient(135deg, rgba(20, 184, 166, 0.35), transparent 40%, transparent 60%, rgba(20, 184, 166, 0.18));
+      -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+      mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      pointer-events: none;
+      opacity: 0.7;
+    }
+    .hero__form-frame iframe {
+      display: block;
       width: 100%;
-      max-width: 460px;
-      height: auto;
+      height: 600px;
+      border: 0;
+      background: transparent;
     }
 
     /* SVG animations */
@@ -398,21 +453,6 @@
            data-pl="W lipcu 2026 Microsoft kończy wsparcie dla WWF3 w SharePoint Server SE. Workbox utrzymuje w ruchu Twoje workflowy z SharePoint Designer i Nintex — na naszym własnym silniku, natywnie on-prem, bez migracji do chmury."
         ></p>
 
-        <div class="hero__actions">
-          <!-- REPLACE # with your Teams booking form URL -->
-          <a href="#booking-form" class="dp-btn dp-btn--primary"
-             data-en="Book a 20-min call"
-             data-pl="Umów 20-min rozmowę">
-            <span>Book a 20-min call</span>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M5 12h14M13 5l7 7-7 7"/>
-            </svg>
-          </a>
-          <a href="mailto:office@datapolis.com" class="dp-btn dp-btn--outline"
-             data-en="Email us"
-             data-pl="Napisz do nas">Email us</a>
-        </div>
-
         <div class="trust-bar">
           <div class="trust-item">
             <svg class="trust-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -451,157 +491,26 @@
         </div>
       </div>
 
-      <!-- RIGHT: illustration -->
-      <div class="hero__visual" aria-hidden="true">
-        <svg viewBox="0 0 400 360" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <filter id="glowSoft" x="-50%" y="-50%" width="200%" height="200%">
-              <feGaussianBlur stdDeviation="3" result="blur"/>
-              <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
-            </filter>
-            <filter id="glowStrong" x="-50%" y="-50%" width="200%" height="200%">
-              <feGaussianBlur stdDeviation="6" result="blur"/>
-              <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
-            </filter>
-            <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stop-color="#1e293b"/>
-              <stop offset="100%" stop-color="#0f172a"/>
-            </linearGradient>
-            <linearGradient id="hubGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stop-color="#134e4a"/>
-              <stop offset="100%" stop-color="#0f172a"/>
-            </linearGradient>
-          </defs>
-
-          <!-- subtle grid -->
-          <g opacity="0.08">
-            <line x1="40"  y1="100" x2="360" y2="100" stroke="#64748b" stroke-width="0.5"/>
-            <line x1="40"  y1="180" x2="360" y2="180" stroke="#64748b" stroke-width="0.5"/>
-            <line x1="40"  y1="260" x2="360" y2="260" stroke="#64748b" stroke-width="0.5"/>
-            <line x1="120" y1="40"  x2="120" y2="320" stroke="#64748b" stroke-width="0.5"/>
-            <line x1="200" y1="40"  x2="200" y2="320" stroke="#64748b" stroke-width="0.5"/>
-            <line x1="280" y1="40"  x2="280" y2="320" stroke="#64748b" stroke-width="0.5"/>
-          </g>
-
-          <!-- Dashed connection lines -->
-          <g stroke="#334155" stroke-width="1.5" stroke-dasharray="4 4">
-            <path d="M200 180 L110 90"/>
-            <path d="M200 180 L290 90"/>
-            <path d="M200 180 L80 200"/>
-            <path d="M200 180 L320 200"/>
-            <path d="M200 180 L130 290"/>
-            <path d="M200 180 L270 290"/>
-          </g>
-
-          <!-- Orbit ring -->
-          <g class="orbit-ring" opacity="0.25">
-            <circle cx="200" cy="180" r="115" fill="none" stroke="#14b8a6" stroke-width="0.5" stroke-dasharray="2 6"/>
-          </g>
-
-          <!-- Central hub (workflow engine) -->
-          <g filter="url(#glowStrong)">
-            <circle cx="200" cy="180" r="54" fill="url(#hubGrad)" stroke="#14b8a6" stroke-width="1.5"/>
-            <circle cx="200" cy="180" r="46" fill="none" stroke="#14b8a6" stroke-width="0.6" opacity="0.35"/>
-            <!-- gear -->
-            <g transform="translate(200 180)">
-              <circle r="16" fill="none" stroke="#2dd4bf" stroke-width="2"/>
-              <circle r="6" fill="#14b8a6"/>
-              <g stroke="#2dd4bf" stroke-width="2.5" stroke-linecap="round">
-                <line x1="0" y1="-22" x2="0" y2="-28"/>
-                <line x1="0" y1="22"  x2="0" y2="28"/>
-                <line x1="-22" y1="0" x2="-28" y2="0"/>
-                <line x1="22"  y1="0" x2="28"  y2="0"/>
-                <line x1="-16" y1="-16" x2="-20" y2="-20"/>
-                <line x1="16"  y1="-16" x2="20"  y2="-20"/>
-                <line x1="-16" y1="16"  x2="-20" y2="20"/>
-                <line x1="16"  y1="16"  x2="20"  y2="20"/>
-              </g>
-            </g>
-            <!-- pulse rings -->
-            <circle cx="200" cy="180" r="60" fill="none" stroke="#14b8a6" stroke-width="1" opacity="0.4" class="pulse-dot"/>
-            <circle cx="200" cy="180" r="72" fill="none" stroke="#14b8a6" stroke-width="0.5" opacity="0.15" class="pulse-dot pulse-dot--2"/>
-          </g>
-
-          <!-- Node: Document (top-left) -->
-          <g>
-            <circle cx="110" cy="90" r="26" fill="url(#cardGrad)" stroke="#475569" stroke-width="1"/>
-            <rect x="100" y="78" width="20" height="24" rx="2" fill="none" stroke="#94a3b8" stroke-width="1.5"/>
-            <line x1="103" y1="86" x2="117" y2="86" stroke="#94a3b8" stroke-width="1"/>
-            <line x1="103" y1="91" x2="117" y2="91" stroke="#94a3b8" stroke-width="1"/>
-            <line x1="103" y1="96" x2="112" y2="96" stroke="#94a3b8" stroke-width="1"/>
-          </g>
-
-          <!-- Node: Approval (top-right) -->
-          <g>
-            <circle cx="290" cy="90" r="26" fill="url(#cardGrad)" stroke="#475569" stroke-width="1"/>
-            <circle cx="290" cy="90" r="12" fill="none" stroke="#14b8a6" stroke-width="1.8"/>
-            <path d="M283 90 L288 95 L297 85" stroke="#14b8a6" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-          </g>
-
-          <!-- Node: User (left) -->
-          <g>
-            <circle cx="80" cy="200" r="24" fill="url(#cardGrad)" stroke="#475569" stroke-width="1"/>
-            <circle cx="80" cy="193" r="6" fill="none" stroke="#94a3b8" stroke-width="1.5"/>
-            <path d="M68 212 Q80 203 92 212" stroke="#94a3b8" stroke-width="1.5" fill="none"/>
-          </g>
-
-          <!-- Node: Calendar with JUL (right) - the deadline -->
-          <g>
-            <circle cx="320" cy="200" r="28" fill="url(#cardGrad)" stroke="#14b8a6" stroke-width="1.5"/>
-            <rect x="307" y="188" width="26" height="22" rx="2.5" fill="none" stroke="#14b8a6" stroke-width="1.5"/>
-            <line x1="307" y1="195" x2="333" y2="195" stroke="#14b8a6" stroke-width="1.5"/>
-            <line x1="313" y1="184" x2="313" y2="190" stroke="#14b8a6" stroke-width="1.5"/>
-            <line x1="327" y1="184" x2="327" y2="190" stroke="#14b8a6" stroke-width="1.5"/>
-            <text x="320" y="206" text-anchor="middle" font-family="Inter, sans-serif" font-weight="700" font-size="7" fill="#14b8a6">JUL</text>
-          </g>
-
-          <!-- Node: Chat/comments (bottom-left) -->
-          <g>
-            <circle cx="130" cy="290" r="24" fill="url(#cardGrad)" stroke="#475569" stroke-width="1"/>
-            <path d="M118 282 h24 a3 3 0 0 1 3 3 v10 a3 3 0 0 1 -3 3 h-18 l-6 5 v-5 a3 3 0 0 1 -3 -3 v-10 a3 3 0 0 1 3 -3z"
-                  fill="none" stroke="#94a3b8" stroke-width="1.5"/>
-            <circle cx="124" cy="291" r="1.3" fill="#94a3b8"/>
-            <circle cx="130" cy="291" r="1.3" fill="#94a3b8"/>
-            <circle cx="136" cy="291" r="1.3" fill="#94a3b8"/>
-          </g>
-
-          <!-- Node: Send/flow (bottom-right) -->
-          <g>
-            <circle cx="270" cy="290" r="24" fill="url(#cardGrad)" stroke="#475569" stroke-width="1"/>
-            <path d="M258 290 L282 280 L282 287 L262 290 L282 293 L282 300 Z" fill="#94a3b8"/>
-          </g>
-
-          <!-- Animated data pulses traveling along connections -->
-          <g filter="url(#glowSoft)">
-            <circle r="3" fill="#14b8a6">
-              <animate attributeName="cx" values="200;110;200" dur="2.8s" repeatCount="indefinite"/>
-              <animate attributeName="cy" values="180;90;180" dur="2.8s" repeatCount="indefinite"/>
-              <animate attributeName="opacity" values="0;1;0" dur="2.8s" repeatCount="indefinite"/>
-            </circle>
-            <circle r="3" fill="#14b8a6">
-              <animate attributeName="cx" values="200;290;200" dur="3.1s" begin="0.4s" repeatCount="indefinite"/>
-              <animate attributeName="cy" values="180;90;180" dur="3.1s" begin="0.4s" repeatCount="indefinite"/>
-              <animate attributeName="opacity" values="0;1;0" dur="3.1s" begin="0.4s" repeatCount="indefinite"/>
-            </circle>
-            <circle r="3" fill="#14b8a6">
-              <animate attributeName="cx" values="200;320;200" dur="2.6s" begin="0.8s" repeatCount="indefinite"/>
-              <animate attributeName="cy" values="180;200;180" dur="2.6s" begin="0.8s" repeatCount="indefinite"/>
-              <animate attributeName="opacity" values="0;1;0" dur="2.6s" begin="0.8s" repeatCount="indefinite"/>
-            </circle>
-            <circle r="3" fill="#14b8a6">
-              <animate attributeName="cx" values="200;130;200" dur="3s" begin="1.2s" repeatCount="indefinite"/>
-              <animate attributeName="cy" values="180;290;180" dur="3s" begin="1.2s" repeatCount="indefinite"/>
-              <animate attributeName="opacity" values="0;1;0" dur="3s" begin="1.2s" repeatCount="indefinite"/>
-            </circle>
-          </g>
-
-          <!-- Floating particles -->
-          <circle cx="50" cy="140" r="2" fill="#14b8a6" opacity="0.4" class="pulse-dot"/>
-          <circle cx="360" cy="140" r="2" fill="#14b8a6" opacity="0.35" class="pulse-dot pulse-dot--2"/>
-          <circle cx="55" cy="260" r="1.5" fill="#14b8a6" opacity="0.3" class="pulse-dot pulse-dot--3"/>
-          <circle cx="355" cy="270" r="1.5" fill="#14b8a6" opacity="0.35" class="pulse-dot pulse-dot--4"/>
-        </svg>
+      <!-- RIGHT: embedded booking form -->
+      <div class="hero__form" id="booking-form">
+        <span class="hero__form-label"
+              data-en="Book your call"
+              data-pl="Umów rozmowę">Book your call</span>
+        <h2 class="hero__form-title"
+            data-en="20 minutes. Tell me your situation — I&#x2019;ll tell you what I&#x2019;d do."
+            data-pl="20 minut. Opowiedz mi swoją sytuację — powiem Ci co bym zrobił.">20 minutes. Tell me your situation — I&#x2019;ll tell you what I&#x2019;d do.</h2>
+        <p class="hero__form-helper"
+           data-en="No sales pitch. Straight answer, even if the answer is &#x201C;don&#x2019;t pick Workbox.&#x201D;"
+           data-pl="Bez sprzedaży. Szczera odpowiedź, nawet jeśli to &#x201E;nie wybieraj Workboxa&#x201D;.">No sales pitch. Straight answer, even if the answer is &#x201C;don&#x2019;t pick Workbox.&#x201D;</p>
+        <div class="hero__form-frame">
+          <iframe
+            src="https://2to2.ai/workflow/kampanialn/form?embed=true"
+            title="Book a 20-minute call with Datapolis"
+            loading="lazy">
+          </iframe>
+        </div>
       </div>
+
 
     </div>
   </main>
