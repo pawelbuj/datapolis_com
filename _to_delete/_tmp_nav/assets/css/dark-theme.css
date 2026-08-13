@@ -1300,17 +1300,3 @@ body.dark-theme:not(.v4-home) main h2 {
     font-size: clamp(24px, 2.5vw, 33px);
     line-height: 1.2;
 }
-
-/* --- Narrative bridge links (spec -> app clamps on subpages) --- */
-.p2t2-hero__intro a, .dw-hero__subtitle a, .sg-hero__subtitle a,
-.gc-hero__intro a, .aiw-hero__intro a, .hiw-hero__subtitle a {
-    color: #2dd4bf;
-    text-decoration: none;
-    border-bottom: 1px solid rgba(45, 212, 191, .35);
-    transition: color .15s ease, border-color .15s ease;
-}
-.p2t2-hero__intro a:hover, .dw-hero__subtitle a:hover, .sg-hero__subtitle a:hover,
-.gc-hero__intro a:hover, .aiw-hero__intro a:hover, .hiw-hero__subtitle a:hover {
-    color: #5eead4;
-    border-bottom-color: #5eead4;
-}
