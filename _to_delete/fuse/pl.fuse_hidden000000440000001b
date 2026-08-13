@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Ludzie + agenci - AI jako cyfrowy pracownik wewnątrz nadzorowanych procesów | Datapolis</title>
+    <meta name="description" content="Ludzie i AI nie zastępują się nawzajem. Pracują razem w ramach tego samego procesu, pod tymi samymi regułami, zatwierdzeniami i odpowiedzialnością.">
+    <meta name="robots" content="index,follow">
+    <meta property="og:title" content="Ludzie + agenci - AI jako cyfrowy pracownik wewnątrz nadzorowanych procesów">
+    <meta property="og:description" content="Datapolis traktuje AI jak cyfrowego pracownika, a nie chatbota. Ludzie i agenci wykonują zadania obok siebie, pod tymi samymi regułami.">
+    <meta property="og:type" content="website">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#020617">
+
+    <!-- SEO: canonical / hreflang / open graph -->
+    <link rel="canonical" href="https://datapolis.com/pl/humans-agents">
+    <link rel="alternate" hreflang="en" href="https://datapolis.com/humans-agents">
+    <link rel="alternate" hreflang="pl" href="https://datapolis.com/pl/humans-agents">
+    <link rel="alternate" hreflang="de" href="https://datapolis.com/de/humans-agents">
+    <link rel="alternate" hreflang="es" href="https://datapolis.com/es/humans-agents">
+    <link rel="alternate" hreflang="x-default" href="https://datapolis.com/humans-agents">
+    <meta property="og:url" content="https://datapolis.com/pl/humans-agents">
+    <meta property="og:locale" content="pl_PL">
+    <meta property="og:image" content="https://datapolis.com/assets/img/og-image-1200x630.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <!-- /SEO -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Instrument+Sans:wght@400;500;600;700&amp;display=swap">
+
+    <link rel="stylesheet" href="../assets/css/main.min.css?v=10022025">
+    <link rel="stylesheet" href="../assets/css/async.min.css?v=10022025" media="print" onload="this.media='all'; this.onload=null;">
+    <link rel="stylesheet" href="../assets/css/dark-theme.css?v=3">
+    <link rel="stylesheet" href="../assets/css/new-homepage.css?v=7">
+    <link rel="stylesheet" href="../assets/css/humans-agents.css?v=1">
+
+    <script src="../includes/loader.js"></script>
+
+    <link rel="icon" type="image/png" href="../assets/img/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="../assets/img/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="../assets/img/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="../assets/img/favicon/site.webmanifest" />
+</head>
+<body class="dark-theme ha-page">
+    <!-- Header Placeholder -->
+    <div id="header-placeholder"></div>
+
+    <main>
+        <!-- ========================================
+             SEKCJA HERO
+             ======================================== -->
+        <section class="ha-hero">
+            <div class="ha-hero__grid"></div>
+            <div class="ha-hero__glow"></div>
+            
+            <div class="ha-container ha-hero__inner">
+                <!-- Left: Content -->
+                <div class="ha-hero__content">
+                    <span class="ha-label">Ludzie + agenci</span>
+                    
+                    <h1 class="ha-hero__title">
+                        Ludzie i AI nie zastępują się nawzajem.<br>
+                        <span class="accent">Pracują razem</span> — w ramach procesu.
+                    </h1>
+                    
+                    <p class="ha-hero__subtitle">
+                        Datapolis traktuje AI jak cyfrowego pracownika, a nie chatbota.<br>
+                        Ludzie i agenci wykonują zadania obok siebie, pod tymi samymi regułami, zatwierdzeniami i odpowiedzialnością.
+                    </p>
+                    
+                    <div class="ha-hero__actions">
+                        <a href="platform-2to2.html" class="ha-btn ha-btn--large">Zobacz platformę</a>
+                        <a href="security-governance.html" class="ha-btn ha-btn--outline ha-btn--large">Poznaj nadzór</a>
+                    </div>
+                </div>
+                
+                <!-- Prawa strona: SVG współpracy w procesie -->
+                <div class="ha-hero__visual">
+                    <svg class="ha-collab-diagram" viewBox="0 0 460 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <filter id="glowHa" x="-50%" y="-50%" width="200%" height="200%">
+                                <feGaussianBlur stdDeviation="6" result="blur"/>
+                                <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+                            </filter>
+                            <filter id="glowSmallHa" x="-50%" y="-50%" width="200%" height="200%">
+                                <feGaussianBlur stdDeviation="3" result="blur"/>
+                                <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+                            </filter>
+                            <linearGradient id="tealGradHa" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#14b8a6"/>
+                                <stop offset="100%" stop-color="#0d9488"/>
+                            </linearGradient>
+                        </defs>
+                        
+                        <!-- Dekoracyjne kropki tła -->
+                        <circle cx="30" cy="40" r="2" fill="#14b8a6" opacity="0.25"/>
+                        <circle cx="430" cy="50" r="2" fill="#14b8a6" opacity="0.2"/>
+                        <circle cx="20" cy="360" r="2" fill="#14b8a6" opacity="0.15"/>
+                        <circle cx="440" cy="350" r="2" fill="#14b8a6" opacity="0.2"/>
+                        
+                        <!-- Centralny węzeł PROCESU -->
+                        <g filter="url(#glowHa)">
+                            <rect x="155" y="170" width="150" height="60" rx="12" fill="url(#tealGradHa)"/>
+                            <text x="230" y="196" text-anchor="middle" fill="#020617" font-size="12" font-weight="700" font-family="system-ui, sans-serif" letter-spacing="0.08em">PROCES</text>
+                            <text x="230" y="212" text-anchor="middle" fill="#020617" font-size="8" font-weight="500" font-family="system-ui, sans-serif" opacity="0.8">System rejestru</text>
+                        </g>
+                        
+                        <!-- Człowiek (lewa) -->
+                        <g class="ha-actor">
+                            <circle cx="80" cy="200" r="45" fill="#0f172a" stroke="#14b8a6" stroke-width="1.5"/>
+                            <!-- Human icon -->
+                            <circle cx="80" cy="188" r="14" stroke="#f8fafc" stroke-width="2" fill="none"/>
+                            <path d="M58 225 Q80 210 102 225" stroke="#f8fafc" stroke-width="2" fill="none"/>
+                            <text x="80" y="260" text-anchor="middle" fill="#f8fafc" font-size="11" font-weight="600" font-family="system-ui, sans-serif">CZŁOWIEK</text>
+                        </g>
+                        
+                        <!-- Cyfrowy pracownik (prawa) -->
+                        <g class="ha-actor">
+                            <circle cx="380" cy="200" r="45" fill="#0f172a" stroke="#14b8a6" stroke-width="1.5"/>
+                            <!-- Ikona AI / cyfrowego pracownika -->
+                            <rect x="358" y="178" width="44" height="44" rx="8" stroke="#f8fafc" stroke-width="2" fill="none"/>
+                            <circle cx="380" cy="200" r="10" stroke="#14b8a6" stroke-width="2" fill="none"/>
+                            <circle cx="380" cy="200" r="4" fill="#14b8a6"/>
+                            <text x="380" y="260" text-anchor="middle" fill="#f8fafc" font-size="10" font-weight="600" font-family="system-ui, sans-serif">CYFROWY PRACOWNIK</text>
+                        </g>
+                        
+                        <!-- Connection lines to Process -->
+                        <line x1="125" y1="200" x2="155" y2="200" stroke="#14b8a6" stroke-width="2" stroke-dasharray="6 4" class="ha-pulse-line"/>
+                        <line x1="305" y1="200" x2="335" y2="200" stroke="#14b8a6" stroke-width="2" stroke-dasharray="6 4" class="ha-pulse-line"/>
+                        
+                        <!-- Dolne łączniki: zadania, reguły, audyt -->
+                        <g>
+                            <!-- Tasks -->
+                            <line x1="190" y1="230" x2="140" y2="310" stroke="#334155" stroke-width="1.5" stroke-dasharray="4 3"/>
+                            <rect x="100" y="310" width="80" height="35" rx="8" fill="#0f172a" stroke="#64748b" stroke-width="1"/>
+                            <text x="140" y="332" text-anchor="middle" fill="#94a3b8" font-size="10" font-weight="600" font-family="system-ui, sans-serif">ZADANIA</text>
+                            
+                            <!-- Rules -->
+                            <line x1="230" y1="230" x2="230" y2="310" stroke="#334155" stroke-width="1.5" stroke-dasharray="4 3"/>
+                            <rect x="190" y="310" width="80" height="35" rx="8" fill="#0f172a" stroke="#64748b" stroke-width="1"/>
+                            <text x="230" y="332" text-anchor="middle" fill="#94a3b8" font-size="10" font-weight="600" font-family="system-ui, sans-serif">REGUŁY</text>
+                            
+                            <!-- Audit Trail -->
+                            <line x1="270" y1="230" x2="320" y2="310" stroke="#334155" stroke-width="1.5" stroke-dasharray="4 3"/>
+                            <rect x="280" y="310" width="80" height="35" rx="8" fill="#0f172a" stroke="#64748b" stroke-width="1"/>
+                            <text x="320" y="332" text-anchor="middle" fill="#94a3b8" font-size="10" font-weight="600" font-family="system-ui, sans-serif">ŚCIEŻKA AUDYTU</text>
+                        </g>
+                        
+                        <!-- Górne etykiety: równe traktowanie -->
+                        <rect x="60" y="70" width="80" height="24" rx="12" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+                        <text x="100" y="86" text-anchor="middle" fill="#64748b" font-size="8" font-weight="500" font-family="system-ui, sans-serif">Te same reguły</text>
+                        
+                        <rect x="320" y="70" width="80" height="24" rx="12" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+                        <text x="360" y="86" text-anchor="middle" fill="#64748b" font-size="8" font-weight="500" font-family="system-ui, sans-serif">Te same reguły</text>
+                        
+                        <!-- Connecting lines from top labels -->
+                        <line x1="100" y1="94" x2="80" y2="155" stroke="#334155" stroke-width="1" stroke-dasharray="3 3" opacity="0.5"/>
+                        <line x1="360" y1="94" x2="380" y2="155" stroke="#334155" stroke-width="1" stroke-dasharray="3 3" opacity="0.5"/>
+                        
+                        <!-- Glowing connector dots -->
+                        <g filter="url(#glowSmallHa)">
+                            <circle cx="125" cy="200" r="4" fill="#14b8a6" opacity="0.8"/>
+                            <circle cx="335" cy="200" r="4" fill="#14b8a6" opacity="0.8"/>
+                        </g>
+                        
+                        <!-- Pulsing ring around process -->
+                        <rect x="145" y="160" width="170" height="80" rx="18" fill="none" stroke="#14b8a6" stroke-width="1" class="ha-pulse" opacity="0.4"/>
+                        
+                        <!-- Podpis -->
+                        <text x="230" y="385" text-anchor="middle" fill="#64748b" font-size="9" font-family="system-ui, sans-serif" letter-spacing="0.06em">JEDEN PROCES • DWÓCH WYKONAWCÓW • TEN SAM NADZÓR</text>
+                    </svg>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================
+             SEKCJA ZASADY PODSTAWOWEJ
+             ======================================== -->
+        <section class="ha-principle">
+            <div class="ha-principle__grid"></div>
+            <div class="ha-container">
+                <div class="ha-principle__content">
+                    <h2 class="ha-principle__headline">
+                        Ten sam proces. Te same reguły. <br><span class="accent">Różni wykonawcy.</span>
+                    </h2>
+                    <p class="ha-principle__text">
+                        Niezależnie od tego, czy zadanie wykonuje człowiek, czy agent AI,
+                        proces pozostaje jedynym systemem odniesienia.
+                    </p>
+                    
+                    <div class="ha-principle__points">
+                        <div class="ha-principle__point">
+                            <div class="ha-principle__dot"></div>
+                            <span>Proces definiuje, <strong>kto</strong> może działać</span>
+                        </div>
+                        <div class="ha-principle__point">
+                            <div class="ha-principle__dot"></div>
+                            <span>Proces definiuje, <strong>kiedy</strong></span>
+                        </div>
+                        <div class="ha-principle__point">
+                            <div class="ha-principle__dot"></div>
+                            <span>Proces definiuje, <strong>pod jakimi warunkami</strong></span>
+                        </div>
+                    </div>
+                    
+                    <p class="ha-principle__statement">
+                        AI jest nadzorowane.<br>
+                        Ludzie nie tracą kontroli.
+                    </p>
+                    
+            
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================
+             ZADANIA LUDZI vs ZADANIA AI
+             ======================================== -->
+        <section class="ha-section ha-section--alt">
+            <div class="ha-container">
+                <div class="ha-comparison">
+                    <!-- Karta 1: zadania ludzi -->
+                    <div class="ha-comparison__card">
+                        <div class="ha-comparison__icon ha-comparison__icon--human">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/>
+                                <circle cx="12" cy="7" r="4"/>
+                            </svg>
+                        </div>
+                        <h3 class="ha-comparison__title">Zadania ludzi</h3>
+                        <p class="ha-comparison__tagline">Tam, gdzie liczy się odpowiedzialność</p>
+                        
+                        <ul class="ha-comparison__list">
+                            <li>Przegląd i zatwierdzanie decyzji</li>
+                            <li>Obsługa wyjątków i sytuacji niestandardowych</li>
+                            <li>Podejmowanie decyzji o skutkach biznesowych</li>
+                            <li>Formalna odpowiedzialność za wynik</li>
+                        </ul>
+                        
+                        <p class="ha-comparison__footer">
+                            Ludzie decydują tam, gdzie odpowiedzialności nie da się zautomatyzować.
+                        </p>
+                    </div>
+                    
+                    <!-- Karta 2: zadania AI -->
+                    <div class="ha-comparison__card">
+                        <div class="ha-comparison__icon ha-comparison__icon--ai">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="3" width="18" height="18" rx="2"/>
+                                <circle cx="12" cy="12" r="4"/>
+                                <circle cx="12" cy="12" r="1" fill="currentColor"/>
+                            </svg>
+                        </div>
+                        <h3 class="ha-comparison__title">Zadania AI</h3>
+                        <p class="ha-comparison__tagline">Tam, gdzie liczą się szybkość i spójność</p>
+                        
+                        <ul class="ha-comparison__list">
+                            <li></li>Przetwarzanie danych i dokumentów</li>
+                            <li>Klasyfikowanie i walidacja danych i dokumentów</li>
+                            <li>Przygotowywanie decyzji na podstawie danych i dokumentów</li>
+                            <li>Wykonywanie powtarzalnych kroków</li>
+                        </ul>
+                        
+                        <p class="ha-comparison__footer">
+                            AI wspiera proces — nie redefiniuje go.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+      
+
+        <!-- ========================================
+             AUDYT I ODPOWIEDZIALNOŚĆ
+             ======================================== -->
+        <section class="ha-section">
+            <div class="ha-container">
+                <div class="ha-section__header">
+                    <h2 class="ha-section__title">Jedna historia dla <span class="accent">ludzi i AI</span></h2>
+                    <p class="ha-section__subtitle">
+                        Każde działanie — człowieka lub AI — jest logowane w tej samej historii procesu
+                    </p>
+                </div>
+                
+                <div class="ha-audit">
+                    <div class="ha-audit__info">
+                        <p class="ha-audit__intro">Zawsze wiesz:</p>
+                        <div class="ha-audit__grid">
+                            <div class="ha-audit__item">
+                                <div class="ha-audit__icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/>
+                                        <circle cx="12" cy="7" r="4"/>
+                                    </svg>
+                                </div>
+                                <span>Kto działał</span>
+                            </div>
+                            <div class="ha-audit__item">
+                                <div class="ha-audit__icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="9 11 12 14 22 4"/>
+                                        <path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/>
+                                    </svg>
+                                </div>
+                                <span>Co zostało zrobione</span>
+                            </div>
+                            <div class="ha-audit__item">
+                                <div class="ha-audit__icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                        <circle cx="12" cy="12" r="10"/>
+                                        <polyline points="12 6 12 12 16 14"/>
+                                    </svg>
+                                </div>
+                                <span>Kiedy to się wydarzyło</span>
+                            </div>
+                            <div class="ha-audit__item">
+                                <div class="ha-audit__icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                                    </svg>
+                                </div>
+                                <span>Na podstawie jakiej reguły</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="ha-audit__statements">
+                        <p class="ha-audit__statement">Brak nieprzejrzystych zachowań AI.</p>
+                        <p class="ha-audit__statement">Brak nieudokumentowanych decyzji ludzi.</p>
+                    </div>
+                    
+                    <div class="ha-audit__checklist">
+                        <div class="ha-audit__check">
+                            <div class="ha-audit__check-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="20 6 9 17 4 12"/>
+                                </svg>
+                            </div>
+                            <span>Ujednolicona historia</span>
+                        </div>
+                        <div class="ha-audit__check">
+                            <div class="ha-audit__check-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="20 6 9 17 4 12"/>
+                                </svg>
+                            </div>
+                            <span>Wyjaśnialne wyniki</span>
+                        </div>
+                        <div class="ha-audit__check">
+                            <div class="ha-audit__check-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="20 6 9 17 4 12"/>
+                                </svg>
+                            </div>
+                            <span>Zgodność z założenia</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================
+             PODSUMOWANIE
+             ======================================== -->
+        <section class="ha-summary">
+            <div class="ha-summary__grid"></div>
+            <div class="ha-container">
+                <div class="ha-summary__content">
+                    <h2 class="ha-summary__headline">
+                        Datapolis nie dodaje sztucznie AI do procesu.<br>
+                        <span class="accent">Integruje AI z procesem w ramach którego odbywa się praca.</span>
+                    </h2>
+                    <p class="ha-summary__text">
+                        Ludzie i cyfrowi pracownicy działają wspólnie w systemie. 
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================
+             KOŃCOWE CTA
+             ======================================== -->
+        <section class="ha-final">
+            <div class="ha-final__glow"></div>
+            <div class="ha-container">
+                <div class="ha-final__content">
+                    <h2 class="ha-final__title">Zobacz, jak Ludzie + agenci <span class="accent">współpracują.</span></h2>
+                    
+                    <div class="ha-final__actions">
+                        <a href="https://2to2.ai" class="ha-btn ha-btn--large">Zobacz platformę</a>
+                        <a href="security-governance.html" class="ha-btn ha-btn--outline ha-btn--large">Poznaj nadzór i kontrolę</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Placeholder -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Scripts -->
+    <script>
+        document.addEventListener('includesLoaded', function() {
+            var scripts = [
+                '../assets/js/vendors.min.js',
+                '../assets/js/main.min.js',
+                '../assets/js/functions.min.js',
+                '../assets/js/async.min.js'
+            ];
+            
+            function loadScript(index) {
+                if (index >= scripts.length) return;
+                
+                var script = document.createElement('script');
+                script.src = scripts[index];
+                script.onload = function() {
+                    loadScript(index + 1);
+                };
+                document.body.appendChild(script);
+            }
+            
+            loadScript(0);
+        });
+
+        // Płynne przewijanie dla linków kotwic
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

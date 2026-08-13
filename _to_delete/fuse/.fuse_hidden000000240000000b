@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Legal - Datapolis</title>
+    <meta name="description" content="Datapolis legal information: Privacy Policy, Terms of Service, and Imprint.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#020617">
+
+    <!-- SEO: canonical / hreflang / open graph -->
+    <link rel="canonical" href="https://datapolis.com/legal">
+    <link rel="alternate" hreflang="en" href="https://datapolis.com/legal">
+    <link rel="alternate" hreflang="pl" href="https://datapolis.com/pl/legal">
+    <link rel="alternate" hreflang="de" href="https://datapolis.com/de/legal">
+    <link rel="alternate" hreflang="es" href="https://datapolis.com/es/legal">
+    <link rel="alternate" hreflang="x-default" href="https://datapolis.com/legal">
+    <meta property="og:url" content="https://datapolis.com/legal">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:image" content="https://datapolis.com/assets/img/og-image-1200x630.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <!-- /SEO -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Instrument+Sans:wght@400;500;600;700&amp;display=swap">
+
+    <link rel="stylesheet" href="assets/css/main.min.css?v=20260813">
+    <link rel="stylesheet" href="assets/css/async.min.css?v=20260813" media="print" onload="this.media='all'; this.onload=null;">
+    <link rel="stylesheet" href="assets/css/dark-theme.css?v=20260813">
+    <link rel="stylesheet" href="assets/css/new-homepage.css?v=20260813">
+
+    <script src="includes/loader.js"></script>
+    <link rel="icon" type="image/png" href="assets/img/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="assets/img/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="assets/img/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="assets/img/favicon/site.webmanifest" />
+</head>
+<body class="dark-theme">
+    <div id="header-placeholder"></div>
+
+    <main>
+        <section class="dp-section dp-hero" style="padding-top: 120px; min-height: auto; padding-bottom: 40px;">
+            <div class="dp-container">
+                <div class="dp-section__header">
+                    <span class="dp-label">Legal</span>
+                    <h1 class="dp-title">Legal Information</h1>
+                </div>
+            </div>
+        </section>
+
+        <!-- Privacy Policy -->
+        <section id="privacy" class="dp-section">
+            <div class="dp-container">
+                <h2 class="dp-subtitle" style="color: white; margin-bottom: 20px;">Privacy Policy</h2>
+                <div class="dp-text" style="max-width: 800px;">
+                    <p style="margin-bottom: 20px;">
+                        Datapolis Sp. z o.o. is committed to protecting your privacy. This policy outlines how we collect, use, and safeguard your personal information.
+                    </p>
+                    <h4 style="color: white; margin: 30px 0 15px;">Data Collection</h4>
+                    <p style="margin-bottom: 15px;">
+                        We collect information you provide directly to us, such as when you fill out a contact form, request a demo, or communicate with us via email.
+                    </p>
+                    <h4 style="color: white; margin: 30px 0 15px;">Data Use</h4>
+                    <p style="margin-bottom: 15px;">
+                        We use the information we collect to respond to your inquiries, provide our services, and improve our offerings.
+                    </p>
+                    <h4 style="color: white; margin: 30px 0 15px;">Data Protection</h4>
+                    <p style="margin-bottom: 15px;">
+                        We implement appropriate technical and organizational measures to protect your personal data against unauthorized access, alteration, or destruction.
+                    </p>
+                    <p style="font-size: 0.9rem; color: #64748b; margin-top: 30px;">
+                        Last updated: January 2026
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Terms of Service -->
+        <section id="terms" class="dp-section dp-section--dark">
+            <div class="dp-container">
+                <h2 class="dp-subtitle" style="color: white; margin-bottom: 20px;">Terms of Service</h2>
+                <div class="dp-text" style="max-width: 800px;">
+                    <p style="margin-bottom: 20px;">
+                        By accessing and using datapolis.com, you agree to be bound by these Terms of Service.
+                    </p>
+                    <h4 style="color: white; margin: 30px 0 15px;">Use of Website</h4>
+                    <p style="margin-bottom: 15px;">
+                        This website is provided for informational purposes. You may not use this site for any unlawful purpose or in violation of these terms.
+                    </p>
+                    <h4 style="color: white; margin: 30px 0 15px;">Intellectual Property</h4>
+                    <p style="margin-bottom: 15px;">
+                        All content on this website, including text, graphics, logos, and software, is the property of Datapolis Sp. z o.o. and is protected by intellectual property laws.
+                    </p>
+                    <h4 style="color: white; margin: 30px 0 15px;">Limitation of Liability</h4>
+                    <p style="margin-bottom: 15px;">
+                        Datapolis shall not be liable for any indirect, incidental, or consequential damages arising from your use of this website.
+                    </p>
+                    <p style="font-size: 0.9rem; color: #64748b; margin-top: 30px;">
+                        Last updated: January 2026
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Imprint -->
+        <section id="imprint" class="dp-section">
+            <div class="dp-container">
+                <h2 class="dp-subtitle" style="color: white; margin-bottom: 20px;">Imprint</h2>
+                <div class="dp-text" style="max-width: 800px;">
+                    <h4 style="color: white; margin: 20px 0 15px;">Company Information</h4>
+                    <p style="margin-bottom: 10px;"><strong style="color: white;">Datapolis Sp. z o.o.</strong></p>
+                    <p style="margin-bottom: 10px;">ul. Dzielna 21/121a</p>
+                    <p style="margin-bottom: 10px;">01-029 Warsaw, Poland</p>
+                    
+                    <h4 style="color: white; margin: 30px 0 15px;">Registration</h4>
+                    <p style="margin-bottom: 10px;">KRS: 0000003324</p>
+                    <p style="margin-bottom: 10px;">NIP: 5272336739</p>
+                    
+                    <h4 style="color: white; margin: 30px 0 15px;">Contact</h4>
+                    <p style="margin-bottom: 10px;">Email: <a href="mailto:office@datapolis.com" style="color: #14b8a6;">office@datapolis.com</a></p>
+                    
+                    <p style="font-size: 0.9rem; color: #64748b; margin-top: 30px;">
+                        Last updated: January 2026
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script>
+        document.addEventListener('includesLoaded', function() {
+            var scripts = [
+                'assets/js/vendors.min.js',
+                'assets/js/main.min.js',
+                'assets/js/functions.min.js',
+                'assets/js/async.min.js'
+            ];
+            function loadScript(index) {
+                if (index >= scripts.length) return;
+                var script = document.createElement('script');
+                script.src = scripts[index];
+                script.onload = function() { loadScript(index + 1); };
+                document.body.appendChild(script);
+            }
+            loadScript(0);
+        });
+    </script>
+</body>
+</html>

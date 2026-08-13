@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>KI in Arbeitsabläufen - Governte KI in Geschäftsprozessen | Datapolis</title>
+    <meta name="description" content="KI lebt nicht in Prompts oder Chats. Sie lebt in Arbeitsabläufen — wo jede Aktion kontrolliert, auditierbar und durch Geschäftsregeln gesteuert ist.">
+    <meta name="robots" content="index,follow">
+    <meta property="og:title" content="KI in Arbeitsabläufen - Governte KI in Geschäftsprozessen">
+    <meta property="og:description" content="KI arbeitet als kontrollierter, auditierbarer Schritt in governten Arbeitsabläufen. Keine Schatten-KI. Keine Blackboxes.">
+    <meta property="og:type" content="website">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#020617">
+
+    <!-- SEO: canonical / hreflang / open graph -->
+    <link rel="canonical" href="https://datapolis.com/de/ai-inside-workflows">
+    <link rel="alternate" hreflang="en" href="https://datapolis.com/ai-inside-workflows">
+    <link rel="alternate" hreflang="pl" href="https://datapolis.com/pl/ai-inside-workflows">
+    <link rel="alternate" hreflang="de" href="https://datapolis.com/de/ai-inside-workflows">
+    <link rel="alternate" hreflang="es" href="https://datapolis.com/es/ai-inside-workflows">
+    <link rel="alternate" hreflang="x-default" href="https://datapolis.com/ai-inside-workflows">
+    <meta property="og:url" content="https://datapolis.com/de/ai-inside-workflows">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:image" content="https://datapolis.com/assets/img/og-image-1200x630.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <!-- /SEO -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Instrument+Sans:wght@400;500;600;700&amp;display=swap">
+
+    <link rel="stylesheet" href="../assets/css/main.min.css?v=10022025">
+    <link rel="stylesheet" href="../assets/css/async.min.css?v=10022025" media="print" onload="this.media='all'; this.onload=null;">
+    <link rel="stylesheet" href="../assets/css/dark-theme.css?v=3">
+    <link rel="stylesheet" href="../assets/css/new-homepage.css?v=7">
+    <link rel="stylesheet" href="../assets/css/ai-inside-workflows.css?v=1">
+
+    <script src="../includes/loader.js"></script>
+
+    <link rel="icon" type="image/png" href="../assets/img/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="../assets/img/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="../assets/img/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="../assets/img/favicon/site.webmanifest" />
+</head>
+<body class="dark-theme aiw-page">
+    <!-- Header-Platzhalter -->
+    <div id="header-placeholder"></div>
+
+    <main>
+        <!-- ========================================
+             HERO-SEKTION - Zweispaltiges Layout
+             ======================================== -->
+        <section class="aiw-hero">
+            <div class="aiw-hero__grid"></div>
+            <div class="aiw-hero__glow"></div>
+            
+            <div class="aiw-container aiw-hero__inner">
+                <!-- Left: Content -->
+                <div class="aiw-hero__content">
+                    <span class="aiw-label">KI in Arbeitsabläufen</span>
+                    
+                    <h1 class="aiw-hero__title">
+                        KI lebt nicht in Prompts.<br>Sie <span class="accent">lebt in Arbeitsabläufen.</span>
+                    </h1>
+                    
+                    <p class="aiw-hero__intro">
+                        KI sollte nicht isoliert arbeiten — Kontext aus Prompts erraten oder außerhalb der Business-Kontrolle handeln. In Datapolis läuft KI als governter Schritt in einem Arbeitsablauf, mit klaren Eingaben, Ausgaben, Regeln und Verantwortlichkeit.
+                    </p>
+                    
+                    <ul class="aiw-hero__bullets">
+                        <li class="aiw-hero__bullet">KI läuft als Schritt im Arbeitsablauf</li>
+                        <li class="aiw-hero__bullet">Entscheidungen folgen Geschäftsregeln</li>
+                        <li class="aiw-hero__bullet">Eingaben und Ausgaben sind explizit</li>
+                        <li class="aiw-hero__bullet">Jede Aktion wird protokolliert und ist auditierbar</li>
+                    </ul>
+                    
+                    <div class="aiw-hero__actions">
+                        <a href="platform-2to2.html" class="aiw-btn aiw-btn--large">Plattform ansehen</a>
+                        <a href="digital-workers.html" class="aiw-btn aiw-btn--outline aiw-btn--large">Digitale Worker</a>
+                    </div>
+                </div>
+                
+                <!-- Right: Workflow Diagram SVG -->
+                <div class="aiw-hero__visual">
+                    <svg class="aiw-workflow-diagram" viewBox="0 0 520 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <filter id="glowAiw" x="-50%" y="-50%" width="200%" height="200%">
+                                <feGaussianBlur stdDeviation="6" result="blur"/>
+                                <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+                            </filter>
+                            <filter id="glowSmallAiw" x="-50%" y="-50%" width="200%" height="200%">
+                                <feGaussianBlur stdDeviation="3" result="blur"/>
+                                <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+                            </filter>
+                            <linearGradient id="tealGradAiw" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#14b8a6"/>
+                                <stop offset="100%" stop-color="#0d9488"/>
+                            </linearGradient>
+                            <linearGradient id="laneGradAiw" x1="0%" y1="0%" x2="0%" y2="100%">
+                                <stop offset="0%" stop-color="rgba(20, 184, 166, 0.08)"/>
+                                <stop offset="100%" stop-color="rgba(20, 184, 166, 0.02)"/>
+                            </linearGradient>
+                        </defs>
+                        
+                        <!-- Background decorative dots -->
+                        <circle cx="25" cy="30" r="2" fill="#14b8a6" opacity="0.25"/>
+                        <circle cx="495" cy="40" r="2" fill="#14b8a6" opacity="0.2"/>
+                        <circle cx="15" cy="280" r="2" fill="#14b8a6" opacity="0.15"/>
+                        <circle cx="505" cy="275" r="2" fill="#14b8a6" opacity="0.2"/>
+                        
+                        <!-- Hintergrund der Arbeitsablauf-Spur -->
+                        <rect x="30" y="50" width="460" height="180" rx="16" fill="url(#laneGradAiw)" stroke="#334155" stroke-width="1.5"/>
+                        
+                        <!-- Arbeitsablauf-Label -->
+                        <rect x="200" y="38" width="120" height="28" rx="14" fill="url(#tealGradAiw)"/>
+                        <text x="260" y="57" text-anchor="middle" fill="#020617" font-size="11" font-weight="700" font-family="system-ui, sans-serif" letter-spacing="0.08em">ARBEITSABLAUF</text>
+                        
+                        <!-- Main workflow lane line -->
+                        <line x1="60" y1="140" x2="460" y2="140" stroke="#334155" stroke-width="2" stroke-dasharray="6 4"/>
+                        
+                        <!-- Schritt 1: Intake (Mensch) -->
+                        <g>
+                            <rect x="50" y="100" width="80" height="80" rx="12" fill="#0f172a" stroke="#64748b" stroke-width="2"/>
+                            <!-- Human icon -->
+                            <circle cx="90" cy="125" r="10" stroke="#94a3b8" stroke-width="1.5" fill="none"/>
+                            <path d="M75 152 Q90 142 105 152" stroke="#94a3b8" stroke-width="1.5" fill="none"/>
+                            <text x="90" y="170" text-anchor="middle" fill="#94a3b8" font-size="9" font-weight="600" font-family="system-ui, sans-serif">EINGANG</text>
+                        </g>
+                        
+                        <!-- Schritt 2: KI-Analyse (KI - hervorgehoben) -->
+                        <g class="aiw-glow-node">
+                            <rect x="160" y="100" width="80" height="80" rx="12" fill="#0f172a" stroke="#14b8a6" stroke-width="2.5"/>
+                            <!-- AI/Robot icon -->
+                            <circle cx="200" cy="125" r="14" stroke="#14b8a6" stroke-width="1.5" fill="none"/>
+                            <circle cx="200" cy="125" r="5" fill="#14b8a6"/>
+                            <path d="M200 111v-6M200 139v6M186 125h-6M214 125h6" stroke="#14b8a6" stroke-width="1.5" stroke-linecap="round"/>
+                            <text x="200" y="170" text-anchor="middle" fill="#14b8a6" font-size="9" font-weight="700" font-family="system-ui, sans-serif">KI-ANALYSE</text>
+                            <!-- Pulsing indicator -->
+                            <circle cx="200" cy="125" r="20" fill="none" stroke="#14b8a6" stroke-width="1" class="aiw-pulse" opacity="0.4"/>
+                        </g>
+                        
+                        <!-- Schritt 3: Freigabe (Mensch) -->
+                        <g>
+                            <rect x="270" y="100" width="80" height="80" rx="12" fill="#0f172a" stroke="#64748b" stroke-width="2"/>
+                            <!-- Checkmark/Approval icon -->
+                            <circle cx="310" cy="125" r="12" stroke="#94a3b8" stroke-width="1.5" fill="none"/>
+                            <path d="M302 125l5 5 11-11" stroke="#94a3b8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                            <text x="310" y="170" text-anchor="middle" fill="#94a3b8" font-size="9" font-weight="600" font-family="system-ui, sans-serif">FREIGABE</text>
+                        </g>
+                        
+                        <!-- Schritt 4: System (Integration) -->
+                        <g>
+                            <rect x="380" y="100" width="80" height="80" rx="12" fill="#0f172a" stroke="#64748b" stroke-width="2"/>
+                            <!-- System/Database icon -->
+                            <ellipse cx="420" cy="118" rx="14" ry="5" stroke="#94a3b8" stroke-width="1.5" fill="none"/>
+                            <path d="M406 118 v16 c0 2.8 6.3 5 14 5 s14-2.2 14-5 v-16" stroke="#94a3b8" stroke-width="1.5" fill="none"/>
+                            <path d="M406 128 c0 2.8 6.3 5 14 5 s14-2.2 14-5" stroke="#94a3b8" stroke-width="1.5" fill="none"/>
+                            <text x="420" y="170" text-anchor="middle" fill="#94a3b8" font-size="9" font-weight="600" font-family="system-ui, sans-serif">FERTIG</text>
+                        </g>
+                        
+                        <!-- Flow arrows -->
+                        <path d="M130 140 L160 140" stroke="#14b8a6" stroke-width="2" stroke-dasharray="6 4" class="aiw-flow-line"/>
+                        <path d="M240 140 L270 140" stroke="#14b8a6" stroke-width="2" stroke-dasharray="6 4" class="aiw-flow-line"/>
+                        <path d="M350 140 L380 140" stroke="#14b8a6" stroke-width="2" stroke-dasharray="6 4" class="aiw-flow-line"/>
+                        
+                        <!-- Arrow heads -->
+                        <polygon points="160,135 160,145 170,140" fill="#14b8a6" opacity="0.8"/>
+                        <polygon points="270,135 270,145 280,140" fill="#14b8a6" opacity="0.8"/>
+                        <polygon points="380,135 380,145 390,140" fill="#14b8a6" opacity="0.8"/>
+                        
+                        <!-- Audit-/Kontroll-Labels unten -->
+                        <g opacity="0.7">
+                            <text x="90" y="205" text-anchor="middle" fill="#64748b" font-size="7" font-family="system-ui, sans-serif">PROTOKOLLIERT</text>
+                            <text x="200" y="205" text-anchor="middle" fill="#14b8a6" font-size="7" font-family="system-ui, sans-serif" font-weight="600">GOVERNT</text>
+                            <text x="310" y="205" text-anchor="middle" fill="#64748b" font-size="7" font-family="system-ui, sans-serif">PROTOKOLLIERT</text>
+                            <text x="420" y="205" text-anchor="middle" fill="#64748b" font-size="7" font-family="system-ui, sans-serif">PROTOKOLLIERT</text>
+                        </g>
+                        
+                        <!-- Tick marks under each step -->
+                        <g opacity="0.5">
+                            <line x1="78" y1="215" x2="83" y2="215" stroke="#14b8a6" stroke-width="1.5" stroke-linecap="round"/>
+                            <line x1="88" y1="215" x2="93" y2="215" stroke="#14b8a6" stroke-width="1.5" stroke-linecap="round"/>
+                            <line x1="98" y1="215" x2="103" y2="215" stroke="#14b8a6" stroke-width="1.5" stroke-linecap="round"/>
+                            
+                            <line x1="188" y1="215" x2="193" y2="215" stroke="#14b8a6" stroke-width="1.5" stroke-linecap="round"/>
+                            <line x1="198" y1="215" x2="203" y2="215" stroke="#14b8a6" stroke-width="1.5" stroke-linecap="round"/>
+                            <line x1="208" y1="215" x2="213" y2="215" stroke="#14b8a6" stroke-width="1.5" stroke-linecap="round"/>
+                            
+                            <line x1="298" y1="215" x2="303" y2="215" stroke="#14b8a6" stroke-width="1.5" stroke-linecap="round"/>
+                            <line x1="308" y1="215" x2="313" y2="215" stroke="#14b8a6" stroke-width="1.5" stroke-linecap="round"/>
+                            <line x1="318" y1="215" x2="323" y2="215" stroke="#14b8a6" stroke-width="1.5" stroke-linecap="round"/>
+                            
+                            <line x1="408" y1="215" x2="413" y2="215" stroke="#14b8a6" stroke-width="1.5" stroke-linecap="round"/>
+                            <line x1="418" y1="215" x2="423" y2="215" stroke="#14b8a6" stroke-width="1.5" stroke-linecap="round"/>
+                            <line x1="428" y1="215" x2="433" y2="215" stroke="#14b8a6" stroke-width="1.5" stroke-linecap="round"/>
+                        </g>
+                        
+                        <!-- Legend at bottom -->
+                        <g>
+                            <!-- Human indicator -->
+                            <rect x="140" y="260" width="14" height="14" rx="3" fill="none" stroke="#64748b" stroke-width="1.5"/>
+                            <circle cx="147" cy="265" r="3" stroke="#94a3b8" stroke-width="1" fill="none"/>
+                            <text x="162" y="271" fill="#94a3b8" font-size="9" font-family="system-ui, sans-serif">Mensch / System</text>
+                            
+                            <!-- AI indicator -->
+                            <rect x="280" y="260" width="14" height="14" rx="3" fill="none" stroke="#14b8a6" stroke-width="2"/>
+                            <circle cx="287" cy="267" r="3" fill="#14b8a6"/>
+                            <text x="302" y="271" fill="#94a3b8" font-size="9" font-family="system-ui, sans-serif">KI-Schritt</text>
+                        </g>
+                        
+                        <!-- Beschriftung -->
+                        <text x="260" y="300" text-anchor="middle" fill="#64748b" font-size="9" font-family="system-ui, sans-serif" letter-spacing="0.06em">KI, DIE INNERHALB EINES GOVERNTEN ARBEITSABLAUFS ARBEITET</text>
+                    </svg>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================
+             SEKTION: Der Prozess ist das führende System
+             ======================================== -->
+        <section class="aiw-section aiw-section--alt">
+            <div class="aiw-container">
+                <div class="aiw-section__header">
+                    <h2 class="aiw-section__title">Der Prozess ist das <span class="accent">führende System</span></h2>
+                    <p class="aiw-section__subtitle">
+                        Nicht KI. Nicht Apps. Nicht Schnittstellen.<br>
+                        Der Arbeitsablauf definiert, wer was tut, wann und nach welchen Regeln.<br>
+                        Alles — Menschen, KI, Systeme — arbeitet innerhalb dieser Struktur.
+                    </p>
+                </div>
+                
+                <div class="aiw-cards">
+                    <!-- Karte 1: KI führt aus -->
+                    <div class="aiw-card">
+                        <div class="aiw-card__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="6"/>
+                                <circle cx="12" cy="12" r="2"/>
+                                <path d="M12 2v4M12 18v4M2 12h4M18 12h4"/>
+                            </svg>
+                        </div>
+                        <h3 class="aiw-card__title">KI führt aus</h3>
+                        <p class="aiw-card__desc">Führt Aufgaben und Entscheidungen innerhalb definierter Policies aus.</p>
+                    </div>
+                    
+                    <!-- Karte 2: Prozess steuert -->
+                    <div class="aiw-card aiw-card--primary">
+                        <div class="aiw-card__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                                <path d="M9 12l2 2 4-4"/>
+                            </svg>
+                        </div>
+                        <h3 class="aiw-card__title">Prozess <span class="accent">steuert</span></h3>
+                        <p class="aiw-card__desc">Steuert Weiterleitung, Zuständigkeit, Regeln und Freigaben.</p>
+                    </div>
+                    
+                    <!-- Karte 3: Menschen überwachen -->
+                    <div class="aiw-card">
+                        <div class="aiw-card__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="8" r="4"/>
+                                <path d="M6 21v-2a4 4 0 014-4h4a4 4 0 014 4v2"/>
+                                <path d="M15 3c2 1.5 2 4.5 0 6"/>
+                            </svg>
+                        </div>
+                        <h3 class="aiw-card__title">Menschen überwachen</h3>
+                        <p class="aiw-card__desc">Prüfen Ausnahmen und behalten die Verantwortlichkeit.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================
+             SEKTION: Wie KI innerhalb eines Arbeitsablaufs arbeitet
+             ======================================== -->
+        <section class="aiw-section">
+            <div class="aiw-container">
+                <div class="aiw-section__header">
+                    <h2 class="aiw-section__title">Wie KI <span class="accent">innerhalb eines Arbeitsablaufs</span> arbeitet</h2>
+                </div>
+                
+                <div class="aiw-steps">
+                    <!-- Schritt 1 -->
+                    <div class="aiw-step">
+                        <div class="aiw-step__number">1</div>
+                        <h3 class="aiw-step__title">Kontext bereitgestellt</h3>
+                        <p class="aiw-step__desc">KI erhält strukturierte Daten aus dem Prozess.</p>
+                    </div>
+                    
+                    <!-- Schritt 2 -->
+                    <div class="aiw-step">
+                        <div class="aiw-step__number">2</div>
+                        <h3 class="aiw-step__title">Aufgabe ausgeführt</h3>
+                        <p class="aiw-step__desc">KI analysiert, klassifiziert, extrahiert oder entscheidet.</p>
+                    </div>
+                    
+                    <!-- Schritt 3 -->
+                    <div class="aiw-step">
+                        <div class="aiw-step__number">3</div>
+                        <h3 class="aiw-step__title">Regeln durchgesetzt</h3>
+                        <p class="aiw-step__desc">Geschäftsregeln und Policies werden angewendet.</p>
+                    </div>
+                    
+                    <!-- Schritt 4 -->
+                    <div class="aiw-step">
+                        <div class="aiw-step__number">4</div>
+                        <h3 class="aiw-step__title">Ergebnis erfasst</h3>
+                        <p class="aiw-step__desc">Eingaben, Ausgaben, Zeitpunkt und Begründung werden protokolliert.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================
+             SEKTION: Was KI in Arbeitsabläufen ermöglicht
+             ======================================== -->
+        <section class="aiw-section aiw-section--alt">
+            <div class="aiw-container">
+                <div class="aiw-section__header">
+                    <h2 class="aiw-section__title">Was KI in Arbeitsabläufen <span class="accent">ermöglicht</span></h2>
+                </div>
+                
+                <div class="aiw-benefits">
+                    <!-- Vorteil 1: Keine Schatten-KI -->
+                    <div class="aiw-benefit">
+                        <div class="aiw-benefit__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"/>
+                                <line x1="4.93" y1="4.93" x2="19.07" y2="19.07"/>
+                            </svg>
+                        </div>
+                        <h3 class="aiw-benefit__title">Keine Schatten-KI</h3>
+                        <p class="aiw-benefit__desc">Alle KI-Aktivitäten sind sichtbar und werden nachverfolgt.</p>
+                    </div>
+                    
+                    <!-- Vorteil 2: Vorhersehbare Ergebnisse -->
+                    <div class="aiw-benefit">
+                        <div class="aiw-benefit__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M22 11.08V12a10 10 0 11-5.93-9.14"/>
+                                <polyline points="22 4 12 14.01 9 11.01"/>
+                            </svg>
+                        </div>
+                        <h3 class="aiw-benefit__title">Vorhersehbare Ergebnisse</h3>
+                        <p class="aiw-benefit__desc">KI verhält sich innerhalb der Regeln konsistent.</p>
+                    </div>
+                    
+                    <!-- Vorteil 3: Audit-bereite Entscheidungen -->
+                    <div class="aiw-benefit">
+                        <div class="aiw-benefit__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/>
+                                <polyline points="14 2 14 8 20 8"/>
+                                <line x1="16" y1="13" x2="8" y2="13"/>
+                                <line x1="16" y1="17" x2="8" y2="17"/>
+                            </svg>
+                        </div>
+                        <h3 class="aiw-benefit__title">Audit-bereite Entscheidungen</h3>
+                        <p class="aiw-benefit__desc">Jede Entscheidung hat eine klare Spur.</p>
+                    </div>
+                    
+                    <!-- Vorteil 4: Human-in-the-loop by design -->
+                    <div class="aiw-benefit">
+                        <div class="aiw-benefit__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/>
+                                <circle cx="9" cy="7" r="4"/>
+                                <path d="M23 21v-2a4 4 0 00-3-3.87"/>
+                                <path d="M16 3.13a4 4 0 010 7.75"/>
+                            </svg>
+                        </div>
+                        <h3 class="aiw-benefit__title">Human-in-the-loop by design</h3>
+                        <p class="aiw-benefit__desc">Menschen bleiben dort involviert, wo es darauf ankommt.</p>
+                    </div>
+                    
+                    <!-- Vorteil 5: Wiederholbare Automatisierung -->
+                    <div class="aiw-benefit">
+                        <div class="aiw-benefit__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="23 4 23 10 17 10"/>
+                                <polyline points="1 20 1 14 7 14"/>
+                                <path d="M3.51 9a9 9 0 0114.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0020.49 15"/>
+                            </svg>
+                        </div>
+                        <h3 class="aiw-benefit__title">Wiederholbare Automatisierung</h3>
+                        <p class="aiw-benefit__desc">Der gleiche Prozess läuft jedes Mal auf die gleiche Weise.</p>
+                    </div>
+                    
+                    <!-- Vorteil 6: Kontrolle auf Enterprise-Niveau -->
+                    <div class="aiw-benefit">
+                        <div class="aiw-benefit__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                                <path d="M7 11V7a5 5 0 0110 0v4"/>
+                            </svg>
+                        </div>
+                        <h3 class="aiw-benefit__title">Kontrolle auf Enterprise-Niveau</h3>
+                        <p class="aiw-benefit__desc">Sicherheit und Compliance sind integriert.</p>
+                    </div>
+                </div>
+                
+                <p class="aiw-closing">KI skaliert sicher, wenn sie der Prozessstruktur folgt.</p>
+            </div>
+        </section>
+
+        <!-- ========================================
+             SEKTION: Das ist kein Copilot (Kontrast)
+             ======================================== -->
+        <section class="aiw-section aiw-section--contrast">
+            <div class="aiw-container">
+                <div class="aiw-contrast">
+                    <h2 class="aiw-contrast__title">Das ist kein Copilot</h2>
+                    <p class="aiw-contrast__text">
+                        Copiloten unterstützen Nutzer in Interfaces.<br>
+                        Datapolis betreibt KI in Arbeitsabläufen — dort, wo echte Arbeit passiert.
+                    </p>
+                    <a href="digital-workers.html" class="aiw-contrast__link">
+                        Warum keine Copiloten
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="5" y1="12" x2="19" y2="12"/>
+                            <polyline points="12 5 19 12 12 19"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================
+             ABSCHLIESSENDES CTA
+             ======================================== -->
+        <section class="aiw-final">
+            <div class="aiw-final__glow"></div>
+            <div class="aiw-container">
+                <div class="aiw-final__content">
+                    <h2 class="aiw-final__title">Arbeit ausführen. <span class="accent">Ablauf beschleunigen.</span></h2>
+                    <p class="aiw-final__subtitle">Bringen Sie KI in governte Arbeitsabläufe — und behalten Sie die Kontrolle.</p>
+                    
+                    <div class="aiw-final__actions">
+                        <a href="platform-2to2.html" class="aiw-btn aiw-btn--large">Plattform ansehen</a>
+                        <a href="contact.html" class="aiw-btn aiw-btn--outline aiw-btn--large">Kontaktieren Sie uns</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer-Platzhalter -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Skripte -->
+    <script>
+        document.addEventListener('includesLoaded', function() {
+            var scripts = [
+                '../assets/js/vendors.min.js',
+                '../assets/js/main.min.js',
+                '../assets/js/functions.min.js',
+                '../assets/js/async.min.js'
+            ];
+            
+            function loadScript(index) {
+                if (index >= scripts.length) return;
+                
+                var script = document.createElement('script');
+                script.src = scripts[index];
+                script.onload = function() {
+                    loadScript(index + 1);
+                };
+                document.body.appendChild(script);
+            }
+            
+            loadScript(0);
+        });
+
+        // Sanftes Scrollen für Anker-Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

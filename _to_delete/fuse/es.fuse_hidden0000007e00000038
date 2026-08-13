@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Clientes - Datapolis</title>
+    <meta name="description" content="Cientos de organizaciones en todo el mundo confían en Datapolis para ejecutar sus procesos de negocio. Desde empresas globales hasta agencias gubernamentales.">
+    <meta name="robots" content="index,follow">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#020617">
+
+    <!-- SEO: canonical / hreflang / open graph -->
+    <link rel="canonical" href="https://datapolis.com/es/customers">
+    <link rel="alternate" hreflang="en" href="https://datapolis.com/customers">
+    <link rel="alternate" hreflang="pl" href="https://datapolis.com/pl/customers">
+    <link rel="alternate" hreflang="de" href="https://datapolis.com/de/customers">
+    <link rel="alternate" hreflang="es" href="https://datapolis.com/es/customers">
+    <link rel="alternate" hreflang="x-default" href="https://datapolis.com/customers">
+    <meta property="og:url" content="https://datapolis.com/es/customers">
+    <meta property="og:locale" content="es_ES">
+    <meta property="og:image" content="https://datapolis.com/assets/img/og-image-1200x630.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <!-- /SEO -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Instrument+Sans:wght@400;500;600;700&amp;display=swap">
+
+    <link rel="stylesheet" href="../assets/css/main.min.css?v=10022025">
+    <link rel="stylesheet" href="../assets/css/async.min.css?v=10022025" media="print" onload="this.media='all'; this.onload=null;">
+    <link rel="stylesheet" href="../assets/css/dark-theme.css?v=3">
+    <link rel="stylesheet" href="../assets/css/new-homepage.css?v=7">
+    <link rel="stylesheet" href="../assets/css/customers.css?v=3">
+
+    <script src="../includes/loader.js"></script>
+
+    <link rel="icon" type="image/png" href="../assets/img/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="../assets/img/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="../assets/img/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="../assets/img/favicon/site.webmanifest" />
+</head>
+<body class="dark-theme">
+    <div id="header-placeholder"></div>
+
+    <main class="customers-page">
+        <!-- ========================================
+             HERO (2 columnas: texto + gráfico del globo)
+             ======================================== -->
+        <section class="customers-hero">
+            <div class="customers-hero__grid"></div>
+            <div class="customers-hero__glow"></div>
+            
+            <div class="customers-container customers-hero__inner">
+                <div class="customers-hero__content">
+                    <span class="customers-label">Clientes</span>
+                    <h1 class="customers-hero__title">
+                        Con la confianza de <span class="accent">cientos de organizaciones</span> en todo el mundo.
+                    </h1>
+                    <p class="customers-hero__intro">
+                        Desde empresas globales hasta agencias gubernamentales, desde bancos hasta empresas energéticas — organizaciones de múltiples industrias confían en Datapolis para ejecutar sus procesos de negocio críticos.
+                    </p>
+                    <div class="customers-hero__actions">
+                        <a href="contact.html" class="dp-btn">Habla con nosotros</a>
+                        <a href="https://2to2.ai" target="_blank" class="dp-btn dp-btn-outline">Ver la plataforma</a>
+                    </div>
+                </div>
+                
+                <div class="customers-hero__visual">
+                    <!-- Diagrama del globo con puntos de conexión -->
+                    <svg class="globe-diagram" viewBox="0 0 320 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <filter id="glowGlobe" x="-50%" y="-50%" width="200%" height="200%">
+                                <feGaussianBlur stdDeviation="8" result="blur"/>
+                                <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+                            </filter>
+                            <linearGradient id="globeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#14b8a6" stop-opacity="0.2"/>
+                                <stop offset="100%" stop-color="#0d9488" stop-opacity="0.05"/>
+                            </linearGradient>
+                        </defs>
+                        
+                        <!-- Círculo del globo -->
+                        <circle cx="160" cy="160" r="110" fill="url(#globeGrad)" stroke="#334155" stroke-width="2"/>
+                        
+                        <!-- Meridianos del globo -->
+                        <ellipse cx="160" cy="160" rx="110" ry="40" stroke="#334155" stroke-width="1.5" fill="none"/>
+                        <ellipse cx="160" cy="160" rx="70" ry="110" stroke="#334155" stroke-width="1.5" fill="none"/>
+                        <ellipse cx="160" cy="160" rx="30" ry="110" stroke="#334155" stroke-width="1" fill="none" opacity="0.5"/>
+                        <line x1="50" y1="160" x2="270" y2="160" stroke="#334155" stroke-width="1"/>
+                        
+                        <!-- Puntos de conexión (clientes en todo el mundo) -->
+                        <!-- Europa -->
+                        <g filter="url(#glowGlobe)">
+                            <circle cx="175" cy="120" r="8" fill="#14b8a6"/>
+                            <circle cx="175" cy="120" r="4" fill="#0f172a"/>
+                        </g>
+                        <!-- Norteamérica -->
+                        <g filter="url(#glowGlobe)">
+                            <circle cx="95" cy="135" r="8" fill="#14b8a6"/>
+                            <circle cx="95" cy="135" r="4" fill="#0f172a"/>
+                        </g>
+                        <!-- Asia -->
+                        <g filter="url(#glowGlobe)">
+                            <circle cx="220" cy="145" r="8" fill="#14b8a6"/>
+                            <circle cx="220" cy="145" r="4" fill="#0f172a"/>
+                        </g>
+                        <!-- Sudamérica -->
+                        <g filter="url(#glowGlobe)">
+                            <circle cx="120" cy="195" r="6" fill="#14b8a6"/>
+                            <circle cx="120" cy="195" r="3" fill="#0f172a"/>
+                        </g>
+                        <!-- África -->
+                        <g filter="url(#glowGlobe)">
+                            <circle cx="170" cy="175" r="6" fill="#14b8a6"/>
+                            <circle cx="170" cy="175" r="3" fill="#0f172a"/>
+                        </g>
+                        <!-- Australia -->
+                        <g filter="url(#glowGlobe)">
+                            <circle cx="235" cy="200" r="6" fill="#14b8a6"/>
+                            <circle cx="235" cy="200" r="3" fill="#0f172a"/>
+                        </g>
+                        <!-- Oriente Medio -->
+                        <g filter="url(#glowGlobe)">
+                            <circle cx="195" cy="150" r="5" fill="#14b8a6"/>
+                            <circle cx="195" cy="150" r="2.5" fill="#0f172a"/>
+                        </g>
+                        
+                        <!-- Líneas de conexión entre puntos -->
+                        <path d="M175 120 Q160 100 95 135" stroke="#14b8a6" stroke-width="1" fill="none" opacity="0.4" stroke-dasharray="4 3"/>
+                        <path d="M175 120 L220 145" stroke="#14b8a6" stroke-width="1" fill="none" opacity="0.4" stroke-dasharray="4 3"/>
+                        <path d="M175 120 L170 175" stroke="#14b8a6" stroke-width="1" fill="none" opacity="0.3" stroke-dasharray="4 3"/>
+                        <path d="M220 145 L235 200" stroke="#14b8a6" stroke-width="1" fill="none" opacity="0.3" stroke-dasharray="4 3"/>
+                        <path d="M95 135 L120 195" stroke="#14b8a6" stroke-width="1" fill="none" opacity="0.3" stroke-dasharray="4 3"/>
+                        
+                        <!-- Anillo de órbita -->
+                        <ellipse cx="160" cy="160" rx="140" ry="50" stroke="#14b8a6" stroke-width="1" fill="none" opacity="0.2" transform="rotate(-20 160 160)"/>
+                        
+                        <!-- Puntos de satélite pequeños en la órbita -->
+                        <circle cx="45" cy="130" r="3" fill="#14b8a6" opacity="0.6"/>
+                        <circle cx="275" cy="190" r="3" fill="#14b8a6" opacity="0.6"/>
+                        
+                        <!-- Leyenda -->
+                        <text x="160" y="300" text-anchor="middle" fill="#64748b" font-size="10" font-family="system-ui, sans-serif" letter-spacing="0.1em">40+ PAÍSES · 500+ ORGANIZACIONES</text>
+                    </svg>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================
+             BARRA DE ESTADÍSTICAS
+             ======================================== -->
+        <section class="customers-stats">
+            <div class="customers-container">
+                <div class="customers-stats__grid">
+                    <div class="customers-stats__item">
+                        <span class="customers-stats__number">20+</span>
+                        <span class="customers-stats__label">Años en producción</span>
+                    </div>
+                    <div class="customers-stats__item">
+                        <span class="customers-stats__number">500+</span>
+                        <span class="customers-stats__label">Organizaciones atendidas</span>
+                    </div>
+                    <div class="customers-stats__item">
+                        <span class="customers-stats__number">40+</span>
+                        <span class="customers-stats__label">Países</span>
+                    </div>
+                    <div class="customers-stats__item">
+                        <span class="customers-stats__number">1000s</span>
+                        <span class="customers-stats__label">Flujos de trabajo ejecutándose a diario</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================
+             MURO DE LOGOS
+             ======================================== -->
+        <section class="customers-logos">
+            <div class="customers-container">
+                <h2 class="customers-section__title">Empresas que confían en Datapolis</h2>
+                
+                <div class="dp-logos dp-logos--customers">
+                    <!-- Airbus -->
+                    <div class="dp-logo dp-logo--wide" role="img" aria-label="Airbus">
+                        <svg viewBox="0 0 1599 297" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill="currentColor" d="M736.98 101.3C736.98 47.19 701.53 6.06 628.48 6.06L481.52 6.06L481.52 290.47L550.68 290.47L550.68 67.53L628.92 67.53C657.88 67.53 668.25 83.99 668.25 103.03C668.25 122.51 657.44 138.53 628.48 138.53L561.48 138.53L656.58 290.47L735.25 290.47C735.25 290.47 670.41 188.31 670.84 188.31C711.05 178.79 736.98 150.65 736.98 101.3"/>
+                            <path fill="currentColor" d="M365.68 6.06L434.84 6.06L434.84 290.48L365.68 290.48L365.68 6.06Z"/>
+                            <path fill="currentColor" d="M188.89 183.12L130.69 183.12L173.76 95.67L174.63 95.67L271.45 290.47L350.98 290.47L206.18 6.06L144.8 6.06L0 290.47L77.8 290.47L101.26 242.86L217.85 242.86L188.89 183.12Z"/>
+                            <path fill="currentColor" fill-rule="evenodd" d="M1035.25 210.82C1035.25 258.87 996.77 290.47 937.99 290.47L769.84 290.47L769.84 6.06L931.51 6.06C989 6.06 1023.14 36.8 1023.14 82.69C1023.14 111.26 1011.47 130.74 989.42 142.86C1016.66 152.39 1035.24 177.49 1035.25 210.82ZM839 66.24L839 116.45L931.07 116.45C945.34 116.45 956.15 105.63 956.15 91.34C956.15 77.06 945.34 66.24 931.51 66.24L839 66.24ZM933.23 230.73C950.09 230.73 963.06 218.18 963.06 201.3C963.06 184.85 950.09 172.73 933.23 172.73L839 172.73L839 230.73L933.23 230.73Z"/>
+                            <path fill="currentColor" d="M1253.53 164.94C1253.53 208.1 1233.64 232.03 1194.31 232.03C1155.41 232.03 1135.53 208.1 1135.53 164.94L1135.53 6.06L1064.64 6.06L1064.64 159.74C1064.64 247.62 1110.89 296.54 1194.31 296.54C1277.73 296.54 1324.42 247.62 1324.42 159.74L1324.42 6.06L1253.53 6.06L1253.53 164.94Z"/>
+                            <path fill="currentColor" d="M1508.98 119.05C1443.33 103.04 1429.02 101.51 1429.02 82.68C1429.02 68.12 1445.44 61.04 1473.11 61.04C1509.85 61.04 1548.97 70.27 1571.23 83.98L1593.27 25.98C1564.75 10.82 1522.82 0 1473.97 0C1400.92 0 1359.86 36.37 1359.86 85.28C1359.86 137.91 1390.53 159.3 1461 174.46C1515.86 186.57 1527.56 194.13 1527.56 209.52C1527.56 226.24 1512.44 233.76 1482.61 233.76C1439.39 233.76 1400.27 223.25 1368.93 206.06L1347.75 266.66C1381.9 284.84 1432.9 296.53 1484.34 296.53C1556.1 296.53 1598.88 263.2 1598.88 207.35C1598.89 162.55 1569.95 133.77 1508.98 119.05"/>
+                        </svg>
+                    </div>
+                    
+                    <!-- Hexagon (PNG) -->
+                    <div class="dp-logo dp-logo--png" role="img" aria-label="Hexagon">
+                        <img src="../logos/hexagon.png" alt="Hexagon">
+                    </div>
+                    
+                    <!-- BNP Paribas Bank Polska -->
+                    <div class="dp-logo" role="img" aria-label="BNP Paribas Bank Polska">
+                        <svg viewBox="0 0 209 88" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill="currentColor" d="M112.135 73.4961C117.823 73.4961 121.112 71.3674 121.112 67.5358V67.3655C121.112 63.8744 118.179 61.5754 111.957 61.5754H97.6457V73.4961H112.135ZM109.379 49.0588C115.068 49.0588 118.268 47.1855 118.268 43.439V43.2687C118.268 39.7777 115.335 37.7341 109.735 37.7341H97.5568V49.1439H109.379V49.0588ZM79.3346 23.1739H114.001C122.535 23.1739 128.49 25.2174 132.49 28.9639C135.157 31.5184 136.846 35.0094 136.846 39.4371V39.6074C136.846 47.1004 132.401 51.528 126.446 54.0825C134.623 56.6369 139.868 61.1497 139.868 69.9199V70.0902C139.868 81.1594 130.446 87.9712 114.268 87.9712H79.4235V23.1739H79.3346Z"/>
+                            <path fill="currentColor" d="M144.593 23.1564H162.104L189.926 57.3857V23.1564H208.504V87.9537H192.059L163.17 52.4471V87.9537H144.593V23.1564Z"/>
+                            <path fill="currentColor" d="M3.07126 87.9319L32.2268 10.0219L63.3379 1.33682L48.6713 87.9319H30.7157L49.5602 13.8535L37.2046 17.2594L13.9157 87.9319H3.07126Z"/>
+                            <path fill="currentColor" d="M65.0575 21.5616L57.1463 87.8915H71.013L71.813 32.1199L65.0575 21.5616Z"/>
+                        </svg>
+                    </div>
+                    
+                    <!-- Nestlé (PNG) -->
+                    <div class="dp-logo dp-logo--png" role="img" aria-label="Nestlé">
+                        <img src="../logos/nestle.png" alt="Nestlé">
+                    </div>
+                    
+                    <!-- ORLEN (PNG) -->
+                    <div class="dp-logo dp-logo--png" role="img" aria-label="ORLEN">
+                        <img src="../logos/orlen.png" alt="ORLEN">
+                    </div>
+                    
+                    <!-- PKO BP (PNG) -->
+                    <div class="dp-logo dp-logo--png" role="img" aria-label="PKO Bank Polski">
+                        <img src="../logos/pkobp.png" alt="PKO Bank Polski">
+                    </div>
+                    
+                    <!-- Polskie Radio -->
+                    <div class="dp-logo dp-logo--large" role="img" aria-label="Polskie Radio">
+                        <svg viewBox="0 0 836 374" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill="currentColor" d="m194.4 89.34a97.57 97.57 0 1 0 97.44 97.57 97.5 97.5 0 0 0-97.44-97.57m0 180.67a83.1 83.1 0 1 1 83-83.1 83 83 0 0 1-83 83.1"/>
+                            <path fill="currentColor" d="m194.35 119.66a67.28 67.28 0 1 0 67.15 67.28 67.21 67.21 0 0 0-67.15-67.28m0 120.35a53.06 53.06 0 1 1 53-53.06 53 53 0 0 1-53 53.06"/>
+                            <path fill="currentColor" d="m194.35 149.54c-19.75 0-37.34 17.62-37.34 37.41 0 19.79 17.59 37.41 37.34 37.41 19.75 0 37.34-17.62 37.34-37.41 0-19.79-17.59-37.41-37.34-37.41m0 60.06A22.65 22.65 0 1 1 217 186.95 22.63 22.63 0 0 1 194.39 209.6"/>
+                            <path fill="currentColor" d="m82.27 298.94h224v-224h-224zm209.3-14.7H97V89.66h194.6z"/>
+                            <rect fill="currentColor" x="321.07" y="74.95" width="447.99" height="224"/>
+                            <path fill="#020617" d="m475.38 122.51a30.31 30.31 0 0 1-4.08 43.57c-5.61 4.33-12.23 6.45-20.13 6.45-17.84 0-31.09-13.08-31.09-30.75a30 30 0 0 1 11.47-23.19 32.39 32.39 0 0 1 19.87-6.46c9.85 0 17.92 3.48 24 10.36m-39.92 19.62a16 16 0 1 0 16-15.71 15.93 15.93 0 0 0-16 15.71"/>
+                            <path fill="#020617" d="m573.22 128.66c-3.31-2.63-6.29-3.82-9.68-3.82-3.39 0-6.29 2.12-6.29 4.84 0 1.78 1.27 3.23 3.82 4.42 0.76 0.34 1.36 0.51 6.37 2 9.85 2.89 13.93 7.56 13.93 15.71 0 7.81-2.55 13-8 16.48a26.58 26.58 0 0 1-14.1 3.74 34.45 34.45 0 0 1-19.7-6.37l6.29-11.89c4.59 4 8.66 5.78 13 5.78 4.34 0 7.13-2.21 7.13-5.52 0-3.06-2-4.5-8.83-6.54-6.46-1.87-8.92-3-11-4.76-2.8-2.46-4.25-6.12-4.25-11 0-11.38 7.81-19.11 19.28-19.11a39.29 39.29 0 0 1 17.92 4.59z"/>
+                            <path fill="#020617" d="M381.7 170.66H367V114h23.36c6.62 0 10.53 1.27 14.18 4.76 3.65 3.49 5.52 8.07 5.52 14 0 5.61-1.61 10.45-4.59 13.76-3.14 3.57-7.81 5.27-14.61 5.27H381.7zM386.54 140c5.61 0 8.15-2.21 8.15-7.05 0-4.84-2.63-7.13-8.07-7.13H381.7V140z"/>
+                            <polygon fill="#020617" points="496.78 114.01 511.48 114.01 511.48 158.18 529.14 158.18 529.14 170.66 496.78 170.66"/>
+                            <polygon fill="#020617" points="610.72 137.37 628.64 114.01 646.82 114.01 624.4 140.85 648.94 170.66 629.83 170.66 610.72 146.12 610.72 170.66 596.03 170.66 596.03 114.01 610.72 114.01"/>
+                            <rect fill="#020617" x="658.09" y="114.18" width="14.69" height="56.65"/>
+                            <polygon fill="#020617" points="723.12 114.01 723.12 126.5 705.63 126.5 705.63 135.93 722.19 135.93 722.19 148.41 705.63 148.41 705.63 158.18 723.12 158.18 723.12 170.66 690.93 170.66 690.93 114.01"/>
+                            <path fill="#020617" d="m414.06 259.79h-18.35l-14-21.74v21.74H367v-56.65h22.85c6.46 0 10.62 1.53 13.93 5a18.34 18.34 0 0 1 4.84 12.48c0 5.18-2 10-5.43 12.83a15.15 15.15 0 0 1-7 3.14zm-29.64-31.25c2.8 0 4.93-0.51 6.28-1.53a6.84 6.84 0 0 0 0-11c-1.36-1-3.48-1.53-6.28-1.53h-2.72v14.1z"/>
+                            <path fill="#020617" d="m462.23 249.94-3.91 9.85h-15.54l21.74-56.65h16.05l21.32 56.65h-15.7l-3.65-9.85zm10.28-29.3-6.2 18.09h12.23z"/>
+                            <path fill="#020617" d="m533.15 203.14h21.75c14.95 0 27.86 13.08 27.86 28.28 0 15.2-12.91 28.37-27.86 28.37h-21.75zm18.09 44.17c5.52 0 9.09-1.44 12.06-4.76a17.1 17.1 0 0 0 0-22.17c-3-3.31-6.54-4.76-12.06-4.76h-3.4v31.68z"/>
+                            <rect fill="#020617" x="615.31" y="203.14" width="14.69" height="56.65"/>
+                            <path fill="#020617" d="m716.43 211.72a30.31 30.31 0 0 1-4.08 43.57c-5.61 4.33-12.23 6.45-20.13 6.45-17.84 0-31.09-13.08-31.09-30.75a30 30 0 0 1 11.47-23.19 32.4 32.4 0 0 1 19.88-6.46c9.85 0 17.92 3.48 24 10.36m-39.92 19.62a16 16 0 1 0 16-15.71 15.93 15.93 0 0 0-16 15.71"/>
+                        </svg>
+                    </div>
+                    
+                    <!-- ThyssenKrupp (PNG) -->
+                    <div class="dp-logo dp-logo--png" role="img" aria-label="ThyssenKrupp">
+                        <img src="../logos/thyssenkrupp.png" alt="ThyssenKrupp">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================
+             INDUSTRIAS
+             ======================================== -->
+        <section class="customers-industries">
+            <div class="customers-container">
+                <h2 class="customers-section__title">Industrias a las que servimos</h2>
+                
+                <div class="customers-industries__grid">
+                    <div class="customers-industry">
+                        <div class="customers-industry__icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M3 21h18M3 7v14M21 7v14M6 7V3h12v4M9 21v-4h6v4M9 10h1M14 10h1M9 14h1M14 14h1"/>
+                            </svg>
+                        </div>
+                        <h3 class="customers-industry__title">Banca y finanzas</h3>
+                        <p class="customers-industry__desc">Flujos de trabajo de cumplimiento, aprobaciones, trazas de auditoría</p>
+                    </div>
+                    
+                    <div class="customers-industry">
+                        <div class="customers-industry__icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+                            </svg>
+                        </div>
+                        <h3 class="customers-industry__title">Energía y servicios públicos</h3>
+                        <p class="customers-industry__desc">Infraestructura crítica, operaciones sin tiempo de inactividad</p>
+                    </div>
+                    
+                    <div class="customers-industry">
+                        <div class="customers-industry__icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                            </svg>
+                        </div>
+                        <h3 class="customers-industry__title">Gobierno y defensa</h3>
+                        <p class="customers-industry__desc">Entornos regulados, seguridad primero</p>
+                    </div>
+                    
+                    <div class="customers-industry">
+                        <div class="customers-industry__icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <rect x="2" y="7" width="20" height="14" rx="2"/>
+                                <path d="M16 7V5a4 4 0 00-8 0v2"/>
+                            </svg>
+                        </div>
+                        <h3 class="customers-industry__title">Manufactura</h3>
+                        <p class="customers-industry__desc">Control de calidad, flujos de trabajo de producción</p>
+                    </div>
+                    
+                    <div class="customers-industry">
+                        <div class="customers-industry__icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+                            </svg>
+                        </div>
+                        <h3 class="customers-industry__title">Salud y farma</h3>
+                        <p class="customers-industry__desc">Cumplimiento, procesos de pacientes</p>
+                    </div>
+                    
+                    <div class="customers-industry">
+                        <div class="customers-industry__icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <circle cx="12" cy="12" r="10"/>
+                                <path d="M2 12h20M12 2a15 15 0 014 10 15 15 0 01-4 10 15 15 0 01-4-10 15 15 0 014-10z"/>
+                            </svg>
+                        </div>
+                        <h3 class="customers-industry__title">Empresas globales</h3>
+                        <p class="customers-industry__desc">Operaciones transfronterizas, escala</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================
+             CTA
+             ======================================== -->
+        <section class="customers-cta">
+            <div class="customers-cta__glow"></div>
+            <div class="customers-container">
+                <h2 class="customers-cta__title">Únete a cientos de organizaciones que operan con Datapolis</h2>
+                <div class="customers-cta__buttons">
+                    <a href="https://2to2.ai" target="_blank" class="dp-btn dp-btn--primary dp-btn--large">
+                        Ver la plataforma
+                    </a>
+                    <a href="contact.html" class="dp-btn dp-btn-outline dp-btn--large">
+                        Contáctanos
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script>
+        document.addEventListener('includesLoaded', function() {
+            var scripts = [
+                '../assets/js/vendors.min.js',
+                '../assets/js/main.min.js',
+                '../assets/js/functions.min.js',
+                '../assets/js/async.min.js'
+            ];
+            function loadScript(index) {
+                if (index >= scripts.length) return;
+                var script = document.createElement('script');
+                script.src = scripts[index];
+                script.onload = function() { loadScript(index + 1); };
+                document.body.appendChild(script);
+            }
+            loadScript(0);
+        });
+    </script>
+</body>
+</html>

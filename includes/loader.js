@@ -34,6 +34,9 @@
         if (last.endsWith('.html')) {
             last = last.slice(0, -5);
         }
+        // "index" to strona glowna - zwracamy pusty string, zeby przelacznik
+        // jezyka prowadzil na /pl/ zamiast /pl/index (zgodnie z canonical)
+        if (last === 'index') return '';
         return last;
     }
 
@@ -42,6 +45,24 @@
         var element = document.getElementById(elementId);
         if (!element) return;
 
+        // Header/footer sa wklejane statycznie w buildzie (build-includes.py).
+        // Jesli placeholder ma juz tresc, nie pobieramy niczego - podpinamy tylko zachowanie.
+        if (element.children.length > 0) {
+            loadedComponents[componentName] = true;
+
+            if (componentName === 'header') {
+                requestAnimationFrame(function() {
+                    requestAnimationFrame(initNavigation);
+                });
+            }
+
+            if (loadedComponents.header && loadedComponents.footer) {
+                document.dispatchEvent(new CustomEvent('includesLoaded'));
+            }
+            return;
+        }
+
+        // Fallback: strona bez wklejonego shellu - stara sciezka przez fetch
         fetch(filePath)
             .then(function(response) {
                 if (!response.ok) throw new Error('HTTP ' + response.status);

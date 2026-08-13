@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Platforma 2to2 - Gdzie ludzie i AI pracują wewnątrz realnych procesów</title>
+    <meta name="description" content="2to2 to platforma, na której ludzie i AI pracują razem wewnątrz nadzorowanych procesów. Procesy dostarczane jako aplikacje, uruchamiane w portalu lub osadzane gdziekolwiek.">
+    <meta name="robots" content="index,follow">
+    <meta property="og:title" content="Platforma 2to2 - Ludzie i AI w nadzorowanych procesach">
+    <meta property="og:description" content="Jedna warstwa orkiestracji dla ludzi, AI, reguł i audytu. Buduj aplikacje procesowe i uruchamiaj je gdziekolwiek.">
+    <meta property="og:type" content="website">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#020617">
+
+    <!-- SEO: canonical / hreflang / open graph -->
+    <link rel="canonical" href="https://datapolis.com/pl/platform-2to2">
+    <link rel="alternate" hreflang="en" href="https://datapolis.com/platform-2to2">
+    <link rel="alternate" hreflang="pl" href="https://datapolis.com/pl/platform-2to2">
+    <link rel="alternate" hreflang="de" href="https://datapolis.com/de/platform-2to2">
+    <link rel="alternate" hreflang="es" href="https://datapolis.com/es/platform-2to2">
+    <link rel="alternate" hreflang="x-default" href="https://datapolis.com/platform-2to2">
+    <meta property="og:url" content="https://datapolis.com/pl/platform-2to2">
+    <meta property="og:locale" content="pl_PL">
+    <meta property="og:image" content="https://datapolis.com/assets/img/og-image-1200x630.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <!-- /SEO -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Instrument+Sans:wght@400;500;600;700&amp;display=swap">
+
+    <link rel="stylesheet" href="../assets/css/main.min.css?v=10022025">
+    <link rel="stylesheet" href="../assets/css/async.min.css?v=10022025" media="print" onload="this.media='all'; this.onload=null;">
+    <link rel="stylesheet" href="../assets/css/dark-theme.css?v=3">
+    <link rel="stylesheet" href="../assets/css/new-homepage.css?v=7">
+    <link rel="stylesheet" href="../assets/css/platform-2to2.css?v=2">
+
+    <script src="../includes/loader.js"></script>
+
+    <link rel="icon" type="image/png" href="../assets/img/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="../assets/img/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="../assets/img/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="../assets/img/favicon/site.webmanifest" />
+</head>
+<body class="dark-theme p2t2-page">
+    <!-- Placeholder nagłówka -->
+    <div id="header-placeholder"></div>
+
+    <main>
+        <!-- ========================================
+             SEKCJA HERO - układ dwukolumnowy
+             ======================================== -->
+        <section class="p2t2-hero">
+            <div class="p2t2-hero__grid"></div>
+            <div class="p2t2-hero__glow"></div>
+            
+            <div class="dp-container p2t2-hero__inner">
+                <!-- Left: Content -->
+                <div class="p2t2-hero__content">
+                    <span class="p2t2-hero__label">Platforma 2TO2</span>
+                    
+                    <h1 class="p2t2-hero__title">
+                        Gdzie <span class="accent">ludzie i AI</span> pracują wewnątrz realnych procesów.
+                    </h1>
+                    
+                    <p class="p2t2-hero__intro">
+                        Warstwa operacyjna, w której ludzie i cyfrowi pracownicy (Digital Workers) wykonują zadania — wewnątrz ustrukturyzowanych <span class="accent">przepływów pracy.</span>  Każde działanie jest logowane, zatwierdzane i audytowalne.
+                    </p>
+                    
+                    <!-- Obietnice -->
+       
+                    
+                    <div class="p2t2-hero__bullets">
+                        <span class="p2t2-hero__bullet"><span class="accent">Człowiek + AI</span> w ustrukturalizowanych przepływach pracy</span>
+                        <span class="p2t2-hero__bullet"><span class="accent">Procesy</span> dostarczane jako modułowe aplikacje</span>
+                        <span class="p2t2-hero__bullet">Aplikacje działają na platformie lub gdziekolwiek dzięki osadzeniu</span>
+                    </div>
+                    
+                    <div class="p2t2-hero__actions">
+                        <a href="https://2to2.ai" target="_blank" class="p2t2-btn p2t2-btn--large">Zobacz platformę</a>
+                        <a href="#how-it-works" class="p2t2-btn p2t2-btn--outline p2t2-btn--large">Jak to działa</a>
+                    </div>
+                </div>
+                
+                <!-- Right: Visual Diagram -->
+                <div class="p2t2-hero__visual">
+                    <svg class="p2t2-platform-diagram" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <filter id="glowP2t2" x="-50%" y="-50%" width="200%" height="200%">
+                                <feGaussianBlur stdDeviation="10" result="blur"/>
+                                <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+                            </filter>
+                            <filter id="glowSmall" x="-50%" y="-50%" width="200%" height="200%">
+                                <feGaussianBlur stdDeviation="4" result="blur"/>
+                                <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+                            </filter>
+                            <linearGradient id="processGradP2t2" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#14b8a6"/>
+                                <stop offset="100%" stop-color="#0d9488"/>
+                            </linearGradient>
+                        </defs>
+                        
+                        <!-- Decorative background dots -->
+                        <circle cx="50" cy="80" r="2" fill="#14b8a6" opacity="0.3"/>
+                        <circle cx="350" cy="90" r="2" fill="#14b8a6" opacity="0.25"/>
+                        <circle cx="40" cy="320" r="2" fill="#14b8a6" opacity="0.2"/>
+                        <circle cx="360" cy="310" r="2" fill="#14b8a6" opacity="0.25"/>
+                        <circle cx="200" cy="45" r="2" fill="#14b8a6" opacity="0.2"/>
+                        
+                        <!-- Outer subtle ring -->
+                        <circle cx="200" cy="200" r="160" stroke="#334155" stroke-width="1" fill="none" opacity="0.3"/>
+                        
+                        <!-- Orbit Ring -->
+                        <circle cx="200" cy="200" r="130" stroke="#334155" stroke-width="1" fill="none" stroke-dasharray="4 4"/>
+                        
+                        <!-- Centralny hub procesu -->
+                        <g filter="url(#glowP2t2)">
+                            <circle cx="200" cy="200" r="60" fill="url(#processGradP2t2)"/>
+                            <text x="200" y="195" text-anchor="middle" fill="#020617" font-size="11" font-weight="700" font-family="system-ui, sans-serif" letter-spacing="0.05em">PROCES</text>
+                            <text x="200" y="212" text-anchor="middle" fill="#020617" font-size="9" font-weight="500" font-family="system-ui, sans-serif">Orkiestracja</text>
+                        </g>
+                        
+                        <!-- Węzeł człowieka (góra-lewo) -->
+                        <g>
+                            <circle cx="100" cy="120" r="40" fill="#0f172a" stroke="#334155" stroke-width="2"/>
+                            <circle cx="100" cy="110" r="10" stroke="#94a3b8" stroke-width="1.5" fill="none"/>
+                            <path d="M85 135 Q100 125 115 135" stroke="#94a3b8" stroke-width="1.5" fill="none"/>
+                            <text x="100" y="175" text-anchor="middle" fill="#94a3b8" font-size="9" font-weight="600" font-family="system-ui, sans-serif" letter-spacing="0.03em">CZŁOWIEK</text>
+                        </g>
+                        
+                        <!-- Węzeł AI (góra-prawo) -->
+                        <g>
+                            <circle cx="300" cy="120" r="40" fill="#0f172a" stroke="#334155" stroke-width="2"/>
+                            <circle cx="300" cy="120" r="14" stroke="#94a3b8" stroke-width="1.5" fill="none"/>
+                            <circle cx="300" cy="120" r="5" fill="#94a3b8"/>
+                            <path d="M300 106 V98 M300 134 V142 M286 120 H278 M314 120 H322" stroke="#94a3b8" stroke-width="1.5" stroke-linecap="round"/>
+                            <text x="300" y="175" text-anchor="middle" fill="#94a3b8" font-size="9" font-weight="600" font-family="system-ui, sans-serif" letter-spacing="0.03em">AGENT AI</text>
+                        </g>
+                        
+                        <!-- Węzeł aplikacji (dół-lewo) -->
+                        <g>
+                            <circle cx="100" cy="280" r="40" fill="#0f172a" stroke="#14b8a6" stroke-width="2" stroke-opacity="0.5"/>
+                            <rect x="82" y="262" width="36" height="36" rx="4" stroke="#14b8a6" stroke-width="1.5" fill="none"/>
+                            <line x1="88" y1="272" x2="112" y2="272" stroke="#14b8a6" stroke-width="1.5"/>
+                            <line x1="88" y1="280" x2="106" y2="280" stroke="#14b8a6" stroke-width="1.5"/>
+                            <line x1="88" y1="288" x2="100" y2="288" stroke="#14b8a6" stroke-width="1.5"/>
+                            <text x="100" y="335" text-anchor="middle" fill="#94a3b8" font-size="9" font-weight="600" font-family="system-ui, sans-serif" letter-spacing="0.03em">APLIKACJA</text>
+                        </g>
+                        
+                        <!-- Węzeł systemów (dół-prawo) -->
+                        <g>
+                            <circle cx="300" cy="280" r="40" fill="#0f172a" stroke="#334155" stroke-width="2"/>
+                            <ellipse cx="300" cy="268" rx="18" ry="6" stroke="#94a3b8" stroke-width="1.5" fill="none"/>
+                            <path d="M282 268 v20 c0 3.3 8 6 18 6 s18-2.7 18-6 v-20" stroke="#94a3b8" stroke-width="1.5" fill="none"/>
+                            <path d="M282 280 c0 3.3 8 6 18 6 s18-2.7 18-6" stroke="#94a3b8" stroke-width="1.5" fill="none"/>
+                            <text x="300" y="335" text-anchor="middle" fill="#94a3b8" font-size="9" font-weight="600" font-family="system-ui, sans-serif" letter-spacing="0.03em">SYSTEMY</text>
+                        </g>
+                        
+                        <!-- Connection Lines with animated dots -->
+                        <path d="M140 140 L160 175" stroke="#14b8a6" stroke-width="2" stroke-opacity="0.5" stroke-dasharray="6 4">
+                            <animate attributeName="stroke-dashoffset" from="10" to="0" dur="1s" repeatCount="indefinite"/>
+                        </path>
+                        <path d="M260 140 L240 175" stroke="#14b8a6" stroke-width="2" stroke-opacity="0.5" stroke-dasharray="6 4">
+                            <animate attributeName="stroke-dashoffset" from="10" to="0" dur="1s" repeatCount="indefinite"/>
+                        </path>
+                        <path d="M140 260 L160 225" stroke="#14b8a6" stroke-width="2" stroke-opacity="0.5" stroke-dasharray="6 4">
+                            <animate attributeName="stroke-dashoffset" from="10" to="0" dur="1s" repeatCount="indefinite"/>
+                        </path>
+                        <path d="M260 260 L240 225" stroke="#14b8a6" stroke-width="2" stroke-opacity="0.5" stroke-dasharray="6 4">
+                            <animate attributeName="stroke-dashoffset" from="10" to="0" dur="1s" repeatCount="indefinite"/>
+                        </path>
+                        
+                        <!-- Small glowing dots at connection points -->
+                        <g filter="url(#glowSmall)">
+                            <circle cx="150" cy="157" r="3" fill="#14b8a6" opacity="0.8"/>
+                            <circle cx="250" cy="157" r="3" fill="#14b8a6" opacity="0.8"/>
+                            <circle cx="150" cy="243" r="3" fill="#14b8a6" opacity="0.8"/>
+                            <circle cx="250" cy="243" r="3" fill="#14b8a6" opacity="0.8"/>
+                        </g>
+                        
+                        <!-- Podpis -->
+                        <text x="200" y="382" text-anchor="middle" fill="#64748b" font-size="9" font-family="system-ui, sans-serif" letter-spacing="0.08em">JEDNA WARSTWA ORKIESTRACJI</text>
+                    </svg>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================
+             SEKCJA: Procesy są systemem referencyjnym
+             ======================================== -->
+        <section id="how-it-works" class="p2t2-section p2t2-section--alt">
+            <div class="dp-container">
+                <div class="p2t2-section__header">
+                    <h2 class="p2t2-section__title"><span class="accent">Procesy</span> definiują zasady działania.</h2>
+                    <p class="p2t2-section__subtitle">
+                        Nie AI. Nie aplikacje. Proces definiuje kto co robi, kiedy i według jakich reguł.
+                        Wszystko inne — ludzie, AI, interfejsy — działa wewnątrz struktury procesu.
+                    </p>
+                </div>
+                
+                <div class="p2t2-cards">
+                    <!-- Karta 1: Działają ludzie -->
+                    <div class="p2t2-card">
+                        <div class="p2t2-card__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="8" r="4"/>
+                                <path d="M6 21v-2a4 4 0 014-4h4a4 4 0 014 4v2"/>
+                            </svg>
+                        </div>
+                        <h3 class="p2t2-card__title">Ludzie pracują i nadzorują</h3>
+                        <p class="p2t2-card__desc">Podejmują decyzje, udzielają zatwierdzeń, obsługują wyjątki. Ludzie kontrolują tam, gdzie to ma znaczenie.</p>
+                    </div>
+                    
+                    <!-- Karta 2: Działa AI -->
+                    <div class="p2t2-card">
+                        <div class="p2t2-card__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="6"/>
+                                <circle cx="12" cy="12" r="2"/>
+                                <path d="M12 2v4M12 18v4M2 12h4M18 12h4"/>
+                            </svg>
+                        </div>
+                        <h3 class="p2t2-card__title">AI pracuje</h3>
+                        <p class="p2t2-card__desc">Wykonuje zadania, przetwarza dane, wspiera użytkowników. Cyfrowi pracownicy działają wewnątrz tej samej warstwy nadzoru.</p>
+                    </div>
+                    
+                    <!-- Karta 3: Proces nadzoruje (główny akcent) -->
+                    <div class="p2t2-card p2t2-card--primary">
+                        <div class="p2t2-card__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                                <path d="M9 12l2 2 4-4"/>
+                            </svg>
+                        </div>
+                        <h3 class="p2t2-card__title">Proces <span class="accent">organizuje pracę</span></h3>
+                        <p class="p2t2-card__desc">Reguły, właścicielstwo, kierowanie i ścieżka audytu. Proces jest jedynym źródłem prawdy.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================
+             SEKCJA: Procesy dostarczane jako aplikacje
+             ======================================== -->
+        <section class="p2t2-section">
+            <div class="dp-container">
+                <div class="p2t2-section__header">
+                    <h2 class="p2t2-section__title"><span class="accent">Procesy</span> dostarczane jako gotowe aplikacje</h2>
+                    <p class="p2t2-section__subtitle">
+                        Każdy proces staje się gotową aplikacją ze wszystkimi niezbędnymi elementam.
+                    </p>
+                </div>
+                
+                <div class="p2t2-icon-grid">
+                    <div class="p2t2-icon-item">
+                        <div class="p2t2-icon-item__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="3" width="18" height="18" rx="2"/>
+                                <path d="M9 9h6M9 13h6M9 17h4"/>
+                            </svg>
+                        </div>
+                        <span class="p2t2-icon-item__label">Formularze</span>
+                    </div>
+                    
+                    <div class="p2t2-icon-item">
+                        <div class="p2t2-icon-item__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="8" y1="6" x2="21" y2="6"/>
+                                <line x1="8" y1="12" x2="21" y2="12"/>
+                                <line x1="8" y1="18" x2="21" y2="18"/>
+                                <line x1="3" y1="6" x2="3.01" y2="6"/>
+                                <line x1="3" y1="12" x2="3.01" y2="12"/>
+                                <line x1="3" y1="18" x2="3.01" y2="18"/>
+                            </svg>
+                        </div>
+                        <span class="p2t2-icon-item__label">Listy</span>
+                    </div>
+                    
+                    <div class="p2t2-icon-item">
+                        <div class="p2t2-icon-item__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="3" width="18" height="18" rx="2"/>
+                                <path d="M3 9h18M9 21V9"/>
+                            </svg>
+                        </div>
+                        <span class="p2t2-icon-item__label">Pulpity</span>
+                    </div>
+                    
+                    <div class="p2t2-icon-item">
+                        <div class="p2t2-icon-item__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M9 11l3 3L22 4"/>
+                                <path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/>
+                            </svg>
+                        </div>
+                        <span class="p2t2-icon-item__label">Zadania</span>
+                    </div>
+                    
+                    <div class="p2t2-icon-item">
+                        <div class="p2t2-icon-item__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                                <circle cx="9" cy="7" r="4"/>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                            </svg>
+                        </div>
+                        <span class="p2t2-icon-item__label">Role</span>
+                    </div>
+                    
+                    <div class="p2t2-icon-item">
+                        <div class="p2t2-icon-item__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"/>
+                                <polyline points="12 6 12 12 16 14"/>
+                            </svg>
+                        </div>
+                        <span class="p2t2-icon-item__label">Stany</span>
+                    </div>
+                    
+                    <div class="p2t2-icon-item">
+                        <div class="p2t2-icon-item__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                                <line x1="16" y1="2" x2="16" y2="6"/>
+                                <line x1="8" y1="2" x2="8" y2="6"/>
+                                <line x1="3" y1="10" x2="21" y2="10"/>
+                            </svg>
+                        </div>
+                        <span class="p2t2-icon-item__label">Aktywności</span>
+                    </div>
+                </div>
+                
+                <p class="p2t2-closing">Każdy przepływ pracy staje się użyteczną aplikacją.</p>
+            </div>
+        </section>
+
+        <!-- ========================================
+             SEKCJA: Używaj aplikacji tam, gdzie użytkownicy już są
+             ======================================== -->
+        <section class="p2t2-section p2t2-section--alt">
+            <div class="dp-container">
+                <div class="p2t2-section__header">
+                    <h2 class="p2t2-section__title">Korzystaj z aplikacji tam, gdzie użytkownicy już są</h2>
+                    <p class="p2t2-section__subtitle">
+                        Wdrażaj aplikacje procesowe na swoim  wewnętrznym portalu lub osadzaj je w systemach zewnętrznych. Ten sam proces, różne punkty dostępu.
+                    </p>
+                </div>
+                
+                <div class="p2t2-columns">
+                    <!-- Lewo: Portal platformy -->
+                    <div class="p2t2-column">
+                        <div class="p2t2-column__header">
+                            <div class="p2t2-column__icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="3" y="3" width="18" height="18" rx="2"/>
+                                    <path d="M3 9h18M9 21V9"/>
+                                </svg>
+                            </div>
+                            <h3 class="p2t2-column__title">Portal platformy</h3>
+                        </div>
+                        <ul class="p2t2-column__list">
+                            <li>Użytkownicy wewnętrzni i zespoły</li>
+                            <li>Pełna przestrzeń robocza ze wszystkimi aplikacjami</li>
+                            <li>Widoczność i dostęp oparte na rolach</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Prawo: Osadzone moduły -->
+                    <div class="p2t2-column">
+                        <div class="p2t2-column__header">
+                            <div class="p2t2-column__icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M16 18L22 12L16 6"/>
+                                    <path d="M8 6L2 12L8 18"/>
+                                </svg>
+                            </div>
+                            <h3 class="p2t2-column__title">Osadzone moduły</h3>
+                        </div>
+                        <ul class="p2t2-column__list">
+                            <li>Użytkownicy zewnętrzni i partnerzy</li>
+                            <li>Publiczne lub bezpieczne osadzenia</li>
+                            <li>Brak wymaganego dostępu do platformy</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <p class="p2t2-caption">Jeden proces. Wiele punktów wejścia.</p>
+            </div>
+        </section>
+
+        <!-- ========================================
+             SEKCJA: Jedna warstwa orkiestracji
+             ======================================== -->
+        <section class="p2t2-section">
+            <div class="dp-container">
+                <div class="p2t2-section__header">
+                    <h2 class="p2t2-section__title">Jedna warstwa <span class="accent">orkiestracji</span> pracy</h2>
+                    <p class="p2t2-section__subtitle">
+                        Jedna warstwa procesu nadzoruje całą pracę —
+                        zadania ludzi, zadania AI, reguły biznesowe i zgodność.
+                        Nic nie działa poza procesem.
+                    </p>
+                </div>
+                
+                <div class="p2t2-cards">
+                    <!-- Karta 1: Maszyna stanów -->
+                    <div class="p2t2-card">
+                        <div class="p2t2-card__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="6" cy="6" r="3"/>
+                                <circle cx="6" cy="18" r="3"/>
+                                <circle cx="18" cy="18" r="3"/>
+                                <path d="M6 9v6M9 18h6M9 6h6l3 6"/>
+                            </svg>
+                        </div>
+                        <h3 class="p2t2-card__title">Maszyna stanów</h3>
+                        <p class="p2t2-card__desc">Praca przechodzi przez zdefiniowane stany. Przejścia podlegają regułom. Każda zmiana jest śledzona.</p>
+                    </div>
+                    
+                    <!-- Karta 2: Zadania człowieka i AI -->
+                    <div class="p2t2-card">
+                        <div class="p2t2-card__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="9" cy="7" r="4"/>
+                                <path d="M3 21v-2a4 4 0 014-4h4a4 4 0 014 4v2"/>
+                                <circle cx="19" cy="11" r="2"/>
+                                <path d="M19 8v1M19 13v1M16 11h1M21 11h1"/>
+                            </svg>
+                        </div>
+                        <h3 class="p2t2-card__title">Zadania człowieka i AI</h3>
+                        <p class="p2t2-card__desc">Przydzielaj pracę ludziom lub cyfrowym pracownikom. Wszyscy podążają za tym samym cyklem życia zadań i regułami.</p>
+                    </div>
+                    
+                    <!-- Karta 3: Polityki, zatwierdzenia, audyt -->
+                    <div class="p2t2-card">
+                        <div class="p2t2-card__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/>
+                                <polyline points="14 2 14 8 20 8"/>
+                                <line x1="16" y1="13" x2="8" y2="13"/>
+                                <line x1="16" y1="17" x2="8" y2="17"/>
+                                <polyline points="10 9 9 9 8 9"/>
+                            </svg>
+                        </div>
+                        <h3 class="p2t2-card__title">Polityki, zatwierdzenia, audyt</h3>
+                        <p class="p2t2-card__desc">Reguły biznesowe wymuszane automatycznie. Zatwierdzenia kierowane właściwie. Pełna ścieżka audytu zachowana.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================
+             SEKCJA: Dlaczego zespoły wybierają 2to2
+             ======================================== -->
+        <section class="p2t2-section p2t2-section--alt">
+            <div class="dp-container">
+                <div class="p2t2-section__header">
+                    <h2 class="p2t2-section__title">Dlaczego zespoły wybierają <span class="accent">2to2</span></h2>
+                </div>
+                
+                <div class="p2t2-checklist">
+                    <div class="p2t2-checklist__item">
+                        <div class="p2t2-checklist__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="20 6 9 17 4 12"/>
+                            </svg>
+                        </div>
+                        <span>Pełna widoczność wszystkich działań</span>
+                    </div>
+                    
+                    <div class="p2t2-checklist__item">
+                        <div class="p2t2-checklist__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="20 6 9 17 4 12"/>
+                            </svg>
+                        </div>
+                        <span>Ludzie i AI pod jednym dachem</span>
+                    </div>
+                    
+                    <div class="p2t2-checklist__item">
+                        <div class="p2t2-checklist__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="20 6 9 17 4 12"/>
+                            </svg>
+                        </div>
+                        <span>Nadzór na poziomie enterprise</span>
+                    </div>
+                    
+                    <div class="p2t2-checklist__item">
+                        <div class="p2t2-checklist__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="20 6 9 17 4 12"/>
+                            </svg>
+                        </div>
+                        <span>Wdrażaj gdziekolwiek, kontroluj z jednego miejsca</span>
+                    </div>
+                </div>
+                
+                <p class="p2t2-closing-statement">Pracę można skalować, gdy jest <span class="accent">ustrukturyzowana</span>.</p>
+                
+                <!-- Kotwica wiarygodności -->
+                <p class="p2t2-credibility">Zbudowane na dekadach doświadczeń w przepływach pracy klasy enterprise</p>
+            </div>
+        </section>
+
+        <!-- ========================================
+             KOŃCOWE CTA
+             ======================================== -->
+        <section class="p2t2-final">
+            <div class="p2t2-final__glow"></div>
+            <div class="dp-container">
+                <div class="p2t2-final__content">
+                    <h2 class="p2t2-final__title">Run work. <span class="accent">Speed up the flow.</span></h2>
+                    <p class="p2t2-final__subtitle">Procesy biznesowe dla ludzi i AI</p>
+                    
+                    <div class="p2t2-final__actions">
+                        <a href="https://2to2.ai" target="_blank" class="p2t2-btn p2t2-btn--large">Zobacz platformę</a>
+                        <a href="contact.html" class="p2t2-btn p2t2-btn--outline p2t2-btn--large">Skontaktuj się z nami</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Placeholder stopki -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Skrypty -->
+    <script>
+        document.addEventListener('includesLoaded', function() {
+            var scripts = [
+                '../assets/js/vendors.min.js',
+                '../assets/js/main.min.js',
+                '../assets/js/functions.min.js',
+                '../assets/js/async.min.js'
+            ];
+            
+            function loadScript(index) {
+                if (index >= scripts.length) return;
+                
+                var script = document.createElement('script');
+                script.src = scripts[index];
+                script.onload = function() {
+                    loadScript(index + 1);
+                };
+                document.body.appendChild(script);
+            }
+            
+            loadScript(0);
+        });
+
+        // Płynne przewijanie dla linków kotwic
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

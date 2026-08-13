@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Humans + Agents - AI as Digital Worker Inside Governed Processes | Datapolis</title>
+    <meta name="description" content="Humans and AI don't replace each other. They work together inside the same process, under the same rules, approvals, and accountability.">
+    <meta name="robots" content="index,follow">
+    <meta property="og:title" content="Humans + Agents - AI as Digital Worker Inside Governed Processes">
+    <meta property="og:description" content="Datapolis treats AI as a digital worker, not a chatbot. Humans and agents execute tasks side by side, under the same rules.">
+    <meta property="og:type" content="website">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#020617">
+
+    <!-- SEO: canonical / hreflang / open graph -->
+    <link rel="canonical" href="https://datapolis.com/humans-agents">
+    <link rel="alternate" hreflang="en" href="https://datapolis.com/humans-agents">
+    <link rel="alternate" hreflang="pl" href="https://datapolis.com/pl/humans-agents">
+    <link rel="alternate" hreflang="de" href="https://datapolis.com/de/humans-agents">
+    <link rel="alternate" hreflang="es" href="https://datapolis.com/es/humans-agents">
+    <link rel="alternate" hreflang="x-default" href="https://datapolis.com/humans-agents">
+    <meta property="og:url" content="https://datapolis.com/humans-agents">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:image" content="https://datapolis.com/assets/img/og-image-1200x630.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <!-- /SEO -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Instrument+Sans:wght@400;500;600;700&amp;display=swap">
+
+    <link rel="stylesheet" href="assets/css/main.min.css?v=20260813">
+    <link rel="stylesheet" href="assets/css/async.min.css?v=20260813" media="print" onload="this.media='all'; this.onload=null;">
+    <link rel="stylesheet" href="assets/css/dark-theme.css?v=20260813">
+    <link rel="stylesheet" href="assets/css/new-homepage.css?v=20260813">
+    <link rel="stylesheet" href="assets/css/humans-agents.css?v=20260813">
+
+    <script src="includes/loader.js"></script>
+
+    <link rel="icon" type="image/png" href="assets/img/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="assets/img/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="assets/img/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="assets/img/favicon/site.webmanifest" />
+</head>
+<body class="dark-theme ha-page">
+    <!-- Header Placeholder -->
+    <div id="header-placeholder"></div>
+
+    <main>
+        <!-- ========================================
+             HERO SECTION
+             ======================================== -->
+        <section class="ha-hero">
+            <div class="ha-hero__grid"></div>
+            <div class="ha-hero__glow"></div>
+            
+            <div class="ha-container ha-hero__inner">
+                <!-- Left: Content -->
+                <div class="ha-hero__content">
+                    <span class="ha-label">Humans + Agents</span>
+                    
+                    <h1 class="ha-hero__title">
+                        Humans and AI don't replace each other.<br>
+                        <span class="accent">They work together</span> — inside the process.
+                    </h1>
+                    
+                    <p class="ha-hero__subtitle">
+                        Datapolis treats AI as a digital worker, not a chatbot.<br>
+                        Humans and agents execute tasks side by side, under the same rules, approvals, and accountability.
+                    </p>
+                    
+                    <div class="ha-hero__actions">
+                        <a href="platform-2to2.html" class="ha-btn ha-btn--large">See the platform</a>
+                        <a href="security-governance.html" class="ha-btn ha-btn--outline ha-btn--large">Explore governance</a>
+                    </div>
+                </div>
+                
+                <!-- Right: Process Collaboration SVG -->
+                <div class="ha-hero__visual">
+                    <svg class="ha-collab-diagram" viewBox="0 0 460 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <filter id="glowHa" x="-50%" y="-50%" width="200%" height="200%">
+                                <feGaussianBlur stdDeviation="6" result="blur"/>
+                                <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+                            </filter>
+                            <filter id="glowSmallHa" x="-50%" y="-50%" width="200%" height="200%">
+                                <feGaussianBlur stdDeviation="3" result="blur"/>
+                                <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+                            </filter>
+                            <linearGradient id="tealGradHa" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#14b8a6"/>
+                                <stop offset="100%" stop-color="#0d9488"/>
+                            </linearGradient>
+                        </defs>
+                        
+                        <!-- Background decorative dots -->
+                        <circle cx="30" cy="40" r="2" fill="#14b8a6" opacity="0.25"/>
+                        <circle cx="430" cy="50" r="2" fill="#14b8a6" opacity="0.2"/>
+                        <circle cx="20" cy="360" r="2" fill="#14b8a6" opacity="0.15"/>
+                        <circle cx="440" cy="350" r="2" fill="#14b8a6" opacity="0.2"/>
+                        
+                        <!-- Central PROCESS node -->
+                        <g filter="url(#glowHa)">
+                            <rect x="155" y="170" width="150" height="60" rx="12" fill="url(#tealGradHa)"/>
+                            <text x="230" y="196" text-anchor="middle" fill="#020617" font-size="12" font-weight="700" font-family="system-ui, sans-serif" letter-spacing="0.08em">PROCESS</text>
+                            <text x="230" y="212" text-anchor="middle" fill="#020617" font-size="8" font-weight="500" font-family="system-ui, sans-serif" opacity="0.8">System of Record</text>
+                        </g>
+                        
+                        <!-- Human Actor (left) -->
+                        <g class="ha-actor">
+                            <circle cx="80" cy="200" r="45" fill="#0f172a" stroke="#14b8a6" stroke-width="1.5"/>
+                            <!-- Human icon -->
+                            <circle cx="80" cy="188" r="14" stroke="#f8fafc" stroke-width="2" fill="none"/>
+                            <path d="M58 225 Q80 210 102 225" stroke="#f8fafc" stroke-width="2" fill="none"/>
+                            <text x="80" y="260" text-anchor="middle" fill="#f8fafc" font-size="11" font-weight="600" font-family="system-ui, sans-serif">HUMAN</text>
+                        </g>
+                        
+                        <!-- Digital Worker Actor (right) -->
+                        <g class="ha-actor">
+                            <circle cx="380" cy="200" r="45" fill="#0f172a" stroke="#14b8a6" stroke-width="1.5"/>
+                            <!-- AI/Digital Worker icon -->
+                            <rect x="358" y="178" width="44" height="44" rx="8" stroke="#f8fafc" stroke-width="2" fill="none"/>
+                            <circle cx="380" cy="200" r="10" stroke="#14b8a6" stroke-width="2" fill="none"/>
+                            <circle cx="380" cy="200" r="4" fill="#14b8a6"/>
+                            <text x="380" y="260" text-anchor="middle" fill="#f8fafc" font-size="10" font-weight="600" font-family="system-ui, sans-serif">DIGITAL WORKER</text>
+                        </g>
+                        
+                        <!-- Connection lines to Process -->
+                        <line x1="125" y1="200" x2="155" y2="200" stroke="#14b8a6" stroke-width="2" stroke-dasharray="6 4" class="ha-pulse-line"/>
+                        <line x1="305" y1="200" x2="335" y2="200" stroke="#14b8a6" stroke-width="2" stroke-dasharray="6 4" class="ha-pulse-line"/>
+                        
+                        <!-- Bottom connectors: Tasks, Rules, Audit -->
+                        <g>
+                            <!-- Tasks -->
+                            <line x1="190" y1="230" x2="140" y2="310" stroke="#334155" stroke-width="1.5" stroke-dasharray="4 3"/>
+                            <rect x="100" y="310" width="80" height="35" rx="8" fill="#0f172a" stroke="#64748b" stroke-width="1"/>
+                            <text x="140" y="332" text-anchor="middle" fill="#94a3b8" font-size="10" font-weight="600" font-family="system-ui, sans-serif">TASKS</text>
+                            
+                            <!-- Rules -->
+                            <line x1="230" y1="230" x2="230" y2="310" stroke="#334155" stroke-width="1.5" stroke-dasharray="4 3"/>
+                            <rect x="190" y="310" width="80" height="35" rx="8" fill="#0f172a" stroke="#64748b" stroke-width="1"/>
+                            <text x="230" y="332" text-anchor="middle" fill="#94a3b8" font-size="10" font-weight="600" font-family="system-ui, sans-serif">RULES</text>
+                            
+                            <!-- Audit Trail -->
+                            <line x1="270" y1="230" x2="320" y2="310" stroke="#334155" stroke-width="1.5" stroke-dasharray="4 3"/>
+                            <rect x="280" y="310" width="80" height="35" rx="8" fill="#0f172a" stroke="#64748b" stroke-width="1"/>
+                            <text x="320" y="332" text-anchor="middle" fill="#94a3b8" font-size="10" font-weight="600" font-family="system-ui, sans-serif">AUDIT TRAIL</text>
+                        </g>
+                        
+                        <!-- Top labels: Equal treatment -->
+                        <rect x="60" y="70" width="80" height="24" rx="12" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+                        <text x="100" y="86" text-anchor="middle" fill="#64748b" font-size="8" font-weight="500" font-family="system-ui, sans-serif">Same rules</text>
+                        
+                        <rect x="320" y="70" width="80" height="24" rx="12" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+                        <text x="360" y="86" text-anchor="middle" fill="#64748b" font-size="8" font-weight="500" font-family="system-ui, sans-serif">Same rules</text>
+                        
+                        <!-- Connecting lines from top labels -->
+                        <line x1="100" y1="94" x2="80" y2="155" stroke="#334155" stroke-width="1" stroke-dasharray="3 3" opacity="0.5"/>
+                        <line x1="360" y1="94" x2="380" y2="155" stroke="#334155" stroke-width="1" stroke-dasharray="3 3" opacity="0.5"/>
+                        
+                        <!-- Glowing connector dots -->
+                        <g filter="url(#glowSmallHa)">
+                            <circle cx="125" cy="200" r="4" fill="#14b8a6" opacity="0.8"/>
+                            <circle cx="335" cy="200" r="4" fill="#14b8a6" opacity="0.8"/>
+                        </g>
+                        
+                        <!-- Pulsing ring around process -->
+                        <rect x="145" y="160" width="170" height="80" rx="18" fill="none" stroke="#14b8a6" stroke-width="1" class="ha-pulse" opacity="0.4"/>
+                        
+                        <!-- Caption -->
+                        <text x="230" y="385" text-anchor="middle" fill="#64748b" font-size="9" font-family="system-ui, sans-serif" letter-spacing="0.06em">ONE PROCESS • TWO EXECUTORS • SAME GOVERNANCE</text>
+                    </svg>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================
+             CORE PRINCIPLE SECTION
+             ======================================== -->
+        <section class="ha-principle">
+            <div class="ha-principle__grid"></div>
+            <div class="ha-container">
+                <div class="ha-principle__content">
+                    <h2 class="ha-principle__headline">
+                        Same process. Same rules. <span class="accent">Different executors.</span>
+                    </h2>
+                    <p class="ha-principle__text">
+                        Whether a task is executed by a person or by an AI agent, the process remains the system of record.
+                    </p>
+                    
+                    <div class="ha-principle__points">
+                        <div class="ha-principle__point">
+                            <div class="ha-principle__dot"></div>
+                            <span>The process defines <strong>who</strong> can act</span>
+                        </div>
+                        <div class="ha-principle__point">
+                            <div class="ha-principle__dot"></div>
+                            <span>The process defines <strong>when</strong></span>
+                        </div>
+                        <div class="ha-principle__point">
+                            <div class="ha-principle__dot"></div>
+                            <span>The process defines <strong>under what conditions</strong></span>
+                        </div>
+                    </div>
+                    
+                    <p class="ha-principle__statement">
+                        AI does not bypass governance.<br>
+                        Humans do not lose control.
+                    </p>
+                    
+                    <div class="ha-principle__bullets">
+                        <div class="ha-principle__bullet">No special paths for AI</div>
+                        <div class="ha-principle__bullet">No hidden automations</div>
+                        <div class="ha-principle__bullet">No decisions outside the workflow</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================
+             HUMAN TASKS vs AI TASKS
+             ======================================== -->
+        <section class="ha-section ha-section--alt">
+            <div class="ha-container">
+                <div class="ha-comparison">
+                    <!-- Card 1: Human Tasks -->
+                    <div class="ha-comparison__card">
+                        <div class="ha-comparison__icon ha-comparison__icon--human">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/>
+                                <circle cx="12" cy="7" r="4"/>
+                            </svg>
+                        </div>
+                        <h3 class="ha-comparison__title">Human Tasks</h3>
+                        <p class="ha-comparison__tagline">Where judgment matters</p>
+                        
+                        <ul class="ha-comparison__list">
+                            <li>Review and approve</li>
+                            <li>Handle exceptions</li>
+                            <li>Make final decisions</li>
+                            <li>Own accountability</li>
+                        </ul>
+                        
+                        <p class="ha-comparison__footer">
+                            Humans stay in control where responsibility cannot be automated.
+                        </p>
+                    </div>
+                    
+                    <!-- Card 2: AI Tasks -->
+                    <div class="ha-comparison__card">
+                        <div class="ha-comparison__icon ha-comparison__icon--ai">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="3" width="18" height="18" rx="2"/>
+                                <circle cx="12" cy="12" r="4"/>
+                                <circle cx="12" cy="12" r="1" fill="currentColor"/>
+                            </svg>
+                        </div>
+                        <h3 class="ha-comparison__title">AI Tasks</h3>
+                        <p class="ha-comparison__tagline">Where speed and consistency matter</p>
+                        
+                        <ul class="ha-comparison__list">
+                            <li>Process data</li>
+                            <li>Classify and validate</li>
+                            <li>Prepare decisions</li>
+                            <li>Execute repeatable steps</li>
+                        </ul>
+                        
+                        <p class="ha-comparison__footer">
+                            AI assists the process — it does not redefine it.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================
+             CONTROLLED HANDOFFS SECTION
+             ======================================== -->
+        <section class="ha-section">
+            <div class="ha-container">
+                <div class="ha-section__header">
+                    <h2 class="ha-section__title">No broken handoffs. <span class="accent">No guessing.</span></h2>
+                    <p class="ha-section__subtitle">
+                        Work moves between humans and agents through explicit process states — not prompts, messages, or ad-hoc instructions.
+                    </p>
+                </div>
+                
+                <div class="ha-handoff">
+                    <!-- Visual timeline -->
+                    <div class="ha-handoff__visual">
+                        <svg class="ha-handoff-diagram" viewBox="0 0 800 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Main flow line -->
+                            <line x1="80" y1="60" x2="720" y2="60" stroke="#334155" stroke-width="2"/>
+                            
+                            <!-- State 1: Initial -->
+                            <g>
+                                <circle cx="100" cy="60" r="20" fill="#0f172a" stroke="#14b8a6" stroke-width="2"/>
+                                <text x="100" y="64" text-anchor="middle" fill="#14b8a6" font-size="10" font-weight="600" font-family="system-ui, sans-serif">S1</text>
+                                <text x="100" y="100" text-anchor="middle" fill="#64748b" font-size="9" font-family="system-ui, sans-serif">State</text>
+                            </g>
+                            
+                            <!-- Arrow 1 -->
+                            <path d="M130 60 L220 60" stroke="#14b8a6" stroke-width="2" stroke-dasharray="6 4" marker-end="url(#arrowHa)"/>
+                            
+                            <!-- Task 1: AI -->
+                            <g>
+                                <rect x="230" y="35" width="100" height="50" rx="8" fill="#0f172a" stroke="#14b8a6" stroke-width="1.5"/>
+                                <rect x="238" y="43" width="20" height="20" rx="4" fill="rgba(20, 184, 166, 0.2)" stroke="#14b8a6" stroke-width="1"/>
+                                <circle cx="248" cy="53" r="4" fill="#14b8a6"/>
+                                <text x="280" y="50" fill="#f8fafc" font-size="9" font-weight="600" font-family="system-ui, sans-serif">AI Task</text>
+                                <text x="280" y="63" fill="#64748b" font-size="8" font-family="system-ui, sans-serif">Process data</text>
+                            </g>
+                            
+                            <!-- Arrow 2 -->
+                            <path d="M340 60 L400 60" stroke="#14b8a6" stroke-width="2" stroke-dasharray="6 4"/>
+                            
+                            <!-- State 2 -->
+                            <g>
+                                <circle cx="420" cy="60" r="20" fill="#0f172a" stroke="#14b8a6" stroke-width="2"/>
+                                <text x="420" y="64" text-anchor="middle" fill="#14b8a6" font-size="10" font-weight="600" font-family="system-ui, sans-serif">S2</text>
+                                <text x="420" y="100" text-anchor="middle" fill="#64748b" font-size="9" font-family="system-ui, sans-serif">State</text>
+                            </g>
+                            
+                            <!-- Arrow 3 -->
+                            <path d="M450 60 L530 60" stroke="#14b8a6" stroke-width="2" stroke-dasharray="6 4"/>
+                            
+                            <!-- Task 2: Human -->
+                            <g>
+                                <rect x="540" y="35" width="100" height="50" rx="8" fill="#0f172a" stroke="#14b8a6" stroke-width="1.5"/>
+                                <circle cx="558" cy="53" r="10" stroke="#f8fafc" stroke-width="1.5" fill="none"/>
+                                <path d="M550 68 Q558 62 566 68" stroke="#f8fafc" stroke-width="1.5" fill="none"/>
+                                <text x="592" y="50" fill="#f8fafc" font-size="9" font-weight="600" font-family="system-ui, sans-serif">Human</text>
+                                <text x="592" y="63" fill="#64748b" font-size="8" font-family="system-ui, sans-serif">Approval</text>
+                            </g>
+                            
+                            <!-- Arrow 4 -->
+                            <path d="M650 60 L690 60" stroke="#14b8a6" stroke-width="2" stroke-dasharray="6 4"/>
+                            
+                            <!-- State 3: Final -->
+                            <g>
+                                <circle cx="710" cy="60" r="20" fill="url(#tealGradHa2)" stroke="#14b8a6" stroke-width="2"/>
+                                <text x="710" y="64" text-anchor="middle" fill="#020617" font-size="10" font-weight="700" font-family="system-ui, sans-serif">S3</text>
+                                <text x="710" y="100" text-anchor="middle" fill="#64748b" font-size="9" font-family="system-ui, sans-serif">Done</text>
+                            </g>
+                            
+                            <defs>
+                                <marker id="arrowHa" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+                                    <path d="M0,0 L8,4 L0,8 Z" fill="#14b8a6"/>
+                                </marker>
+                                <linearGradient id="tealGradHa2" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="#14b8a6"/>
+                                    <stop offset="100%" stop-color="#0d9488"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                    
+                    <div class="ha-handoff__properties">
+                        <div class="ha-handoff__prop">
+                            <span class="ha-handoff__prop-label">Every handoff is:</span>
+                        </div>
+                        <div class="ha-handoff__prop-list">
+                            <div class="ha-handoff__prop-item">
+                                <div class="ha-handoff__prop-dot"></div>
+                                <span>Defined</span>
+                            </div>
+                            <div class="ha-handoff__prop-item">
+                                <div class="ha-handoff__prop-dot"></div>
+                                <span>Visible</span>
+                            </div>
+                            <div class="ha-handoff__prop-item">
+                                <div class="ha-handoff__prop-dot"></div>
+                                <span>Auditable</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="ha-handoff__questions">
+                        <p class="ha-handoff__questions-label">Always answerable:</p>
+                        <div class="ha-handoff__question">Why did this task move to AI?</div>
+                        <div class="ha-handoff__question">Why did it return to a human?</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================
+             AI WITH LIMITS SECTION
+             ======================================== -->
+        <section class="ha-section ha-section--alt">
+            <div class="ha-container">
+                <div class="ha-section__header">
+                    <h2 class="ha-section__title">AI can act — <span class="accent">but never decide alone.</span></h2>
+                    <p class="ha-section__subtitle">
+                        AI agents operate within permissions, states, and escalation rules.
+                    </p>
+                </div>
+                
+                <div class="ha-limits">
+                    <!-- Can do -->
+                    <div class="ha-limits__col">
+                        <h4 class="ha-limits__heading ha-limits__heading--can">They can:</h4>
+                        <div class="ha-limits__items">
+                            <div class="ha-limits__item ha-limits__item--can">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="20 6 9 17 4 12"/>
+                                </svg>
+                                <span>Execute</span>
+                            </div>
+                            <div class="ha-limits__item ha-limits__item--can">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="20 6 9 17 4 12"/>
+                                </svg>
+                                <span>Suggest</span>
+                            </div>
+                            <div class="ha-limits__item ha-limits__item--can">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="20 6 9 17 4 12"/>
+                                </svg>
+                                <span>Prepare</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Cannot do -->
+                    <div class="ha-limits__col">
+                        <h4 class="ha-limits__heading ha-limits__heading--cannot">They cannot:</h4>
+                        <div class="ha-limits__items">
+                            <div class="ha-limits__item ha-limits__item--cannot">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="18" y1="6" x2="6" y2="18"/>
+                                    <line x1="6" y1="6" x2="18" y2="18"/>
+                                </svg>
+                                <span>Approve restricted actions</span>
+                            </div>
+                            <div class="ha-limits__item ha-limits__item--cannot">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="18" y1="6" x2="6" y2="18"/>
+                                    <line x1="6" y1="6" x2="18" y2="18"/>
+                                </svg>
+                                <span>Bypass policies</span>
+                            </div>
+                            <div class="ha-limits__item ha-limits__item--cannot">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="18" y1="6" x2="6" y2="18"/>
+                                    <line x1="6" y1="6" x2="18" y2="18"/>
+                                </svg>
+                                <span>Redefine the process</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <p class="ha-limits__note">
+                    Escalation to humans is automatic and enforced by the workflow.
+                </p>
+            </div>
+        </section>
+
+        <!-- ========================================
+             AUDIT & ACCOUNTABILITY
+             ======================================== -->
+        <section class="ha-section">
+            <div class="ha-container">
+                <div class="ha-section__header">
+                    <h2 class="ha-section__title">One audit trail for <span class="accent">humans and AI</span></h2>
+                    <p class="ha-section__subtitle">
+                        Every action — human or AI — is logged in the same audit model.
+                    </p>
+                </div>
+                
+                <div class="ha-audit">
+                    <div class="ha-audit__info">
+                        <p class="ha-audit__intro">You always know:</p>
+                        <div class="ha-audit__grid">
+                            <div class="ha-audit__item">
+                                <div class="ha-audit__icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/>
+                                        <circle cx="12" cy="7" r="4"/>
+                                    </svg>
+                                </div>
+                                <span>Who acted</span>
+                            </div>
+                            <div class="ha-audit__item">
+                                <div class="ha-audit__icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="9 11 12 14 22 4"/>
+                                        <path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/>
+                                    </svg>
+                                </div>
+                                <span>What was done</span>
+                            </div>
+                            <div class="ha-audit__item">
+                                <div class="ha-audit__icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                        <circle cx="12" cy="12" r="10"/>
+                                        <polyline points="12 6 12 12 16 14"/>
+                                    </svg>
+                                </div>
+                                <span>When it happened</span>
+                            </div>
+                            <div class="ha-audit__item">
+                                <div class="ha-audit__icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                                    </svg>
+                                </div>
+                                <span>Under which rule</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="ha-audit__statements">
+                        <p class="ha-audit__statement">No opaque AI behavior.</p>
+                        <p class="ha-audit__statement">No undocumented human decisions.</p>
+                    </div>
+                    
+                    <div class="ha-audit__checklist">
+                        <div class="ha-audit__check">
+                            <div class="ha-audit__check-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="20 6 9 17 4 12"/>
+                                </svg>
+                            </div>
+                            <span>Unified audit log</span>
+                        </div>
+                        <div class="ha-audit__check">
+                            <div class="ha-audit__check-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="20 6 9 17 4 12"/>
+                                </svg>
+                            </div>
+                            <span>Explainable outcomes</span>
+                        </div>
+                        <div class="ha-audit__check">
+                            <div class="ha-audit__check-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="20 6 9 17 4 12"/>
+                                </svg>
+                            </div>
+                            <span>Compliance-ready by design</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================
+             SUMMARY STATEMENT
+             ======================================== -->
+        <section class="ha-summary">
+            <div class="ha-summary__grid"></div>
+            <div class="ha-container">
+                <div class="ha-summary__content">
+                    <h2 class="ha-summary__headline">
+                        Datapolis doesn't add AI to work.<br>
+                        <span class="accent">It integrates AI into how work actually runs.</span>
+                    </h2>
+                    <p class="ha-summary__text">
+                        Humans and digital workers operate in one governed system — built for scale, trust, and accountability.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================
+             FINAL CTA
+             ======================================== -->
+        <section class="ha-final">
+            <div class="ha-final__glow"></div>
+            <div class="ha-container">
+                <div class="ha-final__content">
+                    <h2 class="ha-final__title">See how Humans + Agents <span class="accent">work together.</span></h2>
+                    
+                    <div class="ha-final__actions">
+                        <a href="platform-2to2.html" class="ha-btn ha-btn--large">See the platform</a>
+                        <a href="security-governance.html" class="ha-btn ha-btn--outline ha-btn--large">Explore Governance & Control</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Placeholder -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Scripts -->
+    <script>
+        document.addEventListener('includesLoaded', function() {
+            var scripts = [
+                'assets/js/vendors.min.js',
+                'assets/js/main.min.js',
+                'assets/js/functions.min.js',
+                'assets/js/async.min.js'
+            ];
+            
+            function loadScript(index) {
+                if (index >= scripts.length) return;
+                
+                var script = document.createElement('script');
+                script.src = scripts[index];
+                script.onload = function() {
+                    loadScript(index + 1);
+                };
+                document.body.appendChild(script);
+            }
+            
+            loadScript(0);
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

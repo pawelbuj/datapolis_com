@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Jak to działa - Datapolis</title>
+    <meta name="description" content="Jak Datapolis orkiestruje ludzi i AI. Procesy biznesowe, aplikacje, cyfrowi pracownicy i nadzór.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#020617">
+
+    <!-- SEO: canonical / hreflang / open graph -->
+    <link rel="canonical" href="https://datapolis.com/pl/how-it-works">
+    <link rel="alternate" hreflang="en" href="https://datapolis.com/how-it-works">
+    <link rel="alternate" hreflang="pl" href="https://datapolis.com/pl/how-it-works">
+    <link rel="alternate" hreflang="de" href="https://datapolis.com/de/how-it-works">
+    <link rel="alternate" hreflang="es" href="https://datapolis.com/es/how-it-works">
+    <link rel="alternate" hreflang="x-default" href="https://datapolis.com/how-it-works">
+    <meta property="og:url" content="https://datapolis.com/pl/how-it-works">
+    <meta property="og:locale" content="pl_PL">
+    <meta property="og:image" content="https://datapolis.com/assets/img/og-image-1200x630.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <!-- /SEO -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Instrument+Sans:wght@400;500;600;700&amp;display=swap">
+
+    <link rel="stylesheet" href="../assets/css/main.min.css?v=10022025">
+    <link rel="stylesheet" href="../assets/css/async.min.css?v=10022025" media="print" onload="this.media='all'; this.onload=null;">
+    <link rel="stylesheet" href="../assets/css/dark-theme.css?v=3">
+    <link rel="stylesheet" href="../assets/css/new-homepage.css?v=2">
+
+    <script src="../includes/loader.js"></script>
+    <link rel="icon" type="image/png" href="../assets/img/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="../assets/img/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="../assets/img/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="../assets/img/favicon/site.webmanifest" />
+</head>
+<body class="dark-theme">
+    <div id="header-placeholder"></div>
+
+    <main>
+        <section class="dp-section dp-hero" style="padding-top: 120px; min-height: auto; padding-bottom: 60px;">
+            <div class="dp-container">
+                <div class="dp-section__header">
+                    <span class="dp-label">Metodyka</span>
+                    <h1 class="dp-title">Jak to działa</h1>
+                </div>
+            </div>
+        </section>
+
+        <!-- 1. Procesy biznesowe -->
+        <section id="business-processes" class="dp-section">
+            <div class="dp-container">
+                <div class="dp-grid-2" style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center;">
+                    <div>
+                        <h2 class="dp-subtitle" style="color: white; margin-bottom: 20px;">Procesy biznesowe</h2>
+                        <ul class="dp-list" style="color: #94a3b8; line-height: 1.6;">
+                            <li>Jasno mapuj kroki workflow.</li>
+                            <li>Zdefiniuj role i odpowiedzialności.</li>
+                            <li>Zwizualizuj ścieżkę od startu do końca.</li>
+                            <li>Zidentyfikuj kluczowe punkty decyzyjne.</li>
+                        </ul>
+                    </div>
+                    <div class="dp-feature">
+                        <div class="dp-feature__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="3" width="18" height="18" rx="2"/>
+                                <path d="M12 8v8"/>
+                                <path d="M8 12h8"/>
+                            </svg>
+                        </div>
+                        <p class="dp-feature__title">Mapowanie wizualne</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. Aplikacje procesowe -->
+        <section id="process-apps" class="dp-section dp-section--dark">
+            <div class="dp-container">
+                <div class="dp-grid-2" style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center;">
+                    <div>
+                        <h2 class="dp-subtitle" style="color: white; margin-bottom: 20px;">Aplikacje procesowe</h2>
+                        <ul class="dp-list" style="color: #94a3b8; line-height: 1.6;">
+                            <li>Zamieniaj diagramy w działające aplikacje.</li>
+                            <li>Wdrażaj na web, mobile lub Microsoft Teams.</li>
+                            <li>Łącz formularze i dane bez wysiłku.</li>
+                            <li>Bez potrzeby złożonego kodowania.</li>
+                        </ul>
+                    </div>
+                    <div class="dp-feature">
+                        <div class="dp-feature__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                                <path d="M2 17l10 5 10-5"/>
+                                <path d="M2 12l10 5 10-5"/>
+                            </svg>
+                        </div>
+                        <p class="dp-feature__title">Wdrożenie aplikacji</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Cyfrowi pracownicy -->
+        <section id="digital-workers-in-process" class="dp-section">
+            <div class="dp-container">
+                <div class="dp-grid-2" style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center;">
+                    <div>
+                        <h2 class="dp-subtitle" style="color: white; margin-bottom: 20px;">Cyfrowi pracownicy w procesie</h2>
+                        <ul class="dp-list" style="color: #94a3b8; line-height: 1.6;">
+                            <li>Przydzielaj zadania agentom AI tak jak ludziom.</li>
+                            <li>Automatyzuj powtarzalne wprowadzanie danych i analizę.</li>
+                            <li>Pracownicy działają 24/7 ze spójnością.</li>
+                            <li>Skalowalna siła robocza na żądanie.</li>
+                        </ul>
+                    </div>
+                    <div class="dp-feature">
+                        <div class="dp-feature__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="7"/>
+                                <path d="M12 9v6"/>
+                                <path d="M9 12h6"/>
+                            </svg>
+                        </div>
+                        <p class="dp-feature__title">Agenci AI</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Współpraca człowiek–AI -->
+        <section id="human-ai-collaboration" class="dp-section dp-section--dark">
+            <div class="dp-container">
+                <div class="dp-grid-2" style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center;">
+                    <div>
+                        <h2 class="dp-subtitle" style="color: white; margin-bottom: 20px;">Współpraca człowiek–AI</h2>
+                        <ul class="dp-list" style="color: #94a3b8; line-height: 1.6;">
+                            <li>Płynne przekazania między ludźmi a AI.</li>
+                            <li>Ludzie obsługują wyjątki i strategię.</li>
+                            <li>AI obsługuje wolumen i szybkość.</li>
+                            <li>Ujednolicony interfejs dla wszystkich zadań.</li>
+                        </ul>
+                    </div>
+                    <div class="dp-feature">
+                        <div class="dp-feature__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                                <circle cx="9" cy="7" r="4"/>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                            </svg>
+                        </div>
+                        <p class="dp-feature__title">Współpraca</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Automatyzacja vs orkiestracja -->
+        <section id="automation-vs-orchestration" class="dp-section">
+            <div class="dp-container">
+                <div class="dp-grid-2" style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center;">
+                    <div>
+                        <h2 class="dp-subtitle" style="color: white; margin-bottom: 20px;">Automatyzacja vs orkiestracja</h2>
+                        <ul class="dp-list" style="color: #94a3b8; line-height: 1.6;">
+                            <li>Automatyzacja usprawnia pojedyncze zadania.</li>
+                            <li>Orkiestracja zarządza całym przepływem.</li>
+                            <li>Łącz odizolowane zautomatyzowane wyspy.</li>
+                            <li>Widoczność i kontrola end-to-end.</li>
+                        </ul>
+                    </div>
+                    <div class="dp-feature">
+                        <div class="dp-feature__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"/>
+                                <path d="M2 12h20"/>
+                                <path d="M12 2v20"/>
+                            </svg>
+                        </div>
+                        <p class="dp-feature__title">Pełna kontrola</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Nadzór i zgodność -->
+        <section id="governance-compliance" class="dp-section dp-section--dark">
+            <div class="dp-container">
+                <div class="dp-grid-2" style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center;">
+                    <div>
+                        <h2 class="dp-subtitle" style="color: white; margin-bottom: 20px;">Nadzór i zgodność</h2>
+                        <ul class="dp-list" style="color: #94a3b8; line-height: 1.6;">
+                            <li>Każde działanie jest logowane i audytowalne.</li>
+                            <li>Automatycznie wymuszaj kontrole polityk.</li>
+                            <li>Bezpieczna obsługa danych na każdym kroku.</li>
+                            <li>Gotowe dla branż regulowanych.</li>
+                        </ul>
+                    </div>
+                    <div class="dp-feature">
+                        <div class="dp-feature__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                                <path d="M9 12l2 2 4-4"/>
+                            </svg>
+                        </div>
+                        <p class="dp-feature__title">Ścieżka audytu</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dolny pasek CTA -->
+        <section class="dp-section" style="padding: 60px 0; background: #0f172a; border-top: 1px solid #1e293b;">
+            <div class="dp-container" style="text-align: center;">
+                <h2 class="dp-subtitle" style="color: white; margin-bottom: 30px;">Gotowy do orkiestracji swojej pracy?</h2>
+                <div class="dp-hero__actions" style="justify-content: center;">
+                    <a href="contact.html" class="dp-btn dp-btn-outline">Porozmawiaj z ekspertem</a>
+                    <a href="https://2to2.ai" target="_blank" class="dp-btn">Zobacz platformę</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script>
+        document.addEventListener('includesLoaded', function() {
+            var scripts = [
+                '../assets/js/vendors.min.js',
+                '../assets/js/main.min.js',
+                '../assets/js/functions.min.js',
+                '../assets/js/async.min.js'
+            ];
+            function loadScript(index) {
+                if (index >= scripts.length) return;
+                var script = document.createElement('script');
+                script.src = scripts[index];
+                script.onload = function() { loadScript(index + 1); };
+                document.body.appendChild(script);
+            }
+            loadScript(0);
+        });
+    </script>
+</body>
+</html>

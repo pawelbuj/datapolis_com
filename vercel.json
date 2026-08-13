@@ -2,5 +2,817 @@
   "buildCommand": "echo 'Static site - no build needed'",
   "outputDirectory": ".",
   "cleanUrls": true,
-  "trailingSlash": false
+  "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/finance",
+      "destination": "/customers",
+      "permanent": true
+    },
+    {
+      "source": "/finance.html",
+      "destination": "/customers",
+      "permanent": true
+    },
+    {
+      "source": "/human-resources-hr",
+      "destination": "/customers",
+      "permanent": true
+    },
+    {
+      "source": "/human-resources-hr.html",
+      "destination": "/customers",
+      "permanent": true
+    },
+    {
+      "source": "/purchasing-logistics",
+      "destination": "/customers",
+      "permanent": true
+    },
+    {
+      "source": "/purchasing-logistics.html",
+      "destination": "/customers",
+      "permanent": true
+    },
+    {
+      "source": "/operations-production",
+      "destination": "/customers",
+      "permanent": true
+    },
+    {
+      "source": "/operations-production.html",
+      "destination": "/customers",
+      "permanent": true
+    },
+    {
+      "source": "/customer-service",
+      "destination": "/customers",
+      "permanent": true
+    },
+    {
+      "source": "/customer-service.html",
+      "destination": "/customers",
+      "permanent": true
+    },
+    {
+      "source": "/it-sector-solutions",
+      "destination": "/customers",
+      "permanent": true
+    },
+    {
+      "source": "/it-sector-solutions.html",
+      "destination": "/customers",
+      "permanent": true
+    },
+    {
+      "source": "/use-cases",
+      "destination": "/customers",
+      "permanent": true
+    },
+    {
+      "source": "/use-cases.html",
+      "destination": "/customers",
+      "permanent": true
+    },
+    {
+      "source": "/electronic-document-workflow",
+      "destination": "/process-apps",
+      "permanent": true
+    },
+    {
+      "source": "/electronic-document-workflow.html",
+      "destination": "/process-apps",
+      "permanent": true
+    },
+    {
+      "source": "/audit-compliance",
+      "destination": "/security-governance",
+      "permanent": true
+    },
+    {
+      "source": "/audit-compliance.html",
+      "destination": "/security-governance",
+      "permanent": true
+    },
+    {
+      "source": "/products",
+      "destination": "/platform-2to2",
+      "permanent": true
+    },
+    {
+      "source": "/products.html",
+      "destination": "/platform-2to2",
+      "permanent": true
+    },
+    {
+      "source": "/licensing",
+      "destination": "/platform-2to2",
+      "permanent": true
+    },
+    {
+      "source": "/licensing.html",
+      "destination": "/platform-2to2",
+      "permanent": true
+    },
+    {
+      "source": "/solutions",
+      "destination": "/platform-2to2",
+      "permanent": true
+    },
+    {
+      "source": "/solutions.html",
+      "destination": "/platform-2to2",
+      "permanent": true
+    },
+    {
+      "source": "/platform",
+      "destination": "/platform-2to2",
+      "permanent": true
+    },
+    {
+      "source": "/platform.html",
+      "destination": "/platform-2to2",
+      "permanent": true
+    },
+    {
+      "source": "/support",
+      "destination": "/contact",
+      "permanent": true
+    },
+    {
+      "source": "/support.html",
+      "destination": "/contact",
+      "permanent": true
+    },
+    {
+      "source": "/company-partners",
+      "destination": "/contact",
+      "permanent": true
+    },
+    {
+      "source": "/company-partners.html",
+      "destination": "/contact",
+      "permanent": true
+    },
+    {
+      "source": "/ai",
+      "destination": "/ai-inside-workflows",
+      "permanent": true
+    },
+    {
+      "source": "/ai.html",
+      "destination": "/ai-inside-workflows",
+      "permanent": true
+    },
+    {
+      "source": "/company",
+      "destination": "/about",
+      "permanent": true
+    },
+    {
+      "source": "/company.html",
+      "destination": "/about",
+      "permanent": true
+    },
+    {
+      "source": "/company-about",
+      "destination": "/about",
+      "permanent": true
+    },
+    {
+      "source": "/company-about.html",
+      "destination": "/about",
+      "permanent": true
+    },
+    {
+      "source": "/company-careers",
+      "destination": "/about",
+      "permanent": true
+    },
+    {
+      "source": "/company-careers.html",
+      "destination": "/about",
+      "permanent": true
+    },
+    {
+      "source": "/company-why-processes",
+      "destination": "/how-it-works-overview",
+      "permanent": true
+    },
+    {
+      "source": "/company-why-processes.html",
+      "destination": "/how-it-works-overview",
+      "permanent": true
+    },
+    {
+      "source": "/pl/finance",
+      "destination": "/pl/customers",
+      "permanent": true
+    },
+    {
+      "source": "/pl/finance.html",
+      "destination": "/pl/customers",
+      "permanent": true
+    },
+    {
+      "source": "/pl/human-resources-hr",
+      "destination": "/pl/customers",
+      "permanent": true
+    },
+    {
+      "source": "/pl/human-resources-hr.html",
+      "destination": "/pl/customers",
+      "permanent": true
+    },
+    {
+      "source": "/pl/purchasing-logistics",
+      "destination": "/pl/customers",
+      "permanent": true
+    },
+    {
+      "source": "/pl/purchasing-logistics.html",
+      "destination": "/pl/customers",
+      "permanent": true
+    },
+    {
+      "source": "/pl/operations-production",
+      "destination": "/pl/customers",
+      "permanent": true
+    },
+    {
+      "source": "/pl/operations-production.html",
+      "destination": "/pl/customers",
+      "permanent": true
+    },
+    {
+      "source": "/pl/customer-service",
+      "destination": "/pl/customers",
+      "permanent": true
+    },
+    {
+      "source": "/pl/customer-service.html",
+      "destination": "/pl/customers",
+      "permanent": true
+    },
+    {
+      "source": "/pl/it-sector-solutions",
+      "destination": "/pl/customers",
+      "permanent": true
+    },
+    {
+      "source": "/pl/it-sector-solutions.html",
+      "destination": "/pl/customers",
+      "permanent": true
+    },
+    {
+      "source": "/pl/use-cases",
+      "destination": "/pl/customers",
+      "permanent": true
+    },
+    {
+      "source": "/pl/use-cases.html",
+      "destination": "/pl/customers",
+      "permanent": true
+    },
+    {
+      "source": "/pl/electronic-document-workflow",
+      "destination": "/pl/process-apps",
+      "permanent": true
+    },
+    {
+      "source": "/pl/electronic-document-workflow.html",
+      "destination": "/pl/process-apps",
+      "permanent": true
+    },
+    {
+      "source": "/pl/audit-compliance",
+      "destination": "/pl/security-governance",
+      "permanent": true
+    },
+    {
+      "source": "/pl/audit-compliance.html",
+      "destination": "/pl/security-governance",
+      "permanent": true
+    },
+    {
+      "source": "/pl/products",
+      "destination": "/pl/platform-2to2",
+      "permanent": true
+    },
+    {
+      "source": "/pl/products.html",
+      "destination": "/pl/platform-2to2",
+      "permanent": true
+    },
+    {
+      "source": "/pl/licensing",
+      "destination": "/pl/platform-2to2",
+      "permanent": true
+    },
+    {
+      "source": "/pl/licensing.html",
+      "destination": "/pl/platform-2to2",
+      "permanent": true
+    },
+    {
+      "source": "/pl/solutions",
+      "destination": "/pl/platform-2to2",
+      "permanent": true
+    },
+    {
+      "source": "/pl/solutions.html",
+      "destination": "/pl/platform-2to2",
+      "permanent": true
+    },
+    {
+      "source": "/pl/platform",
+      "destination": "/pl/platform-2to2",
+      "permanent": true
+    },
+    {
+      "source": "/pl/platform.html",
+      "destination": "/pl/platform-2to2",
+      "permanent": true
+    },
+    {
+      "source": "/pl/support",
+      "destination": "/pl/contact",
+      "permanent": true
+    },
+    {
+      "source": "/pl/support.html",
+      "destination": "/pl/contact",
+      "permanent": true
+    },
+    {
+      "source": "/pl/company-partners",
+      "destination": "/pl/contact",
+      "permanent": true
+    },
+    {
+      "source": "/pl/company-partners.html",
+      "destination": "/pl/contact",
+      "permanent": true
+    },
+    {
+      "source": "/pl/ai",
+      "destination": "/pl/ai-inside-workflows",
+      "permanent": true
+    },
+    {
+      "source": "/pl/ai.html",
+      "destination": "/pl/ai-inside-workflows",
+      "permanent": true
+    },
+    {
+      "source": "/pl/company",
+      "destination": "/pl/about",
+      "permanent": true
+    },
+    {
+      "source": "/pl/company.html",
+      "destination": "/pl/about",
+      "permanent": true
+    },
+    {
+      "source": "/pl/company-about",
+      "destination": "/pl/about",
+      "permanent": true
+    },
+    {
+      "source": "/pl/company-about.html",
+      "destination": "/pl/about",
+      "permanent": true
+    },
+    {
+      "source": "/pl/company-careers",
+      "destination": "/pl/about",
+      "permanent": true
+    },
+    {
+      "source": "/pl/company-careers.html",
+      "destination": "/pl/about",
+      "permanent": true
+    },
+    {
+      "source": "/pl/company-why-processes",
+      "destination": "/pl/how-it-works-overview",
+      "permanent": true
+    },
+    {
+      "source": "/pl/company-why-processes.html",
+      "destination": "/pl/how-it-works-overview",
+      "permanent": true
+    },
+    {
+      "source": "/de/finance",
+      "destination": "/de/customers",
+      "permanent": true
+    },
+    {
+      "source": "/de/finance.html",
+      "destination": "/de/customers",
+      "permanent": true
+    },
+    {
+      "source": "/de/human-resources-hr",
+      "destination": "/de/customers",
+      "permanent": true
+    },
+    {
+      "source": "/de/human-resources-hr.html",
+      "destination": "/de/customers",
+      "permanent": true
+    },
+    {
+      "source": "/de/purchasing-logistics",
+      "destination": "/de/customers",
+      "permanent": true
+    },
+    {
+      "source": "/de/purchasing-logistics.html",
+      "destination": "/de/customers",
+      "permanent": true
+    },
+    {
+      "source": "/de/operations-production",
+      "destination": "/de/customers",
+      "permanent": true
+    },
+    {
+      "source": "/de/operations-production.html",
+      "destination": "/de/customers",
+      "permanent": true
+    },
+    {
+      "source": "/de/customer-service",
+      "destination": "/de/customers",
+      "permanent": true
+    },
+    {
+      "source": "/de/customer-service.html",
+      "destination": "/de/customers",
+      "permanent": true
+    },
+    {
+      "source": "/de/it-sector-solutions",
+      "destination": "/de/customers",
+      "permanent": true
+    },
+    {
+      "source": "/de/it-sector-solutions.html",
+      "destination": "/de/customers",
+      "permanent": true
+    },
+    {
+      "source": "/de/use-cases",
+      "destination": "/de/customers",
+      "permanent": true
+    },
+    {
+      "source": "/de/use-cases.html",
+      "destination": "/de/customers",
+      "permanent": true
+    },
+    {
+      "source": "/de/electronic-document-workflow",
+      "destination": "/de/process-apps",
+      "permanent": true
+    },
+    {
+      "source": "/de/electronic-document-workflow.html",
+      "destination": "/de/process-apps",
+      "permanent": true
+    },
+    {
+      "source": "/de/audit-compliance",
+      "destination": "/de/security-governance",
+      "permanent": true
+    },
+    {
+      "source": "/de/audit-compliance.html",
+      "destination": "/de/security-governance",
+      "permanent": true
+    },
+    {
+      "source": "/de/products",
+      "destination": "/de/platform-2to2",
+      "permanent": true
+    },
+    {
+      "source": "/de/products.html",
+      "destination": "/de/platform-2to2",
+      "permanent": true
+    },
+    {
+      "source": "/de/licensing",
+      "destination": "/de/platform-2to2",
+      "permanent": true
+    },
+    {
+      "source": "/de/licensing.html",
+      "destination": "/de/platform-2to2",
+      "permanent": true
+    },
+    {
+      "source": "/de/solutions",
+      "destination": "/de/platform-2to2",
+      "permanent": true
+    },
+    {
+      "source": "/de/solutions.html",
+      "destination": "/de/platform-2to2",
+      "permanent": true
+    },
+    {
+      "source": "/de/platform",
+      "destination": "/de/platform-2to2",
+      "permanent": true
+    },
+    {
+      "source": "/de/platform.html",
+      "destination": "/de/platform-2to2",
+      "permanent": true
+    },
+    {
+      "source": "/de/support",
+      "destination": "/de/contact",
+      "permanent": true
+    },
+    {
+      "source": "/de/support.html",
+      "destination": "/de/contact",
+      "permanent": true
+    },
+    {
+      "source": "/de/company-partners",
+      "destination": "/de/contact",
+      "permanent": true
+    },
+    {
+      "source": "/de/company-partners.html",
+      "destination": "/de/contact",
+      "permanent": true
+    },
+    {
+      "source": "/de/ai",
+      "destination": "/de/ai-inside-workflows",
+      "permanent": true
+    },
+    {
+      "source": "/de/ai.html",
+      "destination": "/de/ai-inside-workflows",
+      "permanent": true
+    },
+    {
+      "source": "/de/company",
+      "destination": "/de/about",
+      "permanent": true
+    },
+    {
+      "source": "/de/company.html",
+      "destination": "/de/about",
+      "permanent": true
+    },
+    {
+      "source": "/de/company-about",
+      "destination": "/de/about",
+      "permanent": true
+    },
+    {
+      "source": "/de/company-about.html",
+      "destination": "/de/about",
+      "permanent": true
+    },
+    {
+      "source": "/de/company-careers",
+      "destination": "/de/about",
+      "permanent": true
+    },
+    {
+      "source": "/de/company-careers.html",
+      "destination": "/de/about",
+      "permanent": true
+    },
+    {
+      "source": "/de/company-why-processes",
+      "destination": "/de/how-it-works-overview",
+      "permanent": true
+    },
+    {
+      "source": "/de/company-why-processes.html",
+      "destination": "/de/how-it-works-overview",
+      "permanent": true
+    },
+    {
+      "source": "/es/finance",
+      "destination": "/es/customers",
+      "permanent": true
+    },
+    {
+      "source": "/es/finance.html",
+      "destination": "/es/customers",
+      "permanent": true
+    },
+    {
+      "source": "/es/human-resources-hr",
+      "destination": "/es/customers",
+      "permanent": true
+    },
+    {
+      "source": "/es/human-resources-hr.html",
+      "destination": "/es/customers",
+      "permanent": true
+    },
+    {
+      "source": "/es/purchasing-logistics",
+      "destination": "/es/customers",
+      "permanent": true
+    },
+    {
+      "source": "/es/purchasing-logistics.html",
+      "destination": "/es/customers",
+      "permanent": true
+    },
+    {
+      "source": "/es/operations-production",
+      "destination": "/es/customers",
+      "permanent": true
+    },
+    {
+      "source": "/es/operations-production.html",
+      "destination": "/es/customers",
+      "permanent": true
+    },
+    {
+      "source": "/es/customer-service",
+      "destination": "/es/customers",
+      "permanent": true
+    },
+    {
+      "source": "/es/customer-service.html",
+      "destination": "/es/customers",
+      "permanent": true
+    },
+    {
+      "source": "/es/it-sector-solutions",
+      "destination": "/es/customers",
+      "permanent": true
+    },
+    {
+      "source": "/es/it-sector-solutions.html",
+      "destination": "/es/customers",
+      "permanent": true
+    },
+    {
+      "source": "/es/use-cases",
+      "destination": "/es/customers",
+      "permanent": true
+    },
+    {
+      "source": "/es/use-cases.html",
+      "destination": "/es/customers",
+      "permanent": true
+    },
+    {
+      "source": "/es/electronic-document-workflow",
+      "destination": "/es/process-apps",
+      "permanent": true
+    },
+    {
+      "source": "/es/electronic-document-workflow.html",
+      "destination": "/es/process-apps",
+      "permanent": true
+    },
+    {
+      "source": "/es/audit-compliance",
+      "destination": "/es/security-governance",
+      "permanent": true
+    },
+    {
+      "source": "/es/audit-compliance.html",
+      "destination": "/es/security-governance",
+      "permanent": true
+    },
+    {
+      "source": "/es/products",
+      "destination": "/es/platform-2to2",
+      "permanent": true
+    },
+    {
+      "source": "/es/products.html",
+      "destination": "/es/platform-2to2",
+      "permanent": true
+    },
+    {
+      "source": "/es/licensing",
+      "destination": "/es/platform-2to2",
+      "permanent": true
+    },
+    {
+      "source": "/es/licensing.html",
+      "destination": "/es/platform-2to2",
+      "permanent": true
+    },
+    {
+      "source": "/es/solutions",
+      "destination": "/es/platform-2to2",
+      "permanent": true
+    },
+    {
+      "source": "/es/solutions.html",
+      "destination": "/es/platform-2to2",
+      "permanent": true
+    },
+    {
+      "source": "/es/platform",
+      "destination": "/es/platform-2to2",
+      "permanent": true
+    },
+    {
+      "source": "/es/platform.html",
+      "destination": "/es/platform-2to2",
+      "permanent": true
+    },
+    {
+      "source": "/es/support",
+      "destination": "/es/contact",
+      "permanent": true
+    },
+    {
+      "source": "/es/support.html",
+      "destination": "/es/contact",
+      "permanent": true
+    },
+    {
+      "source": "/es/company-partners",
+      "destination": "/es/contact",
+      "permanent": true
+    },
+    {
+      "source": "/es/company-partners.html",
+      "destination": "/es/contact",
+      "permanent": true
+    },
+    {
+      "source": "/es/ai",
+      "destination": "/es/ai-inside-workflows",
+      "permanent": true
+    },
+    {
+      "source": "/es/ai.html",
+      "destination": "/es/ai-inside-workflows",
+      "permanent": true
+    },
+    {
+      "source": "/es/company",
+      "destination": "/es/about",
+      "permanent": true
+    },
+    {
+      "source": "/es/company.html",
+      "destination": "/es/about",
+      "permanent": true
+    },
+    {
+      "source": "/es/company-about",
+      "destination": "/es/about",
+      "permanent": true
+    },
+    {
+      "source": "/es/company-about.html",
+      "destination": "/es/about",
+      "permanent": true
+    },
+    {
+      "source": "/es/company-careers",
+      "destination": "/es/about",
+      "permanent": true
+    },
+    {
+      "source": "/es/company-careers.html",
+      "destination": "/es/about",
+      "permanent": true
+    },
+    {
+      "source": "/es/company-why-processes",
+      "destination": "/es/how-it-works-overview",
+      "permanent": true
+    },
+    {
+      "source": "/es/company-why-processes.html",
+      "destination": "/es/how-it-works-overview",
+      "permanent": true
+    },
+    {
+      "source": "/index-legacy",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/index-legacy.html",
+      "destination": "/",
+      "permanent": true
+    }
+  ]
 }

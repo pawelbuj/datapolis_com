@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>IA dentro de flujos de trabajo - IA gobernada en procesos de negocio | Datapolis</title>
+    <meta name="description" content="La IA no vive en prompts ni en chats. Vive dentro de flujos de trabajo — donde cada acción está controlada, es auditable y está gobernada por reglas de negocio.">
+    <meta name="robots" content="index,follow">
+    <meta property="og:title" content="IA dentro de flujos de trabajo - IA gobernada en procesos de negocio">
+    <meta property="og:description" content="La IA opera como un paso controlado y auditable dentro de flujos de trabajo gobernados. Sin IA en la sombra. Sin cajas negras.">
+    <meta property="og:type" content="website">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#020617">
+
+    <!-- SEO: canonical / hreflang / open graph -->
+    <link rel="canonical" href="https://datapolis.com/es/ai-inside-workflows">
+    <link rel="alternate" hreflang="en" href="https://datapolis.com/ai-inside-workflows">
+    <link rel="alternate" hreflang="pl" href="https://datapolis.com/pl/ai-inside-workflows">
+    <link rel="alternate" hreflang="de" href="https://datapolis.com/de/ai-inside-workflows">
+    <link rel="alternate" hreflang="es" href="https://datapolis.com/es/ai-inside-workflows">
+    <link rel="alternate" hreflang="x-default" href="https://datapolis.com/ai-inside-workflows">
+    <meta property="og:url" content="https://datapolis.com/es/ai-inside-workflows">
+    <meta property="og:locale" content="es_ES">
+    <meta property="og:image" content="https://datapolis.com/assets/img/og-image-1200x630.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <!-- /SEO -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Instrument+Sans:wght@400;500;600;700&amp;display=swap">
+
+    <link rel="stylesheet" href="../assets/css/main.min.css?v=20260813">
+    <link rel="stylesheet" href="../assets/css/async.min.css?v=20260813" media="print" onload="this.media='all'; this.onload=null;">
+    <link rel="stylesheet" href="../assets/css/dark-theme.css?v=20260813">
+    <link rel="stylesheet" href="../assets/css/new-homepage.css?v=20260813">
+    <link rel="stylesheet" href="../assets/css/ai-inside-workflows.css?v=20260813">
+
+    <script src="../includes/loader.js"></script>
+
+    <link rel="icon" type="image/png" href="../assets/img/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="../assets/img/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="../assets/img/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="../assets/img/favicon/site.webmanifest" />
+</head>
+<body class="dark-theme aiw-page">
+    <!-- Placeholder de encabezado -->
+    <div id="header-placeholder"></div>
+
+    <main>
+        <!-- ========================================
+             SECCIÓN HERO - Diseño de dos columnas
+             ======================================== -->
+        <section class="aiw-hero">
+            <div class="aiw-hero__grid"></div>
+            <div class="aiw-hero__glow"></div>
+            
+            <div class="aiw-container aiw-hero__inner">
+                <!-- Left: Content -->
+                <div class="aiw-hero__content">
+                    <span class="aiw-label">IA dentro de flujos de trabajo</span>
+                    
+                    <h1 class="aiw-hero__title">
+                        La IA no vive en prompts.<br><span class="accent">Vive en flujos de trabajo.</span>
+                    </h1>
+                    
+                    <p class="aiw-hero__intro">
+                        La IA no debería operar en aislamiento — adivinando el contexto a partir de prompts o actuando fuera del control del negocio. En Datapolis, la IA se ejecuta como un paso gobernado dentro de un flujo de trabajo, con entradas, salidas, reglas y rendición de cuentas claras.
+                    </p>
+                    
+                    <ul class="aiw-hero__bullets">
+                        <li class="aiw-hero__bullet">La IA se ejecuta como un paso del flujo de trabajo</li>
+                        <li class="aiw-hero__bullet">Las decisiones siguen reglas de negocio</li>
+                        <li class="aiw-hero__bullet">Las entradas y salidas son explícitas</li>
+                        <li class="aiw-hero__bullet">Cada acción se registra y es auditable</li>
+                    </ul>
+                    
+                    <div class="aiw-hero__actions">
+                        <a href="platform-2to2.html" class="aiw-btn aiw-btn--large">Ver la plataforma</a>
+                        <a href="digital-workers.html" class="aiw-btn aiw-btn--outline aiw-btn--large">Trabajadores digitales</a>
+                    </div>
+                </div>
+                
+                <!-- Right: Workflow Diagram SVG -->
+                <div class="aiw-hero__visual">
+                    <svg class="aiw-workflow-diagram" viewBox="0 0 520 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <filter id="glowAiw" x="-50%" y="-50%" width="200%" height="200%">
+                                <feGaussianBlur stdDeviation="6" result="blur"/>
+                                <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+                            </filter>
+                            <filter id="glowSmallAiw" x="-50%" y="-50%" width="200%" height="200%">
+                                <feGaussianBlur stdDeviation="3" result="blur"/>
+                                <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+                            </filter>
+                            <linearGradient id="tealGradAiw" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#14b8a6"/>
+                                <stop offset="100%" stop-color="#0d9488"/>
+                            </linearGradient>
+                            <linearGradient id="laneGradAiw" x1="0%" y1="0%" x2="0%" y2="100%">
+                                <stop offset="0%" stop-color="rgba(20, 184, 166, 0.08)"/>
+                                <stop offset="100%" stop-color="rgba(20, 184, 166, 0.02)"/>
+                            </linearGradient>
+                        </defs>
+                        
+                        <!-- Background decorative dots -->
+                        <circle cx="25" cy="30" r="2" fill="#14b8a6" opacity="0.25"/>
+                        <circle cx="495" cy="40" r="2" fill="#14b8a6" opacity="0.2"/>
+                        <circle cx="15" cy="280" r="2" fill="#14b8a6" opacity="0.15"/>
+                        <circle cx="505" cy="275" r="2" fill="#14b8a6" opacity="0.2"/>
+                        
+                        <!-- Fondo del carril del flujo de trabajo -->
+                        <rect x="30" y="50" width="460" height="180" rx="16" fill="url(#laneGradAiw)" stroke="#334155" stroke-width="1.5"/>
+                        
+                        <!-- Etiqueta de flujo de trabajo -->
+                        <rect x="200" y="38" width="120" height="28" rx="14" fill="url(#tealGradAiw)"/>
+                        <text x="260" y="57" text-anchor="middle" fill="#020617" font-size="11" font-weight="700" font-family="system-ui, sans-serif" letter-spacing="0.08em">FLUJO DE TRABAJO</text>
+                        
+                        <!-- Main workflow lane line -->
+                        <line x1="60" y1="140" x2="460" y2="140" stroke="#334155" stroke-width="2" stroke-dasharray="6 4"/>
+                        
+                        <!-- Paso 1: Entrada (humano) -->
+                        <g>
+                            <rect x="50" y="100" width="80" height="80" rx="12" fill="#0f172a" stroke="#64748b" stroke-width="2"/>
+                            <!-- Human icon -->
+                            <circle cx="90" cy="125" r="10" stroke="#94a3b8" stroke-width="1.5" fill="none"/>
+                            <path d="M75 152 Q90 142 105 152" stroke="#94a3b8" stroke-width="1.5" fill="none"/>
+                            <text x="90" y="170" text-anchor="middle" fill="#94a3b8" font-size="9" font-weight="600" font-family="system-ui, sans-serif">ENTRADA</text>
+                        </g>
+                        
+                        <!-- Paso 2: Análisis de IA (IA - resaltado) -->
+                        <g class="aiw-glow-node">
+                            <rect x="160" y="100" width="80" height="80" rx="12" fill="#0f172a" stroke="#14b8a6" stroke-width="2.5"/>
+                            <!-- AI/Robot icon -->
+                            <circle cx="200" cy="125" r="14" stroke="#14b8a6" stroke-width="1.5" fill="none"/>
+                            <circle cx="200" cy="125" r="5" fill="#14b8a6"/>
+                            <path d="M200 111v-6M200 139v6M186 125h-6M214 125h6" stroke="#14b8a6" stroke-width="1.5" stroke-linecap="round"/>
+                            <text x="200" y="170" text-anchor="middle" fill="#14b8a6" font-size="9" font-weight="700" font-family="system-ui, sans-serif">ANÁLISIS DE IA</text>
+                            <!-- Pulsing indicator -->
+                            <circle cx="200" cy="125" r="20" fill="none" stroke="#14b8a6" stroke-width="1" class="aiw-pulse" opacity="0.4"/>
+                        </g>
+                        
+                        <!-- Paso 3: Aprobación (humano) -->
+                        <g>
+                            <rect x="270" y="100" width="80" height="80" rx="12" fill="#0f172a" stroke="#64748b" stroke-width="2"/>
+                            <!-- Checkmark/Approval icon -->
+                            <circle cx="310" cy="125" r="12" stroke="#94a3b8" stroke-width="1.5" fill="none"/>
+                            <path d="M302 125l5 5 11-11" stroke="#94a3b8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                            <text x="310" y="170" text-anchor="middle" fill="#94a3b8" font-size="9" font-weight="600" font-family="system-ui, sans-serif">APROBACIÓN</text>
+                        </g>
+                        
+                        <!-- Paso 4: Sistema (integración) -->
+                        <g>
+                            <rect x="380" y="100" width="80" height="80" rx="12" fill="#0f172a" stroke="#64748b" stroke-width="2"/>
+                            <!-- System/Database icon -->
+                            <ellipse cx="420" cy="118" rx="14" ry="5" stroke="#94a3b8" stroke-width="1.5" fill="none"/>
+                            <path d="M406 118 v16 c0 2.8 6.3 5 14 5 s14-2.2 14-5 v-16" stroke="#94a3b8" stroke-width="1.5" fill="none"/>
+                            <path d="M406 128 c0 2.8 6.3 5 14 5 s14-2.2 14-5" stroke="#94a3b8" stroke-width="1.5" fill="none"/>
+                            <text x="420" y="170" text-anchor="middle" fill="#94a3b8" font-size="9" font-weight="600" font-family="system-ui, sans-serif">HECHO</text>
+                        </g>
+                        
+                        <!-- Flow arrows -->
+                        <path d="M130 140 L160 140" stroke="#14b8a6" stroke-width="2" stroke-dasharray="6 4" class="aiw-flow-line"/>
+                        <path d="M240 140 L270 140" stroke="#14b8a6" stroke-width="2" stroke-dasharray="6 4" class="aiw-flow-line"/>
+                        <path d="M350 140 L380 140" stroke="#14b8a6" stroke-width="2" stroke-dasharray="6 4" class="aiw-flow-line"/>
+                        
+                        <!-- Arrow heads -->
+                        <polygon points="160,135 160,145 170,140" fill="#14b8a6" opacity="0.8"/>
+                        <polygon points="270,135 270,145 280,140" fill="#14b8a6" opacity="0.8"/>
+                        <polygon points="380,135 380,145 390,140" fill="#14b8a6" opacity="0.8"/>
+                        
+                        <!-- Etiquetas de auditoría/control debajo -->
+                        <g opacity="0.7">
+                            <text x="90" y="205" text-anchor="middle" fill="#64748b" font-size="7" font-family="system-ui, sans-serif">REGISTRADO</text>
+                            <text x="200" y="205" text-anchor="middle" fill="#14b8a6" font-size="7" font-family="system-ui, sans-serif" font-weight="600">GOBERNADO</text>
+                            <text x="310" y="205" text-anchor="middle" fill="#64748b" font-size="7" font-family="system-ui, sans-serif">REGISTRADO</text>
+                            <text x="420" y="205" text-anchor="middle" fill="#64748b" font-size="7" font-family="system-ui, sans-serif">REGISTRADO</text>
+                        </g>
+                        
+                        <!-- Tick marks under each step -->
+                        <g opacity="0.5">
+                            <line x1="78" y1="215" x2="83" y2="215" stroke="#14b8a6" stroke-width="1.5" stroke-linecap="round"/>
+                            <line x1="88" y1="215" x2="93" y2="215" stroke="#14b8a6" stroke-width="1.5" stroke-linecap="round"/>
+                            <line x1="98" y1="215" x2="103" y2="215" stroke="#14b8a6" stroke-width="1.5" stroke-linecap="round"/>
+                            
+                            <line x1="188" y1="215" x2="193" y2="215" stroke="#14b8a6" stroke-width="1.5" stroke-linecap="round"/>
+                            <line x1="198" y1="215" x2="203" y2="215" stroke="#14b8a6" stroke-width="1.5" stroke-linecap="round"/>
+                            <line x1="208" y1="215" x2="213" y2="215" stroke="#14b8a6" stroke-width="1.5" stroke-linecap="round"/>
+                            
+                            <line x1="298" y1="215" x2="303" y2="215" stroke="#14b8a6" stroke-width="1.5" stroke-linecap="round"/>
+                            <line x1="308" y1="215" x2="313" y2="215" stroke="#14b8a6" stroke-width="1.5" stroke-linecap="round"/>
+                            <line x1="318" y1="215" x2="323" y2="215" stroke="#14b8a6" stroke-width="1.5" stroke-linecap="round"/>
+                            
+                            <line x1="408" y1="215" x2="413" y2="215" stroke="#14b8a6" stroke-width="1.5" stroke-linecap="round"/>
+                            <line x1="418" y1="215" x2="423" y2="215" stroke="#14b8a6" stroke-width="1.5" stroke-linecap="round"/>
+                            <line x1="428" y1="215" x2="433" y2="215" stroke="#14b8a6" stroke-width="1.5" stroke-linecap="round"/>
+                        </g>
+                        
+                        <!-- Legend at bottom -->
+                        <g>
+                            <!-- Human indicator -->
+                            <rect x="140" y="260" width="14" height="14" rx="3" fill="none" stroke="#64748b" stroke-width="1.5"/>
+                            <circle cx="147" cy="265" r="3" stroke="#94a3b8" stroke-width="1" fill="none"/>
+                            <text x="162" y="271" fill="#94a3b8" font-size="9" font-family="system-ui, sans-serif">Humano / Sistema</text>
+                            
+                            <!-- AI indicator -->
+                            <rect x="280" y="260" width="14" height="14" rx="3" fill="none" stroke="#14b8a6" stroke-width="2"/>
+                            <circle cx="287" cy="267" r="3" fill="#14b8a6"/>
+                            <text x="302" y="271" fill="#94a3b8" font-size="9" font-family="system-ui, sans-serif">Paso de IA</text>
+                        </g>
+                        
+                        <!-- Pie -->
+                        <text x="260" y="300" text-anchor="middle" fill="#64748b" font-size="9" font-family="system-ui, sans-serif" letter-spacing="0.06em">IA OPERANDO DENTRO DE UN FLUJO DE TRABAJO GOBERNADO</text>
+                    </svg>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================
+             SECCIÓN: El proceso es el sistema de registro
+             ======================================== -->
+        <section class="aiw-section aiw-section--alt">
+            <div class="aiw-container">
+                <div class="aiw-section__header">
+                    <h2 class="aiw-section__title">El proceso es el <span class="accent">sistema de registro</span></h2>
+                    <p class="aiw-section__subtitle">
+                        No IA. No apps. No interfaces.<br>
+                        El flujo de trabajo define quién hace qué, cuándo y bajo qué reglas.<br>
+                        Todo — humanos, IA, sistemas — opera dentro de esa estructura.
+                    </p>
+                </div>
+                
+                <div class="aiw-cards">
+                    <!-- Tarjeta 1: La IA ejecuta -->
+                    <div class="aiw-card">
+                        <div class="aiw-card__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="6"/>
+                                <circle cx="12" cy="12" r="2"/>
+                                <path d="M12 2v4M12 18v4M2 12h4M18 12h4"/>
+                            </svg>
+                        </div>
+                        <h3 class="aiw-card__title">La IA ejecuta</h3>
+                        <p class="aiw-card__desc">Realiza tareas y decisiones dentro de políticas definidas.</p>
+                    </div>
+                    
+                    <!-- Tarjeta 2: El proceso gobierna -->
+                    <div class="aiw-card aiw-card--primary">
+                        <div class="aiw-card__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                                <path d="M9 12l2 2 4-4"/>
+                            </svg>
+                        </div>
+                        <h3 class="aiw-card__title">El proceso <span class="accent">gobierna</span></h3>
+                        <p class="aiw-card__desc">Controla enrutamiento, titularidad, reglas y aprobaciones.</p>
+                    </div>
+                    
+                    <!-- Tarjeta 3: Los humanos supervisan -->
+                    <div class="aiw-card">
+                        <div class="aiw-card__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="8" r="4"/>
+                                <path d="M6 21v-2a4 4 0 014-4h4a4 4 0 014 4v2"/>
+                                <path d="M15 3c2 1.5 2 4.5 0 6"/>
+                            </svg>
+                        </div>
+                        <h3 class="aiw-card__title">Los humanos supervisan</h3>
+                        <p class="aiw-card__desc">Revisan excepciones y conservan la rendición de cuentas.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================
+             SECCIÓN: Cómo opera la IA dentro de un flujo de trabajo
+             ======================================== -->
+        <section class="aiw-section">
+            <div class="aiw-container">
+                <div class="aiw-section__header">
+                    <h2 class="aiw-section__title">Cómo opera la IA <span class="accent">dentro de un flujo de trabajo</span></h2>
+                </div>
+                
+                <div class="aiw-steps">
+                    <!-- Paso 1 -->
+                    <div class="aiw-step">
+                        <div class="aiw-step__number">1</div>
+                        <h3 class="aiw-step__title">Contexto proporcionado</h3>
+                        <p class="aiw-step__desc">La IA recibe datos estructurados del proceso.</p>
+                    </div>
+                    
+                    <!-- Paso 2 -->
+                    <div class="aiw-step">
+                        <div class="aiw-step__number">2</div>
+                        <h3 class="aiw-step__title">Tarea ejecutada</h3>
+                        <p class="aiw-step__desc">La IA analiza, clasifica, extrae o decide.</p>
+                    </div>
+                    
+                    <!-- Paso 3 -->
+                    <div class="aiw-step">
+                        <div class="aiw-step__number">3</div>
+                        <h3 class="aiw-step__title">Reglas aplicadas</h3>
+                        <p class="aiw-step__desc">Se aplican reglas de negocio y políticas.</p>
+                    </div>
+                    
+                    <!-- Paso 4 -->
+                    <div class="aiw-step">
+                        <div class="aiw-step__number">4</div>
+                        <h3 class="aiw-step__title">Resultado registrado</h3>
+                        <p class="aiw-step__desc">Se registran entradas, salidas, tiempos y justificación.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================
+             SECCIÓN: Lo que permite la IA dentro de flujos de trabajo
+             ======================================== -->
+        <section class="aiw-section aiw-section--alt">
+            <div class="aiw-container">
+                <div class="aiw-section__header">
+                    <h2 class="aiw-section__title">Lo que la IA dentro de flujos de trabajo <span class="accent">permite</span></h2>
+                </div>
+                
+                <div class="aiw-benefits">
+                    <!-- Beneficio 1: Sin IA en la sombra -->
+                    <div class="aiw-benefit">
+                        <div class="aiw-benefit__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"/>
+                                <line x1="4.93" y1="4.93" x2="19.07" y2="19.07"/>
+                            </svg>
+                        </div>
+                        <h3 class="aiw-benefit__title">Sin IA en la sombra</h3>
+                        <p class="aiw-benefit__desc">Toda actividad de IA es visible y se rastrea.</p>
+                    </div>
+                    
+                    <!-- Beneficio 2: Resultados predecibles -->
+                    <div class="aiw-benefit">
+                        <div class="aiw-benefit__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M22 11.08V12a10 10 0 11-5.93-9.14"/>
+                                <polyline points="22 4 12 14.01 9 11.01"/>
+                            </svg>
+                        </div>
+                        <h3 class="aiw-benefit__title">Resultados predecibles</h3>
+                        <p class="aiw-benefit__desc">La IA se comporta de forma consistente dentro de reglas.</p>
+                    </div>
+                    
+                    <!-- Beneficio 3: Decisiones listas para auditoría -->
+                    <div class="aiw-benefit">
+                        <div class="aiw-benefit__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/>
+                                <polyline points="14 2 14 8 20 8"/>
+                                <line x1="16" y1="13" x2="8" y2="13"/>
+                                <line x1="16" y1="17" x2="8" y2="17"/>
+                            </svg>
+                        </div>
+                        <h3 class="aiw-benefit__title">Decisiones listas para auditoría</h3>
+                        <p class="aiw-benefit__desc">Cada decisión tiene un rastro claro.</p>
+                    </div>
+                    
+                    <!-- Beneficio 4: Humano en el bucle por diseño -->
+                    <div class="aiw-benefit">
+                        <div class="aiw-benefit__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/>
+                                <circle cx="9" cy="7" r="4"/>
+                                <path d="M23 21v-2a4 4 0 00-3-3.87"/>
+                                <path d="M16 3.13a4 4 0 010 7.75"/>
+                            </svg>
+                        </div>
+                        <h3 class="aiw-benefit__title">Humano en el bucle por diseño</h3>
+                        <p class="aiw-benefit__desc">Las personas se mantienen involucradas donde importa.</p>
+                    </div>
+                    
+                    <!-- Beneficio 5: Automatización repetible -->
+                    <div class="aiw-benefit">
+                        <div class="aiw-benefit__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="23 4 23 10 17 10"/>
+                                <polyline points="1 20 1 14 7 14"/>
+                                <path d="M3.51 9a9 9 0 0114.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0020.49 15"/>
+                            </svg>
+                        </div>
+                        <h3 class="aiw-benefit__title">Automatización repetible</h3>
+                        <p class="aiw-benefit__desc">El mismo proceso se ejecuta de la misma manera cada vez.</p>
+                    </div>
+                    
+                    <!-- Beneficio 6: Control de nivel empresarial -->
+                    <div class="aiw-benefit">
+                        <div class="aiw-benefit__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                                <path d="M7 11V7a5 5 0 0110 0v4"/>
+                            </svg>
+                        </div>
+                        <h3 class="aiw-benefit__title">Control de nivel empresarial</h3>
+                        <p class="aiw-benefit__desc">Seguridad y cumplimiento integrados.</p>
+                    </div>
+                </div>
+                
+                <p class="aiw-closing">La IA escala de forma segura cuando sigue la estructura del proceso.</p>
+            </div>
+        </section>
+
+        <!-- ========================================
+             SECCIÓN: Esto no es un copiloto (contraste)
+             ======================================== -->
+        <section class="aiw-section aiw-section--contrast">
+            <div class="aiw-container">
+                <div class="aiw-contrast">
+                    <h2 class="aiw-contrast__title">Esto no es un copiloto</h2>
+                    <p class="aiw-contrast__text">
+                        Los copilotos asisten a usuarios en interfaces.<br>
+                        Datapolis ejecuta la IA dentro de flujos de trabajo — donde ocurre el trabajo real.
+                    </p>
+                    <a href="digital-workers.html" class="aiw-contrast__link">
+                        Por qué no copilotos
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="5" y1="12" x2="19" y2="12"/>
+                            <polyline points="12 5 19 12 12 19"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================
+             CTA FINAL
+             ======================================== -->
+        <section class="aiw-final">
+            <div class="aiw-final__glow"></div>
+            <div class="aiw-container">
+                <div class="aiw-final__content">
+                    <h2 class="aiw-final__title">Ejecuta el trabajo. <span class="accent">Acelera el flujo.</span></h2>
+                    <p class="aiw-final__subtitle">Pon la IA dentro de flujos de trabajo gobernados — y mantén el control.</p>
+                    
+                    <div class="aiw-final__actions">
+                        <a href="platform-2to2.html" class="aiw-btn aiw-btn--large">Ver la plataforma</a>
+                        <a href="contact.html" class="aiw-btn aiw-btn--outline aiw-btn--large">Contacta con nosotros</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Placeholder de pie de página -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Guiones -->
+    <script>
+        document.addEventListener('includesLoaded', function() {
+            var scripts = [
+                '../assets/js/vendors.min.js',
+                '../assets/js/main.min.js',
+                '../assets/js/functions.min.js',
+                '../assets/js/async.min.js'
+            ];
+            
+            function loadScript(index) {
+                if (index >= scripts.length) return;
+                
+                var script = document.createElement('script');
+                script.src = scripts[index];
+                script.onload = function() {
+                    loadScript(index + 1);
+                };
+                document.body.appendChild(script);
+            }
+            
+            loadScript(0);
+        });
+
+        // Desplazamiento suave para enlaces de ancla
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

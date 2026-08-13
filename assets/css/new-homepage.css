@@ -1862,3 +1862,18 @@ img {
         display: none;
     }
 }
+
+/* ============================================
+   FIX: przewijanie w poziomie na mobile
+   Powód: .dp-hero__glow ma 800 px i nie był przycinany,
+   a .dp-hero__title .accent miał white-space:nowrap na każdej szerokości.
+   Efekt przed poprawką: dokument 595 px przy viewporcie 390 px.
+   ============================================ */
+html, body { overflow-x: hidden; }
+.dp-hero { overflow-x: clip; }
+.dp-hero__glow, .dp-final__glow { max-width: 100%; }
+
+@media (max-width: 640px) {
+    .dp-hero__title .accent,
+    .dp-hero__title span { white-space: normal; }
+}

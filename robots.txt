@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /_to_delete/
+Disallow: /includes/
+
+Sitemap: https://datapolis.com/sitemap.xml

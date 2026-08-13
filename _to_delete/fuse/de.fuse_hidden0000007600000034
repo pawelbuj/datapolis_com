@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Warum keine Copiloten - KI in Arbeitsabläufen, nicht in Chatfenstern | Datapolis</title>
+    <meta name="description" content="Copiloten unterstützen Einzelpersonen. Aber echte Arbeit passiert über Teams, Systeme, Freigaben und Verantwortlichkeiten hinweg. Erfahren Sie, warum Prozesse — nicht Prompts — der Weg sind, wie KI laufen sollte.">
+    <meta name="robots" content="index,follow">
+    <meta property="og:title" content="Warum keine Copiloten - Prozesse steuern Organisationen">
+    <meta property="og:description" content="KI-Copiloten sind hilfreich, aber nicht operativ. Wenn KI über Prompts arbeitet, verschwindet die Kontrolle. Datapolis bringt KI in governten Arbeitsabläufen unter.">
+    <meta property="og:type" content="website">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#020617">
+
+    <!-- SEO: canonical / hreflang / open graph -->
+    <link rel="canonical" href="https://datapolis.com/de/why-not-copilots">
+    <link rel="alternate" hreflang="en" href="https://datapolis.com/why-not-copilots">
+    <link rel="alternate" hreflang="pl" href="https://datapolis.com/pl/why-not-copilots">
+    <link rel="alternate" hreflang="de" href="https://datapolis.com/de/why-not-copilots">
+    <link rel="alternate" hreflang="es" href="https://datapolis.com/es/why-not-copilots">
+    <link rel="alternate" hreflang="x-default" href="https://datapolis.com/why-not-copilots">
+    <meta property="og:url" content="https://datapolis.com/de/why-not-copilots">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:image" content="https://datapolis.com/assets/img/og-image-1200x630.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <!-- /SEO -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Instrument+Sans:wght@400;500;600;700&amp;display=swap">
+
+    <link rel="stylesheet" href="../assets/css/main.min.css?v=10022025">
+    <link rel="stylesheet" href="../assets/css/async.min.css?v=10022025" media="print" onload="this.media='all'; this.onload=null;">
+    <link rel="stylesheet" href="../assets/css/dark-theme.css?v=3">
+    <link rel="stylesheet" href="../assets/css/new-homepage.css?v=7">
+    <link rel="stylesheet" href="../assets/css/why-not-copilots.css?v=1">
+
+    <script src="../includes/loader.js"></script>
+
+    <link rel="icon" type="image/png" href="../assets/img/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="../assets/img/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="../assets/img/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="../assets/img/favicon/site.webmanifest" />
+</head>
+<body class="dark-theme wnc-page">
+    <!-- Header-Platzhalter -->
+    <div id="header-placeholder"></div>
+
+    <main>
+        <!-- ========================================
+             HERO-SEKTION - Zweispaltiges Layout
+             ======================================== -->
+        <section class="wnc-hero">
+            <div class="wnc-hero__grid"></div>
+            <div class="wnc-hero__glow"></div>
+            
+            <div class="wnc-container wnc-hero__inner">
+                <!-- Left: Content -->
+                <div class="wnc-hero__content">
+                    <span class="wnc-label">Warum keine Copiloten</span>
+                    
+                    <h1 class="wnc-hero__title">
+                        Copiloten sind hilfreich.<br><span class="accent">So läuft Arbeit nicht.</span>
+                    </h1>
+                    
+                    <p class="wnc-hero__intro">
+                        KI-Copiloten unterstützen Einzelpersonen.<br>
+                        Aber echte Arbeit passiert über Teams, Systeme, Freigaben und Verantwortlichkeiten hinweg.
+                    </p>
+                    
+                    <p class="wnc-hero__warning">
+                        Wenn KI über Prompts und Chatfenster arbeitet, verschwindet die Kontrolle.
+                    </p>
+                    
+                    <ul class="wnc-hero__bullets">
+                        <li class="wnc-hero__bullet wnc-hero__bullet--warning">Keine Zuständigkeit</li>
+                        <li class="wnc-hero__bullet wnc-hero__bullet--warning">Keine Verantwortlichkeit</li>
+                        <li class="wnc-hero__bullet wnc-hero__bullet--warning">Keine Audit-Spur</li>
+                        <li class="wnc-hero__bullet wnc-hero__bullet--warning">Keine erzwungenen Regeln</li>
+                    </ul>
+                    
+                    <div class="wnc-hero__actions">
+                        <a href="platform-2to2.html" class="wnc-btn wnc-btn--large">Sehen Sie einen besseren Ansatz</a>
+                        <a href="ai-inside-workflows.html" class="wnc-btn wnc-btn--outline wnc-btn--large">KI in Arbeitsabläufen</a>
+                    </div>
+                </div>
+                
+                <!-- Right: Split Visual Comparison -->
+                <div class="wnc-hero__visual">
+                    <svg class="wnc-comparison-diagram" viewBox="0 0 520 380" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <filter id="glowWnc" x="-50%" y="-50%" width="200%" height="200%">
+                                <feGaussianBlur stdDeviation="6" result="blur"/>
+                                <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+                            </filter>
+                            <filter id="blurWnc" x="-20%" y="-20%" width="140%" height="140%">
+                                <feGaussianBlur stdDeviation="2" result="blur"/>
+                            </filter>
+                            <linearGradient id="tealGradWnc" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#14b8a6"/>
+                                <stop offset="100%" stop-color="#0d9488"/>
+                            </linearGradient>
+                            <linearGradient id="redGradWnc" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#ef4444"/>
+                                <stop offset="100%" stop-color="#dc2626"/>
+                            </linearGradient>
+                        </defs>
+                        
+                        <!-- Trennlinie -->
+                        <line x1="260" y1="30" x2="260" y2="320" stroke="#334155" stroke-width="2" stroke-dasharray="8 4"/>
+                        
+                        <!-- LINKE SEITE: Prompt-basiert (chaotisch) -->
+                        <g>
+                            <!-- Label -->
+                            <rect x="60" y="20" width="140" height="26" rx="13" fill="rgba(239, 68, 68, 0.15)" stroke="rgba(239, 68, 68, 0.4)" stroke-width="1"/>
+                            <text x="130" y="38" text-anchor="middle" fill="#ef4444" font-size="10" font-weight="700" font-family="system-ui, sans-serif" letter-spacing="0.08em">PROMPT-BASIERTE KI</text>
+                            
+                            <!-- Chatfenster-Container -->
+                            <rect x="30" y="60" width="200" height="220" rx="12" fill="#0f172a" stroke="#334155" stroke-width="1.5"/>
+                            
+                            <!-- Chat header -->
+                            <rect x="30" y="60" width="200" height="32" rx="12" fill="rgba(51, 65, 85, 0.5)"/>
+                            <rect x="30" y="80" width="200" height="12" fill="#0f172a"/>
+                            <circle cx="48" cy="76" r="5" fill="#ef4444" opacity="0.6"/>
+                            <circle cx="62" cy="76" r="5" fill="#f59e0b" opacity="0.6"/>
+                            <circle cx="76" cy="76" r="5" fill="#22c55e" opacity="0.6"/>
+                            <text x="130" y="80" text-anchor="middle" fill="#64748b" font-size="9" font-family="system-ui, sans-serif">KI-Chat</text>
+                            
+                            <!-- Floating chat bubbles (chaotic, blurred) -->
+                            <g filter="url(#blurWnc)" opacity="0.7">
+                                <rect x="45" y="105" width="100" height="24" rx="8" fill="#1e293b"/>
+                                <rect x="85" y="138" width="120" height="24" rx="8" fill="#1e293b"/>
+                                <rect x="50" y="171" width="90" height="24" rx="8" fill="#1e293b"/>
+                                <rect x="100" y="204" width="110" height="24" rx="8" fill="#1e293b"/>
+                                <rect x="55" y="237" width="80" height="24" rx="8" fill="#1e293b"/>
+                            </g>
+                            
+                            <!-- Question marks / uncertainty indicators -->
+                            <text x="180" y="122" fill="#ef4444" font-size="14" font-weight="700" opacity="0.5">?</text>
+                            <text x="60" y="158" fill="#ef4444" font-size="14" font-weight="700" opacity="0.5">?</text>
+                            <text x="195" y="220" fill="#ef4444" font-size="14" font-weight="700" opacity="0.5">?</text>
+                            
+                            <!-- Status-Label -->
+                            <rect x="60" y="290" width="100" height="22" rx="4" fill="rgba(239, 68, 68, 0.1)" stroke="rgba(239, 68, 68, 0.3)" stroke-width="1"/>
+                            <text x="110" y="305" text-anchor="middle" fill="#ef4444" font-size="9" font-weight="600" font-family="system-ui, sans-serif">UNKONTROLLIERT</text>
+                        </g>
+                        
+                        <!-- RECHTE SEITE: Prozess-basiert (strukturiert) -->
+                        <g>
+                            <!-- Label -->
+                            <rect x="320" y="20" width="140" height="26" rx="13" fill="rgba(20, 184, 166, 0.15)" stroke="rgba(20, 184, 166, 0.4)" stroke-width="1"/>
+                            <text x="390" y="38" text-anchor="middle" fill="#14b8a6" font-size="10" font-weight="700" font-family="system-ui, sans-serif" letter-spacing="0.08em">PROZESSBASIERTE KI</text>
+                            
+                            <!-- Workflow container -->
+                            <rect x="290" y="60" width="200" height="220" rx="12" fill="#0f172a" stroke="#14b8a6" stroke-width="1.5" stroke-opacity="0.5"/>
+                            
+                            <!-- Workflow header -->
+                            <rect x="290" y="60" width="200" height="32" rx="12" fill="rgba(20, 184, 166, 0.1)"/>
+                            <rect x="290" y="80" width="200" height="12" fill="#0f172a"/>
+                            <text x="390" y="80" text-anchor="middle" fill="#14b8a6" font-size="9" font-weight="600" font-family="system-ui, sans-serif">GOVERNTER ARBEITSABLAUF</text>
+                            
+                            <!-- Schritt 1: Intake -->
+                            <rect x="310" y="105" width="160" height="32" rx="6" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+                            <circle cx="328" cy="121" r="8" fill="rgba(148, 163, 184, 0.2)" stroke="#94a3b8" stroke-width="1"/>
+                            <text x="345" y="125" fill="#94a3b8" font-size="9" font-weight="600" font-family="system-ui, sans-serif">Intake</text>
+                            <path d="M440 117l4 4-4 4" stroke="#14b8a6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                            
+                            <!-- Approval checkpoint -->
+                            <circle cx="390" cy="152" r="10" fill="#0f172a" stroke="#14b8a6" stroke-width="1.5"/>
+                            <path d="M385 152l3 3 6-6" stroke="#14b8a6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                            
+                            <!-- Schritt 2: KI-Analyse -->
+                            <rect x="310" y="167" width="160" height="32" rx="6" fill="rgba(20, 184, 166, 0.1)" stroke="#14b8a6" stroke-width="1.5"/>
+                            <circle cx="328" cy="183" r="8" fill="rgba(20, 184, 166, 0.2)" stroke="#14b8a6" stroke-width="1"/>
+                            <circle cx="328" cy="183" r="3" fill="#14b8a6"/>
+                            <text x="345" y="187" fill="#14b8a6" font-size="9" font-weight="700" font-family="system-ui, sans-serif">KI-Analyse</text>
+                            <text x="455" y="187" fill="#14b8a6" font-size="7" font-family="system-ui, sans-serif">LOG</text>
+                            
+                            <!-- Approval checkpoint -->
+                            <circle cx="390" cy="214" r="10" fill="#0f172a" stroke="#14b8a6" stroke-width="1.5"/>
+                            <path d="M385 214l3 3 6-6" stroke="#14b8a6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                            
+                            <!-- Schritt 3: Abschluss -->
+                            <rect x="310" y="229" width="160" height="32" rx="6" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+                            <circle cx="328" cy="245" r="8" fill="rgba(20, 184, 166, 0.2)" stroke="#14b8a6" stroke-width="1"/>
+                            <path d="M324 245l3 3 5-5" stroke="#14b8a6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                            <text x="345" y="249" fill="#94a3b8" font-size="9" font-weight="600" font-family="system-ui, sans-serif">Abschluss</text>
+                            <text x="455" y="249" fill="#64748b" font-size="7" font-family="system-ui, sans-serif">LOG</text>
+                            
+                            <!-- Status-Label -->
+                            <rect x="350" y="290" width="80" height="22" rx="4" fill="rgba(20, 184, 166, 0.1)" stroke="rgba(20, 184, 166, 0.3)" stroke-width="1"/>
+                            <text x="390" y="305" text-anchor="middle" fill="#14b8a6" font-size="9" font-weight="600" font-family="system-ui, sans-serif">GOVERNED</text>
+                        </g>
+                        
+                        <!-- VS separator -->
+                        <circle cx="260" cy="175" r="18" fill="#0f172a" stroke="#334155" stroke-width="2"/>
+                        <text x="260" y="180" text-anchor="middle" fill="#64748b" font-size="11" font-weight="700" font-family="system-ui, sans-serif">VS</text>
+                        
+                        <!-- Beschriftung -->
+                        <text x="260" y="360" text-anchor="middle" fill="#64748b" font-size="10" font-family="system-ui, sans-serif" letter-spacing="0.06em">UNTERSTÜTZUNG VS AUSFÜHRUNG</text>
+                    </svg>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================
+             SEKTION: Wofür Copiloten gut sind
+             ======================================== -->
+        <section class="wnc-section wnc-section--alt">
+            <div class="wnc-container">
+                <div class="wnc-section__header">
+                    <h2 class="wnc-section__title">Wofür Copiloten gut sind</h2>
+                    <p class="wnc-section__subtitle">
+                        Copiloten sind nicht nutzlos. Sie lösen nur ein anderes Problem.
+                    </p>
+                </div>
+                
+                <div class="wnc-cards">
+                    <!-- Karte 1: Persönliche Produktivität -->
+                    <div class="wnc-card wnc-card--neutral">
+                        <div class="wnc-card__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/>
+                                <circle cx="12" cy="7" r="4"/>
+                            </svg>
+                        </div>
+                        <h3 class="wnc-card__title">Persönliche Produktivität</h3>
+                        <p class="wnc-card__desc">Texte entwerfen, Inhalte zusammenfassen, Ideen generieren.</p>
+                    </div>
+                    
+                    <!-- Karte 2: Ad-hoc-Unterstützung -->
+                    <div class="wnc-card wnc-card--neutral">
+                        <div class="wnc-card__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"/>
+                                <path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3"/>
+                                <line x1="12" y1="17" x2="12.01" y2="17"/>
+                            </svg>
+                        </div>
+                        <h3 class="wnc-card__title">Ad-hoc-Unterstützung</h3>
+                        <p class="wnc-card__desc">Hilft Einzelpersonen, schneller zu denken.</p>
+                    </div>
+                    
+                    <!-- Karte 3: Einzeluser-Kontext -->
+                    <div class="wnc-card wnc-card--neutral">
+                        <div class="wnc-card__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                                <line x1="3" y1="9" x2="21" y2="9"/>
+                                <line x1="9" y1="21" x2="9" y2="9"/>
+                            </svg>
+                        </div>
+                        <h3 class="wnc-card__title">Einzeluser-Kontext</h3>
+                        <p class="wnc-card__desc">Nützlich, wenn die Konsequenzen gering sind.</p>
+                    </div>
+                </div>
+                
+                <p class="wnc-note">Hilfreich — aber nicht operativ.</p>
+            </div>
+        </section>
+
+        <!-- ========================================
+             SEKTION: Wo Copiloten scheitern
+             ======================================== -->
+        <section class="wnc-section">
+            <div class="wnc-container">
+                <div class="wnc-section__header">
+                    <h2 class="wnc-section__title wnc-section__title--strong">Wo Copiloten scheitern</h2>
+                </div>
+                
+                <div class="wnc-warnings">
+                    <!-- Warning 1 -->
+                    <div class="wnc-warning">
+                        <div class="wnc-warning__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"/>
+                                <line x1="12" y1="8" x2="12" y2="12"/>
+                                <line x1="12" y1="16" x2="12.01" y2="16"/>
+                            </svg>
+                        </div>
+                        <h3 class="wnc-warning__title">Kein Prozesskontext</h3>
+                    </div>
+                    
+                    <!-- Warning 2 -->
+                    <div class="wnc-warning">
+                        <div class="wnc-warning__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"/>
+                                <line x1="12" y1="8" x2="12" y2="12"/>
+                                <line x1="12" y1="16" x2="12.01" y2="16"/>
+                            </svg>
+                        </div>
+                        <h3 class="wnc-warning__title">Keine Zuständigkeit für Ergebnisse</h3>
+                    </div>
+                    
+                    <!-- Warning 3 -->
+                    <div class="wnc-warning">
+                        <div class="wnc-warning__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"/>
+                                <line x1="12" y1="8" x2="12" y2="12"/>
+                                <line x1="12" y1="16" x2="12.01" y2="16"/>
+                            </svg>
+                        </div>
+                        <h3 class="wnc-warning__title">Kein Freigabe-Flow</h3>
+                    </div>
+                    
+                    <!-- Warning 4 -->
+                    <div class="wnc-warning">
+                        <div class="wnc-warning__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"/>
+                                <line x1="12" y1="8" x2="12" y2="12"/>
+                                <line x1="12" y1="16" x2="12.01" y2="16"/>
+                            </svg>
+                        </div>
+                        <h3 class="wnc-warning__title">Keine Durchsetzung von Regeln</h3>
+                    </div>
+                    
+                    <!-- Warning 5 -->
+                    <div class="wnc-warning">
+                        <div class="wnc-warning__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"/>
+                                <line x1="12" y1="8" x2="12" y2="12"/>
+                                <line x1="12" y1="16" x2="12.01" y2="16"/>
+                            </svg>
+                        </div>
+                        <h3 class="wnc-warning__title">Keine Nachverfolgbarkeit</h3>
+                    </div>
+                    
+                    <!-- Warning 6 -->
+                    <div class="wnc-warning">
+                        <div class="wnc-warning__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"/>
+                                <line x1="12" y1="8" x2="12" y2="12"/>
+                                <line x1="12" y1="16" x2="12.01" y2="16"/>
+                            </svg>
+                        </div>
+                        <h3 class="wnc-warning__title">Keine Funktionstrennung</h3>
+                    </div>
+                </div>
+                
+                <p class="wnc-warning-note">Wenn etwas schiefgeht, weiß niemand, wer was entschieden hat — oder warum.</p>
+            </div>
+        </section>
+
+        <!-- ========================================
+             KONTRAST-SEKTION: Copiloten raten. Prozesse entscheiden.
+             ======================================== -->
+        <section class="wnc-section wnc-section--contrast">
+            <div class="wnc-container">
+                <div class="wnc-contrast">
+                    <h2 class="wnc-contrast__title">
+                        Copiloten raten.<br><span class="accent">Prozesse entscheiden.</span>
+                    </h2>
+                    <div class="wnc-contrast__grid">
+                        <div class="wnc-contrast__item">
+                            <span class="wnc-contrast__left">Copiloten reagieren auf Prompts.</span>
+                            <span class="wnc-contrast__right">Prozesse setzen Regeln durch.</span>
+                        </div>
+                        <div class="wnc-contrast__item">
+                            <span class="wnc-contrast__left">Copiloten schlagen Handlungen vor.</span>
+                            <span class="wnc-contrast__right">Prozesse sind für Ergebnisse zuständig.</span>
+                        </div>
+                        <div class="wnc-contrast__item">
+                            <span class="wnc-contrast__left">Copiloten unterstützen Menschen.</span>
+                            <span class="wnc-contrast__right">Prozesse steuern das Geschäft.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================
+             SEKTION: Warum Prompts nicht skalieren
+             ======================================== -->
+        <section class="wnc-section wnc-section--alt">
+            <div class="wnc-container">
+                <div class="wnc-section__header">
+                    <h2 class="wnc-section__title">Warum Prompts nicht skalieren</h2>
+                </div>
+                
+                <div class="wnc-columns">
+                    <!-- Column 1 -->
+                    <div class="wnc-column">
+                        <div class="wnc-column__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/>
+                                <circle cx="12" cy="7" r="4"/>
+                                <line x1="12" y1="11" x2="12" y2="17"/>
+                                <line x1="9" y1="14" x2="15" y2="14"/>
+                            </svg>
+                        </div>
+                        <h3 class="wnc-column__title">Prompts leben in den Köpfen der Menschen</h3>
+                        <p class="wnc-column__desc">Wissen verschwindet, wenn Menschen gehen.</p>
+                    </div>
+                    
+                    <!-- Column 2 -->
+                    <div class="wnc-column">
+                        <div class="wnc-column__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                                <line x1="12" y1="8" x2="12" y2="12"/>
+                                <line x1="12" y1="16" x2="12.01" y2="16"/>
+                            </svg>
+                        </div>
+                        <h3 class="wnc-column__title">Prompts umgehen Governance</h3>
+                        <p class="wnc-column__desc">Keine Richtlinien, keine Freigaben, keine Grenzen.</p>
+                    </div>
+                    
+                    <!-- Column 3 -->
+                    <div class="wnc-column">
+                        <div class="wnc-column__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"/>
+                                <line x1="4.93" y1="4.93" x2="19.07" y2="19.07"/>
+                            </svg>
+                        </div>
+                        <h3 class="wnc-column__title">Prompts erzeugen Schatten-KI</h3>
+                        <p class="wnc-column__desc">Unsichtbar, unverwaltet und riskant.</p>
+                    </div>
+                </div>
+                
+                <p class="wnc-scale-note">Unternehmen skalieren nicht mit Gesprächen. Sie skalieren mit Systemen.</p>
+            </div>
+        </section>
+
+        <!-- ========================================
+             SEKTION: Unser Ansatz: KI in Arbeitsabläufen
+             ======================================== -->
+        <section class="wnc-section">
+            <div class="wnc-container">
+                <div class="wnc-section__header">
+                    <h2 class="wnc-section__title">Unser Ansatz: <span class="accent">KI in Arbeitsabläufen</span></h2>
+                    <p class="wnc-section__subtitle">
+                        Datapolis ersetzt Menschen nicht durch Copiloten.<br>
+                        Wir platzieren KI in governten Prozessen.
+                    </p>
+                </div>
+                
+                <div class="wnc-cards">
+                    <!-- Karte 1: KI mit Rolle -->
+                    <div class="wnc-card">
+                        <div class="wnc-card__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="6"/>
+                                <circle cx="12" cy="12" r="2"/>
+                                <path d="M12 2v4M12 18v4M2 12h4M18 12h4"/>
+                            </svg>
+                        </div>
+                        <h3 class="wnc-card__title">KI mit Rolle</h3>
+                        <p class="wnc-card__desc">Zugewiesene Verantwortlichkeiten, Berechtigungen und Limits.</p>
+                    </div>
+                    
+                    <!-- Karte 2: KI mit Aufsicht -->
+                    <div class="wnc-card">
+                        <div class="wnc-card__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                                <circle cx="12" cy="12" r="3"/>
+                            </svg>
+                        </div>
+                        <h3 class="wnc-card__title">KI mit Aufsicht</h3>
+                        <p class="wnc-card__desc">Human-in-the-loop, wenn nötig.</p>
+                    </div>
+                    
+                    <!-- Karte 3: KI mit Verantwortlichkeit -->
+                    <div class="wnc-card">
+                        <div class="wnc-card__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/>
+                                <polyline points="14 2 14 8 20 8"/>
+                                <line x1="16" y1="13" x2="8" y2="13"/>
+                                <line x1="16" y1="17" x2="8" y2="17"/>
+                            </svg>
+                        </div>
+                        <h3 class="wnc-card__title">KI mit Verantwortlichkeit</h3>
+                        <p class="wnc-card__desc">Gleiches Reporting, gleiche Audit-Spur wie menschliche Arbeit.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================
+             SEKTION: Copiloten vs Digitale Worker
+             ======================================== -->
+        <section class="wnc-section wnc-section--alt">
+            <div class="wnc-container">
+                <div class="wnc-section__header">
+                    <h2 class="wnc-section__title">Copiloten vs <span class="accent">Digitale Worker</span></h2>
+                </div>
+                
+                <div class="wnc-comparison-table">
+                    <div class="wnc-comparison-table__header">
+                        <div class="wnc-comparison-table__col wnc-comparison-table__col--left">Copiloten</div>
+                        <div class="wnc-comparison-table__col wnc-comparison-table__col--right">Digitale Worker</div>
+                    </div>
+                    <div class="wnc-comparison-table__row">
+                        <div class="wnc-comparison-table__cell wnc-comparison-table__cell--left">Prompt-basiert</div>
+                        <div class="wnc-comparison-table__cell wnc-comparison-table__cell--right">Prozessbasiert</div>
+                    </div>
+                    <div class="wnc-comparison-table__row">
+                        <div class="wnc-comparison-table__cell wnc-comparison-table__cell--left">Individueller Kontext</div>
+                        <div class="wnc-comparison-table__cell wnc-comparison-table__cell--right">End-to-End-Arbeitsablauf</div>
+                    </div>
+                    <div class="wnc-comparison-table__row">
+                        <div class="wnc-comparison-table__cell wnc-comparison-table__cell--left">Keine Zuständigkeit</div>
+                        <div class="wnc-comparison-table__cell wnc-comparison-table__cell--right">Klare Verantwortung</div>
+                    </div>
+                    <div class="wnc-comparison-table__row">
+                        <div class="wnc-comparison-table__cell wnc-comparison-table__cell--left">Keine Audit-Spur</div>
+                        <div class="wnc-comparison-table__cell wnc-comparison-table__cell--right">Volle Nachverfolgbarkeit</div>
+                    </div>
+                    <div class="wnc-comparison-table__row">
+                        <div class="wnc-comparison-table__cell wnc-comparison-table__cell--left">Schwer zu steuern</div>
+                        <div class="wnc-comparison-table__cell wnc-comparison-table__cell--right">Governance by design</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================
+             ABSCHLIESSENDES CTA
+             ======================================== -->
+        <section class="wnc-final">
+            <div class="wnc-final__glow"></div>
+            <div class="wnc-container">
+                <div class="wnc-final__content">
+                    <h2 class="wnc-final__title">KI ist zu mächtig, um unverwaltet zu sein.</h2>
+                    <p class="wnc-final__subtitle">Bringen Sie KI dahin, wo Arbeit wirklich passiert — in Prozesse.</p>
+                    
+                    <div class="wnc-final__actions">
+                        <a href="platform-2to2.html" class="wnc-btn wnc-btn--large">Plattform ansehen</a>
+                        <a href="digital-workers.html" class="wnc-btn wnc-btn--outline wnc-btn--large">Digitale Worker</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer-Platzhalter -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Skripte -->
+    <script>
+        document.addEventListener('includesLoaded', function() {
+            var scripts = [
+                '../assets/js/vendors.min.js',
+                '../assets/js/main.min.js',
+                '../assets/js/functions.min.js',
+                '../assets/js/async.min.js'
+            ];
+            
+            function loadScript(index) {
+                if (index >= scripts.length) return;
+                
+                var script = document.createElement('script');
+                script.src = scripts[index];
+                script.onload = function() {
+                    loadScript(index + 1);
+                };
+                document.body.appendChild(script);
+            }
+            
+            loadScript(0);
+        });
+
+        // Sanftes Scrollen für Anker-Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

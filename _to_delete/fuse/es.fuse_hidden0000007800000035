@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Acerca de Datapolis - Software para la gestión de procesos de negocio</title>
+    <meta name="description" content="Datapolis desarrolla software para diseñar, ejecutar y mejorar procesos de negocio. Más de 20 años de experiencia en flujos de trabajo empresariales. Ejecución centrada en las personas y trabajadores digitales bajo gobernanza.">
+    <meta name="robots" content="index,follow">
+    <meta property="og:title" content="Acerca de Datapolis">
+    <meta property="og:description" content="Más de 20 años creando software de flujos de trabajo. Humanos + trabajadores digitales. Ejecución gobernada.">
+    <meta property="og:type" content="website">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#020617">
+
+    <!-- SEO: canonical / hreflang / open graph -->
+    <link rel="canonical" href="https://datapolis.com/es/about">
+    <link rel="alternate" hreflang="en" href="https://datapolis.com/about">
+    <link rel="alternate" hreflang="pl" href="https://datapolis.com/pl/about">
+    <link rel="alternate" hreflang="de" href="https://datapolis.com/de/about">
+    <link rel="alternate" hreflang="es" href="https://datapolis.com/es/about">
+    <link rel="alternate" hreflang="x-default" href="https://datapolis.com/about">
+    <meta property="og:url" content="https://datapolis.com/es/about">
+    <meta property="og:locale" content="es_ES">
+    <meta property="og:image" content="https://datapolis.com/assets/img/og-image-1200x630.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <!-- /SEO -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Instrument+Sans:wght@400;500;600;700&amp;display=swap">
+
+    <link rel="stylesheet" href="../assets/css/main.min.css?v=10022025">
+    <link rel="stylesheet" href="../assets/css/async.min.css?v=10022025" media="print" onload="this.media='all'; this.onload=null;">
+    <link rel="stylesheet" href="../assets/css/dark-theme.css?v=3">
+    <link rel="stylesheet" href="../assets/css/new-homepage.css?v=7">
+    <link rel="stylesheet" href="../assets/css/about.css?v=3">
+
+    <script src="../includes/loader.js"></script>
+
+    <link rel="icon" type="image/png" href="../assets/img/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="../assets/img/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="../assets/img/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="../assets/img/favicon/site.webmanifest" />
+</head>
+<body class="dark-theme">
+    <!-- Marcador de posición del encabezado -->
+    <div id="header-placeholder"></div>
+
+    <main class="about-page">
+        <!-- ========================================
+             1. HERO (2 columnas: texto + diagrama)
+             ======================================== -->
+        <section class="about-hero">
+            <div class="about-hero__grid"></div>
+            <div class="about-hero__glow"></div>
+            
+            <div class="about-container about-hero__inner">
+                <div class="about-hero__content">
+                    <span class="about-label">Acerca de Datapolis</span>
+                    <h1 class="about-hero__title">
+                        Llevamos construyendo software de flujos de trabajo durante más de <span class="accent">20 años</span>.
+                    </h1>
+                    <p class="about-hero__intro">
+                        Datapolis es una empresa de software enfocada en la gestión de procesos de negocio. Construimos herramientas para diseñar, ejecutar y mejorar flujos de trabajo reales — con titularidad clara, <span class="accent">auditabilidad</span> y control. Hoy llevamos esa disciplina empresarial a la era de la IA: humanos y <span class="accent">trabajadores digitales</span>, dentro de procesos gobernados.
+                    </p>
+                    <div class="about-hero__actions">
+                        <a href="https://2to2.ai" target="_blank" class="dp-btn">Ver la plataforma</a>
+                        <a href="contact.html" class="dp-btn dp-btn-outline">Contáctanos</a>
+                    </div>
+                </div>
+                
+                <div class="about-hero__visual">
+                    <!-- Diagrama de flujo de trabajo: máquina de estados BPM clásica -->
+                    <svg class="workflow-diagram" viewBox="0 0 440 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <filter id="glowTeal" x="-50%" y="-50%" width="200%" height="200%">
+                                <feGaussianBlur stdDeviation="5" result="blur"/>
+                                <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+                            </filter>
+                        </defs>
+                        
+                        <style>
+                            @keyframes pulse {
+                                0%, 100% { opacity: 1; }
+                                50% { opacity: 0.6; }
+                            }
+                            .review-border { animation: pulse 2.5s ease-in-out infinite; }
+                        </style>
+                        
+                        <!-- Líneas de conexión -->
+                        <path d="M58 130 H95" stroke="#475569" stroke-width="2"/>
+                        <path d="M185 130 H215" stroke="#475569" stroke-width="2"/>
+                        <path d="M305 130 H335" stroke="#475569" stroke-width="2"/>
+                        <!-- Rama de aprobación hacia arriba -->
+                        <path d="M260 105 V60 H335" stroke="#475569" stroke-width="2"/>
+                        <!-- Ruta de retorno -->
+                        <path d="M140 105 V60 H260" stroke="#475569" stroke-width="2" stroke-dasharray="5 3"/>
+                        
+                        <!-- Flechas en las líneas -->
+                        <polygon points="95,126 95,134 103,130" fill="#475569"/>
+                        <polygon points="215,126 215,134 223,130" fill="#475569"/>
+                        <polygon points="335,126 335,134 343,130" fill="#475569"/>
+                        <polygon points="335,56 335,64 343,60" fill="#475569"/>
+                        
+                        <!-- Nodo de inicio (turquesa) -->
+                        <g filter="url(#glowTeal)">
+                            <circle cx="36" cy="130" r="22" fill="#0f172a" stroke="#14b8a6" stroke-width="2.5"/>
+                            <polygon points="32,122 32,138 44,130" fill="#14b8a6"/>
+                        </g>
+                        
+                        <!-- Estado: Borrador (borde blanco) + icono humano -->
+                        <g>
+                            <rect x="95" y="105" width="90" height="50" rx="8" fill="#1e293b" stroke="#94a3b8" stroke-width="2"/>
+                            <text x="140" y="138" text-anchor="middle" fill="#f1f5f9" font-size="13" font-weight="600" font-family="system-ui, sans-serif">Borrador</text>
+                            <!-- Icono humano (arriba a la izquierda del estado) -->
+                            <g fill="none" stroke="#94a3b8" stroke-width="1.2" transform="translate(100, 108)">
+                                <circle cx="8" cy="5" r="3.5"/>
+                                <path d="M2 16v-1.5a6 6 0 0112 0v1.5" stroke-linecap="round"/>
+                            </g>
+                        </g>
+                        
+                        <!-- Estado: Revisión (borde turquesa - pulsante) + icono de trabajador digital -->
+                        <g>
+                            <rect x="215" y="105" width="90" height="50" rx="8" fill="#1e293b" stroke="#14b8a6" stroke-width="2.5" class="review-border" filter="url(#glowTeal)"/>
+                            <text x="260" y="138" text-anchor="middle" fill="#f1f5f9" font-size="13" font-weight="600" font-family="system-ui, sans-serif">Revisión</text>
+                            <!-- Icono de trabajador digital (arriba a la izquierda del estado) -->
+                            <g fill="none" stroke="#14b8a6" stroke-width="1.2" transform="translate(220, 108)">
+                                <circle cx="9" cy="9" r="5"/>
+                                <circle cx="9" cy="9" r="1.8" fill="#14b8a6"/>
+                                <line x1="9" y1="4" x2="9" y2="1.5"/>
+                                <line x1="9" y1="16.5" x2="9" y2="14"/>
+                                <line x1="4" y1="9" x2="1.5" y2="9"/>
+                                <line x1="16.5" y1="9" x2="14" y2="9"/>
+                            </g>
+                        </g>
+                        
+                        <!-- Estado: Aprobación (borde blanco) + icono humano -->
+                        <g>
+                            <rect x="335" y="35" width="90" height="50" rx="8" fill="#1e293b" stroke="#94a3b8" stroke-width="2"/>
+                            <text x="380" y="68" text-anchor="middle" fill="#f1f5f9" font-size="13" font-weight="600" font-family="system-ui, sans-serif">Aprobación</text>
+                            <!-- Icono humano (arriba a la izquierda del estado) -->
+                            <g fill="none" stroke="#94a3b8" stroke-width="1.2" transform="translate(340, 38)">
+                                <circle cx="8" cy="5" r="3.5"/>
+                                <path d="M2 16v-1.5a6 6 0 0112 0v1.5" stroke-linecap="round"/>
+                            </g>
+                        </g>
+                        
+                        <!-- Nodo final (turquesa) -->
+                        <g filter="url(#glowTeal)">
+                            <circle cx="380" cy="130" r="22" fill="#0f172a" stroke="#14b8a6" stroke-width="2.5"/>
+                            <rect x="370" y="122" width="20" height="16" rx="2" fill="#14b8a6"/>
+                        </g>
+                        
+                        <!-- Leyenda inferior -->
+                        <text x="220" y="210" text-anchor="middle" fill="#64748b" font-size="10" font-family="system-ui, sans-serif" letter-spacing="0.08em">ESTADOS · TRANSICIONES · ROLES · PERMISOS · ACTIVIDADES</text>
+                    </svg>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================
+             2. DE UN VISTAZO (4 tarjetas de métricas)
+             ======================================== -->
+        <section class="about-section about-section--glance">
+            <div class="about-container">
+                <div class="about-glance">
+                    <div class="about-glance__card">
+                        <span class="about-glance__number">20+</span>
+                        <span class="about-glance__text">años creando software de flujos de trabajo</span>
+                    </div>
+                    <div class="about-glance__card">
+                        <span class="about-glance__icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <circle cx="12" cy="12" r="10"/>
+                                <path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/>
+                            </svg>
+                        </span>
+                        <span class="about-glance__text">Clientes de múltiples industrias en todo el mundo</span>
+                    </div>
+                    <div class="about-glance__card">
+                        <span class="about-glance__icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                                <path d="M9 12l2 2 4-4"/>
+                            </svg>
+                        </span>
+                        <span class="about-glance__text">Experiencia empresarial y regulada</span>
+                    </div>
+                    <div class="about-glance__card">
+                        <span class="about-glance__icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <circle cx="8" cy="12" r="3"/>
+                                <circle cx="16" cy="12" r="3"/>
+                                <path d="M11 12h2"/>
+                            </svg>
+                        </span>
+                        <span class="about-glance__text">Centrado en humanos → Humano + trabajadores digitales</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================
+             3. LO QUE HACEMOS (párrafo corto + viñetas)
+             ======================================== -->
+        <section class="about-section">
+            <div class="about-container">
+                <h2 class="about-section__title">Lo que hacemos</h2>
+                <p class="about-section__lead">
+                    Construimos una <span class="accent">capa de proceso gobernada</span> que convierte el trabajo fragmentado en ejecución con rendición de cuentas.
+                </p>
+                <ul class="about-list">
+                    <li>Modelar y ejecutar flujos de trabajo de negocio</li>
+                    <li>Entregar aplicaciones y portales de flujo de trabajo</li>
+                    <li>Añadir IA/trabajadores digitales con reglas, roles y aprobaciones</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- ========================================
+             4. EVOLUCIÓN (3 tarjetas: Pasado / Ahora / Siguiente)
+             ======================================== -->
+        <section class="about-section about-section--evolution">
+            <div class="about-container">
+                <h2 class="about-section__title">Evolución</h2>
+                <div class="about-evolution">
+                    <div class="about-evolution__card">
+                        <span class="about-evolution__phase">Pasado</span>
+                        <h3 class="about-evolution__title">Flujos de trabajo centrados en humanos</h3>
+                        <p class="about-evolution__desc">Procesos fiables para las personas.</p>
+                    </div>
+                    <div class="about-evolution__arrow">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </div>
+                    <div class="about-evolution__card about-evolution__card--active">
+                        <span class="about-evolution__phase">Ahora</span>
+                        <h3 class="about-evolution__title">Humanos + trabajadores digitales</h3>
+                        <p class="about-evolution__desc">La IA actúa donde se permite; los humanos deciden donde importa.</p>
+                    </div>
+                    <div class="about-evolution__arrow">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </div>
+                    <div class="about-evolution__card">
+                        <span class="about-evolution__phase">Siguiente</span>
+                        <h3 class="about-evolution__title">Orquestación de IA gobernada</h3>
+                        <p class="about-evolution__desc">Auditabilidad, política y control como estándar.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================
+             5. CÓMO TRABAJAMOS (3 tarjetas de valores)
+             ======================================== -->
+        <section class="about-section">
+            <div class="about-container">
+                <h2 class="about-section__title">Cómo trabajamos</h2>
+                <div class="about-values">
+                    <div class="about-value">
+                        <h3 class="about-value__title">Entrega pragmática</h3>
+                        <p class="about-value__desc">Entregamos soluciones reales, no teatro. Iteraciones rápidas, resultados medibles.</p>
+                    </div>
+                    <div class="about-value">
+                        <h3 class="about-value__title">Flexibilidad impulsada por el cliente</h3>
+                        <p class="about-value__desc">Escuchamos, nos adaptamos y nos mantenemos cerca de lo que realmente necesitas.</p>
+                    </div>
+                    <div class="about-value">
+                        <h3 class="about-value__title">Asociación a largo plazo</h3>
+                        <p class="about-value__desc">Construimos relaciones, no solo software. Soporte que perdura.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================
+             6. CTA DE CIERRE
+             ======================================== -->
+        <section class="about-cta">
+            <div class="about-cta__glow"></div>
+            <div class="about-container">
+                <h2 class="about-cta__title">Ejecuta el trabajo. Acelera el flujo.</h2>
+                <p class="about-cta__subtext">Procesos gobernados para humanos y trabajadores digitales.</p>
+                <div class="about-cta__buttons">
+                    <a href="https://2to2.ai" target="_blank" class="dp-btn dp-btn--primary dp-btn--large">
+                        Ver la plataforma
+                    </a>
+                    <a href="contact.html" class="dp-btn dp-btn-outline dp-btn--large">
+                        Contáctanos
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Marcador de posición del pie de página -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Guiones -->
+    <script>
+        document.addEventListener('includesLoaded', function() {
+            var scripts = [
+                '../assets/js/vendors.min.js',
+                '../assets/js/main.min.js',
+                '../assets/js/functions.min.js',
+                '../assets/js/async.min.js'
+            ];
+
+            function loadScript(index) {
+                if (index >= scripts.length) return;
+
+                var script = document.createElement('script');
+                script.src = scripts[index];
+                script.onload = function() {
+                    loadScript(index + 1);
+                };
+                document.body.appendChild(script);
+            }
+
+            loadScript(0);
+        });
+    </script>
+</body>
+</html>

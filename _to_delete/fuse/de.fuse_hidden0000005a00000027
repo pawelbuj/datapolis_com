@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Kontakt - Datapolis</title>
+    <meta name="description" content="Kontaktieren Sie Datapolis. Buchen Sie einen Termin oder senden Sie uns eine Nachricht zu Prozessautomatisierung und KI-Governance.">
+    <meta name="robots" content="index,follow">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#020617">
+
+    <!-- SEO: canonical / hreflang / open graph -->
+    <link rel="canonical" href="https://datapolis.com/de/contact">
+    <link rel="alternate" hreflang="en" href="https://datapolis.com/contact">
+    <link rel="alternate" hreflang="pl" href="https://datapolis.com/pl/contact">
+    <link rel="alternate" hreflang="de" href="https://datapolis.com/de/contact">
+    <link rel="alternate" hreflang="es" href="https://datapolis.com/es/contact">
+    <link rel="alternate" hreflang="x-default" href="https://datapolis.com/contact">
+    <meta property="og:url" content="https://datapolis.com/de/contact">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:image" content="https://datapolis.com/assets/img/og-image-1200x630.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <!-- /SEO -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Instrument+Sans:wght@400;500;600;700&amp;display=swap">
+
+    <link rel="stylesheet" href="../assets/css/main.min.css?v=20260813">
+    <link rel="stylesheet" href="../assets/css/async.min.css?v=20260813" media="print" onload="this.media='all'; this.onload=null;">
+    <link rel="stylesheet" href="../assets/css/dark-theme.css?v=20260813">
+    <link rel="stylesheet" href="../assets/css/new-homepage.css?v=20260813">
+    <link rel="stylesheet" href="../assets/css/contact.css?v=20260813">
+
+    <script src="../includes/loader.js"></script>
+
+    <link rel="icon" type="image/png" href="../assets/img/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="../assets/img/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="../assets/img/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="../assets/img/favicon/site.webmanifest" />
+</head>
+<body class="dark-theme">
+    <div id="header-placeholder"></div>
+
+    <main class="contact-page">
+        <!-- ========================================
+             HERO – zwei Spalten: Text + Grafik
+             ======================================== -->
+        <section class="contact-hero">
+            <div class="contact-hero__grid"></div>
+            <div class="contact-hero__glow"></div>
+            <div class="contact-hero__glow contact-hero__glow--right"></div>
+            
+            <div class="contact-container contact-hero__inner">
+                <!-- Links: Inhalt -->
+                <div class="contact-hero__content">
+                    <span class="contact-label">Kontakt</span>
+                    <h1 class="contact-hero__title">
+                        Sprechen Sie mit dem Team hinter <span class="accent">gesteuerter Arbeit</span>.
+                    </h1>
+                    <p class="contact-hero__intro">
+                        Sagen Sie uns, was Sie ausführen möchten — wir zeigen Ihnen den klaren Weg von der Anfrage zum nachverfolgten, auditierbaren Ergebnis.
+                    </p>
+                    <div class="contact-hero__actions">
+                        <a href="#form" class="dp-btn">Termin buchen</a>
+                        <a href="mailto:office@datapolis.com" class="dp-btn dp-btn-outline">E-Mail senden</a>
+                    </div>
+                </div>
+                
+                <!-- Rechts: Grafik – professionelles Kommunikationsnetzwerk -->
+                <div class="contact-hero__visual">
+                    <svg class="contact-diagram" viewBox="20 20 360 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <filter id="glowTeal" x="-50%" y="-50%" width="200%" height="200%">
+                                <feGaussianBlur stdDeviation="6" result="blur"/>
+                                <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+                            </filter>
+                            <filter id="glowSoft" x="-50%" y="-50%" width="200%" height="200%">
+                                <feGaussianBlur stdDeviation="3" result="blur"/>
+                                <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+                            </filter>
+                            <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#1e293b"/>
+                                <stop offset="100%" stop-color="#0f172a"/>
+                            </linearGradient>
+                            <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#14b8a6"/>
+                                <stop offset="100%" stop-color="#0d9488"/>
+                            </linearGradient>
+                        </defs>
+                        
+                        <!-- Background subtle grid -->
+                        <g opacity="0.08">
+                            <line x1="40" y1="115" x2="360" y2="115" stroke="#64748b" stroke-width="0.5"/>
+                            <line x1="40" y1="190" x2="360" y2="190" stroke="#64748b" stroke-width="0.5"/>
+                            <line x1="40" y1="265" x2="360" y2="265" stroke="#64748b" stroke-width="0.5"/>
+                            <line x1="120" y1="40" x2="120" y2="320" stroke="#64748b" stroke-width="0.5"/>
+                            <line x1="200" y1="40" x2="200" y2="320" stroke="#64748b" stroke-width="0.5"/>
+                            <line x1="280" y1="40" x2="280" y2="320" stroke="#64748b" stroke-width="0.5"/>
+                        </g>
+                        
+                        <!-- Connection lines between nodes -->
+                        <g>
+                            <!-- Main connection paths -->
+                            <path d="M200 180 L110 115" stroke="#334155" stroke-width="1.5" stroke-dasharray="4 4"/>
+                            <path d="M200 180 L290 105" stroke="#334155" stroke-width="1.5" stroke-dasharray="4 4"/>
+                            <path d="M200 180 L100 250" stroke="#334155" stroke-width="1.5" stroke-dasharray="4 4"/>
+                            <path d="M200 180 L305 240" stroke="#334155" stroke-width="1.5" stroke-dasharray="4 4"/>
+                            <path d="M200 180 L200 70" stroke="#334155" stroke-width="1.5" stroke-dasharray="4 4"/>
+                            <path d="M200 180 L200 295" stroke="#334155" stroke-width="1.5" stroke-dasharray="4 4"/>
+                            
+                            <!-- Animated data flow lines -->
+                            <g filter="url(#glowSoft)">
+                                <circle r="3" fill="#14b8a6" class="node-pulse">
+                                    <animate attributeName="cx" values="200;200;200" dur="3s" repeatCount="indefinite"/>
+                                    <animate attributeName="cy" values="180;70;180" dur="3s" repeatCount="indefinite"/>
+                                    <animate attributeName="opacity" values="1;0.3;1" dur="3s" repeatCount="indefinite"/>
+                                </circle>
+                                <circle r="3" fill="#14b8a6" class="node-pulse node-pulse--delay">
+                                    <animate attributeName="cx" values="200;110;200" dur="2.5s" repeatCount="indefinite"/>
+                                    <animate attributeName="cy" values="180;115;180" dur="2.5s" repeatCount="indefinite"/>
+                                </circle>
+                                <circle r="3" fill="#14b8a6" class="node-pulse node-pulse--delay2">
+                                    <animate attributeName="cx" values="200;290;200" dur="2.8s" repeatCount="indefinite"/>
+                                    <animate attributeName="cy" values="180;105;180" dur="2.8s" repeatCount="indefinite"/>
+                                </circle>
+                            </g>
+                        </g>
+                        
+                        <!-- Central Hub - Message/Communication -->
+                        <g filter="url(#glowSoft)">
+                            <circle cx="200" cy="180" r="48" fill="url(#cardGrad)" stroke="#334155" stroke-width="1.5"/>
+                            <circle cx="200" cy="180" r="40" fill="none" stroke="#14b8a6" stroke-width="1" opacity="0.3"/>
+                            <!-- Email/Message icon -->
+                            <rect x="175" y="165" width="50" height="34" rx="3" fill="none" stroke="#14b8a6" stroke-width="2"/>
+                            <path d="M175 168 L200 186 L225 168" stroke="#14b8a6" stroke-width="2" fill="none"/>
+                            <!-- Pulse ring -->
+                            <circle cx="200" cy="180" r="48" fill="none" stroke="#14b8a6" stroke-width="1" opacity="0.4" class="node-pulse"/>
+                            <circle cx="200" cy="180" r="56" fill="none" stroke="#14b8a6" stroke-width="0.5" opacity="0.15" class="node-pulse node-pulse--delay"/>
+                        </g>
+                        
+                        <!-- Node 1 - Top -->
+                        <g>
+                            <circle cx="200" cy="70" r="24" fill="url(#cardGrad)" stroke="#475569" stroke-width="1"/>
+                            <!-- User icon -->
+                            <circle cx="200" cy="63" r="7" fill="none" stroke="#64748b" stroke-width="1.5"/>
+                            <path d="M188 81 Q200 72 212 81" stroke="#64748b" stroke-width="1.5" fill="none"/>
+                        </g>
+                        
+                        <!-- Node 2 - Top Left -->
+                        <g>
+                            <circle cx="110" cy="115" r="22" fill="url(#cardGrad)" stroke="#475569" stroke-width="1"/>
+                            <!-- Document icon -->
+                            <rect x="100" y="104" width="16" height="22" rx="2" fill="none" stroke="#64748b" stroke-width="1.5"/>
+                            <line x1="103" y1="111" x2="113" y2="111" stroke="#64748b" stroke-width="1"/>
+                            <line x1="103" y1="116" x2="113" y2="116" stroke="#64748b" stroke-width="1"/>
+                            <line x1="103" y1="121" x2="109" y2="121" stroke="#64748b" stroke-width="1"/>
+                        </g>
+                        
+                        <!-- Node 3 - Top Right -->
+                        <g>
+                            <circle cx="290" cy="105" r="22" fill="url(#cardGrad)" stroke="#475569" stroke-width="1"/>
+                            <!-- Calendar icon -->
+                            <rect x="278" y="95" width="24" height="20" rx="2" fill="none" stroke="#64748b" stroke-width="1.5"/>
+                            <line x1="278" y1="102" x2="302" y2="102" stroke="#64748b" stroke-width="1.5"/>
+                            <line x1="283" y1="92" x2="283" y2="97" stroke="#64748b" stroke-width="1.5"/>
+                            <line x1="297" y1="92" x2="297" y2="97" stroke="#64748b" stroke-width="1.5"/>
+                            <circle cx="290" cy="108" r="2.5" fill="#14b8a6"/>
+                        </g>
+                        
+                        <!-- Node 4 - Bottom Left -->
+                        <g>
+                            <circle cx="100" cy="250" r="20" fill="url(#cardGrad)" stroke="#475569" stroke-width="1"/>
+                            <!-- Chat bubble icon -->
+                            <path d="M88 243 h24 a3 3 0 0 1 3 3 v12 a3 3 0 0 1 -3 3 h-17 l-6 5 v-5 a3 3 0 0 1 -3 -3 v-12 a3 3 0 0 1 3 -3z" 
+                                  fill="none" stroke="#64748b" stroke-width="1.5"/>
+                            <circle cx="94" cy="252" r="1.5" fill="#64748b"/>
+                            <circle cx="100" cy="252" r="1.5" fill="#64748b"/>
+                            <circle cx="106" cy="252" r="1.5" fill="#64748b"/>
+                        </g>
+                        
+                        <!-- Node 5 - Bottom Right -->
+                        <g>
+                            <circle cx="305" cy="240" r="20" fill="url(#cardGrad)" stroke="#475569" stroke-width="1"/>
+                            <!-- Check/Approval icon -->
+                            <circle cx="305" cy="240" r="10" fill="none" stroke="#14b8a6" stroke-width="1.5"/>
+                            <path d="M299 240 L303 244 L311 235" stroke="#14b8a6" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                        </g>
+                        
+                        <!-- Node 6 - Bottom -->
+                        <g>
+                            <circle cx="200" cy="295" r="22" fill="url(#cardGrad)" stroke="#475569" stroke-width="1"/>
+                            <!-- Send/Arrow icon -->
+                            <path d="M190 295 L210 285 L210 291 L190 295 L210 299 L210 305 Z" fill="#64748b"/>
+                        </g>
+                        
+                        <!-- Floating accent particles -->
+                        <g class="node-pulse">
+                            <circle cx="60" cy="180" r="2.5" fill="#14b8a6" opacity="0.35"/>
+                        </g>
+                        <g class="node-pulse node-pulse--delay">
+                            <circle cx="345" cy="155" r="2.5" fill="#14b8a6" opacity="0.3"/>
+                        </g>
+                        <g class="node-pulse node-pulse--delay2">
+                            <circle cx="155" cy="55" r="2" fill="#14b8a6" opacity="0.35"/>
+                        </g>
+                        <g class="node-pulse">
+                            <circle cx="265" cy="315" r="2" fill="#14b8a6" opacity="0.3"/>
+                        </g>
+                        
+                        <!-- Corner accents -->
+                        <g opacity="0.25">
+                            <path d="M45 45 L45 60 M45 45 L60 45" stroke="#14b8a6" stroke-width="1.5" stroke-linecap="round"/>
+                            <path d="M355 45 L355 60 M355 45 L340 45" stroke="#14b8a6" stroke-width="1.5" stroke-linecap="round"/>
+                            <path d="M45 315 L45 300 M45 315 L60 315" stroke="#14b8a6" stroke-width="1.5" stroke-linecap="round"/>
+                            <path d="M355 315 L355 300 M355 315 L340 315" stroke="#14b8a6" stroke-width="1.5" stroke-linecap="round"/>
+                        </g>
+                        
+                        <!-- Small decorative dots -->
+                        <circle cx="145" cy="285" r="1.5" fill="#475569" opacity="0.4"/>
+                        <circle cx="260" cy="70" r="1.5" fill="#475569" opacity="0.4"/>
+                    </svg>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================
+             INHALT – Info-Karten + Formular
+             ======================================== -->
+        <section class="contact-content" id="form">
+            <div class="contact-container contact-content__inner">
+                <!-- Links: Info-Karten -->
+                <div class="contact-info">
+                    <!-- Karte: E-Mail -->
+                    <div class="contact-card">
+                        <div class="contact-card__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="4" width="20" height="16" rx="2"/>
+                                <path d="M22 6L12 13 2 6"/>
+                            </svg>
+                        </div>
+                        <h3 class="contact-card__title">E-Mail</h3>
+                        <p class="contact-card__value">
+                            <a href="mailto:office@datapolis.com">office@datapolis.com</a>
+                        </p>
+                    </div>
+                    
+                    <!-- Karte: Termin buchen -->
+                    <div class="contact-card">
+                        <div class="contact-card__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="3" y="4" width="18" height="18" rx="2"/>
+                                <line x1="16" y1="2" x2="16" y2="6"/>
+                                <line x1="8" y1="2" x2="8" y2="6"/>
+                                <line x1="3" y1="10" x2="21" y2="10"/>
+                            </svg>
+                        </div>
+                        <h3 class="contact-card__title">Termin buchen</h3>
+                        <p class="contact-card__desc">
+                            Buchen Sie einen 30‑minütigen Termin, um Ihre Anforderungen zu Prozessen und KI-Governance zu besprechen.
+                        </p>
+                        <a href="https://calendly.com/datapolis" target="_blank" class="dp-btn" style="margin-top: 16px;">Jetzt buchen</a>
+                    </div>
+                    
+                    <!-- Karte: Bürozeiten -->
+                    <div class="contact-card">
+                        <div class="contact-card__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"/>
+                                <path d="M12 6v6l4 2"/>
+                            </svg>
+                        </div>
+                        <h3 class="contact-card__title">Bürozeiten</h3>
+                        <p class="contact-card__value">Montag – Freitag</p>
+                        <p class="contact-card__desc">9:00 – 17:00 CET</p>
+                    </div>
+                    
+                    <!-- Social Links -->
+                    <div class="contact-socials">
+                        <a href="https://www.linkedin.com/company/datapolis-com" class="contact-social" target="_blank" rel="nofollow" aria-label="LinkedIn">
+                            <svg viewBox="0 0 32 32">
+                                <path d="M12 12h5.535v2.837h0.079c0.77-1.381 2.655-2.837 5.464-2.837 5.842 0 6.922 3.637 6.922 8.367v9.633h-5.769v-8.54c0-2.037-0.042-4.657-3.001-4.657-3.005 0-3.463 2.218-3.463 4.509v8.688h-5.767v-18z"/>
+                                <path d="M2 12h6v18h-6v-18z"/>
+                                <path d="M8 7c0 1.657-1.343 3-3 3s-3-1.343-3-3c0-1.657 1.343-3 3-3s3 1.343 3 3z"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.youtube.com/@datapolisworkbox" class="contact-social" target="_blank" rel="nofollow" aria-label="YouTube">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Rechts: Kontaktformular -->
+                <div class="contact-form-wrapper">
+                    <div class="contact-form__header">
+                        <h2 class="contact-form__title">Senden Sie uns eine Nachricht</h2>
+                        <p class="contact-form__helper">Wir antworten innerhalb von 1–2 Werktagen.</p>
+                    </div>
+                    
+                    <form class="contact-form" action="https://formspree.io/f/your-form-id" method="POST">
+                        <div class="contact-form__row">
+                            <div class="contact-form__group">
+                                <label class="contact-form__label" for="name">Name <span class="required">*</span></label>
+                                <input type="text" id="name" name="name" class="contact-form__input" placeholder="Ihr Name" required>
+                            </div>
+                            <div class="contact-form__group">
+                                <label class="contact-form__label" for="email">E-Mail <span class="required">*</span></label>
+                                <input type="email" id="email" name="email" class="contact-form__input" placeholder="you@company.com" required>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-form__group">
+                            <label class="contact-form__label" for="company">Unternehmen <span class="required">*</span></label>
+                            <input type="text" id="company" name="company" class="contact-form__input" placeholder="Name Ihres Unternehmens" required>
+                        </div>
+                        
+                        <div class="contact-form__group">
+                            <label class="contact-form__label" for="message">Nachricht <span class="required">*</span></label>
+                            <textarea id="message" name="message" class="contact-form__textarea" placeholder="Erzählen Sie uns von Ihren Prozess-Herausforderungen oder was Sie erreichen möchten..." required></textarea>
+                        </div>
+                        
+                        <div class="contact-form__submit">
+                            <button type="submit" class="contact-form__btn">
+                                Nachricht senden
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script>
+        document.addEventListener('includesLoaded', function() {
+            var scripts = [
+                '../assets/js/vendors.min.js',
+                '../assets/js/main.min.js',
+                '../assets/js/functions.min.js',
+                '../assets/js/async.min.js'
+            ];
+            function loadScript(index) {
+                if (index >= scripts.length) return;
+                var script = document.createElement('script');
+                script.src = scripts[index];
+                script.onload = function() { loadScript(index + 1); };
+                document.body.appendChild(script);
+            }
+            loadScript(0);
+        });
+        
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

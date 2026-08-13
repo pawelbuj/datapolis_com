@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Bezpieczeństwo i nadzór - Kontrola natywna dla procesu dla pracy AI i ludzi | Datapolis</title>
+    <meta name="description" content="Bezpieczeństwo nie jest dodatkiem. Nadzór jest wbudowany w każdy proces. Ludzie i AI są nadzorowani tymi samymi regułami z pełną audytowalnością i kontrolą.">
+    <meta name="robots" content="index,follow">
+    <meta property="og:title" content="Bezpieczeństwo i nadzór - Kontrola wbudowana w każdy proces">
+    <meta property="og:description" content="Każde działanie — człowieka lub AI — odbywa się w ramach nadzorowanych procesów z jawnymi regułami, uprawnieniami, zatwierdzeniami i pełną audytowalnością.">
+    <meta property="og:type" content="website">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#020617">
+
+    <!-- SEO: canonical / hreflang / open graph -->
+    <link rel="canonical" href="https://datapolis.com/pl/security-governance">
+    <link rel="alternate" hreflang="en" href="https://datapolis.com/security-governance">
+    <link rel="alternate" hreflang="pl" href="https://datapolis.com/pl/security-governance">
+    <link rel="alternate" hreflang="de" href="https://datapolis.com/de/security-governance">
+    <link rel="alternate" hreflang="es" href="https://datapolis.com/es/security-governance">
+    <link rel="alternate" hreflang="x-default" href="https://datapolis.com/security-governance">
+    <meta property="og:url" content="https://datapolis.com/pl/security-governance">
+    <meta property="og:locale" content="pl_PL">
+    <meta property="og:image" content="https://datapolis.com/assets/img/og-image-1200x630.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <!-- /SEO -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Instrument+Sans:wght@400;500;600;700&amp;display=swap">
+
+    <link rel="stylesheet" href="../assets/css/main.min.css?v=10022025">
+    <link rel="stylesheet" href="../assets/css/async.min.css?v=10022025" media="print" onload="this.media='all'; this.onload=null;">
+    <link rel="stylesheet" href="../assets/css/dark-theme.css?v=3">
+    <link rel="stylesheet" href="../assets/css/new-homepage.css?v=7">
+    <link rel="stylesheet" href="../assets/css/security-governance.css?v=1">
+
+    <script src="../includes/loader.js"></script>
+
+    <link rel="icon" type="image/png" href="../assets/img/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="../assets/img/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="../assets/img/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="../assets/img/favicon/site.webmanifest" />
+</head>
+<body class="dark-theme sg-page">
+    <!-- Header Placeholder -->
+    <div id="header-placeholder"></div>
+
+    <main>
+        <!-- ========================================
+             SEKCJA HERO - Układ dwukolumnowy
+             ======================================== -->
+        <section class="sg-hero">
+            <div class="sg-hero__grid"></div>
+            <div class="sg-hero__glow"></div>
+            
+            <div class="sg-container sg-hero__inner">
+                <!-- Left: Content -->
+                <div class="sg-hero__content">
+                    <span class="sg-label">Bezpieczeństwo i nadzór</span>
+                    
+                    <h1 class="sg-hero__title">
+                        Kontrola nie jest opcjonalna. <span class="accent">Jest wbudowana.</span>
+                    </h1>
+                    
+                    <p class="sg-hero__subtitle">
+                        Każde działanie — człowieka lub AI — odbywa się w ramach nadzorowanych procesów z jawnymi regułami, uprawnieniami, zatwierdzeniami i pełną audytowalnością.
+                    </p>
+                    
+                    <ul class="sg-hero__bullets">
+                        <li class="sg-hero__bullet">Brak działań poza procesem</li>
+                        <li class="sg-hero__bullet">Brak automatyzacji w cieniu</li>
+                        <li class="sg-hero__bullet">Brak czarnych skrzynek</li>
+                    </ul>
+                    
+                    <div class="sg-hero__actions">
+                        <a href="platform-2to2.html" class="sg-btn sg-btn--large">Zobacz platformę</a>
+                        <a href="contact.html" class="sg-btn sg-btn--outline sg-btn--large">Skontaktuj się z nami</a>
+                    </div>
+                </div>
+                
+                <!-- Prawa strona: Struktura nadzoru (SVG) -->
+                <div class="sg-hero__visual">
+                    <svg class="sg-governance-diagram" viewBox="0 0 460 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <filter id="glowSg" x="-50%" y="-50%" width="200%" height="200%">
+                                <feGaussianBlur stdDeviation="6" result="blur"/>
+                                <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+                            </filter>
+                            <filter id="glowSmallSg" x="-50%" y="-50%" width="200%" height="200%">
+                                <feGaussianBlur stdDeviation="3" result="blur"/>
+                                <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+                            </filter>
+                            <linearGradient id="tealGradSg" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#14b8a6"/>
+                                <stop offset="100%" stop-color="#0d9488"/>
+                            </linearGradient>
+                            <linearGradient id="govLayerGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                                <stop offset="0%" stop-color="rgba(20, 184, 166, 0.08)"/>
+                                <stop offset="100%" stop-color="rgba(20, 184, 166, 0.02)"/>
+                            </linearGradient>
+                        </defs>
+                        
+                        <!-- Dekoracyjne kropki tła -->
+                        <circle cx="30" cy="40" r="2" fill="#14b8a6" opacity="0.25"/>
+                        <circle cx="430" cy="50" r="2" fill="#14b8a6" opacity="0.2"/>
+                        <circle cx="20" cy="360" r="2" fill="#14b8a6" opacity="0.15"/>
+                        <circle cx="440" cy="350" r="2" fill="#14b8a6" opacity="0.2"/>
+                        
+                        <!-- Zewnętrzny pierścień nadzoru -->
+                        <circle cx="230" cy="200" r="160" fill="none" stroke="#14b8a6" stroke-width="1" stroke-dasharray="4 4" opacity="0.3"/>
+                        <circle cx="230" cy="200" r="130" fill="url(#govLayerGrad)" stroke="#334155" stroke-width="1"/>
+                        
+                        <!-- Centralny węzeł PROCESU (wyróżniony) -->
+                        <g filter="url(#glowSg)">
+                            <circle cx="230" cy="200" r="50" fill="url(#tealGradSg)"/>
+                            <text x="230" y="196" text-anchor="middle" fill="#020617" font-size="11" font-weight="700" font-family="system-ui, sans-serif" letter-spacing="0.05em">PROCES</text>
+                            <text x="230" y="210" text-anchor="middle" fill="#020617" font-size="8" font-weight="500" font-family="system-ui, sans-serif" opacity="0.8">Centralna kontrola</text>
+                        </g>
+                        
+                        <!-- Connecting lines from center to surrounding nodes -->
+                        <line x1="230" y1="150" x2="230" y2="85" stroke="#14b8a6" stroke-width="1.5" stroke-dasharray="4 3" class="sg-pulse-line"/>
+                        <line x1="280" y1="200" x2="345" y2="200" stroke="#14b8a6" stroke-width="1.5" stroke-dasharray="4 3" class="sg-pulse-line"/>
+                        <line x1="265" y1="235" x2="310" y2="290" stroke="#14b8a6" stroke-width="1.5" stroke-dasharray="4 3" class="sg-pulse-line"/>
+                        <line x1="195" y1="235" x2="150" y2="290" stroke="#14b8a6" stroke-width="1.5" stroke-dasharray="4 3" class="sg-pulse-line"/>
+                        <line x1="180" y1="200" x2="115" y2="200" stroke="#14b8a6" stroke-width="1.5" stroke-dasharray="4 3" class="sg-pulse-line"/>
+                        
+                        <!-- Węzeł 1: ROLE (góra) -->
+                        <g class="sg-node">
+                            <rect x="190" y="50" width="80" height="35" rx="8" fill="#0f172a" stroke="#14b8a6" stroke-width="1.5"/>
+                            <text x="230" y="72" text-anchor="middle" fill="#14b8a6" font-size="10" font-weight="600" font-family="system-ui, sans-serif">ROLE</text>
+                        </g>
+                        
+                        <!-- Węzeł 2: POLITYKI (prawa) -->
+                        <g class="sg-node">
+                            <rect x="345" y="182" width="80" height="35" rx="8" fill="#0f172a" stroke="#14b8a6" stroke-width="1.5"/>
+                            <text x="385" y="204" text-anchor="middle" fill="#14b8a6" font-size="10" font-weight="600" font-family="system-ui, sans-serif">POLITYKI</text>
+                        </g>
+                        
+                        <!-- Węzeł 3: ZATWIERDZENIA (dół prawa) -->
+                        <g class="sg-node">
+                            <rect x="290" y="290" width="80" height="35" rx="8" fill="#0f172a" stroke="#14b8a6" stroke-width="1.5"/>
+                            <text x="330" y="312" text-anchor="middle" fill="#14b8a6" font-size="10" font-weight="600" font-family="system-ui, sans-serif">ZATWIERDZENIA</text>
+                        </g>
+                        
+                        <!-- Węzeł 4: AUDYT (dół lewa) -->
+                        <g class="sg-node">
+                            <rect x="90" y="290" width="80" height="35" rx="8" fill="#0f172a" stroke="#14b8a6" stroke-width="1.5"/>
+                            <text x="130" y="312" text-anchor="middle" fill="#14b8a6" font-size="10" font-weight="600" font-family="system-ui, sans-serif">AUDYT</text>
+                        </g>
+                        
+                        <!-- Węzeł 5: TOŻSAMOŚĆ (lewa) -->
+                        <g class="sg-node">
+                            <rect x="35" y="182" width="80" height="35" rx="8" fill="#0f172a" stroke="#14b8a6" stroke-width="1.5"/>
+                            <text x="75" y="204" text-anchor="middle" fill="#14b8a6" font-size="10" font-weight="600" font-family="system-ui, sans-serif">TOŻSAMOŚĆ</text>
+                        </g>
+                        
+                        <!-- Small connector dots at line ends -->
+                        <g filter="url(#glowSmallSg)">
+                            <circle cx="230" cy="85" r="4" fill="#14b8a6" opacity="0.8"/>
+                            <circle cx="345" cy="200" r="4" fill="#14b8a6" opacity="0.8"/>
+                            <circle cx="310" cy="290" r="4" fill="#14b8a6" opacity="0.8"/>
+                            <circle cx="150" cy="290" r="4" fill="#14b8a6" opacity="0.8"/>
+                            <circle cx="115" cy="200" r="4" fill="#14b8a6" opacity="0.8"/>
+                        </g>
+                        
+                        <!-- Pulsing ring around center -->
+                        <circle cx="230" cy="200" r="60" fill="none" stroke="#14b8a6" stroke-width="1" class="sg-pulse" opacity="0.4"/>
+                        
+                        <!-- Ikony legendy w narożnych węzłach -->
+                        <!-- Ikona kłódki dla bezpieczeństwa -->
+                        <g opacity="0.6">
+                            <rect x="380" y="340" width="60" height="45" rx="6" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+                            <path d="M405 352v-3a5 5 0 0110 0v3" stroke="#14b8a6" stroke-width="1.5" fill="none"/>
+                            <rect x="402" y="352" width="16" height="12" rx="2" fill="none" stroke="#14b8a6" stroke-width="1.5"/>
+                            <text x="410" y="375" text-anchor="middle" fill="#64748b" font-size="7" font-family="system-ui, sans-serif">Bezpieczne</text>
+                        </g>
+                        
+                        <!-- Ikona oka dla widoczności -->
+                        <g opacity="0.6">
+                            <rect x="20" y="340" width="60" height="45" rx="6" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+                            <ellipse cx="50" cy="357" rx="12" ry="7" fill="none" stroke="#14b8a6" stroke-width="1.5"/>
+                            <circle cx="50" cy="357" r="3" fill="#14b8a6"/>
+                            <text x="50" y="375" text-anchor="middle" fill="#64748b" font-size="7" font-family="system-ui, sans-serif">Widoczne</text>
+                        </g>
+                        
+                        <!-- Podpis -->
+                        <text x="230" y="390" text-anchor="middle" fill="#64748b" font-size="9" font-family="system-ui, sans-serif" letter-spacing="0.06em">STRUKTURA NADZORU</text>
+                    </svg>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================
+             SEKCJA TEZY - Blok manifestu
+             ======================================== -->
+        <section class="sg-statement">
+            <div class="sg-statement__grid"></div>
+            <div class="sg-container">
+                <div class="sg-statement__content">
+                    <h2 class="sg-statement__headline">
+                        Większość platform <span class="accent">zarządza dostępem.</span><br>
+                        Datapolis <span class="accent">zarządza wykonaniem.</span>
+                    </h2>
+                    <p class="sg-statement__text">
+                        W Datapolis praca nie dzieje się dlatego, że ktoś kliknął przycisk —<br>
+                        dzieje się, ponieważ proces wyraźnie na to pozwala.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================
+             SEKCJA: Nadzór zaczyna się od procesu
+             ======================================== -->
+        <section class="sg-section sg-section--alt">
+            <div class="sg-container">
+                <div class="sg-section__header">
+                    <h2 class="sg-section__title">Nadzór zaczyna się od <span class="accent">procesu</span></h2>
+                    <p class="sg-section__subtitle">
+                        W Datapolis bezpieczeństwo nie chroni narzędzi ani użytkowników w izolacji.<br>
+                        Bezpieczaństwo nadzoruje sam proces — definiując, kto może działać, kiedy i według jakich reguł.
+                    </p>
+                </div>
+                
+                <div class="sg-cards">
+                    <!-- Karta 1: Własność zdefiniowana przez proces -->
+                    <div class="sg-card">
+                        <div class="sg-card__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/>
+                                <circle cx="9" cy="7" r="4"/>
+                                <path d="M23 21v-2a4 4 0 00-3-3.87"/>
+                                <path d="M16 3.13a4 4 0 010 7.75"/>
+                            </svg>
+                        </div>
+                        <h3 class="sg-card__title">Własność zdefiniowana przez proces</h3>
+                        <p class="sg-card__desc">Każde działanie należy do zdefiniowanego właściciela procesu.</p>
+                    </div>
+                    
+                    <!-- Karta 2: Jawne stany i przejścia -->
+                    <div class="sg-card">
+                        <div class="sg-card__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="13 17 18 12 13 7"/>
+                                <polyline points="6 17 11 12 6 7"/>
+                            </svg>
+                        </div>
+                        <h3 class="sg-card__title">Jawne stany i przejścia</h3>
+                        <p class="sg-card__desc">Praca przechodzi przez kontrolowane stany z wymuszonymi regułami.</p>
+                    </div>
+                    
+                    <!-- Karta 3: Nic poza workflow -->
+                    <div class="sg-card">
+                        <div class="sg-card__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                                <line x1="12" y1="8" x2="12" y2="12"/>
+                                <line x1="12" y1="16" x2="12.01" y2="16"/>
+                            </svg>
+                        </div>
+                        <h3 class="sg-card__title">Nic poza workflow</h3>
+                        <p class="sg-card__desc">Jeśli nie ma tego w procesie, to się nie dzieje.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================
+             SEKCJA: Role, uprawnienia i rozdział obowiązków
+             ======================================== -->
+        <section class="sg-section">
+            <div class="sg-container">
+                <div class="sg-section__header">
+                    <h2 class="sg-section__title">Role i uprawnienia — <span class="accent">kontekstowe z założenia</span></h2>
+                    <p class="sg-section__subtitle">
+                        Dostęp w Datapolis nigdy nie jest globalny.<br>
+                        Uprawnienia są nadawane na podstawie roli, stanu i kontekstu działania.
+                    </p>
+                </div>
+                
+                <div class="sg-cards">
+                    <!-- Karta 1: Dostęp oparty na rolach -->
+                    <div class="sg-card">
+                        <div class="sg-card__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                                <path d="M9 12l2 2 4-4"/>
+                            </svg>
+                        </div>
+                        <h3 class="sg-card__title">Dostęp oparty na rolach</h3>
+                        <p class="sg-card__desc">Użytkownicy i cyfrowi pracownicy działają tylko w ramach przypisanych ról.</p>
+                    </div>
+                    
+                    <!-- Karta 2: Uprawnienia świadome stanu -->
+                    <div class="sg-card">
+                        <div class="sg-card__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"/>
+                                <polyline points="12 6 12 12 16 14"/>
+                            </svg>
+                        </div>
+                        <h3 class="sg-card__title">Uprawnienia nadane na podstawie stanu</h3>
+                        <p class="sg-card__desc">To, co możesz zobaczyć i zrobić, zależy od tego, w który miejscu procesu jesteś.</p>
+                    </div>
+                    
+                    <!-- Karta 3: Rozdział obowiązków -->
+                    <div class="sg-card">
+                        <div class="sg-card__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="16" y1="3" x2="16" y2="21"/>
+                                <line x1="8" y1="3" x2="8" y2="21"/>
+                                <rect x="3" y="8" width="5" height="8" rx="1"/>
+                                <rect x="16" y="8" width="5" height="8" rx="1"/>
+                            </svg>
+                        </div>
+                        <h3 class="sg-card__title">Rozdział obowiązków</h3>
+                        <p class="sg-card__desc">Kontrola i odpowiedzialność bez chaosu administracyjnego.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================
+             SEKCJA: Human-in-the-loop z założenia
+             ======================================== -->
+        <section class="sg-section sg-section--alt">
+            <div class="sg-container">
+                <div class="sg-section__header">
+                    <h2 class="sg-section__title">Automatyzacja z <span class="accent">nadzorem</span></h2>
+                    <p class="sg-section__subtitle">
+                        Datapolis automatyzuje pracę — nie odpowiedzialność.<br>
+                        Ludzie zachowują kontrolę tam, gdzie ma to znaczenie.
+                    </p>
+                </div>
+                
+                <div class="sg-cards">
+                    <!-- Karta 1: Routing zatwierdzeń -->
+                    <div class="sg-card">
+                        <div class="sg-card__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="6" cy="6" r="3"/>
+                                <circle cx="6" cy="18" r="3"/>
+                                <circle cx="18" cy="12" r="3"/>
+                                <path d="M8.6 7.4L15.4 10.6"/>
+                                <path d="M8.6 16.6L15.4 13.4"/>
+                            </svg>
+                        </div>
+                        <h3 class="sg-card__title">Routing zatwierdzeń</h3>
+                        <p class="sg-card__desc">Decyzje są eskalowane, gdy jest to wymagane.</p>
+                    </div>
+                    
+                    <!-- Karta 2: Obsługa wyjątków -->
+                    <div class="sg-card">
+                        <div class="sg-card__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/>
+                                <line x1="12" y1="9" x2="12" y2="13"/>
+                                <line x1="12" y1="17" x2="12.01" y2="17"/>
+                            </svg>
+                        </div>
+                        <h3 class="sg-card__title">Obsługa wyjątków</h3>
+                        <p class="sg-card__desc">AI ma być pomocne w pracy nie w omijaniu reguł.</p>
+                    </div>
+                    
+                    <!-- Karta 3: Jasna odpowiedzialność -->
+                    <div class="sg-card">
+                        <div class="sg-card__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/>
+                                <circle cx="9" cy="7" r="4"/>
+                                <path d="M23 21v-2a4 4 0 00-3-3.87"/>
+                                <path d="M16 3.13a4 4 0 010 7.75"/>
+                            </svg>
+                        </div>
+                        <h3 class="sg-card__title">Jasna odpowiedzialność</h3>
+                        <p class="sg-card__desc">Ludzie mają ostatnie słowo tam, gdzie wymaga tego polityka.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================
+             SEKCJA: Pełna ścieżka audytu — bez czarnych skrzynek
+             ======================================== -->
+        <section class="sg-section">
+            <div class="sg-container">
+                <div class="sg-section__header">
+                    <h2 class="sg-section__title">Wszystko jest rejestrowane. <span class="accent">Wszystko jest wyjaśnialne.</span></h2>
+                    <p class="sg-section__subtitle">
+                        Jeśli coś się wydarzyło, jest to zalogowane.<br>
+                        Jeśli podjęto decyzję, można ją wyjaśnić.
+                    </p>
+                </div>
+                
+                <div class="sg-cards">
+                    <!-- Karta 1: Ujednolicony dziennik audytu -->
+                    <div class="sg-card">
+                        <div class="sg-card__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/>
+                                <polyline points="14 2 14 8 20 8"/>
+                                <line x1="16" y1="13" x2="8" y2="13"/>
+                                <line x1="16" y1="17" x2="8" y2="17"/>
+                            </svg>
+                        </div>
+                        <h3 class="sg-card__title">Ujednolicony dziennik audytu</h3>
+                        <p class="sg-card__desc">Jeden model audytu dla ludzi i AI.</p>
+                    </div>
+                    
+                    <!-- Karta 2: Wyjaśnialne rezultaty -->
+                    <div class="sg-card">
+                        <div class="sg-card__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="11" cy="11" r="8"/>
+                                <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                                <line x1="11" y1="8" x2="11" y2="14"/>
+                                <line x1="8" y1="11" x2="14" y2="11"/>
+                            </svg>
+                        </div>
+                        <h3 class="sg-card__title">Wyjaśnialne rezultaty</h3>
+                        <p class="sg-card__desc">Dane wejściowe, decyzje, czas i wyniki są uchwycone.</p>
+                    </div>
+                    
+                    <!-- Karta 3: Gotowe na zgodność -->
+                    <div class="sg-card">
+                        <div class="sg-card__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="9 11 12 14 22 4"/>
+                                <path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/>
+                            </svg>
+                        </div>
+                        <h3 class="sg-card__title">Gotowe na zgodność</h3>
+                        <p class="sg-card__desc">Zbudowane dla potrzeb audytu i raportowania klasy enterprise.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================
+             SEKCJA: Klasy enterprise z architektury
+             ======================================== -->
+        <section class="sg-section sg-section--alt">
+            <div class="sg-container">
+                <div class="sg-section__header">
+                    <h2 class="sg-section__title">Architektura klasy <span class="accent">enterprise</span> </h2>
+                </div>
+                
+                <div class="sg-checklist">
+                    <div class="sg-checklist__item">
+                        <div class="sg-checklist__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="20 6 9 17 4 12"/>
+                            </svg>
+                        </div>
+                        <span>Jedna warstwa kontroli </span>
+                    </div>
+                    
+                    <div class="sg-checklist__item">
+                        <div class="sg-checklist__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="20 6 9 17 4 12"/>
+                            </svg>
+                        </div>
+                        <span>Bez procesów poza kontrolą</span>
+                    </div>
+                    
+                    <div class="sg-checklist__item">
+                        <div class="sg-checklist__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="20 6 9 17 4 12"/>
+                            </svg>
+                        </div>
+                        <span>Bez ukrytej automatyzacji </span>
+                    </div>
+                    
+                    <div class="sg-checklist__item">
+                        <div class="sg-checklist__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="20 6 9 17 4 12"/>
+                            </svg>
+                        </div>
+                        <span>Nadzór bez utrudnień dla użytkowników</span>
+                    </div>
+                </div>
+                
+                <p class="sg-architecture-note">
+                    Bezpieczeństwo w Datapolis nie jest wymuszane po fakcie — jest wbudowane w system.
+                </p>
+            </div>
+        </section>
+
+        <!-- ========================================
+             KOŃCOWE CTA
+             ======================================== -->
+        <section class="sg-final">
+            <div class="sg-final__glow"></div>
+            <div class="sg-container">
+                <div class="sg-final__content">
+                    <h2 class="sg-final__title">Zaufanie pochodzi ze <span class="accent">struktury.</span></h2>
+                    <p class="sg-final__subtitle">Ustrukturalizowane procesy dla ludzi i pracowników cyfrowych.</p>
+                    
+                    <div class="sg-final__actions">
+                        <a href="https://2to2.ai" class="sg-btn sg-btn--large">Zobacz platformę</a>
+                        <a href="contact.html" class="sg-btn sg-btn--outline sg-btn--large">Skontaktuj się z nami</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Placeholder -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Scripts -->
+    <script>
+        document.addEventListener('includesLoaded', function() {
+            var scripts = [
+                '../assets/js/vendors.min.js',
+                '../assets/js/main.min.js',
+                '../assets/js/functions.min.js',
+                '../assets/js/async.min.js'
+            ];
+            
+            function loadScript(index) {
+                if (index >= scripts.length) return;
+                
+                var script = document.createElement('script');
+                script.src = scripts[index];
+                script.onload = function() {
+                    loadScript(index + 1);
+                };
+                document.body.appendChild(script);
+            }
+            
+            loadScript(0);
+        });
+
+        // Płynne przewijanie dla linków kotwic
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

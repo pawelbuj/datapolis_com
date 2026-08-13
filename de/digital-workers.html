@@ -11,11 +11,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#020617">
 
-    <link rel="stylesheet" href="../assets/css/main.min.css?v=10022025">
-    <link rel="stylesheet" href="../assets/css/async.min.css?v=10022025" media="print" onload="this.media='all'; this.onload=null;">
-    <link rel="stylesheet" href="../assets/css/dark-theme.css?v=3">
-    <link rel="stylesheet" href="../assets/css/new-homepage.css?v=7">
-    <link rel="stylesheet" href="../assets/css/digital-workers.css?v=1">
+    <!-- SEO: canonical / hreflang / open graph -->
+    <link rel="canonical" href="https://datapolis.com/de/digital-workers">
+    <link rel="alternate" hreflang="en" href="https://datapolis.com/digital-workers">
+    <link rel="alternate" hreflang="pl" href="https://datapolis.com/pl/digital-workers">
+    <link rel="alternate" hreflang="de" href="https://datapolis.com/de/digital-workers">
+    <link rel="alternate" hreflang="es" href="https://datapolis.com/es/digital-workers">
+    <link rel="alternate" hreflang="x-default" href="https://datapolis.com/digital-workers">
+    <meta property="og:url" content="https://datapolis.com/de/digital-workers">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:image" content="https://datapolis.com/assets/img/og-image-1200x630.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <!-- /SEO -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Instrument+Sans:wght@400;500;600;700&amp;display=swap">
+
+    <link rel="stylesheet" href="../assets/css/main.min.css?v=20260813">
+    <link rel="stylesheet" href="../assets/css/async.min.css?v=20260813" media="print" onload="this.media='all'; this.onload=null;">
+    <link rel="stylesheet" href="../assets/css/dark-theme.css?v=20260813">
+    <link rel="stylesheet" href="../assets/css/new-homepage.css?v=20260813">
+    <link rel="stylesheet" href="../assets/css/digital-workers.css?v=20260813">
 
     <script src="../includes/loader.js"></script>
 
@@ -24,10 +43,322 @@
     <link rel="shortcut icon" href="../assets/img/favicon/favicon.ico" />
     <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/favicon/apple-touch-icon.png" />
     <link rel="manifest" href="../assets/img/favicon/site.webmanifest" />
+
+    <!-- JSON-LD -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://datapolis.com/#organization",
+      "name": "Datapolis",
+      "legalName": "Datapolis Sp. z o.o.",
+      "url": "https://datapolis.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://datapolis.com/logos/logo.svg"
+      },
+      "image": "https://datapolis.com/assets/img/og-image-1200x630.png",
+      "email": "office@datapolis.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "PL"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/datapolis-com",
+        "https://www.youtube.com/@datapolisworkbox"
+      ],
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "contactType": "sales",
+          "email": "office@datapolis.com",
+          "availableLanguage": [
+            "en",
+            "pl",
+            "de",
+            "es"
+          ]
+        }
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://datapolis.com/#website",
+      "url": "https://datapolis.com/",
+      "name": "Datapolis",
+      "publisher": {
+        "@id": "https://datapolis.com/#organization"
+      },
+      "inLanguage": [
+        "en",
+        "pl",
+        "de",
+        "es"
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://datapolis.com/de/digital-workers#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Startseite",
+          "item": "https://datapolis.com/de"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Digitale Worker - KI-Agenten innerhalb governter Geschäftsprozesse | Datapolis"
+        }
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://datapolis.com/de/digital-workers#webpage",
+      "url": "https://datapolis.com/de/digital-workers",
+      "name": "Digitale Worker - KI-Agenten innerhalb governter Geschäftsprozesse | Datapolis",
+      "isPartOf": {
+        "@id": "https://datapolis.com/#website"
+      },
+      "about": {
+        "@id": "https://datapolis.com/#organization"
+      },
+      "inLanguage": "de",
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://datapolis.com/assets/img/og-image-1200x630.png"
+      },
+      "description": "Digitale Worker sind KI-Agenten, die innerhalb von Geschäftsprozessen arbeiten. Sie übernehmen Aufgaben von Menschen, treffen Entscheidungen innerhalb definierter Regeln und arbeiten unter voller Aufsicht und Audit.",
+      "breadcrumb": {
+        "@id": "https://datapolis.com/de/digital-workers#breadcrumb"
+      }
+    }
+  ]
+}
+    </script>
+    <!-- /JSON-LD -->
 </head>
 <body class="dark-theme dw-page">
     <!-- Header-Platzhalter -->
-    <div id="header-placeholder"></div>
+    <div id="header-placeholder"><!--build:header-->
+    <header class="dp-header">
+        <div class="dp-header__container">
+            <!-- Logo -->
+            <a href="index.html" class="dp-header__logo">
+                <svg width="150" height="31" viewBox="0 0 197 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M4.69718 0H36.0105C38.5939 0 40.7077 2.12893 40.7077 4.73096V36.2695C40.7077 38.8715 38.5939 41.0004 36.0105 41.0004H4.69718C2.11373 41.0004 0 38.8715 0 36.2695V4.73096C0 2.12893 2.11373 0 4.69718 0ZM37.5758 23.6143C37.5758 25.1125 37.2627 26.3741 36.5974 27.3595C35.9711 28.3845 34.9928 29.1334 33.7008 29.6065C33.3094 29.7642 32.879 29.8822 32.4876 29.9219C32.0572 30.0007 31.6265 30.0399 31.1961 30.0399H24.7377C24.1507 30.0399 23.6027 30.0007 23.0547 29.8822C22.8199 29.8034 22.585 29.7245 22.3501 29.6457V34.6524C22.3501 35.2832 22.1546 35.7563 21.8021 36.1109C21.489 36.4655 20.9803 36.6232 20.354 36.6232C19.7278 36.6232 19.2191 36.4655 18.8666 36.1109C18.5535 35.7563 18.358 35.2832 18.358 34.6524V29.7638C18.0059 29.9215 17.6144 30.0003 17.223 30.0792C16.7926 30.158 16.3619 30.158 15.9315 30.158H9.51242C8.57298 30.158 7.71183 30.0399 6.92897 29.7245C6.1461 29.4091 5.48088 28.9757 4.89352 28.3449C4.30658 27.7537 3.83686 27.0441 3.56265 26.2948C3.24951 25.5063 3.13228 24.639 3.13228 23.7324V17.2672C3.13228 15.7298 3.44543 14.5074 4.11066 13.522C4.73695 12.497 5.71532 11.7481 7.04619 11.275C7.39827 11.1173 7.82905 10.9993 8.25942 10.9204C8.65085 10.8416 9.08122 10.8024 9.512 10.8024H15.9311C16.518 10.8024 17.0271 10.8812 17.5751 10.9993C17.8489 11.0385 18.1231 11.1173 18.358 11.2358V6.34717C18.358 5.71637 18.5535 5.20406 18.906 4.88866C19.2191 4.53405 19.7278 4.33672 20.354 4.33672C20.9803 4.33672 21.4501 4.53363 21.8021 4.88866C22.1542 5.20406 22.3501 5.71637 22.3501 6.34717V11.1173C22.7022 10.9596 23.0937 10.8808 23.4851 10.8019C23.9155 10.7231 24.3462 10.6839 24.7766 10.6839H31.1957C32.1351 10.6839 32.9963 10.8416 33.7791 11.157C34.562 11.4327 35.2666 11.9058 35.8146 12.4974C36.4015 13.0886 36.8323 13.7982 37.1454 14.5867C37.4192 15.3356 37.5758 16.2029 37.5758 17.1491V23.6143ZM7.08471 23.7328C7.08471 24.5605 7.28022 25.1913 7.67165 25.5856C8.06308 25.9798 8.68937 26.1767 9.51117 26.1767H15.9302C16.7914 26.1767 17.3783 25.9798 17.7698 25.5856C18.1612 25.1913 18.3567 24.5605 18.3567 23.7328V17.2676C18.3567 16.4003 18.1612 15.8091 17.7698 15.4148C17.3783 15.0206 16.7914 14.8237 15.9302 14.8237H9.51117C8.68937 14.8237 8.06308 15.0206 7.67165 15.4148C7.28022 15.8091 7.08471 16.4003 7.08471 17.2676V23.7328ZM22.3497 23.6143C22.3497 24.4421 22.5452 25.0728 22.9367 25.4671C23.2887 25.8613 23.915 26.0583 24.7762 26.0583H31.1953C32.0171 26.0583 32.6433 25.8613 33.0348 25.4671C33.4262 25.0728 33.6217 24.4421 33.6217 23.6143V17.1095C33.6217 16.2818 33.4262 15.6902 33.0348 15.2959C32.6433 14.9017 32.0171 14.7048 31.1953 14.7048H24.7762C23.915 14.7048 23.2887 14.9017 22.9367 15.2959C22.5452 15.6902 22.3497 16.2814 22.3497 17.1095V23.6143Z" fill="#14b8a6"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M179.269 27.5171C179.269 28.3845 178.799 28.8576 177.938 28.8576C177.077 28.8576 176.607 28.3845 176.607 27.5171V13.3643C176.607 12.4969 177.038 12.0635 177.938 12.0635C178.839 12.0635 179.269 12.4969 179.269 13.3643V27.5171Z" fill="#f8fafc"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M136.722 17.4647C136.722 15.6908 135.861 14.7838 134.061 14.7838H128.268C126.507 14.7838 125.646 15.6904 125.646 17.4647V23.2991C125.646 25.073 126.507 25.98 128.268 25.98H134.061C135.861 25.98 136.722 25.0735 136.722 23.2991V17.4647ZM139.384 23.2991C139.384 25.8223 138.288 27.4782 136.174 28.2666C135.509 28.5032 134.804 28.6609 134.06 28.6609H128.268C127.328 28.6609 126.428 28.464 125.645 28.0301V33.1553C125.645 34.0226 125.175 34.4957 124.314 34.4957C123.453 34.4957 122.983 34.0226 122.983 33.1553V17.4647C122.983 14.9415 124.04 13.2857 126.193 12.458C126.819 12.2214 127.524 12.1426 128.268 12.1426H134.06C135.665 12.1426 136.957 12.6157 137.935 13.6407C138.875 14.6261 139.383 15.9273 139.383 17.4647V23.2991H139.384Z" fill="#f8fafc"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M156.644 17.4643C156.644 15.6904 155.783 14.7834 154.022 14.7834H148.229C146.429 14.7834 145.568 15.69 145.568 17.4643V23.2987C145.568 25.0726 146.429 25.9796 148.229 25.9796H154.022C155.783 25.9796 156.644 25.073 156.644 23.2987V17.4643ZM159.306 23.2987C159.306 25.8219 158.25 27.4777 156.136 28.2662C155.471 28.5028 154.766 28.6605 154.022 28.6605H148.229C146.625 28.6605 145.333 28.1482 144.354 27.1231C143.415 26.1377 142.906 24.8761 142.906 23.2991V17.4647C142.906 14.9415 144.002 13.2857 146.155 12.458C146.781 12.2214 147.486 12.1426 148.229 12.1426H154.022C155.627 12.1426 156.919 12.6157 157.858 13.6011C158.836 14.5865 159.306 15.8877 159.306 17.4647V23.2991V23.2987Z" fill="#f8fafc"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M50.3361 23.4172C50.3361 25.1911 51.1973 26.0981 52.9585 26.0981H58.7513C60.5519 26.0981 61.413 25.1915 61.413 23.4172V17.5828C61.413 15.8089 60.5519 14.9019 58.7513 14.9019H52.9585C51.1973 14.9019 50.3361 15.8084 50.3361 17.5828V23.4172ZM47.6748 17.5824C47.6748 15.0592 48.7315 13.4033 50.8845 12.6148C51.5498 12.3783 52.2544 12.2206 52.9589 12.2206H58.7517C59.7301 12.2206 60.5912 12.4175 61.4134 12.8514V7.72618C61.4134 6.85884 61.8438 6.38574 62.7443 6.38574C63.6448 6.38574 64.0752 6.85884 64.0752 7.72618V23.4168C64.0752 25.94 63.0185 27.5958 60.8654 28.4235C60.2392 28.6601 59.5346 28.7389 58.7517 28.7389H52.9589C51.3932 28.7389 50.1017 28.2658 49.1229 27.2408C48.1445 26.2554 47.6748 24.9541 47.6748 23.4168V17.5824Z" fill="#f8fafc"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M70.8459 12.0635H78.7524C80.3571 12.0635 81.6096 12.5758 82.5491 13.5616C83.5274 14.547 83.9972 15.8482 83.9972 17.4252V24.0482C83.9972 26.8867 81.2182 28.6606 78.6741 28.6606H78.6352L72.999 28.6214C71.4332 28.6214 70.1417 28.1483 69.1629 27.1233C68.2235 26.1379 67.7148 24.8367 67.7148 23.2993V22.9051C67.7148 20.3819 68.8109 18.726 70.9635 17.8983C71.5898 17.7014 72.2944 17.5829 73.0379 17.5829H81.2969V16.9129C81.2186 15.4936 80.3575 14.7448 78.7917 14.7448H70.8459C70.1413 14.7448 69.5544 14.1536 69.5544 13.4043C69.5544 12.6947 70.1413 12.0639 70.8459 12.0639V12.0635ZM78.7528 25.9798H78.7917C80.4747 25.9405 81.3358 25.0336 81.3358 23.2989L81.2969 20.2238L73.0379 20.263C71.2767 20.263 70.3762 21.1303 70.3762 22.9042V23.2985C70.3762 25.0724 71.2373 25.9793 73.0379 25.9793H78.7524L78.7528 25.9798Z" fill="#f8fafc"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M95.1532 27.5961C95.1532 28.5027 94.7228 28.9366 93.8223 28.9366C92.9218 28.9366 92.4915 28.5031 92.4915 27.5961V14.823H87.9119C87.0118 14.823 86.5811 14.3895 86.5811 13.4825C86.5811 12.5756 87.0508 12.1421 87.9119 12.1421H99.7328C100.594 12.1421 101.064 12.6152 101.064 13.4825C101.064 14.3499 100.633 14.823 99.7328 14.823H95.1532V27.5961Z" fill="#f8fafc"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M189.759 12.0634H194.065C194.808 12.0634 195.396 12.6942 195.396 13.4038C195.396 14.1527 194.809 14.7443 194.065 14.7443H187.45C185.884 14.7443 185.062 15.4931 185.062 16.9124C185.062 17.6221 185.336 18.0952 185.806 18.2921C186.08 18.4498 186.667 18.489 187.489 18.489H191.716C193.321 18.489 194.613 18.9225 195.591 19.7506C196.531 20.5783 197 21.761 197 23.2988C197 25.822 195.944 27.4778 193.83 28.2663C193.165 28.5029 192.46 28.6606 191.716 28.6606H184.631C183.927 28.6606 183.301 28.0298 183.301 27.3201C183.301 26.5713 183.927 25.9797 184.631 25.9797H191.716C193.477 25.9797 194.378 25.0731 194.378 23.2988C194.378 21.8795 193.478 21.1699 191.716 21.1699H187.489C184.122 21.1699 182.439 19.7506 182.439 16.912C182.439 15.4139 182.87 14.2311 183.809 13.3638C184.709 12.4965 185.923 12.063 187.449 12.063H189.759L189.759 12.0634Z" fill="#f8fafc"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M105.604 12.0635H113.511C115.076 12.0635 116.368 12.5758 117.307 13.5616C118.247 14.547 118.755 15.8482 118.755 17.4252V24.0482C118.755 26.8867 115.937 28.6606 113.393 28.6606L107.757 28.6214C106.191 28.6214 104.9 28.1483 103.921 27.1233C102.942 26.1379 102.473 24.8761 102.473 23.2993V22.9051C102.473 20.3819 103.569 18.726 105.721 17.8983C106.348 17.7014 107.052 17.5829 107.757 17.5829H116.055V16.9129C115.938 15.4936 115.115 14.7448 113.511 14.7448H105.604C104.9 14.7448 104.273 14.1536 104.273 13.4043C104.273 12.6947 104.9 12.0639 105.604 12.0639V12.0635ZM113.472 25.9798H113.55C115.233 25.9405 116.055 25.0336 116.055 23.2989V20.2238L107.757 20.263C105.996 20.263 105.135 21.1303 105.135 22.9042V23.2985C105.095 25.0724 105.996 25.9793 107.757 25.9793H113.472V25.9798Z" fill="#f8fafc"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M165.1 28.6606H165.061C165.035 28.6606 165.022 28.6475 165.022 28.6214H164.67C164.67 28.5952 164.657 28.5822 164.63 28.5822H164.552L164.513 28.5429C164.318 28.5037 164.161 28.3852 164.043 28.2275H164.004V28.1883L163.965 28.1491V28.1099H163.926V28.0707V28.0315H163.887V27.9922V27.953L163.848 27.9138V27.8746V27.8354C163.848 27.8354 163.848 27.7962 163.808 27.7962V27.6781V27.6389L163.77 27.5997V27.5604V27.5212V27.482V27.4428V27.4036V27.3644V27.3252V13.2115C163.77 12.305 164.2 11.8711 165.1 11.8711C166.001 11.8711 166.431 12.3046 166.431 13.2115V25.9847H172.42C173.281 25.9847 173.711 26.4182 173.711 27.3252C173.711 28.2321 173.281 28.6656 172.42 28.6656H165.1L165.1 28.6606Z" fill="#f8fafc"/>
+                    </g>
+                </svg>
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="dp-nav" role="navigation" aria-label="Hauptnavigation">
+                <ul class="dp-nav__list">
+                    <!-- Platform (primary) -->
+                    <li class="dp-nav__item dp-nav__item--has-dropdown" data-nav="platform">
+                        <button class="dp-nav__link" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="dp-menu-platform">
+                            Plattform
+                            <svg class="dp-nav__chevron" width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </button>
+                        <div class="dp-dropdown" id="dp-menu-platform" role="menu" aria-label="Plattform">
+                            <a href="platform-2to2.html" class="dp-dropdown__item dp-dropdown__item--with-desc" role="menuitem">
+                                <span class="dp-dropdown__title">2to2 Platform</span>
+                                <span class="dp-dropdown__desc">Apps bauen, Workflows ausführen, Agents steuern</span>
+                            </a>
+                            <a href="process-apps.html" class="dp-dropdown__item" role="menuitem">
+                                <span class="dp-dropdown__title">Prozess-Apps</span>
+                            </a>
+                            <a href="orchestration-engine.html" class="dp-dropdown__item" role="menuitem">
+                                <span class="dp-dropdown__title">Orchestrierungs-Engine</span>
+                            </a>
+                            <a href="security-governance.html" class="dp-dropdown__item" role="menuitem">
+                                <span class="dp-dropdown__title">Sicherheit &amp; Governance</span>
+                            </a>
+                        </div>
+                    </li>
+
+                    <!-- AI (primary) -->
+                    <li class="dp-nav__item dp-nav__item--has-dropdown" data-nav="ai">
+                        <button class="dp-nav__link" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="dp-menu-ai">
+                            AI
+                            <svg class="dp-nav__chevron" width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </button>
+                        <div class="dp-dropdown" id="dp-menu-ai" role="menu" aria-label="AI">
+                            <a href="digital-workers.html" class="dp-dropdown__item" role="menuitem">
+                                <span class="dp-dropdown__title">Digitale Worker</span>
+                            </a>
+                            <a href="ai-inside-workflows.html" class="dp-dropdown__item" role="menuitem">
+                                <span class="dp-dropdown__title">KI in Workflows</span>
+                            </a>
+                            <a href="governance-control.html" class="dp-dropdown__item" role="menuitem">
+                                <span class="dp-dropdown__title">Governance &amp; Kontrolle</span>
+                            </a>
+                            <a href="why-not-copilots.html" class="dp-dropdown__item" role="menuitem">
+                                <span class="dp-dropdown__title">Warum keine Copiloten</span>
+                            </a>
+                        </div>
+                    </li>
+
+                    <!-- How it works -->
+                    <li class="dp-nav__item dp-nav__item--has-dropdown" data-nav="how">
+                        <button class="dp-nav__link" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="dp-menu-how">
+                            Wie es funktioniert
+                            <svg class="dp-nav__chevron" width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </button>
+                        <div class="dp-dropdown" id="dp-menu-how" role="menu" aria-label="Wie es funktioniert">
+                            <a href="how-it-works-overview.html" class="dp-dropdown__item" role="menuitem">
+                                <span class="dp-dropdown__title">Überblick</span>
+                            </a>
+                            <a href="humans-agents.html" class="dp-dropdown__item" role="menuitem">
+                                <span class="dp-dropdown__title">Menschen + Agenten</span>
+                            </a>
+                            <a href="pilot-scale.html" class="dp-dropdown__item" role="menuitem">
+                                <span class="dp-dropdown__title">Pilot → Skalierung</span>
+                            </a>
+                        </div>
+                    </li>
+
+                    <!-- Customers (single link) -->
+                    <li class="dp-nav__item">
+                        <a href="customers.html" class="dp-nav__link dp-nav__link--simple">Kunden</a>
+                    </li>
+
+                    <!-- Company -->
+                    <li class="dp-nav__item dp-nav__item--has-dropdown" data-nav="company">
+                        <button class="dp-nav__link" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="dp-menu-company">
+                            Unternehmen
+                            <svg class="dp-nav__chevron" width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </button>
+                        <div class="dp-dropdown" id="dp-menu-company" role="menu" aria-label="Unternehmen">
+                            <a href="about.html" class="dp-dropdown__item" role="menuitem">
+                                <span class="dp-dropdown__title">Über Datapolis</span>
+                            </a>
+                            <a href="contact.html" class="dp-dropdown__item" role="menuitem">
+                                <span class="dp-dropdown__title">Kontakt</span>
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Right side actions -->
+            <div class="dp-header__actions">
+                <!-- Language Switcher -->
+                <div class="dp-lang">
+                    <button class="dp-lang__trigger" type="button" aria-haspopup="true" aria-expanded="false">
+                        <span class="dp-lang__current">DE</span>
+                        <svg width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </button>
+                    <div class="dp-lang__dropdown" role="menu">
+                        <a href="/" class="dp-lang__option" role="menuitem" hreflang="en" title="English" data-lang="en">EN</a>
+                        <a href="/pl/" class="dp-lang__option" role="menuitem" hreflang="pl" title="Polski" data-lang="pl">PL</a>
+                        <a href="/de/" class="dp-lang__option dp-lang__option--active" role="menuitem" hreflang="de" title="Deutsch" data-lang="de">DE</a>
+                        <a href="/es/" class="dp-lang__option" role="menuitem" hreflang="es" title="Español" data-lang="es">ES</a>
+                    </div>
+                </div>
+
+                <!-- Primary CTA -->
+                <a href="https://2to2.ai" target="_blank" class="dp-header__cta dp-header__cta--primary">Plattform ansehen</a>
+            </div>
+
+            <!-- Mobile Hamburger -->
+            <button class="dp-hamburger" type="button" aria-label="Menü öffnen" aria-expanded="false">
+                <span class="dp-hamburger__line"></span>
+                <span class="dp-hamburger__line"></span>
+                <span class="dp-hamburger__line"></span>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="dp-mobile-menu" aria-hidden="true">
+            <div class="dp-mobile-menu__inner">
+                <nav class="dp-mobile-nav">
+                    <!-- Platform -->
+                    <div class="dp-mobile-nav__item">
+                        <button class="dp-mobile-nav__trigger" type="button" aria-expanded="false">
+                            Plattform
+                            <svg class="dp-mobile-nav__chevron" width="12" height="7" viewBox="0 0 10 6" fill="none"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </button>
+                        <div class="dp-mobile-nav__panel">
+                            <a href="platform-2to2.html" class="dp-mobile-nav__link">2to2 Platform</a>
+                            <a href="process-apps.html" class="dp-mobile-nav__link">Prozess-Apps</a>
+                            <a href="orchestration-engine.html" class="dp-mobile-nav__link">Orchestrierungs-Engine</a>
+                            <a href="security-governance.html" class="dp-mobile-nav__link">Sicherheit &amp; Governance</a>
+                        </div>
+                    </div>
+
+                    <!-- AI -->
+                    <div class="dp-mobile-nav__item">
+                        <button class="dp-mobile-nav__trigger" type="button" aria-expanded="false">
+                            AI
+                            <svg class="dp-mobile-nav__chevron" width="12" height="7" viewBox="0 0 10 6" fill="none"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </button>
+                        <div class="dp-mobile-nav__panel">
+                            <a href="digital-workers.html" class="dp-mobile-nav__link">Digitale Worker</a>
+                            <a href="ai-inside-workflows.html" class="dp-mobile-nav__link">KI in Workflows</a>
+                            <a href="governance-control.html" class="dp-mobile-nav__link">Governance &amp; Kontrolle</a>
+                            <a href="why-not-copilots.html" class="dp-mobile-nav__link">Warum keine Copiloten</a>
+                        </div>
+                    </div>
+
+                    <!-- How it works -->
+                    <div class="dp-mobile-nav__item">
+                        <button class="dp-mobile-nav__trigger" type="button" aria-expanded="false">
+                            Wie es funktioniert
+                            <svg class="dp-mobile-nav__chevron" width="12" height="7" viewBox="0 0 10 6" fill="none"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </button>
+                        <div class="dp-mobile-nav__panel">
+                            <a href="how-it-works-overview.html" class="dp-mobile-nav__link">Überblick</a>
+                            <a href="humans-agents.html" class="dp-mobile-nav__link">Menschen + Agenten</a>
+                            <a href="pilot-scale.html" class="dp-mobile-nav__link">Pilot → Skalierung</a>
+                        </div>
+                    </div>
+
+                    <!-- Customers -->
+                    <a href="customers.html" class="dp-mobile-nav__simple-link">Kunden</a>
+
+                    <!-- Company -->
+                    <div class="dp-mobile-nav__item">
+                        <button class="dp-mobile-nav__trigger" type="button" aria-expanded="false">
+                            Unternehmen
+                            <svg class="dp-mobile-nav__chevron" width="12" height="7" viewBox="0 0 10 6" fill="none"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </button>
+                        <div class="dp-mobile-nav__panel">
+                            <a href="about.html" class="dp-mobile-nav__link">Über Datapolis</a>
+                            <a href="contact.html" class="dp-mobile-nav__link">Kontakt</a>
+                        </div>
+                    </div>
+                </nav>
+
+                <!-- Mobile footer -->
+                <div class="dp-mobile-menu__footer">
+                    <!-- Language -->
+                    <div class="dp-mobile-menu__lang">
+                        <a href="/" class="dp-mobile-menu__lang-opt" hreflang="en" title="English" data-lang="en">EN</a>
+                        <a href="/pl/" class="dp-mobile-menu__lang-opt" hreflang="pl" title="Polski" data-lang="pl">PL</a>
+                        <a href="/de/" class="dp-mobile-menu__lang-opt dp-mobile-menu__lang-opt--active" hreflang="de" title="Deutsch" data-lang="de">DE</a>
+                        <a href="/es/" class="dp-mobile-menu__lang-opt" hreflang="es" title="Español" data-lang="es">ES</a>
+                    </div>
+                    <!-- CTA -->
+                    <a href="https://2to2.ai" target="_blank" class="dp-mobile-menu__cta">Plattform ansehen</a>
+                </div>
+            </div>
+        </div>
+    </header>
+<!--/build:header--></div>
 
     <main>
         <!-- ========================================
@@ -419,16 +750,84 @@
     </main>
 
     <!-- Footer-Platzhalter -->
-    <div id="footer-placeholder"></div>
+    <div id="footer-placeholder"><!--build:footer-->
+    <footer class="footer">
+        <div class="container">
+            <!-- Subtle divider -->
+            <div class="footer__divider"></div>
+            
+            <!-- 4-Column Layout -->
+            <div class="footer__columns">
+                <!-- Column 1: Platform -->
+                <div class="footer__column">
+                    <div class="footer__label">Plattform</div>
+                    <nav class="footer__nav">
+                        <ul class="footer__list">
+                            <li><a href="platform-2to2.html">2to2 Platform</a></li>
+                            <li><a href="process-apps.html">Prozess-Apps</a></li>
+                            <li><a href="orchestration-engine.html">Orchestrierungs-Engine</a></li>
+                            <li><a href="security-governance.html">Sicherheit &amp; Governance</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                
+                <!-- Column 2: How it works -->
+                <div class="footer__column">
+                    <div class="footer__label">Wie es funktioniert</div>
+                    <nav class="footer__nav">
+                        <ul class="footer__list">
+                            <li><a href="how-it-works-overview.html">Überblick</a></li>
+                            <li><a href="humans-agents.html">Menschen + Agenten</a></li>
+                            <li><a href="pilot-scale.html">Pilot → Skalierung</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                
+                <!-- Column 3: Trust (informational, not navigational) -->
+                <div class="footer__column">
+                    <div class="footer__label">Vertrauen</div>
+                    <ul class="footer__trust-list">
+                        <li class="footer__trust-item">Kunden in regulierten Branchen</li>
+                        <li class="footer__trust-item">Jahrzehnte Erfahrung mit Enterprise-Workflows</li>
+                        <li class="footer__trust-item">Gesteuerte Prozesse. Keine Black Boxes.</li>
+                    </ul>
+                </div>
+                
+                <!-- Column 4: Company -->
+                <div class="footer__column">
+                    <div class="footer__label">Unternehmen</div>
+                    <nav class="footer__nav">
+                        <ul class="footer__list">
+                            <li><a href="contact.html">Kontakt</a></li>
+                            <li><a href="legal.html">Datenschutzerklärung</a></li>
+                            <li><a href="legal.html">Nutzungsbedingungen</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            
+            <!-- Bottom Bar -->
+            <div class="footer__bottom">
+                <div class="footer__bottom-content">
+                    <div class="footer__brand">
+                        <p class="footer__tagline">Arbeit ausführen. Den Fluss beschleunigen.</p>
+                        <p class="footer__subline">Gesteuerte Prozesse für Menschen und digitale Worker.</p>
+                    </div>
+                    <p class="footer__copy">© Datapolis. Alle Rechte vorbehalten.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+<!--/build:footer--></div>
 
     <!-- Skripte -->
     <script>
         document.addEventListener('includesLoaded', function() {
             var scripts = [
-                '../assets/js/vendors.min.js',
-                '../assets/js/main.min.js',
-                '../assets/js/functions.min.js',
-                '../assets/js/async.min.js'
+                '../assets/js/vendors.min.js?v=20260813',
+                '../assets/js/main.min.js?v=20260813',
+                '../assets/js/functions.min.js?v=20260813',
+                '../assets/js/async.min.js?v=20260813'
             ];
             
             function loadScript(index) {
