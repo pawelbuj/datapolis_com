@@ -118,13 +118,16 @@
         function updateLangLinks() {
             var lang = normalizeLangFromPath(window.location.pathname);
             var page = currentPageFromPath(window.location.pathname, lang);
+            // English-only ver4 pages fall back to each language homepage
+            // until their localized equivalents are ready.
+            var localizedPage = (page === 'app-ai-creator' || page === 'sharepoint') ? '' : page;
 
             // Generate clean URLs: "/" for index, "/page" for others
             var targets = {
                 en: page ? '/' + page : '/',
-                pl: '/pl/' + page,
-                de: '/de/' + page,
-                es: '/es/' + page
+                pl: '/pl/' + localizedPage,
+                de: '/de/' + localizedPage,
+                es: '/es/' + localizedPage
             };
 
             header.querySelectorAll('.dp-lang__option, .dp-mobile-menu__lang-opt').forEach(function(a) {

@@ -1,7 +1,7 @@
 # datapolis.com
 
 Statyczny serwis (HTML + CSS + JS, bez frameworka), hostowany na Vercelu.
-69 stron: 18 EN w katalogu głównym + po 17 w `pl/`, `de/`, `es/`.
+70 stron: 19 EN w katalogu głównym + po 17 w `pl/`, `de/`, `es/`.
 
 ## Struktura
 
@@ -29,6 +29,18 @@ Cena: edycja `includes/header.html` **nie zmienia niczego**, dopóki nie przebud
 ```bash
 python3 tools/build-includes.py
 ```
+
+### Prototyp EN `ver4`
+
+Angielskie podstrony prototypu (wszystkie poza ręcznie projektowanym
+`index.html`) są generowane ze wspólnego systemu treści i komponentów:
+
+```bash
+python3 tools/build-en-ver4.py
+python3 tools/build-includes.py
+```
+
+Wspólne style podstron znajdują się w `assets/css/ver4-site.css`.
 
 Skrypt jest idempotentny — można go uruchamiać ile razy trzeba. Podmienia
 zawartość między znacznikami `<!--build:header-->` … `<!--/build:header-->`
