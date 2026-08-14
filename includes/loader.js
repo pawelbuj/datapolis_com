@@ -118,13 +118,14 @@
         function updateLangLinks() {
             var lang = normalizeLangFromPath(window.location.pathname);
             var page = currentPageFromPath(window.location.pathname, lang);
+            var useRootFallback = body && body.getAttribute('data-lang-root-fallback') === 'true';
 
             // Generate clean URLs: "/" for index, "/page" for others
             var targets = {
                 en: page ? '/' + page : '/',
-                pl: '/pl/' + page,
-                de: '/de/' + page,
-                es: '/es/' + page
+                pl: useRootFallback ? '/pl/' : '/pl/' + page,
+                de: useRootFallback ? '/de/' : '/de/' + page,
+                es: useRootFallback ? '/es/' : '/es/' + page
             };
 
             header.querySelectorAll('.dp-lang__option, .dp-mobile-menu__lang-opt').forEach(function(a) {

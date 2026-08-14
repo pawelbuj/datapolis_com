@@ -5,7 +5,7 @@
    zamiast doklejac je JS-em. Dzieki temu linki wewnetrzne widza roboty, ktore
    nie wykonuja JavaScriptu (GPTBot, ClaudeBot, PerplexityBot).
 2. Wstrzykuje dane strukturalne JSON-LD (Organization, WebSite, WebPage,
-   BreadcrumbList, SoftwareApplication na stronie platformy).
+   BreadcrumbList, SoftwareApplication na stronach produktowych).
 
 Skrypt jest idempotentny — uruchamiaj po KAZDEJ zmianie w includes/*.html.
 
@@ -111,6 +111,26 @@ def graph_for(lang, page, title, desc):
             "publisher": {"@id": ORG_ID},
             "description": ("Operating layer for governed work: process apps that humans "
                             "and digital workers execute inside one audited, permissioned layer."),
+        })
+
+    if page == "app-creator":
+        nodes.append({
+            "@type": "SoftwareApplication",
+            "@id": f"{BASE}/app-creator#software",
+            "name": "2to2 App Creator",
+            "url": f"{BASE}/app-creator",
+            "applicationCategory": "BusinessApplication",
+            "operatingSystem": "Web",
+            "publisher": {"@id": ORG_ID},
+            "description": ("AI-assisted application creation from business documentation. "
+                            "The specification and the governed application remain synchronized "
+                            "as one living model."),
+            "featureList": [
+                "Create business applications from documentation",
+                "Keep specification and application synchronized",
+                "Generate workflow, data, pages, roles, and permissions",
+                "Review and govern changes before publication",
+            ],
         })
 
     return {"@context": "https://schema.org", "@graph": nodes}
