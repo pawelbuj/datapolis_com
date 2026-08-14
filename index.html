@@ -34,6 +34,7 @@
     <link rel="stylesheet" href="assets/css/async.min.css?v=20260813" media="print" onload="this.media='all'; this.onload=null;">
     <link rel="stylesheet" href="assets/css/dark-theme.css?v=20260813">
     <link rel="stylesheet" href="assets/css/new-homepage.css?v=20260813">
+    <link rel="stylesheet" href="assets/css/homepage-workflow-map.css?v=20260815">
     <link rel="stylesheet" href="assets/css/app-creator-section.css?v=20260814">
 
     <script src="includes/loader.js"></script>
@@ -381,61 +382,63 @@
                     </div>
                     
                     <div class="dp-hero__visual">
-                        <svg viewBox="0 0 400 340" fill="none" xmlns="http://www.w3.org/2000/svg" class="process-diagram">
-                            <defs>
-                                <linearGradient id="processGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                                    <stop offset="0%" stop-color="#14b8a6"/>
-                                    <stop offset="100%" stop-color="#0d9488"/>
-                                </linearGradient>
-                                <filter id="processGlow" x="-50%" y="-50%" width="200%" height="200%">
-                                    <feGaussianBlur stdDeviation="12" result="coloredBlur"/>
-                                    <feMerge>
-                                        <feMergeNode in="coloredBlur"/>
-                                        <feMergeNode in="SourceGraphic"/>
-                                    </feMerge>
-                                </filter>
-                            </defs>
-                            
-                            <!-- Connection lines from Process to Workers -->
-                            <path d="M200 165 L100 95" stroke="#475569" stroke-width="2" stroke-dasharray="8 5">
-                                <animate attributeName="stroke-dashoffset" from="13" to="0" dur="1.2s" repeatCount="indefinite"/>
-                            </path>
-                            <path d="M200 165 L300 95" stroke="#475569" stroke-width="2" stroke-dasharray="8 5">
-                                <animate attributeName="stroke-dashoffset" from="13" to="0" dur="1.2s" repeatCount="indefinite"/>
-                            </path>
-                            
-                            <!-- Human node (left) -->
-                            <g transform="translate(55, 20)">
-                                <rect width="90" height="90" rx="16" fill="#0f172a" stroke="#334155" stroke-width="2"/>
-                                <circle cx="45" cy="35" r="14" stroke="#94a3b8" stroke-width="2" fill="none"/>
-                                <path d="M24 72 Q45 55 66 72" stroke="#94a3b8" stroke-width="2" fill="none"/>
-                                <text x="45" y="118" text-anchor="middle" fill="#94a3b8" font-size="13" font-weight="500" font-family="system-ui, sans-serif">Human</text>
-                            </g>
-                            
-                            <!-- Digital Worker node (right) - visually equal to Human -->
-                            <g transform="translate(255, 20)">
-                                <rect width="90" height="90" rx="16" fill="#0f172a" stroke="#334155" stroke-width="2"/>
-                                <!-- Neutral circuit/node icon -->
-                                <circle cx="45" cy="45" r="18" stroke="#94a3b8" stroke-width="2" fill="none"/>
-                                <circle cx="45" cy="45" r="7" fill="#94a3b8"/>
-                                <path d="M45 27 V19 M45 63 V71 M27 45 H19 M63 45 H71" stroke="#94a3b8" stroke-width="2" stroke-linecap="round"/>
-                                <text x="45" y="118" text-anchor="middle" fill="#94a3b8" font-size="13" font-weight="500" font-family="system-ui, sans-serif">Digital Worker</text>
-                            </g>
-                            
-                            <!-- PROCESS node (center, bottom) - The Control Plane / Main Authority -->
-                            <g transform="translate(80, 175)" filter="url(#processGlow)">
-                                <rect width="240" height="100" rx="20" fill="url(#processGrad)"/>
-                                <!-- Orchestration symbol: flow with central hub -->
-                                <circle cx="70" cy="50" r="10" fill="white" opacity="0.85"/>
-                                <circle cx="120" cy="50" r="14" fill="white"/>
-                                <circle cx="170" cy="50" r="10" fill="white" opacity="0.85"/>
-                                <path d="M80 50 H106 M134 50 H160" stroke="rgba(2,6,23,0.35)" stroke-width="3" stroke-linecap="round"/>
-                                <text x="120" y="130" text-anchor="middle" fill="#f8fafc" font-size="16" font-weight="600" font-family="system-ui, sans-serif">Process</text>
-                            </g>
-                            
-                            <!-- Subtle caption -->
-                            <text x="200" y="328" text-anchor="middle" fill="#475569" font-size="11" font-family="system-ui, sans-serif">Connected to enterprise systems. Producing real business outcomes.</text>
-                        </svg>
+                        <div class="dp-workflow-map" data-home-workflow-map data-step="0" data-role="human" role="img" aria-label="A process moving through states handled alternately by people and Digital Workers.">
+                            <div class="dp-workflow-map__head">
+                                <span>
+                                    <small>STATE-BASED WORKFLOW</small>
+                                    <strong>Service request #2481</strong>
+                                </span>
+                                <em><i></i> RUNNING</em>
+                            </div>
+
+                            <div class="dp-workflow-map__canvas">
+                                <svg class="dp-workflow-map__lines" viewBox="0 0 640 390" preserveAspectRatio="none" aria-hidden="true">
+                                    <path data-home-edge-index="0" d="M79 196 C125 196 138 114 188 114"></path>
+                                    <path data-home-edge-index="1" d="M252 114 C294 114 288 196 328 196"></path>
+                                    <path data-home-edge-index="2" d="M392 196 C433 196 429 106 474 106"></path>
+                                    <path class="dp-workflow-map__branch" d="M392 196 C433 196 429 286 474 286"></path>
+                                    <path data-home-edge-index="3" d="M506 138 C506 186 506 220 506 254"></path>
+                                    <path data-home-edge-index="4" d="M538 286 C574 286 575 196 607 196"></path>
+                                </svg>
+
+                                <div class="dp-workflow-state dp-workflow-state--0" data-home-state-index="0">
+                                    <span class="dp-workflow-role dp-workflow-role--human"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="7.5" r="3.5"></circle><path d="M5.2 20c.6-4.2 2.9-6.3 6.8-6.3s6.2 2.1 6.8 6.3"></path></svg></span>
+                                    <strong>New</strong><small>Human · Coordinator</small>
+                                </div>
+                                <div class="dp-workflow-state dp-workflow-state--1" data-home-state-index="1">
+                                    <span class="dp-workflow-role dp-workflow-role--digital"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4.5" y="6" width="15" height="13" rx="3"></rect><circle cx="9.2" cy="12" r="1"></circle><circle cx="14.8" cy="12" r="1"></circle><path d="M9 16h6M12 3v3M9.5 3h5"></path></svg></span>
+                                    <strong>AI triage</strong><small>Digital · Triage Worker</small>
+                                </div>
+                                <div class="dp-workflow-state dp-workflow-state--2" data-home-state-index="2">
+                                    <span class="dp-workflow-role dp-workflow-role--human"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="7.5" r="3.5"></circle><path d="M5.2 20c.6-4.2 2.9-6.3 6.8-6.3s6.2 2.1 6.8 6.3"></path></svg></span>
+                                    <strong>In progress</strong><small>Human · Engineer</small>
+                                </div>
+                                <div class="dp-workflow-state dp-workflow-state--3" data-home-state-index="3">
+                                    <span class="dp-workflow-role dp-workflow-role--digital"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4.5" y="6" width="15" height="13" rx="3"></rect><circle cx="9.2" cy="12" r="1"></circle><circle cx="14.8" cy="12" r="1"></circle><path d="M9 16h6M12 3v3M9.5 3h5"></path></svg></span>
+                                    <strong>Waiting</strong><small>Digital · Follow-up</small>
+                                </div>
+                                <div class="dp-workflow-state dp-workflow-state--4" data-home-state-index="4">
+                                    <span class="dp-workflow-role dp-workflow-role--human"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="7.5" r="3.5"></circle><path d="M5.2 20c.6-4.2 2.9-6.3 6.8-6.3s6.2 2.1 6.8 6.3"></path></svg></span>
+                                    <strong>Resolved</strong><small>Human · Manager</small>
+                                </div>
+                                <div class="dp-workflow-state dp-workflow-state--5" data-home-state-index="5">
+                                    <span class="dp-workflow-role dp-workflow-role--digital"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4.5" y="6" width="15" height="13" rx="3"></rect><circle cx="9.2" cy="12" r="1"></circle><circle cx="14.8" cy="12" r="1"></circle><path d="M9 16h6M12 3v3M9.5 3h5"></path></svg></span>
+                                    <strong>Closed</strong><small>Digital · Closure Worker</small>
+                                </div>
+
+                                <span class="dp-workflow-map__route-label">missing information</span>
+                                <span class="dp-workflow-map__route-label dp-workflow-map__route-label--fast">fast resolution</span>
+                                <span class="dp-workflow-map__token" aria-hidden="true"><i></i></span>
+                            </div>
+
+                            <div class="dp-workflow-map__current">
+                                <span>ACTIVE STATE</span>
+                                <strong data-home-current-state>NEW</strong>
+                                <i></i>
+                                <small data-home-current-role>HUMAN · SERVICE COORDINATOR</small>
+                                <b data-home-current-task>Review and assign the request</b>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1103,6 +1106,7 @@
     </footer>
 <!--/build:footer--></div>
 
+    <script src="assets/js/homepage-workflow-map.js?v=20260815"></script>
     <script src="assets/js/app-creator-animation.js?v=20260814"></script>
 
     <!-- Scripts -->
