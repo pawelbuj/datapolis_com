@@ -439,3 +439,81 @@
     /* the old SVG bleed rule (.v4-hero-visual width:118%) must not apply to the animation */
     .v4-hero-anim { width: 100%; margin: 20px 0 0; }
 }
+
+/* ===================== Two pillars — build & run ===================== */
+.v4-pillars { background: linear-gradient(180deg, #020617, #050d1a); }
+.v4-pillar-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; align-items: stretch; }
+.v4-pillar {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 46px 44px;
+    overflow: hidden;
+    border: 1px solid var(--v4-line);
+    border-radius: 24px;
+    background: linear-gradient(145deg, rgba(15,23,42,.92), rgba(7,13,25,.93));
+}
+.v4-pillar::after { content: ""; position: absolute; right: -110px; bottom: -110px; width: 260px; height: 260px; border-radius: 50%; background: #14b8a6; filter: blur(90px); opacity: .13; pointer-events: none; }
+.v4-pillar-tag { display: flex; align-items: center; gap: 11px; margin: 0 0 24px; }
+.v4-pillar-tag b { padding: 5px 11px; border-radius: 999px; color: #032522; background: linear-gradient(135deg, #5eead4, #14b8a6); font-size: 10px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+.v4-pillar-tag span { color: var(--v4-teal); font-size: 11px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+.v4-pillar h3 { margin: 0; font-family: "Instrument Sans", "Inter", sans-serif; font-size: 30px; font-weight: 600; letter-spacing: -.025em; line-height: 1.18; }
+.v4-pillar h3 em { display: block; margin-top: 4px; color: var(--v4-teal); font-style: normal; }
+.v4-pillar-lead { margin: 22px 0 0; color: var(--v4-muted); font-size: 15px; line-height: 1.72; }
+.v4-pillar-anti { margin: 16px 0 0; color: #cbd5e1; font-size: 13px; font-weight: 600; }
+.v4-pillar ul { margin: 28px 0 0; padding: 0; list-style: none; border-top: 1px solid var(--v4-line); }
+.v4-pillar li { position: relative; padding: 13px 0 13px 26px; border-bottom: 1px solid rgba(148,163,184,.09); color: #a8b5c7; font-size: 13px; line-height: 1.5; }
+.v4-pillar li::before { content: ""; position: absolute; left: 3px; top: 19px; width: 7px; height: 7px; border-top: 1.5px solid var(--v4-teal); border-right: 1.5px solid var(--v4-teal); transform: rotate(45deg); }
+.v4-pillar .v4-text-link { margin-top: auto; padding-top: 30px; }
+
+.v4-pillar-bridge { max-width: 780px; margin: 48px auto 0; padding: 30px 36px; border: 1px solid rgba(45,212,191,.24); border-radius: 18px; background: rgba(6,25,27,.55); text-align: center; }
+.v4-bridge-claim { margin: 0 0 12px!important; color: var(--v4-text)!important; font-family: "Instrument Sans", "Inter", sans-serif; font-size: 20px!important; font-weight: 600; letter-spacing: -.01em; }
+.v4-pillar-bridge > p:last-child { margin: 0; color: #8fa1b8; font-size: 14px; line-height: 1.7; }
+
+/* ===================== Digital Workers — example roles ===================== */
+.v4-workers { position: relative; z-index: 2; margin-top: 80px; padding-top: 60px; border-top: 1px solid var(--v4-line); }
+.v4-workers-head { max-width: 640px; margin-bottom: 32px; }
+.v4-workers-head h3 { margin: 0; font-family: "Instrument Sans", "Inter", sans-serif; font-size: 27px; font-weight: 600; letter-spacing: -.025em; }
+.v4-workers-head > p:last-child { margin: 14px 0 0; color: var(--v4-muted); font-size: 15px; line-height: 1.7; }
+.v4-worker-table { width: 100%; border-collapse: collapse; border: 1px solid var(--v4-line); border-radius: 16px; overflow: hidden; background: rgba(11,18,32,.72); }
+.v4-worker-table th, .v4-worker-table td { padding: 20px 24px; text-align: left; vertical-align: top; border-bottom: 1px solid rgba(148,163,184,.1); }
+.v4-worker-table thead th { color: var(--v4-teal); font-size: 10px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; background: rgba(6,25,27,.5); }
+.v4-worker-table tbody tr:last-child th, .v4-worker-table tbody tr:last-child td { border-bottom: 0; }
+.v4-worker-table tbody th { width: 34%; font-weight: 400; }
+.v4-worker-table tbody th strong { display: block; margin-bottom: 7px; color: var(--v4-text); font-size: 15px; font-weight: 600; }
+.v4-worker-table tbody th span { color: #7f8da1; font-size: 12.5px; line-height: 1.6; }
+.v4-worker-table tbody td { color: #a8b5c7; font-size: 13.5px; line-height: 1.65; }
+.v4-worker-table tbody td:last-child { color: #cbd5e1; }
+
+/* main.min.css ustawia globalnie th{background-color:#17a4a4;color:#fff} — nieczytelne na ciemnym */
+.v4-home .v4-worker-table th { background-color: transparent; font-weight: 400; }
+.v4-home .v4-worker-table thead th { background-color: rgba(6,25,27,.5); color: var(--v4-teal); font-weight: 800; }
+.v4-home .v4-worker-table tbody th strong { color: var(--v4-text); }
+.v4-home .v4-worker-table tbody th span { color: #7f8da1; }
+.v4-workers-foot { margin: 26px 0 0; color: #7f8da1; font-size: 13px; }
+.v4-workers-foot strong { color: var(--v4-text); }
+
+@media (max-width: 1100px) {
+    .v4-pillar { padding: 38px 32px; }
+    .v4-pillar h3 { font-size: 26px; }
+}
+@media (max-width: 800px) {
+    .v4-pillar-grid { grid-template-columns: 1fr; }
+    .v4-pillar-bridge { margin-top: 32px; padding: 26px 24px; }
+    .v4-workers { margin-top: 56px; padding-top: 44px; }
+    .v4-worker-table, .v4-worker-table thead, .v4-worker-table tbody, .v4-worker-table tr, .v4-worker-table th, .v4-worker-table td { display: block; width: auto; }
+    .v4-worker-table thead { display: none; }
+    .v4-worker-table tbody tr { border-bottom: 1px solid var(--v4-line); }
+    .v4-worker-table tbody tr:last-child { border-bottom: 0; }
+    .v4-worker-table tbody th { border-bottom: 0; padding-bottom: 4px; }
+    .v4-worker-table tbody td { padding-top: 8px; padding-bottom: 8px; border-bottom: 0; }
+    .v4-worker-table tbody td::before { display: block; margin-bottom: 4px; color: var(--v4-teal); font-size: 9px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; }
+    .v4-worker-table tbody td:nth-of-type(1)::before { content: "Decides"; }
+    .v4-worker-table tbody td:nth-of-type(2)::before { content: "Escalates"; }
+    .v4-worker-table tbody tr td:last-child { padding-bottom: 22px; }
+}
+@media (max-width: 520px) {
+    .v4-pillar { padding: 30px 25px; }
+    .v4-pillar h3 { font-size: 23px; }
+    .v4-bridge-claim { font-size: 17px!important; }
+}
