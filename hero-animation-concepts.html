@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Homepage Hero Animation Concepts | Datapolis</title>
-    <meta name="description" content="Internal comparison of homepage hero animation concepts for Datapolis.">
+    <title>Process Collaboration Hero Concepts | Datapolis</title>
+    <meta name="description" content="Internal comparison of homepage animations showing people and Digital Workers operating in different states of one governed process.">
     <meta name="robots" content="noindex,nofollow">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#020617">
@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="assets/css/async.min.css?v=20260813" media="print" onload="this.media='all'; this.onload=null;">
     <link rel="stylesheet" href="assets/css/dark-theme.css?v=20260813">
     <link rel="stylesheet" href="assets/css/new-homepage.css?v=20260813">
-    <link rel="stylesheet" href="assets/css/hero-animation-concepts.css?v=20260814">
+    <link rel="stylesheet" href="assets/css/hero-animation-concepts.css?v=20260815">
 
     <script src="includes/loader.js"></script>
 
@@ -91,7 +91,7 @@
         {
           "@type": "ListItem",
           "position": 2,
-          "name": "Homepage Hero Animation Concepts | Datapolis"
+          "name": "Process Collaboration Hero Concepts | Datapolis"
         }
       ]
     },
@@ -99,7 +99,7 @@
       "@type": "WebPage",
       "@id": "https://datapolis.com/hero-animation-concepts#webpage",
       "url": "https://datapolis.com/hero-animation-concepts",
-      "name": "Homepage Hero Animation Concepts | Datapolis",
+      "name": "Process Collaboration Hero Concepts | Datapolis",
       "isPartOf": {
         "@id": "https://datapolis.com/#website"
       },
@@ -111,7 +111,7 @@
         "@type": "ImageObject",
         "url": "https://datapolis.com/assets/img/og-image-1200x630.png"
       },
-      "description": "Internal comparison of homepage hero animation concepts for Datapolis.",
+      "description": "Internal comparison of homepage animations showing people and Digital Workers operating in different states of one governed process.",
       "breadcrumb": {
         "@id": "https://datapolis.com/hero-animation-concepts#breadcrumb"
       }
@@ -122,6 +122,32 @@
     <!-- /JSON-LD -->
 </head>
 <body class="dark-theme hac-page" data-lang-root-fallback="true">
+    <svg class="hac-symbols" aria-hidden="true">
+        <symbol id="hac-human" viewBox="0 0 24 24">
+            <circle cx="12" cy="7.5" r="3.5"></circle>
+            <path d="M5.2 20c.6-4.2 2.9-6.3 6.8-6.3s6.2 2.1 6.8 6.3"></path>
+        </symbol>
+        <symbol id="hac-digital" viewBox="0 0 24 24">
+            <rect x="4.5" y="6" width="15" height="13" rx="3"></rect>
+            <circle cx="9.2" cy="12" r="1"></circle>
+            <circle cx="14.8" cy="12" r="1"></circle>
+            <path d="M9 16h6M12 3v3M9.5 3h5"></path>
+        </symbol>
+        <symbol id="hac-process" viewBox="0 0 24 24">
+            <circle cx="5" cy="12" r="2.2"></circle>
+            <circle cx="12" cy="12" r="3.2"></circle>
+            <circle cx="19" cy="12" r="2.2"></circle>
+            <path d="M7.2 12h1.6M15.2 12h1.6"></path>
+        </symbol>
+        <symbol id="hac-check" viewBox="0 0 24 24">
+            <path d="m5 12.5 4.3 4.3L19 7.2"></path>
+        </symbol>
+        <symbol id="hac-shield" viewBox="0 0 24 24">
+            <path d="M12 3 19 5.7v5.5c0 4.5-2.9 8.2-7 10.1-4.1-1.9-7-5.6-7-10.1V5.7L12 3Z"></path>
+            <path d="m8.5 12 2.2 2.2 4.8-5"></path>
+        </symbol>
+    </svg>
+
     <div id="header-placeholder"><!--build:header-->
     <header class="dp-header">
         <div class="dp-header__container">
@@ -352,41 +378,33 @@
             <div class="hac-container">
                 <header class="hac-intro">
                     <div>
-                        <span class="hac-kicker">Homepage hero study</span>
-                        <h1 id="hac-title">Five ways to show people and Digital Workers <em>doing real work together.</em></h1>
+                        <span class="hac-kicker">Homepage hero study · version 2</span>
+                        <h1 id="hac-title">One process moves through states. <em>People and Digital Workers take over where they are needed.</em></h1>
                     </div>
-                    <p>Każdy wariant mieści się w obecnym układzie hero. Zmieniamy tylko prawą grafikę — tekst, menu i CTA zostają bez zmian.</p>
+                    <p>Pięć sposobów pokazania tej samej idei: stan procesu wyznacza aktualną pracę i przypisuje ją do człowieka albo Digital Workera.</p>
                 </header>
 
-                <div class="hac-tabs" role="tablist" aria-label="Animation concepts">
-                    <button class="hac-tab is-active" type="button" role="tab" aria-selected="true" aria-controls="concept-live-case" id="tab-live-case" data-concept="live-case">
-                        <span class="hac-tab__number">01</span>
-                        <span><strong>Live Case Flow</strong><small>Jedna sprawa, konkretne przekazania</small></span>
+                <div class="hac-tabs" role="tablist" aria-label="Process animation concepts">
+                    <button class="hac-tab is-active" type="button" role="tab" aria-selected="true" aria-controls="concept-journey" id="tab-journey" data-concept="journey">
+                        <span>01</span><strong>State Journey</strong><small>Prosta sekwencja stanów</small>
                     </button>
-                    <button class="hac-tab" type="button" role="tab" aria-selected="false" aria-controls="concept-orchestration" id="tab-orchestration" data-concept="orchestration" tabindex="-1">
-                        <span class="hac-tab__number">02</span>
-                        <span><strong>Orchestration Core</strong><small>Proces jako centrum kontroli</small></span>
+                    <button class="hac-tab" type="button" role="tab" aria-selected="false" aria-controls="concept-map" id="tab-map" data-concept="map" tabindex="-1">
+                        <span>02</span><strong>Workflow Map</strong><small>Mapa procesu z rozgałęzieniem</small>
                     </button>
-                    <button class="hac-tab" type="button" role="tab" aria-selected="false" aria-controls="concept-swimlane" id="tab-swimlane" data-concept="swimlane" tabindex="-1">
-                        <span class="hac-tab__number">03</span>
-                        <span><strong>Shared Workflow</strong><small>Praca krok po kroku w swimlane</small></span>
+                    <button class="hac-tab" type="button" role="tab" aria-selected="false" aria-controls="concept-lanes" id="tab-lanes" data-concept="lanes" tabindex="-1">
+                        <span>03</span><strong>Role Lanes</strong><small>Przekazania między rolami</small>
                     </button>
                     <button class="hac-tab" type="button" role="tab" aria-selected="false" aria-controls="concept-orbit" id="tab-orbit" data-concept="orbit" tabindex="-1">
-                        <span class="hac-tab__number">04</span>
-                        <span><strong>Dual Orbit</strong><small>Symboliczna wspólna przestrzeń pracy</small></span>
+                        <span>04</span><strong>State Orbit</strong><small>Symboliczna maszyna stanowa</small>
                     </button>
-                    <button class="hac-tab" type="button" role="tab" aria-selected="false" aria-controls="concept-weave" id="tab-weave" data-concept="weave" tabindex="-1">
-                        <span class="hac-tab__number">05</span>
-                        <span><strong>Process Weave</strong><small>Dwa strumienie, jeden rezultat</small></span>
+                    <button class="hac-tab" type="button" role="tab" aria-selected="false" aria-controls="concept-relay" id="tab-relay" data-concept="relay" tabindex="-1">
+                        <span>05</span><strong>Process Relay</strong><small>Aktywny stan i wykonawca</small>
                     </button>
                 </div>
 
                 <div class="hac-hero-frame">
                     <div class="hac-copy">
-                        <h2>
-                            <span>We run the work</span>
-                            <span class="hac-accent">of modern companies.</span>
-                        </h2>
+                        <h2><span>We run the work</span><span>of modern companies.</span></h2>
                         <p class="hac-tagline">People. AI.<br><strong>One governed process layer.</strong></p>
                         <p class="hac-subtitle">We design and run the process layer where people and AI get real work done.</p>
                         <div class="hac-actions" aria-hidden="true">
@@ -396,340 +414,194 @@
                     </div>
 
                     <div class="hac-stage" aria-live="polite">
-                        <!-- CONCEPT 1: a single business case moves through the workflow -->
-                        <section class="hac-concept hac-concept--live is-active" id="concept-live-case" role="tabpanel" aria-labelledby="tab-live-case" data-concept-panel="live-case">
-                            <div class="c1-canvas" data-c1-step="0">
-                                <div class="c1-topbar">
-                                    <span class="c1-case-icon" aria-hidden="true">
-                                        <svg viewBox="0 0 24 24" fill="none"><path d="M7 7V5.8C7 4.8 7.8 4 8.8 4h6.4c1 0 1.8.8 1.8 1.8V7"/><rect x="3" y="7" width="18" height="13" rx="3"/><path d="M3 12h18M10 12v2h4v-2"/></svg>
-                                    </span>
-                                    <span class="c1-case-title"><small>LIVE CASE</small><strong>Vendor onboarding #2481</strong></span>
-                                    <span class="c1-status"><i></i> IN PROGRESS</span>
+                        <!-- 01: A clear left-to-right state journey -->
+                        <section class="hac-concept is-active" id="concept-journey" role="tabpanel" aria-labelledby="tab-journey" data-concept-panel="journey">
+                            <div class="pv pv-journey" data-process-animation data-step="0" data-role="human">
+                                <div class="pv-head">
+                                    <span><small>PROCESS INSTANCE</small><strong>Service request #2481</strong></span>
+                                    <em><i></i> RUNNING</em>
                                 </div>
 
-                                <div class="c1-actors">
-                                    <div class="c1-actor c1-actor--human">
-                                        <span class="c1-avatar c1-avatar--human" aria-hidden="true">
-                                            <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="3.5"/><path d="M5.5 20c.5-4 2.7-6 6.5-6s6 2 6.5 6"/></svg>
-                                        </span>
-                                        <span><small>HUMAN</small><strong>Anna</strong><em>Procurement</em></span>
-                                        <i class="c1-actor__state"></i>
+                                <div class="v1-flow">
+                                    <div class="v1-track"><span data-progress-fill></span></div>
+                                    <div class="v1-case-token" data-case-token><i></i><span>#2481</span></div>
+                                    <ol class="v1-states">
+                                        <li data-state-index="0"><span class="pv-role is-human"><svg><use href="#hac-human"></use></svg></span><b>New</b><small>Human</small></li>
+                                        <li data-state-index="1"><span class="pv-role is-digital"><svg><use href="#hac-digital"></use></svg></span><b>AI triage</b><small>Digital Worker</small></li>
+                                        <li data-state-index="2"><span class="pv-role is-human"><svg><use href="#hac-human"></use></svg></span><b>In progress</b><small>Human</small></li>
+                                        <li data-state-index="3"><span class="pv-role is-digital"><svg><use href="#hac-digital"></use></svg></span><b>Waiting</b><small>Digital Worker</small></li>
+                                        <li data-state-index="4"><span class="pv-role is-human"><svg><use href="#hac-human"></use></svg></span><b>Resolved</b><small>Human</small></li>
+                                        <li data-state-index="5"><span class="pv-role is-digital"><svg><use href="#hac-digital"></use></svg></span><b>Closed</b><small>Digital Worker</small></li>
+                                    </ol>
+                                </div>
+
+                                <div class="pv-work-card">
+                                    <span class="pv-active-icon pv-active-icon--human"><svg><use href="#hac-human"></use></svg></span>
+                                    <span class="pv-active-icon pv-active-icon--digital"><svg><use href="#hac-digital"></use></svg></span>
+                                    <span><small data-current-role>HUMAN · SERVICE COORDINATOR</small><strong data-current-task>Review and assign the request</strong></span>
+                                    <em data-current-state>NEW</em>
+                                </div>
+
+                                <div class="pv-governance"><span><svg><use href="#hac-shield"></use></svg>Role assigned by process</span><span>Every transition logged</span><b data-state-counter>01 / 06</b></div>
+                            </div>
+                        </section>
+
+                        <!-- 02: A simplified state graph inspired by the real designer -->
+                        <section class="hac-concept" id="concept-map" role="tabpanel" aria-labelledby="tab-map" data-concept-panel="map" hidden>
+                            <div class="pv pv-map" data-process-animation data-step="0" data-role="human">
+                                <div class="pv-head">
+                                    <span><small>STATE-BASED WORKFLOW</small><strong>Service request #2481</strong></span>
+                                    <em><i></i> RUNNING</em>
+                                </div>
+
+                                <div class="v2-map">
+                                    <svg class="v2-lines" viewBox="0 0 640 390" preserveAspectRatio="none" aria-hidden="true">
+                                        <path data-edge-index="0" d="M79 196 C125 196 138 114 188 114"></path>
+                                        <path data-edge-index="1" d="M252 114 C294 114 288 196 328 196"></path>
+                                        <path data-edge-index="2" d="M392 196 C433 196 429 106 474 106"></path>
+                                        <path class="v2-branch" d="M392 196 C433 196 429 286 474 286"></path>
+                                        <path data-edge-index="3" d="M506 138 C506 186 506 220 506 254"></path>
+                                        <path data-edge-index="4" d="M538 286 C574 286 575 196 607 196"></path>
+                                    </svg>
+
+                                    <div class="v2-state v2-state--0" data-state-index="0"><span class="pv-role is-human"><svg><use href="#hac-human"></use></svg></span><strong>New</strong><small>Human · Coordinator</small></div>
+                                    <div class="v2-state v2-state--1" data-state-index="1"><span class="pv-role is-digital"><svg><use href="#hac-digital"></use></svg></span><strong>AI triage</strong><small>Digital · Triage Worker</small></div>
+                                    <div class="v2-state v2-state--2" data-state-index="2"><span class="pv-role is-human"><svg><use href="#hac-human"></use></svg></span><strong>In progress</strong><small>Human · Engineer</small></div>
+                                    <div class="v2-state v2-state--3" data-state-index="3"><span class="pv-role is-digital"><svg><use href="#hac-digital"></use></svg></span><strong>Waiting</strong><small>Digital · Follow-up</small></div>
+                                    <div class="v2-state v2-state--4" data-state-index="4"><span class="pv-role is-human"><svg><use href="#hac-human"></use></svg></span><strong>Resolved</strong><small>Human · Manager</small></div>
+                                    <div class="v2-state v2-state--5" data-state-index="5"><span class="pv-role is-digital"><svg><use href="#hac-digital"></use></svg></span><strong>Closed</strong><small>Digital · Closure Worker</small></div>
+                                    <span class="v2-route-label">missing information</span>
+                                    <span class="v2-route-label v2-route-label--fast">fast resolution</span>
+                                    <span class="v2-token" data-case-token><i></i></span>
+                                </div>
+
+                                <div class="v2-current"><span>ACTIVE STATE</span><strong data-current-state>NEW</strong><i></i><small data-current-role>HUMAN · SERVICE COORDINATOR</small><b data-current-task>Review and assign the request</b></div>
+                            </div>
+                        </section>
+
+                        <!-- 03: States are placed in the lane of their assigned role -->
+                        <section class="hac-concept" id="concept-lanes" role="tabpanel" aria-labelledby="tab-lanes" data-concept-panel="lanes" hidden>
+                            <div class="pv pv-lanes" data-process-animation data-step="0" data-role="human">
+                                <div class="pv-head">
+                                    <span><small>PROCESS OWNERSHIP</small><strong>Work moves to the right role in every state</strong></span>
+                                    <em><i></i> #2481</em>
+                                </div>
+
+                                <div class="v3-lane v3-lane--human"><span><svg><use href="#hac-human"></use></svg><b>HUMAN WORK</b></span></div>
+                                <div class="v3-lane v3-lane--digital"><span><svg><use href="#hac-digital"></use></svg><b>DIGITAL WORKER</b></span></div>
+
+                                <div class="v3-board">
+                                    <svg class="v3-route" viewBox="0 0 640 310" preserveAspectRatio="none" aria-hidden="true">
+                                        <path d="M61 83 165 229 269 83 373 229 477 83 581 229"></path>
+                                    </svg>
+                                    <div class="v3-state v3-state--0 is-human" data-state-index="0"><span>01</span><strong>New</strong><small>Coordinator</small></div>
+                                    <div class="v3-state v3-state--1 is-digital" data-state-index="1"><span>02</span><strong>AI triage</strong><small>Triage Worker</small></div>
+                                    <div class="v3-state v3-state--2 is-human" data-state-index="2"><span>03</span><strong>In progress</strong><small>Engineer</small></div>
+                                    <div class="v3-state v3-state--3 is-digital" data-state-index="3"><span>04</span><strong>Waiting</strong><small>Follow-up Worker</small></div>
+                                    <div class="v3-state v3-state--4 is-human" data-state-index="4"><span>05</span><strong>Resolved</strong><small>Manager</small></div>
+                                    <div class="v3-state v3-state--5 is-digital" data-state-index="5"><span>06</span><strong>Closed</strong><small>Closure Worker</small></div>
+                                    <span class="v3-token" data-case-token><i></i></span>
+                                </div>
+
+                                <div class="v3-handoff"><span>PROCESS HANDOFF</span><strong data-current-state>NEW</strong><i>→</i><small data-current-role>HUMAN · SERVICE COORDINATOR</small><b data-current-task>Review and assign the request</b></div>
+                            </div>
+                        </section>
+
+                        <!-- 04: The same state machine shown as a symbolic orbit -->
+                        <section class="hac-concept" id="concept-orbit" role="tabpanel" aria-labelledby="tab-orbit" data-concept-panel="orbit" hidden>
+                            <div class="pv pv-orbit" data-process-animation data-step="0" data-role="human">
+                                <div class="pv-head">
+                                    <span><small>ONE LIVING PROCESS</small><strong>Each state activates its assigned role</strong></span>
+                                    <em><i></i> #2481</em>
+                                </div>
+
+                                <div class="v4-orbit">
+                                    <svg class="v4-ring" viewBox="0 0 640 410" aria-hidden="true">
+                                        <ellipse cx="320" cy="205" rx="231" ry="143"></ellipse>
+                                        <path data-edge-index="0" d="M135 119C189 57 253 52 320 62"></path>
+                                        <path data-edge-index="1" d="M320 62c75 0 139 27 184 78"></path>
+                                        <path data-edge-index="2" d="M504 140c34 43 43 92 22 139"></path>
+                                        <path data-edge-index="3" d="M526 279c-44 59-111 73-188 70"></path>
+                                        <path data-edge-index="4" d="M338 349c-90 3-159-24-203-78"></path>
+                                    </svg>
+
+                                    <div class="v4-state v4-state--0" data-state-index="0"><span class="pv-role is-human"><svg><use href="#hac-human"></use></svg></span><strong>New</strong><small>Human</small></div>
+                                    <div class="v4-state v4-state--1" data-state-index="1"><span class="pv-role is-digital"><svg><use href="#hac-digital"></use></svg></span><strong>AI triage</strong><small>Digital</small></div>
+                                    <div class="v4-state v4-state--2" data-state-index="2"><span class="pv-role is-human"><svg><use href="#hac-human"></use></svg></span><strong>In progress</strong><small>Human</small></div>
+                                    <div class="v4-state v4-state--3" data-state-index="3"><span class="pv-role is-digital"><svg><use href="#hac-digital"></use></svg></span><strong>Waiting</strong><small>Digital</small></div>
+                                    <div class="v4-state v4-state--4" data-state-index="4"><span class="pv-role is-human"><svg><use href="#hac-human"></use></svg></span><strong>Resolved</strong><small>Human</small></div>
+                                    <div class="v4-state v4-state--5" data-state-index="5"><span class="pv-role is-digital"><svg><use href="#hac-digital"></use></svg></span><strong>Closed</strong><small>Digital</small></div>
+                                    <span class="v4-token" data-case-token><i></i></span>
+
+                                    <div class="v4-core">
+                                        <span><svg><use href="#hac-process"></use></svg></span>
+                                        <small>CURRENT STATE</small>
+                                        <strong data-current-state>NEW</strong>
+                                        <em data-current-role>HUMAN · SERVICE COORDINATOR</em>
+                                        <b data-current-task>Review and assign the request</b>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- 05: A process core explicitly hands each state to one of two executors -->
+                        <section class="hac-concept" id="concept-relay" role="tabpanel" aria-labelledby="tab-relay" data-concept-panel="relay" hidden>
+                            <div class="pv pv-relay" data-process-animation data-step="0" data-role="human">
+                                <div class="pv-head">
+                                    <span><small>PROCESS RELAY</small><strong>The state decides who works next</strong></span>
+                                    <em><i></i> #2481</em>
+                                </div>
+
+                                <div class="v5-relay">
+                                    <div class="v5-actor v5-actor--human">
+                                        <span><svg><use href="#hac-human"></use></svg></span><small>HUMAN</small><strong>Service team</strong><em>Judgment · decisions</em>
+                                    </div>
+                                    <div class="v5-beam v5-beam--human"><i></i></div>
+
+                                    <div class="v5-core">
+                                        <span class="v5-core__ring"></span>
+                                        <small>ACTIVE STATE</small>
+                                        <strong data-current-state>NEW</strong>
+                                        <div class="v5-role-icons"><svg class="is-human"><use href="#hac-human"></use></svg><svg class="is-digital"><use href="#hac-digital"></use></svg></div>
+                                        <em data-current-role>HUMAN · SERVICE COORDINATOR</em>
+                                        <b data-current-task>Review and assign the request</b>
                                     </div>
 
-                                    <div class="c1-handoff" aria-hidden="true">
-                                        <span></span><i>governed handoff</i><span></span>
-                                    </div>
-
-                                    <div class="c1-actor c1-actor--digital">
-                                        <span class="c1-avatar c1-avatar--digital" aria-hidden="true">
-                                            <svg viewBox="0 0 24 24" fill="none"><rect x="5" y="6" width="14" height="13" rx="3"/><circle cx="9.5" cy="12" r="1"/><circle cx="14.5" cy="12" r="1"/><path d="M9 16h6M12 3v3M9 3h6"/></svg>
-                                        </span>
-                                        <span><small>DIGITAL WORKER</small><strong>Vendor Agent</strong><em>AI + integrations</em></span>
-                                        <i class="c1-actor__state"></i>
+                                    <div class="v5-beam v5-beam--digital"><i></i></div>
+                                    <div class="v5-actor v5-actor--digital">
+                                        <span><svg><use href="#hac-digital"></use></svg></span><small>DIGITAL WORKER</small><strong>AI workforce</strong><em>Execution · integrations</em>
                                     </div>
                                 </div>
 
-                                <div class="c1-action">
-                                    <span class="c1-action__icon" aria-hidden="true">
-                                        <svg viewBox="0 0 24 24" fill="none"><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M18.4 5.6l-2.1 2.1M7.7 16.3l-2.1 2.1"/><circle cx="12" cy="12" r="3"/></svg>
-                                    </span>
-                                    <span class="c1-action__text"><small data-c1-owner>HUMAN TASK</small><strong data-c1-action>Request submitted</strong></span>
-                                    <span class="c1-action__meta" data-c1-meta>FORM · 8 FIELDS</span>
-                                </div>
-
-                                <div class="c1-workflow">
-                                    <div class="c1-track" aria-hidden="true"><span class="c1-track__fill"></span></div>
-                                    <span class="c1-token" aria-hidden="true"><i></i></span>
+                                <div class="v5-states">
+                                    <div class="v5-progress"><span data-progress-fill></span></div>
                                     <ol>
-                                        <li class="is-active"><span>1</span><small>Submitted</small></li>
-                                        <li><span>2</span><small>AI check</small></li>
-                                        <li><span>3</span><small>Review</small></li>
-                                        <li><span>4</span><small>ERP update</small></li>
-                                        <li><span>5</span><small>Complete</small></li>
+                                        <li data-state-index="0"><i>01</i><span>New</span></li>
+                                        <li data-state-index="1"><i>02</i><span>AI triage</span></li>
+                                        <li data-state-index="2"><i>03</i><span>In progress</span></li>
+                                        <li data-state-index="3"><i>04</i><span>Waiting</span></li>
+                                        <li data-state-index="4"><i>05</i><span>Resolved</span></li>
+                                        <li data-state-index="5"><i>06</i><span>Closed</span></li>
                                     </ol>
                                 </div>
 
-                                <div class="c1-governance">
-                                    <span><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 1.5 13 3.4v3.9c0 3.2-2.1 5.8-5 7.2-2.9-1.4-5-4-5-7.2V3.4L8 1.5Z"/><path d="m5.7 8 1.5 1.5 3.2-3.3"/></svg> Permission checked</span>
-                                    <span><i></i> Every action logged</span>
-                                    <span data-c1-time>00:00</span>
-                                </div>
-                            </div>
-                        </section>
-
-                        <!-- CONCEPT 2: the process is the visible control and orchestration core -->
-                        <section class="hac-concept hac-concept--orchestration" id="concept-orchestration" role="tabpanel" aria-labelledby="tab-orchestration" data-concept-panel="orchestration" hidden>
-                            <div class="c2-canvas">
-                                <div class="c2-field" aria-hidden="true"></div>
-                                <svg class="c2-lines" viewBox="0 0 560 440" fill="none" aria-hidden="true">
-                                    <path class="c2-line c2-line--human" d="M119 124 C170 124 191 171 226 194"/>
-                                    <path class="c2-line c2-line--digital" d="M441 124 C390 124 369 171 334 194"/>
-                                    <path class="c2-line c2-line--systems" d="M280 286 C280 324 280 340 280 366"/>
-                                    <circle class="c2-pulse c2-pulse--one" cx="119" cy="124" r="4"/>
-                                    <circle class="c2-pulse c2-pulse--two" cx="441" cy="124" r="4"/>
-                                    <circle class="c2-pulse c2-pulse--three" cx="280" cy="366" r="4"/>
-                                </svg>
-
-                                <div class="c2-governance-ring" aria-hidden="true">
-                                    <span class="c2-ring-label c2-ring-label--roles">ROLES</span>
-                                    <span class="c2-ring-label c2-ring-label--rules">RULES</span>
-                                    <span class="c2-ring-label c2-ring-label--audit">AUDIT</span>
-                                </div>
-
-                                <div class="c2-actor c2-actor--human">
-                                    <span class="c2-avatar" aria-hidden="true">
-                                        <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="3.5"/><path d="M5.5 20c.5-4 2.7-6 6.5-6s6 2 6.5 6"/></svg>
-                                    </span>
-                                    <span><small>HUMAN</small><strong>Decides</strong></span>
-                                    <em class="c2-task">Approve exception</em>
-                                </div>
-
-                                <div class="c2-actor c2-actor--digital">
-                                    <span class="c2-avatar" aria-hidden="true">
-                                        <svg viewBox="0 0 24 24" fill="none"><rect x="5" y="6" width="14" height="13" rx="3"/><circle cx="9.5" cy="12" r="1"/><circle cx="14.5" cy="12" r="1"/><path d="M9 16h6M12 3v3"/></svg>
-                                    </span>
-                                    <span><small>DIGITAL WORKER</small><strong>Executes</strong></span>
-                                    <em class="c2-task">Verify documents</em>
-                                </div>
-
-                                <div class="c2-core">
-                                    <span class="c2-core__halo" aria-hidden="true"></span>
-                                    <span class="c2-core__icon" aria-hidden="true">
-                                        <svg viewBox="0 0 52 52" fill="none"><circle cx="11" cy="26" r="5"/><circle cx="26" cy="26" r="7"/><circle cx="41" cy="26" r="5"/><path d="M16 26h3M33 26h3"/></svg>
-                                    </span>
-                                    <small>GOVERNED PROCESS</small>
-                                    <strong>Routes. Checks. Logs.</strong>
-                                    <span class="c2-core__status"><i></i> RUNNING</span>
-                                </div>
-
-                                <span class="c2-packet c2-packet--human"><i></i> decision</span>
-                                <span class="c2-packet c2-packet--digital"><i></i> task</span>
-                                <span class="c2-packet c2-packet--system"><i></i> update</span>
-
-                                <div class="c2-systems">
-                                    <small>ENTERPRISE SYSTEMS</small>
-                                    <span><i>CRM</i><i>ERP</i><i>DOCS</i></span>
-                                    <em>Business outcome</em>
-                                </div>
-                            </div>
-                        </section>
-
-                        <!-- CONCEPT 3: a swimlane shows exactly who does each process step -->
-                        <section class="hac-concept hac-concept--swimlane" id="concept-swimlane" role="tabpanel" aria-labelledby="tab-swimlane" data-concept-panel="swimlane" hidden>
-                            <div class="c3-canvas" data-c3-step="0">
-                                <div class="c3-topbar">
-                                    <span><small>PROCESS INSTANCE</small><strong>Customer onboarding</strong></span>
-                                    <span class="c3-id">#C-1098</span>
-                                    <span class="c3-running"><i></i> RUNNING</span>
-                                </div>
-
-                                <div class="c3-lanes">
-                                    <div class="c3-lane-head c3-lane-head--human">
-                                        <span aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="3.5"/><path d="M5.5 20c.5-4 2.7-6 6.5-6s6 2 6.5 6"/></svg></span>
-                                        <small>HUMAN</small>
-                                    </div>
-                                    <div class="c3-lane-head c3-lane-head--process">
-                                        <span aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><circle cx="5" cy="12" r="2"/><circle cx="12" cy="12" r="3"/><circle cx="19" cy="12" r="2"/><path d="M7 12h2M15 12h2"/></svg></span>
-                                        <small>PROCESS</small>
-                                    </div>
-                                    <div class="c3-lane-head c3-lane-head--digital">
-                                        <span aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><rect x="5" y="6" width="14" height="13" rx="3"/><circle cx="9.5" cy="12" r="1"/><circle cx="14.5" cy="12" r="1"/><path d="M9 16h6M12 3v3"/></svg></span>
-                                        <small>DIGITAL WORKER</small>
-                                    </div>
-
-                                    <div class="c3-progress" aria-hidden="true"><span></span><i></i></div>
-
-                                    <ol class="c3-events">
-                                        <li data-event="0" class="is-active">
-                                            <span class="c3-time">09:14</span>
-                                            <div class="c3-event c3-event--human"><i>1</i><span><small>HUMAN TASK</small><strong>Submit customer request</strong></span><em>DONE</em></div>
-                                        </li>
-                                        <li data-event="1">
-                                            <span class="c3-time">09:14</span>
-                                            <div class="c3-event c3-event--process"><i>2</i><span><small>CONTROL</small><strong>Route &amp; check permissions</strong></span><em>12 ms</em></div>
-                                        </li>
-                                        <li data-event="2">
-                                            <span class="c3-time">09:14</span>
-                                            <div class="c3-event c3-event--digital"><i>3</i><span><small>AI TASK</small><strong>Extract &amp; verify data</strong></span><em>8 docs</em></div>
-                                        </li>
-                                        <li data-event="3">
-                                            <span class="c3-time">09:15</span>
-                                            <div class="c3-event c3-event--process"><i>4</i><span><small>BUSINESS RULE</small><strong>Exception detected</strong></span><em>RISK &gt; 70</em></div>
-                                        </li>
-                                        <li data-event="4">
-                                            <span class="c3-time">09:18</span>
-                                            <div class="c3-event c3-event--human"><i>5</i><span><small>HUMAN DECISION</small><strong>Approve exception</strong></span><em>APPROVED</em></div>
-                                        </li>
-                                        <li data-event="5">
-                                            <span class="c3-time">09:18</span>
-                                            <div class="c3-event c3-event--digital"><i>6</i><span><small>SYSTEM ACTION</small><strong>Create customer in CRM</strong></span><em>SUCCESS</em></div>
-                                        </li>
-                                    </ol>
-                                </div>
-
-                                <div class="c3-outcome">
-                                    <span aria-hidden="true">✓</span>
-                                    <span><small>BUSINESS OUTCOME</small><strong>Customer activated</strong></span>
-                                    <em><i></i> 6 actions logged</em>
-                                </div>
-                            </div>
-                        </section>
-
-                        <!-- CONCEPT 4: symbolic shared orbit inside a governed boundary -->
-                        <section class="hac-concept hac-concept--orbit" id="concept-orbit" role="tabpanel" aria-labelledby="tab-orbit" data-concept-panel="orbit" hidden>
-                            <div class="c4-canvas">
-                                <div class="c4-caption"><span></span> ONE GOVERNED PROCESS LAYER <span></span></div>
-
-                                <svg class="c4-orbit-svg" viewBox="0 0 560 430" fill="none" aria-hidden="true">
-                                    <defs>
-                                        <linearGradient id="c4OrbitGradient" x1="82" y1="105" x2="476" y2="329" gradientUnits="userSpaceOnUse">
-                                            <stop stop-color="#94A3B8" stop-opacity=".35"/>
-                                            <stop offset=".48" stop-color="#2DD4BF" stop-opacity=".8"/>
-                                            <stop offset="1" stop-color="#60A5FA" stop-opacity=".38"/>
-                                        </linearGradient>
-                                        <filter id="c4DotGlow" x="-300%" y="-300%" width="700%" height="700%">
-                                            <feGaussianBlur stdDeviation="5" result="blur"/>
-                                            <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
-                                        </filter>
-                                        <path id="c4OrbitPath" d="M86 218C86 132 173 79 280 79s194 53 194 139-87 139-194 139S86 304 86 218Z"/>
-                                    </defs>
-                                    <use href="#c4OrbitPath" stroke="url(#c4OrbitGradient)" stroke-width="1.5" stroke-dasharray="5 8"/>
-                                    <use href="#c4OrbitPath" class="c4-orbit-trace" stroke="#2DD4BF" stroke-width="2" stroke-linecap="round" stroke-dasharray="44 800"/>
-
-                                    <circle r="5" fill="#5EEAD4" filter="url(#c4DotGlow)">
-                                        <animateMotion dur="7s" repeatCount="indefinite" rotate="auto"><mpath href="#c4OrbitPath"/></animateMotion>
-                                    </circle>
-                                    <circle r="3.5" fill="#93C5FD" filter="url(#c4DotGlow)">
-                                        <animateMotion dur="7s" begin="-3.5s" repeatCount="indefinite" rotate="auto"><mpath href="#c4OrbitPath"/></animateMotion>
-                                    </circle>
-
-                                    <path class="c4-spoke c4-spoke--one" d="M155 127 237 190"/>
-                                    <path class="c4-spoke c4-spoke--two" d="M405 127 323 190"/>
-                                    <path class="c4-spoke c4-spoke--three" d="M280 282v58"/>
-                                </svg>
-
-                                <div class="c4-node c4-node--human">
-                                    <span aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="3.5"/><path d="M5.5 20c.5-4 2.7-6 6.5-6s6 2 6.5 6"/></svg></span>
-                                    <small>HUMAN</small><strong>Judgment</strong>
-                                    <em>approves</em>
-                                </div>
-
-                                <div class="c4-node c4-node--digital">
-                                    <span aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><rect x="5" y="6" width="14" height="13" rx="3"/><circle cx="9.5" cy="12" r="1"/><circle cx="14.5" cy="12" r="1"/><path d="M9 16h6M12 3v3"/></svg></span>
-                                    <small>DIGITAL WORKER</small><strong>Execution</strong>
-                                    <em>acts</em>
-                                </div>
-
-                                <div class="c4-core">
-                                    <span class="c4-core__rings" aria-hidden="true"></span>
-                                    <span class="c4-core__symbol" aria-hidden="true">
-                                        <svg viewBox="0 0 64 64" fill="none"><circle cx="13" cy="32" r="6"/><circle cx="32" cy="32" r="9"/><circle cx="51" cy="32" r="6"/><path d="M19 32h4M41 32h4"/></svg>
-                                    </span>
-                                    <small>PROCESS</small>
-                                    <strong>Shared context</strong>
-                                </div>
-
-                                <span class="c4-rule c4-rule--roles"><i></i> Roles</span>
-                                <span class="c4-rule c4-rule--rules"><i></i> Rules</span>
-                                <span class="c4-rule c4-rule--audit"><i></i> Audit</span>
-
-                                <div class="c4-outcome"><i></i><span><small>BUSINESS OUTCOME</small><strong>Work completed</strong></span><em>✓</em></div>
-                            </div>
-                        </section>
-
-                        <!-- CONCEPT 5: human and AI streams weave through shared process gates -->
-                        <section class="hac-concept hac-concept--weave" id="concept-weave" role="tabpanel" aria-labelledby="tab-weave" data-concept-panel="weave" hidden>
-                            <div class="c5-canvas">
-                                <div class="c5-title"><small>PEOPLE + AI</small><strong>Two capabilities. One controlled flow.</strong></div>
-
-                                <svg class="c5-svg" viewBox="0 0 560 430" fill="none" aria-hidden="true">
-                                    <defs>
-                                        <linearGradient id="c5HumanGradient" x1="68" y1="128" x2="490" y2="224" gradientUnits="userSpaceOnUse">
-                                            <stop stop-color="#CBD5E1" stop-opacity=".45"/>
-                                            <stop offset=".48" stop-color="#93C5FD"/>
-                                            <stop offset="1" stop-color="#5EEAD4"/>
-                                        </linearGradient>
-                                        <linearGradient id="c5AiGradient" x1="68" y1="304" x2="490" y2="224" gradientUnits="userSpaceOnUse">
-                                            <stop stop-color="#2DD4BF" stop-opacity=".5"/>
-                                            <stop offset=".5" stop-color="#2DD4BF"/>
-                                            <stop offset="1" stop-color="#5EEAD4"/>
-                                        </linearGradient>
-                                        <radialGradient id="c5OutcomeGradient">
-                                            <stop stop-color="#5EEAD4"/>
-                                            <stop offset=".55" stop-color="#14B8A6"/>
-                                            <stop offset="1" stop-color="#0F766E"/>
-                                        </radialGradient>
-                                        <filter id="c5Glow" x="-80%" y="-80%" width="260%" height="260%">
-                                            <feGaussianBlur stdDeviation="7" result="blur"/>
-                                            <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
-                                        </filter>
-                                        <path id="c5HumanPath" d="M72 137C145 137 148 276 220 276s75-139 147-139 73 86 124 86"/>
-                                        <path id="c5AiPath" d="M72 303c73 0 76-139 148-139s75 139 147 139 73-80 124-80"/>
-                                    </defs>
-
-                                    <g class="c5-gates">
-                                        <path d="M139 110v220"/><path d="M220 110v220"/><path d="M301 110v220"/><path d="M382 110v220"/>
-                                        <circle cx="139" cy="216" r="5"/><circle cx="220" cy="216" r="5"/><circle cx="301" cy="216" r="5"/><circle cx="382" cy="216" r="5"/>
-                                    </g>
-
-                                    <use href="#c5HumanPath" class="c5-stream c5-stream--human" stroke="url(#c5HumanGradient)"/>
-                                    <use href="#c5AiPath" class="c5-stream c5-stream--ai" stroke="url(#c5AiGradient)"/>
-
-                                    <circle r="4.5" fill="#BFDBFE" filter="url(#c5Glow)">
-                                        <animateMotion dur="6.8s" repeatCount="indefinite"><mpath href="#c5HumanPath"/></animateMotion>
-                                    </circle>
-                                    <circle r="4.5" fill="#5EEAD4" filter="url(#c5Glow)">
-                                        <animateMotion dur="6.8s" begin="-.8s" repeatCount="indefinite"><mpath href="#c5AiPath"/></animateMotion>
-                                    </circle>
-
-                                    <circle class="c5-origin c5-origin--human" cx="72" cy="137" r="17"/>
-                                    <path class="c5-human-icon" d="M72 130a4 4 0 1 0 0 8 4 4 0 0 0 0-8Zm-8 18c.8-5.2 3.4-7.7 8-7.7s7.2 2.5 8 7.7"/>
-
-                                    <circle class="c5-origin c5-origin--ai" cx="72" cy="303" r="17"/>
-                                    <rect class="c5-ai-icon" x="64" y="295" width="16" height="15" rx="3"/>
-                                    <circle class="c5-ai-eye" cx="69" cy="301" r="1.2"/><circle class="c5-ai-eye" cx="75" cy="301" r="1.2"/>
-                                    <path class="c5-ai-icon" d="M68 306h8M72 291v4"/>
-
-                                    <circle class="c5-outcome-glow" cx="500" cy="223" r="48" fill="#14B8A6" opacity=".14"/>
-                                    <circle class="c5-outcome-node" cx="500" cy="223" r="31" fill="url(#c5OutcomeGradient)" filter="url(#c5Glow)"/>
-                                    <path class="c5-check" d="m488 223 8 8 17-18"/>
-                                </svg>
-
-                                <span class="c5-label c5-label--human"><small>HUMAN</small><strong>Judgment</strong></span>
-                                <span class="c5-label c5-label--ai"><small>DIGITAL WORKER</small><strong>Execution</strong></span>
-
-                                <div class="c5-gate-labels" aria-hidden="true">
-                                    <span>INTAKE</span><span>CHECK</span><span>DECIDE</span><span>ACT</span>
-                                </div>
-
-                                <span class="c5-result"><small>OUTCOME</small><strong>Done</strong></span>
-                                <div class="c5-guardrail"><span>ROLE</span><i></i><span>RULE</span><i></i><span>PERMISSION</span><i></i><span>AUDIT</span></div>
+                                <div class="pv-governance"><span><svg><use href="#hac-shield"></use></svg>State, role and action remain governed</span><span>Human ↔ Digital Worker</span><b data-state-counter>01 / 06</b></div>
                             </div>
                         </section>
 
                         <button class="hac-replay" type="button" aria-label="Replay the active animation">
-                            <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M16 7a7 7 0 1 0 .5 5M16 3v4h-4"/></svg>
+                            <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M16 7a7 7 0 1 0 .5 5M16 3v4h-4"></path></svg>
                             Replay
                         </button>
                     </div>
                 </div>
 
                 <div class="hac-notes">
-                    <article class="hac-note is-active" data-concept-note="live-case">
-                        <span>01</span><div><strong>Live Case Flow</strong><p>Najbardziej konkretny i sprzedażowy. Odbiorca widzi jedną sprawę, kolejne przekazania oraz kontrolę procesu.</p></div>
-                    </article>
-                    <article class="hac-note" data-concept-note="orchestration">
-                        <span>02</span><div><strong>Orchestration Core</strong><p>Najmocniej komunikuje platformę. Pokazuje, że proces kieruje ludźmi, AI i systemami oraz pilnuje zasad.</p></div>
-                    </article>
-                    <article class="hac-note" data-concept-note="swimlane">
-                        <span>03</span><div><strong>Shared Workflow</strong><p>Najdokładniej wyjaśnia współpracę. Każdy krok ma wykonawcę, a wyjątki wracają do człowieka.</p></div>
-                    </article>
-                    <article class="hac-note" data-concept-note="orbit">
-                        <span>04</span><div><strong>Dual Orbit</strong><p>Najbardziej symboliczny wariant relacji. Człowiek i Digital Worker są równymi uczestnikami jednej kontrolowanej przestrzeni.</p></div>
-                    </article>
-                    <article class="hac-note" data-concept-note="weave">
-                        <span>05</span><div><strong>Process Weave</strong><p>Najbardziej abstrakcyjny i dynamiczny. Dwa strumienie kompetencji przechodzą przez wspólne bramki procesu i łączą się w rezultacie.</p></div>
-                    </article>
+                    <article class="hac-note is-active" data-concept-note="journey"><span>01</span><div><strong>State Journey</strong><p>Najprostszy do zrozumienia: instancja idzie przez stany, a nad każdym stanem widać typ wykonawcy.</p></div></article>
+                    <article class="hac-note" data-concept-note="map"><span>02</span><div><strong>Workflow Map</strong><p>Najbliższy prawdziwemu designerowi 2to2, ale uproszczony tak, aby pozostał czytelny w hero.</p></div></article>
+                    <article class="hac-note" data-concept-note="lanes"><span>03</span><div><strong>Role Lanes</strong><p>Najmocniej pokazuje przekazywanie pracy: proces przeskakuje między pasem ludzi i Digital Workerów.</p></div></article>
+                    <article class="hac-note" data-concept-note="orbit"><span>04</span><div><strong>State Orbit</strong><p>Symboliczny wariant maszyny stanowej. Nadal widać wszystkie stany i przypisane role.</p></div></article>
+                    <article class="hac-note" data-concept-note="relay"><span>05</span><div><strong>Process Relay</strong><p>Proces jest centralnym dyspozytorem: aktywny stan za każdym razem uruchamia właściwego wykonawcę.</p></div></article>
                 </div>
             </div>
         </section>
@@ -806,7 +678,7 @@
     </footer>
 <!--/build:footer--></div>
 
-    <script src="assets/js/hero-animation-concepts.js?v=20260814"></script>
+    <script src="assets/js/hero-animation-concepts.js?v=20260815"></script>
     <script>
         document.addEventListener('includesLoaded', function() {
             var scripts = [
@@ -815,7 +687,6 @@
                 'assets/js/functions.min.js?v=20260813',
                 'assets/js/async.min.js?v=20260813'
             ];
-
             function loadScript(index) {
                 if (index >= scripts.length) return;
                 var script = document.createElement('script');
@@ -823,7 +694,6 @@
                 script.onload = function() { loadScript(index + 1); };
                 document.body.appendChild(script);
             }
-
             loadScript(0);
         });
     </script>

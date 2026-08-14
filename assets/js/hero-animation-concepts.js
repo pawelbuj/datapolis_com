@@ -1,145 +1,141 @@
 (function() {
     'use strict';
 
+    var states = [
+        {
+            name: 'New',
+            role: 'human',
+            roleLabel: 'HUMAN · SERVICE COORDINATOR',
+            task: 'Review and assign the request'
+        },
+        {
+            name: 'AI triage',
+            role: 'digital',
+            roleLabel: 'DIGITAL WORKER · TRIAGE WORKER',
+            task: 'Classify, enrich and set priority'
+        },
+        {
+            name: 'In progress',
+            role: 'human',
+            roleLabel: 'HUMAN · SERVICE ENGINEER',
+            task: 'Investigate and resolve the issue'
+        },
+        {
+            name: 'Waiting',
+            role: 'digital',
+            roleLabel: 'DIGITAL WORKER · FOLLOW-UP WORKER',
+            task: 'Request missing customer information'
+        },
+        {
+            name: 'Resolved',
+            role: 'human',
+            roleLabel: 'HUMAN · SERVICE MANAGER',
+            task: 'Confirm the resolution'
+        },
+        {
+            name: 'Closed',
+            role: 'digital',
+            roleLabel: 'DIGITAL WORKER · CLOSURE WORKER',
+            task: 'Update systems and archive the case'
+        }
+    ];
+
     var tabs = Array.prototype.slice.call(document.querySelectorAll('[data-concept]'));
     var panels = Array.prototype.slice.call(document.querySelectorAll('[data-concept-panel]'));
     var notes = Array.prototype.slice.call(document.querySelectorAll('[data-concept-note]'));
     var replay = document.querySelector('.hac-replay');
     var reducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    var activeConcept = 'live-case';
+    var activeConcept = 'journey';
     var activeTimer = null;
-    var startDelay = null;
+    var activeStep = 0;
 
-    var liveCaseSteps = [
-        {
-            owner: 'HUMAN TASK',
-            action: 'Request submitted',
-            meta: 'FORM · 8 FIELDS',
-            time: '00:00'
-        },
-        {
-            owner: 'DIGITAL WORKER',
-            action: 'Reading & validating documents',
-            meta: 'AI · 8 DOCUMENTS',
-            time: '00:09'
-        },
-        {
-            owner: 'HUMAN DECISION',
-            action: 'Review policy exception',
-            meta: 'RISK · 1 EXCEPTION',
-            time: '00:18'
-        },
-        {
-            owner: 'DIGITAL WORKER',
-            action: 'Creating vendor in ERP',
-            meta: 'ERP · CONNECTED',
-            time: '00:31'
-        },
-        {
-            owner: 'PROCESS OUTCOME',
-            action: 'Vendor activated',
-            meta: 'COMPLETE · AUDITED',
-            time: '00:43'
-        }
-    ];
-
-    function clearAnimationTimers() {
+    function clearAnimationTimer() {
         if (activeTimer) {
-            window.clearInterval(activeTimer);
+            window.clearTimeout(activeTimer);
             activeTimer = null;
-        }
-        if (startDelay) {
-            window.clearTimeout(startDelay);
-            startDelay = null;
         }
     }
 
-    function setLiveCaseStep(step) {
-        var canvas = document.querySelector('.c1-canvas');
-        if (!canvas) return;
-
-        var safeStep = Math.max(0, Math.min(step, liveCaseSteps.length - 1));
-        var data = liveCaseSteps[safeStep];
-        canvas.setAttribute('data-c1-step', String(safeStep));
-
-        var owner = canvas.querySelector('[data-c1-owner]');
-        var action = canvas.querySelector('[data-c1-action]');
-        var meta = canvas.querySelector('[data-c1-meta]');
-        var time = canvas.querySelector('[data-c1-time]');
-
-        if (owner) owner.textContent = data.owner;
-        if (action) action.textContent = data.action;
-        if (meta) meta.textContent = data.meta;
-        if (time) time.textContent = data.time;
-
-        Array.prototype.forEach.call(canvas.querySelectorAll('.c1-workflow li'), function(node, index) {
-            node.classList.toggle('is-done', index < safeStep);
-            node.classList.toggle('is-active', index === safeStep);
+    function setText(panel, selector, text) {
+        Array.prototype.forEach.call(panel.querySelectorAll(selector), function(element) {
+            element.textContent = text;
         });
     }
 
-    function setSwimlaneStep(step) {
-        var canvas = document.querySelector('.c3-canvas');
-        if (!canvas) return;
+    function applyStep(panel, step) {
+        if (!panel) return;
 
-        var events = Array.prototype.slice.call(canvas.querySelectorAll('.c3-events li'));
-        var safeStep = Math.max(0, Math.min(step, events.length - 1));
-        canvas.setAttribute('data-c3-step', String(safeStep));
+        var visual = panel.querySelector('[data-process-animation]');
+        if (!visual) return;
 
-        events.forEach(function(event, index) {
-            event.classList.toggle('is-done', index < safeStep);
-            event.classList.toggle('is-active', index === safeStep);
+        var safeStep = Math.max(0, Math.min(step, states.length - 1));
+        var current = states[safeStep];
+        var progress = (safeStep / (states.length - 1)) * 100;
+
+        visual.setAttribute('data-step', String(safeStep));
+        visual.setAttribute('data-role', current.role);
+        visual.style.setProperty('--process-progress', progress + '%');
+
+        setText(panel, '[data-current-state]', current.name.toUpperCase());
+        setText(panel, '[data-current-role]', current.roleLabel);
+        setText(panel, '[data-current-task]', current.task);
+        setText(panel, '[data-state-counter]', String(safeStep + 1).padStart(2, '0') + ' / 06');
+
+        Array.prototype.forEach.call(panel.querySelectorAll('[data-progress-fill]'), function(fill) {
+            fill.style.width = progress + '%';
+        });
+
+        Array.prototype.forEach.call(panel.querySelectorAll('[data-state-index]'), function(node) {
+            var index = Number(node.getAttribute('data-state-index'));
+            node.classList.toggle('is-done', index < safeStep);
+            node.classList.toggle('is-active', index === safeStep);
+            node.classList.toggle('is-future', index > safeStep);
+        });
+
+        Array.prototype.forEach.call(panel.querySelectorAll('[data-edge-index]'), function(edge) {
+            var index = Number(edge.getAttribute('data-edge-index'));
+            edge.classList.toggle('is-done', index < safeStep - 1);
+            edge.classList.toggle('is-active', safeStep > 0 && index === safeStep - 1);
         });
     }
 
     function restartCssAnimations(panel) {
         if (!panel) return;
-
         panel.classList.add('is-reset');
         void panel.offsetWidth;
         panel.classList.remove('is-reset');
+    }
 
-        Array.prototype.forEach.call(panel.querySelectorAll('svg'), function(svg) {
-            if (typeof svg.setCurrentTime === 'function') {
-                try { svg.setCurrentTime(0); } catch (error) { /* SVG may not expose a timeline. */ }
-            }
-        });
+    function scheduleNextStep() {
+        if (reducedMotion || document.hidden) return;
+
+        var delay = activeStep === states.length - 1 ? 2450 : 1750;
+        activeTimer = window.setTimeout(function() {
+            activeStep = (activeStep + 1) % states.length;
+            var activePanel = document.querySelector('[data-concept-panel="' + activeConcept + '"]');
+            applyStep(activePanel, activeStep);
+            scheduleNextStep();
+        }, delay);
     }
 
     function startActiveAnimation() {
-        clearAnimationTimers();
+        clearAnimationTimer();
 
-        var activePanel = document.querySelector('[data-concept-panel="' + activeConcept + '"]');
-        restartCssAnimations(activePanel);
+        var panel = document.querySelector('[data-concept-panel="' + activeConcept + '"]');
+        activeStep = reducedMotion ? 2 : 0;
+        restartCssAnimations(panel);
+        applyStep(panel, activeStep);
 
-        if (activeConcept === 'live-case') {
-            var liveStep = reducedMotion ? 3 : 0;
-            setLiveCaseStep(liveStep);
-            if (!reducedMotion) {
-                startDelay = window.setTimeout(function() {
-                    activeTimer = window.setInterval(function() {
-                        liveStep = (liveStep + 1) % liveCaseSteps.length;
-                        setLiveCaseStep(liveStep);
-                    }, 1850);
-                }, 850);
-            }
-        }
-
-        if (activeConcept === 'swimlane') {
-            var swimStep = reducedMotion ? 5 : 0;
-            setSwimlaneStep(swimStep);
-            if (!reducedMotion) {
-                startDelay = window.setTimeout(function() {
-                    activeTimer = window.setInterval(function() {
-                        swimStep = (swimStep + 1) % 6;
-                        setSwimlaneStep(swimStep);
-                    }, 1350);
-                }, 750);
-            }
+        if (!reducedMotion) {
+            activeTimer = window.setTimeout(function() {
+                activeStep = 1;
+                applyStep(panel, activeStep);
+                scheduleNextStep();
+            }, 950);
         }
     }
 
-    function selectConcept(name, moveFocus) {
+    function selectConcept(name, focusTab) {
         var exists = panels.some(function(panel) {
             return panel.getAttribute('data-concept-panel') === name;
         });
@@ -152,7 +148,7 @@
             tab.classList.toggle('is-active', selected);
             tab.setAttribute('aria-selected', selected ? 'true' : 'false');
             tab.setAttribute('tabindex', selected ? '0' : '-1');
-            if (selected && moveFocus) tab.focus();
+            if (selected && focusTab) tab.focus();
         });
 
         panels.forEach(function(panel) {
@@ -183,6 +179,7 @@
             if (event.key === 'ArrowLeft' || event.key === 'ArrowUp') targetIndex = (index - 1 + tabs.length) % tabs.length;
             if (event.key === 'Home') targetIndex = 0;
             if (event.key === 'End') targetIndex = tabs.length - 1;
+
             if (targetIndex !== index) {
                 event.preventDefault();
                 selectConcept(tabs[targetIndex].getAttribute('data-concept'), true);
@@ -197,7 +194,7 @@
     }
 
     document.addEventListener('visibilitychange', function() {
-        if (document.hidden) clearAnimationTimers();
+        if (document.hidden) clearAnimationTimer();
         else startActiveAnimation();
     });
 
