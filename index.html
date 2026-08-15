@@ -34,6 +34,8 @@
     <link rel="stylesheet" href="assets/css/async.min.css?v=20260813" media="print" onload="this.media='all'; this.onload=null;">
     <link rel="stylesheet" href="assets/css/dark-theme.css?v=20260813">
     <link rel="stylesheet" href="assets/css/new-homepage.css?v=20260813">
+    <link rel="stylesheet" href="assets/css/homepage-workflow-map.css?v=20260815">
+    <link rel="stylesheet" href="assets/css/app-creator-section.css?v=20260814">
 
     <script src="includes/loader.js"></script>
 
@@ -157,6 +159,10 @@
                                 <span class="dp-dropdown__title">2to2 Platform</span>
                                 <span class="dp-dropdown__desc">Build apps, run workflows, govern agents</span>
                             </a>
+                            <a href="app-creator.html" class="dp-dropdown__item dp-dropdown__item--with-desc" role="menuitem">
+                                <span class="dp-dropdown__title">2to2 App Creator</span>
+                                <span class="dp-dropdown__desc">Build governed apps from documentation</span>
+                            </a>
                             <a href="process-apps.html" class="dp-dropdown__item" role="menuitem">
                                 <span class="dp-dropdown__title">Process Apps</span>
                             </a>
@@ -273,6 +279,7 @@
                         </button>
                         <div class="dp-mobile-nav__panel">
                             <a href="platform-2to2.html" class="dp-mobile-nav__link">2to2 Platform</a>
+                            <a href="app-creator.html" class="dp-mobile-nav__link">2to2 App Creator</a>
                             <a href="process-apps.html" class="dp-mobile-nav__link">Process Apps</a>
                             <a href="orchestration-engine.html" class="dp-mobile-nav__link">Orchestration Engine</a>
                             <a href="security-governance.html" class="dp-mobile-nav__link">Security &amp; Governance</a>
@@ -375,61 +382,63 @@
                     </div>
                     
                     <div class="dp-hero__visual">
-                        <svg viewBox="0 0 400 340" fill="none" xmlns="http://www.w3.org/2000/svg" class="process-diagram">
-                            <defs>
-                                <linearGradient id="processGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                                    <stop offset="0%" stop-color="#14b8a6"/>
-                                    <stop offset="100%" stop-color="#0d9488"/>
-                                </linearGradient>
-                                <filter id="processGlow" x="-50%" y="-50%" width="200%" height="200%">
-                                    <feGaussianBlur stdDeviation="12" result="coloredBlur"/>
-                                    <feMerge>
-                                        <feMergeNode in="coloredBlur"/>
-                                        <feMergeNode in="SourceGraphic"/>
-                                    </feMerge>
-                                </filter>
-                            </defs>
-                            
-                            <!-- Connection lines from Process to Workers -->
-                            <path d="M200 165 L100 95" stroke="#475569" stroke-width="2" stroke-dasharray="8 5">
-                                <animate attributeName="stroke-dashoffset" from="13" to="0" dur="1.2s" repeatCount="indefinite"/>
-                            </path>
-                            <path d="M200 165 L300 95" stroke="#475569" stroke-width="2" stroke-dasharray="8 5">
-                                <animate attributeName="stroke-dashoffset" from="13" to="0" dur="1.2s" repeatCount="indefinite"/>
-                            </path>
-                            
-                            <!-- Human node (left) -->
-                            <g transform="translate(55, 20)">
-                                <rect width="90" height="90" rx="16" fill="#0f172a" stroke="#334155" stroke-width="2"/>
-                                <circle cx="45" cy="35" r="14" stroke="#94a3b8" stroke-width="2" fill="none"/>
-                                <path d="M24 72 Q45 55 66 72" stroke="#94a3b8" stroke-width="2" fill="none"/>
-                                <text x="45" y="118" text-anchor="middle" fill="#94a3b8" font-size="13" font-weight="500" font-family="system-ui, sans-serif">Human</text>
-                            </g>
-                            
-                            <!-- Digital Worker node (right) - visually equal to Human -->
-                            <g transform="translate(255, 20)">
-                                <rect width="90" height="90" rx="16" fill="#0f172a" stroke="#334155" stroke-width="2"/>
-                                <!-- Neutral circuit/node icon -->
-                                <circle cx="45" cy="45" r="18" stroke="#94a3b8" stroke-width="2" fill="none"/>
-                                <circle cx="45" cy="45" r="7" fill="#94a3b8"/>
-                                <path d="M45 27 V19 M45 63 V71 M27 45 H19 M63 45 H71" stroke="#94a3b8" stroke-width="2" stroke-linecap="round"/>
-                                <text x="45" y="118" text-anchor="middle" fill="#94a3b8" font-size="13" font-weight="500" font-family="system-ui, sans-serif">Digital Worker</text>
-                            </g>
-                            
-                            <!-- PROCESS node (center, bottom) - The Control Plane / Main Authority -->
-                            <g transform="translate(80, 175)" filter="url(#processGlow)">
-                                <rect width="240" height="100" rx="20" fill="url(#processGrad)"/>
-                                <!-- Orchestration symbol: flow with central hub -->
-                                <circle cx="70" cy="50" r="10" fill="white" opacity="0.85"/>
-                                <circle cx="120" cy="50" r="14" fill="white"/>
-                                <circle cx="170" cy="50" r="10" fill="white" opacity="0.85"/>
-                                <path d="M80 50 H106 M134 50 H160" stroke="rgba(2,6,23,0.35)" stroke-width="3" stroke-linecap="round"/>
-                                <text x="120" y="130" text-anchor="middle" fill="#f8fafc" font-size="16" font-weight="600" font-family="system-ui, sans-serif">Process</text>
-                            </g>
-                            
-                            <!-- Subtle caption -->
-                            <text x="200" y="328" text-anchor="middle" fill="#475569" font-size="11" font-family="system-ui, sans-serif">Connected to enterprise systems. Producing real business outcomes.</text>
-                        </svg>
+                        <div class="dp-workflow-map" data-home-workflow-map data-step="0" data-role="human" role="img" aria-label="A process moving through states handled alternately by people and Digital Workers.">
+                            <div class="dp-workflow-map__head">
+                                <span>
+                                    <small>STATE-BASED WORKFLOW</small>
+                                    <strong>Service request #2481</strong>
+                                </span>
+                                <em><i></i> RUNNING</em>
+                            </div>
+
+                            <div class="dp-workflow-map__canvas">
+                                <svg class="dp-workflow-map__lines" viewBox="0 0 640 390" preserveAspectRatio="none" aria-hidden="true">
+                                    <path data-home-edge-index="0" d="M79 196 C125 196 138 114 188 114"></path>
+                                    <path data-home-edge-index="1" d="M252 114 C294 114 288 196 328 196"></path>
+                                    <path data-home-edge-index="2" d="M392 196 C433 196 429 106 474 106"></path>
+                                    <path class="dp-workflow-map__branch" d="M392 196 C433 196 429 286 474 286"></path>
+                                    <path data-home-edge-index="3" d="M506 138 C506 186 506 220 506 254"></path>
+                                    <path data-home-edge-index="4" d="M538 286 C574 286 575 196 607 196"></path>
+                                </svg>
+
+                                <div class="dp-workflow-state dp-workflow-state--0" data-home-state-index="0">
+                                    <span class="dp-workflow-role dp-workflow-role--human"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="7.5" r="3.5"></circle><path d="M5.2 20c.6-4.2 2.9-6.3 6.8-6.3s6.2 2.1 6.8 6.3"></path></svg></span>
+                                    <strong>New</strong><small>Human · Coordinator</small>
+                                </div>
+                                <div class="dp-workflow-state dp-workflow-state--1" data-home-state-index="1">
+                                    <span class="dp-workflow-role dp-workflow-role--digital"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4.5" y="6" width="15" height="13" rx="3"></rect><circle cx="9.2" cy="12" r="1"></circle><circle cx="14.8" cy="12" r="1"></circle><path d="M9 16h6M12 3v3M9.5 3h5"></path></svg></span>
+                                    <strong>AI triage</strong><small>Digital · Triage Worker</small>
+                                </div>
+                                <div class="dp-workflow-state dp-workflow-state--2" data-home-state-index="2">
+                                    <span class="dp-workflow-role dp-workflow-role--human"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="7.5" r="3.5"></circle><path d="M5.2 20c.6-4.2 2.9-6.3 6.8-6.3s6.2 2.1 6.8 6.3"></path></svg></span>
+                                    <strong>In progress</strong><small>Human · Engineer</small>
+                                </div>
+                                <div class="dp-workflow-state dp-workflow-state--3" data-home-state-index="3">
+                                    <span class="dp-workflow-role dp-workflow-role--digital"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4.5" y="6" width="15" height="13" rx="3"></rect><circle cx="9.2" cy="12" r="1"></circle><circle cx="14.8" cy="12" r="1"></circle><path d="M9 16h6M12 3v3M9.5 3h5"></path></svg></span>
+                                    <strong>Waiting</strong><small>Digital · Follow-up</small>
+                                </div>
+                                <div class="dp-workflow-state dp-workflow-state--4" data-home-state-index="4">
+                                    <span class="dp-workflow-role dp-workflow-role--human"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="7.5" r="3.5"></circle><path d="M5.2 20c.6-4.2 2.9-6.3 6.8-6.3s6.2 2.1 6.8 6.3"></path></svg></span>
+                                    <strong>Resolved</strong><small>Human · Manager</small>
+                                </div>
+                                <div class="dp-workflow-state dp-workflow-state--5" data-home-state-index="5">
+                                    <span class="dp-workflow-role dp-workflow-role--digital"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4.5" y="6" width="15" height="13" rx="3"></rect><circle cx="9.2" cy="12" r="1"></circle><circle cx="14.8" cy="12" r="1"></circle><path d="M9 16h6M12 3v3M9.5 3h5"></path></svg></span>
+                                    <strong>Closed</strong><small>Digital · Closure Worker</small>
+                                </div>
+
+                                <span class="dp-workflow-map__route-label">missing information</span>
+                                <span class="dp-workflow-map__route-label dp-workflow-map__route-label--fast">fast resolution</span>
+                                <span class="dp-workflow-map__token" aria-hidden="true"><i></i></span>
+                            </div>
+
+                            <div class="dp-workflow-map__current">
+                                <span>ACTIVE STATE</span>
+                                <strong data-home-current-state>NEW</strong>
+                                <i></i>
+                                <small data-home-current-role>HUMAN · SERVICE COORDINATOR</small>
+                                <b data-home-current-task>Review and assign the request</b>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -738,8 +747,174 @@
             </div>
         </section>
 
+
         <!-- ========================================
-             6. ENTERPRISE PROOF - Where Datapolis Runs Today
+             6. 2TO2 APP CREATOR
+             ======================================== -->
+        <section class="dp-app-creator" id="app-creator" aria-labelledby="app-creator-title">
+            <div class="dp-app-creator__grid" aria-hidden="true"></div>
+            <div class="dp-app-creator__glow" aria-hidden="true"></div>
+
+            <div class="dp-container dp-app-creator__layout">
+                <div class="dp-app-creator__copy">
+                    <p class="dp-app-creator__eyebrow"><span aria-hidden="true"></span>2to2 App Creator</p>
+                    <h2 id="app-creator-title">
+                        From business specification to working application.
+                        <em>And vice versa.</em>
+                    </h2>
+                    <p class="dp-app-creator__lead">
+                        2to2 App Creator uses AI to turn business documentation into a structured specification and a working application. In 2to2, the specification and the application are two views of the same living model. Build through documentation or design visually — every change stays aligned.
+                    </p>
+
+                    <div class="dp-app-creator__actions">
+                        <a class="dp-app-creator__button dp-app-creator__button--primary" href="app-creator.html">
+                            Explore 2to2 App Creator <span aria-hidden="true">→</span>
+                        </a>
+                        <a class="dp-app-creator__button dp-app-creator__button--secondary" href="contact.html">Talk to us</a>
+                    </div>
+
+                    <ul class="dp-app-creator__points" aria-label="2to2 App Creator benefits">
+                        <li><span aria-hidden="true">✓</span>No codebase to maintain</li>
+                        <li><span aria-hidden="true">✓</span>Documentation that can’t go stale</li>
+                        <li><span aria-hidden="true">✓</span>Governed by design</li>
+                    </ul>
+                </div>
+
+                <div class="dp-app-creator__visual" role="img" aria-label="A business specification builds a working 2to2 application, and changes on either side stay synchronized">
+                    <div class="v4a-stage" id="v4aStage" aria-hidden="true">
+                        <div class="v4a-panel v4a-doc" id="v4aDocPanel">
+                            <div class="v4a-head">
+                                <span class="v4a-label">BUSINESS SPECIFICATION</span>
+                                <span class="v4a-dot"></span>
+                            </div>
+                            <p class="v4a-doc-title"><span id="v4aDocTitle"></span><span class="v4a-caret" id="v4aCaretT"></span></p>
+                            <p class="v4a-doc-line"><span id="v4aDocL1"></span><span class="v4a-caret" id="v4aCaret1"></span></p>
+                            <p class="v4a-doc-line"><span id="v4aDocL2"></span><span class="v4a-caret" id="v4aCaret2"></span></p>
+                            <p class="v4a-doc-line"><span id="v4aDocL3"></span><span class="v4a-caret" id="v4aCaret3"></span></p>
+                            <p class="v4a-doc-line rule"><span id="v4aDocL4"></span><span class="v4a-caret" id="v4aCaret4"></span></p>
+                            <div class="v4a-doc-complete" id="v4aDocComplete">
+                                <svg width="14" height="14" viewBox="0 0 15 15" fill="none" aria-hidden="true">
+                                    <circle cx="7.5" cy="7.5" r="7" fill="rgba(52,211,153,.16)"/>
+                                    <path d="m4.4 7.7 2.1 2.1 4-4.6" stroke="#34d399" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                Specification complete
+                            </div>
+                            <div class="v4a-doc-new" id="v4aDocNew">“Approval follows review for every vendor.”</div>
+                        </div>
+
+                        <div class="v4a-center">
+                            <span class="v4a-link v4a-link-l" id="v4aLinkL"><i></i></span>
+                            <span class="v4a-link v4a-link-r" id="v4aLinkR"><i></i></span>
+                            <div class="v4a-core" id="v4aCore">
+                                <div class="v4a-halo"></div>
+                                <svg viewBox="0 0 118 118" aria-hidden="true">
+                                    <defs>
+                                        <linearGradient id="v4aCoreGrad" x1="0" y1="0" x2="1" y2="1">
+                                            <stop offset="0" stop-color="#2dd4bf"/>
+                                            <stop offset="1" stop-color="#0f766e"/>
+                                        </linearGradient>
+                                    </defs>
+                                    <circle cx="59" cy="59" r="55" fill="#07161c"/>
+                                    <circle class="v4a-ring" cx="59" cy="59" r="55" fill="none" stroke="#2dd4bf" stroke-width="2.4" stroke-dasharray="26 14" stroke-linecap="round"/>
+                                    <circle cx="59" cy="59" r="40" fill="url(#v4aCoreGrad)"/>
+                                    <text x="59" y="66" fill="#022c22" font-size="21" font-weight="800" text-anchor="middle" font-family="Inter, sans-serif">2to2</text>
+                                </svg>
+                            </div>
+                            <div class="v4a-core-label">ONE LIVING MODEL</div>
+                            <button class="v4a-action" id="v4aBuildBtn" type="button" tabindex="-1" aria-hidden="true">▶&nbsp; Build application</button>
+                            <button class="v4a-action" id="v4aUpdateBtn" type="button" tabindex="-1" aria-hidden="true">✎&nbsp; Update documentation</button>
+                            <div class="v4a-sync" id="v4aSync">
+                                <svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+                                    <path d="m2.6 7.4 2.8 2.8 6-6.9" stroke="#5eead4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                IN&nbsp;SYNC
+                            </div>
+                        </div>
+
+                        <div class="v4a-panel v4a-app" id="v4aAppPanel">
+                            <div class="v4a-head">
+                                <span class="v4a-label">2TO2 APPLICATION</span>
+                                <span class="v4a-dot"></span>
+                            </div>
+                            <div class="v4a-app-empty" id="v4aAppEmpty">
+                                <svg width="30" height="30" viewBox="0 0 34 34" fill="none" aria-hidden="true">
+                                    <rect x="3" y="5" width="28" height="24" rx="4" stroke="#3b4a63" stroke-width="1.8"/>
+                                    <path d="M3 12h28" stroke="#3b4a63" stroke-width="1.8"/>
+                                    <circle cx="8" cy="8.5" r="1.3" fill="#3b4a63"/>
+                                    <circle cx="12.5" cy="8.5" r="1.3" fill="#3b4a63"/>
+                                </svg>
+                                No application yet
+                            </div>
+
+                            <div class="v4a-block" id="v4aBlockFlow">
+                                <div class="v4a-block-head">
+                                    <span class="v4a-ic teal">
+                                        <svg width="11" height="11" viewBox="0 0 11 11" fill="none" aria-hidden="true">
+                                            <circle cx="2.5" cy="5.5" r="1.7" fill="#2dd4bf"/>
+                                            <path d="M4.5 5.5h2" stroke="#2dd4bf"/>
+                                            <circle cx="8.5" cy="5.5" r="1.7" stroke="#2dd4bf"/>
+                                        </svg>
+                                    </span>
+                                    WORKFLOW
+                                </div>
+                                <div class="v4a-chips">
+                                    <span class="v4a-chip">Draft</span>
+                                    <span class="v4a-chip-sep">→</span>
+                                    <span class="v4a-chip active">Review</span>
+                                    <span class="v4a-chip-sep new-sep" id="v4aNewSep">→</span>
+                                    <span class="v4a-chip new" id="v4aNewChip">Approval</span>
+                                    <span class="v4a-chip-sep">→</span>
+                                    <span class="v4a-chip">Active</span>
+                                </div>
+                            </div>
+
+                            <div class="v4a-block" id="v4aBlockData">
+                                <div class="v4a-block-head">
+                                    <span class="v4a-ic blue">
+                                        <svg width="11" height="11" viewBox="0 0 11 11" fill="none" aria-hidden="true">
+                                            <ellipse cx="5.5" cy="2.6" rx="4" ry="1.7" stroke="#60a5fa"/>
+                                            <path d="M1.5 2.6v5.6c0 .9 1.8 1.7 4 1.7s4-.8 4-1.7V2.6" stroke="#60a5fa"/>
+                                        </svg>
+                                    </span>
+                                    DATABASE
+                                </div>
+                                <div class="v4a-rows">
+                                    <div class="v4a-row"><span class="v4a-cell"></span><span class="v4a-cell w2"></span></div>
+                                    <div class="v4a-row"><span class="v4a-cell w2"></span><span class="v4a-cell"></span></div>
+                                </div>
+                            </div>
+
+                            <div class="v4a-block" id="v4aBlockPage">
+                                <div class="v4a-block-head">
+                                    <span class="v4a-ic amber">
+                                        <svg width="11" height="11" viewBox="0 0 11 11" fill="none" aria-hidden="true">
+                                            <rect x="1" y="1.5" width="9" height="8" rx="1.5" stroke="#fbbf24"/>
+                                            <path d="M1 4h9M4 4v5.5" stroke="#fbbf24"/>
+                                        </svg>
+                                    </span>
+                                    PAGES
+                                </div>
+                                <div class="v4a-mini-form">
+                                    <p class="v4a-f-label">COMPANY NAME</p>
+                                    <div class="v4a-f-input"></div>
+                                    <span class="v4a-f-btn">SUBMIT</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="v4a-cursor" id="v4aCursor">
+                            <span class="v4a-ripple"></span>
+                            <svg width="20" height="20" viewBox="0 0 22 22" aria-hidden="true">
+                                <path d="M4 2l14 8.5-6.2 1.4L15 19l-3.2 1.4-3.1-7.2L4 17z" fill="#f8fafc" stroke="#0a1120" stroke-width="1.4"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================
+             7. ENTERPRISE PROOF - Where Datapolis Runs Today
              ======================================== -->
         <section class="dp-section dp-section--proof">
             <div class="dp-container">
@@ -780,7 +955,7 @@
         </section>
 
         <!-- ========================================
-             7. USE CASES - What Actually Runs Here
+             8. USE CASES - What Actually Runs Here
              ======================================== -->
         <section class="dp-section dp-section--usecases">
             <div class="dp-container">
@@ -824,7 +999,7 @@
         </section>
 
         <!-- ========================================
-             8. CUSTOMERS
+             9. CUSTOMERS
              ======================================== -->
         <section class="dp-section dp-section--dark">
             <div class="dp-container">
@@ -841,7 +1016,7 @@
         </section>
 
         <!-- ========================================
-             9. FINAL CTA - Conversion Moment
+             10. FINAL CTA - Conversion Moment
              ======================================== -->
         <section class="dp-section dp-final">
             <div class="dp-final__glow"></div>
@@ -874,6 +1049,7 @@
                     <nav class="footer__nav">
                         <ul class="footer__list">
                             <li><a href="platform-2to2.html">2to2 Platform</a></li>
+                            <li><a href="app-creator.html">2to2 App Creator</a></li>
                             <li><a href="process-apps.html">Process Apps</a></li>
                             <li><a href="orchestration-engine.html">Orchestration Engine</a></li>
                             <li><a href="security-governance.html">Security &amp; Governance</a></li>
@@ -929,6 +1105,9 @@
         </div>
     </footer>
 <!--/build:footer--></div>
+
+    <script src="assets/js/homepage-workflow-map.js?v=20260815"></script>
+    <script src="assets/js/app-creator-animation.js?v=20260814"></script>
 
     <!-- Scripts -->
     <script>
