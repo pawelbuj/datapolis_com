@@ -14,7 +14,9 @@
     <link rel="stylesheet" href="../assets/css/main.min.css?v=10022025">
     <link rel="stylesheet" href="../assets/css/async.min.css?v=10022025" media="print" onload="this.media='all'; this.onload=null;">
     <link rel="stylesheet" href="../assets/css/dark-theme.css?v=3">
-    <link rel="stylesheet" href="../assets/css/new-homepage.css?v=7">
+    <link rel="stylesheet" href="../assets/css/new-homepage.css?v=20260917">
+    <link rel="stylesheet" href="../assets/css/homepage-workflow-map.css?v=20260917">
+    <link rel="stylesheet" href="../assets/css/home-v7.css?v=20260917">
 
     <script src="../includes/loader.js"></script>
 
@@ -321,246 +323,410 @@
 <!--/build:header--></div>
 
     <main>
-        <!-- ========================================
-             1. HERO
-             ======================================== -->
+        <!-- 1. HERO -->
         <section class="dp-hero">
             <div class="dp-hero__grid"></div>
             <div class="dp-hero__glow"></div>
-            
+
             <div class="dp-container">
                 <div class="dp-hero__content">
                     <div>
                         <h1 class="dp-hero__title">
-                            <span>Usprawniamy pracę</span>
+                            <span>Uruchamiamy pracę</span>
                             <span class="accent">nowoczesnych firm.</span>
                         </h1>
-                        
+
                         <p class="dp-hero__tagline">
-                            Ludzie i AI <br>
-                            <strong>pracują razem w procesach.</strong>
+                            Ludzie i AI.<br>
+                            <strong>Jedna zarządzana warstwa procesowa.</strong>
                         </p>
-                        
+
                         <p class="dp-hero__subtitle">
-                            Platforma do projektowania i wdrażania procesów, w których ludzie i AI współpracują.
+                            Opisz proces językiem biznesu. 2to2 zbuduje aplikację, która go wykonuje —
+                            z regułami, akceptacjami i pełnym śladem audytowym.
                         </p>
-                        
+
                         <div class="dp-hero__actions">
-                            <a href="https://2to2.ai" target="_blank" class="dp-btn">
-                                Zobacz platformę
+                            <a href="#app-creator" class="dp-btn">
+                                Zobacz aplikację zbudowaną z opisu
                             </a>
-               
+                            <a href="contact.html" class="dp-btn dp-btn-outline">
+                                Porozmawiaj z ekspertem
+                            </a>
+                        </div>
+
+                        <div class="v7-trust">
+                            <span class="v7-trust__item"><span class="v7-trust__num">20+</span> lat na produkcji</span>
+                            <span class="v7-trust__item"><span class="v7-trust__num">500+</span> organizacji</span>
+                            <span class="v7-trust__item"><span class="v7-trust__num">40+</span> krajów</span>
+                            <span class="v7-trust__names">Airbus · Orlen · thyssenkrupp · PKO Bank Polski · Nestlé · Hexagon</span>
                         </div>
                     </div>
-                    
+
                     <div class="dp-hero__visual">
-                        <svg viewBox="0 0 400 340" fill="none" xmlns="http://www.w3.org/2000/svg" class="process-diagram">
-                            <defs>
-                                <linearGradient id="processGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                                    <stop offset="0%" stop-color="#14b8a6"/>
-                                    <stop offset="100%" stop-color="#0d9488"/>
-                                </linearGradient>
-                                <filter id="processGlow" x="-50%" y="-50%" width="200%" height="200%">
-                                    <feGaussianBlur stdDeviation="12" result="coloredBlur"/>
-                                    <feMerge>
-                                        <feMergeNode in="coloredBlur"/>
-                                        <feMergeNode in="SourceGraphic"/>
-                                    </feMerge>
-                                </filter>
-                            </defs>
-                            
-                            <!-- Connection lines from Process to Workers -->
-                            <path d="M200 165 L100 95" stroke="#475569" stroke-width="2" stroke-dasharray="8 5">
-                                <animate attributeName="stroke-dashoffset" from="13" to="0" dur="1.2s" repeatCount="indefinite"/>
-                            </path>
-                            <path d="M200 165 L300 95" stroke="#475569" stroke-width="2" stroke-dasharray="8 5">
-                                <animate attributeName="stroke-dashoffset" from="13" to="0" dur="1.2s" repeatCount="indefinite"/>
-                            </path>
-                            
-                            <!-- Human node (left) -->
-                            <g transform="translate(55, 20)">
-                                <rect width="90" height="90" rx="16" fill="#0f172a" stroke="#334155" stroke-width="2"/>
-                                <circle cx="45" cy="35" r="14" stroke="#94a3b8" stroke-width="2" fill="none"/>
-                                <path d="M24 72 Q45 55 66 72" stroke="#94a3b8" stroke-width="2" fill="none"/>
-                                <text x="45" y="118" text-anchor="middle" fill="#94a3b8" font-size="13" font-weight="500" font-family="system-ui, sans-serif">Człowiek</text>
-                            </g>
-                            
-                            <!-- Digital Worker node (right) - visually equal to Human -->
-                            <g transform="translate(255, 20)">
-                                <rect width="90" height="90" rx="16" fill="#0f172a" stroke="#334155" stroke-width="2"/>
-                                <!-- Neutral circuit/node icon -->
-                                <circle cx="45" cy="45" r="18" stroke="#94a3b8" stroke-width="2" fill="none"/>
-                                <circle cx="45" cy="45" r="7" fill="#94a3b8"/>
-                                <path d="M45 27 V19 M45 63 V71 M27 45 H19 M63 45 H71" stroke="#94a3b8" stroke-width="2" stroke-linecap="round"/>
-                                <text x="45" y="118" text-anchor="middle" fill="#94a3b8" font-size="13" font-weight="500" font-family="system-ui, sans-serif">Cyfrowy pracownik</text>
-                            </g>
-                            
-                            <!-- PROCESS node (center, bottom) - The Control Plane / Main Authority -->
-                            <g transform="translate(80, 175)" filter="url(#processGlow)">
-                                <rect width="240" height="100" rx="20" fill="url(#processGrad)"/>
-                                <!-- Orchestration symbol: flow with central hub -->
-                                <circle cx="70" cy="50" r="10" fill="white" opacity="0.85"/>
-                                <circle cx="120" cy="50" r="14" fill="white"/>
-                                <circle cx="170" cy="50" r="10" fill="white" opacity="0.85"/>
-                                <path d="M80 50 H106 M134 50 H160" stroke="rgba(2,6,23,0.35)" stroke-width="3" stroke-linecap="round"/>
-                                <text x="120" y="130" text-anchor="middle" fill="#f8fafc" font-size="16" font-weight="600" font-family="system-ui, sans-serif">Proces</text>
-                            </g>
-                            
-                            <!-- Subtle caption -->
-                            <text x="200" y="328" text-anchor="middle" fill="#475569" font-size="11" font-family="system-ui, sans-serif">Połączone z systemami enterprise. Dostarczają realne wyniki biznesowe.</text>
-                        </svg>
+                        <div class="dp-workflow-map" data-home-workflow-map data-step="0" data-role="human" role="img" aria-label="Proces przechodzący przez stany obsługiwane na przemian przez ludzi i Digital Workers.">
+                            <div class="dp-workflow-map__head">
+                                <span>
+                                    <small>PROCES STANOWY</small>
+                                    <strong>Zgłoszenie serwisowe #2481</strong>
+                                </span>
+                                <em><i></i> W TOKU</em>
+                            </div>
+
+                            <div class="dp-workflow-map__canvas">
+                                <svg class="dp-workflow-map__lines" viewBox="0 0 640 390" preserveAspectRatio="none" aria-hidden="true">
+                                    <path data-home-edge-index="0" d="M79 196 C125 196 138 114 188 114"></path>
+                                    <path data-home-edge-index="1" d="M252 114 C294 114 288 196 328 196"></path>
+                                    <path data-home-edge-index="2" d="M392 196 C433 196 429 106 474 106"></path>
+                                    <path class="dp-workflow-map__branch" d="M392 196 C433 196 429 286 474 286"></path>
+                                    <path data-home-edge-index="3" d="M506 138 C506 186 506 220 506 254"></path>
+                                    <path data-home-edge-index="4" d="M538 286 C574 286 575 196 607 196"></path>
+                                </svg>
+
+                                <div class="dp-workflow-state dp-workflow-state--0" data-home-state-index="0" data-role-label="CZŁOWIEK · KOORDYNATOR SERWISU" data-task="Sprawdź i przypisz zgłoszenie">
+                                    <span class="dp-workflow-role dp-workflow-role--human"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="7.5" r="3.5"></circle><path d="M5.2 20c.6-4.2 2.9-6.3 6.8-6.3s6.2 2.1 6.8 6.3"></path></svg></span>
+                                    <strong>Nowe</strong><small>Człowiek · Koordynator</small>
+                                </div>
+                                <div class="dp-workflow-state dp-workflow-state--1" data-home-state-index="1" data-role-label="DIGITAL WORKER · KLASYFIKACJA" data-task="Sklasyfikuj, uzupełnij i nadaj priorytet">
+                                    <span class="dp-workflow-role dp-workflow-role--digital"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4.5" y="6" width="15" height="13" rx="3"></rect><circle cx="9.2" cy="12" r="1"></circle><circle cx="14.8" cy="12" r="1"></circle><path d="M9 16h6M12 3v3M9.5 3h5"></path></svg></span>
+                                    <strong>Klasyfikacja AI</strong><small>Digital · Triage Worker</small>
+                                </div>
+                                <div class="dp-workflow-state dp-workflow-state--2" data-home-state-index="2" data-role-label="CZŁOWIEK · INŻYNIER SERWISU" data-task="Zdiagnozuj i rozwiąż problem">
+                                    <span class="dp-workflow-role dp-workflow-role--human"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="7.5" r="3.5"></circle><path d="M5.2 20c.6-4.2 2.9-6.3 6.8-6.3s6.2 2.1 6.8 6.3"></path></svg></span>
+                                    <strong>W realizacji</strong><small>Człowiek · Inżynier</small>
+                                </div>
+                                <div class="dp-workflow-state dp-workflow-state--3" data-home-state-index="3" data-role-label="DIGITAL WORKER · PONAGLENIA" data-task="Poproś o brakujące informacje od klienta">
+                                    <span class="dp-workflow-role dp-workflow-role--digital"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4.5" y="6" width="15" height="13" rx="3"></rect><circle cx="9.2" cy="12" r="1"></circle><circle cx="14.8" cy="12" r="1"></circle><path d="M9 16h6M12 3v3M9.5 3h5"></path></svg></span>
+                                    <strong>Oczekuje</strong><small>Digital · Follow-up</small>
+                                </div>
+                                <div class="dp-workflow-state dp-workflow-state--4" data-home-state-index="4" data-role-label="CZŁOWIEK · KIEROWNIK SERWISU" data-task="Potwierdź rozwiązanie">
+                                    <span class="dp-workflow-role dp-workflow-role--human"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="7.5" r="3.5"></circle><path d="M5.2 20c.6-4.2 2.9-6.3 6.8-6.3s6.2 2.1 6.8 6.3"></path></svg></span>
+                                    <strong>Rozwiązane</strong><small>Człowiek · Kierownik</small>
+                                </div>
+                                <div class="dp-workflow-state dp-workflow-state--5" data-home-state-index="5" data-role-label="DIGITAL WORKER · ZAMKNIĘCIE" data-task="Zaktualizuj systemy i zarchiwizuj sprawę">
+                                    <span class="dp-workflow-role dp-workflow-role--digital"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4.5" y="6" width="15" height="13" rx="3"></rect><circle cx="9.2" cy="12" r="1"></circle><circle cx="14.8" cy="12" r="1"></circle><path d="M9 16h6M12 3v3M9.5 3h5"></path></svg></span>
+                                    <strong>Zamknięte</strong><small>Digital · Closure Worker</small>
+                                </div>
+
+                                <span class="dp-workflow-map__route-label">brak informacji</span>
+                                <span class="dp-workflow-map__route-label dp-workflow-map__route-label--fast">szybka ścieżka</span>
+                                <span class="dp-workflow-map__token" aria-hidden="true"><i></i></span>
+                            </div>
+
+                            <div class="dp-workflow-map__current">
+                                <span>AKTYWNY STAN</span>
+                                <strong data-home-current-state>NOWE</strong>
+                                <i></i>
+                                <small data-home-current-role>CZŁOWIEK · KOORDYNATOR SERWISU</small>
+                                <b data-home-current-task>Sprawdź i przypisz zgłoszenie</b>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- ========================================
-             2. PROBLEM - Why work is broken
-             ======================================== -->
-        <section class="dp-section dp-section--dark dp-section--problem">
+        <!-- 2. PROBLEM -->
+        <section class="v7-band">
+            <div class="v7-container">
+                <div class="v7-band__head">
+                    <p class="v7-eyebrow">Jak jest dzisiaj</p>
+                    <h2 class="v7-band__title">Najważniejsza praca w firmie to ta, której nikt nie pilnuje.</h2>
+                </div>
+
+                <div class="v7-band__list">
+                    <p class="v7-band__item">
+                        <strong>Rozproszona</strong>
+                        Krytyczne procesy żyją w mailach, arkuszach i w głowach ludzi.
+                    </p>
+                    <p class="v7-band__item">
+                        <strong>Poszatkowana</strong>
+                        Narzędzia do automatyzacji nie rozmawiają ze sobą. Praca zacina się między systemami i zespołami.
+                    </p>
+                    <p class="v7-band__item">
+                        <strong>Bez nadzoru</strong>
+                        Asystenci AI działają bez śladu audytowego i bez odpowiedzialności za skutki.
+                    </p>
+                    <p class="v7-band__item">
+                        <strong>Nie do przyjęcia</strong>
+                        Bezpieczeństwo, zgodność i ryzyko nie pozwalają AI działać swobodnie.
+                    </p>
+                </div>
+
+                <p class="v7-band__thesis">
+                    Sama AI nie naprawi zepsutej pracy.
+                    <strong>Praca potrzebuje <span class="accent">zarządzanej warstwy procesowej</span> — i sposobu, żeby zbudować ją bez roku programowania.</strong>
+                </p>
+            </div>
+        </section>
+
+        <!-- 3. EKSPONAT: specyfikacja <-> aplikacja -->
+        <section class="v7-exhibit" id="app-creator" aria-labelledby="app-creator-title" data-spec-app-exhibit>
+            <div class="v7-container">
+                <div class="v7-exhibit__head">
+                    <p class="v7-eyebrow">2to2 App Creator</p>
+                    <h2 class="v7-exhibit__title" id="app-creator-title">
+                        Twoja dokumentacja już opisuje tę aplikację.
+                        <em>2to2 ją buduje — i pilnuje, żeby obie strony się zgadzały.</em>
+                    </h2>
+                    <p class="v7-exhibit__lead">
+                        Opisz proces tak, jak opisujesz go audytorowi. App Creator zamienia ten opis w strukturalną
+                        specyfikację i działającą aplikację. To dwa widoki jednego modelu: zmień jedną stronę,
+                        a druga idzie za nią.
+                    </p>
+                </div>
+
+                <div class="v7-stage__bar">
+                    <span class="v7-sync">
+                        <span class="v7-sync__dot"></span>
+                        <span data-sync-text data-sync-idle="Zgodne" data-sync-drifted="Rozjechane">Zgodne</span>
+                    </span>
+
+                    <button class="v7-toggle" type="button"
+                            data-exhibit-toggle
+                            data-label-idle="Power user dodaje krok akceptacji"
+                            data-label-drifted="Zaktualizuj dokumentację"
+                            data-label-synced="Zacznij od nowa">
+                        <span class="v7-toggle__icon" aria-hidden="true">↻</span>
+                        <span data-toggle-label>Power user dodaje krok akceptacji</span>
+                    </button>
+
+                    <p class="v7-hint" data-exhibit-hint
+                       data-hint-idle="Najedź lub dotknij zdania, żeby zobaczyć, co powstało z niego w aplikacji."
+                       data-hint-drifted="Aplikacja się zmieniła. Opis jest o jedno zdanie do tyłu."
+                       data-hint-synced="Zdanie wróciło do opisu. Dokumentacja i aplikacja znowu się zgadzają.">
+                        Najedź lub dotknij zdania, żeby zobaczyć, co powstało z niego w aplikacji.
+                    </p>
+                </div>
+
+                <div class="v7-stage">
+                    <div class="v7-pane">
+                        <div class="v7-pane__head">
+                            <span class="v7-pane__label">Opis procesu</span>
+                            <span class="v7-pane__meta">rejestracja-dostawcy · v3</span>
+                        </div>
+                        <div class="v7-pane__body">
+                            <p class="v7-spec__doc">Rejestracja dostawcy</p>
+                            <ul class="v7-spec__list">
+                                <li>
+                                    <button type="button" class="v7-spec__line" data-link="intake">
+                                        <b>Specjalista ds. zakupów</b> rejestruje każdego nowego dostawcę: dane firmy, osobę kontaktową i poziom ryzyka.
+                                    </button>
+                                </li>
+                                <li>
+                                    <button type="button" class="v7-spec__line" data-link="flow">
+                                        Dostawca z <b>podwyższonym ryzykiem</b> trafia do działu compliance, zanim zostanie aktywowany.
+                                    </button>
+                                </li>
+                                <li>
+                                    <button type="button" class="v7-spec__line" data-link="audit">
+                                        Każda decyzja jest zapisywana razem z <b>nazwiskiem osoby</b>, która ją podjęła, i godziną.
+                                    </button>
+                                </li>
+                                <li>
+                                    <button type="button" class="v7-spec__line" data-link="wire">
+                                        Aktywny dostawca trafia do <b>ERP</b> w ciągu jednego dnia roboczego.
+                                    </button>
+                                </li>
+                                <li>
+                                    <button type="button" class="v7-spec__line v7-spec__line--added" data-link="flow">
+                                        Po weryfikacji każdy dostawca wymaga akceptacji.
+                                    </button>
+                                </li>
+                            </ul>
+                            <p class="v7-spec__foot">Zwykłe zdania po polsku. Żadnej dokumentacji technicznej.</p>
+                        </div>
+                    </div>
+
+                    <div class="v7-stage__divider" aria-hidden="true"></div>
+
+                    <div class="v7-pane">
+                        <div class="v7-pane__head">
+                            <span class="v7-pane__label">Aplikacja 2to2</span>
+                            <span class="v7-pane__meta">Działa</span>
+                        </div>
+                        <div class="v7-pane__body">
+                            <div class="v7-app__topbar">
+                                <span class="v7-app__name">Rejestracja dostawcy</span>
+                                <span class="v7-app__role">Specjalista ds. zakupów</span>
+                            </div>
+
+                            <div class="v7-part" data-link="flow" tabindex="0">
+                                <div class="v7-part__head">
+                                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true">
+                                        <circle cx="2.6" cy="6" r="1.8"/><path d="M4.6 6h2.8"/><circle cx="9.2" cy="6" r="1.8"/>
+                                    </svg>
+                                    Proces
+                                </div>
+                                <div class="v7-flow">
+                                    <span class="v7-state">Szkic</span>
+                                    <span class="v7-arrow" aria-hidden="true">→</span>
+                                    <span class="v7-state v7-state--active">Weryfikacja</span>
+                                    <span class="v7-arrow v7-arrow--added" aria-hidden="true">→</span>
+                                    <span class="v7-state v7-state--added">Akceptacja</span>
+                                    <span class="v7-arrow" aria-hidden="true">→</span>
+                                    <span class="v7-state">Aktywny</span>
+                                </div>
+                            </div>
+
+                            <div class="v7-part" data-link="intake" tabindex="0">
+                                <div class="v7-part__head">
+                                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true">
+                                        <rect x="1.2" y="1.6" width="9.6" height="8.8" rx="1.6"/><path d="M1.2 4.4h9.6M4.2 4.4v6"/>
+                                    </svg>
+                                    Strony i dane
+                                </div>
+                                <div class="v7-form">
+                                    <div class="v7-field v7-field--wide">
+                                        <span class="v7-field__label">Nazwa firmy</span>
+                                        <span class="v7-field__value">Meridian Components Sp. z o.o.</span>
+                                    </div>
+                                    <div class="v7-field">
+                                        <span class="v7-field__label">Osoba kontaktowa</span>
+                                        <span class="v7-field__value">A. Nowak</span>
+                                    </div>
+                                    <div class="v7-field">
+                                        <span class="v7-field__label">Poziom ryzyka</span>
+                                        <span class="v7-field__value v7-field__value--pick">
+                                            <span class="v7-pill">Podwyższone</span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="v7-part" data-link="audit" tabindex="0">
+                                <div class="v7-part__head">
+                                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true">
+                                        <circle cx="6" cy="6" r="4.6"/><path d="M6 3.4V6l1.8 1.1"/>
+                                    </svg>
+                                    Ślad audytowy
+                                </div>
+                                <div class="v7-audit">
+                                    <div class="v7-audit__row">
+                                        <span class="v7-audit__mark" aria-hidden="true">✓</span>
+                                        <span class="v7-audit__who">Zweryfikował <b>M. Lange</b> · Compliance</span>
+                                        <span class="v7-audit__time">14 mar, 09:41</span>
+                                    </div>
+                                    <div class="v7-audit__row">
+                                        <span class="v7-audit__mark" aria-hidden="true">✓</span>
+                                        <span class="v7-audit__who">Poziom ryzyka ustawiony na <b>Podwyższone</b></span>
+                                        <span class="v7-audit__time">14 mar, 09:38</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="v7-part" data-link="wire" tabindex="0">
+                                <div class="v7-part__head">
+                                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true">
+                                        <path d="M7.4 1.8 9.9 4.3 6.6 7.6 4.1 5.1z"/><path d="M4.1 5.1 1.8 7.4l2.5 2.5 2.3-2.3"/>
+                                    </svg>
+                                    Integracja
+                                </div>
+                                <div class="v7-wire">
+                                    <span class="v7-wire__target">Kartoteka dostawcy</span>
+                                    <span class="v7-wire__dash" aria-hidden="true"></span>
+                                    <span class="v7-wire__target">ERP</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="v7-exhibit__foot">
+                    <p class="v7-claim">
+                        Generatory AI kompilują pomysł do kodu.
+                        <strong>My kompilujemy go do platformy procesowej, którą rozwijamy od <span class="accent">20 lat</span>.</strong>
+                        Kod jest jednorazowy. Aplikacja na 2to2 zostaje edytowalna, nadzorowana i audytowalna.
+                    </p>
+                    <div class="v7-exhibit__actions">
+                        <a class="v7-btn v7-btn--primary" href="../app-creator.html">Jak działa App Creator <span aria-hidden="true">→</span></a>
+                        <a class="v7-btn v7-btn--ghost" href="contact.html">Pokaż nam swoją dokumentację</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. PLATFORMA -->
+        <section class="dp-section dp-section--platform">
             <div class="dp-container">
                 <div class="dp-section__header">
-                    <span class="dp-label">Rzeczywistość</span>
-                    <h2 class="dp-title">Dlaczego praca w firmach się nie klei</h2>
+                    <span class="dp-label">Platforma</span>
                 </div>
-                
-                <div class="dp-problems">
-                    <div class="dp-problem">
-                        <div class="dp-problem__icon">
-                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                                <rect x="3" y="3" width="7" height="9" rx="1"/>
-                                <rect x="14" y="3" width="7" height="5" rx="1"/>
-                                <rect x="14" y="12" width="7" height="9" rx="1"/>
-                                <rect x="3" y="16" width="7" height="5" rx="1"/>
-                                <path d="M10 7h4M10 17h4" stroke-dasharray="2 2"/>
+
+                <h2 class="dp-platform__headline">
+                    <span class="dp-platform__logo">2to2</span> to warstwa operacyjna dla nadzorowanej pracy.
+                </h2>
+
+                <p class="dp-platform__support">
+                    Twórz aplikacje procesowe. Osadzaj je wszędzie. Kontroluj każdą akcję.
+                </p>
+
+                <div class="dp-features">
+                    <div class="dp-feature">
+                        <div class="dp-feature__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="3" width="18" height="18" rx="2"/>
+                                <path d="M9 9h6M9 12h6M9 15h4"/>
                             </svg>
                         </div>
-                        <p class="dp-problem__text">Krytyczne procesy są rozproszone między e-mailami, arkuszami kalkulacyjnymi i głowami ludzi.</p>
+                        <h3 class="dp-feature__title">Buduj aplikacje procesowe</h3>
+                        <p class="dp-feature__desc">Projektuj i wdrażaj aplikacje, które prowadzą realną pracę — między zespołami, narzędziami i AI.</p>
                     </div>
-                    
-                    <div class="dp-problem">
-                        <div class="dp-problem__icon">
-                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                                <circle cx="6" cy="12" r="3"/>
-                                <circle cx="18" cy="12" r="3"/>
-                                <path d="M9 12h2" stroke-dasharray="2 2"/>
-                                <path d="M13 12h2" stroke-dasharray="2 2"/>
-                                <path d="M11 10l2 4M13 10l-2 4" stroke-width="1.5"/>
+
+                    <div class="dp-feature">
+                        <div class="dp-feature__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M16 18L22 12L16 6"/>
+                                <path d="M8 6L2 12L8 18"/>
+                                <rect x="9" y="9" width="6" height="6" rx="1"/>
                             </svg>
                         </div>
-                        <p class="dp-problem__text">Narzędzia automatyzacji nie łączą się ze sobą. Praca urywa się/zacina między systemami i zespołami.</p>
+                        <h3 class="dp-feature__title">Osadzaj wszędzie</h3>
+                        <p class="dp-feature__desc">Umieszczaj aplikacje procesowe w portalach, intranecie, Teams lub we własnych produktach — bez przepisywania.</p>
                     </div>
-                    
-                    <div class="dp-problem">
-                        <div class="dp-problem__icon">
-                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+
+                    <div class="dp-feature">
+                        <div class="dp-feature__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
                                 <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-                                <path d="M12 8v4M12 16h.01"/>
+                                <path d="M9 12l2 2 4-4"/>
                             </svg>
                         </div>
-                        <p class="dp-problem__text">Asystenci AI działają bez nadzoru — brak audytu i odpowiedzialności.</p>
-                    </div>
-                    
-                    <div class="dp-problem">
-                        <div class="dp-problem__icon">
-                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                                <rect x="3" y="7" width="18" height="14" rx="2"/>
-                                <path d="M7 7V5a2 2 0 012-2h6a2 2 0 012 2v2"/>
-                                <path d="M8 12h8M8 16h5"/>
-                                <circle cx="18" cy="18" r="4" fill="#0f172a" stroke="currentColor"/>
-                                <path d="M18 16v2h2"/>
-                            </svg>
-                        </div>
-                        <p class="dp-problem__text">Przedsiębiorstwa nie mogą pozwolić AI działać samodzielnie — bezpieczeństwo, zgodność i ryzyko wymagają kontroli.</p>
+                        <h3 class="dp-feature__title">Pracuj pod kontrolą</h3>
+                        <p class="dp-feature__desc">Ludzie i Digital Workers wykonują kroki w jednej zarządzanej warstwie — z logiem, akceptacją i audytem.</p>
                     </div>
                 </div>
-                
-                <div class="dp-thesis">
-                    <p class="dp-thesis__line">Sama AI nie wystarczy.</p>
-                    <p class="dp-thesis__line dp-thesis__line--accent">Praca potrzebuje <span class="accent">zarządzanej warstwy procesowej</span>.</p>
+
+                <p class="dp-platform__tagline">Aplikacje, które wykonują pracę.</p>
+
+                <div class="dp-platform__cta">
+                    <a href="platform-2to2.html" class="dp-btn dp-btn--large">
+                        Zajrzyj do platformy →
+                    </a>
+                    <a href="https://2to2.ai" target="_blank" rel="noopener" class="dp-link">
+                        Otwórz 2to2
+                    </a>
                 </div>
             </div>
         </section>
 
-        <!-- ========================================
-             3. CREDIBILITY - 20+ years
-             ======================================== -->
-        <section class="dp-section dp-section--credibility">
-            <div class="dp-container">
-                <div class="dp-credibility">
-                    <h2 class="dp-credibility__title">
-                        Od ponad 20 lat dostarczamy platformy do uruchamiania procesów biznesowych.
-                    </h2>
-                    
-                    <div class="dp-stats">
-                        <div class="dp-stat">
-                            <div class="dp-stat__icon">
-                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M3 3h18v18H3z"/>
-                                    <path d="M3 9h18M9 3v18"/>
-                                </svg>
-                            </div>
-                            <span class="dp-stat__number">Tysiące</span>
-                            <span class="dp-stat__label">krytycznych procesów uruchomionych na naszych platformach</span>
-                        </div>
-                        <div class="dp-stat">
-                            <div class="dp-stat__icon">
-                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M3 7l6-4 6 4 6-4v14l-6 4-6-4-6 4V7z"/>
-                                    <path d="M9 3v14M15 7v14"/>
-                                </svg>
-                            </div>
-                            <span class="dp-stat__number">Banki, energetyka, przemysł, administracja</span>
-                            <span class="dp-stat__label">Środowiska o najwyższych wymaganiach regulacyjnych</span>
-                        </div>
-                        <div class="dp-stat">
-                            <div class="dp-stat__icon">
-                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-                                    <path d="M9 12l2 2 4-4"/>
-                                </svg>
-                            </div>
-                            <span class="dp-stat__number">Operacje bez przestojów</span>
-                            <span class="dp-stat__label">Audytowane. Kontrolowane. Zawsze dostępne.</span>
-                        </div>
-                    </div>
-                    
-                    <p class="dp-contrast">
-                        Startupy AI obiecują przyszłość. 
-                        
-                    </p>
-                    <p class="dp-contrast">
-                       
-                        <strong>My tworzymy systemy, od których firmy zależą już dziś.</strong>
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <!-- ========================================
-             4. THE NEW ERA - AI Inside Processes (CLIMAX)
-             ======================================== -->
+        <!-- 5. AI WEWNATRZ PROCESOW -->
         <section class="dp-section dp-section--manifesto">
             <div class="dp-container">
-                <!-- A) Label pill -->
                 <div class="dp-section__header">
                     <span class="dp-label">Nowa era</span>
                 </div>
-                
-                <!-- B) Big manifesto headline -->
+
                 <h2 class="dp-manifesto__headline">
                     <span class="dp-manifesto__line1">AI nie powinno zastępować procesów.</span>
                     <span class="dp-manifesto__line2">Powinno pracować wewnątrz nich.</span>
                 </h2>
-                
-                <!-- C) Subheadline -->
+
                 <p class="dp-manifesto__subheadline">
-                    Digital Workers pracują. Ludzie i procesy nadzorują. Firmy zachowują kontrolę.
+                    Digital Workers wykonują. Procesy nadzorują. Firma zostaje przy sterach.
                 </p>
-                
-                <!-- D) Core visual: Orchestration diagram -->
+
                 <div class="dp-orchestration">
-                    <!-- Human node (left) -->
                     <div class="dp-orchestration__node">
                         <div class="dp-orchestration__card">
                             <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
@@ -570,15 +736,13 @@
                         </div>
                         <span class="dp-orchestration__label">Człowiek</span>
                     </div>
-                    
-                    <!-- Connector line -->
+
                     <div class="dp-orchestration__connector">
                         <svg width="60" height="2" viewBox="0 0 60 2">
                             <line x1="0" y1="1" x2="60" y2="1" stroke="#334155" stroke-width="2" stroke-dasharray="6 4"/>
                         </svg>
                     </div>
-                    
-                    <!-- Process node (center) - Control Plane -->
+
                     <div class="dp-orchestration__node dp-orchestration__node--center">
                         <div class="dp-orchestration__card dp-orchestration__card--process">
                             <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
@@ -591,15 +755,13 @@
                         </div>
                         <span class="dp-orchestration__label dp-orchestration__label--process">Proces</span>
                     </div>
-                    
-                    <!-- Connector line -->
+
                     <div class="dp-orchestration__connector">
                         <svg width="60" height="2" viewBox="0 0 60 2">
                             <line x1="0" y1="1" x2="60" y2="1" stroke="#334155" stroke-width="2" stroke-dasharray="6 4"/>
                         </svg>
                     </div>
-                    
-                    <!-- Digital Worker node (right) -->
+
                     <div class="dp-orchestration__node">
                         <div class="dp-orchestration__card">
                             <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
@@ -614,230 +776,178 @@
                         <span class="dp-orchestration__label">Digital Worker</span>
                     </div>
                 </div>
-                
-                <!-- Small label under diagram -->
-                <p class="dp-orchestration__caption">Zarządzane. Audytowane. Pod kontrolą.</p>
-                
-                <!-- E) Outcome statements (not features) -->
+
+                <p class="dp-orchestration__caption">Nadzorowane. Audytowane. Zaakceptowane.</p>
+
                 <div class="dp-outcomes">
                     <div class="dp-outcome">
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M5 12h14M12 5l7 7-7 7"/>
                         </svg>
-                        <span>Praca przebiega automatycznie — z zatwierdzeniami tam, gdzie są potrzebne.</span>
+                        <span>Praca idzie automatycznie — z akceptacją tam, gdzie jest potrzebna.</span>
                     </div>
                     <div class="dp-outcome">
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M12 20h9M16.5 3.5a2.12 2.12 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/>
                         </svg>
-                        <span>Każda akcja jest logowana i możliwa do prześledzenia.</span>
+                        <span>Każda akcja jest zalogowana i możliwa do prześledzenia.</span>
                     </div>
                     <div class="dp-outcome">
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
                         </svg>
-                        <span>AI działa w granicach swoich uprawnień.</span>
+                        <span>AI działa w granicach Twoich polityk i uprawnień.</span>
                     </div>
                 </div>
-                
-                <!-- F) Final thesis line -->
-                <p class="dp-manifesto__thesis">
-                    Jedna zarządzana warstwa procesowa — dla ludzi i cyfrowych pracowników (Digital Workers).
+            </div>
+        </section>
+
+        <!-- 6. DOWOD -->
+        <section class="v7-proof">
+            <div class="v7-container">
+                <div class="v7-proof__head">
+                    <p class="v7-eyebrow">Dowód</p>
+                    <h2 class="v7-proof__title">
+                        Od <span class="accent">ponad 20 lat</span> uruchamiamy krytyczne procesy biznesowe.
+                    </h2>
+                </div>
+
+                <div class="v7-figures">
+                    <div class="v7-figure">
+                        <span class="v7-figure__num">20+</span>
+                        <span class="v7-figure__label">Lat na produkcji</span>
+                    </div>
+                    <div class="v7-figure">
+                        <span class="v7-figure__num">500+</span>
+                        <span class="v7-figure__label">Obsłużonych organizacji</span>
+                    </div>
+                    <div class="v7-figure">
+                        <span class="v7-figure__num">40+</span>
+                        <span class="v7-figure__label">Krajów</span>
+                    </div>
+                    <div class="v7-figure">
+                        <span class="v7-figure__num">Tysiące</span>
+                        <span class="v7-figure__label">Procesów uruchamianych codziennie</span>
+                    </div>
+                </div>
+
+                <div class="v7-logos">
+                    <img class="v7-logo--airbus" src="../storage/files/klienci/logo-airbus.png" alt="Airbus" loading="lazy">
+                    <img class="v7-logo--orlen" src="../logos/orlen.png" alt="Orlen" loading="lazy">
+                    <img class="v7-logo--thyssen" src="../storage/files/klienci/logo-thyssenkrupp.png" alt="thyssenkrupp" loading="lazy">
+                    <img class="v7-logo--nestle" src="../logos/NESN.SW_BIG.svg" alt="Nestlé" loading="lazy">
+                    <img class="v7-logo--pko" src="../logos/PKO.WA_BIG.svg" alt="PKO Bank Polski" loading="lazy">
+                    <img class="v7-logo--hexagon" src="../logos/hexagon.png" alt="Hexagon" loading="lazy">
+                </div>
+
+                <div class="v7-deployments">
+                    <div class="v7-deployment">
+                        <h3 class="v7-deployment__title">
+                            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/>
+                            </svg>
+                            Microsoft 365
+                        </h3>
+                        <p class="v7-deployment__desc">Procesy Datapolis działające wewnątrz SharePoint Online i Microsoft 365 — w codziennej pracy zespołów.</p>
+                    </div>
+                    <div class="v7-deployment">
+                        <h3 class="v7-deployment__title">
+                            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M12 8v4M12 16h.01"/>
+                            </svg>
+                            Środowiska on-premise
+                        </h3>
+                        <p class="v7-deployment__desc">Datapolis Process System wdrożony w najbardziej regulowanych branżach — energetyka, administracja, infrastruktura krytyczna.</p>
+                    </div>
+                </div>
+
+                <p class="v7-proof__contrast">
+                    Startupy AI obiecują przyszłość.
+                    <strong>My utrzymujemy systemy, od których firmy zależą już dziś.</strong>
                 </p>
             </div>
         </section>
 
-        <!-- ========================================
-             5. PLATFORM: 2to2
-             ======================================== -->
-        <section class="dp-section dp-section--platform">
-            <div class="dp-container">
-                <div class="dp-section__header">
-                    <span class="dp-label">Platforma</span>
-                </div>
-                
-                <!-- 1) Section headline - decisive positioning -->
-                <h2 class="dp-platform__headline">
-                    <span class="dp-platform__logo">2to2</span> to warstwa operacyjna do tworzenia, uruchamiania i kontroli procesów biznesowych.
-                </h2>
-                
-                <!-- 2) Supporting sentence -->
-                <p class="dp-platform__support">
-                    Twórz aplikacje procesowe. Osadzaj je wszędzie. Kontroluj każdą akcję.
-                </p>
-                
-                <!-- 3) Three cards - outcomes + differentiation -->
-                <div class="dp-features">
-                    <div class="dp-feature">
-                        <div class="dp-feature__icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                                <rect x="3" y="3" width="18" height="18" rx="2"/>
-                                <path d="M9 9h6M9 12h6M9 15h4"/>
-                            </svg>
-                        </div>
-                        <h3 class="dp-feature__title">Buduj aplikacje procesowe</h3>
-                        <p class="dp-feature__desc">Projektuj i wdrażaj aplikacje, które orkiestrują realną pracę — między zespołami, narzędziami i AI.</p>
-                    </div>
-                    
-                    <div class="dp-feature">
-                        <div class="dp-feature__icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M16 18L22 12L16 6"/>
-                                <path d="M8 6L2 12L8 18"/>
-                                <rect x="9" y="9" width="6" height="6" rx="1"/>
-                            </svg>
-                        </div>
-                        <h3 class="dp-feature__title">Osadzaj wszędzie</h3>
-                        <p class="dp-feature__desc">Umieszczaj aplikacje procesowe w portalach, intranetach, lub własnych produktach</p>
-                    </div>
-                    
-                    <div class="dp-feature">
-                        <div class="dp-feature__icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-                                <path d="M9 12l2 2 4-4"/>
-                            </svg>
-                        </div>
-                        <h3 class="dp-feature__title">Uruchamiaj i kontroluj</h3>
-                        <p class="dp-feature__desc">Ludzie i Digital Workers realizują kroki w jednej zarządzanej warstwie procesowej - </p>
-                    </div>
-                </div>
-                
-                <!-- 4) Tagline + CTA -->
-       
-                
-                <div class="dp-platform__cta">
-                    <a href="https://2to2.ai" target="_blank" class="dp-btn dp-btn--large">
-                        Poznaj 2to2 →
-                    </a>
-                    <a href="https://2to2.ai/how-it-works" target="_blank" class="dp-link">
-                        Zobacz jak to działa
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <!-- ========================================
-             6. ENTERPRISE PROOF - Where Datapolis Runs Today
-             ======================================== -->
-        <section class="dp-section dp-section--proof">
-            <div class="dp-container">
-                <div class="dp-section__header">
-                    <span class="dp-label">Klasa enterprise</span>
-                    <h2 class="dp-proof__title">Gdzie dzisiaj działają nasze rozwiązania procesowe.</h2>
-                    <p class="dp-proof__context">Ta sama warstwa procesowa — wdrożona w różnych środowiskach.</p>
-                </div>
-                
-                <div class="dp-deployments">
-                    <!-- Microsoft 365 deployment -->
-                    <div class="dp-deployment">
-                        <div class="dp-deployment__icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                                <rect x="3" y="3" width="18" height="18" rx="2"/>
-                                <path d="M3 9h18M9 21V9"/>
-                            </svg>
-                        </div>
-                        <h3 class="dp-deployment__title">Microsoft 365</h3>
-                        <p class="dp-deployment__desc">Procesy Datapolis działające wewnątrz SharePoint Online i Microsoft 365 — wykorzystywane przez zespoły w codziennej pracy.</p>
-                    </div>
-                    
-                    <!-- Regulated on-premise deployment -->
-                    <div class="dp-deployment">
-                        <div class="dp-deployment__icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-                                <path d="M12 8v4M12 16h.01"/>
-                            </svg>
-                        </div>
-                        <h3 class="dp-deployment__title">Microsoft SharePoint on-premise</h3>
-                        <p class="dp-deployment__desc">Datapolis Process System wdrożony w najbardziej regulowanych branżach — energetyka, administracja, infrastruktura krytyczna.</p>
-                    </div>
-                </div>
-                
-                <p class="dp-dna">Jedna warstwa procesowa. Różne wdrożenia.</p>
-            </div>
-        </section>
-
-        <!-- ========================================
-             7. USE CASES - What Actually Runs Here
-             ======================================== -->
+        <!-- 7. PRZYPADKI UZYCIA -->
         <section class="dp-section dp-section--usecases">
             <div class="dp-container">
                 <div class="dp-section__header">
                     <span class="dp-label">Przypadki użycia</span>
-                    <h2 class="dp-title">Jakie procesy działają na Datapolis</h2>
+                    <h2 class="dp-title">Co działa na Datapolis</h2>
                 </div>
-                
+
                 <div class="dp-usecases">
                     <div class="dp-usecase">
                         <span class="dp-usecase__title">Obieg faktur</span>
-                        <p class="dp-usecase__desc">Automatyczne przetwarzanie faktur — od odczytu i klasyfikacji,
-                            przez zatwierdzenia, po księgowanie w ERP.</p>
-                        <span class="dp-usecase__badge">Realizowane na 2to2</span>
+                        <p class="dp-usecase__desc">AI odczytuje i klasyfikuje faktury. Proces prowadzi akceptacje i księgowanie w ERP.</p>
+                        <span class="dp-usecase__badge">Na 2to2</span>
                     </div>
-                    
+
                     <div class="dp-usecase">
                         <span class="dp-usecase__title">Onboarding klienta</span>
-                        <p class="dp-usecase__desc">Onboarding klientów obejmujący zbieranie danych,
-                            weryfikację oraz aktywację w systemach.</p>
-                        <span class="dp-usecase__badge">Realizowane na 2to2</span>
+                        <p class="dp-usecase__desc">Digital Workers zbierają dane. Proces weryfikuje i aktywuje nowego klienta.</p>
+                        <span class="dp-usecase__badge">Na 2to2</span>
                     </div>
-                    
+
                     <div class="dp-usecase">
                         <span class="dp-usecase__title">IT service desk</span>
-                        <p class="dp-usecase__desc">Obsługa zgłoszeń IT — klasyfikacja, przydzielanie, eskalacja
-                            i zamykanie ticketów w jednym procesie.</p>
-                        <span class="dp-usecase__badge">Realizowane na 2to2</span>
+                        <p class="dp-usecase__desc">AI klasyfikuje zgłoszenia. Proces przypisuje, eskaluje i zamyka tickety.</p>
+                        <span class="dp-usecase__badge">Na 2to2</span>
                     </div>
-                    
+
                     <div class="dp-usecase">
                         <span class="dp-usecase__title">Cykl życia umowy</span>
-                        <p class="dp-usecase__desc">Pełny cykl życia umowy — od analizy treści,
-                            przez przeglądy i zatwierdzenia, po podpis.</p>
-                        <span class="dp-usecase__badge">Realizowane na 2to2</span>
+                        <p class="dp-usecase__desc">AI wyciąga warunki z treści. Proces prowadzi przeglądy, akceptacje i podpis.</p>
+                        <span class="dp-usecase__badge">Na 2to2</span>
                     </div>
-                    
+
                     <div class="dp-usecase">
                         <span class="dp-usecase__title">Procesy HR</span>
-                        <p class="dp-usecase__desc">Procesy HR obejmujące onboarding, zmiany
-                            i offboarding pracowników.</p>
-                        <span class="dp-usecase__badge">Realizowane na 2to2</span>
+                        <p class="dp-usecase__desc">Digital Workers obsługują formularze. Proces prowadzi onboarding, zmiany i offboarding.</p>
+                        <span class="dp-usecase__badge">Na 2to2</span>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- ========================================
-             8. CUSTOMERS
-             ======================================== -->
-        <section class="dp-section dp-section--dark">
-            <div class="dp-container">
-                <p class="dp-customers__statement">Wykorzystywane przez organizacje na całym świecie.</p>
-                
-                <div class="dp-logos">
-                    <img src="../storage/files/klienci/logo-airbus.png" alt="Airbus">
-                    <img src="../storage/files/klienci/logo-pgnig.png" alt="PGNiG">
-                    <img src="../storage/files/klienci/logo-thyssenkrupp.png" alt="ThyssenKrupp">
-                    <img src="../storage/files/klienci/logo-polskie-radio.png" alt="Polskie Radio">
-                    <img src="../storage/files/klienci/logo-nexia.png" alt="Nexia">
-                </div>
-            </div>
-        </section>
+        <!-- 8. FINALNE CTA -->
+        <section class="v7-final" id="start">
+            <div class="v7-container">
+                <div class="v7-final__layout">
+                    <div>
+                        <p class="v7-eyebrow">Zacznij tutaj</p>
+                        <h2 class="v7-final__title">Pokaż nam proces, który chcesz <span class="accent">uruchomić</span>.</h2>
+                        <p class="v7-final__lead">
+                            Przyślij dokumentację, którą już masz — procedurę, politykę, formularz. Zamienimy ją
+                            w strukturalną specyfikację 2to2 i pokażemy aplikację, która z niej powstaje.
+                        </p>
+                        <ul class="v7-final__list">
+                            <li><span aria-hidden="true">✓</span> Działająca aplikacja zbudowana z Twojej własnej dokumentacji</li>
+                            <li><span aria-hidden="true">✓</span> Reguły, role, akceptacje i ślad audytowy od pierwszego dnia</li>
+                            <li><span aria-hidden="true">✓</span> Prosta odpowiedź, co pasuje do 2to2, a co nie</li>
+                        </ul>
+                        <p class="v7-final__mail">Wolisz mail? <a href="mailto:office@datapolis.com">office@datapolis.com</a></p>
+                    </div>
 
-        <!-- ========================================
-             9. FINAL CTA - Conversion Moment
-             ======================================== -->
-        <section class="dp-section dp-final">
-            <div class="dp-final__glow"></div>
-            <div class="dp-container">
-                <h2 class="dp-final__title">Zacznij tworzyć procesy biznesowe na <span class="accent">2to2</span></h2>
-                <p class="dp-final__subtitle">Definiuj procesy, w których ludzie i cyfrowi pracownicy pracują wspólnie.</p>
-                
-                <div class="dp-final__cta">
-                    <a href="https://2to2.ai" class="dp-btn dp-btn--primary dp-btn--xl">
-                        Stwórz konto na 2to2 →
-                    </a>
-                    <p class="dp-final__trust">...i buduj, testuj i wdrażaj procesy niezbędne do działania firmy.</p>
+                    <div class="v7-formcard">
+                        <p class="v7-formcard__title">Napisz do nas</p>
+                        <p class="v7-formcard__helper">Odpowiadamy w ciągu 1–2 dni roboczych.</p>
+
+                        <!-- Workflow Form Embed -->
+                        <div id="workflow-form-www-contacts-home"></div>
+                        <script src="https://2to2.ai/embed-workflow.js"
+                          data-workflow="www-contacts"
+                          data-container="workflow-form-www-contacts-home"
+                          data-base-url="https://2to2.ai">
+                        </script>
+
+                        <p class="v7-formcard__note">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/>
+                            </svg>
+                            Ten formularz sam jest aplikacją procesową 2to2. Twoja wiadomość wchodzi w nadzorowany proces — z przypisaniem, statusem i odpowiedzią.
+                        </p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -938,5 +1048,7 @@
             loadScript(0);
         });
     </script>
+    <script src="../assets/js/homepage-workflow-map.js?v=20260917"></script>
+    <script src="../assets/js/spec-app-exhibit.js?v=20260917"></script>
 </body>
 </html>

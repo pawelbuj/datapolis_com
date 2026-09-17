@@ -43,6 +43,28 @@
         }
     ];
 
+    // Etykiety moga przyjsc z HTML (data-role-label / data-task na stanie),
+    // dzieki czemu kazda wersja jezykowa niesie wlasne teksty. Brak atrybutow
+    // => zostaja wartosci domyslne powyzej.
+    var nodes = map.querySelectorAll('[data-home-state-index]');
+    if (nodes.length) {
+        var fromDom = [];
+        for (var n = 0; n < nodes.length; n++) {
+            var node = nodes[n];
+            var roleLabel = node.getAttribute('data-role-label');
+            var task = node.getAttribute('data-task');
+            if (!roleLabel || !task) { fromDom = []; break; }
+            var nameEl = node.querySelector('strong');
+            fromDom.push({
+                name: nameEl ? nameEl.textContent.trim() : '',
+                role: node.querySelector('.dp-workflow-role--digital') ? 'digital' : 'human',
+                roleLabel: roleLabel,
+                task: task
+            });
+        }
+        if (fromDom.length) { states = fromDom; }
+    }
+
     var reducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     var step = reducedMotion ? 1 : 0;
     var timer = null;
