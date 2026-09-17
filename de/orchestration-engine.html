@@ -33,7 +33,8 @@
     <link rel="stylesheet" href="../assets/css/main.min.css?v=20260813">
     <link rel="stylesheet" href="../assets/css/async.min.css?v=20260813" media="print" onload="this.media='all'; this.onload=null;">
     <link rel="stylesheet" href="../assets/css/dark-theme.css?v=20260813">
-    <link rel="stylesheet" href="../assets/css/new-homepage.css?v=20260813">
+    <link rel="stylesheet" href="../assets/css/new-homepage.css?v=20260917">
+    <link rel="stylesheet" href="../assets/css/home-v7.css?v=20260917">
     <link rel="stylesheet" href="../assets/css/orchestration-engine.css?v=20260813">
 
     <script src="../includes/loader.js"></script>
@@ -167,76 +168,80 @@
             <!-- Desktop Navigation -->
             <nav class="dp-nav" role="navigation" aria-label="Hauptnavigation">
                 <ul class="dp-nav__list">
-                    <!-- Platform (primary) -->
                     <li class="dp-nav__item dp-nav__item--has-dropdown" data-nav="platform">
                         <button class="dp-nav__link" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="dp-menu-platform">
                             Plattform
                             <svg class="dp-nav__chevron" width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
                         </button>
                         <div class="dp-dropdown" id="dp-menu-platform" role="menu" aria-label="Plattform">
+                            <p class="dp-dropdown__intro">Eine Plattform: Anwendungen entstehen aus Ihrer Dokumentation und laufen dann nach Ihren Regeln.</p>
                             <a href="platform-2to2.html" class="dp-dropdown__item dp-dropdown__item--with-desc" role="menuitem">
-                                <span class="dp-dropdown__title">2to2 Platform</span>
-                                <span class="dp-dropdown__desc">Apps bauen, Workflows ausführen, Agents steuern</span>
+                                <span class="dp-dropdown__title">Plattform im Überblick</span>
+                                <span class="dp-dropdown__desc">Was 2to2 ist und was darauf läuft</span>
                             </a>
-                            <a href="process-apps.html" class="dp-dropdown__item" role="menuitem">
+                            <a href="app-creator.html" class="dp-dropdown__item dp-dropdown__item--with-desc" role="menuitem">
+                                <span class="dp-dropdown__title">App Creator</span>
+                                <span class="dp-dropdown__desc">Aus Dokumentation wird eine laufende Anwendung</span>
+                            </a>
+                            <a href="process-apps.html" class="dp-dropdown__item dp-dropdown__item--with-desc" role="menuitem">
                                 <span class="dp-dropdown__title">Prozess-Apps</span>
+                                <span class="dp-dropdown__desc">Was Anwender bekommen: Apps, die die Arbeit führen</span>
                             </a>
-                            <a href="orchestration-engine.html" class="dp-dropdown__item" role="menuitem">
+                            <a href="orchestration-engine.html" class="dp-dropdown__item dp-dropdown__item--with-desc" role="menuitem">
                                 <span class="dp-dropdown__title">Orchestrierungs-Engine</span>
+                                <span class="dp-dropdown__desc">Die zustandsbasierte Engine, die Arbeit vorantreibt</span>
                             </a>
-                            <a href="security-governance.html" class="dp-dropdown__item" role="menuitem">
+                            <a href="security-governance.html" class="dp-dropdown__item dp-dropdown__item--with-desc" role="menuitem">
                                 <span class="dp-dropdown__title">Sicherheit &amp; Governance</span>
+                                <span class="dp-dropdown__desc">Regeln, Rollen, Berechtigungen und Audit-Trail</span>
                             </a>
                         </div>
                     </li>
 
-                    <!-- AI (primary) -->
-                    <li class="dp-nav__item dp-nav__item--has-dropdown" data-nav="ai">
-                        <button class="dp-nav__link" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="dp-menu-ai">
-                            AI
+                    <li class="dp-nav__item dp-nav__item--has-dropdown" data-nav="workers">
+                        <button class="dp-nav__link" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="dp-menu-workers">
+                            Digital Workers
                             <svg class="dp-nav__chevron" width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
                         </button>
-                        <div class="dp-dropdown" id="dp-menu-ai" role="menu" aria-label="AI">
-                            <a href="digital-workers.html" class="dp-dropdown__item" role="menuitem">
-                                <span class="dp-dropdown__title">Digitale Worker</span>
+                        <div class="dp-dropdown" id="dp-menu-workers" role="menu" aria-label="Digital Workers">
+                            <p class="dp-dropdown__intro">KI führt Schritte in denselben Prozessen aus, in denen Ihre Leute arbeiten.</p>
+                            <a href="digital-workers.html" class="dp-dropdown__item dp-dropdown__item--with-desc" role="menuitem">
+                                <span class="dp-dropdown__title">Digital Workers</span>
+                                <span class="dp-dropdown__desc">KI, die einen Schritt im Prozess übernimmt — kein Chatfenster</span>
                             </a>
-                            <a href="ai-inside-workflows.html" class="dp-dropdown__item" role="menuitem">
-                                <span class="dp-dropdown__title">KI in Workflows</span>
+                            <a href="humans-agents.html" class="dp-dropdown__item dp-dropdown__item--with-desc" role="menuitem">
+                                <span class="dp-dropdown__title">Menschen + Digital Workers</span>
+                                <span class="dp-dropdown__desc">Ein Prozess, ein Audit-Trail, zwei Arten von Ausführenden</span>
                             </a>
-                            <a href="governance-control.html" class="dp-dropdown__item" role="menuitem">
-                                <span class="dp-dropdown__title">Governance &amp; Kontrolle</span>
-                            </a>
-                            <a href="why-not-copilots.html" class="dp-dropdown__item" role="menuitem">
-                                <span class="dp-dropdown__title">Warum keine Copiloten</span>
-                            </a>
-                        </div>
-                    </li>
-
-                    <!-- How it works -->
-                    <li class="dp-nav__item dp-nav__item--has-dropdown" data-nav="how">
-                        <button class="dp-nav__link" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="dp-menu-how">
-                            Wie es funktioniert
-                            <svg class="dp-nav__chevron" width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                        </button>
-                        <div class="dp-dropdown" id="dp-menu-how" role="menu" aria-label="Wie es funktioniert">
-                            <a href="how-it-works-overview.html" class="dp-dropdown__item" role="menuitem">
-                                <span class="dp-dropdown__title">Überblick</span>
-                            </a>
-                            <a href="humans-agents.html" class="dp-dropdown__item" role="menuitem">
-                                <span class="dp-dropdown__title">Menschen + Agenten</span>
-                            </a>
-                            <a href="pilot-scale.html" class="dp-dropdown__item" role="menuitem">
-                                <span class="dp-dropdown__title">Pilot → Skalierung</span>
+                            <a href="why-not-copilots.html" class="dp-dropdown__item dp-dropdown__item--with-desc" role="menuitem">
+                                <span class="dp-dropdown__title">Warum keine Copilots</span>
+                                <span class="dp-dropdown__desc">Wo prompt-basierte Assistenten nicht mehr ausreichen</span>
                             </a>
                         </div>
                     </li>
 
-                    <!-- Customers (single link) -->
                     <li class="dp-nav__item">
-                        <a href="customers.html" class="dp-nav__link dp-nav__link--simple">Kunden</a>
+                        <a href="how-it-works-overview.html" class="dp-nav__link dp-nav__link--simple">Wie die Arbeit läuft</a>
                     </li>
 
-                    <!-- Company -->
+                    <li class="dp-nav__item dp-nav__item--has-dropdown" data-nav="customers">
+                        <button class="dp-nav__link" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="dp-menu-customers">
+                            Kunden
+                            <svg class="dp-nav__chevron" width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </button>
+                        <div class="dp-dropdown" id="dp-menu-customers" role="menu" aria-label="Kunden">
+                            <p class="dp-dropdown__intro">20 Jahre im Produktivbetrieb — und der Weg vom ersten Prozess zu vielen.</p>
+                            <a href="customers.html" class="dp-dropdown__item dp-dropdown__item--with-desc" role="menuitem">
+                                <span class="dp-dropdown__title">Kunden</span>
+                                <span class="dp-dropdown__desc">Wer heute auf Datapolis arbeitet</span>
+                            </a>
+                            <a href="pilot-scale.html" class="dp-dropdown__item dp-dropdown__item--with-desc" role="menuitem">
+                                <span class="dp-dropdown__title">Pilot → Skalierung</span>
+                                <span class="dp-dropdown__desc">Vom ersten Prozess zum unternehmensweiten Rollout</span>
+                            </a>
+                        </div>
+                    </li>
+
                     <li class="dp-nav__item dp-nav__item--has-dropdown" data-nav="company">
                         <button class="dp-nav__link" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="dp-menu-company">
                             Unternehmen
@@ -251,6 +256,7 @@
                             </a>
                         </div>
                     </li>
+
                 </ul>
             </nav>
 
@@ -286,51 +292,45 @@
         <div class="dp-mobile-menu" aria-hidden="true">
             <div class="dp-mobile-menu__inner">
                 <nav class="dp-mobile-nav">
-                    <!-- Platform -->
                     <div class="dp-mobile-nav__item">
                         <button class="dp-mobile-nav__trigger" type="button" aria-expanded="false">
                             Plattform
                             <svg class="dp-mobile-nav__chevron" width="12" height="7" viewBox="0 0 10 6" fill="none"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
                         </button>
                         <div class="dp-mobile-nav__panel">
-                            <a href="platform-2to2.html" class="dp-mobile-nav__link">2to2 Platform</a>
+                            <a href="platform-2to2.html" class="dp-mobile-nav__link">Plattform im Überblick</a>
+                            <a href="app-creator.html" class="dp-mobile-nav__link">App Creator</a>
                             <a href="process-apps.html" class="dp-mobile-nav__link">Prozess-Apps</a>
                             <a href="orchestration-engine.html" class="dp-mobile-nav__link">Orchestrierungs-Engine</a>
                             <a href="security-governance.html" class="dp-mobile-nav__link">Sicherheit &amp; Governance</a>
                         </div>
                     </div>
 
-                    <!-- AI -->
                     <div class="dp-mobile-nav__item">
                         <button class="dp-mobile-nav__trigger" type="button" aria-expanded="false">
-                            AI
+                            Digital Workers
                             <svg class="dp-mobile-nav__chevron" width="12" height="7" viewBox="0 0 10 6" fill="none"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
                         </button>
                         <div class="dp-mobile-nav__panel">
-                            <a href="digital-workers.html" class="dp-mobile-nav__link">Digitale Worker</a>
-                            <a href="ai-inside-workflows.html" class="dp-mobile-nav__link">KI in Workflows</a>
-                            <a href="governance-control.html" class="dp-mobile-nav__link">Governance &amp; Kontrolle</a>
-                            <a href="why-not-copilots.html" class="dp-mobile-nav__link">Warum keine Copiloten</a>
+                            <a href="digital-workers.html" class="dp-mobile-nav__link">Digital Workers</a>
+                            <a href="humans-agents.html" class="dp-mobile-nav__link">Menschen + Digital Workers</a>
+                            <a href="why-not-copilots.html" class="dp-mobile-nav__link">Warum keine Copilots</a>
                         </div>
                     </div>
 
-                    <!-- How it works -->
+                    <a href="how-it-works-overview.html" class="dp-mobile-nav__simple-link">Wie die Arbeit läuft</a>
+
                     <div class="dp-mobile-nav__item">
                         <button class="dp-mobile-nav__trigger" type="button" aria-expanded="false">
-                            Wie es funktioniert
+                            Kunden
                             <svg class="dp-mobile-nav__chevron" width="12" height="7" viewBox="0 0 10 6" fill="none"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
                         </button>
                         <div class="dp-mobile-nav__panel">
-                            <a href="how-it-works-overview.html" class="dp-mobile-nav__link">Überblick</a>
-                            <a href="humans-agents.html" class="dp-mobile-nav__link">Menschen + Agenten</a>
+                            <a href="customers.html" class="dp-mobile-nav__link">Kunden</a>
                             <a href="pilot-scale.html" class="dp-mobile-nav__link">Pilot → Skalierung</a>
                         </div>
                     </div>
 
-                    <!-- Customers -->
-                    <a href="customers.html" class="dp-mobile-nav__simple-link">Kunden</a>
-
-                    <!-- Company -->
                     <div class="dp-mobile-nav__item">
                         <button class="dp-mobile-nav__trigger" type="button" aria-expanded="false">
                             Unternehmen
@@ -341,6 +341,7 @@
                             <a href="contact.html" class="dp-mobile-nav__link">Kontakt</a>
                         </div>
                     </div>
+
                 </nav>
 
                 <!-- Mobile footer -->
@@ -388,7 +389,7 @@
                     
                     <div class="oe-hero__actions">
                         <a href="platform-2to2.html" class="oe-btn oe-btn--large">Plattform ansehen</a>
-                        <a href="how-it-works.html" class="oe-btn oe-btn--outline oe-btn--large">So funktioniert es</a>
+                        <a href="how-it-works-overview.html" class="oe-btn oe-btn--outline oe-btn--large">So funktioniert es</a>
                     </div>
                 </div>
                 
@@ -807,18 +808,15 @@
         <!-- ========================================
              FINALER CTA
              ======================================== -->
-        <section class="oe-final">
-            <div class="oe-final__glow"></div>
-            <div class="oe-container">
-                <div class="oe-final__content">
-                    <h2 class="oe-final__title">Run work. <span class="accent">Speed up the flow.</span></h2>
-                    <p class="oe-final__subtitle">Eine Orchestrierungsschicht für Menschen, digitale Worker und Business-Regeln.</p>
-                    
-                    <div class="oe-final__actions">
-                        <a href="platform-2to2.html" class="oe-btn oe-btn--large">Plattform ansehen</a>
-                        <a href="contact.html" class="oe-btn oe-btn--outline oe-btn--large">Kontakt</a>
-                    </div>
+        <section class="v7-cta">
+            <div class="v7-container v7-cta__inner">
+                <h2 class="v7-cta__title">Run work. <span class="accent">Speed up the flow.</span></h2>
+                <p class="v7-cta__lead">Sagen Sie uns, welchen Prozess Sie in geordnete Bahnen bringen wollen. Wir zeigen Ihnen die Anwendung, die aus Ihrer eigenen Dokumentation entsteht.</p>
+                <div class="v7-cta__actions">
+                    <a class="v7-btn v7-btn--primary" href="contact.html">Mit einem Experten sprechen <span aria-hidden="true">&#8594;</span></a>
+                    <a class="v7-btn v7-btn--ghost" href="app-creator.html">So entsteht eine Anwendung</a>
                 </div>
+                <p class="v7-cta__note">Oder schreiben Sie an <a href="mailto:office@datapolis.com">office@datapolis.com</a></p>
             </div>
         </section>
     </main>
@@ -832,52 +830,53 @@
             
             <!-- 4-Column Layout -->
             <div class="footer__columns">
-                <!-- Column 1: Platform -->
                 <div class="footer__column">
                     <div class="footer__label">Plattform</div>
                     <nav class="footer__nav">
                         <ul class="footer__list">
-                            <li><a href="platform-2to2.html">2to2 Platform</a></li>
+                            <li><a href="platform-2to2.html">Plattform im Überblick</a></li>
+                            <li><a href="app-creator.html">App Creator</a></li>
                             <li><a href="process-apps.html">Prozess-Apps</a></li>
                             <li><a href="orchestration-engine.html">Orchestrierungs-Engine</a></li>
                             <li><a href="security-governance.html">Sicherheit &amp; Governance</a></li>
                         </ul>
                     </nav>
                 </div>
-                
-                <!-- Column 2: How it works -->
+
                 <div class="footer__column">
-                    <div class="footer__label">Wie es funktioniert</div>
+                    <div class="footer__label">Digital Workers</div>
                     <nav class="footer__nav">
                         <ul class="footer__list">
-                            <li><a href="how-it-works-overview.html">Überblick</a></li>
-                            <li><a href="humans-agents.html">Menschen + Agenten</a></li>
+                            <li><a href="digital-workers.html">Digital Workers</a></li>
+                            <li><a href="humans-agents.html">Menschen + Digital Workers</a></li>
+                            <li><a href="why-not-copilots.html">Warum keine Copilots</a></li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="footer__column">
+                    <div class="footer__label">Kunden</div>
+                    <nav class="footer__nav">
+                        <ul class="footer__list">
+                            <li><a href="how-it-works-overview.html">Wie die Arbeit läuft</a></li>
+                            <li><a href="customers.html">Kunden</a></li>
                             <li><a href="pilot-scale.html">Pilot → Skalierung</a></li>
                         </ul>
                     </nav>
                 </div>
-                
-                <!-- Column 3: Trust (informational, not navigational) -->
-                <div class="footer__column">
-                    <div class="footer__label">Vertrauen</div>
-                    <ul class="footer__trust-list">
-                        <li class="footer__trust-item">Kunden in regulierten Branchen</li>
-                        <li class="footer__trust-item">Jahrzehnte Erfahrung mit Enterprise-Workflows</li>
-                        <li class="footer__trust-item">Gesteuerte Prozesse. Keine Black Boxes.</li>
-                    </ul>
-                </div>
-                
-                <!-- Column 4: Company -->
+
                 <div class="footer__column">
                     <div class="footer__label">Unternehmen</div>
                     <nav class="footer__nav">
                         <ul class="footer__list">
+                            <li><a href="about.html">Über Datapolis</a></li>
                             <li><a href="contact.html">Kontakt</a></li>
-                            <li><a href="legal.html">Datenschutzerklärung</a></li>
+                            <li><a href="legal.html">Datenschutz</a></li>
                             <li><a href="legal.html">Nutzungsbedingungen</a></li>
                         </ul>
                     </nav>
                 </div>
+
             </div>
             
             <!-- Bottom Bar -->

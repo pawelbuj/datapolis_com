@@ -2,8 +2,10 @@
 <html lang="de">
 <head>
     <meta charset="UTF-8">
-    <title>Legal - Datapolis</title>
-    <meta name="description" content="Datapolis legal information: Privacy Policy, Terms of Service, and Imprint.">
+    <title>Rechtliche Hinweise - Datapolis</title>
+    <!-- ver7: tlumaczenie tresci prawnej wykonane maszynowo na potrzeby prototypu.
+         DO PRZEGLADU przez osobe odpowiedzialna za trescii prawne przed publikacja. -->
+    <meta name="description" content="Datenschutzerklärung, Nutzungsbedingungen und Impressum der Datapolis Sp. z o.o.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#020617">
 
@@ -29,7 +31,8 @@
     <link rel="stylesheet" href="../assets/css/main.min.css?v=20260813">
     <link rel="stylesheet" href="../assets/css/async.min.css?v=20260813" media="print" onload="this.media='all'; this.onload=null;">
     <link rel="stylesheet" href="../assets/css/dark-theme.css?v=20260813">
-    <link rel="stylesheet" href="../assets/css/new-homepage.css?v=20260813">
+    <link rel="stylesheet" href="../assets/css/new-homepage.css?v=20260917">
+    <link rel="stylesheet" href="../assets/css/home-v7.css?v=20260917">
 
     <script src="../includes/loader.js"></script>
     <link rel="icon" type="image/png" href="../assets/img/favicon/favicon-96x96.png" sizes="96x96" />
@@ -105,7 +108,7 @@
         {
           "@type": "ListItem",
           "position": 2,
-          "name": "Legal - Datapolis"
+          "name": "Rechtliche Hinweise - Datapolis"
         }
       ]
     },
@@ -113,7 +116,7 @@
       "@type": "WebPage",
       "@id": "https://datapolis.com/de/legal#webpage",
       "url": "https://datapolis.com/de/legal",
-      "name": "Legal - Datapolis",
+      "name": "Rechtliche Hinweise - Datapolis",
       "isPartOf": {
         "@id": "https://datapolis.com/#website"
       },
@@ -125,7 +128,7 @@
         "@type": "ImageObject",
         "url": "https://datapolis.com/assets/img/og-image-1200x630.png"
       },
-      "description": "Datapolis legal information: Privacy Policy, Terms of Service, and Imprint.",
+      "description": "Datenschutzerklärung, Nutzungsbedingungen und Impressum der Datapolis Sp. z o.o.",
       "breadcrumb": {
         "@id": "https://datapolis.com/de/legal#breadcrumb"
       }
@@ -160,76 +163,80 @@
             <!-- Desktop Navigation -->
             <nav class="dp-nav" role="navigation" aria-label="Hauptnavigation">
                 <ul class="dp-nav__list">
-                    <!-- Platform (primary) -->
                     <li class="dp-nav__item dp-nav__item--has-dropdown" data-nav="platform">
                         <button class="dp-nav__link" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="dp-menu-platform">
                             Plattform
                             <svg class="dp-nav__chevron" width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
                         </button>
                         <div class="dp-dropdown" id="dp-menu-platform" role="menu" aria-label="Plattform">
+                            <p class="dp-dropdown__intro">Eine Plattform: Anwendungen entstehen aus Ihrer Dokumentation und laufen dann nach Ihren Regeln.</p>
                             <a href="platform-2to2.html" class="dp-dropdown__item dp-dropdown__item--with-desc" role="menuitem">
-                                <span class="dp-dropdown__title">2to2 Platform</span>
-                                <span class="dp-dropdown__desc">Apps bauen, Workflows ausführen, Agents steuern</span>
+                                <span class="dp-dropdown__title">Plattform im Überblick</span>
+                                <span class="dp-dropdown__desc">Was 2to2 ist und was darauf läuft</span>
                             </a>
-                            <a href="process-apps.html" class="dp-dropdown__item" role="menuitem">
+                            <a href="app-creator.html" class="dp-dropdown__item dp-dropdown__item--with-desc" role="menuitem">
+                                <span class="dp-dropdown__title">App Creator</span>
+                                <span class="dp-dropdown__desc">Aus Dokumentation wird eine laufende Anwendung</span>
+                            </a>
+                            <a href="process-apps.html" class="dp-dropdown__item dp-dropdown__item--with-desc" role="menuitem">
                                 <span class="dp-dropdown__title">Prozess-Apps</span>
+                                <span class="dp-dropdown__desc">Was Anwender bekommen: Apps, die die Arbeit führen</span>
                             </a>
-                            <a href="orchestration-engine.html" class="dp-dropdown__item" role="menuitem">
+                            <a href="orchestration-engine.html" class="dp-dropdown__item dp-dropdown__item--with-desc" role="menuitem">
                                 <span class="dp-dropdown__title">Orchestrierungs-Engine</span>
+                                <span class="dp-dropdown__desc">Die zustandsbasierte Engine, die Arbeit vorantreibt</span>
                             </a>
-                            <a href="security-governance.html" class="dp-dropdown__item" role="menuitem">
+                            <a href="security-governance.html" class="dp-dropdown__item dp-dropdown__item--with-desc" role="menuitem">
                                 <span class="dp-dropdown__title">Sicherheit &amp; Governance</span>
+                                <span class="dp-dropdown__desc">Regeln, Rollen, Berechtigungen und Audit-Trail</span>
                             </a>
                         </div>
                     </li>
 
-                    <!-- AI (primary) -->
-                    <li class="dp-nav__item dp-nav__item--has-dropdown" data-nav="ai">
-                        <button class="dp-nav__link" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="dp-menu-ai">
-                            AI
+                    <li class="dp-nav__item dp-nav__item--has-dropdown" data-nav="workers">
+                        <button class="dp-nav__link" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="dp-menu-workers">
+                            Digital Workers
                             <svg class="dp-nav__chevron" width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
                         </button>
-                        <div class="dp-dropdown" id="dp-menu-ai" role="menu" aria-label="AI">
-                            <a href="digital-workers.html" class="dp-dropdown__item" role="menuitem">
-                                <span class="dp-dropdown__title">Digitale Worker</span>
+                        <div class="dp-dropdown" id="dp-menu-workers" role="menu" aria-label="Digital Workers">
+                            <p class="dp-dropdown__intro">KI führt Schritte in denselben Prozessen aus, in denen Ihre Leute arbeiten.</p>
+                            <a href="digital-workers.html" class="dp-dropdown__item dp-dropdown__item--with-desc" role="menuitem">
+                                <span class="dp-dropdown__title">Digital Workers</span>
+                                <span class="dp-dropdown__desc">KI, die einen Schritt im Prozess übernimmt — kein Chatfenster</span>
                             </a>
-                            <a href="ai-inside-workflows.html" class="dp-dropdown__item" role="menuitem">
-                                <span class="dp-dropdown__title">KI in Workflows</span>
+                            <a href="humans-agents.html" class="dp-dropdown__item dp-dropdown__item--with-desc" role="menuitem">
+                                <span class="dp-dropdown__title">Menschen + Digital Workers</span>
+                                <span class="dp-dropdown__desc">Ein Prozess, ein Audit-Trail, zwei Arten von Ausführenden</span>
                             </a>
-                            <a href="governance-control.html" class="dp-dropdown__item" role="menuitem">
-                                <span class="dp-dropdown__title">Governance &amp; Kontrolle</span>
-                            </a>
-                            <a href="why-not-copilots.html" class="dp-dropdown__item" role="menuitem">
-                                <span class="dp-dropdown__title">Warum keine Copiloten</span>
-                            </a>
-                        </div>
-                    </li>
-
-                    <!-- How it works -->
-                    <li class="dp-nav__item dp-nav__item--has-dropdown" data-nav="how">
-                        <button class="dp-nav__link" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="dp-menu-how">
-                            Wie es funktioniert
-                            <svg class="dp-nav__chevron" width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                        </button>
-                        <div class="dp-dropdown" id="dp-menu-how" role="menu" aria-label="Wie es funktioniert">
-                            <a href="how-it-works-overview.html" class="dp-dropdown__item" role="menuitem">
-                                <span class="dp-dropdown__title">Überblick</span>
-                            </a>
-                            <a href="humans-agents.html" class="dp-dropdown__item" role="menuitem">
-                                <span class="dp-dropdown__title">Menschen + Agenten</span>
-                            </a>
-                            <a href="pilot-scale.html" class="dp-dropdown__item" role="menuitem">
-                                <span class="dp-dropdown__title">Pilot → Skalierung</span>
+                            <a href="why-not-copilots.html" class="dp-dropdown__item dp-dropdown__item--with-desc" role="menuitem">
+                                <span class="dp-dropdown__title">Warum keine Copilots</span>
+                                <span class="dp-dropdown__desc">Wo prompt-basierte Assistenten nicht mehr ausreichen</span>
                             </a>
                         </div>
                     </li>
 
-                    <!-- Customers (single link) -->
                     <li class="dp-nav__item">
-                        <a href="customers.html" class="dp-nav__link dp-nav__link--simple">Kunden</a>
+                        <a href="how-it-works-overview.html" class="dp-nav__link dp-nav__link--simple">Wie die Arbeit läuft</a>
                     </li>
 
-                    <!-- Company -->
+                    <li class="dp-nav__item dp-nav__item--has-dropdown" data-nav="customers">
+                        <button class="dp-nav__link" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="dp-menu-customers">
+                            Kunden
+                            <svg class="dp-nav__chevron" width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </button>
+                        <div class="dp-dropdown" id="dp-menu-customers" role="menu" aria-label="Kunden">
+                            <p class="dp-dropdown__intro">20 Jahre im Produktivbetrieb — und der Weg vom ersten Prozess zu vielen.</p>
+                            <a href="customers.html" class="dp-dropdown__item dp-dropdown__item--with-desc" role="menuitem">
+                                <span class="dp-dropdown__title">Kunden</span>
+                                <span class="dp-dropdown__desc">Wer heute auf Datapolis arbeitet</span>
+                            </a>
+                            <a href="pilot-scale.html" class="dp-dropdown__item dp-dropdown__item--with-desc" role="menuitem">
+                                <span class="dp-dropdown__title">Pilot → Skalierung</span>
+                                <span class="dp-dropdown__desc">Vom ersten Prozess zum unternehmensweiten Rollout</span>
+                            </a>
+                        </div>
+                    </li>
+
                     <li class="dp-nav__item dp-nav__item--has-dropdown" data-nav="company">
                         <button class="dp-nav__link" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="dp-menu-company">
                             Unternehmen
@@ -244,6 +251,7 @@
                             </a>
                         </div>
                     </li>
+
                 </ul>
             </nav>
 
@@ -279,51 +287,45 @@
         <div class="dp-mobile-menu" aria-hidden="true">
             <div class="dp-mobile-menu__inner">
                 <nav class="dp-mobile-nav">
-                    <!-- Platform -->
                     <div class="dp-mobile-nav__item">
                         <button class="dp-mobile-nav__trigger" type="button" aria-expanded="false">
                             Plattform
                             <svg class="dp-mobile-nav__chevron" width="12" height="7" viewBox="0 0 10 6" fill="none"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
                         </button>
                         <div class="dp-mobile-nav__panel">
-                            <a href="platform-2to2.html" class="dp-mobile-nav__link">2to2 Platform</a>
+                            <a href="platform-2to2.html" class="dp-mobile-nav__link">Plattform im Überblick</a>
+                            <a href="app-creator.html" class="dp-mobile-nav__link">App Creator</a>
                             <a href="process-apps.html" class="dp-mobile-nav__link">Prozess-Apps</a>
                             <a href="orchestration-engine.html" class="dp-mobile-nav__link">Orchestrierungs-Engine</a>
                             <a href="security-governance.html" class="dp-mobile-nav__link">Sicherheit &amp; Governance</a>
                         </div>
                     </div>
 
-                    <!-- AI -->
                     <div class="dp-mobile-nav__item">
                         <button class="dp-mobile-nav__trigger" type="button" aria-expanded="false">
-                            AI
+                            Digital Workers
                             <svg class="dp-mobile-nav__chevron" width="12" height="7" viewBox="0 0 10 6" fill="none"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
                         </button>
                         <div class="dp-mobile-nav__panel">
-                            <a href="digital-workers.html" class="dp-mobile-nav__link">Digitale Worker</a>
-                            <a href="ai-inside-workflows.html" class="dp-mobile-nav__link">KI in Workflows</a>
-                            <a href="governance-control.html" class="dp-mobile-nav__link">Governance &amp; Kontrolle</a>
-                            <a href="why-not-copilots.html" class="dp-mobile-nav__link">Warum keine Copiloten</a>
+                            <a href="digital-workers.html" class="dp-mobile-nav__link">Digital Workers</a>
+                            <a href="humans-agents.html" class="dp-mobile-nav__link">Menschen + Digital Workers</a>
+                            <a href="why-not-copilots.html" class="dp-mobile-nav__link">Warum keine Copilots</a>
                         </div>
                     </div>
 
-                    <!-- How it works -->
+                    <a href="how-it-works-overview.html" class="dp-mobile-nav__simple-link">Wie die Arbeit läuft</a>
+
                     <div class="dp-mobile-nav__item">
                         <button class="dp-mobile-nav__trigger" type="button" aria-expanded="false">
-                            Wie es funktioniert
+                            Kunden
                             <svg class="dp-mobile-nav__chevron" width="12" height="7" viewBox="0 0 10 6" fill="none"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
                         </button>
                         <div class="dp-mobile-nav__panel">
-                            <a href="how-it-works-overview.html" class="dp-mobile-nav__link">Überblick</a>
-                            <a href="humans-agents.html" class="dp-mobile-nav__link">Menschen + Agenten</a>
+                            <a href="customers.html" class="dp-mobile-nav__link">Kunden</a>
                             <a href="pilot-scale.html" class="dp-mobile-nav__link">Pilot → Skalierung</a>
                         </div>
                     </div>
 
-                    <!-- Customers -->
-                    <a href="customers.html" class="dp-mobile-nav__simple-link">Kunden</a>
-
-                    <!-- Company -->
                     <div class="dp-mobile-nav__item">
                         <button class="dp-mobile-nav__trigger" type="button" aria-expanded="false">
                             Unternehmen
@@ -334,6 +336,7 @@
                             <a href="contact.html" class="dp-mobile-nav__link">Kontakt</a>
                         </div>
                     </div>
+
                 </nav>
 
                 <!-- Mobile footer -->
@@ -357,85 +360,85 @@
         <section class="dp-section dp-hero" style="padding-top: 120px; min-height: auto; padding-bottom: 40px;">
             <div class="dp-container">
                 <div class="dp-section__header">
-                    <span class="dp-label">Legal</span>
-                    <h1 class="dp-title">Legal Information</h1>
+                    <span class="dp-label">Rechtliches</span>
+                    <h1 class="dp-title">Rechtliche Hinweise</h1>
                 </div>
             </div>
         </section>
 
-        <!-- Privacy Policy -->
+        <!-- Datenschutzerklärung -->
         <section id="privacy" class="dp-section">
             <div class="dp-container">
-                <h2 class="dp-subtitle" style="color: white; margin-bottom: 20px;">Privacy Policy</h2>
+                <h2 class="dp-subtitle" style="color: white; margin-bottom: 20px;">Datenschutzerklärung</h2>
                 <div class="dp-text" style="max-width: 800px;">
                     <p style="margin-bottom: 20px;">
-                        Datapolis Sp. z o.o. is committed to protecting your privacy. This policy outlines how we collect, use, and safeguard your personal information.
+                        Datapolis Sp. z o.o. legt Wert auf den Schutz Ihrer Privatsphäre. Diese Erklärung beschreibt, welche personenbezogenen Daten wir erheben, wie wir sie verwenden und wie wir sie schützen.
                     </p>
-                    <h4 style="color: white; margin: 30px 0 15px;">Data Collection</h4>
+                    <h4 style="color: white; margin: 30px 0 15px;">Datenerhebung</h4>
                     <p style="margin-bottom: 15px;">
-                        We collect information you provide directly to us, such as when you fill out a contact form, request a demo, or communicate with us via email.
+                        Wir erheben Daten, die Sie uns direkt übermitteln — etwa wenn Sie ein Kontaktformular ausfüllen, eine Demo anfragen oder uns per E-Mail schreiben.
                     </p>
-                    <h4 style="color: white; margin: 30px 0 15px;">Data Use</h4>
+                    <h4 style="color: white; margin: 30px 0 15px;">Datenverwendung</h4>
                     <p style="margin-bottom: 15px;">
-                        We use the information we collect to respond to your inquiries, provide our services, and improve our offerings.
+                        Wir verwenden die erhobenen Daten, um Ihre Anfragen zu beantworten, unsere Leistungen zu erbringen und unser Angebot zu verbessern.
                     </p>
-                    <h4 style="color: white; margin: 30px 0 15px;">Data Protection</h4>
+                    <h4 style="color: white; margin: 30px 0 15px;">Datensicherheit</h4>
                     <p style="margin-bottom: 15px;">
-                        We implement appropriate technical and organizational measures to protect your personal data against unauthorized access, alteration, or destruction.
+                        Wir setzen angemessene technische und organisatorische Maßnahmen ein, um Ihre personenbezogenen Daten vor unbefugtem Zugriff, Veränderung oder Zerstörung zu schützen.
                     </p>
                     <p style="font-size: 0.9rem; color: #64748b; margin-top: 30px;">
-                        Last updated: January 2026
+                        Letzte Aktualisierung: Januar 2026
                     </p>
                 </div>
             </div>
         </section>
 
-        <!-- Terms of Service -->
+        <!-- Nutzungsbedingungen -->
         <section id="terms" class="dp-section dp-section--dark">
             <div class="dp-container">
-                <h2 class="dp-subtitle" style="color: white; margin-bottom: 20px;">Terms of Service</h2>
+                <h2 class="dp-subtitle" style="color: white; margin-bottom: 20px;">Nutzungsbedingungen</h2>
                 <div class="dp-text" style="max-width: 800px;">
                     <p style="margin-bottom: 20px;">
-                        By accessing and using datapolis.com, you agree to be bound by these Terms of Service.
+                        Mit dem Zugriff auf datapolis.com und der Nutzung der Website erkennen Sie diese Nutzungsbedingungen an.
                     </p>
-                    <h4 style="color: white; margin: 30px 0 15px;">Use of Website</h4>
+                    <h4 style="color: white; margin: 30px 0 15px;">Nutzung der Website</h4>
                     <p style="margin-bottom: 15px;">
-                        This website is provided for informational purposes. You may not use this site for any unlawful purpose or in violation of these terms.
+                        Diese Website dient der Information. Eine Nutzung zu rechtswidrigen Zwecken oder unter Verstoß gegen diese Bedingungen ist nicht zulässig.
                     </p>
-                    <h4 style="color: white; margin: 30px 0 15px;">Intellectual Property</h4>
+                    <h4 style="color: white; margin: 30px 0 15px;">Geistiges Eigentum</h4>
                     <p style="margin-bottom: 15px;">
-                        All content on this website, including text, graphics, logos, and software, is the property of Datapolis Sp. z o.o. and is protected by intellectual property laws.
+                        Alle Inhalte dieser Website — Texte, Grafiken, Logos und Software — sind Eigentum der Datapolis Sp. z o.o. und durch Rechte des geistigen Eigentums geschützt.
                     </p>
-                    <h4 style="color: white; margin: 30px 0 15px;">Limitation of Liability</h4>
+                    <h4 style="color: white; margin: 30px 0 15px;">Haftungsbeschränkung</h4>
                     <p style="margin-bottom: 15px;">
-                        Datapolis shall not be liable for any indirect, incidental, or consequential damages arising from your use of this website.
+                        Datapolis haftet nicht für indirekte, zufällige oder Folgeschäden, die aus der Nutzung dieser Website entstehen.
                     </p>
                     <p style="font-size: 0.9rem; color: #64748b; margin-top: 30px;">
-                        Last updated: January 2026
+                        Letzte Aktualisierung: Januar 2026
                     </p>
                 </div>
             </div>
         </section>
 
-        <!-- Imprint -->
+        <!-- Impressum -->
         <section id="imprint" class="dp-section">
             <div class="dp-container">
-                <h2 class="dp-subtitle" style="color: white; margin-bottom: 20px;">Imprint</h2>
+                <h2 class="dp-subtitle" style="color: white; margin-bottom: 20px;">Impressum</h2>
                 <div class="dp-text" style="max-width: 800px;">
-                    <h4 style="color: white; margin: 20px 0 15px;">Company Information</h4>
+                    <h4 style="color: white; margin: 20px 0 15px;">Angaben zum Unternehmen</h4>
                     <p style="margin-bottom: 10px;"><strong style="color: white;">Datapolis Sp. z o.o.</strong></p>
                     <p style="margin-bottom: 10px;">ul. Dzielna 21/121a</p>
-                    <p style="margin-bottom: 10px;">01-029 Warsaw, Poland</p>
+                    <p style="margin-bottom: 10px;">01-029 Warschau, Polen</p>
                     
-                    <h4 style="color: white; margin: 30px 0 15px;">Registration</h4>
+                    <h4 style="color: white; margin: 30px 0 15px;">Registereintrag</h4>
                     <p style="margin-bottom: 10px;">KRS: 0000003324</p>
                     <p style="margin-bottom: 10px;">NIP: 5272336739</p>
                     
-                    <h4 style="color: white; margin: 30px 0 15px;">Contact</h4>
+                    <h4 style="color: white; margin: 30px 0 15px;">Kontakt</h4>
                     <p style="margin-bottom: 10px;">Email: <a href="mailto:office@datapolis.com" style="color: #14b8a6;">office@datapolis.com</a></p>
                     
                     <p style="font-size: 0.9rem; color: #64748b; margin-top: 30px;">
-                        Last updated: January 2026
+                        Letzte Aktualisierung: Januar 2026
                     </p>
                 </div>
             </div>
@@ -450,52 +453,53 @@
             
             <!-- 4-Column Layout -->
             <div class="footer__columns">
-                <!-- Column 1: Platform -->
                 <div class="footer__column">
                     <div class="footer__label">Plattform</div>
                     <nav class="footer__nav">
                         <ul class="footer__list">
-                            <li><a href="platform-2to2.html">2to2 Platform</a></li>
+                            <li><a href="platform-2to2.html">Plattform im Überblick</a></li>
+                            <li><a href="app-creator.html">App Creator</a></li>
                             <li><a href="process-apps.html">Prozess-Apps</a></li>
                             <li><a href="orchestration-engine.html">Orchestrierungs-Engine</a></li>
                             <li><a href="security-governance.html">Sicherheit &amp; Governance</a></li>
                         </ul>
                     </nav>
                 </div>
-                
-                <!-- Column 2: How it works -->
+
                 <div class="footer__column">
-                    <div class="footer__label">Wie es funktioniert</div>
+                    <div class="footer__label">Digital Workers</div>
                     <nav class="footer__nav">
                         <ul class="footer__list">
-                            <li><a href="how-it-works-overview.html">Überblick</a></li>
-                            <li><a href="humans-agents.html">Menschen + Agenten</a></li>
+                            <li><a href="digital-workers.html">Digital Workers</a></li>
+                            <li><a href="humans-agents.html">Menschen + Digital Workers</a></li>
+                            <li><a href="why-not-copilots.html">Warum keine Copilots</a></li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="footer__column">
+                    <div class="footer__label">Kunden</div>
+                    <nav class="footer__nav">
+                        <ul class="footer__list">
+                            <li><a href="how-it-works-overview.html">Wie die Arbeit läuft</a></li>
+                            <li><a href="customers.html">Kunden</a></li>
                             <li><a href="pilot-scale.html">Pilot → Skalierung</a></li>
                         </ul>
                     </nav>
                 </div>
-                
-                <!-- Column 3: Trust (informational, not navigational) -->
-                <div class="footer__column">
-                    <div class="footer__label">Vertrauen</div>
-                    <ul class="footer__trust-list">
-                        <li class="footer__trust-item">Kunden in regulierten Branchen</li>
-                        <li class="footer__trust-item">Jahrzehnte Erfahrung mit Enterprise-Workflows</li>
-                        <li class="footer__trust-item">Gesteuerte Prozesse. Keine Black Boxes.</li>
-                    </ul>
-                </div>
-                
-                <!-- Column 4: Company -->
+
                 <div class="footer__column">
                     <div class="footer__label">Unternehmen</div>
                     <nav class="footer__nav">
                         <ul class="footer__list">
+                            <li><a href="about.html">Über Datapolis</a></li>
                             <li><a href="contact.html">Kontakt</a></li>
-                            <li><a href="legal.html">Datenschutzerklärung</a></li>
+                            <li><a href="legal.html">Datenschutz</a></li>
                             <li><a href="legal.html">Nutzungsbedingungen</a></li>
                         </ul>
                     </nav>
                 </div>
+
             </div>
             
             <!-- Bottom Bar -->

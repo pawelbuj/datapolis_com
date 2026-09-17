@@ -1247,3 +1247,154 @@
         display: none;
     }
 }
+
+/* ============================================================
+   Wspolny moment konwersji na podstronach (ver7).
+   Kazda podstrona miala wlasna sekcje koncowa (aiw-final, gc-final,
+   oe-final, ps-final...) o innym ukladzie i innym CTA. Teraz jedna.
+   ============================================================ */
+
+.v7-cta {
+    position: relative;
+    padding: 96px 0 104px;
+    background:
+        radial-gradient(ellipse 760px 400px at 50% 0%, rgba(20, 184, 166, 0.12), transparent 70%),
+        var(--bg-secondary);
+    border-top: 1px solid var(--v7-line);
+    text-align: center;
+}
+
+.v7-cta__inner {
+    max-width: 760px;
+}
+
+.v7-cta__title {
+    font-family: var(--font-display);
+    font-size: clamp(30px, 3.6vw, 44px);
+    line-height: 1.12;
+    font-weight: 600;
+    letter-spacing: -0.025em;
+    color: var(--text-primary);
+    margin: 0 0 18px;
+}
+
+.v7-cta__title .accent {
+    color: var(--accent-primary);
+}
+
+.v7-cta__lead {
+    font-size: 16.5px;
+    line-height: 1.7;
+    color: var(--text-secondary);
+    margin: 0 auto 32px;
+    max-width: 580px;
+}
+
+.v7-cta__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+}
+
+.v7-cta__note {
+    margin: 26px 0 0;
+    font-size: 13.5px;
+    color: var(--text-muted);
+}
+
+.v7-cta__note a {
+    color: var(--text-primary);
+    text-decoration: none;
+    border-bottom: 1px solid var(--border-accent);
+}
+
+.v7-cta__note a:hover {
+    color: var(--accent-primary);
+}
+
+@media (max-width: 720px) {
+    .v7-cta {
+        padding: 68px 0 72px;
+    }
+}
+
+/* ---------- Kroki 1-2-3-4 (przeniesione z wygaszonej ai-inside-workflows) ---------- */
+
+.v7-steps-section {
+    padding: 92px 0 96px;
+    background: var(--bg-primary);
+    border-top: 1px solid var(--v7-line);
+}
+
+.v7-steps-section__head {
+    max-width: 720px;
+    margin-bottom: 44px;
+}
+
+.v7-steps-section__title {
+    font-family: var(--font-display);
+    font-size: clamp(27px, 3.2vw, 38px);
+    line-height: 1.15;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.v7-steps-section__title .accent {
+    color: var(--accent-primary);
+}
+
+.v7-steps {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 2px;
+    background: var(--v7-line);
+    border: 1px solid var(--v7-line);
+    border-radius: 14px;
+    overflow: hidden;
+}
+
+.v7-step {
+    background: var(--bg-primary);
+    padding: 26px 24px 28px;
+}
+
+.v7-step__num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 26px;
+    height: 26px;
+    border-radius: 8px;
+    margin-bottom: 14px;
+    font-size: 12.5px;
+    font-weight: 700;
+    color: var(--accent-primary);
+    background: rgba(20, 184, 166, 0.12);
+    border: 1px solid rgba(20, 184, 166, 0.28);
+}
+
+.v7-step__title {
+    font-size: 15.5px;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin: 0 0 7px;
+}
+
+.v7-step__desc {
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+@media (max-width: 1024px) {
+    .v7-steps { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 640px) {
+    .v7-steps { grid-template-columns: minmax(0, 1fr); }
+    .v7-steps-section { padding: 68px 0 72px; }
+}

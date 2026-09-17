@@ -162,7 +162,7 @@
     top: calc(100% + 8px);
     left: 50%;
     transform: translateX(-50%) translateY(10px);
-    width: 340px;
+    width: 360px;
     padding: 12px;
     background: rgba(10, 18, 32, 0.97);
     backdrop-filter: blur(20px);
@@ -268,6 +268,17 @@
     font-weight: 400;
     color: rgba(148, 163, 184, 0.85);
     line-height: 1.4;
+}
+
+/* ver7: zdanie wiazace grupe menu z platforma — bez niego pozycje
+   czytaja sie jak osobne produkty, a nie jak czesci jednej rzeczy. */
+.dp-dropdown__intro {
+    margin: 2px 10px 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(148, 163, 184, 0.14);
+    font-size: 12.5px;
+    line-height: 1.5;
+    color: rgba(148, 163, 184, 0.9);
 }
 
 /* ===== HEADER ACTIONS (right) ===== */

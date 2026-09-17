@@ -813,6 +813,126 @@
       "source": "/index-legacy.html",
       "destination": "/",
       "permanent": true
+    },
+    {
+      "source": "/governance-control",
+      "destination": "/security-governance",
+      "permanent": true
+    },
+    {
+      "source": "/governance-control.html",
+      "destination": "/security-governance",
+      "permanent": true
+    },
+    {
+      "source": "/pl/governance-control",
+      "destination": "/pl/security-governance",
+      "permanent": true
+    },
+    {
+      "source": "/pl/governance-control.html",
+      "destination": "/pl/security-governance",
+      "permanent": true
+    },
+    {
+      "source": "/de/governance-control",
+      "destination": "/de/security-governance",
+      "permanent": true
+    },
+    {
+      "source": "/de/governance-control.html",
+      "destination": "/de/security-governance",
+      "permanent": true
+    },
+    {
+      "source": "/es/governance-control",
+      "destination": "/es/security-governance",
+      "permanent": true
+    },
+    {
+      "source": "/es/governance-control.html",
+      "destination": "/es/security-governance",
+      "permanent": true
+    },
+    {
+      "source": "/ai-inside-workflows",
+      "destination": "/humans-agents",
+      "permanent": true
+    },
+    {
+      "source": "/ai-inside-workflows.html",
+      "destination": "/humans-agents",
+      "permanent": true
+    },
+    {
+      "source": "/pl/ai-inside-workflows",
+      "destination": "/pl/humans-agents",
+      "permanent": true
+    },
+    {
+      "source": "/pl/ai-inside-workflows.html",
+      "destination": "/pl/humans-agents",
+      "permanent": true
+    },
+    {
+      "source": "/de/ai-inside-workflows",
+      "destination": "/de/humans-agents",
+      "permanent": true
+    },
+    {
+      "source": "/de/ai-inside-workflows.html",
+      "destination": "/de/humans-agents",
+      "permanent": true
+    },
+    {
+      "source": "/es/ai-inside-workflows",
+      "destination": "/es/humans-agents",
+      "permanent": true
+    },
+    {
+      "source": "/es/ai-inside-workflows.html",
+      "destination": "/es/humans-agents",
+      "permanent": true
+    },
+    {
+      "source": "/how-it-works",
+      "destination": "/how-it-works-overview",
+      "permanent": true
+    },
+    {
+      "source": "/how-it-works.html",
+      "destination": "/how-it-works-overview",
+      "permanent": true
+    },
+    {
+      "source": "/pl/how-it-works",
+      "destination": "/pl/how-it-works-overview",
+      "permanent": true
+    },
+    {
+      "source": "/pl/how-it-works.html",
+      "destination": "/pl/how-it-works-overview",
+      "permanent": true
+    },
+    {
+      "source": "/de/how-it-works",
+      "destination": "/de/how-it-works-overview",
+      "permanent": true
+    },
+    {
+      "source": "/de/how-it-works.html",
+      "destination": "/de/how-it-works-overview",
+      "permanent": true
+    },
+    {
+      "source": "/es/how-it-works",
+      "destination": "/es/how-it-works-overview",
+      "permanent": true
+    },
+    {
+      "source": "/es/how-it-works.html",
+      "destination": "/es/how-it-works-overview",
+      "permanent": true
     }
   ]
 }

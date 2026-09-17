@@ -21,80 +21,80 @@
             <!-- Desktop Navigation -->
             <nav class="dp-nav" role="navigation" aria-label="Main navigation">
                 <ul class="dp-nav__list">
-                    <!-- Platform (primary) -->
                     <li class="dp-nav__item dp-nav__item--has-dropdown" data-nav="platform">
                         <button class="dp-nav__link" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="dp-menu-platform">
                             Platform
                             <svg class="dp-nav__chevron" width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
                         </button>
                         <div class="dp-dropdown" id="dp-menu-platform" role="menu" aria-label="Platform">
+                            <p class="dp-dropdown__intro">One platform: applications are built from your documentation, then run under your rules.</p>
                             <a href="platform-2to2.html" class="dp-dropdown__item dp-dropdown__item--with-desc" role="menuitem">
-                                <span class="dp-dropdown__title">2to2 Platform</span>
-                                <span class="dp-dropdown__desc">Build apps, run workflows, govern agents</span>
+                                <span class="dp-dropdown__title">Platform overview</span>
+                                <span class="dp-dropdown__desc">What 2to2 is and what runs on it</span>
                             </a>
                             <a href="app-creator.html" class="dp-dropdown__item dp-dropdown__item--with-desc" role="menuitem">
-                                <span class="dp-dropdown__title">2to2 App Creator</span>
-                                <span class="dp-dropdown__desc">Build governed apps from documentation</span>
+                                <span class="dp-dropdown__title">App Creator</span>
+                                <span class="dp-dropdown__desc">Turn documentation into a working application</span>
                             </a>
-                            <a href="process-apps.html" class="dp-dropdown__item" role="menuitem">
+                            <a href="process-apps.html" class="dp-dropdown__item dp-dropdown__item--with-desc" role="menuitem">
                                 <span class="dp-dropdown__title">Process Apps</span>
+                                <span class="dp-dropdown__desc">What users get: apps that carry the work</span>
                             </a>
-                            <a href="orchestration-engine.html" class="dp-dropdown__item" role="menuitem">
+                            <a href="orchestration-engine.html" class="dp-dropdown__item dp-dropdown__item--with-desc" role="menuitem">
                                 <span class="dp-dropdown__title">Orchestration Engine</span>
+                                <span class="dp-dropdown__desc">The state-based engine that moves work forward</span>
                             </a>
-                            <a href="security-governance.html" class="dp-dropdown__item" role="menuitem">
+                            <a href="security-governance.html" class="dp-dropdown__item dp-dropdown__item--with-desc" role="menuitem">
                                 <span class="dp-dropdown__title">Security &amp; Governance</span>
+                                <span class="dp-dropdown__desc">Rules, roles, permissions and the audit trail</span>
                             </a>
                         </div>
                     </li>
 
-                    <!-- AI (primary) -->
-                    <li class="dp-nav__item dp-nav__item--has-dropdown" data-nav="ai">
-                        <button class="dp-nav__link" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="dp-menu-ai">
-                            AI
+                    <li class="dp-nav__item dp-nav__item--has-dropdown" data-nav="workers">
+                        <button class="dp-nav__link" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="dp-menu-workers">
+                            Digital Workers
                             <svg class="dp-nav__chevron" width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
                         </button>
-                        <div class="dp-dropdown" id="dp-menu-ai" role="menu" aria-label="AI">
-                            <a href="digital-workers.html" class="dp-dropdown__item" role="menuitem">
+                        <div class="dp-dropdown" id="dp-menu-workers" role="menu" aria-label="Digital Workers">
+                            <p class="dp-dropdown__intro">AI executes steps inside the same processes your people work in.</p>
+                            <a href="digital-workers.html" class="dp-dropdown__item dp-dropdown__item--with-desc" role="menuitem">
                                 <span class="dp-dropdown__title">Digital Workers</span>
+                                <span class="dp-dropdown__desc">AI that takes a step in the process, not a chat window</span>
                             </a>
-                            <a href="ai-inside-workflows.html" class="dp-dropdown__item" role="menuitem">
-                                <span class="dp-dropdown__title">AI inside workflows</span>
+                            <a href="humans-agents.html" class="dp-dropdown__item dp-dropdown__item--with-desc" role="menuitem">
+                                <span class="dp-dropdown__title">Humans + Digital Workers</span>
+                                <span class="dp-dropdown__desc">One process, one audit trail, two kinds of executor</span>
                             </a>
-                            <a href="governance-control.html" class="dp-dropdown__item" role="menuitem">
-                                <span class="dp-dropdown__title">Governance &amp; control</span>
-                            </a>
-                            <a href="why-not-copilots.html" class="dp-dropdown__item" role="menuitem">
+                            <a href="why-not-copilots.html" class="dp-dropdown__item dp-dropdown__item--with-desc" role="menuitem">
                                 <span class="dp-dropdown__title">Why not copilots</span>
+                                <span class="dp-dropdown__desc">Where prompt-based assistants stop being enough</span>
                             </a>
                         </div>
                     </li>
 
-                    <!-- How it works -->
-                    <li class="dp-nav__item dp-nav__item--has-dropdown" data-nav="how">
-                        <button class="dp-nav__link" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="dp-menu-how">
-                            How it works
+                    <li class="dp-nav__item">
+                        <a href="how-it-works-overview.html" class="dp-nav__link dp-nav__link--simple">How work runs</a>
+                    </li>
+
+                    <li class="dp-nav__item dp-nav__item--has-dropdown" data-nav="customers">
+                        <button class="dp-nav__link" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="dp-menu-customers">
+                            Customers
                             <svg class="dp-nav__chevron" width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
                         </button>
-                        <div class="dp-dropdown" id="dp-menu-how" role="menu" aria-label="How it works">
-                            <a href="how-it-works-overview.html" class="dp-dropdown__item" role="menuitem">
-                                <span class="dp-dropdown__title">Overview</span>
+                        <div class="dp-dropdown" id="dp-menu-customers" role="menu" aria-label="Customers">
+                            <p class="dp-dropdown__intro">Twenty years in production — and the path from one process to many.</p>
+                            <a href="customers.html" class="dp-dropdown__item dp-dropdown__item--with-desc" role="menuitem">
+                                <span class="dp-dropdown__title">Customers</span>
+                                <span class="dp-dropdown__desc">Who runs on Datapolis today</span>
                             </a>
-                            <a href="humans-agents.html" class="dp-dropdown__item" role="menuitem">
-                                <span class="dp-dropdown__title">Humans + Agents</span>
-                            </a>
-                            <a href="pilot-scale.html" class="dp-dropdown__item" role="menuitem">
-                                <span class="dp-dropdown__title">Pilot → scale</span>
+                            <a href="pilot-scale.html" class="dp-dropdown__item dp-dropdown__item--with-desc" role="menuitem">
+                                <span class="dp-dropdown__title">Pilot → Scale</span>
+                                <span class="dp-dropdown__desc">From a first process to an enterprise rollout</span>
                             </a>
                         </div>
                     </li>
 
-                    <!-- Customers (single link) -->
-                    <li class="dp-nav__item">
-                        <a href="customers.html" class="dp-nav__link dp-nav__link--simple">Customers</a>
-                    </li>
-
-                    <!-- Company -->
                     <li class="dp-nav__item dp-nav__item--has-dropdown" data-nav="company">
                         <button class="dp-nav__link" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="dp-menu-company">
                             Company
@@ -109,6 +109,7 @@
                             </a>
                         </div>
                     </li>
+
                 </ul>
             </nav>
 
@@ -144,52 +145,45 @@
         <div class="dp-mobile-menu" aria-hidden="true">
             <div class="dp-mobile-menu__inner">
                 <nav class="dp-mobile-nav">
-                    <!-- Platform -->
                     <div class="dp-mobile-nav__item">
                         <button class="dp-mobile-nav__trigger" type="button" aria-expanded="false">
                             Platform
                             <svg class="dp-mobile-nav__chevron" width="12" height="7" viewBox="0 0 10 6" fill="none"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
                         </button>
                         <div class="dp-mobile-nav__panel">
-                            <a href="platform-2to2.html" class="dp-mobile-nav__link">2to2 Platform</a>
-                            <a href="app-creator.html" class="dp-mobile-nav__link">2to2 App Creator</a>
+                            <a href="platform-2to2.html" class="dp-mobile-nav__link">Platform overview</a>
+                            <a href="app-creator.html" class="dp-mobile-nav__link">App Creator</a>
                             <a href="process-apps.html" class="dp-mobile-nav__link">Process Apps</a>
                             <a href="orchestration-engine.html" class="dp-mobile-nav__link">Orchestration Engine</a>
                             <a href="security-governance.html" class="dp-mobile-nav__link">Security &amp; Governance</a>
                         </div>
                     </div>
 
-                    <!-- AI -->
                     <div class="dp-mobile-nav__item">
                         <button class="dp-mobile-nav__trigger" type="button" aria-expanded="false">
-                            AI
+                            Digital Workers
                             <svg class="dp-mobile-nav__chevron" width="12" height="7" viewBox="0 0 10 6" fill="none"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
                         </button>
                         <div class="dp-mobile-nav__panel">
                             <a href="digital-workers.html" class="dp-mobile-nav__link">Digital Workers</a>
-                            <a href="ai-inside-workflows.html" class="dp-mobile-nav__link">AI inside workflows</a>
-                            <a href="governance-control.html" class="dp-mobile-nav__link">Governance &amp; control</a>
+                            <a href="humans-agents.html" class="dp-mobile-nav__link">Humans + Digital Workers</a>
                             <a href="why-not-copilots.html" class="dp-mobile-nav__link">Why not copilots</a>
                         </div>
                     </div>
 
-                    <!-- How it works -->
+                    <a href="how-it-works-overview.html" class="dp-mobile-nav__simple-link">How work runs</a>
+
                     <div class="dp-mobile-nav__item">
                         <button class="dp-mobile-nav__trigger" type="button" aria-expanded="false">
-                            How it works
+                            Customers
                             <svg class="dp-mobile-nav__chevron" width="12" height="7" viewBox="0 0 10 6" fill="none"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
                         </button>
                         <div class="dp-mobile-nav__panel">
-                            <a href="how-it-works-overview.html" class="dp-mobile-nav__link">Overview</a>
-                            <a href="humans-agents.html" class="dp-mobile-nav__link">Humans + Agents</a>
-                            <a href="pilot-scale.html" class="dp-mobile-nav__link">Pilot → scale</a>
+                            <a href="customers.html" class="dp-mobile-nav__link">Customers</a>
+                            <a href="pilot-scale.html" class="dp-mobile-nav__link">Pilot → Scale</a>
                         </div>
                     </div>
 
-                    <!-- Customers -->
-                    <a href="customers.html" class="dp-mobile-nav__simple-link">Customers</a>
-
-                    <!-- Company -->
                     <div class="dp-mobile-nav__item">
                         <button class="dp-mobile-nav__trigger" type="button" aria-expanded="false">
                             Company
@@ -200,6 +194,7 @@
                             <a href="contact.html" class="dp-mobile-nav__link">Contact</a>
                         </div>
                     </div>
+
                 </nav>
 
                 <!-- Mobile footer -->
