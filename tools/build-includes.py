@@ -100,6 +100,116 @@ def _wf3_modified():
 WF3_MODIFIED = _wf3_modified()
 
 
+# ============================================================
+#  Zgoda na ciasteczka + Google Analytics
+#  Jeden blok wstrzykiwany w <head> każdej strony, idempotentnie.
+#  Kolejność ma znaczenie: domyślne odmowy (Consent Mode v2) muszą
+#  wykonać się PRZED załadowaniem gtag.js, inaczej GA zdąży zapisać
+#  ciasteczko zanim użytkownik cokolwiek kliknie.
+# ============================================================
+
+GA_ID = "G-41L2VC300P"
+C_START, C_END = "<!--build:consent-->", "<!--/build:consent-->"
+
+CONSENT_TEXT = {
+    "en": {
+        "msg": "We use Google Analytics to see which pages get read. No analytics cookies are stored without your consent.",
+        "yes": "I agree", "no": "Essential only", "more": "Privacy policy",
+    },
+    "pl": {
+        "msg": "Używamy Google Analytics, żeby wiedzieć, które strony są czytane. Bez Twojej zgody nie zapisujemy żadnych ciasteczek analitycznych.",
+        "yes": "Zgadzam się", "no": "Tylko niezbędne", "more": "Polityka prywatności",
+    },
+    "de": {
+        "msg": "Wir nutzen Google Analytics, um zu sehen, welche Seiten gelesen werden. Ohne Ihre Einwilligung werden keine Analyse-Cookies gesetzt.",
+        "yes": "Einverstanden", "no": "Nur notwendige", "more": "Datenschutz",
+    },
+    "es": {
+        "msg": "Usamos Google Analytics para saber qué páginas se leen. Sin su consentimiento no se guarda ninguna cookie analítica.",
+        "yes": "Acepto", "no": "Solo esenciales", "more": "Política de privacidad",
+    },
+}
+
+
+def consent_block(lang):
+    t = CONSENT_TEXT.get(lang, CONSENT_TEXT["en"])
+    return f"""{C_START}
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){{dataLayer.push(arguments);}}
+      gtag('consent', 'default', {{
+        'ad_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied',
+        'analytics_storage': 'denied',
+        'functionality_storage': 'denied',
+        'personalization_storage': 'denied',
+        'security_storage': 'granted',
+        'wait_for_update': 500
+      }});
+      try {{
+        if (localStorage.getItem('dp-consent') === 'granted') {{
+          gtag('consent', 'update', {{'analytics_storage': 'granted'}});
+        }}
+      }} catch (e) {{}}
+      gtag('js', new Date());
+      gtag('config', '{GA_ID}', {{'anonymize_ip': true}});
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id={GA_ID}"></script>
+    <style>
+      .dp-consent{{position:fixed;left:16px;right:16px;bottom:16px;z-index:9999;max-width:760px;margin:0 auto;
+        display:none;gap:18px;align-items:center;flex-wrap:wrap;justify-content:space-between;
+        padding:18px 20px;border:1px solid rgba(148,163,184,.22);border-radius:14px;
+        background:rgba(11,18,32,.97);backdrop-filter:blur(10px);
+        box-shadow:0 18px 50px rgba(0,0,0,.45);color:#cbd5e1;
+        font-family:Inter,system-ui,sans-serif;font-size:.92rem;line-height:1.55}}
+      .dp-consent[data-show="1"]{{display:flex}}
+      .dp-consent p{{margin:0;flex:1 1 320px}}
+      .dp-consent a{{color:#7dd3fc}}
+      .dp-consent div{{display:flex;gap:10px;flex:0 0 auto}}
+      .dp-consent button{{font:inherit;cursor:pointer;border-radius:9px;padding:9px 16px;border:1px solid transparent;white-space:nowrap}}
+      .dp-consent .dp-consent__yes{{background:#14b8a6;color:#04211f;font-weight:600}}
+      .dp-consent .dp-consent__no{{background:transparent;color:#cbd5e1;border-color:rgba(148,163,184,.35)}}
+      @media (max-width:560px){{.dp-consent div{{width:100%}}.dp-consent button{{flex:1}}}}
+    </style>
+    <script>
+      (function () {{
+        function store(v) {{ try {{ localStorage.setItem('dp-consent', v); }} catch (e) {{}} }}
+        function saved() {{ try {{ return localStorage.getItem('dp-consent'); }} catch (e) {{ return null; }} }}
+        if (saved()) return;
+        document.addEventListener('DOMContentLoaded', function () {{
+          var bar = document.createElement('aside');
+          bar.className = 'dp-consent';
+          bar.setAttribute('role', 'dialog');
+          bar.setAttribute('aria-live', 'polite');
+          bar.innerHTML = '<p>{t["msg"]} <a href="legal.html">{t["more"]}</a></p>'
+            + '<div><button type="button" class="dp-consent__no">{t["no"]}</button>'
+            + '<button type="button" class="dp-consent__yes">{t["yes"]}</button></div>';
+          document.body.appendChild(bar);
+          bar.setAttribute('data-show', '1');
+          bar.querySelector('.dp-consent__yes').addEventListener('click', function () {{
+            store('granted');
+            gtag('consent', 'update', {{'analytics_storage': 'granted'}});
+            bar.remove();
+          }});
+          bar.querySelector('.dp-consent__no').addEventListener('click', function () {{
+            store('denied');
+            bar.remove();
+          }});
+        }});
+      }})();
+    </script>
+    {C_END}"""
+
+
+def inject_consent(html, lang):
+    block = consent_block(lang)
+    old = re.compile(re.escape(C_START) + r".*?" + re.escape(C_END), re.S)
+    if old.search(html):
+        return old.sub(lambda _m: block, html, count=1)
+    return html.replace("</head>", "\n    " + block + "\n</head>", 1)
+
+
 def graph_for(lang, page, title, desc):
     url = url_for(lang, page)
     nodes = [organization(), website()]
@@ -249,6 +359,7 @@ def main():
             desc = re.sub(r"\s+", " ", desc.group(1)).strip() if desc else ""
 
             html = inject_jsonld(html, graph_for(lang, page, title, desc))
+            html = inject_consent(html, lang)
 
             links_after += len(set(re.findall(r'href="(?!http)[^"]+\.html"', html)))
 

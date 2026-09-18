@@ -67,6 +67,26 @@ rozszerzenia `.html`, więc `/de/index` zwróci 404.
   `<meta name="robots" content="noindex,follow">` i przebuduj sitemapę.
   Wpis wypadnie z niej sam.
 
+## Analityka i zgoda na ciasteczka
+
+Google Analytics 4 (`G-41L2VC300P`) plus baner zgody wchodzą **jednym blokiem**
+`<!--build:consent-->` wstrzykiwanym w `<head>` każdej strony przez
+`tools/build-includes.py`. Nie edytuj tego bloku w plikach HTML — najbliższy build go nadpisze.
+Teksty baneru dla czterech języków siedzą w słowniku `CONSENT_TEXT` w tym samym skrypcie.
+
+Zasada, której ten blok pilnuje: **Consent Mode v2 z domyślną odmową wykonuje się PRZED
+załadowaniem `gtag.js`**. Odwrócenie tej kolejności sprawia, że Google zapisuje ciasteczko,
+zanim ktokolwiek cokolwiek kliknie — czyli dokładnie to, czego baner ma zapobiegać.
+Domyślnie odmawiamy wszystkiego poza `security_storage`; po kliknięciu „Zgadzam się"
+podnosimy wyłącznie `analytics_storage` (reklam nie prowadzimy, więc `ad_*` zostaje odmówione).
+
+Wybór użytkownika ląduje w `localStorage` pod kluczem `dp-consent`.
+
+**Otwarte:** polityka prywatności (`legal.html`) nadal nie wspomina o ciasteczkach
+ani o Google Analytics, w żadnym z czterech języków. To treść prawna i wymaga kogoś,
+kto za nią odpowiada. Do czasu jej uzupełnienia baner działa, ale link „Polityka prywatności"
+prowadzi do dokumentu, który o ciasteczkach milczy.
+
 ## Sitemapa i zgłaszanie zmian
 
 `sitemap.xml` **nie jest już pisana ręcznie** — generuje ją skrypt ze stanu katalogu:
