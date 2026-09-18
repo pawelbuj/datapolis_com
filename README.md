@@ -56,6 +56,10 @@ rozszerzenia `.html`, więc `/de/index` zwróci 404.
   Nie wracaj do `@import` w CSS: `@import` postawiony po jakiejkolwiek regule
   stylu jest przez przeglądarki ignorowany (tak było wcześniej — fonty w ogóle
   się nie ładowały).
+- **`<meta name="google-site-verification">`** siedzi w `<head>` czterech stron
+  głównych (EN/PL/DE/ES) i weryfikuje serwis w Google Search Console.
+  Nie usuwaj — usunięcie odpina właściwość i tracimy raporty, w tym ten
+  o wyświetleniach w AI Overviews i AI Mode. `build-includes.py` go nie rusza.
 - **Nowa strona** — dodaj plik we wszystkich czterech językach, uruchom build,
   a potem `python3 tools/build-sitemap.py`. Bloki `canonical` / `hreflang` / OG
   leżą między znacznikami `<!-- SEO: … -->` … `<!-- /SEO -->`.
