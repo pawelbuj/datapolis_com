@@ -2,5 +2,6 @@ src/
 node_modules/
 vite.config.js
 package-lock.json
+tools/
 
 _to_delete

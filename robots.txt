@@ -1,6 +1,45 @@
+# datapolis.com
+#
+# Chcemy być indeksowani i cytowani — również przez wyszukiwarki AI.
+# Boty poniżej wypisane są jawnie, żeby żadna przyszła zmiana reguły
+# ogólnej nie odcięła nas przez przypadek. Każdy z nich decyduje o tym,
+# czy w ogóle możemy zostać zacytowani w odpowiedzi.
+
 User-agent: *
 Allow: /
 Disallow: /_to_delete/
 Disallow: /includes/
+
+# ChatGPT — bez OAI-SearchBot nie pojawimy się w wynikach ChatGPT Search
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+# Claude — Claude-SearchBot indeksuje, Claude-User pobiera na pytanie użytkownika
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+# Perplexity
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+# Google (AI Overviews i AI Mode jadą na zwykłym Googlebocie)
+User-agent: Googlebot
+Allow: /
+
+# Google-Extended dotyczy aplikacji Gemini, nie AI Overviews
+User-agent: Google-Extended
+Allow: /
+
+User-agent: bingbot
+Allow: /
 
 Sitemap: https://datapolis.com/sitemap.xml

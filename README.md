@@ -57,9 +57,39 @@ rozszerzenia `.html`, więc `/de/index` zwróci 404.
   stylu jest przez przeglądarki ignorowany (tak było wcześniej — fonty w ogóle
   się nie ładowały).
 - **Nowa strona** — dodaj plik we wszystkich czterech językach, uruchom build,
-  a następnie dopisz ją do `sitemap.xml`. Bloki `canonical` / `hreflang` / OG
+  a potem `python3 tools/build-sitemap.py`. Bloki `canonical` / `hreflang` / OG
   leżą między znacznikami `<!-- SEO: … -->` … `<!-- /SEO -->`.
-- **Usunięta strona** — dopisz regułę 301 w `vercel.json` i usuń wpis z sitemapy.
+- **Usunięta strona** — dopisz regułę 301 w `vercel.json`, wstaw stronie
+  `<meta name="robots" content="noindex,follow">` i przebuduj sitemapę.
+  Wpis wypadnie z niej sam.
+
+## Sitemapa i zgłaszanie zmian
+
+`sitemap.xml` **nie jest już pisana ręcznie** — generuje ją skrypt ze stanu katalogu:
+
+```bash
+python3 tools/build-sitemap.py            # zapisuje
+python3 tools/build-sitemap.py --check    # tylko pokazuje, co by się zmieniło
+```
+
+Skrypt sam pomija strony z `noindex`, sam dobiera `hreflang` do tych języków,
+w których strona faktycznie istnieje (`/sharepoint` jest tylko po angielsku
+i alternatyw nie dostaje), a `<lastmod>` bierze z daty ostatniego commita pliku.
+Data jest sygnałem świeżości — wyszukiwarki AI cytują głównie treści
+aktualizowane w ciągu ostatniego roku — więc ma odzwierciedlać realne zmiany,
+a nie datę ostatniego builda.
+
+Po wdrożeniu zmian na produkcję:
+
+```bash
+python3 tools/indexnow.py --changed       # adresy z ostatniego commita
+python3 tools/indexnow.py --all           # cała sitemapa (po dużej przebudowie)
+```
+
+IndexNow obsługują Bing i Copilot (oraz Yandex, Naver, Seznam) — jedno API dla
+wszystkich. Google go nie obsługuje, tam pracuje sitemapa z `lastmod`.
+Klucz leży w pliku `<klucz>.txt` w katalogu głównym i **musi być publicznie
+dostępny**, zanim pierwszy raz coś zgłosimy — inaczej API odpowiada 403.
 
 ## Dane strukturalne
 
