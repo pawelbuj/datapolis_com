@@ -34,3 +34,8 @@ Thumbs.db
 
 __pycache__/
 *.pyc
+
+# poświadczenia — nigdy do repo
+*service-account*.json
+*-key.json
+.datapolis/
