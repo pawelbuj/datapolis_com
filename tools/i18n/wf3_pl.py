@@ -45,6 +45,13 @@ PL = {
 "st_r5state": "Stoją",
 "st_r5c2": "Nintex działa na silniku SharePoint 2010, więc ta sama aktualizacja go zatrzymała. Te same polecenia go przywracają.",
 
+"st_r6c1": "Datapolis Process System for SharePoint SE",
+"st_r6state": "Stoi",
+"st_r6c2": "nasz starszy produkt też działa na silniku SharePoint 2010, więc ta sama aktualizacja go zatrzymała. Powyższe polecenia go przywracają, a droga stąd do Workbox for SE jest krótka.",
+"st_r7c1": "Datapolis Workbox for SharePoint SE",
+"st_r7state": "Działa",
+"st_r7c2": "Workbox ma własny silnik przepływów i nie korzysta z platformy SharePoint 2010, więc KB5002908 go nie dotyczy.",
+
 "fx_eyebrow": "Jak to naprawić",
 "fx_title": "Jak włączyć przepływy pracy z powrotem",
 "fx_lead": "Poniższe polecenia są dostępne od sierpniowej aktualizacji. Działają na poziomie zbioru witryn &mdash; nie ma przełącznika dla całej farmy. Microsoft opisuje je w treści artykułu KB, ale nie dał im żadnej strony w dokumentacji PowerShella, dlatego tak trudno je znaleźć, kiedy farma już stoi.",

@@ -45,6 +45,13 @@ ES = {
 "st_r5state": "Parados",
 "st_r5c2": "Nintex funciona sobre el motor de SharePoint 2010, así que la misma actualización lo detuvo. Los mismos comandos lo recuperan.",
 
+"st_r6c1": "Datapolis Process System for SharePoint SE",
+"st_r6state": "Parado",
+"st_r6c2": "nuestro propio producto más antiguo también funciona sobre el motor de SharePoint 2010, así que la misma actualización lo detuvo. Los comandos de arriba lo recuperan, y el camino desde aquí hasta Workbox for SE es corto.",
+"st_r7c1": "Datapolis Workbox for SharePoint SE",
+"st_r7state": "Funciona",
+"st_r7c2": "Workbox tiene su propio motor de flujos de trabajo y no usa la plataforma de SharePoint 2010, de modo que KB5002908 no le alcanza.",
+
 "fx_eyebrow": "La solución",
 "fx_title": "Cómo volver a activar sus flujos de trabajo",
 "fx_lead": "Los cmdlets siguientes llegan con la actualización de agosto de 2026 en adelante. Actúan por colección de sitios &mdash; no hay un interruptor para toda la granja. Microsoft los publica en el texto del artículo KB, pero no les da página de referencia en su documentación de PowerShell, y por eso cuesta encontrarlos cuando la granja ya está parada.",

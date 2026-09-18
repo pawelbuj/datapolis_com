@@ -45,6 +45,13 @@ DE = {
 "st_r5state": "Stehen",
 "st_r5c2": "Nintex läuft auf der SharePoint-2010-Engine, dasselbe Update hat es gestoppt. Dieselben Kommandos holen es zurück.",
 
+"st_r6c1": "Datapolis Process System for SharePoint SE",
+"st_r6state": "Steht",
+"st_r6c2": "unser eigenes älteres Produkt läuft ebenfalls auf der SharePoint-2010-Engine, dasselbe Update hat es gestoppt. Die Kommandos oben holen es zurück, und der Weg von hier zu Workbox for SE ist kurz.",
+"st_r7c1": "Datapolis Workbox for SharePoint SE",
+"st_r7state": "Läuft",
+"st_r7c2": "Workbox hat eine eigene Workflow-Engine und nutzt die SharePoint-2010-Plattform nicht, KB5002908 erreicht es also nicht.",
+
 "fx_eyebrow": "Die Behebung",
 "fx_title": "So schalten Sie Ihre Workflows wieder ein",
 "fx_lead": "Die folgenden Cmdlets liegen ab dem August-Update 2026 bei. Sie wirken je Websitesammlung &mdash; einen farmweiten Schalter gibt es nicht. Microsoft beschreibt sie im Text des KB-Artikels, gibt ihnen in der PowerShell-Dokumentation aber keine Referenzseite. Genau deshalb sind sie schwer zu finden, wenn die Farm bereits steht.",

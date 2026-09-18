@@ -147,6 +147,8 @@ TPL = """<!DOCTYPE html>
                         <tr><td>{st_r3c1}</td><td><span class="wf3-yes">{st_r3state}</span> &mdash; {st_r3c2}</td></tr>
                         <tr><td>{st_r4c1}</td><td><span class="wf3-no">{st_r4state}</span> &mdash; {st_r4c2}</td></tr>
                         <tr><td>{st_r5c1}</td><td><span class="wf3-no">{st_r5state}</span> &mdash; {st_r5c2}</td></tr>
+                        <tr><td>{st_r6c1}</td><td><span class="wf3-no">{st_r6state}</span> &mdash; {st_r6c2}</td></tr>
+                        <tr><td>{st_r7c1}</td><td><span class="wf3-yes">{st_r7state}</span> &mdash; {st_r7c2}</td></tr>
                     </tbody>
                 </table>
                 </div>

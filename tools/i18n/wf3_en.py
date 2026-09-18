@@ -45,6 +45,13 @@ EN = {
 "st_r5state": "Stopped",
 "st_r5c2": "Nintex runs on the SharePoint 2010 engine, so the same update stopped it. The same commands bring it back.",
 
+"st_r6c1": "Datapolis Process System for SharePoint SE",
+"st_r6state": "Stopped",
+"st_r6c2": "our own older product runs on the SharePoint 2010 engine too, so the same update stopped it. The commands above bring it back, and the route from here to Workbox for SE is a short one.",
+"st_r7c1": "Datapolis Workbox for SharePoint SE",
+"st_r7state": "Running",
+"st_r7c2": "Workbox has its own workflow engine and does not use the SharePoint 2010 platform, so KB5002908 does not reach it.",
+
 "fx_eyebrow": "The fix",
 "fx_title": "How to turn your workflows back on",
 "fx_lead": "The cmdlets below ship with the August 2026 update and later. They work per site collection &mdash; there is no farm-wide switch. Microsoft publishes them in the text of the KB but gives them no reference page in its PowerShell documentation, which is why they are hard to find when a farm is already down.",
