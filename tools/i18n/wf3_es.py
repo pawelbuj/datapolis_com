@@ -54,7 +54,7 @@ ES = {
 
 "fx_eyebrow": "La solución",
 "fx_title": "Cómo volver a activar sus flujos de trabajo",
-"fx_lead": "Los cmdlets siguientes llegan con la actualización de agosto de 2026 en adelante. Actúan por colección de sitios &mdash; no hay un interruptor para toda la granja. Microsoft los publica en el texto del artículo KB, pero no les da página de referencia en su documentación de PowerShell, y por eso cuesta encontrarlos cuando la granja ya está parada.",
+"fx_lead": "Estos cmdlets existen únicamente en SharePoint Server Subscription Edition, y solo con la actualización de agosto de 2026 o posterior instalada. Actúan por colección de sitios &mdash; no hay un interruptor para toda la granja. Microsoft los publica en el texto del artículo KB, pero no les da página de referencia en su documentación de PowerShell, y por eso cuesta encontrarlos cuando la granja ya está parada. En SharePoint Server 2016 y 2019 no los encontrará, y tampoco los necesita: la desactivación predeterminada no alcanza a esas versiones. Nada de esto afecta a SharePoint en Microsoft&nbsp;365; es un asunto exclusivo de las instalaciones en servidores propios.",
 "fx_c1": "Primero: en qué colecciones de sitios sigue activa la característica",
 "fx_c2": "Después: actívela donde el trabajo ocurre de verdad",
 "fx_c3": "Y para revertirlo",

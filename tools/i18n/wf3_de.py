@@ -54,7 +54,7 @@ DE = {
 
 "fx_eyebrow": "Die Behebung",
 "fx_title": "So schalten Sie Ihre Workflows wieder ein",
-"fx_lead": "Die folgenden Cmdlets liegen ab dem August-Update 2026 bei. Sie wirken je Websitesammlung &mdash; einen farmweiten Schalter gibt es nicht. Microsoft beschreibt sie im Text des KB-Artikels, gibt ihnen in der PowerShell-Dokumentation aber keine Referenzseite. Genau deshalb sind sie schwer zu finden, wenn die Farm bereits steht.",
+"fx_lead": "Diese Cmdlets gibt es ausschließlich auf der SharePoint Server Subscription Edition, und nur wenn das Update vom August 2026 oder neuer installiert ist. Sie wirken je Websitesammlung &mdash; einen farmweiten Schalter gibt es nicht. Microsoft beschreibt sie im Text des KB-Artikels, gibt ihnen in der PowerShell-Dokumentation aber keine Referenzseite. Genau deshalb sind sie schwer zu finden, wenn die Farm bereits steht. Auf SharePoint Server 2016 und 2019 finden Sie sie nicht &mdash; und brauchen sie dort auch nicht, denn die Standardabschaltung erreicht diese Versionen nicht. Nichts davon betrifft SharePoint in Microsoft&nbsp;365; es geht ausschließlich um On-Premises-Installationen.",
 "fx_c1": "Zuerst: in welchen Websitesammlungen das Feature noch aktiv ist",
 "fx_c2": "Dann: dort wieder einschalten, wo die Arbeit tatsächlich läuft",
 "fx_c3": "Und zum Zurücknehmen",

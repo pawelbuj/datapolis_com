@@ -54,7 +54,7 @@ EN = {
 
 "fx_eyebrow": "The fix",
 "fx_title": "How to turn your workflows back on",
-"fx_lead": "The cmdlets below ship with the August 2026 update and later. They work per site collection &mdash; there is no farm-wide switch. Microsoft publishes them in the text of the KB but gives them no reference page in its PowerShell documentation, which is why they are hard to find when a farm is already down.",
+"fx_lead": "These cmdlets exist only on SharePoint Server Subscription Edition, and only once the August 2026 update or later is installed. They work per site collection &mdash; there is no farm-wide switch. Microsoft publishes them in the text of the KB but gives them no reference page in its PowerShell documentation, which is why they are hard to find when a farm is already down. On SharePoint Server 2016 and 2019 you will not find them, and you do not need them: the default-disable does not reach those versions. None of this touches SharePoint in Microsoft&nbsp;365 &mdash; this is an on-premises matter only.",
 "fx_c1": "First: which site collections still have the feature on",
 "fx_c2": "Then: turn it back on where the work actually runs",
 "fx_c3": "And to reverse it",

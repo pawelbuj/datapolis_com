@@ -54,7 +54,7 @@ PL = {
 
 "fx_eyebrow": "Jak to naprawić",
 "fx_title": "Jak włączyć przepływy pracy z powrotem",
-"fx_lead": "Poniższe polecenia są dostępne od sierpniowej aktualizacji. Działają na poziomie zbioru witryn &mdash; nie ma przełącznika dla całej farmy. Microsoft opisuje je w treści artykułu KB, ale nie dał im żadnej strony w dokumentacji PowerShella, dlatego tak trudno je znaleźć, kiedy farma już stoi.",
+"fx_lead": "Te polecenia istnieją wyłącznie na SharePoint Server Subscription Edition i tylko wtedy, gdy zainstalowana jest aktualizacja z sierpnia 2026 albo nowsza. Działają na poziomie zbioru witryn &mdash; nie ma przełącznika dla całej farmy. Microsoft opisuje je w treści artykułu KB, ale nie dał im żadnej strony w dokumentacji PowerShella, dlatego tak trudno je znaleźć, kiedy farma już stoi. Na SharePoint Server 2016 i 2019 ich nie znajdziesz &mdash; i nie są tam potrzebne, bo domyślne wyłączenie tych wersji nie obejmuje. Nic z tego nie dotyczy SharePointa w Microsoft&nbsp;365; to sprawa wyłącznie instalacji na własnych serwerach.",
 "fx_c1": "Najpierw: na których zbiorach witryn funkcja jest jeszcze włączona",
 "fx_c2": "Potem: włącz ją tam, gdzie praca faktycznie się dzieje",
 "fx_c3": "A żeby cofnąć",

@@ -501,7 +501,7 @@
                     <h2 class="v7-steps-section__title" id="wf3-fix">How to turn your workflows back on</h2>
                 </div>
 
-                <p class="v7-page-hero__lead">The cmdlets below ship with the August 2026 update and later. They work per site collection &mdash; there is no farm-wide switch. Microsoft publishes them in the text of the KB but gives them no reference page in its PowerShell documentation, which is why they are hard to find when a farm is already down.</p>
+                <p class="v7-page-hero__lead">These cmdlets exist only on SharePoint Server Subscription Edition, and only once the August 2026 update or later is installed. They work per site collection &mdash; there is no farm-wide switch. Microsoft publishes them in the text of the KB but gives them no reference page in its PowerShell documentation, which is why they are hard to find when a farm is already down. On SharePoint Server 2016 and 2019 you will not find them, and you do not need them: the default-disable does not reach those versions. None of this touches SharePoint in Microsoft&nbsp;365 &mdash; this is an on-premises matter only.</p>
 
                 <pre class="wf3-code"><code><span class="wf3-comment"># First: which site collections still have the feature on</span>
 Get-SPLegacyWorkflowEnabledSites
