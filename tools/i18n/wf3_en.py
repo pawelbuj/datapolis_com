@@ -96,12 +96,12 @@ EN = {
 "src4": "SharePoint Workflow Manager lifecycle",
 "src5": "Stefan Go&szlig;ner: are you using SP2010 or SP2013 workflows in your farms?",
 
-"form_title": "Twenty minutes, no sales pitch",
-"form_helper": "Tell us what your farm runs. We reply within 1&ndash;2 business days.",
-"form_note": "Straight answer, even when the answer is &ldquo;don&rsquo;t pick Workbox&rdquo;.",
+"form_title": "Send us what stopped",
+"form_helper": "Your SharePoint version, the last update you installed, and which workflows stopped. We write back with what we would check first.",
+"form_note": "A written answer by e-mail &mdash; including when it is &ldquo;enable the feature, patch, change nothing else&rdquo;.",
 
-"cta_lead": "Twenty minutes. Tell us what your farm runs and what it has to keep doing. We will tell you what we would do &mdash; including when the answer is to enable the feature, patch, and change nothing else.",
-"cta_1": "Talk to an expert",
+"cta_lead": "If the workflows that stopped are the ones your business actually runs on, the next question is what they should be running on a year from now. Send us the list and we will tell you what we would rebuild, what we would leave alone, and what we would not touch at all.",
+"cta_1": "Write to us",
 "cta_2": "See the platform",
-"cta_mail": "Or write to",
+"cta_mail": "Or directly:",
 }

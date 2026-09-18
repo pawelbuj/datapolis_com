@@ -96,12 +96,12 @@ PL = {
 "src4": "Cykl życia SharePoint Workflow Manager",
 "src5": "Stefan Go&szlig;ner: czy używasz przepływów SP2010 albo SP2013 w swoich farmach?",
 
-"form_title": "Dwadzieścia minut, bez sprzedaży",
-"form_helper": "Napisz, co działa na Twojej farmie. Odpowiadamy w 1&ndash;2 dni robocze.",
-"form_note": "Prosta odpowiedź, także wtedy, gdy brzmi „nie wybierajcie Workboksa&rdquo;.",
+"form_title": "Napisz, co przestało działać",
+"form_helper": "Wersja SharePointa, ostatnia zainstalowana aktualizacja i które przepływy stanęły. Odpisujemy, co sprawdzilibyśmy najpierw.",
+"form_note": "Odpowiedź na piśmie, mailem &mdash; także wtedy, gdy brzmi „włącz funkcję, zaktualizuj i nie zmieniaj nic więcej&rdquo;.",
 
-"cta_lead": "Dwadzieścia minut. Powiedz, co działa na Twojej farmie i co musi działać dalej. Powiemy, co zrobilibyśmy my &mdash; łącznie z sytuacją, w której odpowiedź brzmi: włącz funkcję, zaktualizuj i nie zmieniaj nic więcej.",
-"cta_1": "Porozmawiaj z ekspertem",
+"cta_lead": "Jeśli przepływy, które stanęły, to te, na których naprawdę stoi firma, następne pytanie brzmi: na czym mają działać za rok. Przyślij ich listę, a powiemy, co przebudowalibyśmy, co zostawili tak jak jest, a czego nie ruszalibyśmy w ogóle.",
+"cta_1": "Napisz do nas",
 "cta_2": "Zobacz platformę",
-"cta_mail": "Albo napisz na",
+"cta_mail": "Albo bezpośrednio:",
 }

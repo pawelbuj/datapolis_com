@@ -96,12 +96,12 @@ ES = {
 "src4": "Ciclo de vida de SharePoint Workflow Manager",
 "src5": "Stefan Go&szlig;ner: ¿usa flujos SP2010 o SP2013 en sus granjas?",
 
-"form_title": "Veinte minutos, sin argumentario de venta",
-"form_helper": "Cuéntenos qué corre en su granja. Respondemos en 1&ndash;2 días laborables.",
-"form_note": "Respuesta directa, incluso cuando sea «no elija Workbox».",
+"form_title": "Cuéntenos qué se ha parado",
+"form_helper": "Su versión de SharePoint, la última actualización instalada y qué flujos se han parado. Le respondemos con lo que revisaríamos primero.",
+"form_note": "Una respuesta por escrito, por correo, incluso cuando sea: active la característica, aplique el parche y no cambie nada más.",
 
-"cta_lead": "Veinte minutos. Cuéntenos qué corre en su granja y qué tiene que seguir funcionando. Le diremos qué haríamos nosotros, incluido cuando la respuesta sea: active la característica, aplique el parche y no cambie nada más.",
-"cta_1": "Hable con un experto",
+"cta_lead": "Si los flujos que se han parado son aquellos sobre los que su negocio funciona de verdad, la siguiente pregunta es sobre qué deberían funcionar dentro de un año. Envíenos la lista y le diremos qué reconstruiríamos, qué dejaríamos como está y qué no tocaríamos en absoluto.",
+"cta_1": "Escríbanos",
 "cta_2": "Ver la plataforma",
-"cta_mail": "O escriba a",
+"cta_mail": "O directamente:",
 }
