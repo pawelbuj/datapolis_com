@@ -20,6 +20,8 @@ from __future__ import annotations
 
 import json
 import re
+import shutil
+import ssl
 import subprocess
 import sys
 import urllib.error
@@ -66,6 +68,39 @@ def sitemap_urls() -> list[str]:
     return re.findall(r"<loc>(.*?)</loc>", xml)
 
 
+def ssl_context() -> ssl.SSLContext:
+    """Python z python.org na macOS bywa bez certyfikatów — jeśli jest certifi, użyj go."""
+    try:
+        import certifi
+        return ssl.create_default_context(cafile=certifi.where())
+    except ImportError:
+        return ssl.create_default_context()
+
+
+def submit_via_curl(payload: dict) -> None:
+    """Zapasowa droga: curl korzysta z magazynu certyfikatów systemu."""
+    curl = shutil.which("curl")
+    if not curl:
+        raise SystemExit(
+            "Python nie ma certyfikatów CA, a curl nie jest dostępny.\n"
+            "Napraw certyfikaty: uruchom 'Install Certificates.command' z katalogu\n"
+            "/Applications/Python 3.x/ albo zainstaluj certifi (pip3 install certifi)."
+        )
+    out = subprocess.run(
+        [curl, "-sS", "-X", "POST", ENDPOINT,
+         "-H", "Content-Type: application/json; charset=utf-8",
+         "--data-binary", "@-", "-w", "\n%{http_code}", "--max-time", "30"],
+        input=json.dumps(payload), capture_output=True, text=True,
+    )
+    status = out.stdout.strip().rsplit("\n", 1)[-1] if out.stdout.strip() else "?"
+    body = out.stdout.strip().rsplit("\n", 1)[0] if "\n" in out.stdout.strip() else ""
+    print(f"IndexNow (przez curl): HTTP {status} — zgłoszono {len(payload['urlList'])} adresów")
+    if body:
+        print("  ", body[:300])
+    if status not in {"200", "202"}:
+        raise SystemExit(1)
+
+
 def submit(urls: list[str], key: str) -> None:
     payload = {
         "host": HOST,
@@ -80,7 +115,7 @@ def submit(urls: list[str], key: str) -> None:
         method="POST",
     )
     try:
-        with urllib.request.urlopen(req, timeout=30) as resp:
+        with urllib.request.urlopen(req, timeout=30, context=ssl_context()) as resp:
             print(f"IndexNow: HTTP {resp.status} — zgłoszono {len(payload['urlList'])} adresów")
     except urllib.error.HTTPError as exc:
         body = exc.read().decode("utf-8", "replace")[:300]
@@ -88,6 +123,12 @@ def submit(urls: list[str], key: str) -> None:
         if exc.code == 403:
             print(f"  403 znaczy, że {BASE}/{key}.txt nie jest jeszcze publicznie dostępny.")
         raise SystemExit(1)
+    except urllib.error.URLError as exc:
+        if isinstance(exc.reason, ssl.SSLCertVerificationError):
+            print("Python nie ma certyfikatów CA — próbuję przez curl.")
+            submit_via_curl(payload)
+        else:
+            raise
 
 
 def main() -> int:
