@@ -2,12 +2,23 @@
    Tylko to, czego nie ma w systemie v7: tabela stanu, blok z poleceniami,
    ostrzeżenie i karty źródeł. Reszta strony jedzie na klasach .v7-*. */
 
+.wf3-status-wrap {
+    margin-top: 2rem;
+    overflow-x: auto;
+    border: 1px solid var(--v7-line);
+    border-radius: 12px;
+    background: rgba(11, 18, 32, 0.45);
+}
+
 .wf3-status {
     width: 100%;
+    min-width: 640px;
     border-collapse: collapse;
-    margin-top: 2rem;
     font-size: 0.975rem;
 }
+
+/* ostatni wiersz bez kreski — ramkę domyka opakowanie */
+.wf3-status tbody tr:last-child td { border-bottom: 0; }
 
 .wf3-status th,
 .wf3-status td {
@@ -94,6 +105,8 @@
 }
 
 @media (max-width: 720px) {
+    .wf3-status { min-width: 0; }
+
     .wf3-status,
     .wf3-status thead,
     .wf3-status tbody,

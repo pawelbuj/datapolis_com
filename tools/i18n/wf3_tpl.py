@@ -48,11 +48,11 @@ TPL = """<!DOCTYPE html>
     <link rel="stylesheet" href="{a}assets/css/dark-theme.css?v=1d664f9e">
     <link rel="stylesheet" href="{a}assets/css/new-homepage.css?v=8f7d4412">
     <link rel="stylesheet" href="{a}assets/css/home-v7.css?v=52eaffbf">
-    <link rel="stylesheet" href="{a}assets/css/sharepoint-wf3.css?v=1a0c55e2">
+    <link rel="stylesheet" href="{a}assets/css/sharepoint-wf3.css?v=7b41d9e0">
 
     <script src="{a}includes/loader.js"></script>
 </head>
-<body>
+<body class="dark-theme wf3-page">
 
     <div id="header-placeholder"></div>
 
@@ -73,6 +73,26 @@ TPL = """<!DOCTYPE html>
                         <li><span aria-hidden="true">&#10003;</span> {pt2}</li>
                         <li><span aria-hidden="true">&#10003;</span> {pt3}</li>
                     </ul>
+                </div>
+
+                <div class="v7-formcard">
+                    <p class="v7-formcard__title">{form_title}</p>
+                    <p class="v7-formcard__helper">{form_helper}</p>
+
+                    <!-- Workflow Form Embed -->
+                    <div id="workflow-form-www-contacts-wf3"></div>
+                    <script src="https://2to2.ai/embed-workflow.js"
+                      data-workflow="www-contacts"
+                      data-container="workflow-form-www-contacts-wf3"
+                      data-base-url="https://2to2.ai">
+                    </script>
+
+                    <p class="v7-formcard__note">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/>
+                        </svg>
+                        {form_note}
+                    </p>
                 </div>
             </div>
         </section>
@@ -116,6 +136,7 @@ TPL = """<!DOCTYPE html>
                     <h2 class="v7-band__title" id="wf3-status">{st_title}</h2>
                 </div>
 
+                <div class="wf3-status-wrap">
                 <table class="wf3-status">
                     <thead>
                         <tr><th>{st_col1}</th><th>{st_col2}</th></tr>
@@ -128,6 +149,7 @@ TPL = """<!DOCTYPE html>
                         <tr><td>{st_r5c1}</td><td><span class="wf3-no">{st_r5state}</span> &mdash; {st_r5c2}</td></tr>
                     </tbody>
                 </table>
+                </div>
             </div>
         </section>
 

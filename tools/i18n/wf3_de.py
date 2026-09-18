@@ -96,6 +96,10 @@ DE = {
 "src4": "Lebenszyklus des SharePoint Workflow Manager",
 "src5": "Stefan Go&szlig;ner: Nutzen Sie SP2010- oder SP2013-Workflows in Ihren Farmen?",
 
+"form_title": "Zwanzig Minuten, ohne Verkaufsgespräch",
+"form_helper": "Schreiben Sie uns, was auf Ihrer Farm läuft. Wir antworten in 1&ndash;2 Werktagen.",
+"form_note": "Klare Antwort, auch wenn sie lautet: &bdquo;Nehmen Sie nicht Workbox.&ldquo;",
+
 "cta_lead": "Zwanzig Minuten. Sagen Sie uns, was auf Ihrer Farm läuft und was weiterlaufen muss. Wir sagen Ihnen, was wir tun würden &mdash; auch dann, wenn die Antwort lautet: Feature aktivieren, patchen, sonst nichts ändern.",
 "cta_1": "Mit einem Experten sprechen",
 "cta_2": "Die Plattform ansehen",

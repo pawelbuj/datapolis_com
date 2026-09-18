@@ -36,7 +36,7 @@
     <link rel="stylesheet" href="assets/css/dark-theme.css?v=1d664f9e">
     <link rel="stylesheet" href="assets/css/new-homepage.css?v=8f7d4412">
     <link rel="stylesheet" href="assets/css/home-v7.css?v=52eaffbf">
-    <link rel="stylesheet" href="assets/css/sharepoint-wf3.css?v=1a0c55e2">
+    <link rel="stylesheet" href="assets/css/sharepoint-wf3.css?v=7b41d9e0">
 
     <script src="includes/loader.js"></script>
 
@@ -176,7 +176,7 @@
     </script>
     <!-- /JSON-LD -->
 </head>
-<body>
+<body class="dark-theme wf3-page">
 
     <div id="header-placeholder"><!--build:header-->
     <header class="dp-header">
@@ -413,6 +413,26 @@
                         <li><span aria-hidden="true">&#10003;</span> Covers the on-premises case, not the move to Microsoft&nbsp;365</li>
                     </ul>
                 </div>
+
+                <div class="v7-formcard">
+                    <p class="v7-formcard__title">Twenty minutes, no sales pitch</p>
+                    <p class="v7-formcard__helper">Tell us what your farm runs. We reply within 1&ndash;2 business days.</p>
+
+                    <!-- Workflow Form Embed -->
+                    <div id="workflow-form-www-contacts-wf3"></div>
+                    <script src="https://2to2.ai/embed-workflow.js"
+                      data-workflow="www-contacts"
+                      data-container="workflow-form-www-contacts-wf3"
+                      data-base-url="https://2to2.ai">
+                    </script>
+
+                    <p class="v7-formcard__note">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/>
+                        </svg>
+                        Straight answer, even when the answer is &ldquo;don&rsquo;t pick Workbox&rdquo;.
+                    </p>
+                </div>
             </div>
         </section>
 
@@ -455,6 +475,7 @@
                     <h2 class="v7-band__title" id="wf3-status">Are your workflows running right now?</h2>
                 </div>
 
+                <div class="wf3-status-wrap">
                 <table class="wf3-status">
                     <thead>
                         <tr><th>Your farm</th><th>SharePoint 2010 workflows</th></tr>
@@ -467,6 +488,7 @@
                         <tr><td>Nintex Workflow for SharePoint on-premises</td><td><span class="wf3-no">Stopped</span> &mdash; Nintex runs on the SharePoint 2010 engine, so the same update stopped it. The same commands bring it back.</td></tr>
                     </tbody>
                 </table>
+                </div>
             </div>
         </section>
 

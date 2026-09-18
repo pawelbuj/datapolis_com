@@ -96,6 +96,10 @@ EN = {
 "src4": "SharePoint Workflow Manager lifecycle",
 "src5": "Stefan Go&szlig;ner: are you using SP2010 or SP2013 workflows in your farms?",
 
+"form_title": "Twenty minutes, no sales pitch",
+"form_helper": "Tell us what your farm runs. We reply within 1&ndash;2 business days.",
+"form_note": "Straight answer, even when the answer is &ldquo;don&rsquo;t pick Workbox&rdquo;.",
+
 "cta_lead": "Twenty minutes. Tell us what your farm runs and what it has to keep doing. We will tell you what we would do &mdash; including when the answer is to enable the feature, patch, and change nothing else.",
 "cta_1": "Talk to an expert",
 "cta_2": "See the platform",
