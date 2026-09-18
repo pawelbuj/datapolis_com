@@ -113,21 +113,31 @@
 }
 
 .dp-workflow-map__lines path.is-done {
-    stroke: rgba(45, 212, 191, 0.55);
+    stroke: rgba(45, 212, 191, 0.62);
+    stroke-width: 2.4;
+    stroke-dasharray: none;
+    filter: drop-shadow(0 0 4px rgba(45, 212, 191, 0.22));
+    animation: none;
 }
 
+/* Krawedz powrotna: proces cofnal sie do wczesniejszego stanu. */
+.dp-workflow-map__lines path.is-back {
+    stroke: rgba(248, 113, 113, 0.6);
+    stroke-width: 2.4;
+    stroke-dasharray: none;
+    filter: drop-shadow(0 0 4px rgba(248, 113, 113, 0.2));
+    animation: none;
+}
+
+/* Krawedz przed chwila przebyta - zawsze niebieska, jak kolko. */
 .dp-workflow-map__lines path.is-active {
-    stroke: #5eead4;
-    filter: drop-shadow(0 0 5px rgba(45, 212, 191, 0.7));
-}
-
-.dp-workflow-map[data-role="human"] .dp-workflow-map__lines path.is-active {
     stroke: #93c5fd;
     filter: drop-shadow(0 0 5px rgba(96, 165, 250, 0.68));
 }
 
-.dp-workflow-map__lines .dp-workflow-map__branch {
-    stroke: rgba(96, 165, 250, 0.2);
+.dp-workflow-map__lines path.is-active.is-back {
+    stroke: #fca5a5;
+    filter: drop-shadow(0 0 5px rgba(248, 113, 113, 0.55));
 }
 
 .dp-workflow-state {
@@ -146,7 +156,7 @@
     background: rgba(11, 22, 38, 0.96);
     box-shadow: 0 12px 28px rgba(0, 0, 0, 0.18);
     transform: translate(-50%, -50%);
-    transition: opacity 0.35s ease, transform 0.35s ease, border-color 0.35s ease, background 0.35s ease, box-shadow 0.35s ease;
+    transition: opacity 0.35s ease, transform 0.35s ease, border-color 0.35s ease, background 0.35s ease, box-shadow 0.35s ease, filter 0.35s ease;
 }
 
 .dp-workflow-state strong,
@@ -167,27 +177,55 @@
     font-size: 6px;
 }
 
+/* Nieodwiedzony: wygaszony i odbarwiony - ikona roli traci kolor. */
 .dp-workflow-state.is-future {
-    opacity: 0.36;
+    opacity: 0.3;
+    border-color: rgba(148, 163, 184, 0.12);
+    filter: saturate(0.25);
 }
 
+/* Odwiedzony: zostaje w petli jako slad sciezki - pelna widocznosc,
+   akcent teal na obramowaniu i tle, ale bez powiekszenia i poswiaty. */
 .dp-workflow-state.is-done {
-    opacity: 0.7;
-    border-color: rgba(45, 212, 191, 0.24);
+    opacity: 1;
+    border-color: rgba(45, 212, 191, 0.32);
+    background: rgba(8, 28, 34, 0.96);
+    box-shadow: inset 0 0 0 1px rgba(45, 212, 191, 0.05), 0 12px 26px rgba(0, 0, 0, 0.2);
 }
 
+.dp-workflow-state.is-done strong {
+    color: #d3dfec;
+}
+
+.dp-workflow-state.is-done small {
+    color: #7d8fa3;
+}
+
+
+/* Wrocilismy stad - stan zostaje widoczny, ale na czerwono. */
+.dp-workflow-state.is-back {
+    opacity: 1;
+    border-color: rgba(248, 113, 113, 0.36);
+    background: rgba(34, 15, 19, 0.96);
+    box-shadow: inset 0 0 0 1px rgba(248, 113, 113, 0.06), 0 12px 26px rgba(0, 0, 0, 0.2);
+}
+
+.dp-workflow-state.is-back strong {
+    color: #f3d2d2;
+}
+
+.dp-workflow-state.is-back small {
+    color: #a97f83;
+}
+
+/* Stan biezacy zawsze na niebiesko - kolor mowi "kolko jest tutaj",
+   nie o roli. Role niesie ikona i podpis pod nazwa stanu. */
 .dp-workflow-state.is-active {
     opacity: 1;
-    border-color: rgba(45, 212, 191, 0.56);
-    background: rgba(9, 35, 40, 0.98);
-    box-shadow: 0 0 0 5px rgba(45, 212, 191, 0.055), 0 16px 34px rgba(20, 184, 166, 0.14);
-    transform: translate(-50%, -50%) scale(1.06);
-}
-
-.dp-workflow-map[data-role="human"] .dp-workflow-state.is-active {
     border-color: rgba(96, 165, 250, 0.6);
     background: rgba(10, 27, 47, 0.98);
     box-shadow: 0 0 0 5px rgba(96, 165, 250, 0.055), 0 16px 34px rgba(37, 99, 235, 0.13);
+    transform: translate(-50%, -50%) scale(1.06);
 }
 
 .dp-workflow-state.is-active strong {
@@ -195,10 +233,6 @@
 }
 
 .dp-workflow-state.is-active small {
-    color: #5eead4;
-}
-
-.dp-workflow-map[data-role="human"] .dp-workflow-state.is-active small {
     color: #93c5fd;
 }
 
@@ -210,6 +244,7 @@
 .dp-workflow-state--5 { left: 90%; top: 50%; }
 
 .dp-workflow-role {
+    position: relative;
     grid-row: 1 / 3;
     display: grid;
     place-items: center;
@@ -243,6 +278,61 @@
     background: var(--dp-map-digital-bg);
 }
 
+/* ---------------------------------------------------------------
+   Stan biezacy: ikona roli zaczyna sie ruszac w obrebie karty i wraca
+   na swoje miejsce, gdy kolko wyjdzie. Obie krzywe to osemka (lemniskata
+   Gerono) przechodzaca przez punkt spoczynku na 0%, 50% i 100%, wiec
+   ikona startuje i konczy tam, gdzie stala - bez przeskoku.
+   Digital Worker: osemka lezaca, ze stala predkoscia (linear) - rytm
+   maszyny. Czlowiek: osemka stojaca, wolniejsza, z przyspieszeniami
+   (ease-in-out) i przechylem +/-5 stopni.
+   Zapas w karcie: 10 px w lewo, 8 px do nazwy stanu, 17 px w pionie.
+   --------------------------------------------------------------- */
+.dp-workflow-state.is-active .dp-workflow-role {
+    animation: dpWorkHuman 4.6s ease-in-out infinite;
+}
+
+.dp-workflow-state.is-active .dp-workflow-role--digital {
+    animation: dpWorkDigital 2.3s linear infinite;
+}
+
+@keyframes dpWorkDigital {
+    0% { transform: translate(0.00px, 0.00px); }
+    6.25% { transform: translate(1.99px, 4.60px); }
+    12.5% { transform: translate(3.68px, 6.50px); }
+    18.75% { transform: translate(4.80px, 4.60px); }
+    25% { transform: translate(5.20px, 0.00px); }
+    31.25% { transform: translate(4.80px, -4.60px); }
+    37.5% { transform: translate(3.68px, -6.50px); }
+    43.75% { transform: translate(1.99px, -4.60px); }
+    50% { transform: translate(0.00px, -0.00px); }
+    56.25% { transform: translate(-1.99px, 4.60px); }
+    62.5% { transform: translate(-3.68px, 6.50px); }
+    68.75% { transform: translate(-4.80px, 4.60px); }
+    75% { transform: translate(-5.20px, 0.00px); }
+    81.25% { transform: translate(-4.80px, -4.60px); }
+    87.5% { transform: translate(-3.68px, -6.50px); }
+    93.75% { transform: translate(-1.99px, -4.60px); }
+    100% { transform: translate(-0.00px, -0.00px); }
+}
+
+@keyframes dpWorkHuman {
+    0% { transform: translate(0.00px, 0.00px) rotate(-0.00deg); }
+    8.3333% { transform: translate(3.90px, 4.75px) rotate(-4.33deg); }
+    16.6667% { transform: translate(3.90px, 8.23px) rotate(-4.33deg); }
+    25% { transform: translate(0.00px, 9.50px) rotate(-0.00deg); }
+    33.3333% { transform: translate(-3.90px, 8.23px) rotate(4.33deg); }
+    41.6667% { transform: translate(-3.90px, 4.75px) rotate(4.33deg); }
+    50% { transform: translate(-0.00px, 0.00px) rotate(0.00deg); }
+    58.3333% { transform: translate(3.90px, -4.75px) rotate(-4.33deg); }
+    66.6667% { transform: translate(3.90px, -8.23px) rotate(-4.33deg); }
+    75% { transform: translate(0.00px, -9.50px) rotate(-0.00deg); }
+    83.3333% { transform: translate(-3.90px, -8.23px) rotate(4.33deg); }
+    91.6667% { transform: translate(-3.90px, -4.75px) rotate(4.33deg); }
+    100% { transform: translate(-0.00px, -0.00px) rotate(0.00deg); }
+}
+
+
 .dp-workflow-map__token {
     position: absolute;
     z-index: 5;
@@ -256,12 +346,6 @@
     box-shadow: 0 0 0 6px rgba(96, 165, 250, 0.07), 0 0 17px #60a5fa;
     transform: translate(-50%, -50%);
     transition: left 0.72s cubic-bezier(0.2, 0.8, 0.2, 1), top 0.72s cubic-bezier(0.2, 0.8, 0.2, 1), background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-.dp-workflow-map[data-role="digital"] .dp-workflow-map__token {
-    border-color: #ccfbf1;
-    background: #0d9488;
-    box-shadow: 0 0 0 6px rgba(45, 212, 191, 0.07), 0 0 17px #2dd4bf;
 }
 
 .dp-workflow-map[data-step="0"] .dp-workflow-map__token { left: 11%; top: 50%; }
@@ -290,6 +374,11 @@
     left: 55%;
 }
 
+.dp-workflow-map__route-label--back {
+    top: 1%;
+    left: 43%;
+}
+
 .dp-workflow-map__current {
     position: absolute;
     z-index: 6;
@@ -315,13 +404,9 @@
 }
 
 .dp-workflow-map__current > strong {
-    color: #5eead4;
+    color: #93c5fd;
     font-size: 9px;
     white-space: nowrap;
-}
-
-.dp-workflow-map[data-role="human"] .dp-workflow-map__current > strong {
-    color: #93c5fd;
 }
 
 .dp-workflow-map__current > i {
@@ -380,6 +465,10 @@
 @media (prefers-reduced-motion: reduce) {
     .dp-workflow-map__head em i,
     .dp-workflow-map__lines path {
+        animation: none;
+    }
+
+    .dp-workflow-state.is-active .dp-workflow-role {
         animation: none;
     }
 

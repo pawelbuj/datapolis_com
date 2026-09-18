@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<title>App Creator — grafika hero, wersja z zakładkami | Datapolis (wewnętrzne)</title>
+<meta name="robots" content="noindex,nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#020617">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="assets/css/homepage-workflow-map.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Instrument+Sans:wght@400;500;600;700&amp;display=swap">
+<style>
+:root{--bg:#020617;--panel:#0b1626;--panel2:#091320;--line:rgba(148,163,184,.14);
+--teal:#14b8a6;--teal-l:#5eead4;--blue:#93c5fd;--tx:#e2e8f0;--tx2:#94a3b8;--tx3:#64748b;
+--disp:'Instrument Sans',system-ui,sans-serif}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font:15px/1.6 Inter,system-ui,sans-serif}
+.pg{max-width:1180px;margin:0 auto;padding:44px 24px 90px}
+.pg h1{font-family:var(--disp);font-size:28px;font-weight:600;letter-spacing:-.02em;margin:0 0 6px}
+.pg>p.sub{color:var(--tx2);margin:0 0 34px;max-width:780px;font-size:14px}
+.stage{background:radial-gradient(ellipse 700px 380px at 72% 0%,rgba(20,184,166,.07),transparent 70%);
+  padding:26px;border:1px solid var(--line);border-radius:18px}
+
+/* ---------- ramka z zakladkami ---------- */
+.ac{max-width:700px;margin:0 auto}
+.ac-tabs{display:flex;gap:6px;margin-bottom:-1px;position:relative;z-index:2}
+.ac-tab{font:inherit;font-size:12px;font-weight:600;letter-spacing:.01em;padding:10px 14px;cursor:pointer;
+  background:var(--panel2);color:var(--tx3);border:1px solid var(--line);border-bottom-color:transparent;
+  border-radius:10px 10px 0 0;display:flex;align-items:center;gap:8px;transition:.2s}
+.ac-tab:hover{color:var(--tx2)}
+.ac-tab[aria-selected="true"]{background:var(--panel);color:#ccfbf1;border-color:rgba(20,184,166,.4);border-bottom-color:var(--panel)}
+.ac-tab i{font-style:normal;width:17px;height:17px;border-radius:5px;display:grid;place-items:center;
+  font-size:9.5px;font-weight:700;background:rgba(148,163,184,.14);color:var(--tx3)}
+.ac-tab[aria-selected="true"] i{background:rgba(20,184,166,.22);color:var(--teal-l)}
+.ac-body{background:var(--panel);border:1px solid var(--line);border-radius:0 12px 12px 12px;overflow:hidden}
+.ac-panel{display:none}
+.ac-panel.is-on{display:block}
+.ac-doc:after{content:"";position:absolute;left:0;right:0;bottom:0;height:52px;background:linear-gradient(to top,var(--panel),rgba(11,22,38,0));pointer-events:none}
+
+/* ---------- pasek sciezki ---------- */
+.ac-crumb{display:flex;align-items:center;gap:8px;padding:9px 13px;border-bottom:1px solid var(--line);font-size:10.5px;color:var(--tx3);flex-wrap:wrap}
+.ac-crumb b{color:var(--tx);font-weight:600;font-size:11.5px}
+.ac-pill{font-size:9px;font-weight:700;letter-spacing:.08em;padding:2px 7px;border-radius:100px;
+  background:rgba(20,184,166,.16);color:var(--teal-l)}
+.ac-crumb .rev{margin-left:auto}
+
+/* ---------- uklad drzewo + tresc ---------- */
+.ac-split{display:grid;grid-template-columns:152px minmax(0,1fr)}
+.ac-tree{border-right:1px solid var(--line);padding:11px 9px;background:var(--panel2);height:500px;overflow:hidden}
+.ac-tree h5{font-size:8.5px;font-weight:800;letter-spacing:.14em;color:var(--tx3);margin:0 0 7px;padding:0 4px}
+.ac-tree h6{font-size:8.5px;font-weight:600;letter-spacing:.06em;color:#475569;margin:11px 0 5px;padding:0 4px}
+.ac-tree a{display:flex;align-items:center;gap:6px;padding:4px 6px;border-radius:6px;font-size:11px;color:var(--tx2);text-decoration:none}
+.ac-tree a:before{content:"";width:5px;height:5px;border-radius:50%;background:var(--teal);opacity:.6;flex:none}
+.ac-tree a.sub{padding-left:14px;font-size:10.5px}
+.ac-tree a.on{background:rgba(20,184,166,.1);color:#ccfbf1;box-shadow:inset 0 0 0 1px rgba(20,184,166,.28)}
+.ac-doc{padding:15px 17px;height:500px;overflow:hidden;position:relative}
+
+/* ---------- tresc dokumentu ---------- */
+.ac-doc h3{font-family:var(--disp);font-size:17px;font-weight:600;margin:0 0 12px;color:#f1f5f9}
+.ac-doc h4{font-family:var(--disp);font-size:12.5px;font-weight:600;margin:14px 0 8px;color:var(--tx);
+  padding-bottom:6px;border-bottom:1px solid var(--line)}
+.ac-doc p{margin:0 0 9px;font-size:12px;color:var(--tx2);line-height:1.65}
+.ac-li{display:flex;gap:7px;font-size:12px;color:var(--tx2);margin-bottom:6px;line-height:1.6}
+.ac-li:before{content:"";width:4px;height:4px;border-radius:50%;background:var(--teal);opacity:.75;margin-top:8px;flex:none}
+.ac-li b{color:var(--tx);font-weight:600}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11px;background:rgba(148,163,184,.12);
+  padding:1px 5px;border-radius:4px;color:#cbd5e1}
+
+/* ---------- podpowiedz AI ---------- */
+.ac-ai{margin-top:14px;border:1px solid rgba(20,184,166,.32);background:rgba(8,32,38,.85);border-radius:10px;padding:10px 12px}
+.ac-ai__h{display:flex;align-items:center;gap:7px;font-size:9px;font-weight:800;letter-spacing:.12em;color:var(--teal-l);margin-bottom:5px}
+.ac-ai__h span{width:15px;height:15px;border-radius:5px;background:rgba(20,184,166,.22);display:grid;place-items:center;font-size:8px}
+.ac-ai p{margin:0 0 8px;font-size:11.5px;color:var(--tx2)}
+.ac-ai__btns{display:flex;gap:7px}
+.ac-mini{font:inherit;font-size:10.5px;padding:4px 11px;border-radius:100px;cursor:pointer;border:1px solid var(--line);background:none;color:var(--tx2)}
+.ac-mini.acc{border-color:rgba(20,184,166,.5);color:#ccfbf1;background:rgba(20,184,166,.12)}
+
+/* ---------- tabele specyfikacji ---------- */
+.ac-tbl{width:100%;border-collapse:collapse;margin:0 0 12px;font-size:11px}
+.ac-tbl th{text-align:left;font-size:8.5px;font-weight:800;letter-spacing:.12em;color:var(--tx3);
+  padding:7px 9px;border-bottom:1px solid var(--line);background:var(--panel2)}
+.ac-tbl td{padding:7px 9px;border-bottom:1px solid rgba(148,163,184,.08);color:var(--tx2);vertical-align:top}
+.ac-tbl td:first-child{color:var(--tx);font-weight:500}
+.ty{font-size:9.5px;padding:1px 7px;border-radius:100px;border:1px solid var(--line);color:var(--tx3)}
+.yes{color:var(--teal-l)}
+
+/* ---------- zakladka APLIKACJA ---------- */
+.ac-sub{display:flex;gap:6px;padding:11px 13px;border-bottom:1px solid var(--line);flex-wrap:wrap}
+.ac-sbtn{font:inherit;font-size:11px;padding:5px 12px;border-radius:100px;cursor:pointer;
+  border:1px solid var(--line);background:none;color:var(--tx3);transition:.2s}
+.ac-sbtn[aria-selected="true"]{border-color:rgba(20,184,166,.5);color:#ccfbf1;background:rgba(20,184,166,.12)}
+.ac-view{display:none;padding:15px 17px;height:500px;overflow:hidden;position:relative}
+.ac-view.is-on{display:block}
+.ac-note{margin-top:12px;font-size:10.5px;line-height:1.6;color:var(--tx3)}
+.ac-note b{color:var(--teal-l);font-weight:600}
+
+.ac-cols{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:11px}
+.ac-col{border:1px solid var(--line);border-radius:8px;padding:6px 9px;background:var(--panel2)}
+.ac-col span{display:block;font-size:11px;color:var(--tx);margin-bottom:2px}
+.ac-col em{font-style:normal;font-size:9px;color:var(--tx3)}
+
+.pg-wire{border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.pg-wire__top{display:flex;align-items:center;gap:7px;padding:8px 10px;border-bottom:1px solid var(--line);background:var(--panel2)}
+.pg-wire__top b{font-size:11.5px;color:var(--tx);font-weight:600}
+.pg-f{font-size:9.5px;padding:2px 8px;border-radius:100px;border:1px solid var(--line);color:var(--tx3)}
+.pg-row{display:grid;grid-template-columns:104px minmax(0,1fr) 72px 104px;gap:9px;align-items:center;padding:7px 10px;border-bottom:1px solid rgba(148,163,184,.07);font-size:10.5px;color:var(--tx2)}
+.pg-row.h{font-size:8.5px;font-weight:800;letter-spacing:.1em;color:var(--tx3);background:rgba(148,163,184,.04)}
+.st{display:inline-block;white-space:nowrap;font-size:9px;padding:1px 7px;border-radius:100px;background:rgba(20,184,166,.14);color:var(--teal-l)}
+.st.b{background:rgba(96,165,250,.14);color:var(--blue)}
+
+.pm{width:100%;border-collapse:collapse;font-size:10.5px}
+.pm th{font-size:8.5px;font-weight:800;letter-spacing:.1em;color:var(--tx3);padding:7px 6px;border-bottom:1px solid var(--line);text-align:center}
+.pm th:first-child{text-align:left}
+.pm td{padding:7px 6px;border-bottom:1px solid rgba(148,163,184,.07);text-align:center;color:var(--tx3)}
+.pm td:first-child{text-align:left;color:var(--tx);font-weight:500}
+.pm .ok{color:var(--teal-l);font-weight:700}
+.pm .rw{color:var(--blue);font-size:9px}
+
+
+/* --- mapa procesu: ten sam komponent co w hero strony glownej, inny proces.
+       Nadpisujemy tylko ramke i rozmieszczenie stanow. --- */
+.ac-view .dp-workflow-map{width:100%;height:432px;border:none;box-shadow:none;
+  background:radial-gradient(circle at 50% 46%,rgba(20,184,166,.07),transparent 40%)}
+.ac-view .dp-workflow-state--0{left:11%;top:50%}
+.ac-view .dp-workflow-state--1{left:31%;top:77%}
+.ac-view .dp-workflow-state--2{left:51%;top:50%}
+.ac-view .dp-workflow-state--3{left:70%;top:77%}
+.ac-view .dp-workflow-state--4{left:70%;top:23%}
+.ac-view .dp-workflow-state--5{left:88%;top:50%}
+.ac-view .dp-workflow-map[data-step="0"] .dp-workflow-map__token{left:11%;top:50%}
+.ac-view .dp-workflow-map[data-step="1"] .dp-workflow-map__token{left:31%;top:77%}
+.ac-view .dp-workflow-map[data-step="2"] .dp-workflow-map__token{left:51%;top:50%}
+.ac-view .dp-workflow-map[data-step="3"] .dp-workflow-map__token{left:70%;top:77%}
+.ac-view .dp-workflow-map[data-step="4"] .dp-workflow-map__token{left:70%;top:23%}
+.ac-view .dp-workflow-map[data-step="5"] .dp-workflow-map__token{left:88%;top:50%}
+.ac-view .dp-workflow-map__route-label--r1{top:44%;left:73%}
+.ac-view .dp-workflow-map__route-label--r2{top:69%;left:81%}
+.ac-view .dp-workflow-map__route-label--r3{top:2%;left:26%}
+.bar{margin-top:18px;display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.btn{font:inherit;font-size:12.5px;padding:7px 15px;border-radius:100px;border:1px solid var(--line);background:none;color:var(--tx2);cursor:pointer}
+.btn:hover{border-color:rgba(20,184,166,.5);color:#ccfbf1}
+.cap{font-size:11.5px;color:var(--tx3)}
+@media(max-width:820px){.ac-split{grid-template-columns:1fr}.ac-tree{display:none}}
+</style>
+
+    <!-- JSON-LD -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://datapolis.com/#organization",
+      "name": "Datapolis",
+      "legalName": "Datapolis Sp. z o.o.",
+      "url": "https://datapolis.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://datapolis.com/logos/logo.svg"
+      },
+      "image": "https://datapolis.com/assets/img/og-image-1200x630.png",
+      "email": "office@datapolis.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "PL"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/datapolis-com",
+        "https://www.youtube.com/@datapolisworkbox"
+      ],
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "contactType": "sales",
+          "email": "office@datapolis.com",
+          "availableLanguage": [
+            "en",
+            "pl",
+            "de",
+            "es"
+          ]
+        }
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://datapolis.com/#website",
+      "url": "https://datapolis.com/",
+      "name": "Datapolis",
+      "publisher": {
+        "@id": "https://datapolis.com/#organization"
+      },
+      "inLanguage": [
+        "en",
+        "pl",
+        "de",
+        "es"
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://datapolis.com/app-creator-graphic-concepts#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://datapolis.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "App Creator — grafika hero, wersja z zakładkami | Datapolis (wewnętrzne)"
+        }
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://datapolis.com/app-creator-graphic-concepts#webpage",
+      "url": "https://datapolis.com/app-creator-graphic-concepts",
+      "name": "App Creator — grafika hero, wersja z zakładkami | Datapolis (wewnętrzne)",
+      "isPartOf": {
+        "@id": "https://datapolis.com/#website"
+      },
+      "about": {
+        "@id": "https://datapolis.com/#organization"
+      },
+      "inLanguage": "en",
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://datapolis.com/assets/img/og-image-1200x630.png"
+      },
+      "breadcrumb": {
+        "@id": "https://datapolis.com/app-creator-graphic-concepts#breadcrumb"
+      }
+    }
+  ]
+}
+    </script>
+    <!-- /JSON-LD -->
+</head>
+<body>
+<div class="pg">
+  <h1>App Creator — grafika hero, wersja z trzema zakładkami</h1>
+  <p class="sub">Strona robocza, niepodlinkowana i <code>noindex</code>. Zakładki przełączają się same co 5 s; kliknięcie zatrzymuje automat. Wszystko narysowane — żadnych zrzutów ekranu. Treść wzorowana na QM Hub, dane przykładowe.</p>
+
+  <div class="stage">
+    <div class="ac">
+      <div class="ac-tabs" role="tablist">
+        <button class="ac-tab" role="tab" aria-selected="true"  data-t="1"><i>1</i> Dokumentacja analityczna</button>
+        <button class="ac-tab" role="tab" aria-selected="false" data-t="2"><i>2</i> Dokumentacja techniczna</button>
+        <button class="ac-tab" role="tab" aria-selected="false" data-t="3"><i>3</i> Aplikacja</button>
+      </div>
+
+      <div class="ac-body">
+
+        <!-- ============ 1. DOKUMENTACJA ANALITYCZNA ============ -->
+        <div class="ac-panel is-on" data-p="1">
+          <div class="ac-crumb">AppSpecification/business/ <b>proces-niezgodnosc.md</b> · Proces biznesowy <span class="ac-pill">ZATWIERDZONY</span> <span class="rev">Wersja 3</span></div>
+          <div class="ac-split">
+            <nav class="ac-tree">
+              <h5>WARSTWA BIZNESOWA</h5>
+              <a href="#">Brief</a><a href="#">Słownik pojęć</a><a href="#">Aktorzy i uprawnienia</a><a href="#">Model dziedziny</a>
+              <h6>Procesy biznesowe</h6>
+              <a href="#" class="sub on">Niezgodność</a><a href="#" class="sub">Akcje</a><a href="#" class="sub">Sprawa 8D</a><a href="#" class="sub">Zgłoszenie do dostawcy</a>
+              <a href="#">Przypadki użycia</a><a href="#">Ekrany</a><a href="#">Reguły biznesowe</a><a href="#">Integracje</a>
+            </nav>
+            <div class="ac-doc">
+              <h3>Proces biznesowy: obsługa niezgodności</h3>
+              <h4>1. Przegląd procesu</h4>
+              <p class="ac-li"><span><b>Kod procesu:</b> PROC-NCR-01</span></p>
+              <p class="ac-li"><span><b>Wyzwalacz:</b> wykrycie wady lub odchylenia podczas kontroli wejściowej, produkcji, kontroli końcowej, reklamacji klienta albo audytu.</span></p>
+              <p class="ac-li"><span><b>Właściciel procesu:</b> inżynier jakości</span></p>
+              <p class="ac-li"><span><b>Główne encje:</b> Niezgodność, Akcja, Zatwierdzenie, Dowód, Sprawa 8D</span></p>
+              <h4>2. Przebieg</h4>
+              <p class="ac-li"><span><b>Krok 1 — zgłoszenie.</b> Zgłaszający wprowadza zakład, linię, źródło, numer części, ilość i opis wady. Stan: <code>Zgłoszona</code>.</span></p>
+              <p class="ac-li"><span><b>Krok 2 — weryfikacja.</b> Inżynier jakości nadaje typ wady i istotność, oznacza konieczność zabezpieczenia.</span></p>
+              <div class="ac-ai">
+                <p class="ac-ai__h"><span>AI</span> PROPOZYCJA NA PODSTAWIE PROCEDURY QP-08</p>
+                <p>W §4.2 jest krok „weryfikacja skuteczności działań" po 30 dniach — nie ma go w opisie. Dopisać jako krok 7?</p>
+                <div class="ac-ai__btns"><button class="ac-mini acc">Dopisz</button><button class="ac-mini">Pokaż w procedurze</button><button class="ac-mini">Odrzuć</button></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ============ 2. DOKUMENTACJA TECHNICZNA ============ -->
+        <div class="ac-panel" data-p="2">
+          <div class="ac-crumb">AppSpecification/workflows/ <b>workflow-spec-ncr.md</b> · Specyfikacja procesu <span class="ac-pill">ZATWIERDZONY</span> <span class="rev">Wersja 5</span></div>
+          <div class="ac-split">
+            <nav class="ac-tree">
+              <h5>SPECYFIKACJA</h5>
+              <a href="#">Specyfikacja aplikacji</a>
+              <h6>Procesy</h6>
+              <a href="#" class="sub">Sprawa 8D</a><a href="#" class="sub">Akcje</a><a href="#" class="sub on">Niezgodność</a><a href="#" class="sub">Zgłoszenie SCAR</a>
+              <h6>Tabele danych</h6>
+              <a href="#" class="sub">Audyty</a><a href="#" class="sub">Sprawy</a><a href="#" class="sub">Dyspozycje</a><a href="#" class="sub">Dowody</a>
+              <h6>Strony</h6>
+              <a href="#" class="sub">Rejestr niezgodności</a><a href="#" class="sub">Pulpit jakości</a>
+            </nav>
+            <div class="ac-doc">
+              <h3>Niezgodność</h3>
+              <p>Życie jednej niezgodności — od zgłoszenia na hali do zamknięcia: weryfikacja, zabezpieczenie, dyspozycja i jej zatwierdzenie, zgoda klienta przy częściach objętych kontraktem OEM, wykonanie dyspozycji i decyzja, czy potrzebna jest pełna sprawa 8D.</p>
+              <h4>Role</h4>
+              <table class="ac-tbl"><thead><tr><th>ROLA</th><th>KTO JĄ PEŁNI</th></tr></thead><tbody>
+                <tr><td>Zgłaszający</td><td>Operatorzy, kontrolerzy i magazynierzy kontroli wejściowej.</td></tr>
+                <tr><td>Inżynier jakości</td><td>Weryfikuje i klasyfikuje, prowadzi sprawę; zatwierdza dyspozycję inną niż krytyczna.</td></tr>
+                <tr><td>Kierownik jakości</td><td>Zatwierdza istotność krytyczną i dyspozycję „użyj jak jest"; zapisuje zgodę klienta.</td></tr>
+                <tr><td>Wykonawca akcji</td><td>Realizuje zabezpieczenie i fizyczną dyspozycję.</td></tr>
+              </tbody></table>
+              <h4>Pola</h4>
+              <table class="ac-tbl"><thead><tr><th>POLE</th><th>TYP</th><th>WYM.</th><th>CO PRZECHOWUJE</th></tr></thead><tbody>
+                <tr><td>Numer NCR</td><td><span class="ty">Tekst</span></td><td>nie</td><td>NCR-RRRR-nnnnn, nadawany automatycznie.</td></tr>
+                <tr><td>Tytuł</td><td><span class="ty">Tekst</span></td><td class="yes">tak</td><td>Jedno zdanie: co jest nie tak.</td></tr>
+                <tr><td>Źródło</td><td><span class="ty">Wybór</span></td><td class="yes">tak</td><td>Kontrola wejściowa, produkcja, kontrola końcowa, reklamacja, audyt.</td></tr>
+                <tr><td>Zakład</td><td><span class="ty">Wybór</span></td><td class="yes">tak</td><td>Mielec albo Rzeszów.</td></tr>
+                <tr><td>Ilość</td><td><span class="ty">Liczba</span></td><td class="yes">tak</td><td>Sztuki objęte niezgodnością.</td></tr>
+              </tbody></table>
+            </div>
+          </div>
+        </div>
+
+        <!-- ============ 3. APLIKACJA ============ -->
+        <div class="ac-panel" data-p="3">
+          <div class="ac-sub" role="tablist">
+            <button class="ac-sbtn" role="tab" aria-selected="false" data-v="dane">Dane</button>
+            <button class="ac-sbtn" role="tab" aria-selected="true"  data-v="wf">Workflowy</button>
+            <button class="ac-sbtn" role="tab" aria-selected="false" data-v="strony">Strony</button>
+          </div>
+
+          <!-- WORKFLOWY -->
+          <div class="ac-view is-on" data-vp="wf">
+                    <div class="dp-hero__visual">
+                        <div class="dp-workflow-map" data-home-workflow-map data-step="0" data-role="human" role="img" aria-label="Proces niezgodności w gotowej aplikacji: stany, role i przejścia.">
+                            <div class="dp-workflow-map__head">
+                                <span>
+                                    <small>PROCES W APLIKACJI</small>
+                                    <strong>Niezgodność NCR-2026-00184</strong>
+                                </span>
+                                <em><i></i> DZIAŁA</em>
+                            </div>
+
+                            <div class="dp-workflow-map__canvas">
+                                <svg class="dp-workflow-map__lines" viewBox="0 0 640 390" preserveAspectRatio="none" aria-hidden="true">
+                                    <path data-home-edge="0-1" d="M79 200 C132 200 148 296 190 296"></path>
+                                    <path data-home-edge="1-2" d="M210 296 C262 296 282 200 318 200"></path>
+                                    <path data-home-edge="2-3" d="M335 200 C388 200 406 296 446 296"></path>
+                                    <path data-home-edge="3-4" d="M454 262 C454 220 454 180 454 132"></path>
+                                    <path data-home-edge="3-5" d="M508 292 C548 292 554 232 570 208"></path>
+                                    <path data-home-edge="4-5" d="M508 100 C550 100 556 158 572 186"></path>
+                                    <path data-home-edge="2-0" d="M326 152 C326 68 240 42 170 42 C108 42 72 94 70 152"></path>
+                                </svg>
+
+                                <div class="dp-workflow-state dp-workflow-state--0" data-home-state-index="0" data-role-label="CZŁOWIEK · ZGŁASZAJĄCY" data-task="Opisz wadę, zakład, część i ilość">
+                                    <span class="dp-workflow-role dp-workflow-role--human"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="7.5" r="3.5"></circle><path d="M5.2 20c.6-4.2 2.9-6.3 6.8-6.3s6.2 2.1 6.8 6.3"></path></svg></span>
+                                    <strong>Zgłoszona</strong><small>Człowiek · Zgłaszający</small>
+                                </div>
+                                <div class="dp-workflow-state dp-workflow-state--1" data-home-state-index="1" data-role-label="DIGITAL WORKER · KLASYFIKACJA" data-task="Nadaj typ wady i wstępną istotność">
+                                    <span class="dp-workflow-role dp-workflow-role--digital"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4.5" y="6" width="15" height="13" rx="3"></rect><circle cx="9.2" cy="12" r="1"></circle><circle cx="14.8" cy="12" r="1"></circle><path d="M9 16h6M12 3v3M9.5 3h5"></path></svg></span>
+                                    <strong>Klasyfikacja</strong><small>Digital · Klasyfikacja</small>
+                                </div>
+                                <div class="dp-workflow-state dp-workflow-state--2" data-home-state-index="2" data-role-label="CZŁOWIEK · INŻYNIER JAKOŚCI" data-task="Sprawdź dowody i potwierdź istotność">
+                                    <span class="dp-workflow-role dp-workflow-role--human"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="7.5" r="3.5"></circle><path d="M5.2 20c.6-4.2 2.9-6.3 6.8-6.3s6.2 2.1 6.8 6.3"></path></svg></span>
+                                    <strong>W weryfikacji</strong><small>Człowiek · Inżynier</small>
+                                </div>
+                                <div class="dp-workflow-state dp-workflow-state--3" data-home-state-index="3" data-role-label="CZŁOWIEK · INŻYNIER JAKOŚCI" data-task="Wybierz dyspozycję dla wadliwych sztuk">
+                                    <span class="dp-workflow-role dp-workflow-role--human"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="7.5" r="3.5"></circle><path d="M5.2 20c.6-4.2 2.9-6.3 6.8-6.3s6.2 2.1 6.8 6.3"></path></svg></span>
+                                    <strong>Dyspozycja</strong><small>Człowiek · Inżynier</small>
+                                </div>
+                                <div class="dp-workflow-state dp-workflow-state--4" data-home-state-index="4" data-role-label="CZŁOWIEK · KIEROWNIK JAKOŚCI" data-task="Zatwierdź dyspozycję krytyczną">
+                                    <span class="dp-workflow-role dp-workflow-role--human"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="7.5" r="3.5"></circle><path d="M5.2 20c.6-4.2 2.9-6.3 6.8-6.3s6.2 2.1 6.8 6.3"></path></svg></span>
+                                    <strong>Akceptacja</strong><small>Człowiek · Kierownik</small>
+                                </div>
+                                <div class="dp-workflow-state dp-workflow-state--5" data-home-state-index="5" data-role-label="DIGITAL WORKER · ZAMKNIĘCIE" data-task="Uzupełnij rejestr i zarchiwizuj sprawę">
+                                    <span class="dp-workflow-role dp-workflow-role--digital"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4.5" y="6" width="15" height="13" rx="3"></rect><circle cx="9.2" cy="12" r="1"></circle><circle cx="14.8" cy="12" r="1"></circle><path d="M9 16h6M12 3v3M9.5 3h5"></path></svg></span>
+                                    <strong>Zamknięta</strong><small>Digital · Zamknięcie</small>
+                                </div>
+
+                                <span class="dp-workflow-map__route-label dp-workflow-map__route-label--r1">krytyczna</span>
+                                <span class="dp-workflow-map__route-label dp-workflow-map__route-label--r2">bez zatwierdzenia</span>
+                                <span class="dp-workflow-map__route-label dp-workflow-map__route-label--r3">zwrot do zgłaszającego</span>
+                                <span class="dp-workflow-map__token" aria-hidden="true"><i></i></span>
+                            </div>
+
+                            <div class="dp-workflow-map__current">
+                                <span>AKTYWNY STAN</span>
+                                <strong data-home-current-state>ZGŁOSZONA</strong>
+                                <i></i>
+                                <small data-home-current-role>CZŁOWIEK · ZGŁASZAJĄCY</small>
+                                <b data-home-current-task>Opisz wadę, zakład, część i ilość</b>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="ac-note">To jest <b>obiekt platformy</b> — stany, przejścia i role. Nie kod, nie diagram w dokumencie: tak wygląda proces w edytorze i tak działa w aplikacji.</p>
+          </div>
+
+          <!-- DANE -->
+          <div class="ac-view" data-vp="dane">
+            <div class="ac-cols">
+              <div class="ac-col"><span>Numer NCR</span><em>Tekst · auto</em></div>
+              <div class="ac-col"><span>Tytuł</span><em>Tekst · wymagane</em></div>
+              <div class="ac-col"><span>Źródło</span><em>Wybór · 5 wartości</em></div>
+              <div class="ac-col"><span>Zakład</span><em>Wybór · 2 wartości</em></div>
+              <div class="ac-col"><span>Ilość</span><em>Liczba</em></div>
+              <div class="ac-col"><span>Zdjęcia</span><em>Załączniki</em></div>
+              <div class="ac-col"><span>Dyspozycja</span><em>Relacja → Dyspozycje</em></div>
+            </div>
+            <div class="pg-wire">
+              <div class="pg-row h"><span>NUMER</span><span>TYTUŁ</span><span>ZAKŁAD</span><span>STAN</span></div>
+              <div class="pg-row"><span>NCR-2026-00184</span><span>Odchyłka średnicy otworu, poz. 14</span><span>Mielec</span><span class="st b">W weryfikacji</span></div>
+              <div class="pg-row"><span>NCR-2026-00183</span><span>Brak świadectwa materiału</span><span>Rzeszów</span><span class="st">Zamknięta</span></div>
+              <div class="pg-row"><span>NCR-2026-00182</span><span>Uszkodzenie powłoki w transporcie</span><span>Mielec</span><span class="st b">Dyspozycja</span></div>
+              <div class="pg-row"><span>NCR-2026-00181</span><span>Niezgodny moment dokręcenia</span><span>Mielec</span><span class="st">Zamknięta</span></div>
+            </div>
+            <p class="ac-note">Tabela z <b>typowanymi polami i relacjami</b> — definiowana w edytorze, nie w migracjach bazy.</p>
+          </div>
+
+          <!-- STRONY -->
+          <div class="ac-view" data-vp="strony">
+            <div class="pg-wire">
+              <div class="pg-wire__top"><b>Rejestr niezgodności</b>
+                <span class="pg-f">Zakład: wszystkie</span><span class="pg-f">Stan: otwarte</span><span class="pg-f">Moje sprawy</span></div>
+              <div class="pg-row h"><span>NUMER</span><span>TYTUŁ</span><span>OSOBA</span><span>TERMIN</span></div>
+              <div class="pg-row"><span>NCR-2026-00184</span><span>Odchyłka średnicy otworu, poz. 14</span><span>A. Nowak</span><span>za 2 dni</span></div>
+              <div class="pg-row"><span>NCR-2026-00182</span><span>Uszkodzenie powłoki w transporcie</span><span>M. Zając</span><span>dziś</span></div>
+              <div class="pg-row"><span>NCR-2026-00179</span><span>Niezgodność wymiaru kołnierza</span><span>A. Nowak</span><span>za 5 dni</span></div>
+            </div>
+            <div class="ac-cols" style="margin-top:11px">
+              <div class="ac-col"><span>Rejestr niezgodności</span><em>Lista · widoczna dla wszystkich</em></div>
+              <div class="ac-col"><span>Pulpit jakości</span><em>Wskaźniki · kierownictwo</em></div>
+              <div class="ac-col"><span>Harmonogram akcji</span><em>Kalendarz · wykonawcy</em></div>
+            </div>
+            <p class="ac-note">Strony to <b>widoki nad procesami</b> — kolumny, filtry i dostęp ustawiane w edytorze.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="bar">
+    <button class="btn" id="play">Wznów automat</button>
+    <span class="cap">Kliknięcie zakładki zatrzymuje przełączanie.</span>
+  </div>
+</div>
+
+<script>
+(function(){
+  'use strict';
+  var tabs = document.querySelectorAll('.ac-tab');
+  var panels = document.querySelectorAll('.ac-panel');
+  var subs = document.querySelectorAll('.ac-sbtn');
+  var views = document.querySelectorAll('.ac-view');
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var timer = null, auto = !reduce, i = 0;
+
+  function show(n){
+    i = n;
+    Array.prototype.forEach.call(tabs, function(t){
+      t.setAttribute('aria-selected', String(t.getAttribute('data-t') === String(n))); });
+    Array.prototype.forEach.call(panels, function(p){
+      p.classList.toggle('is-on', p.getAttribute('data-p') === String(n)); });
+  }
+  function tick(){
+    window.clearTimeout(timer);
+    if (!auto) return;
+    timer = window.setTimeout(function(){ show(i % 3 + 1); tick(); }, 5000);
+  }
+  Array.prototype.forEach.call(tabs, function(t){
+    t.addEventListener('click', function(){ auto = false; window.clearTimeout(timer); show(Number(t.getAttribute('data-t'))); });
+  });
+  Array.prototype.forEach.call(subs, function(b){
+    b.addEventListener('click', function(){
+      auto = false; window.clearTimeout(timer);
+      var v = b.getAttribute('data-v');
+      Array.prototype.forEach.call(subs, function(x){ x.setAttribute('aria-selected', String(x === b)); });
+      Array.prototype.forEach.call(views, function(x){ x.classList.toggle('is-on', x.getAttribute('data-vp') === v); });
+    });
+  });
+  document.getElementById('play').addEventListener('click', function(){ auto = true; tick(); });
+  show(1); tick();
+})();
+</script>
+<script src="assets/js/homepage-workflow-map.js"></script>
+</body>
+</html>

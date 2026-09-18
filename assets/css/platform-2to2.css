@@ -814,3 +814,70 @@
         align-items: center;
     }
 }
+
+/* ============================================================
+   Hero: proces krazy po swojej orbicie i zapala kolejne wezly.
+   Srodek = aplikacja procesowa, pierscien = proces, kropka na
+   pierscieniu = miejsce, w ktorym proces jest teraz.
+   Jeden obieg trwa 16 s; kazdy wezel ma opoznienie rowne chwili,
+   w ktorej kropka do niego dociera:
+   DATA 1,48 s · HUMAN 4,92 s · DIGITAL WORKER 9,48 s · SYSTEMS 12,92 s
+   ============================================================ */
+.p2t2-orbit {
+    transform-box: view-box;
+    transform-origin: 200px 200px;
+    animation: p2t2Spin 16s linear infinite;
+}
+
+@keyframes p2t2Spin {
+    to { transform: rotate(360deg); }
+}
+
+.p2t2-node__bg,
+.p2t2-node__icon,
+.p2t2-node__label {
+    animation: p2t2NodeLit 16s linear infinite;
+}
+
+.p2t2-node--data > *      { animation-delay: 1.48s; }
+.p2t2-node--human > *     { animation-delay: 4.92s; }
+.p2t2-node--worker > *    { animation-delay: 9.48s; }
+.p2t2-node--systems > *   { animation-delay: 12.92s; }
+
+/* Kolo wezla ma tylko obrys, ikona i podpis tylko wypelnienie/obrys -
+   stad osobne reguly, zeby nie zamalowac tla kola. */
+.p2t2-node__bg { fill: #0f172a; }
+.p2t2-node__icon { fill: none; stroke: #94a3b8; }
+.p2t2-node__label { stroke: none; fill: #94a3b8; }
+
+@keyframes p2t2IconLit {
+    0%        { stroke: #94a3b8; filter: none; }
+    2%, 8%    { stroke: #dbeafe; filter: drop-shadow(0 0 5px rgba(96, 165, 250, 0.45)); }
+    10%, 100% { stroke: #94a3b8; filter: none; }
+}
+
+@keyframes p2t2LabelLit {
+    0%        { fill: #94a3b8; }
+    2%, 8%    { fill: #dbeafe; }
+    10%, 100% { fill: #94a3b8; }
+}
+
+.p2t2-node__bg   { animation-name: p2t2BgLit; }
+.p2t2-node__icon { animation-name: p2t2IconLit; }
+.p2t2-node__label { animation-name: p2t2LabelLit; }
+
+@keyframes p2t2BgLit {
+    0%        { stroke: #334155; filter: none; }
+    2%, 8%    { stroke: #93c5fd; filter: drop-shadow(0 0 7px rgba(96, 165, 250, 0.45)); }
+    10%, 100% { stroke: #334155; filter: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .p2t2-orbit,
+    .p2t2-node__bg,
+    .p2t2-node__icon,
+    .p2t2-node__label,
+    .p2t2-platform-diagram animate {
+        animation: none;
+    }
+}

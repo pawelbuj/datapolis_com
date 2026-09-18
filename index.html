@@ -30,12 +30,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Instrument+Sans:wght@400;500;600;700&amp;display=swap">
 
-    <link rel="stylesheet" href="assets/css/main.min.css?v=20260813">
-    <link rel="stylesheet" href="assets/css/async.min.css?v=20260813" media="print" onload="this.media='all'; this.onload=null;">
-    <link rel="stylesheet" href="assets/css/dark-theme.css?v=20260813">
-    <link rel="stylesheet" href="assets/css/new-homepage.css?v=20260917">
-    <link rel="stylesheet" href="assets/css/homepage-workflow-map.css?v=20260815">
-    <link rel="stylesheet" href="assets/css/home-v7.css?v=20260917">
+    <link rel="stylesheet" href="assets/css/main.min.css?v=0ca3b828">
+    <link rel="stylesheet" href="assets/css/async.min.css?v=31662295" media="print" onload="this.media='all'; this.onload=null;">
+    <link rel="stylesheet" href="assets/css/dark-theme.css?v=1d664f9e">
+    <link rel="stylesheet" href="assets/css/new-homepage.css?v=8f7d4412">
+    <link rel="stylesheet" href="assets/css/homepage-workflow-map.css?v=227d6fe7">
+    <link rel="stylesheet" href="assets/css/home-v7.css?v=52eaffbf">
 
     <script src="includes/loader.js"></script>
 
@@ -396,12 +396,13 @@
 
                             <div class="dp-workflow-map__canvas">
                                 <svg class="dp-workflow-map__lines" viewBox="0 0 640 390" preserveAspectRatio="none" aria-hidden="true">
-                                    <path data-home-edge-index="0" d="M79 196 C125 196 138 114 188 114"></path>
-                                    <path data-home-edge-index="1" d="M252 114 C294 114 288 196 328 196"></path>
-                                    <path data-home-edge-index="2" d="M392 196 C433 196 429 106 474 106"></path>
-                                    <path class="dp-workflow-map__branch" d="M392 196 C433 196 429 286 474 286"></path>
-                                    <path data-home-edge-index="3" d="M506 138 C506 186 506 220 506 254"></path>
-                                    <path data-home-edge-index="4" d="M538 286 C574 286 575 196 607 196"></path>
+                                    <path data-home-edge="0-1" d="M79 196 C125 196 138 114 188 114"></path>
+                                    <path data-home-edge="1-2" d="M252 114 C294 114 288 196 328 196"></path>
+                                    <path data-home-edge="2-3" d="M392 196 C433 196 429 106 474 106"></path>
+                                    <path data-home-edge="2-4" d="M392 196 C433 196 429 286 474 286"></path>
+                                    <path data-home-edge="3-4" d="M506 138 C506 186 506 220 506 254"></path>
+                                    <path data-home-edge="4-5" d="M538 286 C574 286 575 196 607 196"></path>
+                                    <path data-home-edge="3-1" d="M493 57 C493 24 400 16 346 16 C292 16 199 26 199 65"></path>
                                 </svg>
 
                                 <div class="dp-workflow-state dp-workflow-state--0" data-home-state-index="0" data-role-label="HUMAN · SERVICE COORDINATOR" data-task="Review and assign the request">
@@ -431,6 +432,7 @@
 
                                 <span class="dp-workflow-map__route-label">missing information</span>
                                 <span class="dp-workflow-map__route-label dp-workflow-map__route-label--fast">fast resolution</span>
+                                <span class="dp-workflow-map__route-label dp-workflow-map__route-label--back">reply received</span>
                                 <span class="dp-workflow-map__token" aria-hidden="true"><i></i></span>
                             </div>
 
@@ -657,7 +659,9 @@
                             </div>
                         </div>
                     </div>
+
                 </div>
+
 
                 <div class="v7-exhibit__foot">
                     <p class="v7-claim">
@@ -725,7 +729,6 @@
                         <p class="dp-feature__desc">Humans and digital workers execute steps inside one governed layer — logged, approved, auditable.</p>
                     </div>
                 </div>
-
                 <p class="dp-platform__tagline">Apps that run work.</p>
 
                 <div class="dp-platform__cta">
@@ -1066,17 +1069,17 @@
     </footer>
 <!--/build:footer--></div>
 
-    <script src="assets/js/homepage-workflow-map.js?v=20260815"></script>
-    <script src="assets/js/spec-app-exhibit.js?v=20260917"></script>
+    <script src="assets/js/homepage-workflow-map.js?v=eebafa6c"></script>
+    <script src="assets/js/spec-app-exhibit.js?v=4cfe417c"></script>
 
     <!-- Scripts -->
     <script>
         document.addEventListener('includesLoaded', function() {
             var scripts = [
-                'assets/js/vendors.min.js?v=20260813',
-                'assets/js/main.min.js?v=20260813',
-                'assets/js/functions.min.js?v=20260813',
-                'assets/js/async.min.js?v=20260813'
+                'assets/js/vendors.min.js?v=33076cde',
+                'assets/js/main.min.js?v=3e309815',
+                'assets/js/functions.min.js?v=80c20afd',
+                'assets/js/async.min.js?v=907ee1f2'
             ];
             
             function loadScript(index) {

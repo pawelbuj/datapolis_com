@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>2to2 App Creator - de tu documentación a una aplicación gobernada | Datapolis</title>
-    <meta name="description" content="App Creator lee procedimientos, políticas y formularios, los convierte en una especificación estructurada y construye con ella una aplicación gobernada sobre la plataforma 2to2.">
+    <meta name="description" content="Tu documentación es el programa: App Creator convierte los procedimientos, políticas y formularios que ya tienes en una especificación que apruebas, y la plataforma ensambla la aplicación con sus propios objetos — no con código generado.">
     <meta name="robots" content="index,follow">
     <meta property="og:title" content="2to2 App Creator - de la documentación a una aplicación gobernada">
-    <meta property="og:description" content="App Creator lee procedimientos, políticas y formularios, los convierte en una especificación estructurada y construye con ella una aplicación gobernada sobre la plataforma 2to2.">
+    <meta property="og:description" content="Tu documentación es el programa: App Creator convierte los procedimientos, políticas y formularios que ya tienes en una especificación que apruebas, y la plataforma ensambla la aplicación con sus propios objetos — no con código generado.">
     <meta property="og:type" content="website">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#020617">
@@ -30,12 +30,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Instrument+Sans:wght@400;500;600;700&amp;display=swap">
 
-    <link rel="stylesheet" href="../assets/css/main.min.css?v=20260813">
-    <link rel="stylesheet" href="../assets/css/async.min.css?v=20260813" media="print" onload="this.media='all'; this.onload=null;">
-    <link rel="stylesheet" href="../assets/css/dark-theme.css?v=20260813">
-    <link rel="stylesheet" href="../assets/css/new-homepage.css?v=20260917">
-    <link rel="stylesheet" href="../assets/css/home-v7.css?v=20260917">
-    <link rel="stylesheet" href="../assets/css/app-creator-page.css?v=20260814">
+    <link rel="stylesheet" href="../assets/css/main.min.css?v=0ca3b828">
+    <link rel="stylesheet" href="../assets/css/async.min.css?v=31662295" media="print" onload="this.media='all'; this.onload=null;">
+    <link rel="stylesheet" href="../assets/css/dark-theme.css?v=1d664f9e">
+    <link rel="stylesheet" href="../assets/css/new-homepage.css?v=8f7d4412">
+    <link rel="stylesheet" href="../assets/css/home-v7.css?v=52eaffbf">
+    <link rel="stylesheet" href="../assets/css/homepage-workflow-map.css">
+    <link rel="stylesheet" href="../assets/css/app-creator-page.css?v=033c9447">
 
     <script src="../includes/loader.js"></script>
 
@@ -132,7 +133,7 @@
         "@type": "ImageObject",
         "url": "https://datapolis.com/assets/img/og-image-1200x630.png"
       },
-      "description": "App Creator lee procedimientos, políticas y formularios, los convierte en una especificación estructurada y construye con ella una aplicación gobernada sobre la plataforma 2to2.",
+      "description": "Tu documentación es el programa: App Creator convierte los procedimientos, políticas y formularios que ya tienes en una especificación que apruebas, y la plataforma ensambla la aplicación con sus propios objetos — no con código generado.",
       "breadcrumb": {
         "@id": "https://datapolis.com/es/app-creator#breadcrumb"
       }
@@ -383,12 +384,17 @@
         <section class="v7-page-hero" aria-labelledby="app-creator-title" data-spec-app-exhibit>
             <div class="v7-container v7-page-hero__layout">
                 <div>
-                    <p class="v7-eyebrow">2to2 App Creator</p>
+                    <p class="v7-label">2to2 App Creator</p>
                     <h1 class="v7-page-hero__title" id="app-creator-title">
-                        La aplicación que tu documentación ya describe.
-                        <em>Construida sobre una plataforma de procesos, no sobre un montón de código.</em>
+                        Tu documentación es el programa.
+                        <em>La IA la compila. La plataforma la ejecuta.</em>
                     </h1>
-                    <p class="v7-page-hero__lead">Procedimientos, políticas, formularios y descripciones de proceso ya contienen las reglas que una aplicación debe cumplir. App Creator lee esas fuentes, las convierte en una especificación estructurada que puedes revisar — y construye con ella la aplicación gobernada.</p>
+                    <p class="v7-page-hero__lead">
+                        App Creator es un editor de documentación de análisis asistido por IA. Lee los procedimientos, políticas y formularios que ya tienes y los convierte en una especificación que lees y apruebas.
+                    </p>
+                    <p class="v7-page-hero__intro">
+                        De esa especificación no sale código — sale una aplicación compuesta por los objetos de la propia plataforma. La IA no inventa arquitectura; solo puede usar lo que la plataforma ya sabe hacer.
+                    </p>
 
                     <div class="v7-exhibit__actions">
                         <a class="v7-btn v7-btn--primary" href="#how-it-works">Ver el camino del documento a la aplicación <span aria-hidden="true">↓</span></a>
@@ -397,62 +403,76 @@
 
                     <ul class="v7-points">
                         <li><span aria-hidden="true">✓</span> Sin código que mantener</li>
-                        <li><span aria-hidden="true">✓</span> Documentación que no puede quedarse obsoleta</li>
-                        <li><span aria-hidden="true">✓</span> Gobierno incorporado desde el principio</li>
+                        <li><span aria-hidden="true">✓</span> La documentación es la aplicación</li>
+                        <li><span aria-hidden="true">✓</span> La IA ensambla, no inventa</li>
                     </ul>
                 </div>
 
-                <div class="v7-extract">
-                    <div class="v7-stage">
-                        <div class="v7-pane">
-                            <div class="v7-pane__head">
-                                <span class="v7-pane__label">Tu documento</span>
-                                <span class="v7-pane__meta">procedimiento-compras.pdf</span>
-                            </div>
-                            <div class="v7-pane__body">
-                                <p class="v7-doc__title">Procedimiento de gestión de proveedores</p>
-
-                                <p class="v7-doc__heading">3.2 Registro</p>
-                                <p class="v7-doc__p">Cada nuevo proveedor lo da de alta en el registro <mark class="v7-mark" data-link="role" tabindex="0">un especialista de compras</mark>, junto con <mark class="v7-mark" data-link="data" tabindex="0">los datos de la empresa, una persona de contacto y el nivel de riesgo</mark> asignado en la evaluación inicial.</p>
-
-                                <p class="v7-doc__heading">3.3 Revisión</p>
-                                <p class="v7-doc__p">Los proveedores clasificados <mark class="v7-mark" data-link="rule" tabindex="0">por encima de riesgo medio</mark> pasan al equipo de Compliance. Un proveedor no puede activarse hasta que esa revisión esté cerrada.</p>
-
-                                <p class="v7-doc__heading">3.4 Registros</p>
-                                <p class="v7-doc__p"><mark class="v7-mark" data-link="audit" tabindex="0">Cada decisión queda registrada</mark> junto con el nombre de la persona que la tomó y la fecha.</p>
-                            </div>
-                        </div>
-
-                        <div class="v7-stage__divider" aria-hidden="true"></div>
-
-                        <div class="v7-pane">
-                            <div class="v7-pane__head">
-                                <span class="v7-pane__label">Especificación estructurada</span>
-                                <span class="v7-pane__meta">revisable</span>
-                            </div>
-                            <div class="v7-pane__body">
-                                <div class="v7-items">
-                                    <div class="v7-item" data-link="role" tabindex="0">
-                                        <span class="v7-item__label">Rol</span>
-                                        <span class="v7-item__value">Especialista de compras<small>Responsable del registro; puede crear y editar un proveedor en Borrador.</small></span>
+                <div class="v7-ac" data-ac-tabs>
+                    <div class="v7-ac__tabs" role="tablist"><button type="button" class="v7-ac__tab" role="tab" aria-selected="true" data-ac-tab="1"><i>1</i> Documentación de análisis</button><button type="button" class="v7-ac__tab" role="tab" aria-selected="false" data-ac-tab="2"><i>2</i> Documentación técnica</button><button type="button" class="v7-ac__tab" role="tab" aria-selected="false" data-ac-tab="3"><i>3</i> La aplicación</button></div>
+                    <div class="v7-ac__body"><div class="v7-ac__panel is-on" data-ac-panel="1"><div class="v7-ac__crumb">AppSpecification/business/ <b>proceso-no-conformidad.md</b> · Proceso de negocio <span class="v7-ac__pill">CONFIRMADO</span><span class="v7-ac__rev">Revisión 3</span></div><div class="v7-ac__split"><nav class="v7-ac__tree">
+                            <h5>CAPA DE NEGOCIO</h5>
+                            <span>Brief</span>
+                            <span>Glosario</span>
+                            <span>Actores y permisos</span>
+                            <span>Modelo de dominio</span>
+                            <h6>Procesos de negocio</h6>
+                            <span class="sub on">No conformidad</span>
+                            <span class="sub">Acciones</span>
+                            <span class="sub">Caso 8D</span>
+                            <span class="sub">Aviso a proveedor</span>
+                            <span>Casos de uso</span>
+                            <span>Pantallas</span>
+                            <span>Reglas de negocio</span>
+                            <span>Integraciones</span></nav><div class="v7-ac__doc"><h3>Proceso de negocio: gestión de no conformidades</h3><h4>1. Resumen del proceso</h4><p class="v7-ac__li"><span><b>Código del proceso:</b> PROC-NCR-01</span></p><p class="v7-ac__li"><span><b>Disparador:</b> un defecto o desviación detectado en inspección de entrada, producción, inspección final, reclamación de cliente o auditoría.</span></p><p class="v7-ac__li"><span><b>Responsable del proceso:</b> ingeniero de calidad</span></p><p class="v7-ac__li"><span><b>Entidades principales:</b> No conformidad, Acción, Aprobación, Evidencia, Caso 8D</span></p><h4>2. Flujo</h4><p class="v7-ac__li"><span><b>Paso 1 — registro.</b> Quien la detecta introduce planta, línea, origen, número de pieza, cantidad y descripción del defecto. Estado: <code>Registrada</code>.</span></p><p class="v7-ac__li"><span><b>Paso 2 — verificación.</b> El ingeniero de calidad asigna tipo de defecto y severidad, y marca si hace falta contención.</span></p><div class="v7-ac__ai"><h6><span>AI</span> PROPUESTA A PARTIR DEL PROCEDIMIENTO QP-08</h6><p>En §4.2 hay un paso de «verificación de eficacia» a los 30 días — no está en esta descripción. ¿Añadirlo como paso 7?</p><div><button type="button" class="v7-ac__mini acc">Añadir</button><button type="button" class="v7-ac__mini">Ver en el procedimiento</button><button type="button" class="v7-ac__mini">Descartar</button></div></div></div></div></div><div class="v7-ac__panel" data-ac-panel="2"><div class="v7-ac__crumb">AppSpecification/workflows/ <b>workflow-spec-ncr.md</b> · Especificación de proceso <span class="v7-ac__pill">CONFIRMADO</span><span class="v7-ac__rev">Revisión 5</span></div><div class="v7-ac__split"><nav class="v7-ac__tree">
+                            <h5>ESPECIFICACIÓN</h5>
+                            <span>Especificación de la aplicación</span>
+                            <h6>Procesos</h6>
+                            <span class="sub">Caso 8D</span>
+                            <span class="sub">Acciones</span>
+                            <span class="sub on">No conformidad</span>
+                            <span class="sub">Aviso SCAR</span>
+                            <h6>Tablas de datos</h6>
+                            <span class="sub">Auditorías</span>
+                            <span class="sub">Casos</span>
+                            <span class="sub">Disposiciones</span>
+                            <span class="sub">Evidencias</span>
+                            <h6>Páginas</h6>
+                            <span class="sub">Registro de no conformidades</span>
+                            <span class="sub">Panel de calidad</span></nav><div class="v7-ac__doc"><h3>No conformidad</h3><p>La vida de una no conformidad, desde que alguien la registra en planta hasta que se cierra: verificación, contención, la disposición y su aprobación, la concesión del cliente cuando la pieza está bajo contrato OEM, la ejecución de la disposición y la decisión de si hace falta un caso 8D completo.</p><h4>Roles</h4><table class="v7-ac__tbl"><thead><tr><th>ROL</th><th>QUIÉN LO OCUPA</th></tr></thead><tbody><tr><td>Registrador</td><td>Operarios, inspectores y almaceneros de inspección de entrada.</td></tr><tr><td>Ingeniero de calidad</td><td>Verifica y clasifica, lleva el caso; aprueba una disposición no crítica.</td></tr><tr><td>Responsable de calidad</td><td>Aprueba severidad crítica y la disposición «usar tal cual», y registra la concesión del cliente.</td></tr><tr><td>Responsable de acción</td><td>Ejecuta la contención y la disposición física.</td></tr></tbody></table><h4>Campos</h4><table class="v7-ac__tbl"><thead><tr><th>CAMPO</th><th>TIPO</th><th>OBLIG.</th><th>CONTIENE</th></tr></thead><tbody><tr><td>Número NCR</td><td><span class="v7-ac__ty">Texto</span></td><td>no</td><td>NCR-AAAA-nnnnn, asignado automáticamente.</td></tr><tr><td>Título</td><td><span class="v7-ac__ty">Texto</span></td><td>sí</td><td>Una línea: qué está mal.</td></tr><tr><td>Origen</td><td><span class="v7-ac__ty">Selección</span></td><td>sí</td><td>Entrada, producción, inspección final, reclamación, auditoría.</td></tr><tr><td>Planta</td><td><span class="v7-ac__ty">Selección</span></td><td>sí</td><td>Mielec o Rzeszów.</td></tr><tr><td>Cantidad</td><td><span class="v7-ac__ty">Número</span></td><td>sí</td><td>Piezas afectadas.</td></tr></tbody></table></div></div></div><div class="v7-ac__panel" data-ac-panel="3"><div class="v7-ac__sub" role="tablist"><button type="button" class="v7-ac__sbtn" role="tab" aria-selected="false" data-ac-sub="data">Datos</button><button type="button" class="v7-ac__sbtn" role="tab" aria-selected="true" data-ac-sub="wf">Workflows</button><button type="button" class="v7-ac__sbtn" role="tab" aria-selected="false" data-ac-sub="pages">Páginas</button></div><div class="v7-ac__view" data-ac-view="data"><div class="v7-ac__cols"><div class="v7-ac__col"><b>Número NCR</b><span>Texto · auto</span></div><div class="v7-ac__col"><b>Título</b><span>Texto · obligatorio</span></div><div class="v7-ac__col"><b>Origen</b><span>Selección · 5 valores</span></div><div class="v7-ac__col"><b>Planta</b><span>Selección · 2 valores</span></div><div class="v7-ac__col"><b>Cantidad</b><span>Número</span></div><div class="v7-ac__col"><b>Fotos</b><span>Adjuntos</span></div><div class="v7-ac__col"><b>Disposición</b><span>Relación → Disposiciones</span></div></div><div class="v7-ac__wire"><div class="v7-ac__row h"><span>NÚMERO</span><span>TÍTULO</span><span>PLANTA</span><span>ESTADO</span></div><div class="v7-ac__row"><span>NCR-2026-00184</span><span>Desviación de diámetro de taladro, pos. 14</span><span>Mielec</span><span class="v7-ac__st b">Verificación</span></div><div class="v7-ac__row"><span>NCR-2026-00183</span><span>Falta certificado de material</span><span>Rzeszów</span><span class="v7-ac__st ">Cerrada</span></div><div class="v7-ac__row"><span>NCR-2026-00182</span><span>Recubrimiento dañado en transporte</span><span>Mielec</span><span class="v7-ac__st b">Disposición</span></div><div class="v7-ac__row"><span>NCR-2026-00181</span><span>Par de apriete fuera de especificación</span><span>Mielec</span><span class="v7-ac__st ">Cerrada</span></div></div><p class="v7-ac__note">Una tabla con <b>campos tipados y relaciones</b> — definida en el editor, no en migraciones de base de datos.</p></div><div class="v7-ac__view is-on" data-ac-view="wf"><div class="dp-hero__visual"><div class="dp-workflow-map" data-home-workflow-map data-step="0" data-role="human" role="img" aria-label="El proceso de no conformidad en la aplicación terminada: estados, roles y transiciones."><div class="dp-workflow-map__head"><span><small>PROCESO EN LA APLICACIÓN</small><strong>No conformidad NCR-2026-00184</strong></span><em><i></i> EN MARCHA</em></div><div class="dp-workflow-map__canvas"><svg class="dp-workflow-map__lines" viewBox="0 0 640 390" preserveAspectRatio="none" aria-hidden="true">
+                                        <path data-home-edge="0-1" d="M95 200 C145 200 165 296 205 296"></path>
+                                        <path data-home-edge="1-2" d="M222 296 C270 296 288 200 322 200"></path>
+                                        <path data-home-edge="2-3" d="M338 200 C386 200 402 296 438 296"></path>
+                                        <path data-home-edge="3-4" d="M442 262 C442 220 442 180 442 132"></path>
+                                        <path data-home-edge="3-5" d="M494 292 C530 292 534 232 546 210"></path>
+                                        <path data-home-edge="4-5" d="M494 100 C532 100 538 158 548 188"></path>
+                                        <path data-home-edge="2-0" d="M326 152 C326 68 250 42 180 42 C118 42 90 94 89 152"></path>
+                                    </svg>
+                                    <div class="dp-workflow-state dp-workflow-state--0" data-home-state-index="0" data-role-label="HUMANO · REGISTRADOR" data-task="Describe el defecto, la planta, la pieza y la cantidad">
+                                        <span class="dp-workflow-role dp-workflow-role--human"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="7.5" r="3.5"></circle><path d="M5.2 20c.6-4.2 2.9-6.3 6.8-6.3s6.2 2.1 6.8 6.3"></path></svg></span>
+                                        <strong>Registrada</strong><small>Humano · Registrador</small>
                                     </div>
-                                    <div class="v7-item" data-link="data" tabindex="0">
-                                        <span class="v7-item__label">Datos</span>
-                                        <span class="v7-item__value">Proveedor · Persona de contacto · Nivel de riesgo<small>Campos, tipos y valores obligatorios.</small></span>
+                                    <div class="dp-workflow-state dp-workflow-state--1" data-home-state-index="1" data-role-label="DIGITAL WORKER · CLASIFICACIÓN" data-task="Asigna tipo de defecto y severidad inicial">
+                                        <span class="dp-workflow-role dp-workflow-role--digital"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4.5" y="6" width="15" height="13" rx="3"></rect><circle cx="9.2" cy="12" r="1"></circle><circle cx="14.8" cy="12" r="1"></circle><path d="M9 16h6M12 3v3M9.5 3h5"></path></svg></span>
+                                        <strong>Clasificación</strong><small>Digital · Triaje</small>
                                     </div>
-                                    <div class="v7-item" data-link="rule" tabindex="0">
-                                        <span class="v7-item__label">Regla</span>
-                                        <span class="v7-item__value">Riesgo por encima de medio → revisión de Compliance<small>Bloquea el paso a Activo hasta que la revisión esté cerrada.</small></span>
+                                    <div class="dp-workflow-state dp-workflow-state--2" data-home-state-index="2" data-role-label="HUMANO · INGENIERO DE CALIDAD" data-task="Revisa las evidencias y confirma la severidad">
+                                        <span class="dp-workflow-role dp-workflow-role--human"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="7.5" r="3.5"></circle><path d="M5.2 20c.6-4.2 2.9-6.3 6.8-6.3s6.2 2.1 6.8 6.3"></path></svg></span>
+                                        <strong>Verificación</strong><small>Humano · Ingeniero</small>
                                     </div>
-                                    <div class="v7-item" data-link="audit" tabindex="0">
-                                        <span class="v7-item__label">Auditoría</span>
-                                        <span class="v7-item__value">Decisión · autor · marca de tiempo<small>Registrado en cada cambio de estado.</small></span>
+                                    <div class="dp-workflow-state dp-workflow-state--3" data-home-state-index="3" data-role-label="HUMANO · INGENIERO DE CALIDAD" data-task="Elige la disposición de las piezas afectadas">
+                                        <span class="dp-workflow-role dp-workflow-role--human"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="7.5" r="3.5"></circle><path d="M5.2 20c.6-4.2 2.9-6.3 6.8-6.3s6.2 2.1 6.8 6.3"></path></svg></span>
+                                        <strong>Disposición</strong><small>Humano · Ingeniero</small>
                                     </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <p class="v7-extract__hint">Pasa el ratón o toca una frase marcada para ver en qué se convierte en la especificación.</p>
+                                    <div class="dp-workflow-state dp-workflow-state--4" data-home-state-index="4" data-role-label="HUMANO · RESPONSABLE DE CALIDAD" data-task="Aprueba la disposición crítica">
+                                        <span class="dp-workflow-role dp-workflow-role--human"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="7.5" r="3.5"></circle><path d="M5.2 20c.6-4.2 2.9-6.3 6.8-6.3s6.2 2.1 6.8 6.3"></path></svg></span>
+                                        <strong>Aprobación</strong><small>Humano · Responsable</small>
+                                    </div>
+                                    <div class="dp-workflow-state dp-workflow-state--5" data-home-state-index="5" data-role-label="DIGITAL WORKER · CIERRE" data-task="Completa el registro y archiva el caso">
+                                        <span class="dp-workflow-role dp-workflow-role--digital"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4.5" y="6" width="15" height="13" rx="3"></rect><circle cx="9.2" cy="12" r="1"></circle><circle cx="14.8" cy="12" r="1"></circle><path d="M9 16h6M12 3v3M9.5 3h5"></path></svg></span>
+                                        <strong>Cerrada</strong><small>Digital · Cierre</small>
+                                    </div>
+                                    <span class="dp-workflow-map__route-label dp-workflow-map__route-label--r1">crítica</span><span class="dp-workflow-map__route-label dp-workflow-map__route-label--r2">sin aprobación</span><span class="dp-workflow-map__route-label dp-workflow-map__route-label--r3">devuelta al registrador</span><span class="dp-workflow-map__token" aria-hidden="true"><i></i></span></div><div class="dp-workflow-map__current"><span>ESTADO ACTIVO</span><strong data-home-current-state>REGISTRADA</strong><i></i><small data-home-current-role>HUMANO · REGISTRADOR</small><b data-home-current-task>Describe el defecto, la planta, la pieza y la cantidad</b></div></div></div><p class="v7-ac__note">Esto es un <b>objeto de la plataforma</b> — estados, transiciones y roles. Ni código ni un dibujo en un documento: así se ve el proceso en el editor y así funciona en la aplicación.</p></div><div class="v7-ac__view" data-ac-view="pages"><div class="v7-ac__wire"><div class="v7-ac__wire-top"><b>Registro de no conformidades</b><span class="v7-ac__f">Planta: todas</span><span class="v7-ac__f">Estado: abiertas</span><span class="v7-ac__f">Mis casos</span></div><div class="v7-ac__row h"><span>NÚMERO</span><span>TÍTULO</span><span>PERSONA</span><span>PLAZO</span></div><div class="v7-ac__row"><span>NCR-2026-00184</span><span>Desviación de diámetro de taladro, pos. 14</span><span>A. Nowak</span><span>en 2 días</span></div><div class="v7-ac__row"><span>NCR-2026-00182</span><span>Recubrimiento dañado en transporte</span><span>M. Zajac</span><span>hoy</span></div><div class="v7-ac__row"><span>NCR-2026-00179</span><span>Dimensión de brida fuera de tolerancia</span><span>A. Nowak</span><span>en 5 días</span></div></div><div class="v7-ac__cols" style="margin-top:11px"><div class="v7-ac__col"><b>Registro de no conformidades</b><span>Lista · visible para todos</span></div><div class="v7-ac__col"><b>Panel de calidad</b><span>Indicadores · dirección</span></div><div class="v7-ac__col"><b>Calendario de acciones</b><span>Calendario · responsables</span></div></div><p class="v7-ac__note">Las páginas son <b>vistas sobre los procesos</b> — columnas, filtros y acceso definidos en el editor.</p></div></div></div>
                 </div>
             </div>
         </section>
@@ -812,14 +832,16 @@
     </footer>
 <!--/build:footer--></div>
 
-    <script src="../assets/js/spec-app-exhibit.js?v=20260917"></script>
+    <script src="../assets/js/homepage-workflow-map.js"></script>
+    <script src="../assets/js/app-creator-tabs.js"></script>
+    <script src="../assets/js/spec-app-exhibit.js?v=4cfe417c"></script>
     <script>
         document.addEventListener('includesLoaded', function() {
             var scripts = [
-                '../assets/js/vendors.min.js?v=20260813',
-                '../assets/js/main.min.js?v=20260813',
-                '../assets/js/functions.min.js?v=20260813',
-                '../assets/js/async.min.js?v=20260813'
+                '../assets/js/vendors.min.js?v=33076cde',
+                '../assets/js/main.min.js?v=3e309815',
+                '../assets/js/functions.min.js?v=80c20afd',
+                '../assets/js/async.min.js?v=907ee1f2'
             ];
 
             function loadScript(index) {
