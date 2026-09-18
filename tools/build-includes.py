@@ -69,6 +69,37 @@ def website():
     }
 
 
+def _wf3_modified():
+    """Data ostatniej zmiany sharepoint.html — realny sygnał świeżości.
+
+    Bierzemy późniejszą z dwóch: daty ostatniego commita i daty modyfikacji
+    pliku. Dzięki temu strona przebudowana, ale jeszcze niezacommitowana,
+    nie ogłasza daty starszej niż jej własna treść.
+    """
+    import os
+    import subprocess
+    from datetime import date, datetime, timezone
+
+    candidates = []
+    try:
+        out = subprocess.run(["git", "log", "-1", "--format=%cI", "--", "sharepoint.html"],
+                             cwd=ROOT, capture_output=True, text=True, timeout=10).stdout.strip()
+        if out:
+            candidates.append(out[:10])
+    except Exception:
+        pass
+
+    path = os.path.join(ROOT, "sharepoint.html")
+    if os.path.exists(path):
+        ts = datetime.fromtimestamp(os.path.getmtime(path), tz=timezone.utc)
+        candidates.append(ts.strftime("%Y-%m-%d"))
+
+    return max(candidates) if candidates else date.today().isoformat()
+
+
+WF3_MODIFIED = _wf3_modified()
+
+
 def graph_for(lang, page, title, desc):
     url = url_for(lang, page)
     nodes = [organization(), website()]
@@ -99,6 +130,30 @@ def graph_for(lang, page, title, desc):
         })
 
     nodes.append(webpage)
+
+    if page == "sharepoint":
+        # Strona-kompendium o wyłączeniu przepływów SharePoint 2010/2013.
+        # TechArticle + dateModified: data aktualizacji jest tu sygnałem,
+        # bo treść opisuje zdarzenie sprzed dni, nie stan trwały.
+        nodes.append({
+            "@type": "TechArticle",
+            "@id": f"{url}#article",
+            "headline": title,
+            "description": desc,
+            "inLanguage": lang,
+            "isPartOf": {"@id": f"{url}#webpage"},
+            "mainEntityOfPage": {"@id": f"{url}#webpage"},
+            "author": {"@id": ORG_ID},
+            "publisher": {"@id": ORG_ID},
+            "datePublished": "2026-09-18",
+            "dateModified": WF3_MODIFIED,
+            "about": [
+                {"@type": "Thing", "name": "SharePoint Server Subscription Edition"},
+                {"@type": "Thing", "name": "SharePoint 2010 workflows"},
+                {"@type": "Thing", "name": "SharePoint 2013 workflows"},
+                {"@type": "Thing", "name": "KB5002908"},
+            ],
+        })
 
     if page == "platform-2to2":
         nodes.append({

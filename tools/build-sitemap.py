@@ -57,17 +57,24 @@ def indexable(path: Path) -> bool:
 
 
 def git_lastmod(path: Path) -> str:
+    """Późniejsza z dwóch dat: ostatniego commita i modyfikacji pliku.
+
+    Sama data commita kłamie o stronie, która została właśnie przebudowana,
+    ale jeszcze nie zacommitowana — a lastmod ma mówić prawdę o treści.
+    """
+    candidates = []
     try:
         out = subprocess.run(
             ["git", "log", "-1", "--format=%cI", "--", str(path.relative_to(ROOT))],
             cwd=ROOT, capture_output=True, text=True, timeout=15,
         ).stdout.strip()
         if out:
-            return out[:10]
+            candidates.append(out[:10])
     except (OSError, subprocess.SubprocessError):
         pass
     ts = datetime.fromtimestamp(path.stat().st_mtime, tz=timezone.utc)
-    return ts.strftime("%Y-%m-%d")
+    candidates.append(ts.strftime("%Y-%m-%d"))
+    return max(candidates)
 
 
 def priority_for(lang: str | None, slug: str) -> str:

@@ -2,28 +2,29 @@
 <html lang="de">
 <head>
     <meta charset="UTF-8">
-    <title>Prozess-Apps - Prozesse als reale Anwendungen geliefert | Datapolis</title>
-    <meta name="description" content="Prozess-Apps sind die Art, wie Arbeit in Datapolis tatsächlich erledigt wird. Eine Anwendung deckt einen ganzen Arbeitsbereich ab: die Prozesse auf einem gemeinsamen Datenmodell, mit den Formularen, Aufgaben, Screens und Regeln, die dazugehören.">
+    <title>SharePoint-2010-Workflows deaktiviert: was tun | Datapolis</title>
+    <meta name="description" content="Das September-Update 2026 (KB5002908) deaktiviert SharePoint-2010-Workflows in jeder Websitesammlung. Was sich geändert hat und wie Sie sie zurückholen.">
     <meta name="robots" content="index,follow">
-    <meta property="og:title" content="Prozess-Apps - Prozesse als reale Anwendungen geliefert">
-    <meta property="og:description" content="Eine Anwendung deckt einen ganzen Arbeitsbereich ab: die Prozesse auf einem gemeinsamen Datenmodell, mit den Formularen, Aufgaben, Screens und Regeln, die dazugehören.">
-    <meta property="og:type" content="website">
+    <meta property="og:title" content="SharePoint-Workflows stehen still nach dem September-Update 2026">
+    <meta property="og:description" content="KB5002908 hat das Feature SharePoint 2010 Workflow standardmäßig deaktiviert. Was passiert ist, welches PowerShell-Kommando es zurückholt und welche On-Premises-Optionen ehrlich bleiben.">
+    <meta property="og:type" content="article">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#020617">
 
     <!-- SEO: canonical / hreflang / open graph -->
-    <link rel="canonical" href="https://datapolis.com/de/process-apps">
-    <link rel="alternate" hreflang="en" href="https://datapolis.com/process-apps">
-    <link rel="alternate" hreflang="pl" href="https://datapolis.com/pl/process-apps">
-    <link rel="alternate" hreflang="de" href="https://datapolis.com/de/process-apps">
-    <link rel="alternate" hreflang="es" href="https://datapolis.com/es/process-apps">
-    <link rel="alternate" hreflang="x-default" href="https://datapolis.com/process-apps">
-    <meta property="og:url" content="https://datapolis.com/de/process-apps">
+    <link rel="canonical" href="https://datapolis.com/de/sharepoint">
+    <link rel="alternate" hreflang="en" href="https://datapolis.com/sharepoint">
+    <link rel="alternate" hreflang="pl" href="https://datapolis.com/pl/sharepoint">
+    <link rel="alternate" hreflang="de" href="https://datapolis.com/de/sharepoint">
+    <link rel="alternate" hreflang="es" href="https://datapolis.com/es/sharepoint">
+    <link rel="alternate" hreflang="x-default" href="https://datapolis.com/sharepoint">
+    <meta property="og:url" content="https://datapolis.com/de/sharepoint">
     <meta property="og:locale" content="de_DE">
     <meta property="og:image" content="https://datapolis.com/assets/img/og-image-1200x630.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta name="twitter:card" content="summary_large_image">
+    <meta property="article:modified_time" content="2026-09-18">
     <!-- /SEO -->
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -35,15 +36,9 @@
     <link rel="stylesheet" href="../assets/css/dark-theme.css?v=1d664f9e">
     <link rel="stylesheet" href="../assets/css/new-homepage.css?v=8f7d4412">
     <link rel="stylesheet" href="../assets/css/home-v7.css?v=52eaffbf">
-    <link rel="stylesheet" href="../assets/css/process-apps.css?v=e35a3a34">
+    <link rel="stylesheet" href="../assets/css/sharepoint-wf3.css?v=1a0c55e2">
 
     <script src="../includes/loader.js"></script>
-
-    <link rel="icon" type="image/png" href="../assets/img/favicon/favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="../assets/img/favicon/favicon.svg" />
-    <link rel="shortcut icon" href="../assets/img/favicon/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/favicon/apple-touch-icon.png" />
-    <link rel="manifest" href="../assets/img/favicon/site.webmanifest" />
 
     <!-- JSON-LD -->
     <script type="application/ld+json">
@@ -101,7 +96,7 @@
     },
     {
       "@type": "BreadcrumbList",
-      "@id": "https://datapolis.com/de/process-apps#breadcrumb",
+      "@id": "https://datapolis.com/de/sharepoint#breadcrumb",
       "itemListElement": [
         {
           "@type": "ListItem",
@@ -112,15 +107,15 @@
         {
           "@type": "ListItem",
           "position": 2,
-          "name": "Prozess-Apps - Prozesse als reale Anwendungen geliefert | Datapolis"
+          "name": "SharePoint-2010-Workflows deaktiviert: was tun | Datapolis"
         }
       ]
     },
     {
       "@type": "WebPage",
-      "@id": "https://datapolis.com/de/process-apps#webpage",
-      "url": "https://datapolis.com/de/process-apps",
-      "name": "Prozess-Apps - Prozesse als reale Anwendungen geliefert | Datapolis",
+      "@id": "https://datapolis.com/de/sharepoint#webpage",
+      "url": "https://datapolis.com/de/sharepoint",
+      "name": "SharePoint-2010-Workflows deaktiviert: was tun | Datapolis",
       "isPartOf": {
         "@id": "https://datapolis.com/#website"
       },
@@ -132,18 +127,57 @@
         "@type": "ImageObject",
         "url": "https://datapolis.com/assets/img/og-image-1200x630.png"
       },
-      "description": "Prozess-Apps sind die Art, wie Arbeit in Datapolis tatsächlich erledigt wird. Eine Anwendung deckt einen ganzen Arbeitsbereich ab: die Prozesse auf einem gemeinsamen Datenmodell, mit den Formularen, Aufgaben, Screens und Regeln, die dazugehören.",
+      "description": "Das September-Update 2026 (KB5002908) deaktiviert SharePoint-2010-Workflows in jeder Websitesammlung. Was sich geändert hat und wie Sie sie zurückholen.",
       "breadcrumb": {
-        "@id": "https://datapolis.com/de/process-apps#breadcrumb"
+        "@id": "https://datapolis.com/de/sharepoint#breadcrumb"
       }
+    },
+    {
+      "@type": "TechArticle",
+      "@id": "https://datapolis.com/de/sharepoint#article",
+      "headline": "SharePoint-2010-Workflows deaktiviert: was tun | Datapolis",
+      "description": "Das September-Update 2026 (KB5002908) deaktiviert SharePoint-2010-Workflows in jeder Websitesammlung. Was sich geändert hat und wie Sie sie zurückholen.",
+      "inLanguage": "de",
+      "isPartOf": {
+        "@id": "https://datapolis.com/de/sharepoint#webpage"
+      },
+      "mainEntityOfPage": {
+        "@id": "https://datapolis.com/de/sharepoint#webpage"
+      },
+      "author": {
+        "@id": "https://datapolis.com/#organization"
+      },
+      "publisher": {
+        "@id": "https://datapolis.com/#organization"
+      },
+      "datePublished": "2026-09-18",
+      "dateModified": "2026-09-18",
+      "about": [
+        {
+          "@type": "Thing",
+          "name": "SharePoint Server Subscription Edition"
+        },
+        {
+          "@type": "Thing",
+          "name": "SharePoint 2010 workflows"
+        },
+        {
+          "@type": "Thing",
+          "name": "SharePoint 2013 workflows"
+        },
+        {
+          "@type": "Thing",
+          "name": "KB5002908"
+        }
+      ]
     }
   ]
 }
     </script>
     <!-- /JSON-LD -->
 </head>
-<body class="dark-theme pa-page">
-    <!-- Header Placeholder -->
+<body>
+
     <div id="header-placeholder"><!--build:header-->
     <header class="dp-header">
         <div class="dp-header__container">
@@ -362,386 +396,197 @@
 <!--/build:header--></div>
 
     <main>
-        <!-- ========================================
-             HERO-SEKTION - Zweispaltiges Layout
-             ======================================== -->
-        <section class="pa-hero">
-            <div class="pa-hero__grid"></div>
-            <div class="pa-hero__glow"></div>
-            
-            <div class="pa-container pa-hero__inner">
-                <!-- Left: Content -->
-                <div class="pa-hero__content">
-                    <span class="pa-label">Prozess-Apps</span>
-                    
-                    <h1 class="pa-hero__title">
-                        Prozesse geliefert als <span class="accent">reale Anwendungen.</span>
+        <section class="v7-page-hero" aria-labelledby="wf3-title">
+            <div class="v7-container v7-page-hero__layout">
+                <div>
+                    <p class="v7-eyebrow">SharePoint Server Subscription Edition &middot; KB5002908</p>
+                    <h1 class="v7-page-hero__title" id="wf3-title">
+                        Ihre SharePoint-Workflows sind nicht abgelaufen.
+                        <em>Sie wurden abgeschaltet.</em>
                     </h1>
-                    
-                    <p class="pa-hero__subtitle">
-                        Eine Anwendung deckt einen ganzen Arbeitsbereich ab: die Prozesse auf einem gemeinsamen Datenmodell, mit den Formularen, Aufgaben, Screens und Regeln, die dazugehören.
-                    </p>
-                    
-                    <p class="pa-hero__intro">
-                        Prozess-Apps sind die Art, wie Arbeit in Datapolis tatsächlich erledigt wird.<br>
-                        Statt zuerst Screens zu entwerfen, definieren Sie die Prozesse — und die Anwendung entsteht daraus, zusammen mit den Daten, Screens, Rollen und Berechtigungen, die sie brauchen.<br>
-                        Jede Aufgabe, jedes Formular, jede Liste und jede Entscheidung ist immer mit der zugrunde liegenden Prozesslogik verbunden.
-                    </p>
-                    
-                    <ul class="pa-hero__bullets">
-                        <li class="pa-hero__bullet">So viele Prozesse, wie der Bereich braucht — in einer Anwendung</li>
-                        <li class="pa-hero__bullet">Ein gemeinsames Datenmodell für sie alle</li>
-                        <li class="pa-hero__bullet">Screens, Rollen, Berechtigungen und Regeln einmal definiert, für die ganze App</li>
-                        <li class="pa-hero__bullet">Für Menschen und digitale Worker gebaut</li>
+                    <p class="v7-page-hero__lead">Das kumulative Update vom September 2026 für die SharePoint Server Subscription Edition deaktiviert das Feature SharePoint 2010 Workflow in jeder Websitesammlung. Gelöscht wurde nichts. Ein PowerShell-Kommando je Websitesammlung holt Ihre Workflows zurück &mdash; und im Oktober trifft dieselbe Änderung die SharePoint-2013-Workflows.</p>
+                    <p class="wf3-updated">Aktualisiert am 18. September 2026. Geschrieben für Farmen, die On-Premises bleiben.</p>
+
+                    <ul class="v7-points">
+                        <li><span aria-hidden="true">&#10003;</span> Jedes Datum und jedes Zitat stammt aus Microsofts eigenen KB- und Lifecycle-Seiten</li>
+                        <li><span aria-hidden="true">&#10003;</span> Enthält die Cmdlets, die in Microsofts Dokumentation keine Seite haben</li>
+                        <li><span aria-hidden="true">&#10003;</span> Für den On-Premises-Fall, nicht für den Wechsel zu Microsoft&nbsp;365</li>
                     </ul>
-                    
-                    <div class="pa-hero__actions">
-                        <a href="platform-2to2.html" class="pa-btn pa-btn--large">Plattform ansehen</a>
-                        <a href="how-it-works-overview.html" class="pa-btn pa-btn--outline pa-btn--large">So funktioniert es</a>
-                    </div>
-                </div>
-                
-                <!-- Right: Visual Diagram -->
-                <div class="pa-hero__visual">
-                    <svg class="pa-process-diagram" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <defs>
-                            <filter id="glowPa" x="-50%" y="-50%" width="200%" height="200%">
-                                <feGaussianBlur stdDeviation="8" result="blur"/>
-                                <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
-                            </filter>
-                            <filter id="glowSmallPa" x="-50%" y="-50%" width="200%" height="200%">
-                                <feGaussianBlur stdDeviation="3" result="blur"/>
-                                <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
-                            </filter>
-                            <linearGradient id="processGradPa" x1="0%" y1="0%" x2="100%" y2="100%">
-                                <stop offset="0%" stop-color="#14b8a6"/>
-                                <stop offset="100%" stop-color="#0d9488"/>
-                            </linearGradient>
-                        </defs>
-                        <circle cx="45" cy="70" r="2" fill="#14b8a6" opacity="0.3"/>
-                        <circle cx="355" cy="85" r="2" fill="#14b8a6" opacity="0.25"/>
-                        <circle cx="35" cy="330" r="2" fill="#14b8a6" opacity="0.2"/>
-                        <circle cx="365" cy="320" r="2" fill="#14b8a6" opacity="0.25"/>
-                        <circle cx="200" cy="200" r="165" stroke="#334155" stroke-width="1" fill="none" opacity="0.3"/>
-                        <circle cx="200" cy="200" r="118" stroke="#334155" stroke-width="1" fill="none" stroke-dasharray="4 4"/>
-
-                        <!-- Centrum: procesy aplikacji (moze byc jeden, moze byc kilka) -->
-                        <circle cx="190" cy="190" r="50" fill="none" stroke="#5eead4" stroke-width="1.5" stroke-opacity="0.45"/><circle cx="210" cy="210" r="50" fill="none" stroke="#5eead4" stroke-width="1.5" stroke-opacity="0.45"/>
-                        <g filter="url(#glowPa)"><circle cx="200" cy="200" r="50" fill="url(#processGradPa)"/><text x="200" y="196" text-anchor="middle" fill="#020617" font-size="12" font-weight="700" font-family="system-ui, sans-serif" letter-spacing="0.05em">PROZESSE</text><text x="200" y="212" text-anchor="middle" fill="#020617" font-size="8" font-weight="500" font-family="system-ui, sans-serif" opacity="0.8">Quelle der Wahrheit</text></g>
-                        <g><circle cx="200" cy="82" r="32" fill="#0f172a" stroke="#14b8a6" stroke-width="1.5" stroke-opacity="0.5"/><rect x="185" y="67" width="30" height="30" rx="4" stroke="#14b8a6" stroke-width="1.5" fill="none"/><line x1="190" y1="75" x2="210" y2="75" stroke="#14b8a6" stroke-width="1.5"/><line x1="190" y1="82" x2="205" y2="82" stroke="#14b8a6" stroke-width="1.5"/><line x1="190" y1="89" x2="200" y2="89" stroke="#14b8a6" stroke-width="1.5"/><text x="200" y="133" text-anchor="middle" fill="#94a3b8" font-size="9" font-weight="600" font-family="system-ui, sans-serif" letter-spacing="0.03em">FORMULARE</text></g>
-                        <g><circle cx="302" cy="141" r="32" fill="#0f172a" stroke="#14b8a6" stroke-width="1.5" stroke-opacity="0.5"/><rect x="287" y="126" width="30" height="30" rx="4" stroke="#14b8a6" stroke-width="1.5" fill="none"/><path d="M294 141l5 5 10-10" stroke="#14b8a6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/><text x="302" y="192" text-anchor="middle" fill="#94a3b8" font-size="9" font-weight="600" font-family="system-ui, sans-serif" letter-spacing="0.03em">AUFGABEN</text></g>
-                        <g><circle cx="302" cy="259" r="32" fill="#0f172a" stroke="#14b8a6" stroke-width="1.5" stroke-opacity="0.5"/><line x1="287" y1="249" x2="291" y2="249" stroke="#14b8a6" stroke-width="2" stroke-linecap="round"/><line x1="297" y1="249" x2="317" y2="249" stroke="#14b8a6" stroke-width="1.5"/><line x1="287" y1="259" x2="291" y2="259" stroke="#14b8a6" stroke-width="2" stroke-linecap="round"/><line x1="297" y1="259" x2="317" y2="259" stroke="#14b8a6" stroke-width="1.5"/><line x1="287" y1="269" x2="291" y2="269" stroke="#14b8a6" stroke-width="2" stroke-linecap="round"/><line x1="297" y1="269" x2="317" y2="269" stroke="#14b8a6" stroke-width="1.5"/><text x="302" y="310" text-anchor="middle" fill="#94a3b8" font-size="9" font-weight="600" font-family="system-ui, sans-serif" letter-spacing="0.03em">LISTEN</text></g>
-                        <g><circle cx="200" cy="318" r="32" fill="#0f172a" stroke="#14b8a6" stroke-width="1.5" stroke-opacity="0.5"/><rect x="185" y="303" width="30" height="30" rx="4" stroke="#14b8a6" stroke-width="1.5" fill="none"/><line x1="185" y1="314" x2="215" y2="314" stroke="#14b8a6" stroke-width="1.5"/><line x1="200" y1="314" x2="200" y2="333" stroke="#14b8a6" stroke-width="1.5"/><text x="200" y="369" text-anchor="middle" fill="#94a3b8" font-size="9" font-weight="600" font-family="system-ui, sans-serif" letter-spacing="0.03em">DASHBOARDS</text></g>
-                        <g><circle cx="98" cy="259" r="32" fill="#0f172a" stroke="#14b8a6" stroke-width="1.5" stroke-opacity="0.5"/><rect x="82" y="246" width="32" height="26" rx="3" stroke="#14b8a6" stroke-width="1.5" fill="none"/><line x1="82" y1="255" x2="114" y2="255" stroke="#14b8a6" stroke-width="1.5"/><line x1="82" y1="263" x2="114" y2="263" stroke="#14b8a6" stroke-width="1.5"/><line x1="93" y1="246" x2="93" y2="272" stroke="#14b8a6" stroke-width="1.5"/><text x="98" y="310" text-anchor="middle" fill="#94a3b8" font-size="9" font-weight="600" font-family="system-ui, sans-serif" letter-spacing="0.03em">DATEN</text></g>
-                        <g><circle cx="98" cy="141" r="32" fill="#0f172a" stroke="#14b8a6" stroke-width="1.5" stroke-opacity="0.5"/><circle cx="94" cy="132" r="4.5" stroke="#14b8a6" stroke-width="1.5" fill="none"/><path d="M85 150c.8-5 4-7.5 8.5-7.5s7.7 2.5 8.5 7.5" stroke="#14b8a6" stroke-width="1.5" fill="none" stroke-linecap="round"/><circle cx="108" cy="135" r="3.5" stroke="#14b8a6" stroke-width="1.3" fill="none" opacity="0.65"/><path d="M101 150c.6-4 3-6 6.5-6" stroke="#14b8a6" stroke-width="1.3" fill="none" stroke-linecap="round" opacity="0.65"/><text x="98" y="192" text-anchor="middle" fill="#94a3b8" font-size="9" font-weight="600" font-family="system-ui, sans-serif" letter-spacing="0.03em">ROLLEN</text></g>
-                        <!-- Polaczenia: wszystko wychodzi z procesow -->
-                        <path d="M200 138 L200 116" stroke="#14b8a6" stroke-width="1.5" stroke-opacity="0.5" stroke-dasharray="4 3"><animate attributeName="stroke-dashoffset" from="7" to="0" dur="1.2s" repeatCount="indefinite"/></path>
-                        <path d="M254 169 L273 158" stroke="#14b8a6" stroke-width="1.5" stroke-opacity="0.5" stroke-dasharray="4 3"><animate attributeName="stroke-dashoffset" from="7" to="0" dur="1.2s" repeatCount="indefinite"/></path>
-                        <path d="M254 231 L273 242" stroke="#14b8a6" stroke-width="1.5" stroke-opacity="0.5" stroke-dasharray="4 3"><animate attributeName="stroke-dashoffset" from="7" to="0" dur="1.2s" repeatCount="indefinite"/></path>
-                        <path d="M200 262 L200 284" stroke="#14b8a6" stroke-width="1.5" stroke-opacity="0.5" stroke-dasharray="4 3"><animate attributeName="stroke-dashoffset" from="7" to="0" dur="1.2s" repeatCount="indefinite"/></path>
-                        <path d="M146 231 L127 242" stroke="#14b8a6" stroke-width="1.5" stroke-opacity="0.5" stroke-dasharray="4 3"><animate attributeName="stroke-dashoffset" from="7" to="0" dur="1.2s" repeatCount="indefinite"/></path>
-                        <path d="M146 169 L127 158" stroke="#14b8a6" stroke-width="1.5" stroke-opacity="0.5" stroke-dasharray="4 3"><animate attributeName="stroke-dashoffset" from="7" to="0" dur="1.2s" repeatCount="indefinite"/></path>
-                        <g filter="url(#glowSmallPa)"><circle cx="200" cy="127" r="3" fill="#14b8a6" opacity="0.8"/><circle cx="263" cy="164" r="3" fill="#14b8a6" opacity="0.8"/><circle cx="263" cy="236" r="3" fill="#14b8a6" opacity="0.8"/><circle cx="200" cy="273" r="3" fill="#14b8a6" opacity="0.8"/><circle cx="137" cy="236" r="3" fill="#14b8a6" opacity="0.8"/><circle cx="137" cy="164" r="3" fill="#14b8a6" opacity="0.8"/></g>
-                        <text x="200" y="392" text-anchor="middle" fill="#64748b" font-size="9" font-family="system-ui, sans-serif" letter-spacing="0.08em">AUS DEN PROZESSEN DER ANWENDUNG</text>
-                    </svg>
                 </div>
             </div>
         </section>
 
-        <!-- ========================================
-             ABSCHNITT: Was eine Prozess-App ausmacht
-             ======================================== -->
-        <section class="pa-section pa-section--alt">
-            <div class="pa-container">
-                <div class="pa-section__header">
-                    <h2 class="pa-section__title">Was eine <span class="accent">Prozess-App</span> ausmacht</h2>
+        <section class="v7-steps-section" aria-labelledby="wf3-timeline">
+            <div class="v7-container">
+                <div class="v7-steps-section__head">
+                    <p class="v7-eyebrow">Was tatsächlich geschehen ist</p>
+                    <h2 class="v7-steps-section__title" id="wf3-timeline">Drei Daten &mdash; und nur eines hat Ihre Arbeit gestoppt</h2>
                 </div>
-                
-                <div class="pa-cards">
-                    <!-- Karte 1: Prozessgetriebene UI -->
-                    <div class="pa-card">
-                        <div class="pa-card__icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                                <rect x="3" y="3" width="18" height="18" rx="2"/>
-                                <path d="M3 9h18"/>
-                                <path d="M9 21V9"/>
-                            </svg>
-                        </div>
-                        <h3 class="pa-card__title">Prozessgetriebene UI</h3>
-                        <p class="pa-card__desc">Screens werden nicht isoliert entworfen.<br>Der Prozess definiert, was Nutzer sehen, wann sie es sehen und welche Aktionen erlaubt sind.</p>
+
+                <div class="v7-steps">
+                    <div class="v7-step">
+                        <span class="v7-step__num">1</span>
+                        <h3 class="v7-step__title">14. Juli 2026 &mdash; Supportende</h3>
+                        <p class="v7-step__desc">Microsoft gibt an, dass die SharePoint Server Subscription Edition Workflows auf Basis von SharePoint 2010 bis zum 14. Juli 2026 unterstützt. An diesem Tag endete der Support. Gelaufen sind sie weiter. Dasselbe Datum nahm SharePoint Server 2016 und 2019, SharePoint Designer 2013 und InfoPath Forms Services mit.</p>
                     </div>
-                    
-                    <!-- Karte 2: Integrierte Logik und Regeln -->
-                    <div class="pa-card">
-                        <div class="pa-card__icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-                                <path d="M9 12l2 2 4-4"/>
-                            </svg>
-                        </div>
-                        <h3 class="pa-card__title">Integrierte Logik und Regeln</h3>
-                        <p class="pa-card__desc">Validierungen, Routing, Berechtigungen und Freigaben kommen aus dem Workflow — nicht aus hartcodierter UI-Logik.</p>
+                    <div class="v7-step">
+                        <span class="v7-step__num">2</span>
+                        <h3 class="v7-step__title">8. September 2026 &mdash; das Update, das sie gestoppt hat</h3>
+                        <p class="v7-step__desc">KB5002908 hält fest, dass das Feature SharePoint 2010 Workflow ab dem kumulativen Update vom September 2026 deaktiviert wird. Standardmäßig, in jeder Websitesammlung, bestehend wie neu. Ab diesem Moment starteten Workflows nicht mehr &mdash; nicht im Juli. Die Änderung gehört zu einer breiteren Reduktion der Angriffsfläche im selben Update.</p>
                     </div>
-                    
-                    <!-- Karte 3: Eine App, viele Rollen -->
-                    <div class="pa-card">
-                        <div class="pa-card__icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
-                                <circle cx="9" cy="7" r="4"/>
-                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
-                                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
-                            </svg>
-                        </div>
-                        <h3 class="pa-card__title">Eine App, viele Rollen</h3>
-                        <p class="pa-card__desc">Dieselbe Prozess-App passt sich an Nutzer, Rollen und Zustände an — ohne separate Versionen zu erstellen.</p>
+                    <div class="v7-step">
+                        <span class="v7-step__num">3</span>
+                        <h3 class="v7-step__title">Oktober 2026 &mdash; die SharePoint-2013-Workflows folgen</h3>
+                        <p class="v7-step__desc">Das kumulative Oktober-Update soll SharePoint-2013-Workflows auf dieselbe Weise standardmäßig deaktivieren. Dokumentiert ist das bislang ausschließlich im Blog von Stefan Go&szlig;ner, einem Microsoft-Eskalationsingenieur &mdash; auf keiner Microsoft-Learn-Seite und in keinem KB-Artikel. Sie können sie vor dem Update aktivieren statt danach.</p>
+                    </div>
+                    <div class="v7-step">
+                        <span class="v7-step__num">4</span>
+                        <h3 class="v7-step__title">Ohne Enddatum &mdash; die Plattform 2013 selbst</h3>
+                        <p class="v7-step__desc">Microsoft gibt an, dass Workflows auf Basis von SharePoint 2013 über Juli 2026 hinaus unterstützt bleiben, und der SharePoint Workflow Manager trägt kein festes Enddatum &mdash; er folgt dem übergeordneten Produkt. Standardmäßig deaktiviert ist nicht dasselbe wie eingestellt.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- ========================================
-             ABSCHNITT: Bausteine
-             ======================================== -->
-        <section class="pa-section">
-            <div class="pa-container">
-                <div class="pa-section__header">
-                    <h2 class="pa-section__title">Alles, was Teams brauchen, um <span class="accent">Arbeit zu erledigen</span></h2>
+        <section class="v7-band" aria-labelledby="wf3-status">
+            <div class="v7-container">
+                <div class="v7-band__head">
+                    <p class="v7-eyebrow">Wo Sie stehen</p>
+                    <h2 class="v7-band__title" id="wf3-status">Laufen Ihre Workflows in diesem Moment?</h2>
                 </div>
-                
-                <div class="pa-icon-grid">
-                    <div class="pa-icon-item">
-                        <div class="pa-icon-item__icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                                <rect x="3" y="3" width="18" height="18" rx="2"/>
-                                <path d="M9 9h6M9 13h6M9 17h4"/>
-                            </svg>
-                        </div>
-                        <span class="pa-icon-item__label">Formulare</span>
-                    </div>
-                    
-                    <div class="pa-icon-item">
-                        <div class="pa-icon-item__icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                                <line x1="8" y1="6" x2="21" y2="6"/>
-                                <line x1="8" y1="12" x2="21" y2="12"/>
-                                <line x1="8" y1="18" x2="21" y2="18"/>
-                                <line x1="3" y1="6" x2="3.01" y2="6"/>
-                                <line x1="3" y1="12" x2="3.01" y2="12"/>
-                                <line x1="3" y1="18" x2="3.01" y2="18"/>
-                            </svg>
-                        </div>
-                        <span class="pa-icon-item__label">Listen</span>
-                    </div>
-                    
-                    <div class="pa-icon-item">
-                        <div class="pa-icon-item__icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M9 11l3 3L22 4"/>
-                                <path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/>
-                            </svg>
-                        </div>
-                        <span class="pa-icon-item__label">Aufgaben</span>
-                    </div>
-                    
-                    <div class="pa-icon-item">
-                        <div class="pa-icon-item__icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                                <rect x="3" y="3" width="18" height="18" rx="2"/>
-                                <path d="M3 9h18M9 21V9"/>
-                            </svg>
-                        </div>
-                        <span class="pa-icon-item__label">Dashboards</span>
-                    </div>
-                    
-                    <div class="pa-icon-item">
-                        <div class="pa-icon-item__icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
-                                <circle cx="9" cy="7" r="4"/>
-                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
-                                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
-                            </svg>
-                        </div>
-                        <span class="pa-icon-item__label">Rollen</span>
-                    </div>
-                    
-                    <div class="pa-icon-item">
-                        <div class="pa-icon-item__icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                                <circle cx="12" cy="12" r="10"/>
-                                <polyline points="12 6 12 12 16 14"/>
-                            </svg>
-                        </div>
-                        <span class="pa-icon-item__label">Zustände</span>
-                    </div>
-                    
-                    <div class="pa-icon-item">
-                        <div class="pa-icon-item__icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
-                                <line x1="16" y1="2" x2="16" y2="6"/>
-                                <line x1="8" y1="2" x2="8" y2="6"/>
-                                <line x1="3" y1="10" x2="21" y2="10"/>
-                            </svg>
-                        </div>
-                        <span class="pa-icon-item__label">SLAs</span>
-                    </div>
-                    <div class="pa-icon-item">
-                        <div class="pa-icon-item__icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 10h18M3 15h18M9 10v10"/></svg>
-                        </div>
-                        <span class="pa-icon-item__label">Datentabellen</span>
-                    </div>
-                    <div class="pa-icon-item">
-                        <div class="pa-icon-item__icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.7 1.7"/><path d="M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.7-1.7"/></svg>
-                        </div>
-                        <span class="pa-icon-item__label">Integrationen</span>
-                    </div>
-                </div>
-                
-                <p class="pa-caption">Alle Bausteine sind prozessbewusst und werden von derselben Orchestrierungsschicht gesteuert.</p>
+
+                <table class="wf3-status">
+                    <thead>
+                        <tr><th>Ihre Farm</th><th>SharePoint-2010-Workflows</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Subscription Edition, September-Update noch nicht installiert</td><td><span class="wf3-yes">Laufen</span> &mdash; seit dem 14. Juli ohne Support, aber weiterhin in Ausführung. Aktivieren Sie das Feature vor der Installation des Updates, nicht danach.</td></tr>
+                        <tr><td>Subscription Edition, Update installiert, nichts aktiviert</td><td><span class="wf3-no">Stehen</span> &mdash; Workflows starten nicht &mdash; weder manuell noch bei Elementänderung. In dieser Lage sind die meisten.</td></tr>
+                        <tr><td>Subscription Edition, Feature je Websitesammlung ausdrücklich aktiviert</td><td><span class="wf3-yes">Laufen</span> &mdash; weiterhin ohne Support. Keine Sicherheitsupdates, kein Supportfall &mdash; aber die Arbeit läuft.</td></tr>
+                        <tr><td>SharePoint Server 2016 oder 2019</td><td><span class="wf3-no">Außerhalb des Supports</span> &mdash; das August-Update war das letzte. KB5002908 erreicht diese Versionen gar nicht.</td></tr>
+                        <tr><td>Nintex Workflow for SharePoint On-Premises</td><td><span class="wf3-no">Stehen</span> &mdash; Nintex läuft auf der SharePoint-2010-Engine, dasselbe Update hat es gestoppt. Dieselben Kommandos holen es zurück.</td></tr>
+                    </tbody>
+                </table>
             </div>
         </section>
 
-        <!-- ========================================
-             ABSCHNITT: Apps dort nutzen, wo Nutzer bereits sind
-             ======================================== -->
-        <section class="pa-section pa-section--alt">
-            <div class="pa-container">
-                <div class="pa-section__header">
-                    <h2 class="pa-section__title">Apps dort nutzen, wo Nutzer <span class="accent">bereits sind</span></h2>
+        <section class="v7-steps-section" aria-labelledby="wf3-fix">
+            <div class="v7-container">
+                <div class="v7-steps-section__head">
+                    <p class="v7-eyebrow">Die Behebung</p>
+                    <h2 class="v7-steps-section__title" id="wf3-fix">So schalten Sie Ihre Workflows wieder ein</h2>
                 </div>
-                
-                <div class="pa-columns">
-                    <!-- Left: Platform Portal -->
-                    <div class="pa-column">
-                        <div class="pa-column__header">
-                            <div class="pa-column__icon">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                                    <rect x="3" y="3" width="18" height="18" rx="2"/>
-                                    <path d="M3 9h18M9 21V9"/>
-                                </svg>
-                            </div>
-                            <h3 class="pa-column__title">Plattform-Portal</h3>
-                        </div>
-                        <ul class="pa-column__list">
-                            <li>Interne Nutzer und Teams</li>
-                            <li>Vollständiger Workspace mit allen Apps</li>
-                            <li>Rollenbasierte Sichtbarkeit und Zugriff</li>
-                        </ul>
-                    </div>
-                    
-                    <!-- Right: Embedded Modules -->
-                    <div class="pa-column">
-                        <div class="pa-column__header">
-                            <div class="pa-column__icon">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M16 18L22 12L16 6"/>
-                                    <path d="M8 6L2 12L8 18"/>
-                                </svg>
-                            </div>
-                            <h3 class="pa-column__title">Eingebettete Module</h3>
-                        </div>
-                        <ul class="pa-column__list">
-                            <li>Externe Nutzer und Partner</li>
-                            <li>Öffentliche oder sichere Einbettungen</li>
-                            <li>Kein Plattformzugang erforderlich</li>
-                        </ul>
-                    </div>
+
+                <p class="v7-page-hero__lead">Die folgenden Cmdlets liegen ab dem August-Update 2026 bei. Sie wirken je Websitesammlung &mdash; einen farmweiten Schalter gibt es nicht. Microsoft beschreibt sie im Text des KB-Artikels, gibt ihnen in der PowerShell-Dokumentation aber keine Referenzseite. Genau deshalb sind sie schwer zu finden, wenn die Farm bereits steht.</p>
+
+                <pre class="wf3-code"><code><span class="wf3-comment"># Zuerst: in welchen Websitesammlungen das Feature noch aktiv ist</span>
+Get-SPLegacyWorkflowEnabledSites
+Get-SPWorkflow2013EnabledSites
+
+<span class="wf3-comment"># Dann: dort wieder einschalten, wo die Arbeit tatsächlich läuft</span>
+Enable-SPLegacyWorkflow  https://sharepoint.example.com/sites/quality
+Enable-SPWorkflow2013    https://sharepoint.example.com/sites/quality
+
+<span class="wf3-comment"># Und zum Zurücknehmen</span>
+Disable-SPLegacyWorkflow https://sharepoint.example.com/sites/quality</code></pre>
+
+                <div class="wf3-warn">
+                    <strong>Vor dem Patchen:</strong> eine Websitesammlung vor der Installation zu aktivieren ist einfacher, als danach einen stillen Stillstand zu diagnostizieren. Führen Sie die Audit-Cmdlets auf der heutigen Farm aus, notieren Sie die Liste und stellen Sie daraus wieder her.
                 </div>
-                
-                <p class="pa-footer-line">Eine Anwendung. Viele Einstiegspunkte.</p>
+
+                <p class="v7-page-hero__lead">Wenn Ihre Workflows schon im Sommer ausgefallen sind, ist das ein anderes Problem mit einer anderen Lösung. Das Juni-Update 2026 ließ sie an einer Sicherheitsprüfung der Workflow-Definition scheitern, das Juli-Update verlangte zusätzliche Typen in der Positivliste der web.config. Eine Farm, die Juni bis August übersprungen hat und direkt auf September geht, kann beide Probleme gleichzeitig treffen &mdash; mit unterschiedlichen Symptomen.</p>
             </div>
         </section>
 
-        <!-- ========================================
-             ABSCHNITT: Warum Teams Prozess-Apps wählen
-             ======================================== -->
-        <section class="pa-section">
-            <div class="pa-container">
-                <div class="pa-section__header">
-                    <h2 class="pa-section__title">Warum Teams <span class="accent">Prozess-Apps</span> wählen</h2>
+        <section class="v7-band" aria-labelledby="wf3-onprem">
+            <div class="v7-container">
+                <div class="v7-band__head">
+                    <p class="v7-eyebrow">Wenn Sie On-Premises bleiben</p>
+                    <h2 class="v7-band__title" id="wf3-onprem">Was Microsoft Ihnen tatsächlich anbietet</h2>
                 </div>
-                
-                <div class="pa-checklist">
-                    <div class="pa-checklist__item">
-                        <div class="pa-checklist__icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                                <polyline points="20 6 9 17 4 12"/>
-                            </svg>
-                        </div>
-                        <span>Keine duplizierte Business-Logik</span>
-                    </div>
-                    
-                    <div class="pa-checklist__item">
-                        <div class="pa-checklist__icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                                <polyline points="20 6 9 17 4 12"/>
-                            </svg>
-                        </div>
-                        <span>Keine getrennten Formulare oder Tools</span>
-                    </div>
-                    
-                    <div class="pa-checklist__item">
-                        <div class="pa-checklist__icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                                <polyline points="20 6 9 17 4 12"/>
-                            </svg>
-                        </div>
-                        <span>Keine Shadow-Workflows</span>
-                    </div>
-                    
-                    <div class="pa-checklist__item">
-                        <div class="pa-checklist__icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                                <polyline points="20 6 9 17 4 12"/>
-                            </svg>
-                        </div>
-                        <span>Keine kaputten Übergaben</span>
-                    </div>
-                    
-                    <div class="pa-checklist__item">
-                        <div class="pa-checklist__icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                                <polyline points="20 6 9 17 4 12"/>
-                            </svg>
-                        </div>
-                        <span>Immer auditierbar</span>
-                    </div>
-                    
-                    <div class="pa-checklist__item">
-                        <div class="pa-checklist__icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                                <polyline points="20 6 9 17 4 12"/>
-                            </svg>
-                        </div>
-                        <span>Immer aktuell mit dem Prozess</span>
-                    </div>
+
+                <div class="v7-band__list">
+                    <p class="v7-band__item"><strong>SharePoint-2013-Workflows auf dem SharePoint Workflow Manager.</strong> Das ist das eine unterstützte On-Premises-Ziel. Kein festes Enddatum, und Microsoft hat Support über 2026 hinaus zugesagt. Es braucht eigene, dedizierte Server und Azure Service Fabric.</p>
+                    <p class="v7-band__item"><strong>Power Automate läuft nicht On-Premises.</strong> Es gibt keine lokale, souveräne oder netzgetrennte Ausgabe. Das lokale Datengateway ist ein Konnektor in den Clouddienst und beantwortet damit weder Anforderungen an den Speicherort der Daten noch an ein abgeschottetes Netz.</p>
+                    <p class="v7-band__item"><strong>Die Erstellung wandert vom Fachanwender zum Entwickler.</strong> SharePoint Designer 2013 verlor den Support am selben Julitag. Microsofts Antwort für das Bearbeiten von 2013-Workflows heißt Visual Studio. Diesen Posten schreibt niemand in die Migrationsschätzung.</p>
+                    <p class="v7-band__item"><strong>Der Neubau ist Handarbeit.</strong> Microsoft benennt die Plattform 2013 als Ziel für 2010-Workflows, veröffentlicht aber kein Werkzeug, das das eine in das andere überführt. Jeder Workflow entsteht neu &mdash; und zwar von jemandem, der lesen kann, was das Original tat.</p>
                 </div>
-                
-                <p class="pa-closing-statement">Wenn sich der Prozess ändert, <span class="accent">ändert sich die App mit.</span></p>
+
+                <div class="wf3-warn">
+                    <strong>Die ehrliche Lücke:</strong> Für das Paar aus SharePoint Designer und 2010-Workflows gibt es keinen gleichwertigen Ersatz, der Low-Code ist, vom Fachanwender erstellt wird und auf Ihren eigenen Servern läuft. Microsoft hat diese Lücke nicht geschlossen. Wer etwas anderes behauptet, verkauft Ihnen entweder eine Cloud-Migration oder die eigene Plattform.
+                </div>
             </div>
         </section>
 
-        <!-- ========================================
-             FINALER CTA
-             ======================================== -->
+        <section class="v7-band" aria-labelledby="wf3-myths">
+            <div class="v7-container">
+                <div class="v7-band__head">
+                    <p class="v7-eyebrow">Vier weit verbreitete Irrtümer</p>
+                    <h2 class="v7-band__title" id="wf3-myths">Bevor Sie handeln, was Sie anderswo lesen</h2>
+                </div>
+
+                <div class="v7-band__list">
+                    <p class="v7-band__item"><strong>Die Abkündigung in der Cloud ist ein anderes Ereignis.</strong> Die meisten Suchtreffer beschreiben die Entfernung der SharePoint-2010-Workflows aus Microsoft 365 vor Jahren und die Entfernung der 2013-Workflows aus bestehenden Mandanten im April 2026. Keines davon betrifft eine Farm auf Ihren eigenen Servern. On-Premises folgt einem eigenen Lebenszyklus.</p>
+                    <p class="v7-band__item"><strong>Ohne Support, entfernt und deaktiviert sind drei verschiedene Zustände.</strong> SharePoint-2010-Workflows sind seit Juli ohne Support, seit September standardmäßig deaktiviert und werden von Microsoft weiterhin als veraltet, nicht als entfernt geführt. Der Code steckt im Produkt. Deshalb kann ein Kommando ihn wieder einschalten.</p>
+                    <p class="v7-band__item"><strong>Nintex hat für seine SharePoint-On-Premises-Produkte kein Lebensende angekündigt.</strong> Mitarbeiter von Nintex haben 2026 zweimal bestätigt, dass kein Enddatum angekündigt wurde, und die Matrix der unterstützten Versionen führt die Subscription Edition weiterhin. Die Seiten zu „Nintex EOL 2026&ldquo;, auf die Sie stoßen, stammen von Wettbewerbern und verwechseln Microsofts Daten mit einer Entscheidung von Nintex.</p>
+                    <p class="v7-band__item"><strong>Welches Update es zerlegt hat, ändert die Antwort.</strong> Juni war eine Sicherheitsprüfung der Workflow-Definition. Juli verlangte Einträge in einer Positivliste. September war beabsichtigt und mit einem Kommando umkehrbar. Die falsche Lösung anzuwenden kostet Sie ein Wartungsfenster.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="v7-steps-section" aria-labelledby="wf3-workbox">
+            <div class="v7-container">
+                <div class="v7-steps-section__head">
+                    <p class="v7-eyebrow">Wo Datapolis hineinpasst</p>
+                    <h2 class="v7-steps-section__title" id="wf3-workbox">Workbox nutzt nicht die Engine, die abgeschaltet wurde</h2>
+                </div>
+
+                <p class="v7-page-hero__lead">Diese Seite wäre es wert, veröffentlicht zu werden, auch wenn wir nichts verkaufen würden, und das meiste davon gilt unabhängig von Ihrer Entscheidung. Wenn Sie hier gelandet sind, weil die Produktion steht, ist allerdings ein Punkt relevant: Workbox läuft auf einer eigenen Workflow-Engine statt auf der SharePoint-2010-Plattform &mdash; KB5002908 hat es nicht abgeschaltet.</p>
+
+                <div class="v7-steps">
+                    <div class="v7-step">
+                        <span class="v7-step__num">1</span>
+                        <h3 class="v7-step__title">Eigene Engine</h3>
+                        <p class="v7-step__desc">Workbox hängt nicht an der Workflow-Plattform von SharePoint 2010. Die Standardabschaltung im September wie die im Oktober betrifft es daher nicht.</p>
+                    </div>
+                    <div class="v7-step">
+                        <span class="v7-step__num">2</span>
+                        <h3 class="v7-step__title">Auf Ihren Servern, innerhalb von SharePoint</h3>
+                        <p class="v7-step__desc">Listen, Dokumente, Benutzer und Berechtigungen bleiben, wo sie sind. Dieselbe Oberfläche, dieselben Zugriffsregeln, kein Wechsel in die Cloud nötig.</p>
+                    </div>
+                    <div class="v7-step">
+                        <span class="v7-step__num">3</span>
+                        <h3 class="v7-step__title">Zwanzig Jahre davon</h3>
+                        <p class="v7-step__desc">Hunderte On-Premises-Installationen von SharePoint, seit die Ära der SharePoint-Workflows begann. Wir haben diese Workflows schon oft migriert &mdash; auch weg von unserem eigenen Produkt, wenn das die richtige Antwort war.</p>
+                    </div>
+                </div>
+
+                <div class="wf3-sources">
+                    <p>Primärquellen für alles auf dieser Seite:</p>
+                    <ul>
+                        <li><a href="https://support.microsoft.com/en-us/servicing/office/hotfix/sharepoint/5002908" rel="noopener" target="_blank">KB5002908 &mdash; Sicherheitsupdate vom September 2026 für SharePoint Server Subscription Edition</a></li>
+                        <li><a href="https://learn.microsoft.com/en-us/sharepoint/what-s-new/what-s-deprecated-or-removed-from-sharepoint-server-subscription-edition" rel="noopener" target="_blank">Was in der SharePoint Server Subscription Edition veraltet oder entfernt ist</a></li>
+                        <li><a href="https://support.microsoft.com/en-us/office/sharepoint-2013-workflow-retirement-4613d9cf-69aa-40f7-b6bf-6e7831c9691e" rel="noopener" target="_blank">Einstellung der SharePoint-2013-Workflows (Microsoft Support)</a></li>
+                        <li><a href="https://learn.microsoft.com/en-us/lifecycle/products/sharepoint-workflow-manager" rel="noopener" target="_blank">Lebenszyklus des SharePoint Workflow Manager</a></li>
+                        <li><a href="https://blog.stefan-gossner.com/2026/08/14/are-you-using-sp2010-or-sp2013-workflows-in-your-sharepoint-farms-this-post-is-for-you/" rel="noopener" target="_blank">Stefan Go&szlig;ner: Nutzen Sie SP2010- oder SP2013-Workflows in Ihren Farmen?</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
         <section class="v7-cta">
             <div class="v7-container v7-cta__inner">
                 <h2 class="v7-cta__title">Run work. <span class="accent">Speed up the flow.</span></h2>
-                <p class="v7-cta__lead">Sagen Sie uns, welchen Bereich Ihres Unternehmens Sie in geordnete Bahnen bringen wollen. Wir zeigen Ihnen die Anwendung, die aus Ihrer eigenen Dokumentation entsteht.</p>
+                <p class="v7-cta__lead">Zwanzig Minuten. Sagen Sie uns, was auf Ihrer Farm läuft und was weiterlaufen muss. Wir sagen Ihnen, was wir tun würden &mdash; auch dann, wenn die Antwort lautet: Feature aktivieren, patchen, sonst nichts ändern.</p>
                 <div class="v7-cta__actions">
                     <a class="v7-btn v7-btn--primary" href="contact.html">Mit einem Experten sprechen <span aria-hidden="true">&#8594;</span></a>
-                    <a class="v7-btn v7-btn--ghost" href="app-creator.html">So entsteht eine Anwendung</a>
+                    <a class="v7-btn v7-btn--ghost" href="platform-2to2.html">Die Plattform ansehen</a>
                 </div>
                 <p class="v7-cta__note">Oder schreiben Sie an <a href="mailto:office@datapolis.com">office@datapolis.com</a></p>
             </div>
         </section>
     </main>
 
-    <!-- Footer Placeholder -->
     <div id="footer-placeholder"><!--build:footer-->
     <footer class="footer">
         <div class="container">
@@ -814,43 +659,5 @@
     </footer>
 <!--/build:footer--></div>
 
-    <!-- Scripts -->
-    <script>
-        document.addEventListener('includesLoaded', function() {
-            var scripts = [
-                '../assets/js/vendors.min.js?v=33076cde',
-                '../assets/js/main.min.js?v=3e309815',
-                '../assets/js/functions.min.js?v=80c20afd',
-                '../assets/js/async.min.js?v=907ee1f2'
-            ];
-            
-            function loadScript(index) {
-                if (index >= scripts.length) return;
-                
-                var script = document.createElement('script');
-                script.src = scripts[index];
-                script.onload = function() {
-                    loadScript(index + 1);
-                };
-                document.body.appendChild(script);
-            }
-            
-            loadScript(0);
-        });
-
-        // Smooth scroll for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-    </script>
 </body>
 </html>

@@ -143,7 +143,12 @@
   </url>
   <url>
     <loc>https://datapolis.com/sharepoint</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-09-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://datapolis.com/sharepoint"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://datapolis.com/pl/sharepoint"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://datapolis.com/de/sharepoint"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://datapolis.com/es/sharepoint"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://datapolis.com/sharepoint"/>
     <priority>0.7</priority>
   </url>
   <url>
@@ -297,6 +302,16 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://datapolis.com/de/sharepoint</loc>
+    <lastmod>2026-09-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://datapolis.com/sharepoint"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://datapolis.com/pl/sharepoint"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://datapolis.com/de/sharepoint"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://datapolis.com/es/sharepoint"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://datapolis.com/sharepoint"/>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://datapolis.com/de/why-not-copilots</loc>
     <lastmod>2026-09-18</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://datapolis.com/why-not-copilots"/>
@@ -447,6 +462,16 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://datapolis.com/es/sharepoint</loc>
+    <lastmod>2026-09-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://datapolis.com/sharepoint"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://datapolis.com/pl/sharepoint"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://datapolis.com/de/sharepoint"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://datapolis.com/es/sharepoint"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://datapolis.com/sharepoint"/>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://datapolis.com/es/why-not-copilots</loc>
     <lastmod>2026-09-18</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://datapolis.com/why-not-copilots"/>
@@ -594,6 +619,16 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://datapolis.com/de/security-governance"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://datapolis.com/es/security-governance"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://datapolis.com/security-governance"/>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://datapolis.com/pl/sharepoint</loc>
+    <lastmod>2026-09-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://datapolis.com/sharepoint"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://datapolis.com/pl/sharepoint"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://datapolis.com/de/sharepoint"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://datapolis.com/es/sharepoint"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://datapolis.com/sharepoint"/>
     <priority>0.7</priority>
   </url>
   <url>

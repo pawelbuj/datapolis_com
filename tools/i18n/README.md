@@ -28,6 +28,33 @@ Bierze `app-creator.html` (EN) jako źródło, podmienia hero z szablonu i reszt
 przez słownik `ac_<lang>.py`, przestawia ścieżki, meta, canonical i hreflang.
 Po wygenerowaniu uruchomić jeszcze raz ujednolicenie CTA (blok `.v7-cta`).
 
+## Hub SharePoint WF3 (`/sharepoint`)
+
+```
+python3 tools/i18n/wf3_build.py
+python3 tools/build-includes.py
+python3 tools/build-sitemap.py
+```
+
+`wf3_tpl.py` — szablon całej strony (96 pól). `wf3_en.py`, `wf3_pl.py`, `wf3_de.py`,
+`wf3_es.py` — słowniki, wszystkie z identycznym zestawem kluczy; build przerywa,
+jeśli w którymś czegoś brakuje. Generuje `sharepoint.html` oraz `pl|de|es/sharepoint.html`
+naraz, więc cztery wersje nie mogą się rozjechać.
+
+Strona opisuje zdarzenie z datą (KB5002908 z 8 września 2026), więc:
+
+- **nie zmieniaj dat ani cytatów w jednym języku osobno** — są identyczne we wszystkich
+  czterech i wszystkie pochodzą ze źródeł pierwotnych Microsoftu,
+- **poleceń PowerShell nie tłumaczymy** (siedzą w szablonie, nie w słownikach),
+- `dateModified` w JSON-LD i `lastmod` w sitemapie biorą późniejszą z dwóch dat:
+  commita i modyfikacji pliku. Kiedy treść naprawdę się zmieni, przebuduj i zacommituj,
+  żeby data mówiła prawdę. Świeżość jest tu sygnałem rankingowym,
+- gdy październikowa aktualizacja wyłączy przepływy SharePoint 2013, trzeba wrócić
+  do sekcji osi czasu — dziś opisuje to jako zapowiedź z jednego źródła.
+
+Własny arkusz: `assets/css/sharepoint-wf3.css` (tabela stanu, blok z poleceniami,
+ramka ostrzeżenia, lista źródeł). Reszta strony jedzie na klasach `.v7-*`.
+
 ## Zasady, których te pliki pilnują
 
 - `Run work. Speed up the flow.` oraz `Apps that run work.` — nigdy nie tłumaczone.

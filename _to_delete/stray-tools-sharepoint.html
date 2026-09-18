@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SharePoint 2010 workflows disabled by the September 2026 update &mdash; what to do | Datapolis</title>
+    <meta name="description" content="The September 2026 cumulative update (KB5002908) disables SharePoint 2010 workflows on every site collection in SharePoint Server Subscription Edition. What changed, how to turn them back on, and what on-premises farms can move to.">
+    <meta name="robots" content="index,follow">
+    <meta property="og:title" content="SharePoint workflows stopped after the September 2026 update">
+    <meta property="og:description" content="KB5002908 disabled the SharePoint 2010 Workflow feature by default. Here is what happened, the PowerShell that re-enables it, and the honest on-premises options.">
+    <meta property="og:type" content="article">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#020617">
+
+    <!-- SEO: canonical / hreflang / open graph -->
+    <link rel="canonical" href="https://datapolis.com/sharepoint">
+    <link rel="alternate" hreflang="en" href="https://datapolis.com/sharepoint">
+    <link rel="alternate" hreflang="pl" href="https://datapolis.com/pl/sharepoint">
+    <link rel="alternate" hreflang="de" href="https://datapolis.com/de/sharepoint">
+    <link rel="alternate" hreflang="es" href="https://datapolis.com/es/sharepoint">
+    <link rel="alternate" hreflang="x-default" href="https://datapolis.com/sharepoint">
+    <meta property="og:url" content="https://datapolis.com/sharepoint">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:image" content="https://datapolis.com/assets/img/og-image-1200x630.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="article:modified_time" content="2026-09-18">
+    <!-- /SEO -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Instrument+Sans:wght@400;500;600;700&amp;display=swap">
+
+    <link rel="stylesheet" href="assets/css/main.min.css?v=0ca3b828">
+    <link rel="stylesheet" href="assets/css/async.min.css?v=31662295" media="print" onload="this.media='all'; this.onload=null;">
+    <link rel="stylesheet" href="assets/css/dark-theme.css?v=1d664f9e">
+    <link rel="stylesheet" href="assets/css/new-homepage.css?v=8f7d4412">
+    <link rel="stylesheet" href="assets/css/home-v7.css?v=52eaffbf">
+    <link rel="stylesheet" href="assets/css/sharepoint-wf3.css?v=1a0c55e2">
+
+    <script src="includes/loader.js"></script>
+</head>
+<body>
+
+    <div id="header-placeholder"></div>
+
+    <main>
+        <section class="v7-page-hero" aria-labelledby="wf3-title">
+            <div class="v7-container v7-page-hero__layout">
+                <div>
+                    <p class="v7-eyebrow">SharePoint Server Subscription Edition &middot; KB5002908</p>
+                    <h1 class="v7-page-hero__title" id="wf3-title">
+                        Your SharePoint workflows did not expire.
+                        <em>They were switched off.</em>
+                    </h1>
+                    <p class="v7-page-hero__lead">The September 2026 cumulative update for SharePoint Server Subscription Edition disables the SharePoint 2010 Workflow feature on every site collection. Nothing was deleted. One PowerShell command per site collection brings your workflows back &mdash; and the same change reaches SharePoint 2013 workflows in October.</p>
+                    <p class="wf3-updated">Updated 18 September 2026. Written for farms staying on-premises.</p>
+
+                    <ul class="v7-points">
+                        <li><span aria-hidden="true">&#10003;</span> Every date and quote here comes from Microsoft&rsquo;s own KB and lifecycle pages</li>
+                        <li><span aria-hidden="true">&#10003;</span> Includes the cmdlets that have no page in Microsoft&rsquo;s documentation</li>
+                        <li><span aria-hidden="true">&#10003;</span> Covers the on-premises case, not the move to Microsoft&nbsp;365</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="v7-steps-section" aria-labelledby="wf3-timeline">
+            <div class="v7-container">
+                <div class="v7-steps-section__head">
+                    <p class="v7-eyebrow">What actually happened</p>
+                    <h2 class="v7-steps-section__title" id="wf3-timeline">Three dates, and only one of them stopped your work</h2>
+                </div>
+
+                <div class="v7-steps">
+                    <div class="v7-step">
+                        <span class="v7-step__num">1</span>
+                        <h3 class="v7-step__title">14 July 2026 &mdash; support ended</h3>
+                        <p class="v7-step__desc">Microsoft states that SharePoint Server Subscription Edition supports SharePoint 2010-based workflows until 14 July 2026. Support ended on that date. Nothing stopped running. The same day took SharePoint Server 2016 and 2019, SharePoint Designer 2013, InfoPath Forms Services and classic Workflow Manager with it.</p>
+                    </div>
+                    <div class="v7-step">
+                        <span class="v7-step__num">2</span>
+                        <h3 class="v7-step__title">8 September 2026 &mdash; the update that stopped them</h3>
+                        <p class="v7-step__desc">KB5002908 says that &ldquo;the SharePoint 2010 Workflow feature will be disabled starting with the September 2026 Cumulative Update&rdquo;. Disabled by default, on every site collection, existing and new. This is the moment workflows stopped starting &mdash; not July. It is part of a wider attack-surface reduction in the same update.</p>
+                    </div>
+                    <div class="v7-step">
+                        <span class="v7-step__num">3</span>
+                        <h3 class="v7-step__title">October 2026 &mdash; SharePoint 2013 workflows are next</h3>
+                        <p class="v7-step__desc">The October cumulative update is expected to disable SharePoint 2013 workflows by default in the same way. As of today this is documented only on the blog of Stefan Go&szlig;ner, a Microsoft escalation engineer &mdash; not on any Microsoft Learn page or KB. You can enable them ahead of the update rather than after it.</p>
+                    </div>
+                    <div class="v7-step">
+                        <span class="v7-step__num">4</span>
+                        <h3 class="v7-step__title">No end date &mdash; the 2013 platform itself</h3>
+                        <p class="v7-step__desc">Microsoft states that SharePoint 2013-based workflows remain supported beyond July 2026, and SharePoint Workflow Manager carries no fixed end date &mdash; it follows the parent product. Disabled by default is not the same as retired.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="v7-band" aria-labelledby="wf3-status">
+            <div class="v7-container">
+                <div class="v7-band__head">
+                    <p class="v7-eyebrow">Where you stand</p>
+                    <h2 class="v7-band__title" id="wf3-status">Are your workflows running right now?</h2>
+                </div>
+
+                <table class="wf3-status">
+                    <thead>
+                        <tr><th>Your farm</th><th>SharePoint 2010 workflows</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Subscription Edition, September 2026 CU not yet installed</td><td><span class="wf3-yes">Running</span> &mdash; unsupported since 14 July, but still executing. Enable the feature before you install the update, not after.</td></tr>
+                        <tr><td>Subscription Edition, September 2026 CU installed, nothing enabled</td><td><span class="wf3-no">Stopped</span> &mdash; workflows do not start, manually or on item change. This is the situation most people are in.</td></tr>
+                        <tr><td>Subscription Edition, feature explicitly enabled per site collection</td><td><span class="wf3-yes">Running</span> &mdash; still unsupported. No security fixes and no support case, but the work moves.</td></tr>
+                        <tr><td>SharePoint Server 2016 or 2019</td><td><span class="wf3-no">Out of support</span> &mdash; the August 2026 update was the last one. KB5002908 does not reach these versions at all.</td></tr>
+                        <tr><td>Nintex Workflow for SharePoint on-premises</td><td><span class="wf3-no">Stopped</span> &mdash; Nintex runs on the SharePoint 2010 engine, so the same update stopped it. The same commands bring it back.</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="v7-steps-section" aria-labelledby="wf3-fix">
+            <div class="v7-container">
+                <div class="v7-steps-section__head">
+                    <p class="v7-eyebrow">The fix</p>
+                    <h2 class="v7-steps-section__title" id="wf3-fix">How to turn your workflows back on</h2>
+                </div>
+
+                <p class="v7-page-hero__lead">The cmdlets below ship with the August 2026 update and later. They work per site collection &mdash; there is no farm-wide switch. Microsoft publishes them in the text of the KB but gives them no reference page in its PowerShell documentation, which is why they are hard to find when a farm is already down.</p>
+
+                <pre class="wf3-code"><code><span class="wf3-comment"># First: which site collections still have the feature on</span>
+Get-SPLegacyWorkflowEnabledSites
+Get-SPWorkflow2013EnabledSites
+
+<span class="wf3-comment"># Then: turn it back on where the work actually runs</span>
+Enable-SPLegacyWorkflow  https://sharepoint.example.com/sites/quality
+Enable-SPWorkflow2013    https://sharepoint.example.com/sites/quality
+
+<span class="wf3-comment"># And to reverse it</span>
+Disable-SPLegacyWorkflow https://sharepoint.example.com/sites/quality</code></pre>
+
+                <div class="wf3-warn">
+                    <strong>Before you patch:</strong> enabling a site collection before installing the update is easier than diagnosing a silent stop afterwards. Run the audit cmdlets on the farm you have today, write down the list, and re-enable from it.
+                </div>
+
+                <p class="v7-page-hero__lead">If your workflows broke earlier in the summer, this is a different problem with a different fix. The June 2026 update failed them with a security-validation error on workflow markup, and the July update required additional types to be allow-listed in web.config. A farm that skipped June to August and jumps straight to September can meet both problems at once, with different symptoms.</p>
+            </div>
+        </section>
+
+        <section class="v7-band" aria-labelledby="wf3-onprem">
+            <div class="v7-container">
+                <div class="v7-band__head">
+                    <p class="v7-eyebrow">If you are staying on-premises</p>
+                    <h2 class="v7-band__title" id="wf3-onprem">What Microsoft actually offers you</h2>
+                </div>
+
+                <div class="v7-band__list">
+                    <p class="v7-band__item"><strong>SharePoint 2013 workflows on SharePoint Workflow Manager.</strong> This is the one supported on-premises destination. No fixed end date, and Microsoft has committed to supporting it beyond 2026. It needs its own dedicated servers and Azure Service Fabric.</p>
+                    <p class="v7-band__item"><strong>Power Automate does not run on-premises.</strong> There is no on-premises, sovereign or air-gapped edition. The on-premises data gateway is a connector into the cloud service, so it does not answer data-residency or disconnected-network requirements.</p>
+                    <p class="v7-band__item"><strong>Authoring moves from a power user to a developer.</strong> SharePoint Designer 2013 went out of support on the same July date. Microsoft&rsquo;s answer for editing 2013 workflows is Visual Studio. That is the cost nobody puts in the migration estimate.</p>
+                    <p class="v7-band__item"><strong>Rebuilding is manual.</strong> Microsoft names the 2013 platform as the target for 2010 workflows but publishes no tool that converts one into the other. Every workflow is rebuilt by hand, and rebuilt by someone who can read what the original did.</p>
+                </div>
+
+                <div class="wf3-warn">
+                    <strong>The honest gap:</strong> there is no like-for-like, low-code, business-user-authored replacement for SharePoint Designer plus 2010 workflows that runs on your own servers. Microsoft has not filled it. Anyone telling you otherwise is selling you either a cloud migration or their own platform.
+                </div>
+            </div>
+        </section>
+
+        <section class="v7-band" aria-labelledby="wf3-myths">
+            <div class="v7-container">
+                <div class="v7-band__head">
+                    <p class="v7-eyebrow">Four things that are widely got wrong</p>
+                    <h2 class="v7-band__title" id="wf3-myths">Before you act on what you read elsewhere</h2>
+                </div>
+
+                <div class="v7-band__list">
+                    <p class="v7-band__item"><strong>The cloud retirement is a different event.</strong> Most search results describe SharePoint 2010 workflows being removed from Microsoft 365, which happened years ago, and SharePoint 2013 workflows being removed from existing tenants in April 2026. Neither applies to a farm on your own servers. On-premises follows its own lifecycle.</p>
+                    <p class="v7-band__item"><strong>Unsupported, removed and disabled are three different states.</strong> SharePoint 2010 workflows are unsupported since July, disabled by default since September, and still classified by Microsoft as deprecated rather than removed. The code is in the product. That is why a command can switch it back on.</p>
+                    <p class="v7-band__item"><strong>Nintex has not announced end of life for its SharePoint on-premises products.</strong> Nintex staff stated twice in 2026 that no end-of-life date has been announced, and the supported-versions matrix still lists Subscription Edition. The &ldquo;Nintex EOL 2026&rdquo; pages you will find are published by competitors, and they conflate Microsoft&rsquo;s dates with a Nintex decision.</p>
+                    <p class="v7-band__item"><strong>Which update broke it changes the answer.</strong> June was a security check on workflow markup. July needed allow-list entries. September was deliberate and reversible with one command. Applying the fix for the wrong one wastes a maintenance window.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="v7-steps-section" aria-labelledby="wf3-workbox">
+            <div class="v7-container">
+                <div class="v7-steps-section__head">
+                    <p class="v7-eyebrow">Where Datapolis fits</p>
+                    <h2 class="v7-steps-section__title" id="wf3-workbox">Workbox does not use the engine that was switched off</h2>
+                </div>
+
+                <p class="v7-page-hero__lead">This page would be worth publishing even if we sold nothing, and most of it applies whatever you decide. But if you are reading it because your production stopped, one fact is relevant: Workbox runs on its own workflow engine rather than on the SharePoint 2010 platform, so KB5002908 did not switch it off.</p>
+
+                <div class="v7-steps">
+                    <div class="v7-step">
+                        <span class="v7-step__num">1</span>
+                        <h3 class="v7-step__title">Its own engine</h3>
+                        <p class="v7-step__desc">Workbox does not depend on the SharePoint 2010 workflow platform, so the September default-disable and the October one do not apply to it.</p>
+                    </div>
+                    <div class="v7-step">
+                        <span class="v7-step__num">2</span>
+                        <h3 class="v7-step__title">On your servers, inside SharePoint</h3>
+                        <p class="v7-step__desc">Lists, documents, users and permissions stay where they are. Same interface, same access rules, no move to the cloud required.</p>
+                    </div>
+                    <div class="v7-step">
+                        <span class="v7-step__num">3</span>
+                        <h3 class="v7-step__title">Twenty years of it</h3>
+                        <p class="v7-step__desc">Hundreds of on-premises SharePoint deployments since the SharePoint workflow era began. We have migrated these workflows before, including away from our own product when that was the right answer.</p>
+                    </div>
+                </div>
+
+                <div class="wf3-sources">
+                    <p>Primary sources for everything on this page:</p>
+                    <ul>
+                        <li><a href="https://support.microsoft.com/en-us/servicing/office/hotfix/sharepoint/5002908" rel="noopener" target="_blank">KB5002908 &mdash; September 2026 security update for SharePoint Server Subscription Edition</a></li>
+                        <li><a href="https://learn.microsoft.com/en-us/sharepoint/what-s-new/what-s-deprecated-or-removed-from-sharepoint-server-subscription-edition" rel="noopener" target="_blank">What&rsquo;s deprecated or removed from SharePoint Server Subscription Edition</a></li>
+                        <li><a href="https://support.microsoft.com/en-us/office/sharepoint-2013-workflow-retirement-4613d9cf-69aa-40f7-b6bf-6e7831c9691e" rel="noopener" target="_blank">SharePoint 2013 workflow retirement (Microsoft Support)</a></li>
+                        <li><a href="https://learn.microsoft.com/en-us/lifecycle/products/sharepoint-workflow-manager" rel="noopener" target="_blank">SharePoint Workflow Manager lifecycle</a></li>
+                        <li><a href="https://blog.stefan-gossner.com/2026/08/14/are-you-using-sp2010-or-sp2013-workflows-in-your-sharepoint-farms-this-post-is-for-you/" rel="noopener" target="_blank">Stefan Go&szlig;ner: are you using SP2010 or SP2013 workflows in your farms?</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="v7-cta">
+            <div class="v7-container v7-cta__inner">
+                <h2 class="v7-cta__title">Run work. <span class="accent">Speed up the flow.</span></h2>
+                <p class="v7-cta__lead">Twenty minutes. Tell us what your farm runs and what it has to keep doing. We will tell you what we would do &mdash; including when the answer is to enable the feature, patch, and change nothing else.</p>
+                <div class="v7-cta__actions">
+                    <a class="v7-btn v7-btn--primary" href="contact.html">Talk to an expert <span aria-hidden="true">&#8594;</span></a>
+                    <a class="v7-btn v7-btn--ghost" href="platform-2to2.html">See the platform</a>
+                </div>
+                <p class="v7-cta__note">Or write to <a href="mailto:office@datapolis.com">office@datapolis.com</a></p>
+            </div>
+        </section>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+</body>
+</html>

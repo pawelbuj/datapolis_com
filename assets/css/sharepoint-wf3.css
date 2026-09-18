@@ -1,0 +1,118 @@
+/* sharepoint-wf3.css — hub „SharePoint WF3", dodatki do home-v7.css
+   Tylko to, czego nie ma w systemie v7: tabela stanu, blok z poleceniami,
+   ostrzeżenie i karty źródeł. Reszta strony jedzie na klasach .v7-*. */
+
+.wf3-status {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 2rem;
+    font-size: 0.975rem;
+}
+
+.wf3-status th,
+.wf3-status td {
+    text-align: left;
+    padding: 0.95rem 1.1rem;
+    border-bottom: 1px solid var(--v7-line);
+    vertical-align: top;
+}
+
+.wf3-status th {
+    font-weight: 600;
+    color: #e2e8f0;
+    background: var(--v7-panel);
+    white-space: nowrap;
+}
+
+.wf3-status td:first-child {
+    color: #cbd5e1;
+    width: 46%;
+}
+
+.wf3-status td:last-child {
+    color: #94a3b8;
+}
+
+.wf3-status .wf3-yes { color: #34d399; font-weight: 600; }
+.wf3-status .wf3-no  { color: #f87171; font-weight: 600; }
+
+.wf3-code {
+    margin: 1.75rem 0 0;
+    padding: 1.35rem 1.5rem;
+    background: var(--v7-panel);
+    border: 1px solid var(--v7-line);
+    border-left: 3px solid var(--v7-line-lit);
+    border-radius: 10px;
+    overflow-x: auto;
+}
+
+.wf3-code code {
+    display: block;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 0.9rem;
+    line-height: 1.85;
+    color: #e2e8f0;
+    white-space: pre;
+}
+
+.wf3-code .wf3-comment { color: #64748b; }
+
+.wf3-warn {
+    margin-top: 1.75rem;
+    padding: 1.15rem 1.35rem;
+    background: rgba(251, 191, 36, 0.07);
+    border: 1px solid rgba(251, 191, 36, 0.28);
+    border-radius: 10px;
+    color: #cbd5e1;
+}
+
+.wf3-warn strong { color: var(--v7-amber); }
+
+.wf3-sources {
+    margin-top: 2.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--v7-line);
+    font-size: 0.9rem;
+    color: #94a3b8;
+}
+
+.wf3-sources ul {
+    margin: 0.75rem 0 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    gap: 0.5rem;
+}
+
+.wf3-sources a { color: #7dd3fc; }
+
+.wf3-updated {
+    display: inline-block;
+    margin-top: 0.4rem;
+    font-size: 0.875rem;
+    color: #94a3b8;
+}
+
+@media (max-width: 720px) {
+    .wf3-status,
+    .wf3-status thead,
+    .wf3-status tbody,
+    .wf3-status tr,
+    .wf3-status th,
+    .wf3-status td { display: block; }
+
+    .wf3-status thead { display: none; }
+
+    .wf3-status tr {
+        padding: 0.75rem 0;
+        border-bottom: 1px solid var(--v7-line);
+    }
+
+    .wf3-status td {
+        border: 0;
+        padding: 0.35rem 0;
+        width: auto;
+    }
+
+    .wf3-status td:first-child { width: auto; font-weight: 600; color: #e2e8f0; }
+}
