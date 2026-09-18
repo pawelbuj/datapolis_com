@@ -96,6 +96,9 @@ ES = {
 "wb3_t": "Veinte años de esto",
 "wb3_d": "Cientos de instalaciones locales de SharePoint desde que empezó la era de los flujos de trabajo de SharePoint. Hemos migrado estos flujos muchas veces, también fuera de nuestro propio producto cuando esa era la respuesta correcta.",
 
+"wb4_t": "Desde Process System",
+"wb4_d": "Si usa nuestro Process System más antiguo, pasar a Workbox se queda con el mismo proveedor y el mismo SharePoint: las mismas listas, usuarios y permisos, con otro motor por debajo.",
+
 "src_title": "Fuentes primarias de todo lo que hay en esta página:",
 "src1": "actualización de seguridad de septiembre de 2026 para SharePoint Server Subscription Edition",
 "src2": "Qué está obsoleto o eliminado en SharePoint Server Subscription Edition",

@@ -96,6 +96,9 @@ PL = {
 "wb3_t": "Dwadzieścia lat tego",
 "wb3_d": "Setki wdrożeń SharePointa na własnych serwerach, od początku ery przepływów pracy w SharePoincie. Migrowaliśmy te przepływy nieraz &mdash; także z dala od naszego własnego produktu, kiedy to była właściwa odpowiedź.",
 
+"wb4_t": "Z Process System",
+"wb4_d": "Jeśli macie nasz starszy Process System, przejście na Workbox zostaje u tego samego dostawcy i w tym samym SharePoincie &mdash; te same listy, użytkownicy i uprawnienia, inny silnik pod spodem.",
+
 "src_title": "Źródła pierwotne dla wszystkiego, co jest na tej stronie:",
 "src1": "wrześniowa aktualizacja zabezpieczeń dla SharePoint Server Subscription Edition",
 "src2": "Co jest wycofywane lub usunięte z SharePoint Server Subscription Edition",

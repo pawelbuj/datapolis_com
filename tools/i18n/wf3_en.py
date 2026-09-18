@@ -96,6 +96,9 @@ EN = {
 "wb3_t": "Twenty years of it",
 "wb3_d": "Hundreds of on-premises SharePoint deployments since the SharePoint workflow era began. We have migrated these workflows before, including away from our own product when that was the right answer.",
 
+"wb4_t": "From Process System",
+"wb4_d": "If you run our older Process System, moving to Workbox stays with the same vendor and the same SharePoint &mdash; the same lists, users and permissions, a different engine underneath.",
+
 "src_title": "Primary sources for everything on this page:",
 "src1": "September 2026 security update for SharePoint Server Subscription Edition",
 "src2": "What&rsquo;s deprecated or removed from SharePoint Server Subscription Edition",

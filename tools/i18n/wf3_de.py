@@ -96,6 +96,9 @@ DE = {
 "wb3_t": "Zwanzig Jahre davon",
 "wb3_d": "Hunderte On-Premises-Installationen von SharePoint, seit die Ära der SharePoint-Workflows begann. Wir haben diese Workflows schon oft migriert &mdash; auch weg von unserem eigenen Produkt, wenn das die richtige Antwort war.",
 
+"wb4_t": "Von Process System",
+"wb4_d": "Wenn Sie unser älteres Process System einsetzen, bleibt der Wechsel zu Workbox beim selben Anbieter und im selben SharePoint &mdash; dieselben Listen, Benutzer und Berechtigungen, darunter eine andere Engine.",
+
 "src_title": "Primärquellen für alles auf dieser Seite:",
 "src1": "Sicherheitsupdate vom September 2026 für SharePoint Server Subscription Edition",
 "src2": "Was in der SharePoint Server Subscription Edition veraltet oder entfernt ist",

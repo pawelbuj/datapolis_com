@@ -244,6 +244,11 @@ Disable-SPLegacyWorkflow https://sharepoint.example.com/sites/quality</code></pr
                         <h3 class="v7-step__title">{wb3_t}</h3>
                         <p class="v7-step__desc">{wb3_d}</p>
                     </div>
+                    <div class="v7-step">
+                        <span class="v7-step__num">4</span>
+                        <h3 class="v7-step__title">{wb4_t}</h3>
+                        <p class="v7-step__desc">{wb4_d}</p>
+                    </div>
                 </div>
 
                 <div class="wf3-sources">
