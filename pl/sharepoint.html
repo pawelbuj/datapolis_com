@@ -486,8 +486,8 @@
                         <tr><td>Subscription Edition, funkcja włączona jawnie na zbiorze witryn</td><td><span class="wf3-yes">Działają</span> &mdash; nadal bez wsparcia. Bez poprawek bezpieczeństwa i bez zgłoszeń do Microsoftu, ale praca idzie dalej.</td></tr>
                         <tr><td>SharePoint Server 2016 albo 2019</td><td><span class="wf3-no">Poza wsparciem</span> &mdash; sierpniowa aktualizacja była ostatnią. KB5002908 w ogóle nie dotyczy tych wersji.</td></tr>
                         <tr><td>Nintex Workflow for SharePoint on-premises</td><td><span class="wf3-no">Stoją</span> &mdash; Nintex działa na silniku SharePoint 2010, więc ta sama aktualizacja go zatrzymała. Te same polecenia go przywracają.</td></tr>
-                        <tr><td>Datapolis Process System for SharePoint SE</td><td><span class="wf3-no">Stoi</span> &mdash; nasz starszy produkt też działa na silniku SharePoint 2010, więc ta sama aktualizacja go zatrzymała. Powyższe polecenia go przywracają, a droga stąd do Workbox for SE jest krótka.</td></tr>
-                        <tr><td>Datapolis Workbox for SharePoint SE</td><td><span class="wf3-yes">Działa</span> &mdash; Workbox ma własny silnik przepływów i nie korzysta z platformy SharePoint 2010, więc KB5002908 go nie dotyczy.</td></tr>
+                        <tr><td>Datapolis Process System for SharePoint SE</td><td><span class="wf3-no">Stoi</span> &mdash; nasz starszy produkt też działa na silniku SharePoint 2010, więc ta sama aktualizacja go zatrzymała. Powyższe polecenia go przywracają, a droga stąd do Datapolis Workbox for SE jest krótka.</td></tr>
+                        <tr><td>Datapolis Workbox for SharePoint SE</td><td><span class="wf3-yes">Działa</span> &mdash; Datapolis Workbox ma własny silnik przepływów i nie korzysta z platformy SharePoint 2010, więc KB5002908 go nie dotyczy.</td></tr>
                     </tbody>
                 </table>
                 </div>
@@ -562,16 +562,16 @@ Disable-SPLegacyWorkflow https://sharepoint.example.com/sites/quality</code></pr
             <div class="v7-container">
                 <div class="v7-steps-section__head">
                     <p class="v7-eyebrow">Gdzie w tym Datapolis</p>
-                    <h2 class="v7-steps-section__title" id="wf3-workbox">Workbox nie korzysta z silnika, który został wyłączony</h2>
+                    <h2 class="v7-steps-section__title" id="wf3-workbox">Datapolis Workbox nie korzysta z silnika, który został wyłączony</h2>
                 </div>
 
-                <p class="v7-page-hero__lead">Tę stronę warto byłoby opublikować, nawet gdybyśmy niczego nie sprzedawali, a większość tego, co wyżej, obowiązuje niezależnie od Twojej decyzji. Jeśli jednak czytasz to dlatego, że produkcja stanęła, jeden fakt ma znaczenie: Workbox działa na własnym silniku przepływów, a nie na platformie SharePoint 2010, więc KB5002908 go nie wyłączyła.</p>
+                <p class="v7-page-hero__lead">Tę stronę warto byłoby opublikować, nawet gdybyśmy niczego nie sprzedawali, a większość tego, co wyżej, obowiązuje niezależnie od Twojej decyzji. Jeśli jednak czytasz to dlatego, że produkcja stanęła, jeden fakt ma znaczenie: Datapolis Workbox działa na własnym silniku przepływów, a nie na platformie SharePoint 2010, więc KB5002908 go nie wyłączyła.</p>
 
                 <div class="v7-steps">
                     <div class="v7-step">
                         <span class="v7-step__num">1</span>
                         <h3 class="v7-step__title">Własny silnik</h3>
-                        <p class="v7-step__desc">Workbox nie zależy od platformy przepływów SharePoint 2010, więc ani wrześniowe, ani październikowe domyślne wyłączenie go nie dotyczy.</p>
+                        <p class="v7-step__desc">Datapolis Workbox nie zależy od platformy przepływów SharePoint 2010, więc ani wrześniowe, ani październikowe domyślne wyłączenie go nie dotyczy.</p>
                     </div>
                     <div class="v7-step">
                         <span class="v7-step__num">2</span>
@@ -585,8 +585,8 @@ Disable-SPLegacyWorkflow https://sharepoint.example.com/sites/quality</code></pr
                     </div>
                     <div class="v7-step">
                         <span class="v7-step__num">4</span>
-                        <h3 class="v7-step__title">Z Process System</h3>
-                        <p class="v7-step__desc">Jeśli macie nasz starszy Process System, przejście na Workbox zostaje u tego samego dostawcy i w tym samym SharePoincie &mdash; te same listy, użytkownicy i uprawnienia, inny silnik pod spodem.</p>
+                        <h3 class="v7-step__title">Z Datapolis Process System</h3>
+                        <p class="v7-step__desc">Jeśli macie nasz starszy Datapolis Process System, przejście na Datapolis Workbox zostaje u tego samego dostawcy i w tym samym SharePoincie &mdash; te same listy, użytkownicy i uprawnienia, inny silnik pod spodem.</p>
                     </div>
                 </div>
 

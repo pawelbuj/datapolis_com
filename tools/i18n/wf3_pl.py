@@ -47,10 +47,10 @@ PL = {
 
 "st_r6c1": "Datapolis Process System for SharePoint SE",
 "st_r6state": "Stoi",
-"st_r6c2": "nasz starszy produkt też działa na silniku SharePoint 2010, więc ta sama aktualizacja go zatrzymała. Powyższe polecenia go przywracają, a droga stąd do Workbox for SE jest krótka.",
+"st_r6c2": "nasz starszy produkt też działa na silniku SharePoint 2010, więc ta sama aktualizacja go zatrzymała. Powyższe polecenia go przywracają, a droga stąd do Datapolis Workbox for SE jest krótka.",
 "st_r7c1": "Datapolis Workbox for SharePoint SE",
 "st_r7state": "Działa",
-"st_r7c2": "Workbox ma własny silnik przepływów i nie korzysta z platformy SharePoint 2010, więc KB5002908 go nie dotyczy.",
+"st_r7c2": "Datapolis Workbox ma własny silnik przepływów i nie korzysta z platformy SharePoint 2010, więc KB5002908 go nie dotyczy.",
 
 "fx_eyebrow": "Jak to naprawić",
 "fx_title": "Jak włączyć przepływy pracy z powrotem",
@@ -87,17 +87,17 @@ PL = {
 "my4_d": "Czerwiec to walidacja bezpieczeństwa definicji przepływu. Lipiec wymagał wpisów na listę dozwolonych typów. Wrzesień był celowy i cofa się jednym poleceniem. Zastosowanie naprawy do niewłaściwego problemu marnuje okno serwisowe.",
 
 "wb_eyebrow": "Gdzie w tym Datapolis",
-"wb_title": "Workbox nie korzysta z silnika, który został wyłączony",
-"wb_lead": "Tę stronę warto byłoby opublikować, nawet gdybyśmy niczego nie sprzedawali, a większość tego, co wyżej, obowiązuje niezależnie od Twojej decyzji. Jeśli jednak czytasz to dlatego, że produkcja stanęła, jeden fakt ma znaczenie: Workbox działa na własnym silniku przepływów, a nie na platformie SharePoint 2010, więc KB5002908 go nie wyłączyła.",
+"wb_title": "Datapolis Workbox nie korzysta z silnika, który został wyłączony",
+"wb_lead": "Tę stronę warto byłoby opublikować, nawet gdybyśmy niczego nie sprzedawali, a większość tego, co wyżej, obowiązuje niezależnie od Twojej decyzji. Jeśli jednak czytasz to dlatego, że produkcja stanęła, jeden fakt ma znaczenie: Datapolis Workbox działa na własnym silniku przepływów, a nie na platformie SharePoint 2010, więc KB5002908 go nie wyłączyła.",
 "wb1_t": "Własny silnik",
-"wb1_d": "Workbox nie zależy od platformy przepływów SharePoint 2010, więc ani wrześniowe, ani październikowe domyślne wyłączenie go nie dotyczy.",
+"wb1_d": "Datapolis Workbox nie zależy od platformy przepływów SharePoint 2010, więc ani wrześniowe, ani październikowe domyślne wyłączenie go nie dotyczy.",
 "wb2_t": "Na Twoich serwerach, wewnątrz SharePointa",
 "wb2_d": "Listy, dokumenty, użytkownicy i uprawnienia zostają tam, gdzie są. Ten sam interfejs, te same reguły dostępu, bez przenoszenia się do chmury.",
 "wb3_t": "Dwadzieścia lat tego",
 "wb3_d": "Setki wdrożeń SharePointa na własnych serwerach, od początku ery przepływów pracy w SharePoincie. Migrowaliśmy te przepływy nieraz &mdash; także z dala od naszego własnego produktu, kiedy to była właściwa odpowiedź.",
 
-"wb4_t": "Z Process System",
-"wb4_d": "Jeśli macie nasz starszy Process System, przejście na Workbox zostaje u tego samego dostawcy i w tym samym SharePoincie &mdash; te same listy, użytkownicy i uprawnienia, inny silnik pod spodem.",
+"wb4_t": "Z Datapolis Process System",
+"wb4_d": "Jeśli macie nasz starszy Datapolis Process System, przejście na Datapolis Workbox zostaje u tego samego dostawcy i w tym samym SharePoincie &mdash; te same listy, użytkownicy i uprawnienia, inny silnik pod spodem.",
 
 "src_title": "Źródła pierwotne dla wszystkiego, co jest na tej stronie:",
 "src1": "wrześniowa aktualizacja zabezpieczeń dla SharePoint Server Subscription Edition",

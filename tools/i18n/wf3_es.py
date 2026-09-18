@@ -47,10 +47,10 @@ ES = {
 
 "st_r6c1": "Datapolis Process System for SharePoint SE",
 "st_r6state": "Parado",
-"st_r6c2": "nuestro propio producto más antiguo también funciona sobre el motor de SharePoint 2010, así que la misma actualización lo detuvo. Los comandos de arriba lo recuperan, y el camino desde aquí hasta Workbox for SE es corto.",
+"st_r6c2": "nuestro propio producto más antiguo también funciona sobre el motor de SharePoint 2010, así que la misma actualización lo detuvo. Los comandos de arriba lo recuperan, y el camino desde aquí hasta Datapolis Workbox for SE es corto.",
 "st_r7c1": "Datapolis Workbox for SharePoint SE",
 "st_r7state": "Funciona",
-"st_r7c2": "Workbox tiene su propio motor de flujos de trabajo y no usa la plataforma de SharePoint 2010, de modo que KB5002908 no le alcanza.",
+"st_r7c2": "Datapolis Workbox tiene su propio motor de flujos de trabajo y no usa la plataforma de SharePoint 2010, de modo que KB5002908 no le alcanza.",
 
 "fx_eyebrow": "La solución",
 "fx_title": "Cómo volver a activar sus flujos de trabajo",
@@ -87,17 +87,17 @@ ES = {
 "my4_d": "Junio fue una comprobación de seguridad sobre la definición del flujo. Julio exigía entradas en una lista de permitidos. Septiembre fue deliberado y se revierte con un comando. Aplicar la solución equivocada le cuesta una ventana de mantenimiento.",
 
 "wb_eyebrow": "Dónde encaja Datapolis",
-"wb_title": "Workbox no usa el motor que han apagado",
-"wb_lead": "Esta página merecería publicarse aunque no vendiéramos nada, y casi todo lo anterior vale decida lo que decida. Pero si ha llegado aquí porque su producción está parada, hay un dato que importa: Workbox funciona sobre su propio motor de flujos de trabajo, no sobre la plataforma de SharePoint 2010, así que KB5002908 no lo apagó.",
+"wb_title": "Datapolis Workbox no usa el motor que han apagado",
+"wb_lead": "Esta página merecería publicarse aunque no vendiéramos nada, y casi todo lo anterior vale decida lo que decida. Pero si ha llegado aquí porque su producción está parada, hay un dato que importa: Datapolis Workbox funciona sobre su propio motor de flujos de trabajo, no sobre la plataforma de SharePoint 2010, así que KB5002908 no lo apagó.",
 "wb1_t": "Motor propio",
-"wb1_d": "Workbox no depende de la plataforma de flujos de SharePoint 2010, de modo que ni la desactivación predeterminada de septiembre ni la de octubre le afectan.",
+"wb1_d": "Datapolis Workbox no depende de la plataforma de flujos de SharePoint 2010, de modo que ni la desactivación predeterminada de septiembre ni la de octubre le afectan.",
 "wb2_t": "En sus servidores, dentro de SharePoint",
 "wb2_d": "Listas, documentos, usuarios y permisos se quedan donde están. La misma interfaz, las mismas reglas de acceso, sin necesidad de mover nada a la nube.",
 "wb3_t": "Veinte años de esto",
 "wb3_d": "Cientos de instalaciones locales de SharePoint desde que empezó la era de los flujos de trabajo de SharePoint. Hemos migrado estos flujos muchas veces, también fuera de nuestro propio producto cuando esa era la respuesta correcta.",
 
-"wb4_t": "Desde Process System",
-"wb4_d": "Si usa nuestro Process System más antiguo, pasar a Workbox se queda con el mismo proveedor y el mismo SharePoint: las mismas listas, usuarios y permisos, con otro motor por debajo.",
+"wb4_t": "Desde Datapolis Process System",
+"wb4_d": "Si usa Datapolis Process System, nuestro producto más antiguo, pasar a Datapolis Workbox se queda con el mismo proveedor y el mismo SharePoint: las mismas listas, usuarios y permisos, con otro motor por debajo.",
 
 "src_title": "Fuentes primarias de todo lo que hay en esta página:",
 "src1": "actualización de seguridad de septiembre de 2026 para SharePoint Server Subscription Edition",

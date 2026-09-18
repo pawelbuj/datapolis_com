@@ -486,8 +486,8 @@
                         <tr><td>Subscription Edition, feature explicitly enabled per site collection</td><td><span class="wf3-yes">Running</span> &mdash; still unsupported. No security fixes and no support case, but the work moves.</td></tr>
                         <tr><td>SharePoint Server 2016 or 2019</td><td><span class="wf3-no">Out of support</span> &mdash; the August 2026 update was the last one. KB5002908 does not reach these versions at all.</td></tr>
                         <tr><td>Nintex Workflow for SharePoint on-premises</td><td><span class="wf3-no">Stopped</span> &mdash; Nintex runs on the SharePoint 2010 engine, so the same update stopped it. The same commands bring it back.</td></tr>
-                        <tr><td>Datapolis Process System for SharePoint SE</td><td><span class="wf3-no">Stopped</span> &mdash; our own older product runs on the SharePoint 2010 engine too, so the same update stopped it. The commands above bring it back, and the route from here to Workbox for SE is a short one.</td></tr>
-                        <tr><td>Datapolis Workbox for SharePoint SE</td><td><span class="wf3-yes">Running</span> &mdash; Workbox has its own workflow engine and does not use the SharePoint 2010 platform, so KB5002908 does not reach it.</td></tr>
+                        <tr><td>Datapolis Process System for SharePoint SE</td><td><span class="wf3-no">Stopped</span> &mdash; our own older product runs on the SharePoint 2010 engine too, so the same update stopped it. The commands above bring it back, and the route from here to Datapolis Workbox for SE is a short one.</td></tr>
+                        <tr><td>Datapolis Workbox for SharePoint SE</td><td><span class="wf3-yes">Running</span> &mdash; Datapolis Workbox has its own workflow engine and does not use the SharePoint 2010 platform, so KB5002908 does not reach it.</td></tr>
                     </tbody>
                 </table>
                 </div>
@@ -562,16 +562,16 @@ Disable-SPLegacyWorkflow https://sharepoint.example.com/sites/quality</code></pr
             <div class="v7-container">
                 <div class="v7-steps-section__head">
                     <p class="v7-eyebrow">Where Datapolis fits</p>
-                    <h2 class="v7-steps-section__title" id="wf3-workbox">Workbox does not use the engine that was switched off</h2>
+                    <h2 class="v7-steps-section__title" id="wf3-workbox">Datapolis Workbox does not use the engine that was switched off</h2>
                 </div>
 
-                <p class="v7-page-hero__lead">This page would be worth publishing even if we sold nothing, and most of it applies whatever you decide. But if you are reading it because your production stopped, one fact is relevant: Workbox runs on its own workflow engine rather than on the SharePoint 2010 platform, so KB5002908 did not switch it off.</p>
+                <p class="v7-page-hero__lead">This page would be worth publishing even if we sold nothing, and most of it applies whatever you decide. But if you are reading it because your production stopped, one fact is relevant: Datapolis Workbox runs on its own workflow engine rather than on the SharePoint 2010 platform, so KB5002908 did not switch it off.</p>
 
                 <div class="v7-steps">
                     <div class="v7-step">
                         <span class="v7-step__num">1</span>
                         <h3 class="v7-step__title">Its own engine</h3>
-                        <p class="v7-step__desc">Workbox does not depend on the SharePoint 2010 workflow platform, so the September default-disable and the October one do not apply to it.</p>
+                        <p class="v7-step__desc">Datapolis Workbox does not depend on the SharePoint 2010 workflow platform, so the September default-disable and the October one do not apply to it.</p>
                     </div>
                     <div class="v7-step">
                         <span class="v7-step__num">2</span>
@@ -585,8 +585,8 @@ Disable-SPLegacyWorkflow https://sharepoint.example.com/sites/quality</code></pr
                     </div>
                     <div class="v7-step">
                         <span class="v7-step__num">4</span>
-                        <h3 class="v7-step__title">From Process System</h3>
-                        <p class="v7-step__desc">If you run our older Process System, moving to Workbox stays with the same vendor and the same SharePoint &mdash; the same lists, users and permissions, a different engine underneath.</p>
+                        <h3 class="v7-step__title">From Datapolis Process System</h3>
+                        <p class="v7-step__desc">If you run our older Datapolis Process System, moving to Datapolis Workbox stays with the same vendor and the same SharePoint &mdash; the same lists, users and permissions, a different engine underneath.</p>
                     </div>
                 </div>
 

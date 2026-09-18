@@ -47,10 +47,10 @@ DE = {
 
 "st_r6c1": "Datapolis Process System for SharePoint SE",
 "st_r6state": "Steht",
-"st_r6c2": "unser eigenes älteres Produkt läuft ebenfalls auf der SharePoint-2010-Engine, dasselbe Update hat es gestoppt. Die Kommandos oben holen es zurück, und der Weg von hier zu Workbox for SE ist kurz.",
+"st_r6c2": "unser eigenes älteres Produkt läuft ebenfalls auf der SharePoint-2010-Engine, dasselbe Update hat es gestoppt. Die Kommandos oben holen es zurück, und der Weg von hier zu Datapolis Workbox for SE ist kurz.",
 "st_r7c1": "Datapolis Workbox for SharePoint SE",
 "st_r7state": "Läuft",
-"st_r7c2": "Workbox hat eine eigene Workflow-Engine und nutzt die SharePoint-2010-Plattform nicht, KB5002908 erreicht es also nicht.",
+"st_r7c2": "Datapolis Workbox hat eine eigene Workflow-Engine und nutzt die SharePoint-2010-Plattform nicht, KB5002908 erreicht es also nicht.",
 
 "fx_eyebrow": "Die Behebung",
 "fx_title": "So schalten Sie Ihre Workflows wieder ein",
@@ -87,17 +87,17 @@ DE = {
 "my4_d": "Juni war eine Sicherheitsprüfung der Workflow-Definition. Juli verlangte Einträge in einer Positivliste. September war beabsichtigt und mit einem Kommando umkehrbar. Die falsche Lösung anzuwenden kostet Sie ein Wartungsfenster.",
 
 "wb_eyebrow": "Wo Datapolis hineinpasst",
-"wb_title": "Workbox nutzt nicht die Engine, die abgeschaltet wurde",
-"wb_lead": "Diese Seite wäre es wert, veröffentlicht zu werden, auch wenn wir nichts verkaufen würden, und das meiste davon gilt unabhängig von Ihrer Entscheidung. Wenn Sie hier gelandet sind, weil die Produktion steht, ist allerdings ein Punkt relevant: Workbox läuft auf einer eigenen Workflow-Engine statt auf der SharePoint-2010-Plattform &mdash; KB5002908 hat es nicht abgeschaltet.",
+"wb_title": "Datapolis Workbox nutzt nicht die Engine, die abgeschaltet wurde",
+"wb_lead": "Diese Seite wäre es wert, veröffentlicht zu werden, auch wenn wir nichts verkaufen würden, und das meiste davon gilt unabhängig von Ihrer Entscheidung. Wenn Sie hier gelandet sind, weil die Produktion steht, ist allerdings ein Punkt relevant: Datapolis Workbox läuft auf einer eigenen Workflow-Engine statt auf der SharePoint-2010-Plattform &mdash; KB5002908 hat es nicht abgeschaltet.",
 "wb1_t": "Eigene Engine",
-"wb1_d": "Workbox hängt nicht an der Workflow-Plattform von SharePoint 2010. Die Standardabschaltung im September wie die im Oktober betrifft es daher nicht.",
+"wb1_d": "Datapolis Workbox hängt nicht an der Workflow-Plattform von SharePoint 2010. Die Standardabschaltung im September wie die im Oktober betrifft es daher nicht.",
 "wb2_t": "Auf Ihren Servern, innerhalb von SharePoint",
 "wb2_d": "Listen, Dokumente, Benutzer und Berechtigungen bleiben, wo sie sind. Dieselbe Oberfläche, dieselben Zugriffsregeln, kein Wechsel in die Cloud nötig.",
 "wb3_t": "Zwanzig Jahre davon",
 "wb3_d": "Hunderte On-Premises-Installationen von SharePoint, seit die Ära der SharePoint-Workflows begann. Wir haben diese Workflows schon oft migriert &mdash; auch weg von unserem eigenen Produkt, wenn das die richtige Antwort war.",
 
-"wb4_t": "Von Process System",
-"wb4_d": "Wenn Sie unser älteres Process System einsetzen, bleibt der Wechsel zu Workbox beim selben Anbieter und im selben SharePoint &mdash; dieselben Listen, Benutzer und Berechtigungen, darunter eine andere Engine.",
+"wb4_t": "Von Datapolis Process System",
+"wb4_d": "Wenn Sie unser älteres Datapolis Process System einsetzen, bleibt der Wechsel zu Datapolis Workbox beim selben Anbieter und im selben SharePoint &mdash; dieselben Listen, Benutzer und Berechtigungen, darunter eine andere Engine.",
 
 "src_title": "Primärquellen für alles auf dieser Seite:",
 "src1": "Sicherheitsupdate vom September 2026 für SharePoint Server Subscription Edition",
