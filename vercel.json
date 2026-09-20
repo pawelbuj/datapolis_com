@@ -933,6 +933,26 @@
       "source": "/es/how-it-works.html",
       "destination": "/es/how-it-works-overview",
       "permanent": true
+    },
+    {
+      "source": "/sharepoint-landing-2026-08",
+      "destination": "/sharepoint",
+      "permanent": true
+    },
+    {
+      "source": "/sharepoint-landing-2026-08.html",
+      "destination": "/sharepoint",
+      "permanent": true
+    },
+    {
+      "source": "/stray-tools-sharepoint",
+      "destination": "/sharepoint",
+      "permanent": true
+    },
+    {
+      "source": "/stray-tools-sharepoint.html",
+      "destination": "/sharepoint",
+      "permanent": true
     }
   ]
 }
