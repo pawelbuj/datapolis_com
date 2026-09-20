@@ -953,6 +953,376 @@
       "source": "/stray-tools-sharepoint.html",
       "destination": "/sharepoint",
       "permanent": true
+    },
+    {
+      "source": "/solutions/it-sector-solutions",
+      "destination": "/customers",
+      "permanent": true
+    },
+    {
+      "source": "/solutions/it-sector-solutions.html",
+      "destination": "/customers",
+      "permanent": true
+    },
+    {
+      "source": "/pl/solutions/it-sector-solutions",
+      "destination": "/pl/customers",
+      "permanent": true
+    },
+    {
+      "source": "/pl/solutions/it-sector-solutions.html",
+      "destination": "/pl/customers",
+      "permanent": true
+    },
+    {
+      "source": "/de/solutions/it-sector-solutions",
+      "destination": "/de/customers",
+      "permanent": true
+    },
+    {
+      "source": "/de/solutions/it-sector-solutions.html",
+      "destination": "/de/customers",
+      "permanent": true
+    },
+    {
+      "source": "/es/solutions/it-sector-solutions",
+      "destination": "/es/customers",
+      "permanent": true
+    },
+    {
+      "source": "/es/solutions/it-sector-solutions.html",
+      "destination": "/es/customers",
+      "permanent": true
+    },
+    {
+      "source": "/solutions/operations-and-production",
+      "destination": "/customers",
+      "permanent": true
+    },
+    {
+      "source": "/solutions/operations-and-production.html",
+      "destination": "/customers",
+      "permanent": true
+    },
+    {
+      "source": "/pl/solutions/operations-and-production",
+      "destination": "/pl/customers",
+      "permanent": true
+    },
+    {
+      "source": "/pl/solutions/operations-and-production.html",
+      "destination": "/pl/customers",
+      "permanent": true
+    },
+    {
+      "source": "/de/solutions/operations-and-production",
+      "destination": "/de/customers",
+      "permanent": true
+    },
+    {
+      "source": "/de/solutions/operations-and-production.html",
+      "destination": "/de/customers",
+      "permanent": true
+    },
+    {
+      "source": "/es/solutions/operations-and-production",
+      "destination": "/es/customers",
+      "permanent": true
+    },
+    {
+      "source": "/es/solutions/operations-and-production.html",
+      "destination": "/es/customers",
+      "permanent": true
+    },
+    {
+      "source": "/solutions/purchasing-and-logistics",
+      "destination": "/customers",
+      "permanent": true
+    },
+    {
+      "source": "/solutions/purchasing-and-logistics.html",
+      "destination": "/customers",
+      "permanent": true
+    },
+    {
+      "source": "/pl/solutions/purchasing-and-logistics",
+      "destination": "/pl/customers",
+      "permanent": true
+    },
+    {
+      "source": "/pl/solutions/purchasing-and-logistics.html",
+      "destination": "/pl/customers",
+      "permanent": true
+    },
+    {
+      "source": "/de/solutions/purchasing-and-logistics",
+      "destination": "/de/customers",
+      "permanent": true
+    },
+    {
+      "source": "/de/solutions/purchasing-and-logistics.html",
+      "destination": "/de/customers",
+      "permanent": true
+    },
+    {
+      "source": "/es/solutions/purchasing-and-logistics",
+      "destination": "/es/customers",
+      "permanent": true
+    },
+    {
+      "source": "/es/solutions/purchasing-and-logistics.html",
+      "destination": "/es/customers",
+      "permanent": true
+    },
+    {
+      "source": "/solutions/human-resources-hr",
+      "destination": "/customers",
+      "permanent": true
+    },
+    {
+      "source": "/solutions/human-resources-hr.html",
+      "destination": "/customers",
+      "permanent": true
+    },
+    {
+      "source": "/pl/solutions/human-resources-hr",
+      "destination": "/pl/customers",
+      "permanent": true
+    },
+    {
+      "source": "/pl/solutions/human-resources-hr.html",
+      "destination": "/pl/customers",
+      "permanent": true
+    },
+    {
+      "source": "/de/solutions/human-resources-hr",
+      "destination": "/de/customers",
+      "permanent": true
+    },
+    {
+      "source": "/de/solutions/human-resources-hr.html",
+      "destination": "/de/customers",
+      "permanent": true
+    },
+    {
+      "source": "/es/solutions/human-resources-hr",
+      "destination": "/es/customers",
+      "permanent": true
+    },
+    {
+      "source": "/es/solutions/human-resources-hr.html",
+      "destination": "/es/customers",
+      "permanent": true
+    },
+    {
+      "source": "/solutions/customer-service",
+      "destination": "/customers",
+      "permanent": true
+    },
+    {
+      "source": "/solutions/customer-service.html",
+      "destination": "/customers",
+      "permanent": true
+    },
+    {
+      "source": "/pl/solutions/customer-service",
+      "destination": "/pl/customers",
+      "permanent": true
+    },
+    {
+      "source": "/pl/solutions/customer-service.html",
+      "destination": "/pl/customers",
+      "permanent": true
+    },
+    {
+      "source": "/de/solutions/customer-service",
+      "destination": "/de/customers",
+      "permanent": true
+    },
+    {
+      "source": "/de/solutions/customer-service.html",
+      "destination": "/de/customers",
+      "permanent": true
+    },
+    {
+      "source": "/es/solutions/customer-service",
+      "destination": "/es/customers",
+      "permanent": true
+    },
+    {
+      "source": "/es/solutions/customer-service.html",
+      "destination": "/es/customers",
+      "permanent": true
+    },
+    {
+      "source": "/solutions/finance",
+      "destination": "/customers",
+      "permanent": true
+    },
+    {
+      "source": "/solutions/finance.html",
+      "destination": "/customers",
+      "permanent": true
+    },
+    {
+      "source": "/pl/solutions/finance",
+      "destination": "/pl/customers",
+      "permanent": true
+    },
+    {
+      "source": "/pl/solutions/finance.html",
+      "destination": "/pl/customers",
+      "permanent": true
+    },
+    {
+      "source": "/de/solutions/finance",
+      "destination": "/de/customers",
+      "permanent": true
+    },
+    {
+      "source": "/de/solutions/finance.html",
+      "destination": "/de/customers",
+      "permanent": true
+    },
+    {
+      "source": "/es/solutions/finance",
+      "destination": "/es/customers",
+      "permanent": true
+    },
+    {
+      "source": "/es/solutions/finance.html",
+      "destination": "/es/customers",
+      "permanent": true
+    },
+    {
+      "source": "/privacy-policy",
+      "destination": "/legal",
+      "permanent": true
+    },
+    {
+      "source": "/privacy-policy.html",
+      "destination": "/legal",
+      "permanent": true
+    },
+    {
+      "source": "/privacy",
+      "destination": "/legal",
+      "permanent": true
+    },
+    {
+      "source": "/privacy.html",
+      "destination": "/legal",
+      "permanent": true
+    },
+    {
+      "source": "/pl/privacy-policy",
+      "destination": "/pl/legal",
+      "permanent": true
+    },
+    {
+      "source": "/pl/privacy-policy.html",
+      "destination": "/pl/legal",
+      "permanent": true
+    },
+    {
+      "source": "/pl/privacy",
+      "destination": "/pl/legal",
+      "permanent": true
+    },
+    {
+      "source": "/pl/privacy.html",
+      "destination": "/pl/legal",
+      "permanent": true
+    },
+    {
+      "source": "/de/privacy-policy",
+      "destination": "/de/legal",
+      "permanent": true
+    },
+    {
+      "source": "/de/privacy-policy.html",
+      "destination": "/de/legal",
+      "permanent": true
+    },
+    {
+      "source": "/de/privacy",
+      "destination": "/de/legal",
+      "permanent": true
+    },
+    {
+      "source": "/de/privacy.html",
+      "destination": "/de/legal",
+      "permanent": true
+    },
+    {
+      "source": "/es/privacy-policy",
+      "destination": "/es/legal",
+      "permanent": true
+    },
+    {
+      "source": "/es/privacy-policy.html",
+      "destination": "/es/legal",
+      "permanent": true
+    },
+    {
+      "source": "/es/privacy",
+      "destination": "/es/legal",
+      "permanent": true
+    },
+    {
+      "source": "/es/privacy.html",
+      "destination": "/es/legal",
+      "permanent": true
+    },
+    {
+      "source": "/technical-support",
+      "destination": "/contact",
+      "permanent": true
+    },
+    {
+      "source": "/technical-support.html",
+      "destination": "/contact",
+      "permanent": true
+    },
+    {
+      "source": "/pl/technical-support",
+      "destination": "/pl/contact",
+      "permanent": true
+    },
+    {
+      "source": "/pl/technical-support.html",
+      "destination": "/pl/contact",
+      "permanent": true
+    },
+    {
+      "source": "/de/technical-support",
+      "destination": "/de/contact",
+      "permanent": true
+    },
+    {
+      "source": "/de/technical-support.html",
+      "destination": "/de/contact",
+      "permanent": true
+    },
+    {
+      "source": "/es/technical-support",
+      "destination": "/es/contact",
+      "permanent": true
+    },
+    {
+      "source": "/es/technical-support.html",
+      "destination": "/es/contact",
+      "permanent": true
+    },
+    {
+      "source": "/blog-en/this-train-is-leaving-how-to-continue-process-automation-after-wf-is-phased-out-from-sharepoint",
+      "destination": "/sharepoint",
+      "permanent": true
+    },
+    {
+      "source": "/blog-en/this-train-is-leaving-how-to-continue-process-automation-after-wf-is-phased-out-from-sharepoint.html",
+      "destination": "/sharepoint",
+      "permanent": true
     }
   ]
 }
