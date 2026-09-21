@@ -38,8 +38,19 @@ SCOPES = [
     "https://www.googleapis.com/auth/webmasters.readonly",
 ]
 
+# Bez "bing.com" — to zwykła wyszukiwarka; Copilot łapie się przez
+# copilot.microsoft.com.
 AI_HOSTS = ("chatgpt.com", "perplexity.ai", "claude.ai", "copilot.microsoft.com",
-            "gemini.google.com", "openai.com", "bing.com")
+            "gemini.google.com", "openai.com")
+
+
+def klikniec(n: int) -> str:
+    n = int(n)
+    if n == 1:
+        return "1 kliknięcie"
+    if 2 <= n % 10 <= 4 and not 12 <= n % 100 <= 14:
+        return f"{n} kliknięcia"
+    return f"{n} kliknięć"
 
 
 def session():
@@ -150,28 +161,45 @@ def main() -> int:
     # --- Search Console (dane mają 2-3 dni opóźnienia)
     g_end = date.today() - timedelta(days=3)
     g_start = g_end - timedelta(days=days - 1)
-    perf = gsc(s, {"startDate": g_start.isoformat(), "endDate": g_end.isoformat(),
-                   "dimensions": ["query"], "rowLimit": 10})
+    g_rng = {"startDate": g_start.isoformat(), "endDate": g_end.isoformat()}
+
     print(f"\nSEARCH CONSOLE ({g_start} … {g_end}, dane Google mają ~3 dni opóźnienia):")
-    if "_error" in perf:
-        print("  " + perf["_error"])
-    elif not perf.get("rows"):
+
+    # Sumy bierzemy z zapytania BEZ wymiarów. Suma po wierszach z wymiarem
+    # "query" jest zaniżona: obcina ją rowLimit, a Google pomija zapytania
+    # rzadkie i anonimizowane — dlatego nie zgadzała się z podziałem na strony.
+    tot = gsc(s, dict(g_rng))
+    if "_error" in tot:
+        print("  " + tot["_error"])
+    elif not tot.get("rows"):
         print("  brak wyświetleń w tym okresie")
     else:
-        tot_i = sum(r["impressions"] for r in perf["rows"])
-        tot_c = sum(r["clicks"] for r in perf["rows"])
-        print(f"  {tot_i} wyświetleń, {tot_c} kliknięć")
+        t = tot["rows"][0]
+        print(f"  {int(t['impressions'])} wyświetleń, {klikniec(t['clicks'])}, "
+              f"średnia pozycja {t['position']:.1f}")
+
+    perf = gsc(s, dict(g_rng, dimensions=["query"], rowLimit=10))
+    if "_error" in perf:
+        print("  " + perf["_error"])
+    elif perf.get("rows"):
+        shown = sum(r["impressions"] for r in perf["rows"])
         print("  Zapytania:")
         for r in perf["rows"][:10]:
             print(f"    {r['impressions']:>4} wyśw. {r['clicks']:>3} klik.  poz. "
                   f"{r['position']:.1f}  {r['keys'][0]}")
+        print(f"    (powyższe zapytania to {shown} wyświetleń; reszta to zapytania "
+              f"anonimizowane przez Google)")
 
-    pages = gsc(s, {"startDate": g_start.isoformat(), "endDate": g_end.isoformat(),
-                    "dimensions": ["page"], "rowLimit": 8})
-    if pages.get("rows"):
+    pages = gsc(s, dict(g_rng, dimensions=["page"], rowLimit=8))
+    if "_error" in pages:
+        print("  " + pages["_error"])
+    elif pages.get("rows"):
         print("  Strony:")
         for r in pages["rows"][:8]:
             print(f"    {r['impressions']:>4} wyśw. {r['clicks']:>3} klik.  {r['keys'][0]}")
+        print("    (sumy po stronach bywają wyższe od sumy ogólnej: gdy Google pokaże "
+              "w jednym wyniku kilka adresów serwisu, ogólnie liczy to jako jedno "
+              "wyświetlenie, a w podziale na strony — jako kilka)")
 
     return 0
 
