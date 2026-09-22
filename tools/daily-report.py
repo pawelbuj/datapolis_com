@@ -88,9 +88,13 @@ def total(res, i=0):
     if "_error" in res:
         return None
     t = res.get("totals") or []
-    if not t:
+    if t:
+        return int(float(t[0]["metricValues"][i]["value"]))
+    # Zapytanie bez wymiarow nie zwraca "totals" — suma siedzi w jedynym wierszu.
+    r = res.get("rows") or []
+    if not r:
         return 0
-    return int(t[0]["metricValues"][i]["value"])
+    return int(float(r[0]["metricValues"][i]["value"]))
 
 
 def gsc(s, body):
@@ -178,10 +182,11 @@ def main() -> int:
         print(f"  {int(t['impressions'])} wyświetleń, {klikniec(t['clicks'])}, "
               f"średnia pozycja {t['position']:.1f}")
 
-    perf = gsc(s, dict(g_rng, dimensions=["query"], rowLimit=10))
+    perf = gsc(s, dict(g_rng, dimensions=["query"], rowLimit=200))
     if "_error" in perf:
         print("  " + perf["_error"])
     elif perf.get("rows"):
+        perf["rows"].sort(key=lambda r: (-r["impressions"], -r["clicks"]))
         shown = sum(r["impressions"] for r in perf["rows"])
         print("  Zapytania:")
         for r in perf["rows"][:10]:
@@ -190,10 +195,11 @@ def main() -> int:
         print(f"    (powyższe zapytania to {shown} wyświetleń; reszta to zapytania "
               f"anonimizowane przez Google)")
 
-    pages = gsc(s, dict(g_rng, dimensions=["page"], rowLimit=8))
+    pages = gsc(s, dict(g_rng, dimensions=["page"], rowLimit=200))
     if "_error" in pages:
         print("  " + pages["_error"])
     elif pages.get("rows"):
+        pages["rows"].sort(key=lambda r: (-r["impressions"], -r["clicks"]))
         print("  Strony:")
         for r in pages["rows"][:8]:
             print(f"    {r['impressions']:>4} wyśw. {r['clicks']:>3} klik.  {r['keys'][0]}")
